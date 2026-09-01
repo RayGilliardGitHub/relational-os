@@ -6,7 +6,9 @@ operating layer, specified formally and built sprint by sprint.
 ## Read these first
 - `SPEC.md` — the working specification (currently **v0.22**). **This is the contract.**
 - `PROTOCOL.md` — the sprint lifecycle every session follows.
-- `docs/` — supporting research and reference material.
+- `docs/` — the verified manual package (a copy also stays at
+  `sprints/sprint-6/artifacts/docs/` as narrative history); `ros/` — canonical package;
+  `tests/run_checks.py` + `scripts/verify.sh` — the green gate.
 
 Master/mirror (do **not** edit in place — it is synced from this workspace):
 `/home/rlg/Documents/ai-relational-os-spec.md` and `ai-relational-os-spec.pdf`
@@ -34,27 +36,36 @@ relational-os/
   README.md          ← this file
   PROTOCOL.md        ← sprint lifecycle (mandatory, every sprint)
   SPEC.md            ← working specification (v0.22)
-  docs/              ← research & reference
+  pyproject.toml     ← python package metadata (canonical `ros` package; ruff/pytest config)
+  ros/               ← CANONICAL importable package (byte-identical to sprint-5's ros, the origin)
+  docs/              ← the verified manual package (Sprint 6)
+  scripts/verify.sh  ← quick green/red gate (daily cockpit + conformance-all-six)
+  tests/run_checks.py← the full green-gate test suite (exit 0 = ALL PASS), run from any cwd
+  instances/         ← sector instances (12 Appendix-B families) + contested_reality + agent demo
   sprints/
     sprint-N/
       PROMPT.md      ← self-contained prompt for this sprint (read first)
       plan.md        ← plan this sprint writes (sub-sprints: work/<n>-plan.md)
       work/          ← per sub-sprint plans + scratch
       notes/         ← findings.md (feeds spec updates)
-      artifacts/     ← schema, validator, fixtures, reports produced here
+      artifacts/     ← schema, validator, fixtures, reports produced here (narrative history)
       summary.md     ← written at sprint end
 ```
 The canonical spec lives here (`SPEC.md`). When a sprint changes it, optionally sync
 the `.md`/`.pdf` mirror into `/home/rlg/Documents/`.
 
 ## Documentation
-The finished S1→S5 system is documented in a verified manual package (Sprint 6):
-- Index & reading order: `sprints/sprint-6/artifacts/docs/00-README.md`
-- Quick-start (3 commands to stand up + read the cockpit): `sprints/sprint-6/artifacts/docs/QUICKSTART.md`
-- Operator — setup / run: `sprints/sprint-6/artifacts/docs/02-setup.md`, `…/03-run.md`
-- Engineer — system / audit: `sprints/sprint-6/artifacts/docs/01-system-manual.md`, `…/04-audit.md`
-- Owner — BI / user manual: `sprints/sprint-6/artifacts/docs/05-bi-reports.md`, `…/06-user-manual.md`
-- Appendix — troubleshooting & glossary: `sprints/sprint-6/artifacts/docs/07-troubleshooting.md`
+The finished S1→S5 system is documented in a verified manual package (Sprint 6). Primary
+copy at the repo root `docs/`; the identical Sprint-6 narrative copy stays at
+`sprints/sprint-6/artifacts/docs/`:
+- Index & reading order: `docs/00-README.md`
+- Quick-start (3 commands to stand up + read the cockpit): `docs/QUICKSTART.md`
+- Operator — setup / run: `docs/02-setup.md`, `docs/03-run.md`
+- Engineer — system / audit: `docs/01-system-manual.md`, `docs/04-audit.md`
+- Owner — BI / user manual: `docs/05-bi-reports.md`, `docs/06-user-manual.md`
+- Appendix — troubleshooting & glossary: `docs/07-troubleshooting.md`
+- **Green gate / test suite:** `python3 tests/run_checks.py` (full build; exit 0 = ALL PASS)
+  or `bash scripts/verify.sh` (daily cockpit + conformance-all-six, quick).
 - **Multi-sector instances** (one per SPEC Appendix B family, all conformance-clean): `instances/README.md`
   + builder `instances/sector_scene.py`, configs `instances/configs.py`, build `instances/build_all.py`,
   conformance `instances/conformance_all.py`.

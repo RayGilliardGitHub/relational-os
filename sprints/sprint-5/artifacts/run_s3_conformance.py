@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 ######## import Sprint-0's validator verbatim ########
-SPRINT0 = Path("../../sprint-0/artifacts").resolve()
+SPRINT0 = Path(__file__).resolve().parents[2] / "sprint-0/artifacts"
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(SPRINT0))
 

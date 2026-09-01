@@ -10,6 +10,17 @@ The operating loop is identical across sectors; **only the domain vocabulary dif
 (company, counterparties, outcome class, trust claim, URIs, prose). That is the platform
 generalizing: the on-time-exception loop is the product, and any sector is a config.
 
+## Project layout (post-reorg standard roots)
+- **Canonical `ros/` package** lives at the repo ROOT (`/home/rlg/relational-os/ros/`), flat
+  byte-identical to `sprints/sprint-5/artifacts/ros/` (the sprint-5 copy remains the narrative
+  snapshot of where it was promoted from; sprints 1–4 hold earlier partial snapshots).
+- **Docs** (the verified manuals) are at the repo ROOT `docs/` (also still under
+  `sprints/sprint-6/artifacts/docs/` as narrative).
+- **Gate** `scripts/verify.sh` + **test suite** `tests/run_checks.py` live at the repo root and
+  run from ANY cwd (the conformance scripts were re-anchored to `Path(__file__)` so they are no
+  longer CWD-bound). Python layout: `pyproject.toml` declares the `ros` package.
+- Everything in this `instances/` dir is unchanged + `__file__`-anchored and runs from repo root.
+
 ## The instances
 
 | Sector family (Appendix B) | Label | Company (fictional) | Outcome class | Status |

@@ -27,7 +27,7 @@ import json
 import sys
 
 HERE = Path(__file__).resolve().parent
-ROS = Path("../../sprints/sprint-5/artifacts").resolve()
+ROS = Path(__file__).resolve().parents[1] / "sprints/sprint-5/artifacts"
 sys.path.insert(0, str(ROS))
 
 from ros.substrate import Substrate, now_iso            # noqa: E402

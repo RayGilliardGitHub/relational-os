@@ -1,5 +1,5 @@
 # §7L recorded-variance band → do-nothing expected-impact — engine-native render (Sprint 23)
-generated 2026-09-01T05:31:06Z  |  `adjudication_engine.cockpit_s7l`/`render_cockpit_s7l`  |  recorded `metric://` series + recorded last-point `variance` (magnitude σ) -> Q8/trade-off do-nothing priced as a projected BAND (worst ± σ) where the data exists; a no-variance series keeps the Sprint-22 single-point output byte-identical  |  SPEC v0.22, 49 $defs, URI cap
+generated 2026-09-01T05:39:58Z  |  `adjudication_engine.cockpit_s7l`/`render_cockpit_s7l`  |  recorded `metric://` series + recorded last-point `variance` (magnitude σ) -> Q8/trade-off do-nothing priced as a projected BAND (worst ± σ) where the data exists; a no-variance series keeps the Sprint-22 single-point output byte-identical  |  SPEC v0.22, 49 $defs, URI cap
 
 The do-nothing expected-impact now prices the RECORDED SPREAD, not just the single point: when the org's recorded `metric://` series carries a numeric `variance` on its last point, the closure reports a projected band low…high = worst ± |recorded variance| and whether the WORST side of the band crosses the recorded threshold. This is a recorded-data spread — it bounds the deterministic projection by the recorded historical variance — NOT a probability/confidence interval and never the wall-clock.
 

@@ -1,5 +1,5 @@
 # Quoteko — Business Operating Layer cockpit
-generated 2026-09-01T05:31:16Z  |  ledger events 97  graph objects 160
+generated 2026-09-01T05:40:14Z  |  ledger events 97  graph objects 160
 
 ## Business health (ledger-projected metrics)
 | metric | unit | target | actual | variance | status |

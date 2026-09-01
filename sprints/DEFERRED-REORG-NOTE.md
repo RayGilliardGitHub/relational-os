@@ -1,6 +1,13 @@
 # Planned sprint — reorganize project directories into a standard layout
 
-**Status: DEFERRED by Raymond.** Not to be authored/executed now.
+**Status: EXECUTED 2026-09-01.** Raymond lifted the deferral; the reorg was carried out per
+`REORG-PLAN.md` and proven green by `tests/run_checks.py` (38 checks, RESULT: ALL PASS, from repo
+root) + `scripts/verify.sh` (ALL GREEN from a deep cwd). Canonical `ros/` now at repo root,
+`docs/` + `tests/` + `scripts/` populated, `pyproject.toml` added, and the 8 CWD-bound sprint
+conformance scripts + `fin_demo.py` re-anchored to `Path(__file__)` (instance counts unchanged:
+156/28/35/55/174/316). This note is now a record of why the standard roots were added.
+
+**Historical status: DEFERRED by Raymond.** Not to be authored/executed now.
 Author it toward the END of the current sprint run (after ~5 more sprints from Sprint 22, i.e.
 around sprint-28+), when the current build line is effectively complete.
 

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "relational-os"
+version = "0.22.0"
+description = "RelationalOS — a spec-driven 5-service chain (Identity/AuthZ, Intent/Matching, Orchestration, Settlement, Trust) over a shared Graph (state) + append-only signed Ledger (history), surfaced as a Business Operating Layer with a morning cockpit. Spec: SPEC.md v0.22."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Raymond Gilliard" }]
+keywords = ["relational-os", "multi-agent", "ledger", "graph", "ontology", "operating-layer"]
+
+# Conformance needs these; demos/ros are pure stdlib. The runbook's Sprint-0 venv provides them;
+# this group documents them for a fresh `pip install -e .[dev]` (not required to run the gate).
+[project.optional-dependencies]
+dev = ["jsonschema", "referencing", "pyyaml", "pytest"]
+
+[tool.setuptools]
+packages = ["ros"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+minversion = "6"

@@ -307,7 +307,7 @@
       "uri": "process_instance://auto/pi-core",
       "process": "process://auto/pr-core",
       "status": "RUNNING",
-      "started_at": "2026-09-01T05:31:12Z"
+      "started_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "trust://auto/t-stellar-auto",
@@ -316,7 +316,7 @@
       "claim": "OEM part-lot delivery reliability",
       "context": "relationship://auto/partner-net",
       "score": 0.79,
-      "updated_at": "2026-09-01T05:31:12Z",
+      "updated_at": "2026-09-01T05:39:56Z",
       "expected": 0.8,
       "outcome": 1.0,
       "evidence": [
@@ -332,7 +332,7 @@
       "claim": "OEM part-lot delivery reliability",
       "context": "relationship://auto/partner-net",
       "score": 0.14,
-      "updated_at": "2026-09-01T05:31:12Z",
+      "updated_at": "2026-09-01T05:39:56Z",
       "expected": 0.8,
       "outcome": 0.0,
       "evidence": [
@@ -391,7 +391,7 @@
           "score": 0.6
         }
       ],
-      "made_at": "2026-09-01T05:31:12Z"
+      "made_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "asset://money/auto-escrow-corvair-partsQ3",
@@ -440,7 +440,7 @@
         "provider": "org://auto/corvair-parts",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T05:31:12Z"
+      "made_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "event://auto/s4-exchange-corvair-partsQ3",
@@ -450,7 +450,7 @@
       "causation_id": "ev-s4-104",
       "idempotency_key": "idem-s4-105",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:31:12Z",
+      "occurred_at": "2026-09-01T05:39:56Z",
       "actor": "agent://s4",
       "detail": "settle exchange corvair-partsQ3: 2000000.0 USD org://auto/forge-auto->org://auto/corvair-parts (value 2000000.0, cost 2000000.0)",
       "state_update": [],
@@ -471,7 +471,7 @@
       "causation_id": "ev-s4-105",
       "idempotency_key": "idem-s4-106",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:31:12Z",
+      "occurred_at": "2026-09-01T05:39:56Z",
       "actor": "agent://s4",
       "detail": "evaluate settle corvair-partsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
       "state_update": [],
@@ -490,7 +490,7 @@
       "causation_id": "ev-s2-106",
       "idempotency_key": "idem-s2-107",
       "signature": "signed-by-org://auto/corvair-parts",
-      "occurred_at": "2026-09-01T05:31:12Z",
+      "occurred_at": "2026-09-01T05:39:56Z",
       "actor": "org://auto/corvair-parts",
       "detail": "job committed-corvair-partsQ3 by org://auto/corvair-parts: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
       "state_update": [],
@@ -508,7 +508,7 @@
         "procedure": "anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T05:31:12Z"
+      "captured_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "claim://auto/committed-corvair-partsQ3",
@@ -562,7 +562,7 @@
         "provider": "org://auto/stellar-auto",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T05:31:12Z"
+      "made_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "event://auto/s4-exchange-stellar-autoQ3",
@@ -572,7 +572,7 @@
       "causation_id": "ev-s4-109",
       "idempotency_key": "idem-s4-110",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:31:12Z",
+      "occurred_at": "2026-09-01T05:39:56Z",
       "actor": "agent://s4",
       "detail": "settle exchange stellar-autoQ3: 2000000.0 USD org://auto/forge-auto->org://auto/stellar-auto (value 2000000.0, cost 2000000.0)",
       "state_update": [],
@@ -593,7 +593,7 @@
       "causation_id": "ev-s4-110",
       "idempotency_key": "idem-s4-111",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:31:12Z",
+      "occurred_at": "2026-09-01T05:39:56Z",
       "actor": "agent://s4",
       "detail": "evaluate settle stellar-autoQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
       "state_update": [],
@@ -612,7 +612,7 @@
       "causation_id": "ev-s2-111",
       "idempotency_key": "idem-s2-112",
       "signature": "signed-by-org://auto/stellar-auto",
-      "occurred_at": "2026-09-01T05:31:12Z",
+      "occurred_at": "2026-09-01T05:39:56Z",
       "actor": "org://auto/stellar-auto",
       "detail": "job committed-stellar-autoQ3 by org://auto/stellar-auto: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
       "state_update": [],
@@ -630,7 +630,7 @@
         "procedure": "anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T05:31:12Z"
+      "captured_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "claim://auto/committed-stellar-autoQ3",
@@ -684,7 +684,7 @@
         "provider": "org://auto/corvair-parts",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T05:31:12Z"
+      "made_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "event://auto/s4-exchange-corvair-partsQ4",
@@ -694,7 +694,7 @@
       "causation_id": "ev-s4-114",
       "idempotency_key": "idem-s4-115",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:31:12Z",
+      "occurred_at": "2026-09-01T05:39:56Z",
       "actor": "agent://s4",
       "detail": "settle exchange corvair-partsQ4: 1600000.0 USD org://auto/forge-auto->org://auto/corvair-parts (value 1600000.0, cost 1600000.0)",
       "state_update": [],
@@ -715,7 +715,7 @@
       "causation_id": "ev-s4-115",
       "idempotency_key": "idem-s4-116",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:31:12Z",
+      "occurred_at": "2026-09-01T05:39:56Z",
       "actor": "agent://s4",
       "detail": "evaluate settle corvair-partsQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
       "state_update": [],
@@ -734,7 +734,7 @@
       "causation_id": "ev-s2-116",
       "idempotency_key": "idem-s2-117",
       "signature": "signed-by-org://auto/corvair-parts",
-      "occurred_at": "2026-09-01T05:31:12Z",
+      "occurred_at": "2026-09-01T05:39:56Z",
       "actor": "org://auto/corvair-parts",
       "detail": "job committed-corvair-partsQ4 by org://auto/corvair-parts: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
       "state_update": [],
@@ -752,7 +752,7 @@
         "procedure": "anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T05:31:12Z"
+      "captured_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "claim://auto/committed-corvair-partsQ4",
@@ -772,41 +772,41 @@
       "relationships": [
         "relationship://auto/ops-rel"
       ],
-      "created_at": "2026-09-01T05:31:12Z",
+      "created_at": "2026-09-01T05:39:56Z",
       "history": [
         {
           "status": "OPEN",
-          "at": "2026-09-01T05:31:12Z",
+          "at": "2026-09-01T05:39:56Z",
           "event": null
         },
         {
           "status": "TRIAGE",
-          "at": "2026-09-01T05:31:12Z",
+          "at": "2026-09-01T05:39:56Z",
           "event": "event://auto/s5-case-triage"
         },
         {
           "status": "ASSIGNED",
-          "at": "2026-09-01T05:31:12Z",
+          "at": "2026-09-01T05:39:56Z",
           "event": "event://auto/s5-case-assigned"
         },
         {
           "status": "IN_PROGRESS",
-          "at": "2026-09-01T05:31:12Z",
+          "at": "2026-09-01T05:39:56Z",
           "event": "event://auto/s5-case-inprogress"
         },
         {
           "status": "BLOCKED",
-          "at": "2026-09-01T05:31:12Z",
+          "at": "2026-09-01T05:39:56Z",
           "event": "event://auto/s5-case-blocked"
         },
         {
           "status": "RESOLVED",
-          "at": "2026-09-01T05:31:12Z",
+          "at": "2026-09-01T05:39:56Z",
           "event": "event://auto/s5-case-resolved"
         },
         {
           "status": "CLOSED",
-          "at": "2026-09-01T05:31:12Z",
+          "at": "2026-09-01T05:39:56Z",
           "event": "event://auto/s5-case-closed"
         }
       ],
@@ -833,7 +833,7 @@
       "confidence": 0.85,
       "expected_outcome": "accept as a real risk",
       "actual_outcome": "accepted; root nominated",
-      "made_at": "2026-09-01T05:31:12Z"
+      "made_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "task://auto/t-rebalance",
@@ -881,7 +881,7 @@
         "priority": 0.695,
         "capacity": 1.0
       },
-      "made_at": "2026-09-01T05:31:12Z"
+      "made_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "decision://auto/s5-match-recorded",
@@ -903,7 +903,7 @@
           "score": 0.695
         }
       ],
-      "made_at": "2026-09-01T05:31:12Z"
+      "made_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "escalation://auto/escalate-release",
@@ -934,7 +934,7 @@
         "irreversible_failure": true,
         "cost_failure_unknowable": true
       },
-      "made_at": "2026-09-01T05:31:12Z"
+      "made_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "commitment://auto/c-stellar-auto-followup",
@@ -947,7 +947,7 @@
         "kind": "OEM part-lot delivery follow-up",
         "signed": true
       },
-      "agreed_at": "2026-09-01T05:31:12Z"
+      "agreed_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "expectation://auto/e-stellar-autoR",
@@ -1006,7 +1006,7 @@
         "provider": "org://auto/stellar-auto",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T05:31:12Z"
+      "made_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "event://auto/s4-exchange-stellar-autoR",
@@ -1016,7 +1016,7 @@
       "causation_id": "ev-s4-7014",
       "idempotency_key": "idem-s4-7015",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:31:12Z",
+      "occurred_at": "2026-09-01T05:39:56Z",
       "actor": "agent://s4",
       "detail": "settle exchange stellar-autoR: 2000000.0 USD org://auto/forge-auto->org://auto/stellar-auto (value 2000000.0, cost 2000000.0)",
       "state_update": [],
@@ -1037,7 +1037,7 @@
       "causation_id": "ev-s4-7015",
       "idempotency_key": "idem-s4-7016",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:31:12Z",
+      "occurred_at": "2026-09-01T05:39:56Z",
       "actor": "agent://s4",
       "detail": "evaluate settle stellar-autoR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
       "state_update": [],
@@ -1056,7 +1056,7 @@
       "causation_id": "ev-s2-7016",
       "idempotency_key": "idem-s2-7017",
       "signature": "signed-by-org://auto/stellar-auto",
-      "occurred_at": "2026-09-01T05:31:12Z",
+      "occurred_at": "2026-09-01T05:39:56Z",
       "actor": "org://auto/stellar-auto",
       "detail": "job routed-stellar-autoR by org://auto/stellar-auto: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
       "state_update": [],
@@ -1074,7 +1074,7 @@
         "procedure": "anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T05:31:12Z"
+      "captured_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "claim://auto/routed-stellar-autoR",
@@ -1091,7 +1091,7 @@
       "variance": 0.05,
       "why": "Routing part lots via a vendor with verified on-time delivery (stellar-auto), while gating the laggard (corvair-parts), restored on-time supply. Verified good deliveries compound scoped Trust.",
       "change_future_policy": "ALLOCATE by fit AND scoped Trust; vendors below the Trust floor need a gate before new lots.",
-      "made_at": "2026-09-01T05:31:12Z"
+      "made_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "goal://auto/g-core",
@@ -1181,7 +1181,7 @@
         "action": "task://auto/t-rebalance",
         "outcome": "event://auto/outcome-routed-stellar-autoR"
       },
-      "made_at": "2026-09-01T05:31:12Z"
+      "made_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "decision://auto/s5-attention",
@@ -1204,7 +1204,7 @@
           }
         ]
       },
-      "made_at": "2026-09-01T05:31:12Z"
+      "made_at": "2026-09-01T05:39:56Z"
     },
     {
       "uri": "dependency://auto/d-rb-enables-fu",
