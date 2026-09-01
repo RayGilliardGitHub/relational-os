@@ -1,0 +1,39 @@
+[
+  {
+    "uri": "claim://cove/medically-necessary",
+    "proposer": "person://cove/physician",
+    "statement": "medication X is medically necessary for this member; a peer-reviewed study supports its use for the condition.",
+    "evidence": [
+      "evidence://cove/clinical-study"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://cove/off-formulary",
+    "proposer": "org://cove/payer",
+    "statement": "medication X is off-formulary; the formulary policy and comparative step-therapy evidence do not require it as first-line.",
+    "evidence": [
+      "evidence://cove/formulary-policy",
+      "evidence://cove/step-therapy-studies"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://cove/u-necessary",
+    "proposer": "person://cove/physician",
+    "statement": "medication Y is medically necessary for the rare condition.",
+    "evidence": [
+      "evidence://cove/u-anecdotal"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://cove/u-unproven",
+    "proposer": "org://cove/payer",
+    "statement": "no comparative evidence supports medication Y's use.",
+    "evidence": [
+      "evidence://cove/u-no-data"
+    ],
+    "epistemic_status": "disputed"
+  }
+]

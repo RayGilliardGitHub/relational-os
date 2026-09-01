@@ -1,0 +1,98 @@
+[
+  {
+    "uri": "case://ic/remote-conflict",
+    "subject": "employee remote-work request vs manager on-site coverage under the customer SLA",
+    "status": "RESOLVED",
+    "actors": [
+      "person://ic/employee",
+      "person://ic/manager",
+      "org://ic/customer"
+    ],
+    "relationships": [
+      "relationship://ic/employment",
+      "relationship://ic/contract",
+      "relationship://ic/staffing-authority"
+    ],
+    "owner": "person://ic/manager",
+    "conflict": {
+      "interests": [
+        {
+          "party": "person://ic/employee",
+          "want": "full-remote + use 12 leave days",
+          "stakes": "wellbeing + use of accrued unused leave",
+          "legitimate": true,
+          "within_policy": true
+        },
+        {
+          "party": "person://ic/manager",
+          "want": "on-site coverage to meet SLA",
+          "stakes": "30-min customer-response SLA + staffing floor",
+          "legitimate": true,
+          "within_policy": true
+        }
+      ],
+      "constraint": {
+        "response_target_minutes": 30,
+        "coverage_floor_agents": 3,
+        "on_site_if_full_remote": 2,
+        "policy": "policy://ic/remote"
+      },
+      "detected": true,
+      "mutually_exclusive": true,
+      "uncertainty": "coverage needs on remote days unverified; whether a coverage plan can meet the SLA is a judgment",
+      "negotiation_open": true
+    },
+    "resolution": "{'determination': 'remote-with-coverage-plan', 'determined_by': 'person://ic/manager', 'covered_stake': {'emp': 'remote 3 days/wk + 2 leave days', 'mgr': 'on-site coverage meets SLA'}, 'conditions': ['on-site Tue/Thu', 'coverage floor met on commitment days'], 'reason': \"employee's remote interest is legitimate and within policy; manager's SLA interest is binding; a CONDITIONAL plan meets both: remote Mon/Wed/Fri, on-site Tue/Thu keeps staffing at the 3-agent floor so the 30-min SLA holds, and 2 of 12 unused-leave days are consumed\"}",
+    "negotiation": {
+      "outcome": "remote-with-coverage-plan",
+      "by_whom": "person://ic/manager",
+      "satisfies": {
+        "employee_interest": "remote 3 days/wk + 2 leave",
+        "manager_interest": "SLA + floor met"
+      }
+    },
+    "appeal": {
+      "uri": "event://ic/appeal",
+      "appeals_for": "person://ic/employee",
+      "appealing": "decision://ic/adjudication",
+      "ground": "employee sought full remote; conditional plan still limits flexibility; requests leave use be explicit and unrestricted",
+      "status": "OPEN",
+      "authority": "authority://ic/for-appeal",
+      "recorded_under": "right://ic/emp-appeal"
+    },
+    "appeal_status": "RESOLVED",
+    "appeal_ground": "employee sought full remote; conditional plan still limits flexibility; requests leave use be explicit and unrestricted",
+    "appeal_outcome": "modify",
+    "final_arrangement": "remote 4 days/wk + 3 leave days; on-site 1 day meets SLA floor"
+  },
+  {
+    "uri": "case://ic/remote-uncertain",
+    "subject": "remote request where coverage data is unavailable",
+    "status": "OPEN",
+    "actors": [
+      "person://ic/employee",
+      "person://ic/manager"
+    ],
+    "relationships": [
+      "relationship://ic/employment",
+      "relationship://ic/contract"
+    ],
+    "owner": "person://ic/manager",
+    "conflict": {
+      "interests": [],
+      "constraint": {
+        "response_target_minutes": 30,
+        "coverage_floor_agents": 3,
+        "note": "remote-day staffing coverage NOT verifiable"
+      },
+      "detected": true,
+      "mutually_exclusive": true,
+      "uncertainty": "no source records on-site coverage on proposed remote days; neither side can be substantiated",
+      "negotiation_open": true
+    },
+    "resolution": "{'determination': 'UNRESOLVED', 'determined_by': 'person://ic/manager', 'epistemic_state': 'INSUFFICIENT_EVIDENCE', 'reason': 'coverage on proposed remote days is unverified with no independent source; no arrangement is justified by the admissible basis'}",
+    "epistemic_state": "INSUFFICIENT_EVIDENCE",
+    "determination": "UNRESOLVED",
+    "determined_by": "person://ic/manager"
+  }
+]

@@ -1,0 +1,109 @@
+[
+  {
+    "uri": "evidence://lf/gps-arrival",
+    "kind": "ANCHORED",
+    "source": "fleet-GPS-livestate",
+    "captured_at": "2026-08-31T16:12:00-06:00",
+    "verity": {
+      "procedure": "gps-timestamp",
+      "confidence": 0.85
+    },
+    "reliability": 0.85,
+    "about": "arrival gate event",
+    "supports": "claim://lf/delivery-late"
+  },
+  {
+    "uri": "evidence://lf/contract-deadline",
+    "kind": "RECORD",
+    "source": "contract-terms",
+    "captured_at": "2026-01-01T00:00:00-06:00",
+    "verity": {
+      "procedure": "contract-deadline",
+      "confidence": 1.0
+    },
+    "reliability": 1.0,
+    "about": "delivery deadline 16:00",
+    "supports": null
+  },
+  {
+    "uri": "evidence://lf/arrival-receipt",
+    "kind": "TESTIMONY",
+    "source": "customer-signed-receipt",
+    "captured_at": "2026-08-31T16:15:00-06:00",
+    "verity": {
+      "procedure": "signed-receipt",
+      "confidence": 0.9
+    },
+    "reliability": 0.9,
+    "about": "delivery receipt",
+    "supports": "claim://lf/delivery-late"
+  },
+  {
+    "uri": "evidence://lf/supplier-shipping",
+    "kind": "RECORD",
+    "source": "supplier-shipping-system",
+    "captured_at": "2026-08-31T15:58:00-06:00",
+    "verity": {
+      "procedure": "shipping-log",
+      "confidence": 0.92
+    },
+    "reliability": 0.92,
+    "about": "ship-out time",
+    "supports": "claim://lf/shipped-on-time"
+  },
+  {
+    "uri": "evidence://lf/third-party-verification",
+    "kind": "ANCHORED",
+    "source": "independent-audit-service",
+    "captured_at": "2026-08-31T17:05:00-06:00",
+    "verity": {
+      "procedure": "anchored-liveness",
+      "confidence": 0.97
+    },
+    "reliability": 0.97,
+    "about": "delivery liveness verification",
+    "supports": "claim://lf/delivered"
+  },
+  {
+    "uri": "evidence://lf/invoice-18k",
+    "kind": "RECORD",
+    "source": "ar-system",
+    "captured_at": "2026-08-31T09:00:00-06:00",
+    "verity": {
+      "procedure": "invoice",
+      "confidence": 1.0
+    },
+    "reliability": 1.0,
+    "about": "$18,000 invoice",
+    "supports": "claim://lf/delivered"
+  },
+  {
+    "uri": "evidence://lf/learning-note",
+    "kind": "RECORD",
+    "source": "post-resolution-postmortem",
+    "captured_at": "2026-09-01T02:18:48Z",
+    "verity": {
+      "procedure": "postmortem",
+      "confidence": 0.6
+    },
+    "reliability": 0.6,
+    "about": "what was learned",
+    "supports": null,
+    "learning": "conflicting timestamps must reach a determination via an authorised adjudicator + anchored third-party verification, not the single-source verifier"
+  },
+  {
+    "uri": "evidence://lf/clock-mis-set",
+    "kind": "ANCHORED",
+    "source": "internal-clock-audit",
+    "captured_at": "2026-09-01T02:18:48Z",
+    "verity": {
+      "procedure": "clock-drift-audit",
+      "confidence": 0.9
+    },
+    "reliability": 0.9,
+    "about": "verification clock drift",
+    "supports": null,
+    "drift_found": "9-min fast",
+    "reliability_note": "honest source error, not deception"
+  }
+]

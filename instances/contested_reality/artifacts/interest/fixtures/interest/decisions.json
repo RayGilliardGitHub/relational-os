@@ -1,0 +1,69 @@
+[
+  {
+    "uri": "decision://ic/adjudication",
+    "by": "person://ic/manager",
+    "authority": "authority://ic/adjudicate-remote",
+    "alternatives": [
+      "side-employee",
+      "side-manager",
+      "remote-with-coverage-plan",
+      "UNRESOLVED"
+    ],
+    "confidence": 0.82,
+    "expected_outcome": "resolve conflict",
+    "actual_outcome": "remote-with-coverage-plan",
+    "detail": {
+      "determination": "remote-with-coverage-plan",
+      "determined_by": "person://ic/manager",
+      "covered_stake": {
+        "emp": "remote 3 days/wk + 2 leave days",
+        "mgr": "on-site coverage meets SLA"
+      },
+      "conditions": [
+        "on-site Tue/Thu",
+        "coverage floor met on commitment days"
+      ],
+      "reason": "employee's remote interest is legitimate and within policy; manager's SLA interest is binding; a CONDITIONAL plan meets both: remote Mon/Wed/Fri, on-site Tue/Thu keeps staffing at the 3-agent floor so the 30-min SLA holds, and 2 of 12 unused-leave days are consumed"
+    },
+    "made_at": "2026-09-01T02:18:40Z"
+  },
+  {
+    "uri": "decision://ic/appeal-decision",
+    "by": "person://ic/director",
+    "authority": "authority://ic/for-appeal",
+    "alternatives": [
+      "uphold",
+      "modify",
+      "reverse"
+    ],
+    "confidence": 0.9,
+    "expected_outcome": "resolve appeal",
+    "actual_outcome": "modify",
+    "detail": {
+      "ruling": "affirmed-coverage-condition",
+      "granted": "employee remote 4 days/wk; 3 of 12 leave days explicit"
+    },
+    "made_at": "2026-09-01T02:18:40Z"
+  },
+  {
+    "uri": "decision://ic/adjudication-uncertain",
+    "by": "person://ic/manager",
+    "authority": "authority://ic/adjudicate-remote",
+    "alternatives": [
+      "side-employee",
+      "side-manager",
+      "remote-with-coverage-plan",
+      "UNRESOLVED"
+    ],
+    "confidence": 0.6,
+    "expected_outcome": "resolve conflict",
+    "actual_outcome": "UNRESOLVED",
+    "detail": {
+      "determination": "UNRESOLVED",
+      "determined_by": "person://ic/manager",
+      "epistemic_state": "INSUFFICIENT_EVIDENCE",
+      "reason": "coverage on proposed remote days is unverified with no independent source; no arrangement is justified by the admissible basis"
+    },
+    "made_at": "2026-09-01T02:18:40Z"
+  }
+]

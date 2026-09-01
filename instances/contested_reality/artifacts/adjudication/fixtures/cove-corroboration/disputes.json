@@ -1,0 +1,48 @@
+[
+  {
+    "uri": "dispute://cove/coverage",
+    "about": "obligation://cove/furnish-coverage",
+    "parties": [
+      "person://cove/patient",
+      "person://cove/physician",
+      "org://cove/payer"
+    ],
+    "status": "RESOLVED",
+    "estimated_cost_usd": 42000,
+    "deadline_ref": "utilization review decision within 72 hours (urgent)",
+    "interest_blocks": {
+      "patient": "access to the treatment the physician deems necessary",
+      "provider": "deliver clinically-appropriate care",
+      "payer": "pay only for covered/evidence-based care"
+    },
+    "constraint_blocks": {
+      "formulary": "off-formulary requires prior authorization",
+      "irreversible": "a dispensed drug is irreversible/unknown-cost to the member; a flat denial is a patient-safety unknown-cost -> \u00a76 human floor on both extremes"
+    },
+    "lifecycle_state": "CLOSED",
+    "epistemic_state": "RESOLVED_DETERMINED",
+    "determination": "step-therapy-first",
+    "resolution_type": "step-therapy-first",
+    "reopened": false,
+    "available_resolutions": [
+      "authorize-off-formulary",
+      "deny-off-formulary",
+      "step-therapy-first",
+      "authorize-generic",
+      "request-more-evidence",
+      "escalate-to-medical-director",
+      "unresolved",
+      "external-peer-review"
+    ],
+    "conflict": {
+      "detected": true,
+      "uncertainty": false,
+      "claim_support": {
+        "claim://cove/medically-necessary": 0.9167,
+        "claim://cove/off-formulary": 1.0
+      }
+    },
+    "resolution_outcome": "step-therapy-first: member begins on the covered step-therapy with a documented re-evaluation if response is inadequate; no off-formulary spend triggered immediately",
+    "verified": true
+  }
+]

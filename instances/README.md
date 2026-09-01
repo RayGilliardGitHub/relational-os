@@ -87,6 +87,89 @@ sectors from a config (`configs.py`), rather than a bespoke scene per sector.
 Cross-references: manuals `sprints/sprint-6/artifacts/docs/`; spec `SPEC.md` (v0.22);
 platform hand-off `sprints/COMPLETE.md`.
 
+## Contested-reality / conflicting-interest extension (Sprints 9–10)
+
+Beyond the happy-path sectors, `instances/contested_reality/` is the contested-human-reality
+engine — the check on whether the word *relational* is earned off the happy path.
+
+- **Sprint 9 — disputed fact:** `run_dispute_demo.py` + `conformance_dispute.py` carry two
+  conflicting claims × evidence through conflict detection → disputed state → adjudication →
+  determination, and — **inviolably — may conclude UNRESOLVED / insufficient-evidence**,
+  staying Trust-safe (only an adequately-evidenced determination advances Trust). Fact /
+  Claim / Determination are distinct objects. Docs: `contested_reality/docs/CONTESTED-REALITY-EXPERIMENT.md`.
+- **Sprint 10 — conflicting interest (remote-work, Scenario B):** `run_interest_conflict_demo.py`
+  + `conformance_interest.py` model two parties with **legitimate, conflicting interests under a
+  shared constraint** — employee wants full remote + use unused leave; manager needs on-site
+  coverage to meet a 30-minute customer-response SLA with a 3-agent staffing floor; company policy
+  permits remote under conditions. It demonstrates: two interest objects with explicit stakes,
+  the shared SLA/staffing/policy constraint binding both, deterministic conflict detection under
+  the constraint, an OPEN `case://` with the conflict + recorded uncertainty, a **defensible
+  determination** that is a conditional middle option (`remote-with-coverage-plan`) while keeping
+  **UNRESOLVED** reachable (insufficient admissible basis), and a **first-class, signed appeal**
+  (native `right://` type=APPEAL) re-adjudicated by a higher authority — not a silent redo.
+  Everything is additive on existing primitives (`case://`, `relationship://`, `decision://`,
+  `expectation://`, `policy://`, `right://`, `authority://`); NO new noun, NO schema edit,
+  49 `$defs` intact, SPEC stays v0.22.
+- **Sprint 11 — the optimizer / business-model (what "better" means):**
+  `instances/contested_reality/tradeoff_model.py` + `run_tradeoff_demo.py` +
+  `conformance_tradeoff.py` compute a **defensible ranking of the adjudication options**
+  (side-employee / side-manager / remote-with-coverage-plan / do-nothing/UNRESOLVED) from the
+  org's OWN recorded constraints (SLA target, staffing floor, leave balance, policy satisfaction,
+  costs, evidence confidence) — the §7K.1 "trade-off / decision analysis" and the closing of
+  Scenario-B gap#3. A documented weighted utility model ranks the options; **do-nothing/UNRESOLVED
+  is always an explicit baseline** (it is never worse than breaching the customer SLA); the human
+  adjudicator determines WITH the computed ranking in view. An unknown-cost coverage variant shows
+  the **§6 human floor** gating every staff-changing option → human authorizes **UNRESOLVED**
+  (Trust untouched). An optional **real local model advisory** (Sprint-8 `agent_adapter`) is proven
+  contained — it cannot set the determination or Trust. The trade-off rides the case as an
+  **additive object in the frozen `Recommendation` $def shape** (incl. a machine-readable `json`
+  ranking); NO new noun / `recommendation://` scheme, 49 `$defs` intact, SPEC v0.22.
+  Docs: `contested_reality/docs/TRADE-OFF-IMPLEMENTATION.md`.
+- **Sprint 12 — the consolidated contested-reality lifecycle (the "does it understand disagreement?"
+  proof):** `instances/contested_reality/run_full_dispute.py` + `conformance_lifecycle.py` walk ONE
+  financial/customer dispute ($18,000, delivery) through the ENTIRE lifecycle over real signed ledger
+  events: claims → conflicting evidence (GPS/contract/receipt/supplier) → conflict detection →
+  uncertainty → epistemic status → interests/obligations/constraints → options (incl. do-nothing +
+  settlement) → constrained trade-off → contained real-AI advisory → authorized human determination →
+  verified outcome → learning → appeal → reopen on new evidence → reassessment → NEW determination
+  (history preserved, ledger never rewritten) → error-vs-deception Trust → UNRESOLVED (valid +
+  Trust-safe). Closes the review's decisive question with a runnable proof, not a document. Additive
+  only; 49 `$defs` + URI cap intact; SPEC v0.22. Docs:
+  `contested_reality/docs/DISPUTE-RESOLUTION-SPECIFICATION.md` (16 sections + sufficiency table +
+  the honest final assessment).
+- **Sprint 13 — the configurable adjudication engine (the adjudication semantics become GENERAL):**
+  `instances/contested_reality/adjudication_engine.py` is a generic, rule-driven driver that runs
+  the contested-reality lifecycle for ANY org configured for it — business-model weights, resolution
+  options, per-option factor scores, the evidence-reconciliation rule's parameters, the §6
+  floor-gated set + penalty, authority, and determination policy are all **data** in
+  `adjudication_configs.py` (no per-scenario code). The SAME engine drives BOTH `deli` (freight
+  $18k delivery → *partial-settlement*) and `cove` (clinical coverage → *step-therapy-first*) with
+  no code change, plus each org's thin-evidence sub-dispute → **UNRESOLVED**. Optional additions in
+  the same build: a **§7L cockpit Q7** render (`artifacts/adjudication/reports/cockpit-q7*.md`) and
+  **Decision-Learning / realized-cost weights** (`decision_learning.py`: expected-vs-actual variance
+  drives a clamp-bounded, additive re-weighting of the business model + a recorded
+  `realized_cost_usd` on the `decision://`). Commands (from `contested_reality/`):
+  `python3 run_adjudication_engine_demo.py` → ALL PASS; the Sprint-0 venv
+  `conformance_adjudication.py` → C1–C5 ALL PASS (frozen 49 `$defs`). Labels `deli`/`cove` are NOT
+  in `configs.SECTORS`, so the sector build is untouched. Docs:
+  `contested_reality/docs/GENERALIZED-ADJUDICATION.md` (§16 verdict: B → B+, materially toward A).
+- **Sprint 14 — the config-authorable RULE layer (the reconciliation rule becomes user-selected):**
+  `instances/contested_reality/run_rule_comparison_demo.py` drives ONE dispute (`inspect`, a $54k
+  goods-QC acceptance) through the SAME generic engine under THREE different CONFIGURED rules —
+  `best-reliability-threshold` (default), `strict-anchor-only`, and `recency-weighted-threshold` —
+  selected purely via `cfg["reconcile"]["rule"]` from the engine's deterministic registry
+  (`eng.RULES`, in `adjudication_engine.py`). A rule choice CHANGES the outcome: best-rel DETERMINES
+  *rework-partial-credit* (CLOSED) while strict-anchor and recency correctly end **UNRESOLVED** (OPEN),
+  and a claim DISPUTED under best-rel (0.90) is UNDETERMINED under strict-anchor (0.0, testimony
+  inadmissible) — with zero engine change between runs (only `reconcile` data differs). The existing
+  `deli`/`cove` outputs reproduce byte-for-byte under their original rule. Commands (from
+  `contested_reality/`): `python3 run_rule_comparison_demo.py` → ALL PASS; the Sprint-0 venv
+  `conformance_adjudication.py` → C1–C5 ALL PASS over 5 labels (deli, cove, inspect-best/anchor/rec).
+  Frozen 49 `$defs`, SPEC v0.22, `ros/` untouched. Docs:
+  `contested_reality/docs/USER-AUTHORABLE-RULE-LAYER.md` (honest §16: rule *selection* & *parameters*
+  are config; the rule *mapping* body is still a registry Python function — "A — Yes" is argued for
+  config-selected registry-backed rule authoring, not yet a textual micro-DSL).
+
 ## Branding component (Sprint 7)
 
 Each instance now carries a **company-branding component** — the About/marketing/FAQ/design
@@ -121,3 +204,56 @@ v1 under `financial/`); `conformance_all.py` → ALL SECTORS PASS (C1–C5 per s
 prints the brand label line. Sector cockpit headers now read e.g.
 `# Valiant Aero — Subsystems on the line, on the date.` and each cockpit + branding.md
 carries the brand. Self-contained build prompt: `sprints/sprint-7/PROMPT.md`.
+---
+
+## Sprint 15 — user-authorable RULE-authoring DSL (contested_reality)
+
+The evidence-reconciliation RULE **body** is now authorable as **config text**, not engine Python.
+`cfg["reconcile"]["rule_spec"]` is a small declarative spec (admissible evidence kinds × value_field
+× optional recency decay × one fixed aggregation op) that the engine **compiles** into the same pure
+support map the registry rules run — `adjudication_engine.py` gains `SPEC_VOCAB`,
+`compile_rule_spec`, `_spec_support`; the three registry rules and the shared `_derive` are untouched.
+
+- **Parity (same engine, not a different one):** `strict-anchor-only` and `recency-weighted-threshold`
+  re-expressed as specs reproduce their registry verdicts **exactly** on the `inspect` dispute
+  (`passed 0.84 / failed 0.0` and `passed 0.7863 / failed 0.9`).
+- **A genuinely NEW spec-only rule:** `majority-of-sources` (`aggregate:"majority"`,
+  `source_threshold:0.92`) was never a registry function; it is authored wholly as a config dict,
+  drives a real lifecycle, and *changes the verdict* — `inspect` flips from best-rel's DETERMINED
+  `rework-partial-credit` (CLOSED) to **UNRESOLVED** (OPEN), support `0.5/0.0`, distinct from all
+  three registry rules. Zero engine Python for the new rule.
+- **Runner / conformance:** `run_rule_authoring_demo.py` → ALL PASS; `conformance_adjudication.py`
+  now covers **8 labels** (deli, cove, inspect-best/anchor/rec + inspect-anchor-spec/rec-spec/majority)
+  C1–C5 ALL PASS, 49 `$defs`; EOF full non-regression green; SPEC v0.22 + `ros/` untouched.
+
+Format + expressiveness frontier (what a spec covers; what still needs a builtin e.g. a Bayesian
+posterior) stated plainly in `contested_reality/docs/USER-AUTHORABLE-RULE-DSL.md`.
+
+## Sprint 16 — the named cross-org RULE LIBRARY + a new `bayesian-combine` primitive (contested_reality)
+
+Sprint 16 closes (part of) Sprint 15's disclosed seam and turns spec-authored rules into a real,
+reusable, cross-org library.
+
+- **A genuinely NEW inference primitive, `bayesian-combine`** (a reliability-likelihood posterior /
+  independent-corroboration aggregate) is added to `eng.SPEC_VOCAB`, authored ONCE as a general,
+  deterministic + strict operator (an explicit author `prior`, loud rejection of a bad `prior`), and
+  then authorable as data by ANY org. It expresses what `max`/`mean`/... **cannot**: many
+  weak-but-independent sources can raise a claim's support ABOVE every single source (posterior
+  0.9674 > max 0.7 on identical inputs).
+- **A named, reusable cross-org RULE LIBRARY** (`ac.RULE_LIBRARY`): named specs defined once and
+  reused by reference (proven by `is`-identity) across ≥2 genuinely different orgs — `majority-of-sources`
+  on `inspect` **and** `deli` (goods-QC + freight); the new `independent-corroboration` on `inspect`
+  **and** `cove` (goods-QC + clinical).
+- **A real verdict flip the new primitive produces:** on the `inspect` dispute at reconcile threshold
+  0.98, single-source `max` (0.97) clears nothing → **UNRESOLVED**, while `bayesian-combine` of the
+  0.84+0.97 independent witnesses → posterior **0.9961** → **DETERMINED `rework-partial-credit`
+  (CLOSED)**. Same org, same threshold, only the `reconcile` rule differs.
+- **§7L cockpit Q7 surface:** the report names the ACTIVE rule + spec-authored-vs-registry source
+  per org (`cockpit-q7-rule-library.md`).
+- **Runner / conformance:** `run_rule_library_demo.py` → ALL PASS; `conformance_adjudication.py`
+  now validates **13 labels** C1–C5 ALL PASS, 49 `$defs`; full non-regression green; SPEC v0.22 +
+  `ros/` untouched; only catalog URI schemes in the new fixtures.
+
+Full write-up: `contested_reality/docs/USER-AUTHORABLE-RULE-LIBRARY.md` (updated frontier + §16
+verdict: A — Yes for the shipped vocabulary *including* the Bayesian-likelihood family; the precise
+remaining dependence is an op the vocabulary still cannot name, added once as interpreter code).

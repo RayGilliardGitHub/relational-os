@@ -1,0 +1,1371 @@
+{
+  "uri": "db://ledger/full-dispute-2026",
+  "head_hash": "40475d504b9ea2927eeb241c8b094da8d1bb47178afe86b9fd996eab64728676",
+  "entries": [
+    {
+      "uri": "event://lf/provision",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-provision-1",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-1",
+      "idempotency_key": "idem-lf-provision-1",
+      "signature": "signed-by-org://lf/company",
+      "occurred_at": "2026-09-01T02:18:46Z",
+      "actor": "org://lf/company",
+      "detail": "provision actors, customer/supplier/employment contracts, delivery + payment obligations, adjudicator + appeal authority, customer appeal right, legal-threat actor",
+      "state_update": [
+        {
+          "uri": "org://lf/customer",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://lf/company",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://lf/supplier",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://lf/legal-counsel",
+          "type": "ORG"
+        },
+        {
+          "uri": "person://lf/csr",
+          "type": "PERSON"
+        },
+        {
+          "uri": "person://lf/manager",
+          "type": "PERSON"
+        },
+        {
+          "uri": "person://lf/director",
+          "type": "PERSON"
+        },
+        {
+          "uri": "system://lf/audit-anchor",
+          "type": "SYSTEM"
+        },
+        {
+          "uri": "relationship://lf/customer-contract",
+          "participants": [
+            "org://lf/customer",
+            "org://lf/company"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://lf/customer": [
+              "buyer"
+            ],
+            "org://lf/company": [
+              "provider"
+            ]
+          },
+          "interest": {
+            "party": "org://lf/customer",
+            "want": "pay only for delivered service",
+            "stakes": [
+              "$18,000 invoice accuracy",
+              "no charge for non-delivery"
+            ],
+            "legitimate": true
+          },
+          "purpose": "contracted service delivery with 16:00 deadline"
+        },
+        {
+          "uri": "relationship://lf/supplier-contract",
+          "participants": [
+            "org://lf/supplier",
+            "org://lf/company"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://lf/supplier": [
+              "shipper"
+            ],
+            "org://lf/company": [
+              "customer"
+            ]
+          },
+          "purpose": "supplier shipping for the delivery"
+        },
+        {
+          "uri": "relationship://lf/employment",
+          "participants": [
+            "person://lf/csr",
+            "org://lf/company"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "person://lf/csr": [
+              "csr"
+            ],
+            "org://lf/company": [
+              "employer"
+            ]
+          },
+          "purpose": "customer-service handling of the dispute"
+        },
+        {
+          "uri": "obligation://lf/deliver-due",
+          "subject": "org://lf/company",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "deliver the contracted service by the 16:00 deadline",
+          "due_by": "2026-08-31T16:00:00-06:00"
+        },
+        {
+          "uri": "obligation://lf/pay-due",
+          "subject": "org://lf/customer",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "pay the $18,000 invoice on confirmed delivery",
+          "due_by": "2026-09-30T00:00:00-06:00"
+        },
+        {
+          "uri": "right://lf/cust-appeal",
+          "holder": "org://lf/customer",
+          "type": "APPEAL",
+          "subject": "DELIVERY DISPUTE DETERMINATION",
+          "scope": [
+            "dispute://lf/delivery"
+          ],
+          "purpose": "customer's right to appeal the delivery determination"
+        },
+        {
+          "uri": "rule://lf/billing-refund",
+          "kind": "POLICY",
+          "text": "auto-refund up to $5,000; >$5,000 requires manager authorization; a disputed refund admission is irreversible/unknown-cost, so the human floor binds",
+          "applies_to": "org://lf/company"
+        },
+        {
+          "uri": "authority://lf/adjudicate",
+          "holder": "person://lf/manager",
+          "grants": [
+            "adjudicate_delivery"
+          ],
+          "roles": [
+            "adjudicator"
+          ]
+        },
+        {
+          "uri": "authority://lf/adjudicate-appeal",
+          "holder": "person://lf/director",
+          "grants": [
+            "adjudicate_appeal"
+          ],
+          "roles": [
+            "appeal-adjudicator"
+          ]
+        }
+      ],
+      "hash": "e546820e241f0cb0389157864acd83a3c00ba4b34fbccafc9ebe39f2ea54deb9"
+    },
+    {
+      "uri": "event://lf/claims",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-claims-2",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-2",
+      "idempotency_key": "idem-lf-claims-2",
+      "signature": "signed-by-person://lf/csr",
+      "occurred_at": "2026-09-01T02:18:46Z",
+      "actor": "person://lf/csr",
+      "detail": "record three contradictory claims (customer / company / supplier)",
+      "state_update": [
+        {
+          "uri": "claim://lf/delivery-late",
+          "proposer": "org://lf/customer",
+          "statement": "the contracted service was NOT delivered on time: we signed receipt at 16:15, past the 16:00 deadline \u2014 we should not pay for late delivery.",
+          "evidence": [
+            "evidence://lf/arrival-receipt"
+          ],
+          "epistemic_status": "claimed",
+          "classification": "honest-error-or-valid"
+        },
+        {
+          "uri": "claim://lf/delivered",
+          "proposer": "org://lf/company",
+          "statement": "the contracted service WAS delivered and is payable: supplier shipped at 15:58; arrival sits within the 15-minute SLA grace of the 16:00 deadline.",
+          "evidence": [
+            "evidence://lf/supplier-shipping"
+          ],
+          "epistemic_status": "claimed",
+          "classification": "honest-error-or-valid"
+        },
+        {
+          "uri": "claim://lf/shipped-on-time",
+          "proposer": "org://lf/supplier",
+          "statement": "we shipped the consignment on time at 15:58.",
+          "evidence": [
+            "evidence://lf/supplier-shipping"
+          ],
+          "epistemic_status": "claimed"
+        }
+      ],
+      "hash": "2eccfe3c78dddf66eacaaa7b01b4dba7de22bc4b12fcaa0f87b77625946382e5"
+    },
+    {
+      "uri": "event://lf/evidence",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-evidence-3",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-3",
+      "idempotency_key": "idem-lf-evidence-3",
+      "signature": "signed-by-person://lf/csr",
+      "occurred_at": "2026-09-01T02:18:46Z",
+      "actor": "person://lf/csr",
+      "detail": "record conflicting evidence (GPS 16:12 / contract 16:00 / customer receipt 16:15 / supplier 15:58) with provenance + reliability + timestamps",
+      "state_update": [
+        {
+          "uri": "evidence://lf/gps-arrival",
+          "kind": "ANCHORED",
+          "source": "fleet-GPS-livestate",
+          "captured_at": "2026-08-31T16:12:00-06:00",
+          "verity": {
+            "procedure": "gps-timestamp",
+            "confidence": 0.85
+          },
+          "reliability": 0.85,
+          "about": "arrival gate event",
+          "supports": "claim://lf/delivery-late"
+        },
+        {
+          "uri": "evidence://lf/contract-deadline",
+          "kind": "RECORD",
+          "source": "contract-terms",
+          "captured_at": "2026-01-01T00:00:00-06:00",
+          "verity": {
+            "procedure": "contract-deadline",
+            "confidence": 1.0
+          },
+          "reliability": 1.0,
+          "about": "delivery deadline 16:00",
+          "supports": null
+        },
+        {
+          "uri": "evidence://lf/arrival-receipt",
+          "kind": "TESTIMONY",
+          "source": "customer-signed-receipt",
+          "captured_at": "2026-08-31T16:15:00-06:00",
+          "verity": {
+            "procedure": "signed-receipt",
+            "confidence": 0.9
+          },
+          "reliability": 0.9,
+          "about": "delivery receipt",
+          "supports": "claim://lf/delivery-late"
+        },
+        {
+          "uri": "evidence://lf/supplier-shipping",
+          "kind": "RECORD",
+          "source": "supplier-shipping-system",
+          "captured_at": "2026-08-31T15:58:00-06:00",
+          "verity": {
+            "procedure": "shipping-log",
+            "confidence": 0.92
+          },
+          "reliability": 0.92,
+          "about": "ship-out time",
+          "supports": "claim://lf/shipped-on-time"
+        },
+        {
+          "uri": "evidence://lf/third-party-verification",
+          "kind": "ANCHORED",
+          "source": "independent-audit-service",
+          "captured_at": "2026-08-31T17:05:00-06:00",
+          "verity": {
+            "procedure": "anchored-liveness",
+            "confidence": 0.97
+          },
+          "reliability": 0.97,
+          "about": "delivery liveness verification",
+          "supports": "claim://lf/delivered"
+        },
+        {
+          "uri": "evidence://lf/invoice-18k",
+          "kind": "RECORD",
+          "source": "ar-system",
+          "captured_at": "2026-08-31T09:00:00-06:00",
+          "verity": {
+            "procedure": "invoice",
+            "confidence": 1.0
+          },
+          "reliability": 1.0,
+          "about": "$18,000 invoice",
+          "supports": "claim://lf/delivered"
+        }
+      ],
+      "hash": "caf67f7fd58be7b1de5186b2f58e892f821e815075c01498fece8adfa3292847"
+    },
+    {
+      "uri": "event://lf/dispute-claims",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-dispute-claims-4",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-4",
+      "idempotency_key": "idem-lf-dispute-claims-4",
+      "signature": "signed-by-person://lf/csr",
+      "occurred_at": "2026-09-01T02:18:46Z",
+      "actor": "person://lf/csr",
+      "detail": "contradictory evidence attaches -> claim disputed",
+      "state_update": [
+        {
+          "uri": "claim://lf/delivery-late",
+          "proposer": "org://lf/customer",
+          "statement": "the contracted service was NOT delivered on time: we signed receipt at 16:15, past the 16:00 deadline \u2014 we should not pay for late delivery.",
+          "evidence": [
+            "evidence://lf/arrival-receipt"
+          ],
+          "epistemic_status": "disputed",
+          "classification": "honest-error-or-valid"
+        }
+      ],
+      "hash": "127b9dbdc43c5cbaf4781b080fbac6fc0cdc53d93c44991ec201952d4545a9d2"
+    },
+    {
+      "uri": "event://lf/dispute-claims",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-dispute-claims-4",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-4",
+      "idempotency_key": "idem-lf-dispute-claims-4",
+      "signature": "signed-by-person://lf/csr",
+      "occurred_at": "2026-09-01T02:18:46Z",
+      "actor": "person://lf/csr",
+      "detail": "contradictory evidence attaches -> claim disputed",
+      "state_update": [
+        {
+          "uri": "claim://lf/delivered",
+          "proposer": "org://lf/company",
+          "statement": "the contracted service WAS delivered and is payable: supplier shipped at 15:58; arrival sits within the 15-minute SLA grace of the 16:00 deadline.",
+          "evidence": [
+            "evidence://lf/supplier-shipping"
+          ],
+          "epistemic_status": "disputed",
+          "classification": "honest-error-or-valid"
+        }
+      ],
+      "hash": "f3cde9a7e8e5852968f8aae81efbea2a903595ca03628a2851ad39ce068447e2"
+    },
+    {
+      "uri": "event://lf/dispute-claims",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-dispute-claims-4",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-4",
+      "idempotency_key": "idem-lf-dispute-claims-4",
+      "signature": "signed-by-person://lf/csr",
+      "occurred_at": "2026-09-01T02:18:46Z",
+      "actor": "person://lf/csr",
+      "detail": "contradictory evidence attaches -> claim disputed",
+      "state_update": [
+        {
+          "uri": "claim://lf/shipped-on-time",
+          "proposer": "org://lf/supplier",
+          "statement": "we shipped the consignment on time at 15:58.",
+          "evidence": [
+            "evidence://lf/supplier-shipping"
+          ],
+          "epistemic_status": "disputed"
+        }
+      ],
+      "hash": "8f076884e2e1237858ea946dfef8c0b82f3a450c145469480bf5c7062f1c339c"
+    },
+    {
+      "uri": "event://lf/open-dispute",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-open-dispute-5",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-5",
+      "idempotency_key": "idem-lf-open-dispute-5",
+      "signature": "signed-by-person://lf/csr",
+      "occurred_at": "2026-09-01T02:18:46Z",
+      "actor": "person://lf/csr",
+      "detail": "dispute OPEN with parties/about + additive lifecycle/epistemic state + interests/constraints",
+      "state_update": [
+        {
+          "uri": "dispute://lf/delivery",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company",
+            "org://lf/supplier"
+          ],
+          "status": "OPEN",
+          "lifecycle_state": "OPEN",
+          "epistemic_state": "UNDETERMINED",
+          "determination": null,
+          "resolution_type": null,
+          "reopened": false,
+          "fin_impact_usd": 18000,
+          "legal_threat": true,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+            "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+            "supplier": "established on-time shipment, not blamed for a late arrival"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+            "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "evidence_disagreement": "GPS+receipt vs supplier-log",
+            "mutually_exclusive": true
+          }
+        }
+      ],
+      "hash": "00078c58d2d75254be8345c443a794690fbea8bbc3634dc314fd54d48fbffd33"
+    },
+    {
+      "uri": "event://lf/lifecycle-advance",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-lifecycle-advance-6",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-6",
+      "idempotency_key": "idem-lf-lifecycle-advance-6",
+      "signature": "signed-by-person://lf/manager",
+      "occurred_at": "2026-09-01T02:18:46Z",
+      "actor": "person://lf/manager",
+      "detail": "conflicting evidence gathered -> EVIDENCE_COLLECTION -> CONTESTED",
+      "state_update": [
+        {
+          "uri": "dispute://lf/delivery",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company",
+            "org://lf/supplier"
+          ],
+          "status": "OPEN",
+          "lifecycle_state": "EVIDENCE_COLLECTION",
+          "epistemic_state": "UNDETERMINED",
+          "determination": null,
+          "resolution_type": null,
+          "reopened": false,
+          "fin_impact_usd": 18000,
+          "legal_threat": true,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+            "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+            "supplier": "established on-time shipment, not blamed for a late arrival"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+            "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "evidence_disagreement": "GPS+receipt vs supplier-log",
+            "mutually_exclusive": true
+          }
+        },
+        {
+          "uri": "dispute://lf/delivery",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company",
+            "org://lf/supplier"
+          ],
+          "status": "OPEN",
+          "lifecycle_state": "CONTESTED",
+          "epistemic_state": "UNDETERMINED",
+          "determination": null,
+          "resolution_type": null,
+          "reopened": false,
+          "fin_impact_usd": 18000,
+          "legal_threat": true,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+            "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+            "supplier": "established on-time shipment, not blamed for a late arrival"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+            "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "evidence_disagreement": "GPS+receipt vs supplier-log",
+            "mutually_exclusive": true
+          }
+        }
+      ],
+      "hash": "ceb60d7b1a9e955852542cd3b706c7f15e96b9db1cdd41f0e93225d718ff0794"
+    },
+    {
+      "uri": "event://lf/agent-advisory",
+      "type": "DECISION",
+      "event_id": "ev-lf-agent-advisory-7",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-7",
+      "idempotency_key": "idem-lf-agent-advisory-7",
+      "signature": "signed-by-person://lf/csr",
+      "occurred_at": "2026-09-01T02:18:48Z",
+      "actor": "person://lf/csr",
+      "detail": "AI advisory on resolution options (machine trade-off + real model; contained)",
+      "state_update": [
+        {
+          "uri": "decision://lf/agent-advisory",
+          "by": "person://lf/csr",
+          "authority": "authority://lf/adjudicate",
+          "alternatives": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "confidence": 0.7,
+          "expected_outcome": "inform determination",
+          "actual_outcome": "partial-settlement",
+          "detail": {
+            "by": "person://lf/manager",
+            "for": "dispute://lf/delivery",
+            "options": [
+              "accept-customer-refund",
+              "accept-company-full-payment",
+              "partial-settlement",
+              "conditional-resolution",
+              "request-more-evidence",
+              "escalate",
+              "unresolved",
+              "external-adjudication"
+            ],
+            "includes_do_nothing": true,
+            "tradeoff": "machine ranking: partial-settlement@0.81, conditional-resolution@0.78, accept-customer-refund@0.72, accept-company-full-payment@0.55, request-more-evidence@0.48, escalate@0.40, unresolved@0.35, external-adjudication@0.30",
+            "authority_required": "authority://lf/adjudicate",
+            "confidence": 0.7,
+            "expected_impact": "inform the human determination; never auto-execute",
+            "decision": "dispute://lf/delivery#determination",
+            "_machine_pick": "partial-settlement",
+            "_model_pick": "partial-settlement",
+            "_model": "phi4-mini:3.8b-q8_0"
+          },
+          "made_at": "2026-09-01T02:18:48Z"
+        }
+      ],
+      "hash": "dcf6efaae98dcaf38065b53aa60aa141730091b05ddae39295a0c078f13fd4aa"
+    },
+    {
+      "uri": "event://lf/adjudicate",
+      "type": "DECISION",
+      "event_id": "ev-lf-adjudicate-8",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-8",
+      "idempotency_key": "idem-lf-adjudicate-8",
+      "signature": "signed-by-person://lf/manager",
+      "occurred_at": "2026-09-01T02:18:48Z",
+      "actor": "person://lf/manager",
+      "detail": "human adjudicator determination: conditional-resolution",
+      "state_update": [
+        {
+          "uri": "decision://lf/delivery-determination",
+          "by": "person://lf/manager",
+          "authority": "authority://lf/adjudicate",
+          "alternatives": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "rules_applied": [
+            "rule://lf/billing-refund",
+            "evidence://lf/third-party-verification"
+          ],
+          "confidence": 0.82,
+          "evidence": [
+            "evidence://lf/third-party-verification"
+          ],
+          "expected_outcome": "conditional-resolution",
+          "actual_outcome": "conditional-resolution",
+          "detail": {
+            "determination": "conditional-resolution",
+            "reason": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed",
+            "machine_pick": "partial-settlement",
+            "model_pick": "partial-settlement"
+          },
+          "made_at": "2026-09-01T02:18:48Z"
+        },
+        {
+          "uri": "dispute://lf/delivery",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company",
+            "org://lf/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "lifecycle_state": "ADJUDICATION",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "conditional-resolution",
+          "resolution_type": "conditional-resolution",
+          "reopened": false,
+          "fin_impact_usd": 18000,
+          "legal_threat": true,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+            "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+            "supplier": "established on-time shipment, not blamed for a late arrival"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+            "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "evidence_disagreement": "GPS+receipt vs supplier-log",
+            "mutually_exclusive": true
+          },
+          "resolution": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed"
+        }
+      ],
+      "hash": "2146c9f3ed499d5b3564e6928e1d69460b40986c662ea41aa4020d719ca02658"
+    },
+    {
+      "uri": "event://lf/resolution-executed",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-resolution-executed-9",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-9",
+      "idempotency_key": "idem-lf-resolution-executed-9",
+      "signature": "signed-by-person://lf/manager",
+      "occurred_at": "2026-09-01T02:18:48Z",
+      "actor": "person://lf/manager",
+      "detail": "conditional resolution accepted + executed (no cash transfer; SLA note) -> ACCEPTED->EXECUTED",
+      "state_update": [
+        {
+          "uri": "dispute://lf/delivery",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company",
+            "org://lf/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "lifecycle_state": "RESOLUTION",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "conditional-resolution",
+          "resolution_type": "conditional-resolution",
+          "reopened": false,
+          "fin_impact_usd": 18000,
+          "legal_threat": true,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+            "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+            "supplier": "established on-time shipment, not blamed for a late arrival"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+            "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "evidence_disagreement": "GPS+receipt vs supplier-log",
+            "mutually_exclusive": true
+          },
+          "resolution": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed"
+        },
+        {
+          "uri": "dispute://lf/delivery",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company",
+            "org://lf/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "lifecycle_state": "ACCEPTED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "conditional-resolution",
+          "resolution_type": "conditional-resolution",
+          "reopened": false,
+          "fin_impact_usd": 18000,
+          "legal_threat": true,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+            "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+            "supplier": "established on-time shipment, not blamed for a late arrival"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+            "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "evidence_disagreement": "GPS+receipt vs supplier-log",
+            "mutually_exclusive": true
+          },
+          "resolution": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed"
+        },
+        {
+          "uri": "dispute://lf/delivery",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company",
+            "org://lf/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "lifecycle_state": "EXECUTED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "conditional-resolution",
+          "resolution_type": "conditional-resolution",
+          "reopened": false,
+          "fin_impact_usd": 18000,
+          "legal_threat": true,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+            "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+            "supplier": "established on-time shipment, not blamed for a late arrival"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+            "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "evidence_disagreement": "GPS+receipt vs supplier-log",
+            "mutually_exclusive": true
+          },
+          "resolution": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed",
+          "resolution_outcome": "no refund issued; SLA cadence note filed"
+        }
+      ],
+      "hash": "bea5e618c03daddf869252e9679c2766deb239f9ec5d1a32a41f1bede429f15d"
+    },
+    {
+      "uri": "event://lf/verify-outcome",
+      "type": "DECISION",
+      "event_id": "ev-lf-verify-outcome-10",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-10",
+      "idempotency_key": "idem-lf-verify-outcome-10",
+      "signature": "signed-by-system://lf/audit-anchor",
+      "occurred_at": "2026-09-01T02:18:48Z",
+      "actor": "system://lf/audit-anchor",
+      "detail": "outcome verification: delivery liveness confirmed by independent anchor; case VERIFIED->CLOSED",
+      "state_update": [
+        {
+          "uri": "dispute://lf/delivery",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company",
+            "org://lf/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "lifecycle_state": "VERIFIED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "conditional-resolution",
+          "resolution_type": "conditional-resolution",
+          "reopened": false,
+          "fin_impact_usd": 18000,
+          "legal_threat": true,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+            "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+            "supplier": "established on-time shipment, not blamed for a late arrival"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+            "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "evidence_disagreement": "GPS+receipt vs supplier-log",
+            "mutually_exclusive": true
+          },
+          "resolution": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed",
+          "resolution_outcome": "no refund issued; SLA cadence note filed"
+        },
+        {
+          "uri": "dispute://lf/delivery",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company",
+            "org://lf/supplier"
+          ],
+          "status": "RESOLVED",
+          "lifecycle_state": "CLOSED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "conditional-resolution",
+          "resolution_type": "conditional-resolution",
+          "reopened": false,
+          "fin_impact_usd": 18000,
+          "legal_threat": true,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+            "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+            "supplier": "established on-time shipment, not blamed for a late arrival"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+            "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "evidence_disagreement": "GPS+receipt vs supplier-log",
+            "mutually_exclusive": true
+          },
+          "resolution": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed",
+          "resolution_outcome": "no refund issued; SLA cadence note filed",
+          "verified": true
+        }
+      ],
+      "hash": "bbbfae504a54a3eda97e11c073be251d2daefb9cbb429ef79b1c9ec23ceffdd2"
+    },
+    {
+      "uri": "event://lf/learn",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-learn-11",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-11",
+      "idempotency_key": "idem-lf-learn-11",
+      "signature": "signed-by-org://lf/company",
+      "occurred_at": "2026-09-01T02:18:48Z",
+      "actor": "org://lf/company",
+      "detail": "organizational learning: dispute required human adjudication because conflicting sources blocked the single-source verifier; SLA-grace interpretation now documented",
+      "state_update": [
+        {
+          "uri": "evidence://lf/learning-note",
+          "kind": "RECORD",
+          "source": "post-resolution-postmortem",
+          "captured_at": "2026-09-01T02:18:48Z",
+          "verity": {
+            "procedure": "postmortem",
+            "confidence": 0.6
+          },
+          "reliability": 0.6,
+          "about": "what was learned",
+          "supports": null,
+          "learning": "conflicting timestamps must reach a determination via an authorised adjudicator + anchored third-party verification, not the single-source verifier"
+        }
+      ],
+      "hash": "8b1eda795c8df72633a8235e144047d26bf8ded12f4d8ed9747f24f804b3747c"
+    },
+    {
+      "uri": "event://lf/appeal",
+      "type": "DECISION",
+      "event_id": "ev-lf-appeal-12",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-12",
+      "idempotency_key": "idem-lf-appeal-12",
+      "signature": "signed-by-org://lf/customer",
+      "occurred_at": "2026-09-01T02:18:48Z",
+      "actor": "org://lf/customer",
+      "detail": "customer appeals the determination (native Right type=APPEAL)",
+      "state_update": [
+        {
+          "uri": "dispute://lf/delivery",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company",
+            "org://lf/supplier"
+          ],
+          "status": "RESOLVED",
+          "lifecycle_state": "APPEALED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "conditional-resolution",
+          "resolution_type": "conditional-resolution",
+          "reopened": false,
+          "fin_impact_usd": 18000,
+          "legal_threat": true,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+            "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+            "supplier": "established on-time shipment, not blamed for a late arrival"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+            "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "evidence_disagreement": "GPS+receipt vs supplier-log",
+            "mutually_exclusive": true
+          },
+          "resolution": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed",
+          "resolution_outcome": "no refund issued; SLA cadence note filed",
+          "verified": true,
+          "appeal_ground": "customer disputes the grace-window reading; asserts arrival was late",
+          "appeal_under": "right://lf/cust-appeal"
+        }
+      ],
+      "hash": "39a69eb1e57b065d60860518dd2eba5a38da21d00e4c576f4962ab17f17ca235"
+    },
+    {
+      "uri": "event://lf/reopen",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-reopen-13",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-13",
+      "idempotency_key": "idem-lf-reopen-13",
+      "signature": "signed-by-person://lf/director",
+      "occurred_at": "2026-09-01T02:18:48Z",
+      "actor": "person://lf/director",
+      "detail": "new evidence: the verification clock read 9 minutes fast -> actual arrival 16:21, OUTSIDE the 15-min grace -> prior determination shown wrong -> REOPENED",
+      "state_update": [
+        {
+          "uri": "dispute://lf/delivery",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company",
+            "org://lf/supplier"
+          ],
+          "status": "RESOLVED",
+          "lifecycle_state": "REOPENED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "conditional-resolution",
+          "resolution_type": "conditional-resolution",
+          "reopened": true,
+          "fin_impact_usd": 18000,
+          "legal_threat": true,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+            "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+            "supplier": "established on-time shipment, not blamed for a late arrival"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+            "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "evidence_disagreement": "GPS+receipt vs supplier-log",
+            "mutually_exclusive": true
+          },
+          "resolution": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed",
+          "resolution_outcome": "no refund issued; SLA cadence note filed",
+          "verified": true,
+          "appeal_ground": "customer disputes the grace-window reading; asserts arrival was late",
+          "appeal_under": "right://lf/cust-appeal",
+          "new_evidence": "evidence://lf/clock-mis-set",
+          "supersedes": "decision://lf/delivery-determination"
+        }
+      ],
+      "hash": "6628dd92f491e8ba68dfa4bdd64aa3b8b53546b075b612c545bbdae079296dfb"
+    },
+    {
+      "uri": "event://lf/new-evidence",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-new-evidence-14",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-14",
+      "idempotency_key": "idem-lf-new-evidence-14",
+      "signature": "signed-by-person://lf/director",
+      "occurred_at": "2026-09-01T02:18:48Z",
+      "actor": "person://lf/director",
+      "detail": "audit finding: anchored verification used a clock 9 minutes fast",
+      "state_update": [
+        {
+          "uri": "evidence://lf/clock-mis-set",
+          "kind": "ANCHORED",
+          "source": "internal-clock-audit",
+          "captured_at": "2026-09-01T02:18:48Z",
+          "verity": {
+            "procedure": "clock-drift-audit",
+            "confidence": 0.9
+          },
+          "reliability": 0.9,
+          "about": "verification clock drift",
+          "supports": null,
+          "drift_found": "9-min fast",
+          "reliability_note": "honest source error, not deception"
+        }
+      ],
+      "hash": "53afbd0b6693e38759e2e4f2781e4e5292d623f39e2c39c2392dba7f052ea64e"
+    },
+    {
+      "uri": "event://lf/reassess",
+      "type": "DECISION",
+      "event_id": "ev-lf-reassess-15",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-15",
+      "idempotency_key": "idem-lf-reassess-15",
+      "signature": "signed-by-person://lf/director",
+      "occurred_at": "2026-09-01T02:18:48Z",
+      "actor": "person://lf/director",
+      "detail": "director reassesses on the new evidence -> partial settlement (SLA breach)",
+      "state_update": [
+        {
+          "uri": "decision://lf/delivery-determination-2",
+          "by": "person://lf/director",
+          "authority": "authority://lf/adjudicate-appeal",
+          "alternatives": [
+            "uphold",
+            "modify",
+            "reverse"
+          ],
+          "rules_applied": [
+            "evidence://lf/clock-mis-set",
+            "evidence://lf/arrival-receipt"
+          ],
+          "confidence": 0.9,
+          "evidence": [
+            "evidence://lf/clock-mis-set"
+          ],
+          "expected_outcome": "modify",
+          "actual_outcome": "modify",
+          "detail": {
+            "ruling": "prior determination reversed",
+            "granted": "$6,000 settlement credit to customer for SLA breach; balance due",
+            "supersedes": "decision://lf/delivery-determination"
+          },
+          "made_at": "2026-09-01T02:18:48Z"
+        },
+        {
+          "uri": "dispute://lf/delivery",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company",
+            "org://lf/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "lifecycle_state": "ADJUDICATION",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "partial-settlement",
+          "resolution_type": "partial-settlement",
+          "reopened": true,
+          "fin_impact_usd": 18000,
+          "legal_threat": true,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+            "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+            "supplier": "established on-time shipment, not blamed for a late arrival"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+            "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "evidence_disagreement": "GPS+receipt vs supplier-log",
+            "mutually_exclusive": true
+          },
+          "resolution": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed",
+          "resolution_outcome": "no refund issued; SLA cadence note filed",
+          "verified": true,
+          "appeal_ground": "customer disputes the grace-window reading; asserts arrival was late",
+          "appeal_under": "right://lf/cust-appeal",
+          "new_evidence": "evidence://lf/clock-mis-set",
+          "supersedes": "decision://lf/delivery-determination"
+        }
+      ],
+      "hash": "a6a8fda89c97f55c76d0a55aef408d14c9378e812c4b4d4b323c9d6673fd9c34"
+    },
+    {
+      "uri": "event://lf/trust-safety",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-trust-safety-16",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-16",
+      "idempotency_key": "idem-lf-trust-safety-16",
+      "signature": "signed-by-org://lf/company",
+      "occurred_at": "2026-09-01T02:18:48Z",
+      "actor": "org://lf/company",
+      "detail": "Trust safety: the dispute (incl. overturned claim) did NOT change Trust \u2014 error kept distinct from deception; only an adequately-evidenced determination could move Trust",
+      "state_update": [
+        {
+          "uri": "trust://lf/customer-on-delivery",
+          "subject": "org://lf/company",
+          "target": "org://lf/customer",
+          "claim": "honest dispute participant",
+          "context": "relationship://lf/customer-contract",
+          "score": 0.78,
+          "updated_at": "2026-09-01T02:18:48Z",
+          "evidence": [
+            "evidence://lf/arrival-receipt"
+          ],
+          "trust_impact": "unchanged",
+          "reason": "honest error, not deception"
+        }
+      ],
+      "hash": "e2319dad0247e1d023e4c8ee5cce94c5bd00f274519642f2f7516fe93cc00236"
+    },
+    {
+      "uri": "event://lf/open-unresolvable",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-lf-open-unresolvable-17",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-17",
+      "idempotency_key": "idem-lf-open-unresolvable-17",
+      "signature": "signed-by-person://lf/csr",
+      "occurred_at": "2026-09-01T02:18:48Z",
+      "actor": "person://lf/csr",
+      "detail": "dispute where deciding is unjustifiable (no admissible basis)",
+      "state_update": [
+        {
+          "uri": "dispute://lf/threshold-dispute",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company"
+          ],
+          "status": "OPEN",
+          "lifecycle_state": "OPEN",
+          "epistemic_state": "UNDETERMINED",
+          "determination": null,
+          "resolution_type": null,
+          "reopened": false,
+          "fin_impact_usd": 18000,
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "note": "no independent admissible source exists to verify delivery liveness; neither side can be substantiated to the CLEAR standard"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ]
+        }
+      ],
+      "hash": "6c7a0c8299a98d5076c15385eb6a4f05de7d712206ba2a3f5c5cb6c2000e0164"
+    },
+    {
+      "uri": "event://lf/adjudicate-unresolved",
+      "type": "DECISION",
+      "event_id": "ev-lf-adjudicate-unresolved-18",
+      "correlation_id": "corr-lf-1",
+      "causation_id": "ev-lf-prev-18",
+      "idempotency_key": "idem-lf-adjudicate-unresolved-18",
+      "signature": "signed-by-person://lf/manager",
+      "occurred_at": "2026-09-01T02:18:48Z",
+      "actor": "person://lf/manager",
+      "detail": "adjudicator determines UNRESOLVED (insufficient admissible basis); case stays OPEN; Trust untouched",
+      "state_update": [
+        {
+          "uri": "decision://lf/unresolved",
+          "by": "person://lf/manager",
+          "authority": "authority://lf/adjudicate",
+          "alternatives": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ],
+          "confidence": 0.6,
+          "expected_outcome": "resolve conflict",
+          "actual_outcome": "unresolved",
+          "detail": {
+            "determination": "UNRESOLVED",
+            "epistemic_state": "INSUFFICIENT_EVIDENCE",
+            "reason": "no admissible source verifies delivery liveness; awarding either side is not justified by the basis"
+          },
+          "made_at": "2026-09-01T02:18:48Z"
+        },
+        {
+          "uri": "dispute://lf/threshold-dispute",
+          "about": "obligation://lf/deliver-due",
+          "parties": [
+            "org://lf/customer",
+            "org://lf/company"
+          ],
+          "status": "OPEN",
+          "lifecycle_state": "UNRESOLVED",
+          "epistemic_state": "INSUFFICIENT_EVIDENCE",
+          "determination": "UNRESOLVED",
+          "resolution_type": null,
+          "reopened": false,
+          "fin_impact_usd": 18000,
+          "conflict": {
+            "detected": true,
+            "uncertainty": true,
+            "note": "no independent admissible source exists to verify delivery liveness; neither side can be substantiated to the CLEAR standard"
+          },
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ]
+        }
+      ],
+      "hash": "40475d504b9ea2927eeb241c8b094da8d1bb47178afe86b9fd996eab64728676"
+    }
+  ]
+}

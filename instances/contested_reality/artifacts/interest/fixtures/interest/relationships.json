@@ -1,0 +1,87 @@
+[
+  {
+    "uri": "relationship://ic/employment",
+    "participants": [
+      "person://ic/employee",
+      "org://ic/company"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "person://ic/employee": [
+        "employee"
+      ],
+      "org://ic/company": [
+        "employer"
+      ]
+    },
+    "interest": {
+      "party": "person://ic/employee",
+      "want": "remote-work-and-use-unused-leave",
+      "stakes": [
+        "work-from-home wellbeing",
+        "use 12 accrued unused-leave days"
+      ],
+      "legitimate": true,
+      "within_policy": true,
+      "unused_leave_days": 12,
+      "arrangement_requested": "full-remote"
+    },
+    "purpose": "employment with accrued unused leave"
+  },
+  {
+    "uri": "relationship://ic/contract",
+    "participants": [
+      "org://ic/customer",
+      "org://ic/company"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://ic/customer": [
+        "buyer"
+      ],
+      "org://ic/company": [
+        "provider"
+      ]
+    },
+    "constraint": {
+      "response_target_minutes": 30,
+      "coverage_floor_agents": 3,
+      "on_site_agents_now": 3,
+      "remote_policy": "policy://ic/remote",
+      "sla_expectation": "expectation://ic/sla"
+    },
+    "interest": {
+      "party": "person://ic/manager",
+      "want": "on-site-coverage-to-meet-sla",
+      "stakes": [
+        "meet 30-minute customer-response SLA",
+        "keep staffing floor of 3 on-site agents"
+      ],
+      "legitimate": true,
+      "within_policy": true,
+      "reason": "customer contract requires response within 30 minutes"
+    },
+    "purpose": "customer contract with 30-minute response SLA"
+  },
+  {
+    "uri": "relationship://ic/staffing-authority",
+    "participants": [
+      "person://ic/manager",
+      "org://ic/company"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "person://ic/manager": [
+        "staffing-authority"
+      ],
+      "org://ic/company": [
+        "employer"
+      ]
+    },
+    "authority": [
+      "authority://ic/adjudicate-remote",
+      "authority://ic/for-appeal"
+    ],
+    "purpose": "manager authority over staffing to meet the SLA"
+  }
+]

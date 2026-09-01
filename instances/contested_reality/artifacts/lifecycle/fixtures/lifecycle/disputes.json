@@ -1,0 +1,81 @@
+[
+  {
+    "uri": "dispute://lf/delivery",
+    "about": "obligation://lf/deliver-due",
+    "parties": [
+      "org://lf/customer",
+      "org://lf/company",
+      "org://lf/supplier"
+    ],
+    "status": "ADJUDICATED",
+    "lifecycle_state": "ADJUDICATION",
+    "epistemic_state": "RESOLVED_DETERMINED",
+    "determination": "partial-settlement",
+    "resolution_type": "partial-settlement",
+    "reopened": true,
+    "fin_impact_usd": 18000,
+    "legal_threat": true,
+    "deadline_ref": "resolution expected within 7 business days",
+    "interest_blocks": {
+      "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+      "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+      "supplier": "established on-time shipment, not blamed for a late arrival"
+    },
+    "constraint_blocks": {
+      "sla_grace_minutes": 15,
+      "refund_auto_cap_usd": 5000,
+      "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+      "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+    },
+    "available_resolutions": [
+      "accept-customer-refund",
+      "accept-company-full-payment",
+      "partial-settlement",
+      "conditional-resolution",
+      "request-more-evidence",
+      "escalate",
+      "unresolved",
+      "external-adjudication"
+    ],
+    "conflict": {
+      "detected": true,
+      "uncertainty": true,
+      "evidence_disagreement": "GPS+receipt vs supplier-log",
+      "mutually_exclusive": true
+    },
+    "resolution": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed",
+    "resolution_outcome": "no refund issued; SLA cadence note filed",
+    "verified": true,
+    "appeal_ground": "customer disputes the grace-window reading; asserts arrival was late",
+    "appeal_under": "right://lf/cust-appeal",
+    "new_evidence": "evidence://lf/clock-mis-set",
+    "supersedes": "decision://lf/delivery-determination"
+  },
+  {
+    "uri": "dispute://lf/threshold-dispute",
+    "about": "obligation://lf/deliver-due",
+    "parties": [
+      "org://lf/customer",
+      "org://lf/company"
+    ],
+    "status": "OPEN",
+    "lifecycle_state": "UNRESOLVED",
+    "epistemic_state": "INSUFFICIENT_EVIDENCE",
+    "determination": "UNRESOLVED",
+    "resolution_type": null,
+    "reopened": false,
+    "fin_impact_usd": 18000,
+    "conflict": {
+      "detected": true,
+      "uncertainty": true,
+      "note": "no independent admissible source exists to verify delivery liveness; neither side can be substantiated to the CLEAR standard"
+    },
+    "available_resolutions": [
+      "accept-customer-refund",
+      "accept-company-full-payment",
+      "request-more-evidence",
+      "escalate",
+      "unresolved"
+    ]
+  }
+]

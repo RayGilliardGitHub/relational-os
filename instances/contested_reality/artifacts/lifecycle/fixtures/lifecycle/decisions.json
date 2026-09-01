@@ -1,0 +1,123 @@
+[
+  {
+    "uri": "decision://lf/agent-advisory",
+    "by": "person://lf/csr",
+    "authority": "authority://lf/adjudicate",
+    "alternatives": [
+      "accept-customer-refund",
+      "accept-company-full-payment",
+      "partial-settlement",
+      "conditional-resolution",
+      "request-more-evidence",
+      "escalate",
+      "unresolved",
+      "external-adjudication"
+    ],
+    "confidence": 0.7,
+    "expected_outcome": "inform determination",
+    "actual_outcome": "partial-settlement",
+    "detail": {
+      "by": "person://lf/manager",
+      "for": "dispute://lf/delivery",
+      "options": [
+        "accept-customer-refund",
+        "accept-company-full-payment",
+        "partial-settlement",
+        "conditional-resolution",
+        "request-more-evidence",
+        "escalate",
+        "unresolved",
+        "external-adjudication"
+      ],
+      "includes_do_nothing": true,
+      "tradeoff": "machine ranking: partial-settlement@0.81, conditional-resolution@0.78, accept-customer-refund@0.72, accept-company-full-payment@0.55, request-more-evidence@0.48, escalate@0.40, unresolved@0.35, external-adjudication@0.30",
+      "authority_required": "authority://lf/adjudicate",
+      "confidence": 0.7,
+      "expected_impact": "inform the human determination; never auto-execute",
+      "decision": "dispute://lf/delivery#determination",
+      "_machine_pick": "partial-settlement",
+      "_model_pick": "partial-settlement",
+      "_model": "phi4-mini:3.8b-q8_0"
+    },
+    "made_at": "2026-09-01T02:18:48Z"
+  },
+  {
+    "uri": "decision://lf/delivery-determination",
+    "by": "person://lf/manager",
+    "authority": "authority://lf/adjudicate",
+    "alternatives": [
+      "accept-customer-refund",
+      "accept-company-full-payment",
+      "partial-settlement",
+      "conditional-resolution",
+      "request-more-evidence",
+      "escalate",
+      "unresolved",
+      "external-adjudication"
+    ],
+    "rules_applied": [
+      "rule://lf/billing-refund",
+      "evidence://lf/third-party-verification"
+    ],
+    "confidence": 0.82,
+    "evidence": [
+      "evidence://lf/third-party-verification"
+    ],
+    "expected_outcome": "conditional-resolution",
+    "actual_outcome": "conditional-resolution",
+    "detail": {
+      "determination": "conditional-resolution",
+      "reason": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed",
+      "machine_pick": "partial-settlement",
+      "model_pick": "partial-settlement"
+    },
+    "made_at": "2026-09-01T02:18:48Z"
+  },
+  {
+    "uri": "decision://lf/delivery-determination-2",
+    "by": "person://lf/director",
+    "authority": "authority://lf/adjudicate-appeal",
+    "alternatives": [
+      "uphold",
+      "modify",
+      "reverse"
+    ],
+    "rules_applied": [
+      "evidence://lf/clock-mis-set",
+      "evidence://lf/arrival-receipt"
+    ],
+    "confidence": 0.9,
+    "evidence": [
+      "evidence://lf/clock-mis-set"
+    ],
+    "expected_outcome": "modify",
+    "actual_outcome": "modify",
+    "detail": {
+      "ruling": "prior determination reversed",
+      "granted": "$6,000 settlement credit to customer for SLA breach; balance due",
+      "supersedes": "decision://lf/delivery-determination"
+    },
+    "made_at": "2026-09-01T02:18:48Z"
+  },
+  {
+    "uri": "decision://lf/unresolved",
+    "by": "person://lf/manager",
+    "authority": "authority://lf/adjudicate",
+    "alternatives": [
+      "accept-customer-refund",
+      "accept-company-full-payment",
+      "request-more-evidence",
+      "escalate",
+      "unresolved"
+    ],
+    "confidence": 0.6,
+    "expected_outcome": "resolve conflict",
+    "actual_outcome": "unresolved",
+    "detail": {
+      "determination": "UNRESOLVED",
+      "epistemic_state": "INSUFFICIENT_EVIDENCE",
+      "reason": "no admissible source verifies delivery liveness; awarding either side is not justified by the basis"
+    },
+    "made_at": "2026-09-01T02:18:48Z"
+  }
+]

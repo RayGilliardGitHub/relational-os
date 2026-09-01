@@ -1,0 +1,117 @@
+[
+  {
+    "uri": "decision://to/adjudication",
+    "by": "person://to/manager",
+    "authority": "authority://to/adjudicate-remote",
+    "alternatives": [
+      "side-employee",
+      "side-manager",
+      "remote-with-coverage-plan",
+      "do-nothing"
+    ],
+    "confidence": 0.82,
+    "expected_outcome": "resolve conflict",
+    "actual_outcome": "remote-with-coverage-plan",
+    "detail": {
+      "determination": "remote-with-coverage-plan",
+      "determined_by": "person://to/manager",
+      "utility": 0.76,
+      "rank": [
+        {
+          "option": "remote-with-coverage-plan",
+          "utility": 0.76,
+          "floor_gated": false,
+          "sla": 1.0,
+          "emp": 0.6,
+          "mgr": 0.9,
+          "leave": 0.15,
+          "cost": 0.4
+        },
+        {
+          "option": "side-manager",
+          "utility": 0.69,
+          "floor_gated": false,
+          "sla": 1.0,
+          "emp": 0.0,
+          "mgr": 1.0,
+          "leave": 0.0,
+          "cost": 0.9
+        },
+        {
+          "option": "do-nothing",
+          "utility": 0.64,
+          "floor_gated": false,
+          "sla": 1.0,
+          "emp": 0.0,
+          "mgr": 0.8,
+          "leave": 0.0,
+          "cost": 0.7
+        },
+        {
+          "option": "side-employee",
+          "utility": 0.34,
+          "floor_gated": false,
+          "sla": 0.0,
+          "emp": 1.0,
+          "mgr": 0.0,
+          "leave": 0.8,
+          "cost": 0.6
+        }
+      ],
+      "covered_stake": {
+        "emp": "remote 3 days/wk + 2 leave days",
+        "mgr": "on-site coverage meets SLA"
+      },
+      "conditions": [
+        "on-site Tue/Thu",
+        "coverage floor met on customer-commitment days"
+      ],
+      "reason": "machine-computed trade-off ranks remote-with-coverage-plan highest (utility 0.760) from the recorded constraint: a conditional coverage plan keeps on-site staffing at the 3-agent floor so the 30-min SLA holds, while remote Mon/Wed/Fri + 2 leave days satisfy the employee's legitimate, in-policy interest"
+    },
+    "made_at": "2026-09-01T02:18:40Z"
+  },
+  {
+    "uri": "decision://to/adjudication-uncertain",
+    "by": "person://to/manager",
+    "authority": "authority://to/adjudicate-remote",
+    "alternatives": [
+      "side-employee",
+      "side-manager",
+      "remote-with-coverage-plan",
+      "do-nothing"
+    ],
+    "confidence": 0.6,
+    "expected_outcome": "resolve conflict",
+    "actual_outcome": "UNRESOLVED",
+    "detail": {
+      "determination": "UNRESOLVED",
+      "determined_by": "person://to/manager",
+      "epistemic_state": "INSUFFICIENT_EVIDENCE",
+      "tradeoff_gate": "all staff-changing options floor-gated; machine-eligible best=do-nothing@$0.64 (do-nothing/UNRESOLVED)",
+      "reason": "coverage on proposed remote days is unverified; the \u00a76 floor forbids any unknown-cost arrangement; a determination is not justified by the admissible basis"
+    },
+    "made_at": "2026-09-01T02:18:40Z"
+  },
+  {
+    "uri": "decision://to/agent-advisory",
+    "by": "org://to/company",
+    "authority": "authority://to/adjudicate-remote",
+    "alternatives": [
+      "side-employee",
+      "side-manager",
+      "remote-with-coverage-plan",
+      "do-nothing"
+    ],
+    "confidence": 0.6,
+    "expected_outcome": "inform the determination",
+    "actual_outcome": "do-nothing",
+    "detail": {
+      "advisory_option": "do-nothing",
+      "floor_gated_in_scenario2": false,
+      "model": "phi4-mini:3.8b-q8_0",
+      "fallback": false,
+      "containment": "advisory only; cannot execute or set determination/Trust"
+    },
+    "made_at": "2026-09-01T02:18:46Z"
+  }
+]

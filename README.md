@@ -63,3 +63,13 @@ The finished S1→S5 system is documented in a verified manual package (Sprint 6
   actor and renders it into generated reports + a per-instance `branding.md`. Details:
   `instances/README.md` and `sprints/sprint-6/artifacts/docs/01-system-manual.md §5.1`
   (`sprints/sprint-7/PROMPT.md` was its build prompt).
+- **Contested-reality engine (Sprints 9–10, built):** `instances/contested_reality/` reasons
+  about contested human reality, not just records it — Fact/Claim/Determination separation,
+  the inviolable **UNRESOLVED** outcome, and Trust-safety for weak/conflicting evidence
+  (Sprint 9, disputed-fact), extended to a genuine **conflicting-interest** case — the
+  remote-work employee↔manager conflict under a shared 30-min SLA + staffing floor — with
+  the shared constraint, deterministic conflict detection, a defensible (conditional)
+  determination, an **appeal** re-adjudicated by a higher authority, and the preserved signed
+  authority chain (Sprint 10). All additive fields on existing primitives; NO new noun, NO
+  schema edit, 49 `$defs` intact, SPEC stays v0.22. Details: `instances/contested_reality/docs/`.
+  (`sprints/sprint-10/PROMPT.md` was the Sprint 10 build prompt.)

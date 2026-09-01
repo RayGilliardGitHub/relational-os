@@ -1,0 +1,55 @@
+[
+  {
+    "uri": "evidence://cove/clinical-study",
+    "kind": "ANCHORED",
+    "source": "peer-reviewed-trial",
+    "captured_at": "2026-06-01T00:00:00-06:00",
+    "verity": {
+      "procedure": "external-trials-database",
+      "confidence": 0.9
+    },
+    "reliability": 0.88,
+    "about": "clinical efficacy for the condition",
+    "supports": "claim://cove/medically-necessary"
+  },
+  {
+    "uri": "evidence://cove/formulary-policy",
+    "kind": "RECORD",
+    "source": "coverage-policy-document",
+    "captured_at": "2026-01-01T00:00:00-06:00",
+    "verity": {
+      "procedure": "policy-version",
+      "confidence": 1.0
+    },
+    "reliability": 1.0,
+    "about": "coverage/formulary classification",
+    "supports": "claim://cove/off-formulary"
+  },
+  {
+    "uri": "evidence://cove/step-therapy-studies",
+    "kind": "ANCHORED",
+    "source": "comparative-effectiveness-db",
+    "captured_at": "2026-05-01T00:00:00-06:00",
+    "verity": {
+      "procedure": "meta-analysis",
+      "confidence": 0.8
+    },
+    "reliability": 0.82,
+    "about": "step-therapy comparator efficacy",
+    "supports": "claim://cove/off-formulary"
+  },
+  {
+    "uri": "evidence://cove-corroboration/learning-note",
+    "kind": "RECORD",
+    "source": "post-resolution-postmortem",
+    "captured_at": "2026-09-01T02:20:32Z",
+    "verity": {
+      "procedure": "postmortem",
+      "confidence": 0.6
+    },
+    "reliability": 0.6,
+    "about": "what was learned",
+    "supports": null,
+    "learning": "drug coverage disputes blend clinical-necessity evidence with policy; the measured path (step-therapy-first) preserves member safety + plan policy while avoiding both an irreversible off-formulary spend and a flat safety-risk denial"
+  }
+]

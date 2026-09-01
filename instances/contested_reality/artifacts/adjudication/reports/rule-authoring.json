@@ -1,0 +1,122 @@
+[
+  {
+    "label": "inspect-best",
+    "reconcile": {
+      "rule": "best-reliability-threshold",
+      "threshold": 0.92,
+      "support_floor": 0.55
+    },
+    "claim_support": {
+      "claim://inspect/passed": 0.97,
+      "claim://inspect/failed": 0.9
+    },
+    "conflict": true,
+    "uncertainty": false,
+    "determination": "rework-partial-credit"
+  },
+  {
+    "label": "inspect-anchor",
+    "reconcile": {
+      "rule": "strict-anchor-only",
+      "params": {
+        "kinds": [
+          "ANCHORED"
+        ],
+        "threshold": 0.92,
+        "support_floor": 0.55
+      }
+    },
+    "claim_support": {
+      "claim://inspect/passed": 0.84,
+      "claim://inspect/failed": 0.0
+    },
+    "conflict": false,
+    "uncertainty": true,
+    "determination": "UNRESOLVED"
+  },
+  {
+    "label": "inspect-rec",
+    "reconcile": {
+      "rule": "recency-weighted-threshold",
+      "params": {
+        "as_of": "2026-08-31T12:00:00-06:00",
+        "half_life_days": 21,
+        "threshold": 0.92,
+        "support_floor": 0.55
+      }
+    },
+    "claim_support": {
+      "claim://inspect/passed": 0.7863,
+      "claim://inspect/failed": 0.9
+    },
+    "conflict": true,
+    "uncertainty": true,
+    "determination": "UNRESOLVED"
+  },
+  {
+    "label": "inspect-anchor-spec",
+    "reconcile": {
+      "rule_spec": {
+        "name": "strict-anchor-only",
+        "aggregate": "max",
+        "value_field": "reliability",
+        "admissible_kinds": [
+          "ANCHORED"
+        ]
+      },
+      "threshold": 0.92,
+      "support_floor": 0.55
+    },
+    "claim_support": {
+      "claim://inspect/passed": 0.84,
+      "claim://inspect/failed": 0.0
+    },
+    "conflict": false,
+    "uncertainty": true,
+    "determination": "UNRESOLVED"
+  },
+  {
+    "label": "inspect-rec-spec",
+    "reconcile": {
+      "rule_spec": {
+        "name": "recency-weighted-threshold",
+        "aggregate": "max",
+        "value_field": "reliability",
+        "decay": {
+          "as_of": "2026-08-31T12:00:00-06:00",
+          "half_life_days": 21
+        }
+      },
+      "threshold": 0.92,
+      "support_floor": 0.55
+    },
+    "claim_support": {
+      "claim://inspect/passed": 0.7863,
+      "claim://inspect/failed": 0.9
+    },
+    "conflict": true,
+    "uncertainty": true,
+    "determination": "UNRESOLVED"
+  },
+  {
+    "label": "inspect-majority",
+    "reconcile": {
+      "rule_spec": {
+        "name": "majority-of-sources",
+        "aggregate": "majority",
+        "value_field": "reliability",
+        "admissible_kinds": null,
+        "source_threshold": 0.92
+      },
+      "threshold": 0.92,
+      "support_floor": 0.55
+    },
+    "claim_support": {
+      "claim://inspect/passed": 0.5,
+      "claim://inspect/failed": 0.0
+    },
+    "conflict": false,
+    "uncertainty": true,
+    "determination": "UNRESOLVED"
+  }
+]

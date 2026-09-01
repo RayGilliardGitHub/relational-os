@@ -1,0 +1,900 @@
+{
+  "uri": "db://ledger/adjudication-cove-2026",
+  "head_hash": "115466802cfc741fb38c1e220021b5466c98e2976a2aa95ac7d00cd2148f671e",
+  "entries": [
+    {
+      "uri": "event://cove-corroboration/seed-trust",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-cove-corroboration-seed-trust",
+      "correlation_id": "corr-adj-cove-corroboration-seed-trust",
+      "causation_id": "ev-adj-cove-corroboration-seed-trust-prev",
+      "idempotency_key": "idem-adj-cove-corroboration-seed-trust",
+      "signature": "signed-by-person://cove/utilization",
+      "occurred_at": "2026-09-01T02:20:32Z",
+      "actor": "person://cove/utilization",
+      "detail": "seed scoped trust before the episode",
+      "state_update": [
+        {
+          "uri": "trust://cove-corroboration/claimant",
+          "subject": "person://cove/utilization",
+          "target": "person://cove/patient",
+          "claim": "honest dispute participant",
+          "score": 0.8,
+          "context": "relationship://cove-corroboration/x",
+          "evidence": []
+        }
+      ],
+      "hash": "ae7de88777f0f55aa1d4d4e09b4445777ae329a38d18792db1aad722f7ccc1f3"
+    },
+    {
+      "uri": "event://cove-corroboration/provision",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-provision-100",
+      "correlation_id": "corr-adj-provision",
+      "causation_id": "ev-adj-prev-100",
+      "idempotency_key": "idem-adj-provision-100",
+      "signature": "signed-by-person://cove/utilization",
+      "occurred_at": "2026-09-01T02:20:32Z",
+      "actor": "person://cove/utilization",
+      "detail": "provision actors, relationships, obligations, adjudicator+appeal authority, appeal right",
+      "state_update": [
+        {
+          "uri": "org://cove/payer",
+          "type": "ORG"
+        },
+        {
+          "uri": "person://cove/patient",
+          "type": "PERSON"
+        },
+        {
+          "uri": "person://cove/physician",
+          "type": "PERSON"
+        },
+        {
+          "uri": "person://cove/utilization",
+          "type": "PERSON"
+        },
+        {
+          "uri": "person://cove/meddir",
+          "type": "PERSON"
+        },
+        {
+          "uri": "system://cove/verify",
+          "type": "SYSTEM"
+        },
+        {
+          "uri": "relationship://cove/coverage-contract",
+          "status": "ACTIVE",
+          "participants": [
+            "org://cove/payer",
+            "person://cove/patient"
+          ],
+          "roles": {
+            "org://cove/payer": [
+              "insurer"
+            ],
+            "person://cove/patient": [
+              "member"
+            ]
+          },
+          "purpose": "insurance coverage for the member"
+        },
+        {
+          "uri": "relationship://cove/clinical",
+          "status": "ACTIVE",
+          "participants": [
+            "person://cove/physician",
+            "person://cove/patient"
+          ],
+          "roles": {
+            "person://cove/physician": [
+              "provider"
+            ],
+            "person://cove/patient": [
+              "patient"
+            ]
+          },
+          "purpose": "clinical care relationship"
+        },
+        {
+          "uri": "obligation://cove/furnish-coverage",
+          "subject": "org://cove/payer",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "furnish medically-necessary covered care promptly",
+          "due_by": "2026-12-31T00:00:00-06:00"
+        },
+        {
+          "uri": "obligation://cove/standard-care",
+          "subject": "person://cove/physician",
+          "source": "IMPOSED",
+          "content": "recommend clinically-appropriate care",
+          "due_by": "2026-12-31T00:00:00-06:00"
+        },
+        {
+          "uri": "authority://cove/adjudicate",
+          "holder": "person://cove/utilization",
+          "grants": [
+            "adjudicate"
+          ],
+          "roles": [
+            "adjudicator"
+          ]
+        },
+        {
+          "uri": "authority://cove/adjudicate-appeal",
+          "holder": "person://cove/meddir",
+          "grants": [
+            "adjudicate_appeal"
+          ],
+          "roles": [
+            "appeal-adjudicator"
+          ]
+        },
+        {
+          "uri": "right://cove/patient-appeal",
+          "holder": "person://cove/patient",
+          "type": "APPEAL",
+          "subject": "DUPLICATE",
+          "scope": [
+            "obligation://cove/furnish-coverage"
+          ],
+          "purpose": "right to appeal the determination"
+        }
+      ],
+      "hash": "6d6a2bc3e6516c50f6680c2af70cbc9fd75dc6401036841e2d2a156b66cce3a3"
+    },
+    {
+      "uri": "event://cove-corroboration/claims",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-claims-101",
+      "correlation_id": "corr-adj-claims",
+      "causation_id": "ev-adj-prev-101",
+      "idempotency_key": "idem-adj-claims-101",
+      "signature": "signed-by-person://cove/utilization",
+      "occurred_at": "2026-09-01T02:20:32Z",
+      "actor": "person://cove/utilization",
+      "detail": "record 2 conflicting claims",
+      "state_update": [
+        {
+          "uri": "claim://cove/medically-necessary",
+          "proposer": "person://cove/physician",
+          "statement": "medication X is medically necessary for this member; a peer-reviewed study supports its use for the condition.",
+          "evidence": [
+            "evidence://cove/clinical-study"
+          ],
+          "epistemic_status": "claimed"
+        },
+        {
+          "uri": "claim://cove/off-formulary",
+          "proposer": "org://cove/payer",
+          "statement": "medication X is off-formulary; the formulary policy and comparative step-therapy evidence do not require it as first-line.",
+          "evidence": [
+            "evidence://cove/formulary-policy",
+            "evidence://cove/step-therapy-studies"
+          ],
+          "epistemic_status": "claimed"
+        }
+      ],
+      "hash": "924603b49ecd7c810f3d57447f2165925c162752268eeae2ce160a8125319608"
+    },
+    {
+      "uri": "event://cove-corroboration/evidence",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-evidence-102",
+      "correlation_id": "corr-adj-evidence",
+      "causation_id": "ev-adj-prev-102",
+      "idempotency_key": "idem-adj-evidence-102",
+      "signature": "signed-by-person://cove/utilization",
+      "occurred_at": "2026-09-01T02:20:32Z",
+      "actor": "person://cove/utilization",
+      "detail": "record conflicting evidence with provenance + reliability",
+      "state_update": [
+        {
+          "uri": "evidence://cove/clinical-study",
+          "kind": "ANCHORED",
+          "source": "peer-reviewed-trial",
+          "captured_at": "2026-06-01T00:00:00-06:00",
+          "verity": {
+            "procedure": "external-trials-database",
+            "confidence": 0.9
+          },
+          "reliability": 0.88,
+          "about": "clinical efficacy for the condition",
+          "supports": "claim://cove/medically-necessary"
+        },
+        {
+          "uri": "evidence://cove/formulary-policy",
+          "kind": "RECORD",
+          "source": "coverage-policy-document",
+          "captured_at": "2026-01-01T00:00:00-06:00",
+          "verity": {
+            "procedure": "policy-version",
+            "confidence": 1.0
+          },
+          "reliability": 1.0,
+          "about": "coverage/formulary classification",
+          "supports": "claim://cove/off-formulary"
+        },
+        {
+          "uri": "evidence://cove/step-therapy-studies",
+          "kind": "ANCHORED",
+          "source": "comparative-effectiveness-db",
+          "captured_at": "2026-05-01T00:00:00-06:00",
+          "verity": {
+            "procedure": "meta-analysis",
+            "confidence": 0.8
+          },
+          "reliability": 0.82,
+          "about": "step-therapy comparator efficacy",
+          "supports": "claim://cove/off-formulary"
+        }
+      ],
+      "hash": "69ed18c7cc0a50f6ad9d64cf86338b8bfe75250da9c32ae144682f846395c91f"
+    },
+    {
+      "uri": "event://cove-corroboration/claim-advance",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-claim-advance-103",
+      "correlation_id": "corr-adj-claim-advance",
+      "causation_id": "ev-adj-prev-103",
+      "idempotency_key": "idem-adj-claim-advance-103",
+      "signature": "signed-by-person://cove/utilization",
+      "occurred_at": "2026-09-01T02:20:32Z",
+      "actor": "person://cove/utilization",
+      "detail": "evidence attaches -> claim disputed",
+      "state_update": [
+        {
+          "uri": "claim://cove/medically-necessary",
+          "proposer": "person://cove/physician",
+          "statement": "medication X is medically necessary for this member; a peer-reviewed study supports its use for the condition.",
+          "evidence": [
+            "evidence://cove/clinical-study"
+          ],
+          "epistemic_status": "disputed"
+        }
+      ],
+      "hash": "35d94f74a5156107c40df59d3cba6fae0854ced1b488e5a8036371812eb76845"
+    },
+    {
+      "uri": "event://cove-corroboration/claim-advance",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-claim-advance-104",
+      "correlation_id": "corr-adj-claim-advance",
+      "causation_id": "ev-adj-prev-104",
+      "idempotency_key": "idem-adj-claim-advance-104",
+      "signature": "signed-by-person://cove/utilization",
+      "occurred_at": "2026-09-01T02:20:32Z",
+      "actor": "person://cove/utilization",
+      "detail": "evidence attaches -> claim disputed",
+      "state_update": [
+        {
+          "uri": "claim://cove/off-formulary",
+          "proposer": "org://cove/payer",
+          "statement": "medication X is off-formulary; the formulary policy and comparative step-therapy evidence do not require it as first-line.",
+          "evidence": [
+            "evidence://cove/formulary-policy",
+            "evidence://cove/step-therapy-studies"
+          ],
+          "epistemic_status": "disputed"
+        }
+      ],
+      "hash": "8628c24c2e35a7e48ada7c971caed3e9c04cdea3f1ecca3fbbb3a8256556b591"
+    },
+    {
+      "uri": "event://cove-corroboration/open-dispute",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-open-dispute-105",
+      "correlation_id": "corr-adj-open-dispute",
+      "causation_id": "ev-adj-prev-105",
+      "idempotency_key": "idem-adj-open-dispute-105",
+      "signature": "signed-by-person://cove/utilization",
+      "occurred_at": "2026-09-01T02:20:32Z",
+      "actor": "person://cove/utilization",
+      "detail": "dispute OPEN with parties/about + additive lifecycle/epistemic + resolutions",
+      "state_update": [
+        {
+          "uri": "dispute://cove/coverage",
+          "about": "obligation://cove/furnish-coverage",
+          "parties": [
+            "person://cove/patient",
+            "person://cove/physician",
+            "org://cove/payer"
+          ],
+          "status": "OPEN",
+          "estimated_cost_usd": 42000,
+          "deadline_ref": "utilization review decision within 72 hours (urgent)",
+          "interest_blocks": {
+            "patient": "access to the treatment the physician deems necessary",
+            "provider": "deliver clinically-appropriate care",
+            "payer": "pay only for covered/evidence-based care"
+          },
+          "constraint_blocks": {
+            "formulary": "off-formulary requires prior authorization",
+            "irreversible": "a dispensed drug is irreversible/unknown-cost to the member; a flat denial is a patient-safety unknown-cost -> \u00a76 human floor on both extremes"
+          },
+          "lifecycle_state": "OPEN",
+          "epistemic_state": "UNDETERMINED",
+          "determination": null,
+          "resolution_type": null,
+          "reopened": false,
+          "available_resolutions": [
+            "authorize-off-formulary",
+            "deny-off-formulary",
+            "step-therapy-first",
+            "authorize-generic",
+            "request-more-evidence",
+            "escalate-to-medical-director",
+            "unresolved",
+            "external-peer-review"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://cove/medically-necessary": 0.9167,
+              "claim://cove/off-formulary": 1.0
+            }
+          }
+        }
+      ],
+      "hash": "52aa2ddbd67f5fa10e82024a95038fe21d513f4557a0133b74130b6d3ef8738d"
+    },
+    {
+      "uri": "event://cove-corroboration/lifecycle-advance",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-lifecycle-advance-106",
+      "correlation_id": "corr-adj-lifecycle-advance",
+      "causation_id": "ev-adj-prev-106",
+      "idempotency_key": "idem-adj-lifecycle-advance-106",
+      "signature": "signed-by-person://cove/utilization",
+      "occurred_at": "2026-09-01T02:20:32Z",
+      "actor": "person://cove/utilization",
+      "detail": "conflicting evidence gathered -> EVIDENCE_COLLECTION -> CONTESTED",
+      "state_update": [
+        {
+          "uri": "dispute://cove/coverage",
+          "about": "obligation://cove/furnish-coverage",
+          "parties": [
+            "person://cove/patient",
+            "person://cove/physician",
+            "org://cove/payer"
+          ],
+          "status": "OPEN",
+          "estimated_cost_usd": 42000,
+          "deadline_ref": "utilization review decision within 72 hours (urgent)",
+          "interest_blocks": {
+            "patient": "access to the treatment the physician deems necessary",
+            "provider": "deliver clinically-appropriate care",
+            "payer": "pay only for covered/evidence-based care"
+          },
+          "constraint_blocks": {
+            "formulary": "off-formulary requires prior authorization",
+            "irreversible": "a dispensed drug is irreversible/unknown-cost to the member; a flat denial is a patient-safety unknown-cost -> \u00a76 human floor on both extremes"
+          },
+          "lifecycle_state": "EVIDENCE_COLLECTION",
+          "epistemic_state": "UNDETERMINED",
+          "determination": null,
+          "resolution_type": null,
+          "reopened": false,
+          "available_resolutions": [
+            "authorize-off-formulary",
+            "deny-off-formulary",
+            "step-therapy-first",
+            "authorize-generic",
+            "request-more-evidence",
+            "escalate-to-medical-director",
+            "unresolved",
+            "external-peer-review"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://cove/medically-necessary": 0.9167,
+              "claim://cove/off-formulary": 1.0
+            }
+          }
+        },
+        {
+          "uri": "dispute://cove/coverage",
+          "about": "obligation://cove/furnish-coverage",
+          "parties": [
+            "person://cove/patient",
+            "person://cove/physician",
+            "org://cove/payer"
+          ],
+          "status": "OPEN",
+          "estimated_cost_usd": 42000,
+          "deadline_ref": "utilization review decision within 72 hours (urgent)",
+          "interest_blocks": {
+            "patient": "access to the treatment the physician deems necessary",
+            "provider": "deliver clinically-appropriate care",
+            "payer": "pay only for covered/evidence-based care"
+          },
+          "constraint_blocks": {
+            "formulary": "off-formulary requires prior authorization",
+            "irreversible": "a dispensed drug is irreversible/unknown-cost to the member; a flat denial is a patient-safety unknown-cost -> \u00a76 human floor on both extremes"
+          },
+          "lifecycle_state": "CONTESTED",
+          "epistemic_state": "UNDETERMINED",
+          "determination": null,
+          "resolution_type": null,
+          "reopened": false,
+          "available_resolutions": [
+            "authorize-off-formulary",
+            "deny-off-formulary",
+            "step-therapy-first",
+            "authorize-generic",
+            "request-more-evidence",
+            "escalate-to-medical-director",
+            "unresolved",
+            "external-peer-review"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://cove/medically-necessary": 0.9167,
+              "claim://cove/off-formulary": 1.0
+            }
+          }
+        }
+      ],
+      "hash": "7ff7ed60608e62aab6f1863916da9bb9826f367efe7e44c03084157f489b1372"
+    },
+    {
+      "uri": "event://cove-corroboration/agent-advisory",
+      "type": "DECISION",
+      "event_id": "ev-adj-agent-advisory-107",
+      "correlation_id": "corr-adj-agent-advisory",
+      "causation_id": "ev-adj-prev-107",
+      "idempotency_key": "idem-adj-agent-advisory-107",
+      "signature": "signed-by-person://cove/utilization",
+      "occurred_at": "2026-09-01T02:20:32Z",
+      "actor": "person://cove/utilization",
+      "detail": "AI/machine advisory on options (contained: informational only)",
+      "state_update": [
+        {
+          "uri": "decision://cove-corroboration/agent-advisory",
+          "by": "person://cove/utilization",
+          "authority": "authority://cove/adjudicate",
+          "alternatives": [
+            "authorize-off-formulary",
+            "deny-off-formulary",
+            "step-therapy-first",
+            "authorize-generic",
+            "request-more-evidence",
+            "escalate-to-medical-director",
+            "unresolved",
+            "external-peer-review"
+          ],
+          "confidence": 0.7,
+          "expected_outcome": "inform determination",
+          "actual_outcome": "step-therapy-first",
+          "detail": {
+            "ranking": [
+              {
+                "option": "step-therapy-first",
+                "utility": 0.7775,
+                "floor_gated": false
+              },
+              {
+                "option": "authorize-generic",
+                "utility": 0.74,
+                "floor_gated": false
+              },
+              {
+                "option": "escalate-to-medical-director",
+                "utility": 0.605,
+                "floor_gated": false
+              },
+              {
+                "option": "external-peer-review",
+                "utility": 0.56,
+                "floor_gated": false
+              },
+              {
+                "option": "request-more-evidence",
+                "utility": 0.54,
+                "floor_gated": false
+              },
+              {
+                "option": "unresolved",
+                "utility": 0.5,
+                "floor_gated": false
+              },
+              {
+                "option": "authorize-off-formulary",
+                "utility": 0.48,
+                "floor_gated": true
+              },
+              {
+                "option": "deny-off-formulary",
+                "utility": 0.28,
+                "floor_gated": true
+              }
+            ],
+            "machine_eligible_best": {
+              "option": "step-therapy-first",
+              "utility": 0.7775,
+              "floor_gated": false
+            },
+            "tradeoff": "trade-off[coverage; business-model {'medical_necessity': 0.4, 'safety': 0.25, 'policy': 0.2, 'cost': 0.15}]\n  0.777  step-therapy-first\n  0.740  authorize-generic\n  0.605  escalate-to-medical-director\n  0.560  external-peer-review\n  0.540  request-more-evidence\n  0.500  unresolved\n  0.480  authorize-off-formulary FLOOR-GATED\n  0.280  deny-off-formulary FLOOR-GATED\n  => machine-eligible best (non-gated): step-therapy-first (gated: ['authorize-off-formulary', 'deny-off-formulary'])"
+          },
+          "made_at": "2026-09-01T02:20:32Z"
+        }
+      ],
+      "hash": "1bd3d3d10e9a5958182b9e7ff64d9e39c1ed0bd97efdff8e73a6e58611d23ccb"
+    },
+    {
+      "uri": "event://cove-corroboration/adjudicate",
+      "type": "DECISION",
+      "event_id": "ev-adj-adjudicate-108",
+      "correlation_id": "corr-adj-adjudicate",
+      "causation_id": "ev-adj-prev-108",
+      "idempotency_key": "idem-adj-adjudicate-108",
+      "signature": "signed-by-person://cove/utilization",
+      "occurred_at": "2026-09-01T02:20:32Z",
+      "actor": "person://cove/utilization",
+      "detail": "authorized human determination: step-therapy-first (ranking in view)",
+      "state_update": [
+        {
+          "uri": "decision://cove-corroboration/determination",
+          "by": "person://cove/utilization",
+          "authority": "authority://cove/adjudicate",
+          "alternatives": [
+            "authorize-off-formulary",
+            "deny-off-formulary",
+            "step-therapy-first",
+            "authorize-generic",
+            "request-more-evidence",
+            "escalate-to-medical-director",
+            "unresolved",
+            "external-peer-review"
+          ],
+          "confidence": 0.8,
+          "evidence": [
+            "evidence://cove/clinical-study",
+            "evidence://cove/formulary-policy",
+            "evidence://cove/step-therapy-studies"
+          ],
+          "expected_outcome": "step-therapy-first",
+          "actual_outcome": "step-therapy-first",
+          "detail": {
+            "determination": "step-therapy-first",
+            "machine_eligible_best": "step-therapy-first"
+          },
+          "made_at": "2026-09-01T02:20:32Z"
+        },
+        {
+          "uri": "dispute://cove/coverage",
+          "about": "obligation://cove/furnish-coverage",
+          "parties": [
+            "person://cove/patient",
+            "person://cove/physician",
+            "org://cove/payer"
+          ],
+          "status": "ADJUDICATED",
+          "estimated_cost_usd": 42000,
+          "deadline_ref": "utilization review decision within 72 hours (urgent)",
+          "interest_blocks": {
+            "patient": "access to the treatment the physician deems necessary",
+            "provider": "deliver clinically-appropriate care",
+            "payer": "pay only for covered/evidence-based care"
+          },
+          "constraint_blocks": {
+            "formulary": "off-formulary requires prior authorization",
+            "irreversible": "a dispensed drug is irreversible/unknown-cost to the member; a flat denial is a patient-safety unknown-cost -> \u00a76 human floor on both extremes"
+          },
+          "lifecycle_state": "ADJUDICATION",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "step-therapy-first",
+          "resolution_type": "step-therapy-first",
+          "reopened": false,
+          "available_resolutions": [
+            "authorize-off-formulary",
+            "deny-off-formulary",
+            "step-therapy-first",
+            "authorize-generic",
+            "request-more-evidence",
+            "escalate-to-medical-director",
+            "unresolved",
+            "external-peer-review"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://cove/medically-necessary": 0.9167,
+              "claim://cove/off-formulary": 1.0
+            }
+          }
+        }
+      ],
+      "hash": "fdbfd38aa9faeda64a50d7cea1957719dfde6255a39399c3f745bd0a01c089c2"
+    },
+    {
+      "uri": "event://cove-corroboration/resolution",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-resolution-109",
+      "correlation_id": "corr-adj-resolution",
+      "causation_id": "ev-adj-prev-109",
+      "idempotency_key": "idem-adj-resolution-109",
+      "signature": "signed-by-person://cove/utilization",
+      "occurred_at": "2026-09-01T02:20:32Z",
+      "actor": "person://cove/utilization",
+      "detail": "resolution step-therapy-first executed -> ACCEPTED -> EXECUTED",
+      "state_update": [
+        {
+          "uri": "dispute://cove/coverage",
+          "about": "obligation://cove/furnish-coverage",
+          "parties": [
+            "person://cove/patient",
+            "person://cove/physician",
+            "org://cove/payer"
+          ],
+          "status": "ADJUDICATED",
+          "estimated_cost_usd": 42000,
+          "deadline_ref": "utilization review decision within 72 hours (urgent)",
+          "interest_blocks": {
+            "patient": "access to the treatment the physician deems necessary",
+            "provider": "deliver clinically-appropriate care",
+            "payer": "pay only for covered/evidence-based care"
+          },
+          "constraint_blocks": {
+            "formulary": "off-formulary requires prior authorization",
+            "irreversible": "a dispensed drug is irreversible/unknown-cost to the member; a flat denial is a patient-safety unknown-cost -> \u00a76 human floor on both extremes"
+          },
+          "lifecycle_state": "RESOLUTION",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "step-therapy-first",
+          "resolution_type": "step-therapy-first",
+          "reopened": false,
+          "available_resolutions": [
+            "authorize-off-formulary",
+            "deny-off-formulary",
+            "step-therapy-first",
+            "authorize-generic",
+            "request-more-evidence",
+            "escalate-to-medical-director",
+            "unresolved",
+            "external-peer-review"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://cove/medically-necessary": 0.9167,
+              "claim://cove/off-formulary": 1.0
+            }
+          }
+        },
+        {
+          "uri": "dispute://cove/coverage",
+          "about": "obligation://cove/furnish-coverage",
+          "parties": [
+            "person://cove/patient",
+            "person://cove/physician",
+            "org://cove/payer"
+          ],
+          "status": "ADJUDICATED",
+          "estimated_cost_usd": 42000,
+          "deadline_ref": "utilization review decision within 72 hours (urgent)",
+          "interest_blocks": {
+            "patient": "access to the treatment the physician deems necessary",
+            "provider": "deliver clinically-appropriate care",
+            "payer": "pay only for covered/evidence-based care"
+          },
+          "constraint_blocks": {
+            "formulary": "off-formulary requires prior authorization",
+            "irreversible": "a dispensed drug is irreversible/unknown-cost to the member; a flat denial is a patient-safety unknown-cost -> \u00a76 human floor on both extremes"
+          },
+          "lifecycle_state": "ACCEPTED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "step-therapy-first",
+          "resolution_type": "step-therapy-first",
+          "reopened": false,
+          "available_resolutions": [
+            "authorize-off-formulary",
+            "deny-off-formulary",
+            "step-therapy-first",
+            "authorize-generic",
+            "request-more-evidence",
+            "escalate-to-medical-director",
+            "unresolved",
+            "external-peer-review"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://cove/medically-necessary": 0.9167,
+              "claim://cove/off-formulary": 1.0
+            }
+          }
+        },
+        {
+          "uri": "dispute://cove/coverage",
+          "about": "obligation://cove/furnish-coverage",
+          "parties": [
+            "person://cove/patient",
+            "person://cove/physician",
+            "org://cove/payer"
+          ],
+          "status": "ADJUDICATED",
+          "estimated_cost_usd": 42000,
+          "deadline_ref": "utilization review decision within 72 hours (urgent)",
+          "interest_blocks": {
+            "patient": "access to the treatment the physician deems necessary",
+            "provider": "deliver clinically-appropriate care",
+            "payer": "pay only for covered/evidence-based care"
+          },
+          "constraint_blocks": {
+            "formulary": "off-formulary requires prior authorization",
+            "irreversible": "a dispensed drug is irreversible/unknown-cost to the member; a flat denial is a patient-safety unknown-cost -> \u00a76 human floor on both extremes"
+          },
+          "lifecycle_state": "EXECUTED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "step-therapy-first",
+          "resolution_type": "step-therapy-first",
+          "reopened": false,
+          "available_resolutions": [
+            "authorize-off-formulary",
+            "deny-off-formulary",
+            "step-therapy-first",
+            "authorize-generic",
+            "request-more-evidence",
+            "escalate-to-medical-director",
+            "unresolved",
+            "external-peer-review"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://cove/medically-necessary": 0.9167,
+              "claim://cove/off-formulary": 1.0
+            }
+          },
+          "resolution_outcome": "step-therapy-first: member begins on the covered step-therapy with a documented re-evaluation if response is inadequate; no off-formulary spend triggered immediately"
+        }
+      ],
+      "hash": "2a6a22d90ef2783c0621b84b09c4d9341ff832f12b85fd3e706c03eba629d689"
+    },
+    {
+      "uri": "event://cove-corroboration/verify",
+      "type": "DECISION",
+      "event_id": "ev-adj-verify-110",
+      "correlation_id": "corr-adj-verify",
+      "causation_id": "ev-adj-prev-110",
+      "idempotency_key": "idem-adj-verify-110",
+      "signature": "signed-by-system://cove/verify",
+      "occurred_at": "2026-09-01T02:20:32Z",
+      "actor": "system://cove/verify",
+      "detail": "outcome verification on completed execution -> VERIFIED -> CLOSED",
+      "state_update": [
+        {
+          "uri": "dispute://cove/coverage",
+          "about": "obligation://cove/furnish-coverage",
+          "parties": [
+            "person://cove/patient",
+            "person://cove/physician",
+            "org://cove/payer"
+          ],
+          "status": "ADJUDICATED",
+          "estimated_cost_usd": 42000,
+          "deadline_ref": "utilization review decision within 72 hours (urgent)",
+          "interest_blocks": {
+            "patient": "access to the treatment the physician deems necessary",
+            "provider": "deliver clinically-appropriate care",
+            "payer": "pay only for covered/evidence-based care"
+          },
+          "constraint_blocks": {
+            "formulary": "off-formulary requires prior authorization",
+            "irreversible": "a dispensed drug is irreversible/unknown-cost to the member; a flat denial is a patient-safety unknown-cost -> \u00a76 human floor on both extremes"
+          },
+          "lifecycle_state": "VERIFIED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "step-therapy-first",
+          "resolution_type": "step-therapy-first",
+          "reopened": false,
+          "available_resolutions": [
+            "authorize-off-formulary",
+            "deny-off-formulary",
+            "step-therapy-first",
+            "authorize-generic",
+            "request-more-evidence",
+            "escalate-to-medical-director",
+            "unresolved",
+            "external-peer-review"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://cove/medically-necessary": 0.9167,
+              "claim://cove/off-formulary": 1.0
+            }
+          },
+          "resolution_outcome": "step-therapy-first: member begins on the covered step-therapy with a documented re-evaluation if response is inadequate; no off-formulary spend triggered immediately"
+        },
+        {
+          "uri": "dispute://cove/coverage",
+          "about": "obligation://cove/furnish-coverage",
+          "parties": [
+            "person://cove/patient",
+            "person://cove/physician",
+            "org://cove/payer"
+          ],
+          "status": "RESOLVED",
+          "estimated_cost_usd": 42000,
+          "deadline_ref": "utilization review decision within 72 hours (urgent)",
+          "interest_blocks": {
+            "patient": "access to the treatment the physician deems necessary",
+            "provider": "deliver clinically-appropriate care",
+            "payer": "pay only for covered/evidence-based care"
+          },
+          "constraint_blocks": {
+            "formulary": "off-formulary requires prior authorization",
+            "irreversible": "a dispensed drug is irreversible/unknown-cost to the member; a flat denial is a patient-safety unknown-cost -> \u00a76 human floor on both extremes"
+          },
+          "lifecycle_state": "CLOSED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "step-therapy-first",
+          "resolution_type": "step-therapy-first",
+          "reopened": false,
+          "available_resolutions": [
+            "authorize-off-formulary",
+            "deny-off-formulary",
+            "step-therapy-first",
+            "authorize-generic",
+            "request-more-evidence",
+            "escalate-to-medical-director",
+            "unresolved",
+            "external-peer-review"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://cove/medically-necessary": 0.9167,
+              "claim://cove/off-formulary": 1.0
+            }
+          },
+          "resolution_outcome": "step-therapy-first: member begins on the covered step-therapy with a documented re-evaluation if response is inadequate; no off-formulary spend triggered immediately",
+          "verified": true
+        }
+      ],
+      "hash": "d2418630a82105608d56adc6747f49fc1bb3626f69108598a7fd8834dd33571d"
+    },
+    {
+      "uri": "event://cove-corroboration/learn",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-learn-111",
+      "correlation_id": "corr-adj-learn",
+      "causation_id": "ev-adj-prev-111",
+      "idempotency_key": "idem-adj-learn-111",
+      "signature": "signed-by-person://cove/utilization",
+      "occurred_at": "2026-09-01T02:20:32Z",
+      "actor": "person://cove/utilization",
+      "detail": "organizational learning: recorded",
+      "state_update": [
+        {
+          "uri": "evidence://cove-corroboration/learning-note",
+          "kind": "RECORD",
+          "source": "post-resolution-postmortem",
+          "captured_at": "2026-09-01T02:20:32Z",
+          "verity": {
+            "procedure": "postmortem",
+            "confidence": 0.6
+          },
+          "reliability": 0.6,
+          "about": "what was learned",
+          "supports": null,
+          "learning": "drug coverage disputes blend clinical-necessity evidence with policy; the measured path (step-therapy-first) preserves member safety + plan policy while avoiding both an irreversible off-formulary spend and a flat safety-risk denial"
+        }
+      ],
+      "hash": "115466802cfc741fb38c1e220021b5466c98e2976a2aa95ac7d00cd2148f671e"
+    }
+  ]
+}

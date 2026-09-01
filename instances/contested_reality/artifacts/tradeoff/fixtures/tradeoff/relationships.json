@@ -1,0 +1,103 @@
+[
+  {
+    "uri": "relationship://to/employment",
+    "participants": [
+      "person://to/employee",
+      "org://to/company"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "person://to/employee": [
+        "employee"
+      ],
+      "org://to/company": [
+        "employer"
+      ]
+    },
+    "interest": {
+      "party": "person://to/employee",
+      "want": "remote-work-and-use-unused-leave",
+      "stakes": [
+        "work-from-home wellbeing",
+        "use 12 accrued unused-leave days"
+      ],
+      "legitimate": true,
+      "within_policy": true,
+      "unused_leave_days": 12,
+      "arrangement_requested": "full-remote"
+    },
+    "constraint": {
+      "response_target_minutes": 30,
+      "coverage_floor_agents": 3,
+      "on_site_agents_now": 3,
+      "remote_policy": "policy://to/remote",
+      "sla_expectation": "expectation://to/sla",
+      "staff_total": 3,
+      "leave_days": 12,
+      "working_days": 5,
+      "plan_remote_days": 3,
+      "plan_leave_used": 2
+    },
+    "purpose": "employment with accrued unused leave"
+  },
+  {
+    "uri": "relationship://to/contract",
+    "participants": [
+      "org://to/customer",
+      "org://to/company"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://to/customer": [
+        "buyer"
+      ],
+      "org://to/company": [
+        "provider"
+      ]
+    },
+    "interest": {
+      "party": "person://to/manager",
+      "want": "on-site-coverage-to-meet-sla",
+      "stakes": [
+        "meet 30-minute customer-response SLA",
+        "keep staffing floor of 3 on-site agents"
+      ],
+      "legitimate": true,
+      "within_policy": true
+    },
+    "constraint": {
+      "response_target_minutes": 30,
+      "coverage_floor_agents": 3,
+      "on_site_agents_now": 3,
+      "remote_policy": "policy://to/remote",
+      "sla_expectation": "expectation://to/sla",
+      "staff_total": 3,
+      "leave_days": 12,
+      "working_days": 5,
+      "plan_remote_days": 3,
+      "plan_leave_used": 2
+    },
+    "purpose": "customer contract with 30-minute response SLA"
+  },
+  {
+    "uri": "relationship://to/staffing-authority",
+    "participants": [
+      "person://to/manager",
+      "org://to/company"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "person://to/manager": [
+        "staffing-authority"
+      ],
+      "org://to/company": [
+        "employer"
+      ]
+    },
+    "authority": [
+      "authority://to/adjudicate-remote",
+      "authority://to/for-appeal"
+    ],
+    "purpose": "manager authority over staffing to meet the SLA"
+  }
+]

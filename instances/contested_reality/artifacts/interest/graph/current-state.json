@@ -1,0 +1,324 @@
+{
+  "kind": "GRAPH",
+  "objects": [
+    {
+      "uri": "org://ic/customer",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://ic/company",
+      "type": "ORG"
+    },
+    {
+      "uri": "person://ic/employee",
+      "type": "PERSON"
+    },
+    {
+      "uri": "person://ic/manager",
+      "type": "PERSON"
+    },
+    {
+      "uri": "person://ic/director",
+      "type": "PERSON"
+    },
+    {
+      "uri": "relationship://ic/employment",
+      "participants": [
+        "person://ic/employee",
+        "org://ic/company"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "person://ic/employee": [
+          "employee"
+        ],
+        "org://ic/company": [
+          "employer"
+        ]
+      },
+      "interest": {
+        "party": "person://ic/employee",
+        "want": "remote-work-and-use-unused-leave",
+        "stakes": [
+          "work-from-home wellbeing",
+          "use 12 accrued unused-leave days"
+        ],
+        "legitimate": true,
+        "within_policy": true,
+        "unused_leave_days": 12,
+        "arrangement_requested": "full-remote"
+      },
+      "purpose": "employment with accrued unused leave"
+    },
+    {
+      "uri": "relationship://ic/contract",
+      "participants": [
+        "org://ic/customer",
+        "org://ic/company"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://ic/customer": [
+          "buyer"
+        ],
+        "org://ic/company": [
+          "provider"
+        ]
+      },
+      "constraint": {
+        "response_target_minutes": 30,
+        "coverage_floor_agents": 3,
+        "on_site_agents_now": 3,
+        "remote_policy": "policy://ic/remote",
+        "sla_expectation": "expectation://ic/sla"
+      },
+      "interest": {
+        "party": "person://ic/manager",
+        "want": "on-site-coverage-to-meet-sla",
+        "stakes": [
+          "meet 30-minute customer-response SLA",
+          "keep staffing floor of 3 on-site agents"
+        ],
+        "legitimate": true,
+        "within_policy": true,
+        "reason": "customer contract requires response within 30 minutes"
+      },
+      "purpose": "customer contract with 30-minute response SLA"
+    },
+    {
+      "uri": "relationship://ic/staffing-authority",
+      "participants": [
+        "person://ic/manager",
+        "org://ic/company"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "person://ic/manager": [
+          "staffing-authority"
+        ],
+        "org://ic/company": [
+          "employer"
+        ]
+      },
+      "authority": [
+        "authority://ic/adjudicate-remote",
+        "authority://ic/for-appeal"
+      ],
+      "purpose": "manager authority over staffing to meet the SLA"
+    },
+    {
+      "uri": "right://ic/emp-appeal",
+      "holder": "person://ic/employee",
+      "type": "APPEAL",
+      "subject": "EMPLOYEE REMOTE-WORK DETERMINATION",
+      "scope": [
+        "decision://ic/adjudication"
+      ],
+      "purpose": "employee's right to appeal the manager's remote-work determination",
+      "status": "EXERCISED",
+      "exercised_at_ref": "event://ic/appeal"
+    },
+    {
+      "uri": "authority://ic/adjudicate-remote",
+      "holder": "person://ic/manager",
+      "grants": [
+        "determine_remote_arrangement"
+      ],
+      "roles": [
+        "adjudicator"
+      ]
+    },
+    {
+      "uri": "authority://ic/for-appeal",
+      "holder": "person://ic/director",
+      "grants": [
+        "adjudicate_appeal"
+      ],
+      "roles": [
+        "appeal-adjudicator"
+      ]
+    },
+    {
+      "uri": "policy://ic/remote",
+      "name": "remote-work-conditions",
+      "condition": "SLA coverage maintained AND staffing floor met AND no irreversible/unknown-cost action",
+      "decision": "remote-work PERMITTED under conditions",
+      "action": "remote-with-coverage-plan when on-site coverage can meet the SLA",
+      "scope": [
+        "relationship://ic/employment",
+        "relationship://ic/staffing-authority"
+      ]
+    },
+    {
+      "uri": "expectation://ic/sla",
+      "subject": "org://ic/company",
+      "condition": "respond to customer within 30 minutes during coverage hours",
+      "metric": "response-time",
+      "threshold": 30,
+      "evidence_required": "SOME"
+    },
+    {
+      "uri": "case://ic/remote-conflict",
+      "subject": "employee remote-work request vs manager on-site coverage under the customer SLA",
+      "status": "RESOLVED",
+      "actors": [
+        "person://ic/employee",
+        "person://ic/manager",
+        "org://ic/customer"
+      ],
+      "relationships": [
+        "relationship://ic/employment",
+        "relationship://ic/contract",
+        "relationship://ic/staffing-authority"
+      ],
+      "owner": "person://ic/manager",
+      "conflict": {
+        "interests": [
+          {
+            "party": "person://ic/employee",
+            "want": "full-remote + use 12 leave days",
+            "stakes": "wellbeing + use of accrued unused leave",
+            "legitimate": true,
+            "within_policy": true
+          },
+          {
+            "party": "person://ic/manager",
+            "want": "on-site coverage to meet SLA",
+            "stakes": "30-min customer-response SLA + staffing floor",
+            "legitimate": true,
+            "within_policy": true
+          }
+        ],
+        "constraint": {
+          "response_target_minutes": 30,
+          "coverage_floor_agents": 3,
+          "on_site_if_full_remote": 2,
+          "policy": "policy://ic/remote"
+        },
+        "detected": true,
+        "mutually_exclusive": true,
+        "uncertainty": "coverage needs on remote days unverified; whether a coverage plan can meet the SLA is a judgment",
+        "negotiation_open": true
+      },
+      "resolution": "{'determination': 'remote-with-coverage-plan', 'determined_by': 'person://ic/manager', 'covered_stake': {'emp': 'remote 3 days/wk + 2 leave days', 'mgr': 'on-site coverage meets SLA'}, 'conditions': ['on-site Tue/Thu', 'coverage floor met on commitment days'], 'reason': \"employee's remote interest is legitimate and within policy; manager's SLA interest is binding; a CONDITIONAL plan meets both: remote Mon/Wed/Fri, on-site Tue/Thu keeps staffing at the 3-agent floor so the 30-min SLA holds, and 2 of 12 unused-leave days are consumed\"}",
+      "negotiation": {
+        "outcome": "remote-with-coverage-plan",
+        "by_whom": "person://ic/manager",
+        "satisfies": {
+          "employee_interest": "remote 3 days/wk + 2 leave",
+          "manager_interest": "SLA + floor met"
+        }
+      },
+      "appeal": {
+        "uri": "event://ic/appeal",
+        "appeals_for": "person://ic/employee",
+        "appealing": "decision://ic/adjudication",
+        "ground": "employee sought full remote; conditional plan still limits flexibility; requests leave use be explicit and unrestricted",
+        "status": "OPEN",
+        "authority": "authority://ic/for-appeal",
+        "recorded_under": "right://ic/emp-appeal"
+      },
+      "appeal_status": "RESOLVED",
+      "appeal_ground": "employee sought full remote; conditional plan still limits flexibility; requests leave use be explicit and unrestricted",
+      "appeal_outcome": "modify",
+      "final_arrangement": "remote 4 days/wk + 3 leave days; on-site 1 day meets SLA floor"
+    },
+    {
+      "uri": "decision://ic/adjudication",
+      "by": "person://ic/manager",
+      "authority": "authority://ic/adjudicate-remote",
+      "alternatives": [
+        "side-employee",
+        "side-manager",
+        "remote-with-coverage-plan",
+        "UNRESOLVED"
+      ],
+      "confidence": 0.82,
+      "expected_outcome": "resolve conflict",
+      "actual_outcome": "remote-with-coverage-plan",
+      "detail": {
+        "determination": "remote-with-coverage-plan",
+        "determined_by": "person://ic/manager",
+        "covered_stake": {
+          "emp": "remote 3 days/wk + 2 leave days",
+          "mgr": "on-site coverage meets SLA"
+        },
+        "conditions": [
+          "on-site Tue/Thu",
+          "coverage floor met on commitment days"
+        ],
+        "reason": "employee's remote interest is legitimate and within policy; manager's SLA interest is binding; a CONDITIONAL plan meets both: remote Mon/Wed/Fri, on-site Tue/Thu keeps staffing at the 3-agent floor so the 30-min SLA holds, and 2 of 12 unused-leave days are consumed"
+      },
+      "made_at": "2026-09-01T02:18:40Z"
+    },
+    {
+      "uri": "decision://ic/appeal-decision",
+      "by": "person://ic/director",
+      "authority": "authority://ic/for-appeal",
+      "alternatives": [
+        "uphold",
+        "modify",
+        "reverse"
+      ],
+      "confidence": 0.9,
+      "expected_outcome": "resolve appeal",
+      "actual_outcome": "modify",
+      "detail": {
+        "ruling": "affirmed-coverage-condition",
+        "granted": "employee remote 4 days/wk; 3 of 12 leave days explicit"
+      },
+      "made_at": "2026-09-01T02:18:40Z"
+    },
+    {
+      "uri": "case://ic/remote-uncertain",
+      "subject": "remote request where coverage data is unavailable",
+      "status": "OPEN",
+      "actors": [
+        "person://ic/employee",
+        "person://ic/manager"
+      ],
+      "relationships": [
+        "relationship://ic/employment",
+        "relationship://ic/contract"
+      ],
+      "owner": "person://ic/manager",
+      "conflict": {
+        "interests": [],
+        "constraint": {
+          "response_target_minutes": 30,
+          "coverage_floor_agents": 3,
+          "note": "remote-day staffing coverage NOT verifiable"
+        },
+        "detected": true,
+        "mutually_exclusive": true,
+        "uncertainty": "no source records on-site coverage on proposed remote days; neither side can be substantiated",
+        "negotiation_open": true
+      },
+      "resolution": "{'determination': 'UNRESOLVED', 'determined_by': 'person://ic/manager', 'epistemic_state': 'INSUFFICIENT_EVIDENCE', 'reason': 'coverage on proposed remote days is unverified with no independent source; no arrangement is justified by the admissible basis'}",
+      "epistemic_state": "INSUFFICIENT_EVIDENCE",
+      "determination": "UNRESOLVED",
+      "determined_by": "person://ic/manager"
+    },
+    {
+      "uri": "decision://ic/adjudication-uncertain",
+      "by": "person://ic/manager",
+      "authority": "authority://ic/adjudicate-remote",
+      "alternatives": [
+        "side-employee",
+        "side-manager",
+        "remote-with-coverage-plan",
+        "UNRESOLVED"
+      ],
+      "confidence": 0.6,
+      "expected_outcome": "resolve conflict",
+      "actual_outcome": "UNRESOLVED",
+      "detail": {
+        "determination": "UNRESOLVED",
+        "determined_by": "person://ic/manager",
+        "epistemic_state": "INSUFFICIENT_EVIDENCE",
+        "reason": "coverage on proposed remote days is unverified with no independent source; no arrangement is justified by the admissible basis"
+      },
+      "made_at": "2026-09-01T02:18:40Z"
+    }
+  ]
+}

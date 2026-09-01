@@ -1,0 +1,48 @@
+[
+  {
+    "uri": "claim://deli/late",
+    "proposer": "org://deli/customer",
+    "statement": "the contracted service was NOT delivered on time; signed receipt 16:15 past the 16:00 deadline \u2014 we should not pay for the late delivery.",
+    "evidence": [
+      "evidence://deli/arrival-receipt",
+      "evidence://deli/gps-arrival"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli/delivered",
+    "proposer": "org://deli/company",
+    "statement": "the contracted service WAS delivered and is payable; an independent anchored verification confirms delivery liveness.",
+    "evidence": [
+      "evidence://deli/third-party-verification"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli/shipped",
+    "proposer": "org://deli/supplier",
+    "statement": "we shipped the consignment on time.",
+    "evidence": [
+      "evidence://deli/supplier-shipping"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli/u-late",
+    "proposer": "org://deli/customer",
+    "statement": "service was delivered late (receipt 16:15).",
+    "evidence": [
+      "evidence://deli/u-receipt"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli/u-on-time",
+    "proposer": "org://deli/company",
+    "statement": "service was delivered on time (internal delivery log).",
+    "evidence": [
+      "evidence://deli/u-delivery-log"
+    ],
+    "epistemic_status": "disputed"
+  }
+]

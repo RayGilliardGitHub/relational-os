@@ -1,0 +1,84 @@
+[
+  {
+    "uri": "org://lf/customer",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://lf/company",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://lf/supplier",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://lf/legal-counsel",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://lf/csr",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://lf/manager",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://lf/director",
+    "type": "PERSON"
+  },
+  {
+    "uri": "system://lf/audit-anchor",
+    "type": "SYSTEM"
+  },
+  {
+    "uri": "obligation://lf/deliver-due",
+    "subject": "org://lf/company",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "deliver the contracted service by the 16:00 deadline",
+    "due_by": "2026-08-31T16:00:00-06:00"
+  },
+  {
+    "uri": "obligation://lf/pay-due",
+    "subject": "org://lf/customer",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "pay the $18,000 invoice on confirmed delivery",
+    "due_by": "2026-09-30T00:00:00-06:00"
+  },
+  {
+    "uri": "right://lf/cust-appeal",
+    "holder": "org://lf/customer",
+    "type": "APPEAL",
+    "subject": "DELIVERY DISPUTE DETERMINATION",
+    "scope": [
+      "dispute://lf/delivery"
+    ],
+    "purpose": "customer's right to appeal the delivery determination"
+  },
+  {
+    "uri": "rule://lf/billing-refund",
+    "kind": "POLICY",
+    "text": "auto-refund up to $5,000; >$5,000 requires manager authorization; a disputed refund admission is irreversible/unknown-cost, so the human floor binds",
+    "applies_to": "org://lf/company"
+  },
+  {
+    "uri": "authority://lf/adjudicate",
+    "holder": "person://lf/manager",
+    "grants": [
+      "adjudicate_delivery"
+    ],
+    "roles": [
+      "adjudicator"
+    ]
+  },
+  {
+    "uri": "authority://lf/adjudicate-appeal",
+    "holder": "person://lf/director",
+    "grants": [
+      "adjudicate_appeal"
+    ],
+    "roles": [
+      "appeal-adjudicator"
+    ]
+  }
+]

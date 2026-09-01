@@ -1,0 +1,95 @@
+[
+  {
+    "uri": "dispute://cove/coverage",
+    "about": "obligation://cove/furnish-coverage",
+    "parties": [
+      "person://cove/patient",
+      "person://cove/physician",
+      "org://cove/payer"
+    ],
+    "status": "RESOLVED",
+    "estimated_cost_usd": 42000,
+    "deadline_ref": "utilization review decision within 72 hours (urgent)",
+    "interest_blocks": {
+      "patient": "access to the treatment the physician deems necessary",
+      "provider": "deliver clinically-appropriate care",
+      "payer": "pay only for covered/evidence-based care"
+    },
+    "constraint_blocks": {
+      "formulary": "off-formulary requires prior authorization",
+      "irreversible": "a dispensed drug is irreversible/unknown-cost to the member; a flat denial is a patient-safety unknown-cost -> \u00a76 human floor on both extremes"
+    },
+    "lifecycle_state": "CLOSED",
+    "epistemic_state": "RESOLVED_DETERMINED",
+    "determination": "step-therapy-first",
+    "resolution_type": "step-therapy-first",
+    "reopened": false,
+    "available_resolutions": [
+      "authorize-off-formulary",
+      "deny-off-formulary",
+      "step-therapy-first",
+      "authorize-generic",
+      "request-more-evidence",
+      "escalate-to-medical-director",
+      "unresolved",
+      "external-peer-review"
+    ],
+    "conflict": {
+      "detected": true,
+      "uncertainty": false,
+      "claim_support": {
+        "claim://cove/medically-necessary": 0.88,
+        "claim://cove/off-formulary": 1.0
+      }
+    },
+    "resolution_outcome": "step-therapy-first: member begins on the covered step-therapy with a documented re-evaluation if response is inadequate; no off-formulary spend triggered immediately",
+    "verified": true,
+    "learned_weights": {
+      "medical_necessity": 0.3994312474928557,
+      "safety": 0.25036149523759177,
+      "policy": 0.19988432152397065,
+      "cost": 0.15032293574558198
+    },
+    "learning": "drug coverage disputes blend clinical-necessity evidence with policy; the measured path (step-therapy-first) preserves member safety + plan policy while avoiding both an irreversible off-formulary spend and a flat safety-risk denial"
+  },
+  {
+    "uri": "dispute://cove/rare-condition",
+    "about": "obligation://cove/furnish-coverage",
+    "parties": [
+      "person://cove/patient",
+      "org://cove/payer"
+    ],
+    "status": "OPEN",
+    "estimated_cost_usd": 210000,
+    "interest_blocks": {
+      "patient": "access to a potentially life-saving drug",
+      "payer": "spend only on evidenced care"
+    },
+    "constraint_blocks": {
+      "irreversible": "dispensing is irreversible -> \u00a76 floor"
+    },
+    "lifecycle_state": "UNRESOLVED",
+    "epistemic_state": "INSUFFICIENT_EVIDENCE",
+    "determination": "UNRESOLVED",
+    "resolution_type": null,
+    "reopened": false,
+    "available_resolutions": [
+      "authorize-off-formulary",
+      "deny-off-formulary",
+      "step-therapy-first",
+      "authorize-generic",
+      "request-more-evidence",
+      "escalate-to-medical-director",
+      "unresolved",
+      "external-peer-review"
+    ],
+    "conflict": {
+      "detected": true,
+      "uncertainty": false,
+      "claim_support": {
+        "claim://cove/medically-necessary": 0.88,
+        "claim://cove/off-formulary": 1.0
+      }
+    }
+  }
+]

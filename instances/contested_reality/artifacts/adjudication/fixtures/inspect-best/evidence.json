@@ -1,0 +1,55 @@
+[
+  {
+    "uri": "evidence://inspect/proof-system",
+    "kind": "ANCHORED",
+    "source": "automated-inspection-livestate",
+    "captured_at": "2026-08-29T10:00:00-06:00",
+    "verity": {
+      "procedure": "machine-inspection-log",
+      "confidence": 0.84
+    },
+    "reliability": 0.84,
+    "about": "automated pass signal",
+    "supports": "claim://inspect/passed"
+  },
+  {
+    "uri": "evidence://inspect/proof-audit",
+    "kind": "RECORD",
+    "source": "annual-auditor-sign-off",
+    "captured_at": "2026-07-10T09:00:00-06:00",
+    "verity": {
+      "procedure": "independent-audit",
+      "confidence": 0.97
+    },
+    "reliability": 0.97,
+    "about": "auditor sign-off on the inspection process",
+    "supports": "claim://inspect/passed"
+  },
+  {
+    "uri": "evidence://inspect/fail-inspector",
+    "kind": "TESTIMONY",
+    "source": "resident-inspector-testimony",
+    "captured_at": "2026-08-30T14:00:00-06:00",
+    "verity": {
+      "procedure": "signed-inspection-note",
+      "confidence": 0.9
+    },
+    "reliability": 0.9,
+    "about": "resident inspector's defect finding",
+    "supports": "claim://inspect/failed"
+  },
+  {
+    "uri": "evidence://inspect-best/learning-note",
+    "kind": "RECORD",
+    "source": "post-resolution-postmortem",
+    "captured_at": "2026-09-01T02:11:11Z",
+    "verity": {
+      "procedure": "postmortem",
+      "confidence": 0.6
+    },
+    "reliability": 0.6,
+    "about": "what was learned",
+    "supports": null,
+    "learning": "reliability alone is ambiguous here (fails only if the reconciliation rule admits the resident testimony vs demands anchored-only vs recency-decays the old audit); the adjudicator must state which rule the determination is reached under"
+  }
+]

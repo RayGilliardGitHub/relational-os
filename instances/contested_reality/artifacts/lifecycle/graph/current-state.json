@@ -1,0 +1,497 @@
+{
+  "kind": "GRAPH",
+  "objects": [
+    {
+      "uri": "org://lf/customer",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://lf/company",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://lf/supplier",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://lf/legal-counsel",
+      "type": "ORG"
+    },
+    {
+      "uri": "person://lf/csr",
+      "type": "PERSON"
+    },
+    {
+      "uri": "person://lf/manager",
+      "type": "PERSON"
+    },
+    {
+      "uri": "person://lf/director",
+      "type": "PERSON"
+    },
+    {
+      "uri": "system://lf/audit-anchor",
+      "type": "SYSTEM"
+    },
+    {
+      "uri": "relationship://lf/customer-contract",
+      "participants": [
+        "org://lf/customer",
+        "org://lf/company"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://lf/customer": [
+          "buyer"
+        ],
+        "org://lf/company": [
+          "provider"
+        ]
+      },
+      "interest": {
+        "party": "org://lf/customer",
+        "want": "pay only for delivered service",
+        "stakes": [
+          "$18,000 invoice accuracy",
+          "no charge for non-delivery"
+        ],
+        "legitimate": true
+      },
+      "purpose": "contracted service delivery with 16:00 deadline"
+    },
+    {
+      "uri": "relationship://lf/supplier-contract",
+      "participants": [
+        "org://lf/supplier",
+        "org://lf/company"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://lf/supplier": [
+          "shipper"
+        ],
+        "org://lf/company": [
+          "customer"
+        ]
+      },
+      "purpose": "supplier shipping for the delivery"
+    },
+    {
+      "uri": "relationship://lf/employment",
+      "participants": [
+        "person://lf/csr",
+        "org://lf/company"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "person://lf/csr": [
+          "csr"
+        ],
+        "org://lf/company": [
+          "employer"
+        ]
+      },
+      "purpose": "customer-service handling of the dispute"
+    },
+    {
+      "uri": "obligation://lf/deliver-due",
+      "subject": "org://lf/company",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "deliver the contracted service by the 16:00 deadline",
+      "due_by": "2026-08-31T16:00:00-06:00"
+    },
+    {
+      "uri": "obligation://lf/pay-due",
+      "subject": "org://lf/customer",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "pay the $18,000 invoice on confirmed delivery",
+      "due_by": "2026-09-30T00:00:00-06:00"
+    },
+    {
+      "uri": "right://lf/cust-appeal",
+      "holder": "org://lf/customer",
+      "type": "APPEAL",
+      "subject": "DELIVERY DISPUTE DETERMINATION",
+      "scope": [
+        "dispute://lf/delivery"
+      ],
+      "purpose": "customer's right to appeal the delivery determination"
+    },
+    {
+      "uri": "rule://lf/billing-refund",
+      "kind": "POLICY",
+      "text": "auto-refund up to $5,000; >$5,000 requires manager authorization; a disputed refund admission is irreversible/unknown-cost, so the human floor binds",
+      "applies_to": "org://lf/company"
+    },
+    {
+      "uri": "authority://lf/adjudicate",
+      "holder": "person://lf/manager",
+      "grants": [
+        "adjudicate_delivery"
+      ],
+      "roles": [
+        "adjudicator"
+      ]
+    },
+    {
+      "uri": "authority://lf/adjudicate-appeal",
+      "holder": "person://lf/director",
+      "grants": [
+        "adjudicate_appeal"
+      ],
+      "roles": [
+        "appeal-adjudicator"
+      ]
+    },
+    {
+      "uri": "claim://lf/delivery-late",
+      "proposer": "org://lf/customer",
+      "statement": "the contracted service was NOT delivered on time: we signed receipt at 16:15, past the 16:00 deadline \u2014 we should not pay for late delivery.",
+      "evidence": [
+        "evidence://lf/arrival-receipt"
+      ],
+      "epistemic_status": "disputed",
+      "classification": "honest-error-or-valid"
+    },
+    {
+      "uri": "claim://lf/delivered",
+      "proposer": "org://lf/company",
+      "statement": "the contracted service WAS delivered and is payable: supplier shipped at 15:58; arrival sits within the 15-minute SLA grace of the 16:00 deadline.",
+      "evidence": [
+        "evidence://lf/supplier-shipping"
+      ],
+      "epistemic_status": "disputed",
+      "classification": "honest-error-or-valid"
+    },
+    {
+      "uri": "claim://lf/shipped-on-time",
+      "proposer": "org://lf/supplier",
+      "statement": "we shipped the consignment on time at 15:58.",
+      "evidence": [
+        "evidence://lf/supplier-shipping"
+      ],
+      "epistemic_status": "disputed"
+    },
+    {
+      "uri": "evidence://lf/gps-arrival",
+      "kind": "ANCHORED",
+      "source": "fleet-GPS-livestate",
+      "captured_at": "2026-08-31T16:12:00-06:00",
+      "verity": {
+        "procedure": "gps-timestamp",
+        "confidence": 0.85
+      },
+      "reliability": 0.85,
+      "about": "arrival gate event",
+      "supports": "claim://lf/delivery-late"
+    },
+    {
+      "uri": "evidence://lf/contract-deadline",
+      "kind": "RECORD",
+      "source": "contract-terms",
+      "captured_at": "2026-01-01T00:00:00-06:00",
+      "verity": {
+        "procedure": "contract-deadline",
+        "confidence": 1.0
+      },
+      "reliability": 1.0,
+      "about": "delivery deadline 16:00",
+      "supports": null
+    },
+    {
+      "uri": "evidence://lf/arrival-receipt",
+      "kind": "TESTIMONY",
+      "source": "customer-signed-receipt",
+      "captured_at": "2026-08-31T16:15:00-06:00",
+      "verity": {
+        "procedure": "signed-receipt",
+        "confidence": 0.9
+      },
+      "reliability": 0.9,
+      "about": "delivery receipt",
+      "supports": "claim://lf/delivery-late"
+    },
+    {
+      "uri": "evidence://lf/supplier-shipping",
+      "kind": "RECORD",
+      "source": "supplier-shipping-system",
+      "captured_at": "2026-08-31T15:58:00-06:00",
+      "verity": {
+        "procedure": "shipping-log",
+        "confidence": 0.92
+      },
+      "reliability": 0.92,
+      "about": "ship-out time",
+      "supports": "claim://lf/shipped-on-time"
+    },
+    {
+      "uri": "evidence://lf/third-party-verification",
+      "kind": "ANCHORED",
+      "source": "independent-audit-service",
+      "captured_at": "2026-08-31T17:05:00-06:00",
+      "verity": {
+        "procedure": "anchored-liveness",
+        "confidence": 0.97
+      },
+      "reliability": 0.97,
+      "about": "delivery liveness verification",
+      "supports": "claim://lf/delivered"
+    },
+    {
+      "uri": "evidence://lf/invoice-18k",
+      "kind": "RECORD",
+      "source": "ar-system",
+      "captured_at": "2026-08-31T09:00:00-06:00",
+      "verity": {
+        "procedure": "invoice",
+        "confidence": 1.0
+      },
+      "reliability": 1.0,
+      "about": "$18,000 invoice",
+      "supports": "claim://lf/delivered"
+    },
+    {
+      "uri": "dispute://lf/delivery",
+      "about": "obligation://lf/deliver-due",
+      "parties": [
+        "org://lf/customer",
+        "org://lf/company",
+        "org://lf/supplier"
+      ],
+      "status": "ADJUDICATED",
+      "lifecycle_state": "ADJUDICATION",
+      "epistemic_state": "RESOLVED_DETERMINED",
+      "determination": "partial-settlement",
+      "resolution_type": "partial-settlement",
+      "reopened": true,
+      "fin_impact_usd": 18000,
+      "legal_threat": true,
+      "deadline_ref": "resolution expected within 7 business days",
+      "interest_blocks": {
+        "customer": "pay only for delivered service; avoid bearing cost of late delivery",
+        "company": "collect valid invoice; protect reputation; avoid paying for a breach that evidence shows did not occur",
+        "supplier": "established on-time shipment, not blamed for a late arrival"
+      },
+      "constraint_blocks": {
+        "sla_grace_minutes": 15,
+        "refund_auto_cap_usd": 5000,
+        "irreversible": "a refund/admission is irreversible/unknown-cost -> \u00a76 human floor",
+        "authority": "adjudicator=manager; appeal=director; refund>$5k requires manager"
+      },
+      "available_resolutions": [
+        "accept-customer-refund",
+        "accept-company-full-payment",
+        "partial-settlement",
+        "conditional-resolution",
+        "request-more-evidence",
+        "escalate",
+        "unresolved",
+        "external-adjudication"
+      ],
+      "conflict": {
+        "detected": true,
+        "uncertainty": true,
+        "evidence_disagreement": "GPS+receipt vs supplier-log",
+        "mutually_exclusive": true
+      },
+      "resolution": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed",
+      "resolution_outcome": "no refund issued; SLA cadence note filed",
+      "verified": true,
+      "appeal_ground": "customer disputes the grace-window reading; asserts arrival was late",
+      "appeal_under": "right://lf/cust-appeal",
+      "new_evidence": "evidence://lf/clock-mis-set",
+      "supersedes": "decision://lf/delivery-determination"
+    },
+    {
+      "uri": "decision://lf/agent-advisory",
+      "by": "person://lf/csr",
+      "authority": "authority://lf/adjudicate",
+      "alternatives": [
+        "accept-customer-refund",
+        "accept-company-full-payment",
+        "partial-settlement",
+        "conditional-resolution",
+        "request-more-evidence",
+        "escalate",
+        "unresolved",
+        "external-adjudication"
+      ],
+      "confidence": 0.7,
+      "expected_outcome": "inform determination",
+      "actual_outcome": "partial-settlement",
+      "detail": {
+        "by": "person://lf/manager",
+        "for": "dispute://lf/delivery",
+        "options": [
+          "accept-customer-refund",
+          "accept-company-full-payment",
+          "partial-settlement",
+          "conditional-resolution",
+          "request-more-evidence",
+          "escalate",
+          "unresolved",
+          "external-adjudication"
+        ],
+        "includes_do_nothing": true,
+        "tradeoff": "machine ranking: partial-settlement@0.81, conditional-resolution@0.78, accept-customer-refund@0.72, accept-company-full-payment@0.55, request-more-evidence@0.48, escalate@0.40, unresolved@0.35, external-adjudication@0.30",
+        "authority_required": "authority://lf/adjudicate",
+        "confidence": 0.7,
+        "expected_impact": "inform the human determination; never auto-execute",
+        "decision": "dispute://lf/delivery#determination",
+        "_machine_pick": "partial-settlement",
+        "_model_pick": "partial-settlement",
+        "_model": "phi4-mini:3.8b-q8_0"
+      },
+      "made_at": "2026-09-01T02:18:48Z"
+    },
+    {
+      "uri": "decision://lf/delivery-determination",
+      "by": "person://lf/manager",
+      "authority": "authority://lf/adjudicate",
+      "alternatives": [
+        "accept-customer-refund",
+        "accept-company-full-payment",
+        "partial-settlement",
+        "conditional-resolution",
+        "request-more-evidence",
+        "escalate",
+        "unresolved",
+        "external-adjudication"
+      ],
+      "rules_applied": [
+        "rule://lf/billing-refund",
+        "evidence://lf/third-party-verification"
+      ],
+      "confidence": 0.82,
+      "evidence": [
+        "evidence://lf/third-party-verification"
+      ],
+      "expected_outcome": "conditional-resolution",
+      "actual_outcome": "conditional-resolution",
+      "detail": {
+        "determination": "conditional-resolution",
+        "reason": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed",
+        "machine_pick": "partial-settlement",
+        "model_pick": "partial-settlement"
+      },
+      "made_at": "2026-09-01T02:18:48Z"
+    },
+    {
+      "uri": "evidence://lf/learning-note",
+      "kind": "RECORD",
+      "source": "post-resolution-postmortem",
+      "captured_at": "2026-09-01T02:18:48Z",
+      "verity": {
+        "procedure": "postmortem",
+        "confidence": 0.6
+      },
+      "reliability": 0.6,
+      "about": "what was learned",
+      "supports": null,
+      "learning": "conflicting timestamps must reach a determination via an authorised adjudicator + anchored third-party verification, not the single-source verifier"
+    },
+    {
+      "uri": "evidence://lf/clock-mis-set",
+      "kind": "ANCHORED",
+      "source": "internal-clock-audit",
+      "captured_at": "2026-09-01T02:18:48Z",
+      "verity": {
+        "procedure": "clock-drift-audit",
+        "confidence": 0.9
+      },
+      "reliability": 0.9,
+      "about": "verification clock drift",
+      "supports": null,
+      "drift_found": "9-min fast",
+      "reliability_note": "honest source error, not deception"
+    },
+    {
+      "uri": "decision://lf/delivery-determination-2",
+      "by": "person://lf/director",
+      "authority": "authority://lf/adjudicate-appeal",
+      "alternatives": [
+        "uphold",
+        "modify",
+        "reverse"
+      ],
+      "rules_applied": [
+        "evidence://lf/clock-mis-set",
+        "evidence://lf/arrival-receipt"
+      ],
+      "confidence": 0.9,
+      "evidence": [
+        "evidence://lf/clock-mis-set"
+      ],
+      "expected_outcome": "modify",
+      "actual_outcome": "modify",
+      "detail": {
+        "ruling": "prior determination reversed",
+        "granted": "$6,000 settlement credit to customer for SLA breach; balance due",
+        "supersedes": "decision://lf/delivery-determination"
+      },
+      "made_at": "2026-09-01T02:18:48Z"
+    },
+    {
+      "uri": "trust://lf/customer-on-delivery",
+      "subject": "org://lf/company",
+      "target": "org://lf/customer",
+      "claim": "honest dispute participant",
+      "context": "relationship://lf/customer-contract",
+      "score": 0.78,
+      "updated_at": "2026-09-01T02:18:48Z",
+      "evidence": [
+        "evidence://lf/arrival-receipt"
+      ],
+      "trust_impact": "unchanged",
+      "reason": "honest error, not deception"
+    },
+    {
+      "uri": "dispute://lf/threshold-dispute",
+      "about": "obligation://lf/deliver-due",
+      "parties": [
+        "org://lf/customer",
+        "org://lf/company"
+      ],
+      "status": "OPEN",
+      "lifecycle_state": "UNRESOLVED",
+      "epistemic_state": "INSUFFICIENT_EVIDENCE",
+      "determination": "UNRESOLVED",
+      "resolution_type": null,
+      "reopened": false,
+      "fin_impact_usd": 18000,
+      "conflict": {
+        "detected": true,
+        "uncertainty": true,
+        "note": "no independent admissible source exists to verify delivery liveness; neither side can be substantiated to the CLEAR standard"
+      },
+      "available_resolutions": [
+        "accept-customer-refund",
+        "accept-company-full-payment",
+        "request-more-evidence",
+        "escalate",
+        "unresolved"
+      ]
+    },
+    {
+      "uri": "decision://lf/unresolved",
+      "by": "person://lf/manager",
+      "authority": "authority://lf/adjudicate",
+      "alternatives": [
+        "accept-customer-refund",
+        "accept-company-full-payment",
+        "request-more-evidence",
+        "escalate",
+        "unresolved"
+      ],
+      "confidence": 0.6,
+      "expected_outcome": "resolve conflict",
+      "actual_outcome": "unresolved",
+      "detail": {
+        "determination": "UNRESOLVED",
+        "epistemic_state": "INSUFFICIENT_EVIDENCE",
+        "reason": "no admissible source verifies delivery liveness; awarding either side is not justified by the basis"
+      },
+      "made_at": "2026-09-01T02:18:48Z"
+    }
+  ]
+}

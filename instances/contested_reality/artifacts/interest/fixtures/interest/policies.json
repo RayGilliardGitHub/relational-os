@@ -1,0 +1,13 @@
+[
+  {
+    "uri": "policy://ic/remote",
+    "name": "remote-work-conditions",
+    "condition": "SLA coverage maintained AND staffing floor met AND no irreversible/unknown-cost action",
+    "decision": "remote-work PERMITTED under conditions",
+    "action": "remote-with-coverage-plan when on-site coverage can meet the SLA",
+    "scope": [
+      "relationship://ic/employment",
+      "relationship://ic/staffing-authority"
+    ]
+  }
+]

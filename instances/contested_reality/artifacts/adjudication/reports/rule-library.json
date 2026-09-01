@@ -1,0 +1,102 @@
+[
+  {
+    "label": "inspect-majority-lib",
+    "reconcile": {
+      "rule_spec": {
+        "name": "majority-of-sources",
+        "aggregate": "majority",
+        "value_field": "reliability",
+        "admissible_kinds": null,
+        "source_threshold": 0.92
+      },
+      "threshold": 0.92,
+      "support_floor": 0.55
+    },
+    "claim_support": {
+      "claim://inspect/passed": 0.5,
+      "claim://inspect/failed": 0.0
+    },
+    "conflict": false,
+    "uncertainty": true,
+    "determination": "UNRESOLVED"
+  },
+  {
+    "label": "deli-majority",
+    "reconcile": {
+      "rule_spec": {
+        "name": "majority-of-sources",
+        "aggregate": "majority",
+        "value_field": "reliability",
+        "admissible_kinds": null,
+        "source_threshold": 0.92
+      },
+      "threshold": 0.92,
+      "support_floor": 0.55
+    },
+    "claim_support": {
+      "claim://deli/late": 0.0,
+      "claim://deli/delivered": 1.0,
+      "claim://deli/shipped": 1.0
+    },
+    "conflict": true,
+    "uncertainty": false,
+    "determination": "partial-settlement"
+  },
+  {
+    "label": "inspect-corroboration",
+    "reconcile": {
+      "rule_spec": {
+        "name": "independent-corroboration",
+        "aggregate": "bayesian-combine",
+        "value_field": "reliability",
+        "admissible_kinds": null,
+        "prior": 0.6
+      },
+      "threshold": 0.98,
+      "support_floor": 0.55
+    },
+    "claim_support": {
+      "claim://inspect/passed": 0.9961,
+      "claim://inspect/failed": 0.931
+    },
+    "conflict": true,
+    "uncertainty": false,
+    "determination": "rework-partial-credit"
+  },
+  {
+    "label": "cove-corroboration",
+    "reconcile": {
+      "rule_spec": {
+        "name": "independent-corroboration",
+        "aggregate": "bayesian-combine",
+        "value_field": "reliability",
+        "admissible_kinds": null,
+        "prior": 0.6
+      },
+      "threshold": 0.9,
+      "support_floor": 0.55
+    },
+    "claim_support": {
+      "claim://cove/medically-necessary": 0.9167,
+      "claim://cove/off-formulary": 1.0
+    },
+    "conflict": true,
+    "uncertainty": false,
+    "determination": "step-therapy-first"
+  },
+  {
+    "label": "inspect-max098",
+    "reconcile": {
+      "rule": "best-reliability-threshold",
+      "threshold": 0.98,
+      "support_floor": 0.55
+    },
+    "claim_support": {
+      "claim://inspect/passed": 0.97,
+      "claim://inspect/failed": 0.9
+    },
+    "conflict": true,
+    "uncertainty": true,
+    "determination": "UNRESOLVED"
+  }
+]

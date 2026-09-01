@@ -1,0 +1,66 @@
+{
+  "company": "Meridian Health Plan",
+  "label": "cove",
+  "question": 7,
+  "dispute": "dispute://cove/coverage",
+  "lifecycle_state": "CLOSED",
+  "epistemic_state": "RESOLVED_DETERMINED",
+  "weights": {
+    "medical_necessity": 0.4,
+    "safety": 0.25,
+    "policy": 0.2,
+    "cost": 0.15
+  },
+  "ranking": [
+    {
+      "option": "step-therapy-first",
+      "utility": 0.7775,
+      "floor_gated": false
+    },
+    {
+      "option": "authorize-generic",
+      "utility": 0.74,
+      "floor_gated": false
+    },
+    {
+      "option": "escalate-to-medical-director",
+      "utility": 0.605,
+      "floor_gated": false
+    },
+    {
+      "option": "external-peer-review",
+      "utility": 0.56,
+      "floor_gated": false
+    },
+    {
+      "option": "request-more-evidence",
+      "utility": 0.54,
+      "floor_gated": false
+    },
+    {
+      "option": "unresolved",
+      "utility": 0.5,
+      "floor_gated": false
+    },
+    {
+      "option": "authorize-off-formulary",
+      "utility": 0.48,
+      "floor_gated": true
+    },
+    {
+      "option": "deny-off-formulary",
+      "utility": 0.28,
+      "floor_gated": true
+    }
+  ],
+  "machine_eligible_best": {
+    "option": "step-therapy-first",
+    "utility": 0.7775,
+    "floor_gated": false
+  },
+  "floor_gated": [
+    "authorize-off-formulary",
+    "deny-off-formulary"
+  ],
+  "determination": "step-therapy-first"
+}

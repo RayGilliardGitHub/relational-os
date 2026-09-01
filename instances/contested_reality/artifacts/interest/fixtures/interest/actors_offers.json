@@ -1,0 +1,42 @@
+[
+  {
+    "uri": "org://ic/customer",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://ic/company",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://ic/employee",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://ic/manager",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://ic/director",
+    "type": "PERSON"
+  },
+  {
+    "uri": "authority://ic/adjudicate-remote",
+    "holder": "person://ic/manager",
+    "grants": [
+      "determine_remote_arrangement"
+    ],
+    "roles": [
+      "adjudicator"
+    ]
+  },
+  {
+    "uri": "authority://ic/for-appeal",
+    "holder": "person://ic/director",
+    "grants": [
+      "adjudicate_appeal"
+    ],
+    "roles": [
+      "appeal-adjudicator"
+    ]
+  }
+]

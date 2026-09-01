@@ -1,0 +1,62 @@
+[
+  {
+    "uri": "relationship://lf/customer-contract",
+    "participants": [
+      "org://lf/customer",
+      "org://lf/company"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://lf/customer": [
+        "buyer"
+      ],
+      "org://lf/company": [
+        "provider"
+      ]
+    },
+    "interest": {
+      "party": "org://lf/customer",
+      "want": "pay only for delivered service",
+      "stakes": [
+        "$18,000 invoice accuracy",
+        "no charge for non-delivery"
+      ],
+      "legitimate": true
+    },
+    "purpose": "contracted service delivery with 16:00 deadline"
+  },
+  {
+    "uri": "relationship://lf/supplier-contract",
+    "participants": [
+      "org://lf/supplier",
+      "org://lf/company"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://lf/supplier": [
+        "shipper"
+      ],
+      "org://lf/company": [
+        "customer"
+      ]
+    },
+    "purpose": "supplier shipping for the delivery"
+  },
+  {
+    "uri": "relationship://lf/employment",
+    "participants": [
+      "person://lf/csr",
+      "org://lf/company"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "person://lf/csr": [
+        "csr"
+      ],
+      "org://lf/company": [
+        "employer"
+      ]
+    },
+    "purpose": "customer-service handling of the dispute"
+  }
+]

@@ -85,8 +85,15 @@ python3 build_all.py                      -> RESULT: ALL SECTORS PASS
 **What this MINIMAL experiment does NOT yet do (honest limits):**
 - **Interests/negotiation/constraint trade-offs** are still not modeled (the remote-work conflict's
   "employee vs manager interests under a shared SLA" remains out). This experiment resolves a
-  *contested fact*, not a *conflicting interest*.
+  *contested fact*, not a *conflicting interest*. **→ Addressed in Sprint 10:** the conflicting-
+  interest (remote-work, Scenario B) case is now runnable — see the companion
+  `docs/CONFLICTING-INTEREST-EXPERIMENT.md` (`run_interest_conflict_demo.py`), which models two
+  interest objects under a shared SLA/staffing/policy constraint, a defensible conditional
+  determination, the reachable UNRESOLVED outcome, and a first-class signed appeal re-adjudicated by
+  a higher authority.
 - **Appeal** is represented only as an existing-object attitude, not a full appeal workflow.
+  **→ Partly addressed in Sprint 10:** an appeal is now a signed, queryable, re-adjudicated step
+  (native `right://` type=APPEAL) in the conflicting-interest case.
 - **No autonomous agent** — the adjudicator is a human; a model could *recommend* but does not yet.
 - It is one dispute shape (contested delivery outcome), at reference scale, local.
 

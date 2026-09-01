@@ -1,0 +1,74 @@
+[
+  {
+    "uri": "org://inspect/buyer",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://inspect/company",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://inspect/supplier",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://inspect/registrar",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://inspect/adjudicator",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://inspect/appeal",
+    "type": "PERSON"
+  },
+  {
+    "uri": "system://inspect/verify",
+    "type": "SYSTEM"
+  },
+  {
+    "uri": "obligation://inspect/inspect-due",
+    "subject": "org://inspect/company",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "declare pass/fail on the batch by the acceptance deadline",
+    "due_by": "2026-10-15T00:00:00-06:00"
+  },
+  {
+    "uri": "obligation://inspect/accept-due",
+    "subject": "org://inspect/buyer",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "accept a conforming batch and pay upon acceptance",
+    "due_by": "2026-11-30T00:00:00-06:00"
+  },
+  {
+    "uri": "authority://inspect/adjudicate",
+    "holder": "person://inspect/adjudicator",
+    "grants": [
+      "adjudicate"
+    ],
+    "roles": [
+      "adjudicator"
+    ]
+  },
+  {
+    "uri": "authority://inspect/adjudicate-appeal",
+    "holder": "person://inspect/appeal",
+    "grants": [
+      "adjudicate_appeal"
+    ],
+    "roles": [
+      "appeal-adjudicator"
+    ]
+  },
+  {
+    "uri": "right://inspect/buyer-appeal",
+    "holder": "org://inspect/buyer",
+    "type": "APPEAL",
+    "subject": "DUPLICATE",
+    "scope": [
+      "obligation://inspect/inspect-due"
+    ],
+    "purpose": "right to appeal the determination"
+  }
+]

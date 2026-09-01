@@ -1,0 +1,65 @@
+{
+  "company": "Constellar Freight",
+  "label": "deli",
+  "question": 7,
+  "dispute": "dispute://deli/delivery",
+  "lifecycle_state": "CLOSED",
+  "epistemic_state": "RESOLVED_DETERMINED",
+  "weights": {
+    "evidence": 0.35,
+    "contractual": 0.3,
+    "relationship": 0.2,
+    "cost": 0.15
+  },
+  "ranking": [
+    {
+      "option": "partial-settlement",
+      "utility": 0.7275,
+      "floor_gated": false
+    },
+    {
+      "option": "conditional-resolution",
+      "utility": 0.665,
+      "floor_gated": false
+    },
+    {
+      "option": "accept-company-full-payment",
+      "utility": 0.62,
+      "floor_gated": false
+    },
+    {
+      "option": "request-more-evidence",
+      "utility": 0.435,
+      "floor_gated": false
+    },
+    {
+      "option": "unresolved",
+      "utility": 0.4,
+      "floor_gated": false
+    },
+    {
+      "option": "external-adjudication",
+      "utility": 0.385,
+      "floor_gated": false
+    },
+    {
+      "option": "escalate",
+      "utility": 0.38,
+      "floor_gated": false
+    },
+    {
+      "option": "accept-customer-refund",
+      "utility": 0.285,
+      "floor_gated": true
+    }
+  ],
+  "machine_eligible_best": {
+    "option": "partial-settlement",
+    "utility": 0.7275,
+    "floor_gated": false
+  },
+  "floor_gated": [
+    "accept-customer-refund"
+  ],
+  "determination": "partial-settlement"
+}

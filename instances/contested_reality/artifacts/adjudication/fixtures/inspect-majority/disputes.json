@@ -1,0 +1,44 @@
+[
+  {
+    "uri": "dispute://inspect/inspection",
+    "about": "obligation://inspect/inspect-due",
+    "parties": [
+      "org://inspect/buyer",
+      "org://inspect/company",
+      "org://inspect/supplier"
+    ],
+    "status": "OPEN",
+    "fin_impact_usd": 54000,
+    "deadline_ref": "QC acceptance decision within 10 business days",
+    "interest_blocks": {
+      "buyer": "take only a conforming batch; avoid a defective line",
+      "company": "protect its inspection reputation; bill only for passed work",
+      "supplier": "not blamed for a batch the inspection cleared"
+    },
+    "constraint_blocks": {
+      "irreversible": "rejecting/returning the whole batch is irreversible/unknown-cost -> \u00a76 floor; accepting an unproven defective line is an unknown-cost roll-out risk -> \u00a76 floor"
+    },
+    "lifecycle_state": "UNRESOLVED",
+    "epistemic_state": "INSUFFICIENT_EVIDENCE",
+    "determination": "UNRESOLVED",
+    "resolution_type": null,
+    "reopened": false,
+    "available_resolutions": [
+      "accept-batch",
+      "reject-batch-return",
+      "rework-partial-credit",
+      "conditional-accept-with-guarantee",
+      "request-more-evidence",
+      "escalate",
+      "unresolved"
+    ],
+    "conflict": {
+      "detected": false,
+      "uncertainty": true,
+      "claim_support": {
+        "claim://inspect/passed": 0.5,
+        "claim://inspect/failed": 0.0
+      }
+    }
+  }
+]

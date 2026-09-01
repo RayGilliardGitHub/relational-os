@@ -1,0 +1,129 @@
+[
+  {
+    "uri": "case://to/remote-conflict",
+    "subject": "employee remote-work request vs manager on-site coverage under the customer SLA",
+    "status": "RESOLVED",
+    "actors": [
+      "person://to/employee",
+      "person://to/manager",
+      "org://to/customer"
+    ],
+    "relationships": [
+      "relationship://to/employment",
+      "relationship://to/contract",
+      "relationship://to/staffing-authority"
+    ],
+    "owner": "person://to/manager",
+    "conflict": {
+      "interests": [
+        {
+          "party": "person://to/employee",
+          "want": "full-remote + use 12 leave days",
+          "stakes": "wellbeing + use of accrued unused leave",
+          "legitimate": true,
+          "within_policy": true
+        },
+        {
+          "party": "person://to/manager",
+          "want": "on-site coverage to meet SLA",
+          "stakes": "30-min customer-response SLA + staffing floor",
+          "legitimate": true,
+          "within_policy": true
+        }
+      ],
+      "constraint": {
+        "response_target_minutes": 30,
+        "coverage_floor_agents": 3,
+        "on_site_agents_now": 3,
+        "remote_policy": "policy://to/remote",
+        "sla_expectation": "expectation://to/sla",
+        "staff_total": 3,
+        "leave_days": 12,
+        "working_days": 5,
+        "plan_remote_days": 3,
+        "plan_leave_used": 2
+      },
+      "detected": true,
+      "mutually_exclusive": true,
+      "uncertainty": "coverage needs on remote days unverified initially; whether a coverage plan can meet the SLA is a judgment",
+      "negotiation_open": true
+    },
+    "resolution": "{'determination': 'remote-with-coverage-plan', 'determined_by': 'person://to/manager', 'utility': 0.76, 'rank': [{'option': 'remote-with-coverage-plan', 'utility': 0.76, 'floor_gated': False, 'sla': 1.0, 'emp': 0.6, 'mgr': 0.9, 'leave': 0.15, 'cost': 0.4}, {'option': 'side-manager', 'utility': 0.69, 'floor_gated': False, 'sla': 1.0, 'emp': 0.0, 'mgr': 1.0, 'leave': 0.0, 'cost': 0.9}, {'option': 'do-nothing', 'utility': 0.64, 'floor_gated': False, 'sla': 1.0, 'emp': 0.0, 'mgr': 0.8, 'leave': 0.0, 'cost': 0.7}, {'option': 'side-employee', 'utility': 0.34, 'floor_gated': False, 'sla': 0.0, 'emp': 1.0, 'mgr': 0.0, 'leave': 0.8, 'cost': 0.6}], 'covered_stake': {'emp': 'remote 3 days/wk + 2 leave days', 'mgr': 'on-site coverage meets SLA'}, 'conditions': ['on-site Tue/Thu', 'coverage floor met on customer-commitment days'], 'reason': \"machine-computed trade-off ranks remote-with-coverage-plan highest (utility 0.760) from the recorded constraint: a conditional coverage plan keeps on-site staffing at the 3-agent floor so the 30-min SLA holds, while remote Mon/Wed/Fri + 2 leave days satisfy the employee's legitimate, in-policy interest\"}",
+    "recommendation": {
+      "by": "person://to/manager",
+      "for": "case://to/remote-conflict",
+      "options": [
+        "remote-with-coverage-plan",
+        "side-manager",
+        "do-nothing",
+        "side-employee"
+      ],
+      "includes_do_nothing": true,
+      "tradeoff": "trade-off[permitted-conditional; sla\u226430min; floor 3/3 agents; leave 12d; coverage_known=True]\n  0.760  remote-with-coverage-plan  (sla=1.0 emp=0.6 mgr=0.9 leave=0.1 cost=0.4)\n  0.690  side-manager  (sla=1.0 emp=0.0 mgr=1.0 leave=0.0 cost=0.9)\n  0.640  do-nothing  (sla=1.0 emp=0.0 mgr=0.8 leave=0.0 cost=0.7)\n  0.340  side-employee  (sla=0.0 emp=1.0 mgr=0.0 leave=0.8 cost=0.6)\n  => machine-eligible best: remote-with-coverage-plan (all-change-gated: False)",
+      "authority_required": "authority://to/adjudicate-remote",
+      "confidence": 0.82,
+      "expected_impact": "human decisive: determination follows the computed rank when the top option is not floor-gated; else the human authorizes an explicit override or UNRESOLVED",
+      "decision": "case://to/remote-conflict#determination",
+      "json": "[{\"option\": \"remote-with-coverage-plan\", \"utility\": 0.76, \"floor_gated\": false, \"sla\": 1.0, \"emp\": 0.6, \"mgr\": 0.9, \"leave\": 0.15, \"cost\": 0.4}, {\"option\": \"side-manager\", \"utility\": 0.69, \"floor_gated\": false, \"sla\": 1.0, \"emp\": 0.0, \"mgr\": 1.0, \"leave\": 0.0, \"cost\": 0.9}, {\"option\": \"do-nothing\", \"utility\": 0.64, \"floor_gated\": false, \"sla\": 1.0, \"emp\": 0.0, \"mgr\": 0.8, \"leave\": 0.0, \"cost\": 0.7}, {\"option\": \"side-employee\", \"utility\": 0.34, \"floor_gated\": false, \"sla\": 0.0, \"emp\": 1.0, \"mgr\": 0.0, \"leave\": 0.8, \"cost\": 0.6}]",
+      "_model": "tradeoff_model:v0.1",
+      "_all_change_gated": false
+    },
+    "negotiation": {
+      "outcome": "remote-with-coverage-plan",
+      "by_whom": "person://to/manager",
+      "satisfies": {
+        "employee_interest": "remote 3 days/wk + 2 leave",
+        "manager_interest": "SLA + floor met"
+      }
+    }
+  },
+  {
+    "uri": "case://to/remote-uncertain",
+    "subject": "remote request where coverage data on proposed remote days is unavailable",
+    "status": "OPEN",
+    "actors": [
+      "person://to/employee",
+      "person://to/manager"
+    ],
+    "relationships": [
+      "relationship://to/employment",
+      "relationship://to/contract"
+    ],
+    "owner": "person://to/manager",
+    "conflict": {
+      "interests": [],
+      "constraint": {
+        "response_target_minutes": 30,
+        "coverage_floor_agents": 3,
+        "note": "remote-day staffing coverage NOT verifiable"
+      },
+      "detected": true,
+      "mutually_exclusive": true,
+      "uncertainty": "no source records on-site coverage on proposed remote days; neither side can be substantiated",
+      "negotiation_open": true
+    },
+    "resolution": "{'determination': 'UNRESOLVED', 'determined_by': 'person://to/manager', 'epistemic_state': 'INSUFFICIENT_EVIDENCE', 'tradeoff_gate': 'all staff-changing options floor-gated; machine-eligible best=do-nothing@$0.64 (do-nothing/UNRESOLVED)', 'reason': 'coverage on proposed remote days is unverified; the \u00a76 floor forbids any unknown-cost arrangement; a determination is not justified by the admissible basis'}",
+    "epistemic_state": "INSUFFICIENT_EVIDENCE",
+    "determination": "UNRESOLVED",
+    "determined_by": "person://to/manager",
+    "recommendation": {
+      "by": "person://to/manager",
+      "for": "case://to/remote-uncertain",
+      "options": [
+        "do-nothing",
+        "side-manager",
+        "side-employee",
+        "remote-with-coverage-plan"
+      ],
+      "includes_do_nothing": true,
+      "tradeoff": "trade-off[permitted-conditional; sla\u226430min; floor 3/3 agents; leave 12d; coverage_known=False]\n  0.640  do-nothing  (sla=1.0 emp=0.0 mgr=0.8 leave=0.0 cost=0.7)\n  0.490  side-manager FLOOR-GATED  (sla=1.0 emp=0.0 mgr=1.0 leave=0.0 cost=0.9)\n  0.140  side-employee FLOOR-GATED  (sla=0.0 emp=1.0 mgr=0.0 leave=0.8 cost=0.6)\n  0.005  remote-with-coverage-plan FLOOR-GATED  (sla=0.0 emp=0.6 mgr=0.2 leave=0.1 cost=0.4)\n  => machine-eligible best: do-nothing (all-change-gated: True)",
+      "authority_required": "authority://to/adjudicate-remote",
+      "confidence": 0.6,
+      "expected_impact": "human decisive: determination follows the computed rank when the top option is not floor-gated; else the human authorizes an explicit override or UNRESOLVED",
+      "decision": "case://to/remote-uncertain#determination",
+      "json": "[{\"option\": \"do-nothing\", \"utility\": 0.64, \"floor_gated\": false, \"sla\": 1.0, \"emp\": 0.0, \"mgr\": 0.8, \"leave\": 0.0, \"cost\": 0.7}, {\"option\": \"side-manager\", \"utility\": 0.49, \"floor_gated\": true, \"sla\": 1.0, \"emp\": 0.0, \"mgr\": 1.0, \"leave\": 0.0, \"cost\": 0.9}, {\"option\": \"side-employee\", \"utility\": 0.14, \"floor_gated\": true, \"sla\": 0.0, \"emp\": 1.0, \"mgr\": 0.0, \"leave\": 0.8, \"cost\": 0.6}, {\"option\": \"remote-with-coverage-plan\", \"utility\": 0.005, \"floor_gated\": true, \"sla\": 0.0, \"emp\": 0.6, \"mgr\": 0.2, \"leave\": 0.15, \"cost\": 0.4}]",
+      "_model": "tradeoff_model:v0.1",
+      "_all_change_gated": true
+    }
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "uri": "claim://lf/delivery-late",
+    "proposer": "org://lf/customer",
+    "statement": "the contracted service was NOT delivered on time: we signed receipt at 16:15, past the 16:00 deadline \u2014 we should not pay for late delivery.",
+    "evidence": [
+      "evidence://lf/arrival-receipt"
+    ],
+    "epistemic_status": "disputed",
+    "classification": "honest-error-or-valid"
+  },
+  {
+    "uri": "claim://lf/delivered",
+    "proposer": "org://lf/company",
+    "statement": "the contracted service WAS delivered and is payable: supplier shipped at 15:58; arrival sits within the 15-minute SLA grace of the 16:00 deadline.",
+    "evidence": [
+      "evidence://lf/supplier-shipping"
+    ],
+    "epistemic_status": "disputed",
+    "classification": "honest-error-or-valid"
+  },
+  {
+    "uri": "claim://lf/shipped-on-time",
+    "proposer": "org://lf/supplier",
+    "statement": "we shipped the consignment on time at 15:58.",
+    "evidence": [
+      "evidence://lf/supplier-shipping"
+    ],
+    "epistemic_status": "disputed"
+  }
+]

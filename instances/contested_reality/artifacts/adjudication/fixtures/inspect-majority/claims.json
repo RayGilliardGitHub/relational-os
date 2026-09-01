@@ -1,0 +1,21 @@
+[
+  {
+    "uri": "claim://inspect/passed",
+    "proposer": "org://inspect/company",
+    "statement": "the batch passed QC inspection; an automated machine pass signal and an independent process audit support acceptance.",
+    "evidence": [
+      "evidence://inspect/proof-system",
+      "evidence://inspect/proof-audit"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://inspect/failed",
+    "proposer": "org://inspect/buyer",
+    "statement": "the batch failed inspection; a resident inspector's signed finding records a defect, and accepting on stale audit records would be unsafe.",
+    "evidence": [
+      "evidence://inspect/fail-inspector"
+    ],
+    "epistemic_status": "disputed"
+  }
+]
