@@ -2,7 +2,7 @@
 
 This is a **working, validated instance of the RelationalOS platform for a company in the
 financial-sector family**, stood up by following the Sprint-6 documentation package
-(`sprints/sprint-6/artifacts/docs/`) — the manuals' own practice was used to build it. It
+(`archive/sprints/sprint-6/artifacts/docs/`) — the manuals' own practice was used to build it. It
 is real: constructed with the unmodified `ros/` package, its fixtures pass the Sprint-0
 conformance audits (C1–C5, exit 0), and it produces its own cockpit with the §7L ten morning
 questions answered with evidence.
@@ -42,7 +42,7 @@ and a gate on the laggard, a verified outcome (#10), and a learning-driven polic
 ## How to run it (the manuals' own procedures applied)
     cd /home/rlg/relational-os/instances/financial
     python3 run_fin.py                          # builds S1->S5 + BOL + cockpit; exit 0 = ALL PASS
-    /home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python run_fin_conformance.py  # C1-C5, exit 0
+    /home/rlg/relational-os/archive/sprints/sprint-0/artifacts/.venv/bin/python run_fin_conformance.py  # C1-C5, exit 0
     python3 bi_snapshot.py                      # BI projections from the emitted ledger
 
 Verified outputs (embedded in this run):
@@ -86,6 +86,6 @@ or the `ros/` code — this instance is pure new data + a new scene builder over
 platform.
 
 ## Cross-references
-- The manuals used: `sprints/sprint-6/artifacts/docs/02-setup.md`, `03-run.md`,
+- The manuals used: `archive/sprints/sprint-6/artifacts/docs/02-setup.md`, `03-run.md`,
   `04-audit.md`, `05-bi-reports.md`, `06-user-manual.md`.
-- Platform closing hand-off: `sprints/COMPLETE.md`; spec `SPEC.md` (v0.22).
+- Platform closing hand-off: `archive/sprints/COMPLETE.md`; spec `SPEC.md` (v0.22).

@@ -195,7 +195,7 @@ additively**: where the org records a numeric `capacity` AND a band + numeric th
 same condition that emits the Q9 reason), `cockpit_s7l` adds an additive **`capacity_constraint`**
 block on BOTH **`q7`** (the trade-off) and **`q8`** (next to `do_nothing_expected_impact`), as a
 **parallel block** — the frozen `rank`-owned `options`/`tradeoff` bytes are untouched (the prompt's
-preferred decision, documented in `sprints/sprint-27/plan.md`):
+preferred decision, documented in `archive/sprints/sprint-27/plan.md`):
 
 - `recorded_capacity` — the recorded capacity value/unit/load AS RECORDED (never invented);
 - `horizon_band` — the record-wide `band_horizon` {low, high} on the closure;
@@ -273,7 +273,7 @@ no new noun, `ros/` untouched.
 
 ## 13. Update after Sprint 29 — the capacity marker can now reach `capacity_infeasible` for a SPECIFIC option (from a RECORDED per-option requirement)
 
-Sprint 28's own finding (`sprints/sprint-28/notes/findings.md`, "Open issues / next work") was honest
+Sprint 28's own finding (`archive/sprints/sprint-28/notes/findings.md`, "Open issues / next work") was honest
 that the marker can label the whole `capacity_risk` but `capacity_infeasible` is **STRUCTURALLY
 UNREACHABLE**, because NO PER-OPTION capacity requirement is ever recorded — the engine compares the
 org-level recorded `load` / the horizon band's worst-side to the recorded capacity VALUE, so it can
@@ -335,7 +335,7 @@ v0.22, 49 `$defs`, `ros/` untouched.
 
 ## 14. Update after Sprint 30 — the marker is a REASON, never a CHOICE: the RECOMMENDED option made `capacity_infeasible`, yet the Q8 recommendation provably stays unchanged
 
-Sprint 29's own finding (`sprints/sprint-29/notes/findings.md`, "Open issues / next work") disclosed
+Sprint 29's own finding (`archive/sprints/sprint-29/notes/findings.md`, "Open issues / next work") disclosed
 the honest frontier the next sprint would face: **the marker still never CHOOSES a different option for
 the machine — the §6 human always does.** In every Sprint-29 org the machine-eligible best
 (`partial-settlement`) itself was `capacity_risk` (recorded requirement ≤ available), so the label-vs-
@@ -373,7 +373,7 @@ recommendation for the machine stays out of scope of the deterministic advisory 
 different option for the machine is a policy / user decision, not a label; and a per-option requirement
 that is NOT unit-coupled to the recorded capacity / an option with no recorded requirement remains
 non-derivable. No SPEC bump (v0.22). The optimization SEAM, if the prompt author ever wants it, is
-spelled out in `sprints/sprint-30/notes/findings.md`: recorded per-option requirements already exist; a
+spelled out in `archive/sprints/sprint-30/notes/findings.md`: recorded per-option requirements already exist; a
 deterministic next-best-non-infeasible rule by the frozen `rank` utility would be a deliberate
 "re-rank for the machine" capability, explicitly out of the advisory stance unless requested.
 

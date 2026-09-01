@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SPRINT0 = HERE.parents[1] / "schema"  # ../../sprints/sprint-0/artifacts
+SPRINT0 = HERE.parents[1] / "schema"  # ../../archive/sprints/sprint-0/artifacts
 sys.path.insert(0, str(SPRINT0))
 
 import conformance  # noqa: E402

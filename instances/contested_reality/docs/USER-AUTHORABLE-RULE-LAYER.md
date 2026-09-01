@@ -26,7 +26,7 @@ instances/contested_reality/docs/USER-AUTHORABLE-RULE-LAYER.md   this document
 Verified commands (from `instances/contested_reality/`, exit 0):
 - `python3 run_rule_comparison_demo.py` → `RESULT: ALL PASS`
 - `python3 run_adjudication_engine_demo.py` → `RESULT: ALL PASS` (deli/cove reproduce)
-- `/home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python conformance_adjudication.py`
+- `/home/rlg/relational-os/archive/sprints/sprint-0/artifacts/.venv/bin/python conformance_adjudication.py`
   → `ADJUDICATION-ENGINE CONFORMANCE: ALL PASS` (5 labels, C1–C5)
 
 ## The config-authorable boundary

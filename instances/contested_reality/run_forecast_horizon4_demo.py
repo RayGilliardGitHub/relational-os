@@ -1,7 +1,7 @@
 # === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_horizon4_demo.py — SPRINT 28: capacity_constraint proven at its LIMIT.
 
-Sprint 27's own finding (sprints/sprint-27/notes/findings.md, "Open issues / next work")
+Sprint 27's own finding (archive/sprints/sprint-27/notes/findings.md, "Open issues / next work")
 disclosed the honest frontier: the Q7/Q8 `capacity_constraint` marker is proven end-to-end ONLY in
 **headroom** (`deli-varmax-cap` -> `reason:"headroom", options_flagged:{}`); its at-capacity /
 deficit branches exist in the shared `_capacity_reason` helper but are NEVER exercised on a real

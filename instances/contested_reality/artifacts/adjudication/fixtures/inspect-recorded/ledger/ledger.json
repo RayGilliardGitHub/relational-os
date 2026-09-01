@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/adjudication-inspect-recorded-2026",
-  "head_hash": "ab5f3bed420d8da6f98c53ad1aef7d3f5ad365d4d12af46b69ae752eab170e1c",
+  "head_hash": "54bedb32ef7e2bab5768a0a1be82be9e4c9edc83d6a8ece91180ad17152d2882",
   "entries": [
     {
       "uri": "event://inspect-recorded/seed-trust",
@@ -10,7 +10,7 @@
       "causation_id": "ev-adj-inspect-recorded-seed-trust-prev",
       "idempotency_key": "idem-adj-inspect-recorded-seed-trust",
       "signature": "signed-by-person://inspect-recorded/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/registrar",
       "detail": "seed scoped trust before the episode",
       "state_update": [
@@ -24,7 +24,7 @@
           "evidence": []
         }
       ],
-      "hash": "f80b9b3a48c7aeff4bdbad051b6ffb2b6394e4aab88fafb8a41194f3c1bc4b21"
+      "hash": "ab648583936f7573343f83966ab2ed1fff306b7bdd9b5f3e83b813573f2d45c8"
     },
     {
       "uri": "event://inspect-recorded/provision",
@@ -34,7 +34,7 @@
       "causation_id": "ev-adj-prev-100",
       "idempotency_key": "idem-adj-provision-100",
       "signature": "signed-by-person://inspect-recorded/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/registrar",
       "detail": "provision actors, relationships, obligations, adjudicator+appeal authority, appeal right",
       "state_update": [
@@ -145,7 +145,7 @@
           "purpose": "right to appeal the determination"
         }
       ],
-      "hash": "42add9e3c395895e372f45c66fdd862b19fcc2387c1bd8b308194f4f862c80b8"
+      "hash": "c30b55ab14fe44dd26e9b483872309c847487c374cfb39482863dff7828b881f"
     },
     {
       "uri": "event://inspect-recorded/claims",
@@ -155,7 +155,7 @@
       "causation_id": "ev-adj-prev-101",
       "idempotency_key": "idem-adj-claims-101",
       "signature": "signed-by-person://inspect-recorded/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/registrar",
       "detail": "record 2 conflicting claims",
       "state_update": [
@@ -179,7 +179,7 @@
           "epistemic_status": "claimed"
         }
       ],
-      "hash": "48aed4e71e22116813adf40deb258e0bbead3af4b2a5080abc3e89e942f86f97"
+      "hash": "798c5e0360d97fd008443b6534f19b5d14cade6b991d1b3cbd73c9237bf1dead"
     },
     {
       "uri": "event://inspect-recorded/evidence",
@@ -189,7 +189,7 @@
       "causation_id": "ev-adj-prev-102",
       "idempotency_key": "idem-adj-evidence-102",
       "signature": "signed-by-person://inspect-recorded/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/registrar",
       "detail": "record conflicting evidence with provenance + reliability",
       "state_update": [
@@ -233,7 +233,7 @@
           "supports": "claim://inspect-recorded/failed"
         }
       ],
-      "hash": "aecde5b43aab2f505ef99433a539c6cf5ae29b11d2bc987cab0ecb470fbbb215"
+      "hash": "9ee64bfd7c2e4eb59b52539c9e666397ad8a6e9907d3fcb8efb53adb2c7f08bb"
     },
     {
       "uri": "event://inspect-recorded/claim-advance",
@@ -243,7 +243,7 @@
       "causation_id": "ev-adj-prev-103",
       "idempotency_key": "idem-adj-claim-advance-103",
       "signature": "signed-by-person://inspect-recorded/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/registrar",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -258,7 +258,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "b7184f7631d3787746434a0bc9aa06dc4647aa78e5958ceb143c9bd3d2935023"
+      "hash": "3ba5828a61c6048ab2f251d2337b4ec21d67dbba35e2182528ba6faaa1f8c384"
     },
     {
       "uri": "event://inspect-recorded/claim-advance",
@@ -268,7 +268,7 @@
       "causation_id": "ev-adj-prev-104",
       "idempotency_key": "idem-adj-claim-advance-104",
       "signature": "signed-by-person://inspect-recorded/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/registrar",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -282,7 +282,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "2591d2eb8b8b064f598bfb9207dfbb7c372533314e2b4b13b57aa46fe22ab56d"
+      "hash": "07572a30ac489fafd9a85165d72b11c058b9763ea15f2774ec4439ccc3a636c4"
     },
     {
       "uri": "event://inspect-recorded/open-dispute",
@@ -292,7 +292,7 @@
       "causation_id": "ev-adj-prev-105",
       "idempotency_key": "idem-adj-open-dispute-105",
       "signature": "signed-by-person://inspect-recorded/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/registrar",
       "detail": "dispute OPEN with parties/about + additive lifecycle/epistemic + resolutions",
       "state_update": [
@@ -339,7 +339,7 @@
           }
         }
       ],
-      "hash": "ba31c7ef31a2d9fa41a0c7c90130149677658c8056365642e1adec94e504e011"
+      "hash": "058d4649b2b0fc20c0802c5f4cd40aa5de7932dc3e69bb51c084b6753ceedd34"
     },
     {
       "uri": "event://inspect-recorded/lifecycle-advance",
@@ -349,7 +349,7 @@
       "causation_id": "ev-adj-prev-106",
       "idempotency_key": "idem-adj-lifecycle-advance-106",
       "signature": "signed-by-person://inspect-recorded/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/registrar",
       "detail": "conflicting evidence gathered -> EVIDENCE_COLLECTION -> CONTESTED",
       "state_update": [
@@ -438,7 +438,7 @@
           }
         }
       ],
-      "hash": "f1139b3974dcbb858a1687a3ec2c8c06a01680aaa8c052da55b7c81147fae15e"
+      "hash": "3d5473e0472eaf19fb42c7a236aa408ceae1a206488e852ec778603e2378c1ca"
     },
     {
       "uri": "event://inspect-recorded/agent-advisory",
@@ -448,7 +448,7 @@
       "causation_id": "ev-adj-prev-107",
       "idempotency_key": "idem-adj-agent-advisory-107",
       "signature": "signed-by-person://inspect-recorded/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/registrar",
       "detail": "AI/machine advisory on options (contained: informational only)",
       "state_update": [
@@ -513,10 +513,10 @@
             },
             "tradeoff": "trade-off[inspection; business-model {'evidence_compliance': 0.35, 'cost': 0.25, 'relationship': 0.2, 'schedule': 0.2}]\n  0.645  rework-partial-credit\n  0.610  conditional-accept-with-guarantee\n  0.515  accept-batch FLOOR-GATED\n  0.500  unresolved\n  0.465  request-more-evidence\n  0.410  escalate\n  0.070  reject-batch-return FLOOR-GATED\n  => machine-eligible best (non-gated): rework-partial-credit (gated: ['accept-batch', 'reject-batch-return'])"
           },
-          "made_at": "2026-09-01T06:22:47Z"
+          "made_at": "2026-09-01T06:27:57Z"
         }
       ],
-      "hash": "2ef6dfe43e88567cf2cab9a7b96ae64b68ea84edec4f8bf7e61bb79f172f74a0"
+      "hash": "707efa8b28c9634f86e5f40c0d5e0b2cb9982841ae7d95f5ebf674585c33bb8b"
     },
     {
       "uri": "event://inspect-recorded/adjudicate",
@@ -526,7 +526,7 @@
       "causation_id": "ev-adj-prev-108",
       "idempotency_key": "idem-adj-adjudicate-108",
       "signature": "signed-by-person://inspect-recorded/adjudicator",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/adjudicator",
       "detail": "authorized human determination: rework-partial-credit (ranking in view)",
       "state_update": [
@@ -555,7 +555,7 @@
             "determination": "rework-partial-credit",
             "machine_eligible_best": "rework-partial-credit"
           },
-          "made_at": "2026-09-01T06:22:47Z"
+          "made_at": "2026-09-01T06:27:57Z"
         },
         {
           "uri": "dispute://inspect-recorded/inspection",
@@ -600,7 +600,7 @@
           }
         }
       ],
-      "hash": "0f489ecd272aab97dba309c80bdcb170c6305229e512ef49ec9d346b78f4fab7"
+      "hash": "f31d369ccf779bc35188f9500da6d700e9c8638db51f85daed11dfd6c3485796"
     },
     {
       "uri": "event://inspect-recorded/resolution",
@@ -610,7 +610,7 @@
       "causation_id": "ev-adj-prev-109",
       "idempotency_key": "idem-adj-resolution-109",
       "signature": "signed-by-person://inspect-recorded/adjudicator",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/adjudicator",
       "detail": "resolution rework-partial-credit executed -> ACCEPTED -> EXECUTED",
       "state_update": [
@@ -742,7 +742,7 @@
           "resolution_outcome": "rework-partial-credit: the buyer keeps the batch pending corrective rework and a documented partial credit to the supplier; neither a full rejection nor blanket acceptance is auto-permitted (\u00a76 floor)"
         }
       ],
-      "hash": "4676392104d164798c99a30926410326250b370fb44757f7af8d449ce43ea271"
+      "hash": "46d935ab657296f75d5186da4e84617431dda8a6a899f6f2a769f4b743fc9b76"
     },
     {
       "uri": "event://inspect-recorded/verify",
@@ -752,7 +752,7 @@
       "causation_id": "ev-adj-prev-110",
       "idempotency_key": "idem-adj-verify-110",
       "signature": "signed-by-system://inspect-recorded/verify",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "system://inspect-recorded/verify",
       "detail": "outcome verification on completed execution -> VERIFIED -> CLOSED",
       "state_update": [
@@ -844,7 +844,7 @@
           "verified": true
         }
       ],
-      "hash": "02c7723b0595a3fa34e83d0d753f200c7659f6461b28fc3db508a0e90dd9907d"
+      "hash": "352139104da06c3d9e96d837382a73bac3683eb651f0d015fde170b88922eafe"
     },
     {
       "uri": "event://inspect-recorded/learn",
@@ -854,7 +854,7 @@
       "causation_id": "ev-adj-prev-111",
       "idempotency_key": "idem-adj-learn-111",
       "signature": "signed-by-person://inspect-recorded/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/registrar",
       "detail": "organizational learning: recorded",
       "state_update": [
@@ -862,7 +862,7 @@
           "uri": "evidence://inspect-recorded/learning-note",
           "kind": "RECORD",
           "source": "post-resolution-postmortem",
-          "captured_at": "2026-09-01T06:22:47Z",
+          "captured_at": "2026-09-01T06:27:57Z",
           "verity": {
             "procedure": "postmortem",
             "confidence": 0.6
@@ -873,7 +873,7 @@
           "learning": "reliability alone is ambiguous here (fails only if the reconciliation rule admits the resident testimony vs demands anchored-only vs recency-decays the old audit); the adjudicator must state which rule the determination is reached under"
         }
       ],
-      "hash": "7ab980e59bdba9a2352f6dad37498a1a1d434dac73c64de5d406de1bd2aa8aba"
+      "hash": "94a41bbcfe4735b2170647ded21601ad3081da3804a44d6be1eec9e26b5963f0"
     },
     {
       "uri": "event://inspect-recorded/record-metric-series",
@@ -883,7 +883,7 @@
       "causation_id": "ev-adj-inspect-recorded-record-metric-series-prev",
       "idempotency_key": "idem-adj-inspect-recorded-record-metric-series",
       "signature": "signed-by-person://inspect-recorded/adjudicator",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/adjudicator",
       "detail": "record a realized-vs-expected metric series additively on the org's ledger so the \u00a77L Q6 can project from recorded data",
       "state_update": [
@@ -931,7 +931,7 @@
           "band_variance": "all"
         }
       ],
-      "hash": "024560fc4631074530dfdb315d587a4b815985efaca4a96e85f1fe1ccf8e3131"
+      "hash": "2205ab553e9cd3edc448cf7e3a2c235e3f9a1b9fb829b1d56e1f325d4eb5fca3"
     },
     {
       "uri": "event://inspect-recorded/record-capacity",
@@ -941,7 +941,7 @@
       "causation_id": "ev-adj-inspect-recorded-record-capacity-prev",
       "idempotency_key": "idem-adj-inspect-recorded-record-capacity",
       "signature": "signed-by-person://inspect-recorded/adjudicator",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/adjudicator",
       "detail": "record the authority's additive capacity field so the \u00a77L Q9 can report it as data",
       "state_update": [
@@ -962,7 +962,7 @@
           }
         }
       ],
-      "hash": "e7dacc55dafd70450e10ec5e23c871356e775cd4a1ace4fd51be5f873544468a"
+      "hash": "7a37bc4c40d393f6cdec90bc669d85d140342f8b6ba603dd5046ba483c44178e"
     },
     {
       "uri": "event://inspect-recorded/record-capacity-requirements",
@@ -972,7 +972,7 @@
       "causation_id": "ev-adj-inspect-recorded-record-capacity-requirements-prev",
       "idempotency_key": "idem-adj-inspect-recorded-record-capacity-requirements",
       "signature": "signed-by-person://inspect-recorded/adjudicator",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://inspect-recorded/adjudicator",
       "detail": "record the authority's additive per-option capacity requirements so the Q7/Q8 capacity_constraint can label a specific option capacity_infeasible vs capacity_risk from recorded numbers only",
       "state_update": [
@@ -1001,7 +1001,7 @@
           }
         }
       ],
-      "hash": "ab5f3bed420d8da6f98c53ad1aef7d3f5ad365d4d12af46b69ae752eab170e1c"
+      "hash": "54bedb32ef7e2bab5768a0a1be82be9e4c9edc83d6a8ece91180ad17152d2882"
     }
   ]
 }

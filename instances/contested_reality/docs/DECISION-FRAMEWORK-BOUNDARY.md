@@ -18,9 +18,9 @@ noun, frozen 49 `$defs`, schema `34264934…`, SPEC v0.22.
     per_option_capacity,variance,variance_all}_demo.py && python3 run_cockpit_{q7q8,s7l}_demo.py && python3
     run_adjudication_engine_demo.py` (all 18 exit 0 = ALL PASS).
   - All 5 CR conformances: `python3 conformance_{adjudication,dispute,interest,lifecycle,tradeoff}.py` with
-    the Sprint-0 venv `/home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python`.
+    the Sprint-0 venv `/home/rlg/relational-os/archive/sprints/sprint-0/artifacts/.venv/bin/python`.
   - Sectors + reference: `cd instances && python3 build_all.py && <venv> conformance_all.py`;
-    `cd sprints/sprint-5/artifacts && python3 run_s5_demo.py && <venv> run_s5_conformance.py`;
+    `cd archive/sprints/sprint-5/artifacts && python3 run_s5_demo.py && <venv> run_s5_conformance.py`;
     `cd instances/agent_demo && python3 run_agent_demo.py && <venv> conformance_agent.py`.
 - **The two-path demo** (13-org set, Sprint 33): `cd instances/contested_reality && python3 run_two_path_demo.py`.
 - **The whole-catalog audit** (22 orgs, Sprint 34): `cd instances/contested_reality && python3

@@ -17,10 +17,10 @@ evidence/demo/test tooling that drives it. This README is the boundary marker.
 - `conformance_{adjudication,dispute,interest,lifecycle,tradeoff}.py` — the C1–C5 validation gates.
 
 ## Depends on
-The canonical `ros/` package at the repo ROOT (promoted from `sprints/sprint-5/artifacts/ros/` by the
+The canonical `ros/` package at the repo ROOT (promoted from `archive/sprints/sprint-5/artifacts/ros/` by the
 reorg; byte-identical). Runners resolve `ros` from the repo root.
 
 ## Reproducibility note (this whole surface is deterministic local Python, ~$0)
 The one-framework two-path decision surface over the 22-org catalog is re-verified by
 `run_reproducibility_demo.py` + `run_corpus_consistency_demo.py`; the series ended at Sprint 36
-(`sprints/sprint-36/COMPLETE.md`). See `docs/` for the engine documents.
+(`archive/sprints/sprint-36/COMPLETE.md`). See `docs/` for the engine documents.

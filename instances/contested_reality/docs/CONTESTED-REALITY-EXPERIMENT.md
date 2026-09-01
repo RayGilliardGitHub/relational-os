@@ -63,7 +63,7 @@ python3 run_dispute_demo.py               -> RESULT: ALL PASS        (7 assertio
 <venv>/python conformance_dispute.py      -> DISPUTE-DEMO CONFORMANCE: ALL PASS  (C1–C5, 14 instances)
 
 # non-regression
-cd /home/rlg/relational-os/sprints/sprint-5/artifacts
+cd /home/rlg/relational-os/archive/sprints/sprint-5/artifacts
 python3 run_s5_demo.py                    -> RESULT: ALL PASS
 <venv>/python run_s5_conformance.py       -> RESULT: ALL PASS
 cd /home/rlg/relational-os/instances

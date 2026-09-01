@@ -66,7 +66,7 @@ The reference build (§1) is `run_s5_demo.py`. The rest of the runnable surface 
 run from the repo root or their own dir. The single green gate that runs all of them is
 `python3 tests/run_checks.py` (41 checks, exit 0 = ALL PASS), or the quick gate
 `bash scripts/verify.sh`. Historical per-service `run_sN_demo.py` runners from the build-up are
-kept under `sprints/` as narrative only — the system's run surface is the reference build +
+kept under `archive/sprints/` as narrative only — the system's run surface is the reference build +
 `instances/`.
 
 ## 3. Conformance (the validator over every fixture generation)

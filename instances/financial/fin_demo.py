@@ -20,7 +20,7 @@ is a decision:// + a policy:// change. The reference S4/S5 services emit 'qk' in
 labels (a build artifact, harmless: conformance governs by scheme) — disclosed in README.
 
 This module reuses the UNMODIFIED canonical ros package (now at the repo ROOT, promoted by the
-reorg from its origin sprints/sprint-5/artifacts/ros) via sys.path.
+reorg from its origin archive/sprints/sprint-5/artifacts/ros) via sys.path.
 """
 from __future__ import annotations
 from pathlib import Path

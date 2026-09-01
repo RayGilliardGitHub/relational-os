@@ -1,5 +1,5 @@
 # Constellar Freight — §7L cockpit question 7 (configured adjudication episode)
-generated 2026-09-01T06:22:46Z  |  ledger events 24  graph objects 32  |  label `deli`
+generated 2026-09-01T06:27:56Z  |  ledger events 24  graph objects 32  |  label `deli`
 
 ## 7. WHAT ARE OUR OPTIONS?  (options incl. do-nothing + trade-off — §7K.1)
 - dispute: `dispute://deli/delivery`  status **RESOLVED**  lifecycle **CLOSED**  epistemic **RESOLVED_DETERMINED**

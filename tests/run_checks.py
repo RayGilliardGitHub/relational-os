@@ -11,7 +11,7 @@ Usage:  python3 tests/run_checks.py        (from the repo root)   → exit 0 = A
 
 Steps (the documented green gate):
   1.  canonical `ros/` package imports from the repo root;
-  2.  canonical `ros/` is FLAT byte-identical to sprints/sprint-5/artifacts/ros/;
+  2.  canonical `ros/` is FLAT byte-identical to archive/sprints/sprint-5/artifacts/ros/;
   3.  frozen invariants: schema 34264934…(yaml)/7fc38c8c(json), 49 $defs, SPEC v0.22,
       engine a60f8f7…, capacity_rerank.py f7c6a185…;
   4.  daily cockpit (S1-S5 + BOL): reference/ python3 run_s5_demo.py;
@@ -74,9 +74,9 @@ def main() -> int:
                          str(ROOT)], capture_output=True, text=True).returncode == 0
     _report("canonical `ros/` package imports from the repo root", ok)
     # ros byte-identity vs sprint-5 canonical
-    same = all(_sha8(f) == _sha8(ROOT / "sprints/sprint-5/artifacts/ros" / f.name)
+    same = all(_sha8(f) == _sha8(ROOT / "archive/sprints/sprint-5/artifacts/ros" / f.name)
                for f in (ROOT / "ros").glob("*.py"))
-    _report("canonical `ros/` FLAT byte-identical to sprints/sprint-5/artifacts/ros/", same)
+    _report("canonical `ros/` FLAT byte-identical to archive/sprints/sprint-5/artifacts/ros/", same)
     # frozen invariants
     yaml_h = _sha8(ROOT / "schema/relational-os.schema.yaml")
     json_h = _sha8(ROOT / "schema/relational-os.schema.json")

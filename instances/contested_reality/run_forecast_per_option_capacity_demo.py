@@ -2,7 +2,7 @@
 """run_forecast_per_option_capacity_demo.py — SPRINT 29: per-option capacity_infeasible.
 
 Sprint 28 proved the Q7/Q8 `capacity_constraint` marker at its LIMIT — at-capacity (`deli-atcap`)
-and deficit (`deli-deficit`) — but its own finding (`sprints/sprint-28/notes/findings.md`) disclosed
+and deficit (`deli-deficit`) — but its own finding (`archive/sprints/sprint-28/notes/findings.md`) disclosed
 the next honest frontier: **the marker can label the whole `capacity_risk`, but `capacity_infeasible`
 is STRUCTURALLY UNREACHABLE because NO PER-OPTION capacity requirement is ever recorded** — the
 engine compares the org-level recorded `load` and the horizon band's worst-side to the recorded

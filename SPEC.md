@@ -877,7 +877,7 @@ added only after this proves out.
 > platform chain is fully built and verified (Sprints 0–5). The §7L Business Indispensability
 > Test is answered with evidence for one fictional company (Quoteko): health + prioritized
 > attention in the cockpit, #8 becomes assigned authorized Task work, and #9/#10 are satisfied
-> in a verified, learned outcome. See `sprints/sprint-5/` and `sprints/COMPLETE.md`.
+> in a verified, learned outcome. See `archive/sprints/sprint-5/` and `archive/sprints/COMPLETE.md`.
 
 **Honest constraints:** near-term fully-autonomous white-collar work is mostly
 augmentation + redeploy-to-oversight, not wholesale replacement. The design embraces
@@ -945,7 +945,7 @@ so nothing is deferred silently:
    addressing, and signature/verification model.
 3. Conformance validator; the 20 interactions of Appendix E become **executable
    fixtures**, not prose.
-4. EBNF grammar for the lifecycle. **Shipped:** `sprints/sprint-0/artifacts/schema/relational-os-lifecycle.ebnf`
+4. EBNF grammar for the lifecycle. **Shipped:** `schema/relational-os-lifecycle.ebnf`
    (relationship/interaction/event/state spine, Relationship + Case state machines,
    the five §7J nouns, derived-exception/priority chains, RFC-3339 temporal, typed-URI
    grammar). The JSON Schema remains the normative type contract; the EBNF is its
@@ -2009,7 +2009,7 @@ Answers the "no machine-checkable definitions" gap (Grok §1). Sprint 0 will exp
 this into the normative schema; this is the seed others can already build against.
 > **v0.17 note:** the normative schema is now shipped and supersedes this seed — every
 > §3 primitive + §7J/§7K object is machine-validatable in
-> `sprints/sprint-0/artifacts/schema/relational-os.schema.yaml` (with `.json` build and a
+> `schema/relational-os.schema.yaml` (with `.json` build and a
 > passing conformance validator + fixtures). This appendix remains the human-readable seed;
 > the machine contract is the artifact.
 
@@ -2452,7 +2452,7 @@ boring, well-documented, widely-hired technologies that run identically on-prem
   3; §7H.6 seeded filing calendar (federal + NM + ABQ) — from survey 2; Appendix G.17
   default resilient ingest set (GDELT + SEC EDGAR + RSS; licensed news/social deferred to
   Phase-B) — from survey 1. URI cap and frozen ontology unchanged (no new nouns). The
-  four gating surveys (§8) are DONE with cited DoDs in `sprints/sprint-0/artifacts/surveys/`.
+  four gating surveys (§8) are DONE with cited DoDs in `archive/sprints/sprint-0/artifacts/surveys/`.
 - **v0.18** — **Sprint 1 (S1 substrate + S2 Intent/Matching) build findings.** Built and
   VERIFIED the S1→S2 loop on the shared Ledger + Graph for one role (customer) and one
   domain (Quoteko quoting/triage): a runnable Python service implementing
@@ -2468,7 +2468,7 @@ boring, well-documented, widely-hired technologies that run identically on-prem
   v0.17, unchanged. Genuine finding F6 added a single normative clarification to §3.4
   (delegation/consent `scope` = URI refs to `rule://`/`permission://`, never bare
   strings; revocation voids the capability). Artifacts under
-  `sprints/sprint-1/artifacts/`; findings under `sprints/sprint-1/notes/findings.md`.
+  `archive/sprints/sprint-1/artifacts/`; findings under `archive/sprints/sprint-1/notes/findings.md`.
 - **v0.19** — **Sprint 2 (Trust engine minimum) build findings.** Built and VERIFIED
   the S5 loop on the Sprint-1 Quoteko scene: `capture(outcome, provenance)→evidence://`,
   `verify(evidence, statement)→{claim, degree, procedure}` per §3.17,
@@ -2485,8 +2485,8 @@ boring, well-documented, widely-hired technologies that run identically on-prem
   ontology respected** — no new nouns or URI schemes; schema artifacts unchanged.
   Genuine finding F3 added a single normative clarification to §5 (persisted `trust://`
   carries its update inputs as additive envelope fields for auditability;
-  `Trust.evidence` is an array). Artifacts under `sprints/sprint-2/artifacts/`;
-  findings under `sprints/sprint-2/notes/findings.md`.
+  `Trust.evidence` is an array). Artifacts under `archive/sprints/sprint-2/artifacts/`;
+  findings under `archive/sprints/sprint-2/notes/findings.md`.
 - **v0.20** — **Sprint 3 (Orchestration S3 + human floor) build findings.** Built and
   VERIFIED the S3 Orchestration & Execution service on the Sprint-2 Quoteko state:
   `commit(offer, terms, authority)→commitment://` (§5 `commitment=agree(offer, terms)`),
@@ -2510,8 +2510,8 @@ boring, well-documented, widely-hired technologies that run identically on-prem
   floor overrides the seam tier, with the capability `seam_tier` and the governing
   executable `tier` kept distinct for audit; F4: escalation compliance is auditable
   from the signed append-only Ledger event ORDER — the irreversible ACTION must follow
-  the approver's signed DECISION). Artifacts under `sprints/sprint-3/artifacts/`;
-  findings under `sprints/sprint-3/notes/findings.md`.
+  the approver's signed DECISION). Artifacts under `archive/sprints/sprint-3/artifacts/`;
+  findings under `archive/sprints/sprint-3/notes/findings.md`.
 - **v0.21** — **Sprint 4 (Exchange & Settlement S4 + multi-role / multi-org extension)
   build findings.** Built and VERIFIED Settlement on the Sprint-3 loop end-state and extended
   the chain from customer to employee roles and from private to charitable orgs. `settle()`
@@ -2536,7 +2536,7 @@ boring, well-documented, widely-hired technologies that run identically on-prem
   (settlement artifacts ride the signed EXCHANGE event's embedded state — F2), §3.2
   (role-qualified context is a query param on the same relationship scheme — F3), §3.14
   (distinct role-scoped Trust values coexist on the same relationship). Artifacts under
-  `sprints/sprint-4/artifacts/`; findings under `sprints/sprint-4/notes/findings.md`.
+  `archive/sprints/sprint-4/artifacts/`; findings under `archive/sprints/sprint-4/notes/findings.md`.
 - **v0.22** — **Sprint 5 (Business Operating Layer — the product) build findings.** Built and
   VERIFIED the operating layer on the Sprint-4 S1→S5 state for Quoteko: a Case-led loop
   (`case://` OPEN→TRIAGE→ASSIGNED→IN_PROGRESS→BLOCKED→RESOLVED→CLOSED with signed evidence per
@@ -2564,10 +2564,10 @@ boring, well-documented, widely-hired technologies that run identically on-prem
   signing — F2), §7J.5/§C16 (derived values carried as additive fields; no `capacity://
   priority:// exception:// recommendation://` scheme; capacity is Q9's additive
   `assigned_capacity` — F1/F6), §8 Sprint 5 marked COMPLETE (S1→S5 chain done; §7L
-  answerable for one company — F4). Artifacts under `sprints/sprint-5/artifacts/`; findings
-  under `sprints/sprint-5/notes/findings.md`.
+  answerable for one company — F4). Artifacts under `archive/sprints/sprint-5/artifacts/`; findings
+  under `archive/sprints/sprint-5/notes/findings.md`.
 - **Gap-closure (post-review, v0.22):** added the §7D-A4 **EBNF lifecycle grammar**
-  (`sprints/sprint-0/artifacts/schema/relational-os-lifecycle.ebnf`) that the delivery
+  (`schema/relational-os-lifecycle.ebnf`) that the delivery
   audit flagged as the one outstanding literal contract item. No schema/ontology/URI
   change; the JSON Schema stays the normative type contract.
 - **Post-close code hardening (v0.22, multi-sector dogfood):** provisioning instances for

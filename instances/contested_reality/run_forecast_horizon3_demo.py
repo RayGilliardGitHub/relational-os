@@ -1,7 +1,7 @@
 # === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_horizon3_demo.py — SPRINT 27: recorded-capacity CONSTRAINT on the Q7/Q8 trade-off.
 
-Sprint 26 disclosed the next honest frontier (sprints/sprint-26/notes/findings.md, "Open issues /
+Sprint 26 disclosed the next honest frontier (archive/sprints/sprint-26/notes/findings.md, "Open issues /
 next work"): **the Q9 `capacity_planning_attention` is a derived, labeled REASON, but it does NOT
 connect to the §7L Q7/Q8 trade-off — an org that records a capacity deficit / at-capacity reason
 still sees the SAME machine-eligible options and the SAME Q8 recommendation as if its capacity were

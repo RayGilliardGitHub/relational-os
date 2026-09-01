@@ -1,6 +1,6 @@
 # Sprint 17 — Decision Learning at the reconciliation layer (the learned rule, honest + additive)
 
-generated 2026-09-01T06:22:47Z  |  learned rule library entry `calibrated-threshold-091`  |  SPEC v0.22, 49 $defs, URI cap
+generated 2026-09-01T06:27:57Z  |  learned rule library entry `calibrated-threshold-091`  |  SPEC v0.22, 49 $defs, URI cap
 
 The §7K.1 loop `Decision->Expected->Actual->Variance->WHY->change-future-policy` is applied to the reconcile **threshold**. It learns the RULE's parameter from a recorded, realized outcome — it does NOT learn the answer to any case. **Contained**: Trust is never touched (S5 only), `determination_policy` (the §6 human's call) is never edited, the ledger is append-only (a NEW `rule://` + `decision://` + one signed event), and the update is rebound from an explicit `[lo, hi]` + explicit prior threshold (never the wall-clock).
 

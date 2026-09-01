@@ -29,7 +29,7 @@ Verified commands (from `instances/contested_reality/`, exit 0):
 - `python3 run_rule_library_demo.py` → `RESULT: ALL PASS`
 - `python3 run_rule_authoring_demo.py` / `run_rule_comparison_demo.py` / `run_adjudication_engine_demo.py`
   → `RESULT: ALL PASS` (unchanged, deli/cove byte-identical)
-- `/home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python conformance_adjudication.py`
+- `/home/rlg/relational-os/archive/sprints/sprint-0/artifacts/.venv/bin/python conformance_adjudication.py`
   → `ADJUDICATION-ENGINE CONFORMANCE: ALL PASS` (13 labels, C1–C5, 49 `$defs`)
 - Full non-regression (sectors build_all + conformance_all; S5 reference; agent demo+conformance;
   the four prior contested-reality demos + conformances) → all exit 0.

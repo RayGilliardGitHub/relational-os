@@ -1,7 +1,7 @@
 # === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_horizon2_demo.py — SPRINT 26: Q3-attention horizon-wide suffix + Q9 capacity-planning.
 
-Sprint 25 disclosed its own next honest frontier (sprints/sprint-25/notes/findings.md, "Open
+Sprint 25 disclosed its own next honest frontier (archive/sprints/sprint-25/notes/findings.md, "Open
 issues / next work"): **`band_horizon`/`band_periods` are surfaced on Q6/Q8/do-nothing, but the Q3
 forecast-driven attention item's `why` still names only the single worst point + single-worst band,
 and the Q9 `band_capacity_attention` is a FLAG that does not drive any recorded capacity-planning

@@ -108,7 +108,7 @@ sectors from a config (`configs.py`), rather than a bespoke scene per sector.
 - `<label>/artifacts/…` — each sector's fixtures, graph, ledger, and cockpit report.
 
 Cross-references: manuals `docs/`; spec `SPEC.md` (v0.22);
-platform hand-off `sprints/COMPLETE.md`.
+platform hand-off `archive/sprints/COMPLETE.md`.
 
 ## Contested-reality / conflicting-interest extension (Sprints 9–10)
 
@@ -226,7 +226,7 @@ v1 under `financial/`); `conformance_all.py` → ALL SECTORS PASS (C1–C5 per s
 `financial/run_fin.py` + `run_fin_conformance.py` → ALL PASS; `financial/bi_snapshot.py`
 prints the brand label line. Sector cockpit headers now read e.g.
 `# Valiant Aero — Subsystems on the line, on the date.` and each cockpit + branding.md
-carries the brand. Self-contained build prompt: `sprints/sprint-7/PROMPT.md`.
+carries the brand. Self-contained build prompt: `archive/sprints/sprint-7/PROMPT.md`.
 ---
 
 ## Sprint 15 — user-authorable RULE-authoring DSL (contested_reality)
@@ -812,7 +812,7 @@ Full write-up: the Sprint-31 section in `contested_reality/docs/ENGINE-FORECAST-
 
 Full write-up: the Sprint-32 section in `contested_reality/docs/ENGINE-FORECAST-CAPACITY.md` (§16) +
 `contested_reality/docs/ENGINE-S7L-COCKPIT.md` (§14) + the engine-native report
-`contested_reality/artifacts/adjudication/reports/capacity-rerank.md` + `sprints/sprint-32/summary.md`.
+`contested_reality/artifacts/adjudication/reports/capacity-rerank.md` + `archive/sprints/sprint-32/summary.md`.
 
 ### Sprint 33 — the now-TWO-path decision surface consolidated as ONE coherent recorded-data framework (reason-not-choice ADVISORY + POLICY-authorized capacity-constrained RE-RANK, proven to compose; engine AND `capacity_rerank.py` both untouched)
 - **Build** (`run_two_path_demo.py`, NEW survey/audit runner, exit 0 = ALL PASS; **`adjudication_engine.py`
@@ -842,7 +842,7 @@ Full write-up: the Sprint-32 section in `contested_reality/docs/ENGINE-FORECAST-
   fixture dirs.
 - Write-up: `contested_reality/docs/ENGINE-FORECAST-CAPACITY.md` (§17) +
   `contested_reality/docs/ENGINE-S7L-COCKPIT.md` (§15) + the consolidated report
-  `contested_reality/artifacts/adjudication/reports/two-path.md` + `sprints/sprint-33/summary.md`.
+  `contested_reality/artifacts/adjudication/reports/two-path.md` + `archive/sprints/sprint-33/summary.md`.
 
 ### Sprint 34 — CONSOLIDATION-AUDIT of the two-path decision surface over the ENTIRE ORG CATALOG (a pure, engine-free audit; `adjudication_engine.py` AND `capacity_rerank.py` BYTE-IDENTICAL)
 - **Build** (`run_two_path_catalog_demo.py`, NEW survey/audit runner, exit 0 = ALL PASS; **engine `a60f8f7…`
@@ -872,7 +872,7 @@ Full write-up: the Sprint-32 section in `contested_reality/docs/ENGINE-FORECAST-
   conformances + build_all + conformance_all + S5 ref + agent); no new fixture dirs.
 - Write-up: `contested_reality/docs/DECISION-FRAMEWORK-BOUNDARY.md` (cheat-sheet) + ENGINE-FORECAST-CAPACITY.md
   (§18) + the report `contested_reality/artifacts/adjudication/reports/two-path-catalog.md` +
-  `sprints/sprint-34/summary.md`.
+  `archive/sprints/sprint-34/summary.md`.
 
 ### Sprint 35 — REPRODUCIBILITY-AUDIT: the "deterministic local Python, ~$0, real tool output" claim, VERIFIED on this host across the WHOLE corpus (a pure, engine-free audit; `adjudication_engine.py` AND `capacity_rerank.py` BYTE-IDENTICAL)
 - **Build** (`run_reproducibility_demo.py`, NEW survey/audit runner, exit 0 = ALL PASS; **engine `a60f8f7…` AND
@@ -899,7 +899,7 @@ Full write-up: the Sprint-32 section in `contested_reality/docs/ENGINE-FORECAST-
   / an option with no recorded requirement — never invented; any §6-human choice recorded data cannot machine-
   decide). Full non-regression green (19 CR demos incl. the new one + 5 conformances + build_all +
   conformance_all + S5 ref + agent), engine + `capacity_rerank.py` raw sha256 unchanged AFTER.
-- Write-up: `sprints/sprint-35/reproducibility.md` (host + determinism + build results) + `sprints/sprint-35/
+- Write-up: `archive/sprints/sprint-35/reproducibility.md` (host + determinism + build results) + `archive/sprints/sprint-35/
   summary.md` + `notes/findings.md` + the report `contested_reality/artifacts/adjudication/reports/
   reproducibility.md`.
 
@@ -925,5 +925,5 @@ Full write-up: the Sprint-32 section in `contested_reality/docs/ENGINE-FORECAST-
   / an option with no recorded requirement — never invented; any §6-human choice recorded data cannot
   machine-decide). Full non-regression green (20 CR demos incl. the new one + 5 conformances + build_all +
   conformance_all + S5 ref + agent), engine + `capacity_rerank.py` raw sha256 unchanged AFTER.
-- Write-up: `sprints/sprint-36/summary.md` + `notes/findings.md` + the report
+- Write-up: `archive/sprints/sprint-36/summary.md` + `notes/findings.md` + the report
   `contested_reality/artifacts/adjudication/reports/corpus-consistency.md`.

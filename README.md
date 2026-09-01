@@ -20,9 +20,9 @@ A `/new` — paste the prompt file's contents into the fresh session, or referen
 the session will read it from disk.
 
 ```
-sprints/sprint-0/PROMPT.md   ← you are here
-sprints/sprint-1/             ← Sprint 0 will write PROMPT.md here
-sprints/sprint-2/             ← Sprint 1 will write PROMPT.md here
+archive/sprints/sprint-0/PROMPT.md   ← you are here
+archive/sprints/sprint-1/             ← Sprint 0 will write PROMPT.md here
+archive/sprints/sprint-2/             ← Sprint 1 will write PROMPT.md here
 ```
 
 Each sprint prompt is self-contained: it tells the fresh session exactly what to
@@ -42,7 +42,7 @@ relational-os/
   scripts/verify.sh  ← quick green/red gate (daily cockpit + conformance-all-six)
   tests/run_checks.py← the full green-gate test suite (exit 0 = ALL PASS), run from any cwd
   instances/         ← sector instances (12 Appendix-B families) + contested_reality + agent demo
-  sprints/
+  archive/sprints/
     sprint-N/
       PROMPT.md      ← self-contained prompt for this sprint (read first)
       plan.md        ← plan this sprint writes (sub-sprints: work/<n>-plan.md)
@@ -86,7 +86,7 @@ copy at the repo root `docs/`; the identical Sprint-6 narrative copy stays at
   (About/marketing/FAQ/design language) as additive `brand` fields on the company `org://`
   actor and renders it into generated reports + a per-instance `branding.md`. Details:
   `instances/README.md` and `docs/01-system-manual.md §5.1`
-  (`sprints/sprint-7/PROMPT.md` was its build prompt).
+  (`archive/sprints/sprint-7/PROMPT.md` was its build prompt).
 - **Contested-reality engine (Sprints 9–10, built):** `instances/contested_reality/` reasons
   about contested human reality, not just records it — Fact/Claim/Determination separation,
   the inviolable **UNRESOLVED** outcome, and Trust-safety for weak/conflicting evidence
@@ -96,4 +96,4 @@ copy at the repo root `docs/`; the identical Sprint-6 narrative copy stays at
   determination, an **appeal** re-adjudicated by a higher authority, and the preserved signed
   authority chain (Sprint 10). All additive fields on existing primitives; NO new noun, NO
   schema edit, 49 `$defs` intact, SPEC stays v0.22. Details: `instances/contested_reality/docs/`.
-  (`sprints/sprint-10/PROMPT.md` was the Sprint 10 build prompt.)
+  (`archive/sprints/sprint-10/PROMPT.md` was the Sprint 10 build prompt.)

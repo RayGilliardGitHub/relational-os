@@ -100,7 +100,7 @@ python3 run_interest_conflict_demo.py            -> RESULT: ALL PASS   (8 assert
 <venv>/python conformance_interest.py            -> INTEREST-CONFLICT CONFORMANCE: ALL PASS (C1-C5, 17 instances)
 
 # non-regression (nothing frozen changed)
-cd /home/rlg/relational-os/sprints/sprint-5/artifacts
+cd /home/rlg/relational-os/archive/sprints/sprint-5/artifacts
 python3 run_s5_demo.py                           -> RESULT: ALL PASS
 <venv>/python run_s5_conformance.py              -> RESULT: ALL PASS
 cd /home/rlg/relational-os/instances

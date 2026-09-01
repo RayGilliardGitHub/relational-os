@@ -3,7 +3,7 @@
 
 Sprint 29 proved the Q7/Q8 `capacity_constraint` marker can NAME a SPECIFIC option
 `capacity_infeasible` from a RECORDED per-option requirement, but its own finding
-(`sprints/sprint-29/notes/findings.md`, "Open issues / next work") disclosed the honest frontier:
+(`archive/sprints/sprint-29/notes/findings.md`, "Open issues / next work") disclosed the honest frontier:
 **the marker still never CHOOSES a different option for the machine — the §6 human always does.** In
 every Sprint-29 org the option the machine WOULD recommend (`partial-settlement`) was itself
 `capacity_risk` (recorded requirement <= available), so the boundary between "the marker is a REASON"

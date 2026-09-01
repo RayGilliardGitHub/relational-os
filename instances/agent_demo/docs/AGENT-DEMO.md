@@ -94,7 +94,7 @@ python3 run_agent_demo.py                   -> RESULT: ALL PASS        (tech, th
 cd /home/rlg/relational-os/instances
 python3 build_all_agents.py                 -> RESULT: ALL SECTORS PASS   (12 sector families)
 
-cd /home/rlg/relational-os/sprints/sprint-5/artifacts
+cd /home/rlg/relational-os/archive/sprints/sprint-5/artifacts
 python3 run_s5_demo.py                      -> RESULT: ALL PASS   (reference non-regression)
 <venv>/python run_s5_conformance.py         -> RESULT: ALL PASS
 
@@ -131,7 +131,7 @@ python3 build_all.py                        -> RESULT: ALL SECTORS PASS   (13-bu
 - `instances/agent_demo/conformance_agent.py` — C1–C5 gate over the emitted fixtures.
 - `instances/build_all_agents.py` — the ×12 sector replicate.
 - `instances/agent_demo/artifacts/` — emitted fixtures/ledger/graph; `model-log.json` (with raw + parsed).
-- Plan/summary: `sprints/sprint-8/plan.md`, `sprints/sprint-8/work/1-plan.md`, `sprints/sprint-8/summary.md`.
+- Plan/summary: `archive/sprints/sprint-8/plan.md`, `archive/sprints/sprint-8/work/1-plan.md`, `archive/sprints/sprint-8/summary.md`.
 
 ## Conclusion
 

@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/adjudication-deli-infcap-2026",
-  "head_hash": "ab09da165a7bd8c73955c1bf76cf373b40b71b5fe7d7a2082f74096a95734b07",
+  "head_hash": "4af5fd19675dbf62d931bd32815b77556cb67eec2d6c3543f834f562eb48ca77",
   "entries": [
     {
       "uri": "event://deli-infcap/seed-trust",
@@ -10,7 +10,7 @@
       "causation_id": "ev-adj-deli-infcap-seed-trust-prev",
       "idempotency_key": "idem-adj-deli-infcap-seed-trust",
       "signature": "signed-by-person://deli-infcap/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/registrar",
       "detail": "seed scoped trust before the episode",
       "state_update": [
@@ -24,7 +24,7 @@
           "evidence": []
         }
       ],
-      "hash": "2c97062948b9dbf01d74275baa2280a3d96b40dd52d41cb5a5fc1f5272567def"
+      "hash": "9d0453faf5201ce145a1d989448945ea0bfe6b4fdf49928b78f5aa13ed8a8e54"
     },
     {
       "uri": "event://deli-infcap/provision",
@@ -34,7 +34,7 @@
       "causation_id": "ev-adj-prev-100",
       "idempotency_key": "idem-adj-provision-100",
       "signature": "signed-by-person://deli-infcap/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/registrar",
       "detail": "provision actors, relationships, obligations, adjudicator+appeal authority, appeal right",
       "state_update": [
@@ -145,7 +145,7 @@
           "purpose": "right to appeal the determination"
         }
       ],
-      "hash": "5c2e42a4f3013ce2312dbc3feb512a186e895466b9be087aace76cc3ca48e23a"
+      "hash": "7967db665b5a1b98e076f7e9fe63ed50d9b52d791520c1e8209cbd9d2a4d6a18"
     },
     {
       "uri": "event://deli-infcap/claims",
@@ -155,7 +155,7 @@
       "causation_id": "ev-adj-prev-101",
       "idempotency_key": "idem-adj-claims-101",
       "signature": "signed-by-person://deli-infcap/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/registrar",
       "detail": "record 3 conflicting claims",
       "state_update": [
@@ -188,7 +188,7 @@
           "epistemic_status": "claimed"
         }
       ],
-      "hash": "b7bded04b01deab5781b5bd657e246ce05d06b1f8e3909c61d4cb4b8b6795efc"
+      "hash": "69c26d55e16dfafdb2a70e0aa58b40e6424b50798e3496e39ae4fcd716625b79"
     },
     {
       "uri": "event://deli-infcap/evidence",
@@ -198,7 +198,7 @@
       "causation_id": "ev-adj-prev-102",
       "idempotency_key": "idem-adj-evidence-102",
       "signature": "signed-by-person://deli-infcap/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/registrar",
       "detail": "record conflicting evidence with provenance + reliability",
       "state_update": [
@@ -255,7 +255,7 @@
           "supports": "claim://deli-infcap/shipped"
         }
       ],
-      "hash": "6be201bda026cc49803b969add1c90c7eb67d5abf445664727ddfe4160260999"
+      "hash": "dc2382b69db11290f8e3708bbc895c2bbdaa15e05d209fef750e3987479823d7"
     },
     {
       "uri": "event://deli-infcap/claim-advance",
@@ -265,7 +265,7 @@
       "causation_id": "ev-adj-prev-103",
       "idempotency_key": "idem-adj-claim-advance-103",
       "signature": "signed-by-person://deli-infcap/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/registrar",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -280,7 +280,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "0217fb54af127003e0185cc5f313507414202e387923ed81a13b124aac555841"
+      "hash": "6d840bfd9318edaf6f8a485a3423e5ca0bb8e68d0d60abff27b99ed419fd845a"
     },
     {
       "uri": "event://deli-infcap/claim-advance",
@@ -290,7 +290,7 @@
       "causation_id": "ev-adj-prev-104",
       "idempotency_key": "idem-adj-claim-advance-104",
       "signature": "signed-by-person://deli-infcap/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/registrar",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -304,7 +304,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "ef3b45b16352792715a8d5caf7e5dd74cdff950286f76f34eab0cb070e8db9e4"
+      "hash": "58fb94b644bf3b68108a2dc36f9562b7934c6b21b8e28e150d1c8ad7bbac027f"
     },
     {
       "uri": "event://deli-infcap/claim-advance",
@@ -314,7 +314,7 @@
       "causation_id": "ev-adj-prev-105",
       "idempotency_key": "idem-adj-claim-advance-105",
       "signature": "signed-by-person://deli-infcap/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/registrar",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -328,7 +328,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "c6687daaeff6f042178ab9baedb1078a3de6b5fc12098d15fd116d9f68c4b692"
+      "hash": "077aab1eeb49710b440d67de576a4ff509d8d6c17b8427840481a9c02b7c8013"
     },
     {
       "uri": "event://deli-infcap/open-dispute",
@@ -338,7 +338,7 @@
       "causation_id": "ev-adj-prev-106",
       "idempotency_key": "idem-adj-open-dispute-106",
       "signature": "signed-by-person://deli-infcap/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/registrar",
       "detail": "dispute OPEN with parties/about + additive lifecycle/epistemic + resolutions",
       "state_update": [
@@ -389,7 +389,7 @@
           }
         }
       ],
-      "hash": "430233d4b0abde6d77a7a19570c24b32734ad5f3674273b356f36b93509926f7"
+      "hash": "b9674b931f9c862c1b29190c65b58cfd8e520bcd94f6f0c540bc5e651de24485"
     },
     {
       "uri": "event://deli-infcap/lifecycle-advance",
@@ -399,7 +399,7 @@
       "causation_id": "ev-adj-prev-107",
       "idempotency_key": "idem-adj-lifecycle-advance-107",
       "signature": "signed-by-person://deli-infcap/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/registrar",
       "detail": "conflicting evidence gathered -> EVIDENCE_COLLECTION -> CONTESTED",
       "state_update": [
@@ -496,7 +496,7 @@
           }
         }
       ],
-      "hash": "2d11c052c130d66ce99ba0b942ee3df17cf6c9d9436b14e7f9b6bcfa0e6f235b"
+      "hash": "2f857e1c198ebb08ceef7f194bef6e9fcc8d4b7fbaf2e2ff66fb07b48cbd361d"
     },
     {
       "uri": "event://deli-infcap/agent-advisory",
@@ -506,7 +506,7 @@
       "causation_id": "ev-adj-prev-108",
       "idempotency_key": "idem-adj-agent-advisory-108",
       "signature": "signed-by-person://deli-infcap/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/registrar",
       "detail": "AI/machine advisory on options (contained: informational only)",
       "state_update": [
@@ -577,10 +577,10 @@
             },
             "tradeoff": "trade-off[delivery; business-model {'evidence': 0.35, 'contractual': 0.3, 'relationship': 0.2, 'cost': 0.15}]\n  0.728  partial-settlement\n  0.665  conditional-resolution\n  0.620  accept-company-full-payment\n  0.435  request-more-evidence\n  0.400  unresolved\n  0.385  external-adjudication\n  0.380  escalate\n  0.285  accept-customer-refund FLOOR-GATED\n  => machine-eligible best (non-gated): partial-settlement (gated: ['accept-customer-refund'])"
           },
-          "made_at": "2026-09-01T06:22:47Z"
+          "made_at": "2026-09-01T06:27:57Z"
         }
       ],
-      "hash": "2336112efc5ee631b8dd55d3471d65f0ecf39b463adddda88037ce2f3da0e6b2"
+      "hash": "7c71dc3061850c39e426ce6f486bdc17853ca17d33d874ce29b8e3392179b8de"
     },
     {
       "uri": "event://deli-infcap/adjudicate",
@@ -590,7 +590,7 @@
       "causation_id": "ev-adj-prev-109",
       "idempotency_key": "idem-adj-adjudicate-109",
       "signature": "signed-by-person://deli-infcap/adjudicator",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/adjudicator",
       "detail": "authorized human determination: partial-settlement (ranking in view)",
       "state_update": [
@@ -621,7 +621,7 @@
             "determination": "partial-settlement",
             "machine_eligible_best": "partial-settlement"
           },
-          "made_at": "2026-09-01T06:22:47Z"
+          "made_at": "2026-09-01T06:27:57Z"
         },
         {
           "uri": "dispute://deli-infcap/delivery",
@@ -670,7 +670,7 @@
           }
         }
       ],
-      "hash": "fc397732f44e46fcae619d94ff4aa09cc93651102d1b5091cba16148e3b809fd"
+      "hash": "2e560fddb9b68256194d750223b0f686b39e23465c0f1880d234279fe081a117"
     },
     {
       "uri": "event://deli-infcap/resolution",
@@ -680,7 +680,7 @@
       "causation_id": "ev-adj-prev-110",
       "idempotency_key": "idem-adj-resolution-110",
       "signature": "signed-by-person://deli-infcap/adjudicator",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/adjudicator",
       "detail": "resolution partial-settlement executed -> ACCEPTED -> EXECUTED",
       "state_update": [
@@ -824,7 +824,7 @@
           "resolution_outcome": "partial settlement on the contested delivery; SLA-breach credit applied; ledger noted; customer keeps the service"
         }
       ],
-      "hash": "922c2ca7ebada850a44f44bce8e09e0062dc67946e9f420767af58088f181266"
+      "hash": "02f655cbf99935148a7d56a5671a9c7aa1a5ef351f02120bd8db2f461457d8d2"
     },
     {
       "uri": "event://deli-infcap/verify",
@@ -834,7 +834,7 @@
       "causation_id": "ev-adj-prev-111",
       "idempotency_key": "idem-adj-verify-111",
       "signature": "signed-by-system://deli-infcap/verify",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "system://deli-infcap/verify",
       "detail": "outcome verification on completed execution -> VERIFIED -> CLOSED",
       "state_update": [
@@ -934,7 +934,7 @@
           "verified": true
         }
       ],
-      "hash": "d0a31f0edab2fc5a7c8fe48f6e36dd023d9f25a3a3a67310a7804c685abe1c72"
+      "hash": "4ad2394cd78c96d02a7675d11c6bc84b4c917ef3277d45e9c04bd5ccbff2865c"
     },
     {
       "uri": "event://deli-infcap/learn",
@@ -944,7 +944,7 @@
       "causation_id": "ev-adj-prev-112",
       "idempotency_key": "idem-adj-learn-112",
       "signature": "signed-by-person://deli-infcap/registrar",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/registrar",
       "detail": "organizational learning: recorded",
       "state_update": [
@@ -952,7 +952,7 @@
           "uri": "evidence://deli-infcap/learning-note",
           "kind": "RECORD",
           "source": "post-resolution-postmortem",
-          "captured_at": "2026-09-01T06:22:47Z",
+          "captured_at": "2026-09-01T06:27:57Z",
           "verity": {
             "procedure": "postmortem",
             "confidence": 0.6
@@ -963,7 +963,7 @@
           "learning": "conflicting delivery timestamps reach a determination only via an authorized adjudicator + independent anchored verification, not the single-source verifier"
         }
       ],
-      "hash": "bd59e263df1bcf4cc8aca8fe91847f332990aafde632dc193e3b1bcd951312bb"
+      "hash": "fd76220f4af5f81d23c3f7c986843a033f6192e6fbe9e67905a8cb7ba4a4ee5a"
     },
     {
       "uri": "event://deli-infcap/record-metric-series",
@@ -973,7 +973,7 @@
       "causation_id": "ev-adj-deli-infcap-record-metric-series-prev",
       "idempotency_key": "idem-adj-deli-infcap-record-metric-series",
       "signature": "signed-by-person://deli-infcap/adjudicator",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/adjudicator",
       "detail": "record a realized-vs-expected metric series additively on the org's ledger so the \u00a77L Q6 can project from recorded data",
       "state_update": [
@@ -1021,7 +1021,7 @@
           "band_variance": "all"
         }
       ],
-      "hash": "47140c84511da96834b7a1e6cdc4db4d0f34cca094d7d8bf7b6b89ac13871163"
+      "hash": "31cea3d5578890cdb705804ac04cd478250aacc72ac5a023443013256237e1d1"
     },
     {
       "uri": "event://deli-infcap/record-capacity",
@@ -1031,7 +1031,7 @@
       "causation_id": "ev-adj-deli-infcap-record-capacity-prev",
       "idempotency_key": "idem-adj-deli-infcap-record-capacity",
       "signature": "signed-by-person://deli-infcap/adjudicator",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/adjudicator",
       "detail": "record the authority's additive capacity field so the \u00a77L Q9 can report it as data",
       "state_update": [
@@ -1052,7 +1052,7 @@
           }
         }
       ],
-      "hash": "70f992c4c4d87802b6e668b46baf05c94b9ca56a8b7a9dc50507ce4207483823"
+      "hash": "4900a8a10b9c16b8a5e10cc77a12f79d378b01c4669b0f287ef5b230e95e0c7b"
     },
     {
       "uri": "event://deli-infcap/record-capacity-requirements",
@@ -1062,7 +1062,7 @@
       "causation_id": "ev-adj-deli-infcap-record-capacity-requirements-prev",
       "idempotency_key": "idem-adj-deli-infcap-record-capacity-requirements",
       "signature": "signed-by-person://deli-infcap/adjudicator",
-      "occurred_at": "2026-09-01T06:22:47Z",
+      "occurred_at": "2026-09-01T06:27:57Z",
       "actor": "person://deli-infcap/adjudicator",
       "detail": "record the authority's additive per-option capacity requirements so the Q7/Q8 capacity_constraint can label a specific option capacity_infeasible vs capacity_risk from recorded numbers only",
       "state_update": [
@@ -1092,7 +1092,7 @@
           }
         }
       ],
-      "hash": "ab09da165a7bd8c73955c1bf76cf373b40b71b5fe7d7a2082f74096a95734b07"
+      "hash": "4af5fd19675dbf62d931bd32815b77556cb67eec2d6c3543f834f562eb48ca77"
     }
   ]
 }

@@ -9,7 +9,7 @@ platform — a specification and a working S1–S5 reference build that surfaces
 was executed in Sprint 6 and its real output is embedded; nothing is hypothetical.
 
 > **This package is part of the development workspace. The canonical spec is
-> `SPEC.md` (v0.22). The sprint-by-sprint build chain is under `sprints/`. Everything
+> `SPEC.md` (v0.22). The sprint-by-sprint build chain is under `archive/sprints/`. Everything
 > here documents the real, running artifacts — a deterministic local Python build that
 > costs ~$0 per run (no frontier-API spend).**
 
@@ -102,7 +102,7 @@ All three were executed in Sprint 6 and exited 0. Full detail in `02-setup.md` a
 > logo/tone) — carried as **additive `brand` fields on the company `org://` actor** (URI cap
 > held; not a new noun) so that **every generated cockpit/BI report carries the brand.**
 > Each instance also emits a **`branding.md`** marketing artifact. See `instances/README.md`.
-> The build prompt that produced it: `/home/rlg/relational-os/sprints/sprint-7/PROMPT.md`.
+> The build prompt that produced it: `/home/rlg/relational-os/archive/sprints/sprint-7/PROMPT.md`.
 
 > **Reorg note (post-Sprint-36):** the conformance runners were **re-anchored** to `Path(__file__)`
 > (were CWD-bound on `../../sprint-0/artifacts`), so they are now **location-independent** — run them from
@@ -126,4 +126,4 @@ All three were executed in Sprint 6 and exited 0. Full detail in `02-setup.md` a
 - Current state graph: `/home/rlg/relational-os/reference/graph/current-state.json`
 - Ledger fixture: `/home/rlg/relational-os/reference/fixtures/ledger/ledger-quoteko.json`
 - Fixtures per generation: `/home/rlg/relational-os/data/fixtures/`
-- Closing hand-off: `/home/rlg/relational-os/sprints/COMPLETE.md`
+- Closing hand-off: `/home/rlg/relational-os/archive/sprints/COMPLETE.md`

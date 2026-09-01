@@ -2,7 +2,7 @@
 """run_forecast_horizon_demo.py — SPRINT 25: horizon-wide do-nothing band + Q9 capacity-attention.
 
 Sprint 24 priced the Q8/trade-off do-nothing projected BAND around the SINGLE worst projected point,
-but its own finding (sprints/sprint-24/notes/findings.md, "Open issues / next work") disclosed the
+but its own finding (archive/sprints/sprint-24/notes/findings.md, "Open issues / next work") disclosed the
 next honest frontier: **the band is still computed around the single worst point at the do-nothing
 line; it does not aggregate a band across ALL projection periods (the whole horizon's worst-case
 spread), and it does not feed §7L Q9 capacity attention.** Sprint 25 closes that bounded slice

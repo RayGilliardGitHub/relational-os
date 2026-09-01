@@ -31,7 +31,7 @@ Verified commands (from `instances/contested_reality/`, exit 0):
 - `python3 run_rule_authoring_demo.py` → `RESULT: ALL PASS`
 - `python3 run_adjudication_engine_demo.py` → `RESULT: ALL PASS` (deli/cove, unchanged)
 - `python3 run_rule_comparison_demo.py` → `RESULT: ALL PASS` (Sprint-14 three-registry-rule proof, unchanged)
-- `/home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python conformance_adjudication.py`
+- `/home/rlg/relational-os/archive/sprints/sprint-0/artifacts/.venv/bin/python conformance_adjudication.py`
   → `ADJUDICATION-ENGINE CONFORMANCE: ALL PASS` (8 labels, C1–C5, 49 `$defs`)
 
 ## The rule-authoring format (a rule is config data)

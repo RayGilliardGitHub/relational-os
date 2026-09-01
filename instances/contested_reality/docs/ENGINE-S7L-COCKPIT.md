@@ -6,7 +6,7 @@ config-authorable reconciliation RULE (registry → declarative `rule_spec` DSL)
 §7L Q7/Q8 cockpit line** inside the engine (`cockpit_q7q8`/`render_cockpit_q7q8` — ACTIVE rule +
 source + learned-or-not + why). Up to Sprint 18 the rest of the §7L morning test
 (Q1–Q6, Q9, Q10) was represented only in the **reference** sector cockpit
-(`sprints/sprint-5/artifacts/reports/cockpit.md`, drawn by the operating layer `ros/bol.py`), not
+(`archive/sprints/sprint-5/artifacts/reports/cockpit.md`, drawn by the operating layer `ros/bol.py`), not
 in the generic adjudication engine. **Sprint 19 closes that**: `adjudication_engine.cockpit_s7l(cfg,
 sub, *, library=None)` renders the **complete §7L Q1–Q10 cockpit** for ANY configured adjudication
 org, data-only, with Q7/Q8 delegating to the Sprint-18 line by construction (strict superset).
@@ -213,7 +213,7 @@ orgs). SPEC v0.22, 49 `$defs`, `ros/` untouched, no new noun.
 
 ## 11. Update after Sprint 29 — the Q7/Q8 `capacity_constraint` can now label a SPECIFIC option `capacity_infeasible` (from a RECORDED per-option requirement)
 
-Sprint 28's honest frontier (`sprints/sprint-28/notes/findings.md`, "Open issues / next work"):
+Sprint 28's honest frontier (`archive/sprints/sprint-28/notes/findings.md`, "Open issues / next work"):
 `capacity_infeasible` was **structurally unreachable** because no per-option capacity requirement was
 ever recorded — the engine could flag a whole `capacity_risk` set but never name the particular option
 the recorded capacity cannot run. **Sprint 29 makes the recorded capacity PER-OPTION** so the marker
@@ -245,7 +245,7 @@ the §6 human. Both new orgs' fixtures pass Sprint-0 C1–C5; full non-regressio
 
 ## 12. Update after Sprint 30 — the marker is a REASON, never a CHOICE: the RECOMMENDED option itself made `capacity_infeasible`
 
-Sprint 29's honest boundary (see `sprints/sprint-29/notes/findings.md`): the per-option marker can NAME
+Sprint 29's honest boundary (see `archive/sprints/sprint-29/notes/findings.md`): the per-option marker can NAME
 a specific infeasible option, but it **never CHOOSES a different option for the machine — the §6 human
 always does.** Sprint 30 drives the SHARPEST version of that boundary, with NO engine change: a new org
 `deli-recommend-infcap` (`run_forecast_label_vs_choice_demo.py`, exit 0 = ALL PASS) RECORDS a per-option

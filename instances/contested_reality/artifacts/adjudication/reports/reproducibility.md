@@ -1,5 +1,5 @@
 # §7L TWO-PATH DECISION SURFACE — REPRODUCIBILITY-AUDIT (Sprint 35)
-generated 2026-09-01T06:22:47Z  |  `run_reproducibility_demo.py`  |  engine-free audit: `adjudication_engine.py` (hash a60f8f7…) + `capacity_rerank.py` (sha256 f7c6a185…) BYTE-IDENTICAL; schema 34264934…, 49 $defs, SPEC v0.22, no new noun.
+generated 2026-09-01T06:27:57Z  |  `run_reproducibility_demo.py`  |  engine-free audit: `adjudication_engine.py` (hash a60f8f7…) + `capacity_rerank.py` (sha256 f7c6a185…) BYTE-IDENTICAL; schema 34264934…, 49 $defs, SPEC v0.22, no new noun.
 
 ## Host / platform (live)
 - uname: Linux 7.0.0-30-generic x86_64 (node dad)

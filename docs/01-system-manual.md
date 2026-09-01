@@ -4,7 +4,7 @@
 put together, the data model and ontology, the URI cap and frozen ontology, the schema +
 conformance + EBNF, the technology truth, and a file→artifact map.
 **Grounding:** SPEC v0.22 (`/home/rlg/relational-os/SPEC.md`) and the verified Sprints 0–5
-build under `/home/rlg/relational-os/sprints/`. Section references are to `SPEC.md §X`.
+build under `/home/rlg/relational-os/archive/sprints/`. Section references are to `SPEC.md §X`.
 
 ---
 
@@ -182,7 +182,7 @@ FAQ, contact, careers, investors, press, ESG, legal, nav, cookie consent, palett
 typography/logo/tone) as **additive `brand` fields on the company `org://` actor** — the same
 additive-field convention as Exception/Priority/Recommendation (§7J.5/§C16), so the URI cap
 and frozen ontology hold. Generated cockpit/BI reports will carry the brand (lead header +
-`## Brand` appendix). Build hand-off: `sprints/sprint-7/PROMPT.md`.
+`## Brand` appendix). Build hand-off: `archive/sprints/sprint-7/PROMPT.md`.
 
 ## 8. File → artifact map (what lives where)
 
@@ -194,8 +194,8 @@ Root: `/home/rlg/relational-os/`
 | `PROTOCOL.md` | The sprint lifecycle every build session follows. |
 | `README.md` | Workspace index (points at this docs package). |
 | `docs/` | The verified manual package (Sprint 6) — canonical at repo root, narrative copy at `docs/`. |
-| `sprints/COMPLETE.md` | Project closing hand-off (Sprints 0–5). |
-| `sprints/` | Narrative build history (PROMPT/plan/work/notes/summary per build step) — kept for provenance; not the run surface. |
+| `archive/sprints/COMPLETE.md` | Project closing hand-off (Sprints 0–5). |
+| `archive/sprints/` | Narrative build history (PROMPT/plan/work/notes/summary per build step) — kept for provenance; not the run surface. |
 | `schema/` | Schema (`schema/`), `conformance.py`, `run_conformance.py`, `make_fixtures.py`, `fixtures/` (156 instances incl. 20-interaction Appendix-E + case-lifecycle + ledgers + statemachines), `surveys/` (4 commissioned surveys), `.venv/` (jsonschema/referencing/yaml deps). |
 | `/ros/` (repo root) — canonical | `substrate.py` (Graph+Ledger+sign), `s1..s5.py` (services), `bol.py` (Business Operating Layer), `checks.py` (the PASS/FAIL assertions). Promoted from `ros/` (its byte-identical origin snapshot) by the reorg. |
 | `reference/reference/run_s5_demo.py` | The **daily cockpit** producer (rebuild whole state + write fixtures + reports). |
@@ -224,5 +224,5 @@ analogue *today* is noted. See SPEC §7E–H, §8.
   backlog** (process mining, change detection, scenario/what-if, decision learning,
   organizational memory, universal query, benchmarking) → future.
 
-*See also `sprints/sprint-5/summary.md` and `sprints/COMPLETE.md` for the same boundary
+*See also `archive/sprints/sprint-5/summary.md` and `archive/sprints/COMPLETE.md` for the same boundary
 stated at build close.*

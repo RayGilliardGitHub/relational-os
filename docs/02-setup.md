@@ -45,7 +45,7 @@ relational-os/
   tests/run_checks.py  the full green gate (41 checks; exit 0 = ALL PASS)
   scripts/verify.sh    the quick gate (daily cockpit + all-six conformance)
   instances/         sector instances (12) + contested_reality + agent_demo
-  sprints/           NARRATIVE build history (PROMPT/plan/work/notes/summary + historical artifacts)
+  archive/sprints/           NARRATIVE build history (PROMPT/plan/work/notes/summary + historical artifacts)
 ```
 
 File-by-file detail of the canonical system (`ros/`, `schema/`, `reference/`): see `01-system-manual.md §8`.

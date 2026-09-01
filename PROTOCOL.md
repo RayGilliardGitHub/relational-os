@@ -65,4 +65,4 @@ memory; it must rely only on these files. Follow this sequence in every sprint.
 Deliver the implementation contract: a machine-validatable schema (from Appendix F),
 a conformance validator, executable fixtures (Appendix E + §7L loop + Case
 lifecycle), and the four committed surveys (§7D-E). Full detail is in
-`SPEC.md §8` and `sprints/sprint-0/PROMPT.md`.
+`SPEC.md §8` and `archive/sprints/sprint-0/PROMPT.md`.

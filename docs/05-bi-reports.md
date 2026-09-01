@@ -34,7 +34,7 @@ data** (the actual ledger/graph the demo produced), run this standalone reader f
 project root (plain `python3`):
 
     cd /home/rlg/relational-os
-    python3 sprints/sprint-6/work/captures/bi_snapshot.py
+    python3 archive/sprints/sprint-6/work/captures/bi_snapshot.py
 
 Real output (embedded; reads `reference/fixtures/ledger/ledger-quoteko.json` +
 `graph/current-state.json`):

@@ -25,7 +25,7 @@ instances/contested_reality/docs/RECONCILE-LEARNING.md    this document
 ```
 Verified commands (from `instances/contested_reality/`, all exit 0):
 - `python3 run_reconcile_learning_demo.py` → `RESULT: ALL PASS`
-- `/home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python conformance_adjudication.py`
+- `/home/rlg/relational-os/archive/sprints/sprint-0/artifacts/.venv/bin/python conformance_adjudication.py`
   → `ADJUDICATION-ENGINE CONFORMANCE: ALL PASS` (16 labels, C1–C5, 49 `$defs`)
 - Full non-regression (Sprint-16 set: rule_library / authoring / comparison / adj_engine, the 4 prior
   CR demos + conformances, sectors build_all + conformance_all, S5 reference + conformance, agent

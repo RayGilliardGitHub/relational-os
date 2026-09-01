@@ -26,7 +26,7 @@ import json
 import sys
 
 HERE = Path(__file__).resolve().parent
-ROS = HERE.parents[0]     # /home/rlg/relational-os/sprints/...
+ROS = HERE.parents[0]     # = repo ROOT (canonical ros/); runners resolve ros from the repo root
 sys.path.insert(0, str(ROS))
 
 from ros.substrate import Substrate, now_iso            # noqa: E402

@@ -23,7 +23,7 @@ instances/contested_reality/docs/GENERALIZED-ADJUDICATION.md this document
 ```
 Verified commands (from `instances/contested_reality/`, exit 0):
 - `python3 run_adjudication_engine_demo.py` → `RESULT: ALL PASS`
-- `/home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python conformance_adjudication.py`
+- `/home/rlg/relational-os/archive/sprints/sprint-0/artifacts/.venv/bin/python conformance_adjudication.py`
   → `ADJUDICATION-ENGINE CONFORMANCE: ALL PASS`
 
 ---
