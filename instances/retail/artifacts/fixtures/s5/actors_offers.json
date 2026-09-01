@@ -1,0 +1,249 @@
+[
+  {
+    "uri": "org://retail/hardvale",
+    "type": "ORG",
+    "identity": {
+      "attestations": [
+        "business-license"
+      ]
+    },
+    "brand": {
+      "tagline": "Stock for every store, on time.",
+      "mission": "Deliver committed store replenishment reliably and on time so every HardVale customer finds what they came for, every day, at every store.",
+      "vision": "Shoppers who never think about whether the shelf will be there \u2014 because it always is.",
+      "values": [
+        [
+          "Customer first",
+          "Behind every pallet is a shopper who chose us."
+        ],
+        [
+          "Shelf faith",
+          "We guard the simple promise that the item will be there."
+        ],
+        [
+          "Efficient by habit",
+          "We move stock efficiently so prices stay fair."
+        ],
+        [
+          "Community store",
+          "Our stores are neighbourhoods; we stock them like neighbours."
+        ],
+        [
+          "Own the outcome",
+          "A store that runs out is our problem to solve, not an excuse to make."
+        ]
+      ],
+      "about": "HardVale Stores runs a chain of community retail stores and the replenishment operation that keeps their shelves honest. We take committed store replenishment deliveries and make them land so reliably that running out of a staple stops being a plot point in our shoppers' day. Every delivery is verified, every store is a promise, every shelf is the metric.",
+      "fast_facts": [
+        "Founded 1996, retail stores",
+        "460+ stores across the region",
+        "Committed replenishment delivery network"
+      ],
+      "history": [
+        [
+          "1996",
+          "Opened the first HardVale store in a converted warehouse."
+        ],
+        [
+          "2008",
+          "Built our own replenishment logistics to end bare shelves."
+        ],
+        [
+          "2019",
+          "Digitised every restock run to ledger-verified on-time evidence."
+        ]
+      ],
+      "leadership": [
+        [
+          "Elena Vasquez",
+          "Chief Executive",
+          "Retail lifer who has run stores, buying, and now the whole chain."
+        ],
+        [
+          "Tyrone Grant",
+          "Chief Merchandising Officer",
+          "Connects what shoppers want to what the shelf holds."
+        ]
+      ],
+      "products_services": [
+        "Community retail stores",
+        "Store replenishment and distribution",
+        "Efficient price leadership on essentials"
+      ],
+      "testimonials": [
+        [
+          "I can count on the staples always being there. That is why I keep coming back.",
+          "HardVale shopper"
+        ]
+      ],
+      "trust": [
+        [
+          "99.0% committed store-replenishment on-time rate (2025)",
+          "HardVale logistics ledger"
+        ],
+        [
+          "5-year shopper satisfaction programme",
+          "independent survey"
+        ]
+      ],
+      "locations": "Regional HQ + 460+ stores; distribution parks in 4 states",
+      "faq": [
+        [
+          "How do you keep shelves full?",
+          "Every committed replenishment is tracked to a verified on-time ledger completion; stores below target get immediate attention, not excuses."
+        ],
+        [
+          "Do you deliver to stores every day?",
+          "Cadence varies by store and category; the committed deliveries on those cadences are the ones we verify."
+        ]
+      ],
+      "contact": "care@hardvale.example \u00b7 +1-800-STOCKED",
+      "careers": "Grow with a store that keeps its promise: store ops, logistics, buying, sustainability.",
+      "investors": "Privately held. Store-level reliability data shared with partners on request.",
+      "press": "press@hardvale.example \u2014 new stores, community programs, reliability stories.",
+      "esg": "Waste-less replenishment, community food programs, efficient fleet, sustainable packaging for own-brand.",
+      "legal": [
+        "Privacy",
+        "Terms",
+        "California Rights",
+        "Do Not Sell or Share",
+        "Accessibility"
+      ],
+      "nav": [
+        "About",
+        "Stores",
+        "Our Brands",
+        "Careers",
+        "Investors",
+        "Press",
+        "Sustainability",
+        "Contact"
+      ],
+      "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+      "design": {
+        "palette": [
+          [
+            "Bullseye Red",
+            "#C8102E"
+          ],
+          [
+            "Navy Briefcase",
+            "#1F2A44"
+          ],
+          [
+            "Shelf Grey",
+            "#E6E3DC"
+          ],
+          [
+            "Fresh White",
+            "#FFFFFF"
+          ]
+        ],
+        "typography": {
+          "heading": "Bold condensed sans (e.g. Barlow Condensed)",
+          "body": "Open sans (e.g. Work Sans)"
+        },
+        "logo": {
+          "wordmark": "HARDVALE (bold)",
+          "character": "a target/chevron mark",
+          "usage": "clear space fixed; red on white or navy on white primary"
+        },
+        "imagery": "Bright store scenes, stocked shelves, real shoppers \u2014 energy and value",
+        "tone": "Friendly, confident, plain-spoken; about the shopper's day going well."
+      }
+    }
+  },
+  {
+    "uri": "org://retail/southline",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://retail/atlas-freight",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://retail/corvus-logistics",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://retail/cfo",
+    "type": "PERSON"
+  },
+  {
+    "uri": "agent://retail/inbound-ops",
+    "type": "AGENT"
+  },
+  {
+    "uri": "authority://retail/for-ops",
+    "holder": "org://retail/hardvale",
+    "grants": [
+      "triage_case",
+      "assign_case",
+      "close_case",
+      "approve_learning",
+      "rebalance_commitment",
+      "gate_partner",
+      "release_committed_action"
+    ],
+    "roles": [
+      "operator"
+    ]
+  },
+  {
+    "uri": "rule://retail/ops-run",
+    "kind": "POLICY",
+    "text": "agent://retail/inbound-ops may re-balance resource commitment and gate partner performance",
+    "grants": [
+      "rebalance_commitment",
+      "gate_partner"
+    ]
+  },
+  {
+    "uri": "rule://retail/match-run",
+    "kind": "POLICY",
+    "text": "S2 may run Trust-weighted matching for the client",
+    "grants": [
+      "run_match"
+    ]
+  },
+  {
+    "uri": "delegation://retail/ops",
+    "grantor": "org://retail/hardvale",
+    "grantee": "agent://retail/inbound-ops",
+    "scope": [
+      "rule://retail/ops-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://retail/s2-match",
+    "grantor": "org://retail/hardvale",
+    "grantee": "agent://s2",
+    "scope": [
+      "rule://retail/match-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "offer://retail/o-g",
+    "provider": "org://retail/atlas-freight",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "replenishment",
+      "logistics"
+    ],
+    "fit_note": "retail partner delivery line"
+  },
+  {
+    "uri": "offer://retail/o-l",
+    "provider": "org://retail/corvus-logistics",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "replenishment",
+      "logistics"
+    ],
+    "fit_note": "retail partner delivery line"
+  }
+]

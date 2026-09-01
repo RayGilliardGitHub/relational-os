@@ -1,0 +1,101 @@
+[
+  {
+    "uri": "relationship://qk/cust-cxn",
+    "participants": [
+      "person://qk/customer",
+      "org://quoteko"
+    ],
+    "roles": {
+      "person://qk/customer": [
+        "customer"
+      ],
+      "org://quoteko": [
+        "service_provider"
+      ]
+    },
+    "context": {
+      "organization": "org://quoteko",
+      "relationship": "relationship://qk/cust-cxn",
+      "role": "customer",
+      "jurisdiction": "US-NM",
+      "time": "2026-09-01T10:00:00Z",
+      "purpose": "purpose://qk/quoting",
+      "rules": [
+        "rule://qk/tos"
+      ]
+    },
+    "purpose": "property-services quoting/triage",
+    "status": "ACTIVE",
+    "created_at": "2026-09-01T10:00:00Z",
+    "effective_from": "2026-09-01T10:00:00Z",
+    "authority": [
+      "authority://qk/for-matching"
+    ]
+  },
+  {
+    "uri": "consent://qk/match-data",
+    "granted_by": "person://qk/customer",
+    "granted_for": "match my quote request to vetted service offers",
+    "scope": [
+      "permission://qk/read-profile",
+      "permission://qk/present-offers"
+    ],
+    "duration": {
+      "effective": "2026-09-01T10:00:00Z",
+      "expires": "2027-09-01T00:00:00Z"
+    },
+    "revocable": true,
+    "status": "GRANTED"
+  },
+  {
+    "uri": "delegation://qk/s2-match",
+    "grantor": "org://quoteko",
+    "grantee": "agent://s2",
+    "scope": [
+      "rule://qk/s2-run-matching"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "authority://qk/for-matching",
+    "grants": [
+      "request_quote"
+    ],
+    "holder": "org://quoteko"
+  },
+  {
+    "uri": "trust://qk/t-norcrete",
+    "subject": "org://quoteko",
+    "target": "org://qk/norcrete",
+    "claim": "roofing & repair reliability",
+    "context": "relationship://qk/cust-cxn",
+    "score": 0.92,
+    "updated_at": "2026-09-01T10:00:00Z"
+  },
+  {
+    "uri": "trust://qk/t-solarworks",
+    "subject": "org://quoteko",
+    "target": "org://qk/solarworks",
+    "claim": "roofing & repair reliability",
+    "context": "relationship://qk/cust-cxn",
+    "score": 0.61,
+    "updated_at": "2026-09-01T10:00:00Z"
+  },
+  {
+    "uri": "trust://qk/t-generalco",
+    "subject": "org://quoteko",
+    "target": "org://qk/generalco",
+    "claim": "roofing reliability",
+    "context": "relationship://qk/cust-cxn",
+    "score": 0.42,
+    "updated_at": "2026-09-01T10:00:00Z"
+  },
+  {
+    "uri": "interaction://qk/req-quote",
+    "of": "relationship://qk/cust-cxn",
+    "kind": "REQUEST",
+    "events": [
+      "event://qk/request"
+    ]
+  }
+]

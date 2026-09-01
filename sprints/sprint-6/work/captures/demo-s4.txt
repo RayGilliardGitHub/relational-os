@@ -1,0 +1,135 @@
+=== Sprint 4 — Settlement (S4) + multi-role + multi-org (Quoteko) ===
+
+--- [S1/S2/S5/S3] re-used Sprint-1/2/3 checks (no regression on the full state) ---
+
+  [check:s1]
+    [PASS] role resolved as customer  — got customer
+    [PASS] role is relationship-scoped (absent elsewhere)  — got None
+    [PASS] authz permitted within the relationship  — Permission(request_quote, scoped@['request_quote'])
+    [PASS] authz denied outside the relationship  — no such relationship relationship://qk/other
+    [PASS] delegation grants scoped capability  — Permission(run_matching, scoped@['run_matching'])
+    [PASS] revoked delegation -> denial (capability voided)  — delegation://qk/s2-match not active (REVOKED)
+
+  [check:roundtrip]
+    [PASS] ledger hash-chain + signatures intact  — ok
+    [PASS] graph state reconstructs to ledger events  — 56 graph objects rebuilt from 31 events
+    [PASS] ledger==history & graph==state (not conflated)  — history=True, state-objects=True
+
+  [check:s5]
+    [PASS] capture -> signed evidence:// on Graph  — {'uri': 'evidence://qk/job-norcrete', 'kind': 'ANCHORED', 'source': 'signed provider job-completion record + S5 anchor', 'verity': {'procedure': 'completion-anchor-conformance', 'confidence': 0.98}, 'captured_at': '2026-08-31T23:46:13Z'}
+    [PASS] capture -> OUTCOME event on Ledger  — 1 ledger entry
+    [PASS] evidence verity = procedure + confidence (degree under procedure, §3.17)  — {'procedure': 'completion-anchor-conformance', 'confidence': 0.98}
+    [PASS] trust objects carry subject/target/claim/context + score  — norcrete=0.528, solarworks=0.806
+    [PASS] trust stays clamped to [0,1)  — in range
+    [PASS] generalco (different claim) untouched by updates (scoped, not global)  — score=0.42
+    [PASS] trust write -> signed STATE_CHANGE ledger event  — 1 entry, sig=signed-by-agent://s5
+
+  [check:flywheel]
+    [PASS] same fit -> rank decided by Trust (flywheel)  — before ['offer://qk/o-norcrete', 'offer://qk/o-solarworks'] -> after ['offer://qk/o-solarworks', 'offer://qk/o-norcrete']
+    [PASS] Trust moved as §5 predicts (good up, bad down)  — solarworks 0.708 (was 0.61), norcrete 0.528 (was 0.92)
+    [PASS] ranking matches equation output (score = fit x trust)  — solar score 0.708 = fit 1.0 x trust 0.708
+
+  [check:s3]
+    [PASS] commit -> commitment:// AGREED on Graph  — 'AGREED'
+    [PASS] commit -> signed STATE_CHANGE ledger event  — 1 entry
+    [PASS] orchestrate -> signed decision:// for the split  — [{'task_id': 't1', 'action': 'prepare_work_order_and_schedule', 'worker': 'agent://w-local', 'seam_tier': 'local', 'tier': 'local', 'reversible': True, 'cost_knowable': True, 'authority': 'delegation://qk/w-local', 'status': 'PENDING'}, {'task_id': 't2', 'action': 'dispatch_dispatcher_and_verify_materials', 'worker': 'agent://w-cloud', 'seam_tier': 'private-cloud', 'tier': 'private-cloud', 'reversible': True, 'cost_knowable': True, 'authority': 'delegation://qk/w-cloud', 'status': 'PENDING'}, {'task_id': 't3', 'action': 'release_final_payment', 'worker': 'agent://w-frontier', 'seam_tier': 'frontier', 'tier': 'human', 'reversible': False, 'cost_knowable': False, 'authority': 'delegation://qk/w-frontier', 'status': 'ESCALATED'}]
+    [PASS] >=2 agent-worker ACTION steps on the Ledger  — 3 steps: ['event://qk/s3-step-t1', 'event://qk/s3-step-t2', 'event://qk/s3-step-t3']
+    [PASS] each worker step signed + action-named  — ['prepare_work_order_and_schedule', 'dispatch_dispatcher_and_verify_materials', 'release_final_payment']
+
+  [check:escalate]
+    [PASS] escalation decision recorded before human acknowledgement  — esc@25 hum@26
+    [PASS] irreversible action NOT auto-executed: split < escalate < human < release  — split@22 esc@25 hum@26 release@27
+    [PASS] release_final_payment exists and runs only after the human commit  — 1 release event
+    [PASS] human decision is signed + made by person://qk/approver  — by=person://qk/approver
+    [PASS] human decision enumerates >=3 alternatives  — ['release_in_full', 'hold_pending_inspection', 'release_partial_and_hold_if_fault', 'open_dispute']
+
+  [check:loop]
+    [PASS] S3-executed outcome captured as signed evidence:// (2nd S5 cycle)  — {'uri': 'evidence://qk/job-solarworks-s3', 'kind': 'ANCHORED', 'source': 'signed provider job-completion record + S5 anchor', 'verity': {'procedure': 'completion-anchor-conformance', 'confidence': 0.98}, 'captured_at': '2026-08-31T23:46:13Z'}
+    [PASS] Trust updated from the S3 outcome (solarworks rose past 0.708)  — score=0.806
+    [PASS] updated trust carries its auditable inputs (expected/outcome/evidence/alpha/recency)  — keys=['alpha', 'evidence', 'expected', 'outcome', 'recency']
+    [PASS] unrelated target's trust untouched (scoped, not global)  — norcrete=0.528
+    [PASS] next S2 match re-ranked by the updated Trust (solarworks #1, loop closed)  — [('offer://qk/o-solarworks', 0.806), ('offer://qk/o-norcrete', 0.528)]
+
+========================== 4.1  SETTLEMENT ON THE COMPLETED JOB ==========================
+relationship://qk/cust-cxn  solarworks job committed+executed+Trusted (0.806)
+S4  settle                   event://qk/s4-exchange-solarworks  (EXCHANGE event://, signed)
+    Asset Ledger title move  asset://money/qk-escrow-solarworks  (title -> org://qk/solarworks, §4b)
+    payment obligation       obligation://qk/s4-pay-solarworks  (VOLUNTARILY_UNDERTAKEN)
+    receipt                  receipt://qk/s4-receipt-solarworks   reconciliation  decision://qk/s4-recon-solarworks
+S4  evaluate                 event://qk/s4-outcome-solarworks  (met) vs expectation
+S5  capture settled OUTCOME  -> evidence://qk/job-solarworks-s4  Trust 0.806 -> 0.904
+S2  next cycle re-rank       [('offer://qk/o-solarworks', 0.904), ('offer://qk/o-norcrete', 0.528)] <- loop closed WITH settlement in the middle
+
+========================== 4.2  TWO ROLES ON ONE RELATIONSHIP ==========================
+role customer=True, employee=True on relationship://qk/cust-cxn (§3.2/§C2)
+role-scoped authz:  employee grant submit_timesheet=True, receive_payroll=True, request_quote_DENIED=True; customer grant request_quote=True, receive_payroll_DENIED=True
+S2  employee match          [('offer://qk/o-payroll', 0.5), ('offer://qk/o-benefits', 0.0)]
+S3  commit + execute        commitment://qk/c-quoteko  worker step event://qk/s3-step-t-payroll
+S4  settle payroll          event://qk/s4-exchange-emp-payroll  -> outcome event://qk/s4-outcome-emp-payroll (met)
+S5  employee-role Trust     0.5 -> 0.598 on context 'relationship://qk/cust-cxn?role=employee'
+    customer-role Trust     solarworks unTouched = 0.904 (scoped per role, §3.14)
+
+========================== 4.3  TWO ORG TYPES + §6 FLOOR ==========================
+org-kind attribute (§3.1):  org://quoteko = FOR_PROFIT, sunsetshelter = NONPROFIT_CHARITABLE
+roles: donor=True, beneficiary=True on relationship://qk/charity-cxn
+S3  orchestrate: reversible steps ['event://qk/s3-step-t-charity-prep', 'event://qk/s3-step-t-charity-dispatch'] auto-run
+§6  IRREVERSIBLE charitable grant -> decision://qk/s3-esc-t-charity-grant -> decision://qk/s3-human-t-charity-grant (NOT auto-run) -> event://qk/s3-step-t-charity-grant
+S4  settle charitable exchange   event://qk/s4-exchange-shelter-solar  (pro bono price 0; cost borne by donor, §3.9)
+    outcome                      event://qk/s4-outcome-shelter-solar  (met)
+S5  charity-context Trust        0.5 -> 0.598 (shelter)
+
+--- Sprint-4 checks ---
+
+  [check:s4]
+    [PASS] settle -> signed EXCHANGE ledger event  — 1 entry
+    [PASS] each settlement artifact is a signed Ledger event (state rides the EXCHANGE entry)  — obligation+receipt+reconciliation embedded in the signed EXCHANGE event
+    [PASS] Asset Ledger title/custody moved (asset:// money, §4b, not a copy)  — {'uri': 'asset://money/qk-escrow-solarworks', 'kind': 'MONEY', 'title': 'org://qk/solarworks', 'custody': 'cleared', 'value': 18900, 'currency': 'USD', 'status': 'DELIVERED', 'provenance': 'settled by org://quoteko for org://qk/solarworks (solarworks)'}
+    [PASS] payment obligation recorded (VOLUNTARILY_UNDERTAKEN)  — 'VOLUNTARILY_UNDERTAKEN'
+    [PASS] receipt + reconciliation recorded  — receipt=True, recon.matched=True
+    [PASS] evaluate -> signed OUTCOME event (met)  — eval=met
+    [PASS] settled OUTCOME fed S5 Trust update (solarworks rose past 0.806)  — score=0.904
+    [PASS] next S2 match re-ranked by the settled Trust (solarworks #1, loop closed WITH settlement)  — [{'offer': 'offer://qk/o-solarworks', 'provider': 'org://qk/solarworks', 'fit': 1.0, 'trust': 0.904, 'score': 0.904}, {'offer': 'offer://qk/o-norcrete', 'provider': 'org://qk/norcrete', 'fit': 1.0, 'trust': 0.528, 'score': 0.528}]
+
+  [check:role]
+    [PASS] ONE relationship carries TWO roles for the same actor (§3.2/§C2)  — roles=['customer', 'employee']
+    [PASS] role-scoped authority grants the right action per role  — emp.submit_timesheet=True, cust.request_quote=True
+    [PASS] role-scoped authority DENIES the other role's actions (separation of role, not all-or-nothing)  — emp.request_quote denied=True, cust.receive_payroll denied=True
+    [PASS] employee-role Trust updated on the ?role=employee scope (§3.14, not a global score)  — score=0.598 ctx=relationship://qk/cust-cxn?role=employee
+    [PASS] customer-role Trust untouched by the employee loop (scoped per role)  — customer(cust-cxn) solarworks=0.904 (was 0.904)
+    [PASS] full employee-role loop closed with S4 settlement in the middle  — pay=event://qk/s3-step-t-payroll, settle=event://qk/s4-exchange-emp-payroll, outcome=met
+
+  [check:org]
+    [PASS] organization-kind attribute carried per §3.1 (private FOR_PROFIT vs charitable)  — quoteko=FOR_PROFIT, sunsetshelter=NONPROFIT_CHARITABLE
+    [PASS] cross-org relationship + purpose-constrained pro-bono offer (§3.9 price=0)  — roles={'org://quoteko': ['donor'], 'org://qk/sunsetshelter': ['beneficiary']}, price=0
+    [PASS] charity-context Trust updated (shelter rose past 0.5)  — score=0.598
+    [PASS] §6 floor still gates the irreversible cross-org settlement (NOT auto-executed)  — split@52 esc@55 hum@56 release@57
+    [PASS] the ONLY grant-release action ran after the human commit  — 1 release event
+    [PASS] human decision signed by person://qk/approver + enumerates alternatives  — ['release_in_full', 'hold_pending_inspection', 'release_partial_and_hold_if_fault', 'open_dispute']
+    [PASS] full cross-org loop closed (S4 settlement + S5 Trust re-ranks S2)  — outcome=met, next=[{'offer': 'offer://qk/o-shelter-solar', 'provider': 'org://qk/sunsetshelter', 'fit': 1.0, 'trust': 0.598, 'score': 0.598}]
+
+--- Ledger / Graph wiring ---
+  ledger hash-chain + signatures: OK | entries 64
+  graph current-state objects: 122
+
+  [check:roundtrip] full S4 state (whole Graph rebuilds from the whole Ledger, §3.16)
+    [PASS] ledger hash-chain + signatures intact  — ok
+    [PASS] graph state reconstructs to ledger events  — 122 graph objects rebuilt from 64 events
+    [PASS] ledger==history & graph==state (not conflated)  — history=True, state-objects=True
+
+--- emit fixtures ---
+  wrote exchanges.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/fixtures/s4/exchanges.json
+  wrote obligations.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/fixtures/s4/obligations.json
+  wrote receipts.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/fixtures/s4/receipts.json
+  wrote assets.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/fixtures/s4/assets.json
+  wrote reconciliation.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/fixtures/s4/reconciliation.json
+  wrote trust.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/fixtures/s4/trust.json
+  wrote evidence.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/fixtures/s4/evidence.json
+  wrote claim.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/fixtures/s4/claim.json
+  wrote expectation.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/fixtures/s4/expectation.json
+  wrote actors_offers.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/fixtures/s4/actors_offers.json
+  wrote relationships.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/fixtures/s4/relationships.json
+  wrote ledger-quoteko.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/fixtures/ledger/ledger-quoteko.json
+  wrote relationship.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/fixtures/statemachines/relationship.json
+  wrote current-state.json -> file:///home/rlg/relational-os/sprints/sprint-4/artifacts/graph/current-state.json
+
+RESULT: ALL PASS

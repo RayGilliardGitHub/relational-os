@@ -1,0 +1,29 @@
+[
+  {
+    "uri": "process://finb/pr-core",
+    "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+    "steps": [
+      "triage",
+      "assign",
+      "execute",
+      "verify_outcome",
+      "learning"
+    ]
+  },
+  {
+    "uri": "process_instance://finb/pi-core",
+    "process": "process://finb/pr-core",
+    "status": "RUNNING",
+    "started_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "escalation://finb/escalate-release",
+    "trigger": "external funding release \u2014 irreversible and cost-unknowable once disbursed",
+    "severity": "WARN",
+    "recipient": "person://finb/treasurer",
+    "deadline": "2026-11-15T00:00:00Z",
+    "fallback": "agent://finb/s4",
+    "authority": "authority://finb/for-ops",
+    "acknowledgement": "approve then execute"
+  }
+]

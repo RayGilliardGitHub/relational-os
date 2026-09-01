@@ -1,0 +1,65 @@
+[
+  {
+    "uri": "case://hlth/c-on-time",
+    "subject": "committed pharmaceutical delivery below target on time",
+    "status": "CLOSED",
+    "owner": "person://hlth/oph",
+    "actors": [
+      "org://hlth/lumenhealth",
+      "person://hlth/oph",
+      "agent://hlth/supply-ops"
+    ],
+    "relationships": [
+      "relationship://hlth/ops-rel"
+    ],
+    "created_at": "2026-09-01T00:29:53Z",
+    "history": [
+      {
+        "status": "OPEN",
+        "at": "2026-09-01T00:29:53Z",
+        "event": null
+      },
+      {
+        "status": "TRIAGE",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://hlth/s5-case-triage"
+      },
+      {
+        "status": "ASSIGNED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://hlth/s5-case-assigned"
+      },
+      {
+        "status": "IN_PROGRESS",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://hlth/s5-case-inprogress"
+      },
+      {
+        "status": "BLOCKED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://hlth/s5-case-blocked"
+      },
+      {
+        "status": "RESOLVED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://hlth/s5-case-resolved"
+      },
+      {
+        "status": "CLOSED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://hlth/s5-case-closed"
+      }
+    ],
+    "suggestion": "ledger-projected on-time below target",
+    "expected": 0.95,
+    "actual": 0.333,
+    "variance": -0.617,
+    "significance": "CRITICAL",
+    "exception": "Committed pharmaceutical delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+    "root_cause": "supply failure \u2014 org://hlth/meridian-med missed its committed pharmaceutical delivery by 2 days; scoped Trust fell 0.90->0.51",
+    "root_cause_status": "SUPPORTED",
+    "recommended_action": "Re-allocate committed pharmaceutical supply to the verified on-time distributor (cortica-supply) and gate the laggard (meridian-med) with a checkpoint before any new order",
+    "metric": "metric://hlth/m-on-time",
+    "verified_outcome": "forward on-time restored to 1.0; org://hlth/cortica-supply delivered the rallied pharmaceutical delivery on time (evidence://hlth/routed-cortica-supplyR); org://hlth/cortica-supply Trust 0.79"
+  }
+]

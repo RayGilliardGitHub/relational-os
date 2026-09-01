@@ -1,0 +1,1959 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://relational-os.dev/schema/0.17/core.schema.json",
+  "title": "RelationalOS Core Object Schema",
+  "description": "RelationalOS core instance — class determined by URI scheme.",
+  "x-uri-catalog": {
+    "identity": [
+      "person://",
+      "org://",
+      "agent://",
+      "system://",
+      "legal_entity://"
+    ],
+    "relationship": [
+      "relationship://"
+    ],
+    "domain-object": [
+      "purpose://",
+      "mission://",
+      "objective://",
+      "patient_record://",
+      "student_record://",
+      "supplier_profile://",
+      "credit_profile://",
+      "authority://",
+      "permission://",
+      "delegation://",
+      "decision://",
+      "rule://",
+      "policy://",
+      "procedure://",
+      "constraint://",
+      "right://",
+      "obligation://",
+      "commitment://",
+      "consent://",
+      "expectation://",
+      "dispute://",
+      "evidence://",
+      "adjudication://",
+      "resource://",
+      "value://",
+      "cost://",
+      "time://",
+      "trust://",
+      "reputation://",
+      "claim://",
+      "event://",
+      "interaction://",
+      "revision://",
+      "entity://",
+      "case://",
+      "goal://",
+      "metric://",
+      "task://",
+      "dependency://",
+      "process://",
+      "process_instance://",
+      "risk://",
+      "escalation://",
+      "gl://",
+      "acct://",
+      "money://",
+      "txn://",
+      "invoice://",
+      "receipt://",
+      "payment://",
+      "budget://",
+      "forecast://",
+      "rate://",
+      "policy://ins/",
+      "claim://",
+      "loan://",
+      "mortgage://",
+      "portfolio://",
+      "position://",
+      "risk://",
+      "score://",
+      "product://",
+      "service://",
+      "sku://",
+      "catalog://",
+      "offer://",
+      "price://",
+      "order://",
+      "po://",
+      "case://",
+      "ticket://",
+      "agreement://",
+      "contract://",
+      "delivery://",
+      "shipment://",
+      "asset://",
+      "property://",
+      "building://",
+      "lease://",
+      "equipment://",
+      "tool://",
+      "machine://",
+      "device://",
+      "endpoint://",
+      "pos://",
+      "atm://",
+      "sim://",
+      "handset://",
+      "line://",
+      "meter://",
+      "sensor://",
+      "vehicle://",
+      "fleet://",
+      "truck://",
+      "drone://",
+      "robot://",
+      "monitor://",
+      "medical_device://",
+      "server://",
+      "node://",
+      "job://",
+      "workorder://",
+      "project://",
+      "program://",
+      "part://",
+      "bom://",
+      "unit://",
+      "lot://",
+      "batch://",
+      "shift://",
+      "schedule://",
+      "well://",
+      "platform://",
+      "rig://",
+      "field://",
+      "lease://",
+      "reservoir://",
+      "load://",
+      "consumer://",
+      "provider://",
+      "care://",
+      "rx://",
+      "formulary://",
+      "plan://",
+      "clinical_trial://",
+      "sub://",
+      "bundle://",
+      "content://",
+      "media://",
+      "stream://",
+      "franchise://",
+      "audience://",
+      "ad_inventory://",
+      "route://",
+      "leg://",
+      "stop://",
+      "container://",
+      "pallet://",
+      "parcel://",
+      "package://",
+      "dock://",
+      "gate://",
+      "hub://",
+      "manifest://",
+      "bill_of_lading://",
+      "doc://",
+      "mail://",
+      "db://",
+      "corr://",
+      "chat://",
+      "voice://",
+      "log://",
+      "report://",
+      "transcript://",
+      "spec://",
+      "training://",
+      "audit://",
+      "audit_finding://",
+      "ip://",
+      "royalty://",
+      "license://",
+      "permit://",
+      "registration://",
+      "regulation://",
+      "filing://",
+      "return://",
+      "tax://",
+      "compliance://",
+      "department://",
+      "cost_center://",
+      "brand://",
+      "store://",
+      "site://",
+      "plant://",
+      "storehouse://",
+      "warehouse://",
+      "facility://"
+    ]
+  },
+  "$defs": {
+    "uri": {
+      "type": "string",
+      "description": "Typed, versioned reference (§3.19: a URI identifies an object, not a snapshot). Appendix C scheme://namespace/instance.\n",
+      "pattern": "^[a-z][a-z0-9_+.-]*://[A-Za-z0-9._~:/$&+,;=@?%-]+$"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "RFC 3339 (mandatory, §2)."
+    },
+    "scalar": {
+      "description": "Any scalar value (string | number | boolean | null).",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "ref": {
+      "description": "A typed-URI reference to another object.",
+      "$ref": "#/$defs/uri"
+    },
+    "actor_ref": {
+      "description": "Reference to an Actor (identity URI).",
+      "$ref": "#/$defs/uri"
+    },
+    "evidence_ref": {
+      "description": "Reference to an Evidence object.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/uri"
+      }
+    },
+    "idempotency-fields": {
+      "event_id": {
+        "type": "string",
+        "description": "Unique idempotent event identifier."
+      },
+      "correlation_id": {
+        "type": "string"
+      },
+      "causation_id": {
+        "type": "string"
+      },
+      "idempotency_key": {
+        "type": "string"
+      }
+    },
+    "envelope": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Round-trip: unknown fields MUST be preserved on rewrite (§2, Appendix C)."
+    },
+    "Actor": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/envelope"
+        }
+      ],
+      "type": "object",
+      "required": [
+        "uri",
+        "type"
+      ],
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "type": {
+          "enum": [
+            "PERSON",
+            "ORG",
+            "AGENT",
+            "SYSTEM"
+          ]
+        },
+        "identity": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "authenticators": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "attestations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "description": "§3.0 cast of actors: Person / Organization / Agent / System."
+    },
+    "Purpose": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "for": {
+          "$ref": "#/$defs/uri"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "FOR_PROFIT",
+            "PUBLIC",
+            "NONPROFIT_CHARITABLE",
+            "COOPERATIVE_MUTUAL",
+            "OTHER"
+          ]
+        }
+      },
+      "required": [
+        "uri",
+        "for",
+        "statement"
+      ],
+      "description": "§3.1 purpose precedes identity; organization kind is an attribute."
+    },
+    "Context": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "organization": {
+          "$ref": "#/$defs/uri"
+        },
+        "relationship": {
+          "$ref": "#/$defs/uri"
+        },
+        "role": {
+          "type": "string"
+        },
+        "jurisdiction": {
+          "type": "string"
+        },
+        "time": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "purpose": {
+          "$ref": "#/$defs/uri"
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        }
+      },
+      "required": [
+        "role"
+      ],
+      "description": "§3.2 identity universal; context relationship-specific."
+    },
+    "Relationship": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "participants": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "#/$defs/actor_ref"
+          }
+        },
+        "roles": {
+          "type": "object"
+        },
+        "context": {
+          "$ref": "#/$defs/Context"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "rights": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "obligations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "authority": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "consent": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "expectations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "commitments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "trust": {
+          "$ref": "#/$defs/uri"
+        },
+        "status": {
+          "enum": [
+            "PROPOSED",
+            "ACTIVE",
+            "SUSPENDED",
+            "TERMINATED",
+            "ARCHIVED"
+          ]
+        },
+        "created_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "effective_from": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "expires_at": {
+          "$ref": "#/$defs/timestamp"
+        }
+      },
+      "required": [
+        "uri",
+        "participants",
+        "status"
+      ],
+      "description": "§3.16 relationship lifecycle state machine (renew/transform transitions)."
+    },
+    "Interaction": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "of": {
+          "$ref": "#/$defs/uri"
+        },
+        "kind": {
+          "enum": [
+            "OFFER",
+            "REQUEST",
+            "DECISION",
+            "ACTION",
+            "EXCHANGE",
+            "OUTCOME",
+            "NEGOTIATION",
+            "DISPUTE",
+            "ACKNOWLEDGEMENT"
+          ]
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        }
+      },
+      "required": [
+        "uri",
+        "of",
+        "kind"
+      ],
+      "description": "§3.16 discrete episode; NEGOTIATION = request→offer→counteroffer→agreement→commitment (§3.18)."
+    },
+    "Event": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/envelope"
+        }
+      ],
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "description": "Unique idempotent event identifier."
+        },
+        "correlation_id": {
+          "type": "string"
+        },
+        "causation_id": {
+          "type": "string"
+        },
+        "idempotency_key": {
+          "type": "string"
+        },
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "type": {
+          "enum": [
+            "ACTION",
+            "DECISION",
+            "EXCHANGE",
+            "OUTCOME",
+            "STATE_CHANGE",
+            "EXTERNAL"
+          ]
+        },
+        "actor": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "ledger_ref": {
+          "$ref": "#/$defs/uri"
+        },
+        "signature": {
+          "type": "string"
+        },
+        "of_interaction": {
+          "$ref": "#/$defs/uri"
+        },
+        "occurred_at": {
+          "$ref": "#/$defs/timestamp"
+        }
+      },
+      "required": [
+        "uri",
+        "type",
+        "event_id",
+        "correlation_id",
+        "causation_id",
+        "idempotency_key",
+        "signature",
+        "occurred_at"
+      ],
+      "description": "Atomic ledger record (§3.16); universal causation/correlation/idempotency fields (§7K.1); append-only, signed (§2)."
+    },
+    "State": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "kind": {
+          "enum": [
+            "LEDGER",
+            "GRAPH"
+          ]
+        },
+        "owner": {
+          "$ref": "#/$defs/uri"
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "head_hash": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "uri",
+        "kind"
+      ],
+      "description": "§3.16 Ledger=history (append-only), Graph=current state; the two must not be conflated."
+    },
+    "Expectation": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "actor": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "condition": {
+          "type": "string"
+        },
+        "metric": {
+          "type": "string"
+        },
+        "threshold": {
+          "type": "number"
+        },
+        "deadline": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "evidence_required": {
+          "enum": [
+            "CLEAR",
+            "SOME",
+            "NONE"
+          ]
+        }
+      },
+      "required": [
+        "uri",
+        "subject",
+        "condition"
+      ],
+      "description": "§3.11 what success means: commitment→expectation→outcome→accountability→trust."
+    },
+    "Claim": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "proposer": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence_ref"
+        }
+      },
+      "required": [
+        "uri",
+        "proposer",
+        "statement"
+      ],
+      "description": "§3.17 insertion between outcome and truth; claim with provenance, not capital-T truth."
+    },
+    "Evidence": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "kind": {
+          "enum": [
+            "OBSERVATION",
+            "TESTIMONY",
+            "RECORD",
+            "ANCHORED"
+          ]
+        },
+        "source": {
+          "type": "string"
+        },
+        "verity": {
+          "type": "object",
+          "properties": {
+            "procedure": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "required": [
+            "procedure",
+            "confidence"
+          ]
+        },
+        "captured_at": {
+          "$ref": "#/$defs/timestamp"
+        }
+      },
+      "required": [
+        "uri",
+        "kind",
+        "source"
+      ],
+      "description": "§3.17 evidence supports claim X to degree Y under procedure Z; ANCHORED = confidential compute (§7B)."
+    },
+    "Decision": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "by": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "authority": {
+          "$ref": "#/$defs/uri"
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/scalar"
+          }
+        },
+        "rules_applied": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "expected_outcome": {
+          "type": "string"
+        },
+        "actual_outcome": {
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence_ref"
+        },
+        "made_at": {
+          "$ref": "#/$defs/timestamp"
+        }
+      },
+      "required": [
+        "uri",
+        "by",
+        "authority"
+      ],
+      "description": "§3.12 decision-maker, authority, alternatives, evidence, confidence, expected/actual — auditability."
+    },
+    "Delegation": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "grantor": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "grantee": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "expiry": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "status": {
+          "enum": [
+            "ACTIVE",
+            "REVOKED",
+            "EXPIRED"
+          ]
+        },
+        "revoked_at": {
+          "$ref": "#/$defs/timestamp"
+        }
+      },
+      "required": [
+        "uri",
+        "grantor",
+        "grantee"
+      ],
+      "description": "§3.4 who empowered which actor to do what; revocation voids capability (§7B)."
+    },
+    "Consent": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "granted_by": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "granted_for": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "duration": {
+          "type": "object"
+        },
+        "revocable": {
+          "type": "boolean"
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence_ref"
+        },
+        "status": {
+          "enum": [
+            "GRANTED",
+            "REVOKED",
+            "EXPIRED"
+          ]
+        }
+      },
+      "required": [
+        "uri",
+        "granted_by",
+        "granted_for"
+      ],
+      "description": "§3.7 distinct from commitment: consenting isn't committing; scoped, duration, revocable, evidence of grant."
+    },
+    "Dispute": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "about": {
+          "$ref": "#/$defs/uri"
+        },
+        "parties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/actor_ref"
+          }
+        },
+        "status": {
+          "enum": [
+            "OPEN",
+            "ADJUDICATED",
+            "RESOLVED"
+          ]
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence_ref"
+        },
+        "resolution": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "uri",
+        "about",
+        "parties",
+        "status"
+      ],
+      "description": "§3.13 disagreement is first-class; outcome → disputed → evidence → adjudication → resolution."
+    },
+    "Right": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "holder": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "type": {
+          "enum": [
+            "ACCESS",
+            "APPEAL",
+            "PRIVACY",
+            "REFUSE",
+            "RECEIVE_PAYMENT",
+            "TERMINATE",
+            "INSPECT",
+            "REPRESENTATION",
+            "OTHER"
+          ]
+        }
+      },
+      "required": [
+        "uri",
+        "holder",
+        "type"
+      ],
+      "description": "§3.5 rights possessed by participants."
+    },
+    "Obligation": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "subject": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "source": {
+          "enum": [
+            "IMPOSED",
+            "VOLUNTARILY_UNDERTAKEN"
+          ]
+        },
+        "content": {
+          "type": "string"
+        },
+        "due_by": {
+          "$ref": "#/$defs/timestamp"
+        }
+      },
+      "required": [
+        "uri",
+        "subject",
+        "source"
+      ],
+      "description": "§3.5 broader than commitment; imposed (tax, regulation) OR voluntarily undertaken → commitment."
+    },
+    "Commitment": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "by": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "to": {
+          "type": "string"
+        },
+        "obligation": {
+          "$ref": "#/$defs/uri"
+        },
+        "expectation": {
+          "$ref": "#/$defs/uri"
+        },
+        "status": {
+          "enum": [
+            "PROPOSED",
+            "PROMPTED",
+            "AGREED",
+            "BREACHED",
+            "FULFILLED"
+          ]
+        }
+      },
+      "required": [
+        "uri",
+        "by",
+        "to"
+      ],
+      "description": "§3.5 voluntarily undertaken obligation; the agreed-to-do in the expectation chain."
+    },
+    "Rule": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "kind": {
+          "enum": [
+            "LAW",
+            "REGULATION",
+            "POLICY",
+            "PROCEDURE",
+            "CONSTRAINT",
+            "CONTRACT_TERM"
+          ]
+        },
+        "text": {
+          "type": "string"
+        },
+        "jurisdiction": {
+          "type": "string"
+        },
+        "applies_to": {
+          "$ref": "#/$defs/uri"
+        }
+      },
+      "required": [
+        "uri",
+        "kind",
+        "text"
+      ],
+      "description": "§3.6 what the actor is ALLOWED to do — distinct from commitment."
+    },
+    "Trust": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "subject": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "target": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "claim": {
+          "type": "string"
+        },
+        "context": {
+          "$ref": "#/$defs/uri"
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence_ref"
+        },
+        "updated_at": {
+          "$ref": "#/$defs/timestamp"
+        }
+      },
+      "required": [
+        "uri",
+        "subject",
+        "target",
+        "claim",
+        "score"
+      ],
+      "description": "§3.14 scoped Trust(subject,target,claim,context) in [0,1]; never a single global score."
+    },
+    "Reputation": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "about": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence_ref"
+        },
+        "aggregate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "uri",
+        "about"
+      ],
+      "description": "§3.14 aggregates verified evidence across relationships; each relationship derives its own Trust. No universal social-credit."
+    },
+    "Resource": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "kind": {
+          "enum": [
+            "MONEY",
+            "MATERIAL",
+            "ASSET",
+            "INFORMATION",
+            "KNOWLEDGE",
+            "LABOR",
+            "CAPABILITY",
+            "TIME",
+            "AUTHORITY",
+            "ATTENTION",
+            "TRUST"
+          ]
+        },
+        "value": {
+          "$ref": "#/$defs/uri"
+        }
+      },
+      "required": [
+        "uri",
+        "kind"
+      ],
+      "description": "§3.8 supercategory above Asset and Knowledge; labor/time/attention are resources."
+    },
+    "Asset": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "kind": {
+          "enum": [
+            "GOOD",
+            "MONEY",
+            "RIGHT",
+            "DIGITAL",
+            "CAPACITY",
+            "OTHER"
+          ]
+        },
+        "title": {
+          "$ref": "#/$defs/uri"
+        },
+        "custody": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        },
+        "status": {
+          "enum": [
+            "HELD",
+            "COMMITTED",
+            "IN_TRANSIT",
+            "DELIVERED",
+            "RETIRED"
+          ]
+        },
+        "provenance": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "uri",
+        "kind"
+      ],
+      "description": "§4b asset = title and custody, not truth; copy ≠ transfer (§4b P1)."
+    },
+    "Knowledge": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "kind": {
+          "enum": [
+            "DOC",
+            "MAIL",
+            "DB",
+            "CORR",
+            "TICKET",
+            "CHAT",
+            "VOICE",
+            "LOG",
+            "REPORT",
+            "OTHER"
+          ]
+        },
+        "source": {
+          "type": "string"
+        },
+        "entities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "relationships": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "provenance": {
+          "type": "string"
+        },
+        "trust": {
+          "type": "number"
+        },
+        "access": {
+          "type": "object"
+        },
+        "content": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "uri",
+        "kind",
+        "source"
+      ],
+      "description": "§4a knowledge addressed by what it is about; source stays authoritative; provenance + trust; content is a reference, not a copy."
+    },
+    "Entity": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "canonical": {
+          "$ref": "#/$defs/uri"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "kind": {
+          "enum": [
+            "PERSON",
+            "ORGANIZATION",
+            "PRODUCT",
+            "SUPPLIER",
+            "CUSTOMER",
+            "LOCATION",
+            "ASSET",
+            "ACCOUNT",
+            "OTHER"
+          ]
+        }
+      },
+      "required": [
+        "uri",
+        "canonical"
+      ],
+      "description": "§7K.1 canonical entity resolution: IBM ≡ International Business Machines ≡ vendor#18392."
+    },
+    "Revision": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "of": {
+          "$ref": "#/$defs/uri"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "effective_from": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "effective_until": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "body": {
+          "$ref": "#/$defs/envelope"
+        }
+      },
+      "required": [
+        "uri",
+        "of",
+        "revision",
+        "effective_from"
+      ],
+      "description": "§3.19 versioning: contract://123 is one identity with revisions; each revision names its effective range."
+    },
+    "DomainObject": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        }
+      },
+      "required": [
+        "uri"
+      ]
+    },
+    "Case": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "actors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/actor_ref"
+          }
+        },
+        "relationships": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "claims": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "decisions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "commitments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "deadlines": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/timestamp"
+          }
+        },
+        "costs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "outcomes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "resolution": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "OPEN",
+            "TRIAGE",
+            "ASSIGNED",
+            "IN_PROGRESS",
+            "BLOCKED",
+            "RESOLVED",
+            "CLOSED"
+          ]
+        },
+        "owner": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "created_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "closed_at": {
+          "$ref": "#/$defs/timestamp"
+        }
+      },
+      "required": [
+        "uri",
+        "subject",
+        "status"
+      ],
+      "description": "§7J.3 universal unit of unresolved business work; lifecycle OPEN→TRIAGE→ASSIGNED→IN_PROGRESS→BLOCKED→RESOLVED→CLOSED with REOPEN."
+    },
+    "Goal": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "for": {
+          "$ref": "#/$defs/uri"
+        },
+        "parent": {
+          "$ref": "#/$defs/uri"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "horizon": {
+          "type": "string"
+        },
+        "metrics": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "owner": {
+          "$ref": "#/$defs/actor_ref"
+        }
+      },
+      "required": [
+        "uri",
+        "for",
+        "statement"
+      ],
+      "description": "§7J.1 desired future state; strategic chain purpose→mission→goal→objective→strategy→plan."
+    },
+    "Metric": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "name": {
+          "type": "string"
+        },
+        "definition": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "formula": {
+          "type": "string"
+        },
+        "dimensions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "target": {
+          "type": "number"
+        },
+        "threshold": {
+          "type": "number"
+        },
+        "period": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "owner": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "actual": {
+          "type": "number"
+        },
+        "forecast": {
+          "type": "number"
+        },
+        "variance": {
+          "type": "number"
+        },
+        "root_cause": {
+          "type": "string"
+        },
+        "root_cause_status": {
+          "enum": [
+            "OBSERVED",
+            "CORRELATED",
+            "SUSPECTED",
+            "SUPPORTED",
+            "VERIFIED",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "required": [
+        "uri",
+        "name",
+        "formula"
+      ],
+      "description": "§7J.1 the number that says whether we're winning; Goal→Metric→Actual→Variance→Decision→Action→Outcome."
+    },
+    "Task": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "assigned_to": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "created_by": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "objective": {
+          "type": "string"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "authority": {
+          "$ref": "#/$defs/uri"
+        },
+        "deadline": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "priority": {
+          "type": "number"
+        },
+        "status": {
+          "enum": [
+            "INCOMING",
+            "PRIORITIZED",
+            "ASSIGNED",
+            "IN_PROGRESS",
+            "BLOCKED",
+            "AWAITING_HUMAN",
+            "AWAITING_EXTERNAL",
+            "COMPLETED",
+            "FAILED"
+          ]
+        },
+        "expected_outcome": {
+          "type": "string"
+        },
+        "actual_outcome": {
+          "type": "string"
+        },
+        "why_here": {
+          "type": "string"
+        },
+        "importance": {
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence_ref"
+        },
+        "decision_required": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "uri",
+        "assigned_to",
+        "objective",
+        "status"
+      ],
+      "description": "§7J.4 work assigned but not done; each item carries why-here/importance/evidence/authority/required-decision — human is supervisor, not babysitter."
+    },
+    "Dependency": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "from": {
+          "$ref": "#/$defs/uri"
+        },
+        "to": {
+          "$ref": "#/$defs/uri"
+        },
+        "kind": {
+          "enum": [
+            "REQUIRES",
+            "BLOCKS",
+            "ENABLES",
+            "DERIVED_FROM",
+            "IMPACTS"
+          ]
+        }
+      },
+      "required": [
+        "uri",
+        "from",
+        "to",
+        "kind"
+      ],
+      "description": "§7J.6 directional workflow link, distinct from Relationship; enables impact analysis."
+    },
+    "Priority": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "f_impact": {
+          "type": "number"
+        },
+        "f_urgency": {
+          "type": "number"
+        },
+        "f_confidence": {
+          "type": "number"
+        },
+        "f_irreversibility": {
+          "type": "boolean"
+        },
+        "f_relationship_importance": {
+          "type": "number"
+        },
+        "f_cost_of_delay": {
+          "type": "number"
+        },
+        "score": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "uri",
+        "score"
+      ],
+      "description": "§7J.5 Priority = f(impact, urgency, confidence, irreversibility, relationship-importance, cost-of-delay); derived, no URI."
+    },
+    "Exception": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "expected": {
+          "$ref": "#/$defs/scalar"
+        },
+        "actual": {
+          "$ref": "#/$defs/scalar"
+        },
+        "variance": {
+          "$ref": "#/$defs/scalar"
+        },
+        "significance": {
+          "enum": [
+            "INFO",
+            "WARN",
+            "CRITICAL"
+          ]
+        },
+        "exception": {
+          "type": "string"
+        },
+        "root_cause": {
+          "type": "string"
+        },
+        "recommended_action": {
+          "type": "string"
+        },
+        "decision": {
+          "$ref": "#/$defs/uri"
+        },
+        "verified_outcome": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "uri",
+        "exception",
+        "significance"
+      ],
+      "description": "§7J.2 expected→actual→variance→significance→exception→root→action→decision→execution→verified outcome."
+    },
+    "SLA": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "expectation": {
+          "$ref": "#/$defs/uri"
+        },
+        "commitment": {
+          "$ref": "#/$defs/uri"
+        },
+        "consequence": {
+          "type": "string"
+        },
+        "metric": {
+          "type": "string"
+        },
+        "threshold": {
+          "type": "number"
+        },
+        "response_time": {
+          "type": "string"
+        },
+        "resolution_time": {
+          "type": "string"
+        },
+        "availability": {
+          "type": "number"
+        },
+        "penalty": {
+          "type": "string"
+        },
+        "escalation": {
+          "$ref": "#/$defs/uri"
+        }
+      },
+      "required": [
+        "uri",
+        "expectation",
+        "commitment",
+        "consequence"
+      ],
+      "description": "§7J.8 SLA = Expectation + Commitment + Consequence — an assembly, not a new concept."
+    },
+    "Risk": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "threat": {
+          "type": "string"
+        },
+        "probability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "impact": {
+          "type": "number"
+        },
+        "exposure": {
+          "type": "number"
+        },
+        "affected_relationships": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "evidence": {
+          "$ref": "#/$defs/evidence_ref"
+        },
+        "mitigations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "owner": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "deadline": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "residual_risk": {
+          "type": "number"
+        },
+        "uncertainty": {
+          "enum": [
+            "LOW",
+            "MEDIUM",
+            "HIGH"
+          ]
+        }
+      },
+      "required": [
+        "uri",
+        "threat",
+        "probability",
+        "impact"
+      ],
+      "description": "§7J.7 / §7K.2 first-class risk; what-could-go-wrong as a query."
+    },
+    "Capacity": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "capability": {
+          "$ref": "#/$defs/uri"
+        },
+        "total": {
+          "type": "number"
+        },
+        "used": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "uri",
+        "capability",
+        "total"
+      ],
+      "description": "§7J.7 capacity = how much/how often (vs capability = can do); demand→capacity→constraints→priority→allocation."
+    },
+    "Process": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "definition": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "version": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "uri",
+        "definition"
+      ],
+      "description": "§7K.1 reusable definition of how work should flow (designed model for process-mining)."
+    },
+    "ProcessInstance": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "process": {
+          "$ref": "#/$defs/uri"
+        },
+        "status": {
+          "enum": [
+            "RUNNING",
+            "COMPLETED",
+            "FAILED",
+            "ABORTED"
+          ]
+        },
+        "started_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "finished_at": {
+          "$ref": "#/$defs/timestamp"
+        }
+      },
+      "required": [
+        "uri",
+        "process",
+        "status"
+      ],
+      "description": "§7K.1 one actual execution of a Process; basis of process-mining comparison."
+    },
+    "Policy": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "name": {
+          "type": "string"
+        },
+        "condition": {
+          "type": "string"
+        },
+        "decision": {
+          "type": "string"
+        },
+        "action": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uri"
+          }
+        }
+      },
+      "required": [
+        "uri",
+        "condition",
+        "action"
+      ],
+      "description": "§7K.1 executable business logic, not a document: Condition → Decision → Action."
+    },
+    "Escalation": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "trigger": {
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "INFO",
+            "WARN",
+            "CRITICAL"
+          ]
+        },
+        "recipient": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "deadline": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "fallback": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "authority": {
+          "$ref": "#/$defs/uri"
+        },
+        "acknowledgement": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "uri",
+        "trigger",
+        "severity",
+        "recipient"
+      ],
+      "description": "§7K.1 operational escalation: trigger→severity→recipient→deadline→fallback→authority→acknowledgement."
+    },
+    "Recommendation": {
+      "$ref": "#/$defs/envelope",
+      "properties": {
+        "uri": {
+          "$ref": "#/$defs/uri"
+        },
+        "by": {
+          "$ref": "#/$defs/actor_ref"
+        },
+        "for": {
+          "$ref": "#/$defs/uri"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "includes_do_nothing": {
+          "type": "boolean"
+        },
+        "tradeoff": {
+          "type": "string"
+        },
+        "authority_required": {
+          "$ref": "#/$defs/uri"
+        },
+        "confidence": {
+          "type": "number"
+        },
+        "expected_impact": {
+          "type": "string"
+        },
+        "decision": {
+          "$ref": "#/$defs/uri"
+        }
+      },
+      "required": [
+        "uri",
+        "by",
+        "for",
+        "options"
+      ],
+      "description": "§7I.3 / §7K.1 recommendation→decision→approval; trade-off analysis incl. do-nothing; never auto-executes irreversible action."
+    }
+  },
+  "type": "object",
+  "required": [
+    "uri"
+  ],
+  "properties": {
+    "uri": {
+      "$ref": "#/$defs/uri"
+    }
+  },
+  "additionalProperties": true
+}

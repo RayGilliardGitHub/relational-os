@@ -1,0 +1,44 @@
+[
+  {
+    "uri": "person://e07/donor",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e07/foodbank",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e07/donation",
+    "participants": [
+      "person://e07/donor",
+      "org://e07/foodbank"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://e07/foodbank": [
+        "charity"
+      ]
+    }
+  },
+  {
+    "uri": "resource://e07/food",
+    "kind": "MATERIAL",
+    "donated_by": "person://e07/donor"
+  },
+  {
+    "uri": "interaction://e07/exchange",
+    "of": "relationship://e07/donation",
+    "kind": "EXCHANGE"
+  },
+  {
+    "uri": "event://e07/exchange",
+    "type": "EXCHANGE",
+    "event_id": "event-e07/exchange",
+    "correlation_id": "event-ce07/exchange",
+    "causation_id": "event-cae07/exchange",
+    "idempotency_key": "event-ie07/exchange",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "person://e07/donor"
+  }
+]

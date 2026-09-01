@@ -1,0 +1,2737 @@
+{
+  "uri": "db://ledger/quoteko-2026",
+  "head_hash": "bcd9aeec62c5b66112b8714ba4228d0c50f65a4ee7516fe42eab49010fd33164",
+  "entries": [
+    {
+      "uri": "event://qk/provision",
+      "type": "ACTION",
+      "event_id": "ev-qk-0",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-0",
+      "idempotency_key": "idem-qk-0",
+      "signature": "signed-by-agent://s1",
+      "occurred_at": "2026-09-01T10:00:00Z",
+      "actor": "agent://s1",
+      "detail": "provision Quoteko quote domain substrate and registry",
+      "state_update": [
+        {
+          "uri": "person://qk/customer",
+          "type": "PERSON"
+        },
+        {
+          "uri": "person://qk/approver",
+          "type": "PERSON",
+          "identity": {
+            "attestations": [
+              "employee"
+            ]
+          }
+        },
+        {
+          "uri": "org://quoteko",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://qk/norcrete",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://qk/solarworks",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://qk/generalco",
+          "type": "ORG"
+        },
+        {
+          "uri": "agent://s1",
+          "type": "AGENT"
+        },
+        {
+          "uri": "agent://s2",
+          "type": "AGENT"
+        },
+        {
+          "uri": "entity://qk/canon-customer",
+          "canonical": "person://qk/customer",
+          "aliases": [
+            "qk-customer-8832",
+            "C. Rivera"
+          ],
+          "kind": "PERSON"
+        },
+        {
+          "uri": "relationship://qk/cust-cxn",
+          "participants": [
+            "person://qk/customer",
+            "org://quoteko"
+          ],
+          "roles": {
+            "person://qk/customer": [
+              "customer"
+            ],
+            "org://quoteko": [
+              "service_provider"
+            ]
+          },
+          "context": {
+            "organization": "org://quoteko",
+            "relationship": "relationship://qk/cust-cxn",
+            "role": "customer",
+            "jurisdiction": "US-NM",
+            "time": "2026-09-01T10:00:00Z",
+            "purpose": "purpose://qk/quoting",
+            "rules": [
+              "rule://qk/tos"
+            ]
+          },
+          "purpose": "property-services quoting/triage",
+          "status": "ACTIVE",
+          "created_at": "2026-09-01T10:00:00Z",
+          "effective_from": "2026-09-01T10:00:00Z",
+          "authority": [
+            "authority://qk/for-matching"
+          ]
+        },
+        {
+          "uri": "consent://qk/match-data",
+          "granted_by": "person://qk/customer",
+          "granted_for": "match my quote request to vetted service offers",
+          "scope": [
+            "permission://qk/read-profile",
+            "permission://qk/present-offers"
+          ],
+          "duration": {
+            "effective": "2026-09-01T10:00:00Z",
+            "expires": "2027-09-01T00:00:00Z"
+          },
+          "revocable": true,
+          "status": "GRANTED"
+        },
+        {
+          "uri": "delegation://qk/s2-match",
+          "grantor": "org://quoteko",
+          "grantee": "agent://s2",
+          "scope": [
+            "rule://qk/s2-run-matching"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "authority://qk/for-matching",
+          "grants": [
+            "request_quote"
+          ],
+          "holder": "org://quoteko"
+        },
+        {
+          "uri": "evidence://qk/e-oidc",
+          "kind": "ANCHORED",
+          "source": "OIDC assertion + attestation",
+          "verity": {
+            "procedure": "oidc-verification",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-09-01T10:00:00Z"
+        },
+        {
+          "uri": "rule://qk/tos",
+          "kind": "POLICY",
+          "text": "vetted contractors; human-accept required for committed hire"
+        },
+        {
+          "uri": "rule://qk/s2-run-matching",
+          "kind": "POLICY",
+          "text": "S2 agent may run capability-bound matching under Quoteko",
+          "grants": [
+            "run_matching"
+          ]
+        },
+        {
+          "uri": "trust://qk/t-norcrete",
+          "subject": "org://quoteko",
+          "target": "org://qk/norcrete",
+          "claim": "roofing & repair reliability",
+          "context": "relationship://qk/cust-cxn",
+          "score": 0.92,
+          "updated_at": "2026-09-01T10:00:00Z"
+        },
+        {
+          "uri": "trust://qk/t-solarworks",
+          "subject": "org://quoteko",
+          "target": "org://qk/solarworks",
+          "claim": "roofing & repair reliability",
+          "context": "relationship://qk/cust-cxn",
+          "score": 0.61,
+          "updated_at": "2026-09-01T10:00:00Z"
+        },
+        {
+          "uri": "trust://qk/t-generalco",
+          "subject": "org://quoteko",
+          "target": "org://qk/generalco",
+          "claim": "roofing reliability",
+          "context": "relationship://qk/cust-cxn",
+          "score": 0.42,
+          "updated_at": "2026-09-01T10:00:00Z"
+        },
+        {
+          "uri": "offer://qk/o-norcrete",
+          "provider": "org://qk/norcrete",
+          "service": "flat-roof replacement & repair",
+          "capability_keys": [
+            "roofing",
+            "repair"
+          ],
+          "price": 12400,
+          "currency": "USD",
+          "terms": "fixed-price, 2yr warranty",
+          "status": "AVAILABLE"
+        },
+        {
+          "uri": "offer://qk/o-solarworks",
+          "provider": "org://qk/solarworks",
+          "service": "roof replacement + solar",
+          "capability_keys": [
+            "roofing",
+            "repair",
+            "solar"
+          ],
+          "price": 18900,
+          "currency": "USD",
+          "terms": "fixed-price, 5yr warranty",
+          "status": "AVAILABLE"
+        },
+        {
+          "uri": "offer://qk/o-generalco",
+          "provider": "org://qk/generalco",
+          "service": "roof patch",
+          "capability_keys": [
+            "roofing"
+          ],
+          "price": 9800,
+          "currency": "USD",
+          "terms": "time-and-materials",
+          "status": "AVAILABLE"
+        }
+      ],
+      "hash": "0b1649194573dd22bae33e47f88af9b74ce0af5f6617feb0d0eb38f07956a4f1"
+    },
+    {
+      "uri": "event://qk/request",
+      "type": "ACTION",
+      "event_id": "ev-qk-1",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-0",
+      "idempotency_key": "idem-qk-1",
+      "signature": "signed-by-person://qk/customer",
+      "occurred_at": "2026-09-01T10:01:00Z",
+      "actor": "person://qk/customer",
+      "detail": "customer submits urgent quote request",
+      "state_update": [
+        {
+          "uri": "interaction://qk/req-quote",
+          "of": "relationship://qk/cust-cxn",
+          "kind": "REQUEST",
+          "events": [
+            "event://qk/request"
+          ]
+        }
+      ],
+      "hash": "1af636a06fa54ebed7c57915e849d1c1522ae721f57dd0a401ec54e23618a948"
+    },
+    {
+      "uri": "event://qk/identity-resolved",
+      "type": "ACTION",
+      "event_id": "ev-qk-2",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-1",
+      "idempotency_key": "idem-qk-2",
+      "signature": "signed-by-agent://s1",
+      "occurred_at": "2026-09-01T10:02:00Z",
+      "actor": "agent://s1",
+      "detail": "resolve_identity -> person://qk/customer (canonical), authn score 0.8",
+      "state_update": [],
+      "hash": "7f903b390fb8d0fde7b9810138b85ce1bbe360f696c57b2b28f4769a36a34656"
+    },
+    {
+      "uri": "event://qk/role-resolved",
+      "type": "DECISION",
+      "event_id": "ev-qk-3",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-2",
+      "idempotency_key": "idem-qk-3",
+      "signature": "signed-by-agent://s1",
+      "occurred_at": "2026-09-01T10:03:00Z",
+      "actor": "agent://s1",
+      "detail": "resolve_role -> customer in relationship://qk/cust-cxn",
+      "state_update": [],
+      "hash": "b621dd5c8be555d6a1a7abb188917b35f76e277cd9712d18b637025fb459ea3d"
+    },
+    {
+      "uri": "event://qk/authorized",
+      "type": "DECISION",
+      "event_id": "ev-qk-4",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-3",
+      "idempotency_key": "idem-qk-4",
+      "signature": "signed-by-agent://s1",
+      "occurred_at": "2026-09-01T10:04:00Z",
+      "actor": "agent://s1",
+      "detail": "authorize request_quote -> request_quote ({'performer': 'person://qk/customer', 'source': 'authority://qk/for-matching', 'relationship': 'relationship://qk/cust-cxn', 'scope': ['request_quote'], 'issued_at': '2026-08-31T23:46:13Z', 'expires_at': '2026-09-01T00:46:13.569107Z'})",
+      "state_update": [],
+      "hash": "561b0c2dd00fadd71359c8ad08affa7d7772d0294a36db55979997e990741cd6"
+    },
+    {
+      "uri": "event://qk/intent",
+      "type": "DECISION",
+      "event_id": "ev-qk-5",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-4",
+      "idempotency_key": "idem-qk-5",
+      "signature": "signed-by-agent://s2",
+      "occurred_at": "2026-09-01T10:05:00Z",
+      "actor": "agent://s2",
+      "detail": "infer_intent -> roof replacement/repair urgency=high",
+      "state_update": [
+        {
+          "uri": "decision://qk/intent",
+          "by": "agent://s2",
+          "authority": "delegation://qk/s2-match",
+          "alternatives": [
+            "defer",
+            "request more detail"
+          ],
+          "confidence": 0.9,
+          "expected_outcome": "quote matched and verified",
+          "detail": {
+            "subject": "person://qk/customer",
+            "need": "roof replacement/repair",
+            "capability_keys": [
+              "repair",
+              "roofing"
+            ],
+            "urgency": "high",
+            "budget": 15000,
+            "inferred_by": "agent://s2"
+          },
+          "made_at": "2026-09-01T10:05:00Z"
+        }
+      ],
+      "hash": "0e2bba0bf46fada6e8b52e632d87bf94ea6e999e613f96b20b916b11af49f2ab"
+    },
+    {
+      "uri": "event://qk/match-1",
+      "type": "DECISION",
+      "event_id": "ev-qk-6",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-5",
+      "idempotency_key": "idem-qk-6",
+      "signature": "signed-by-agent://s2",
+      "occurred_at": "2026-09-01T10:06:00Z",
+      "actor": "agent://s2",
+      "detail": "match #1: offer://qk/o-norcrete score=0.92 (fit 1.00 x trust 0.92)",
+      "state_update": [
+        {
+          "uri": "decision://qk/match-1",
+          "by": "agent://s2",
+          "authority": "delegation://qk/s2-match",
+          "alternatives": [
+            "do nothing"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "offer://qk/o-norcrete",
+          "detail": {
+            "offer": "offer://qk/o-norcrete",
+            "provider": "org://qk/norcrete",
+            "fit": 1.0,
+            "trust": 0.92,
+            "score": 0.92
+          },
+          "made_at": "2026-09-01T10:06:00Z"
+        }
+      ],
+      "hash": "4fc37f4da15cc422f517b61703a6c75d1b36d632625e6a414fd8a492d7db78b4"
+    },
+    {
+      "uri": "event://qk/match-2",
+      "type": "DECISION",
+      "event_id": "ev-qk-7",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-6",
+      "idempotency_key": "idem-qk-7",
+      "signature": "signed-by-agent://s2",
+      "occurred_at": "2026-09-01T10:07:00Z",
+      "actor": "agent://s2",
+      "detail": "match #2: offer://qk/o-solarworks score=0.61 (fit 1.00 x trust 0.61)",
+      "state_update": [
+        {
+          "uri": "decision://qk/match-2",
+          "by": "agent://s2",
+          "authority": "delegation://qk/s2-match",
+          "alternatives": [
+            "do nothing"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "offer://qk/o-solarworks",
+          "detail": {
+            "offer": "offer://qk/o-solarworks",
+            "provider": "org://qk/solarworks",
+            "fit": 1.0,
+            "trust": 0.61,
+            "score": 0.61
+          },
+          "made_at": "2026-09-01T10:07:00Z"
+        }
+      ],
+      "hash": "36d09e564f80fc03c0f071b181a2ada6a76a44767f4e35a004177126d88e2e34"
+    },
+    {
+      "uri": "event://qk/floor",
+      "type": "DECISION",
+      "event_id": "ev-qk-8",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-7",
+      "idempotency_key": "idem-qk-8",
+      "signature": "signed-by-agent://s2",
+      "occurred_at": "2026-09-01T10:08:00Z",
+      "actor": "agent://s2",
+      "detail": "reject offer://qk/o-generalco (trust 0.42 < floor 0.5)",
+      "state_update": [
+        {
+          "uri": "decision://qk/floor-generalco",
+          "by": "agent://s2",
+          "authority": "delegation://qk/s2-match",
+          "confidence": 0.99,
+          "detail": {
+            "offer": "offer://qk/o-generalco",
+            "rejected": "below trust floor"
+          },
+          "made_at": "2026-09-01T10:08:00Z"
+        }
+      ],
+      "hash": "0b5780953aad9bf79d2d44f8a3094bdfc495e70bc011b71dcf925722d51792f8"
+    },
+    {
+      "uri": "event://qk/present",
+      "type": "ACTION",
+      "event_id": "ev-qk-9",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-8",
+      "idempotency_key": "idem-qk-9",
+      "signature": "signed-by-agent://s2",
+      "occurred_at": "2026-09-01T10:09:00Z",
+      "actor": "agent://s2",
+      "detail": "present ranked offers to customer for verification: offer://qk/o-norcrete, offer://qk/o-solarworks",
+      "state_update": [],
+      "hash": "59152d20c35657a5fe6c6319826cdebfb6e14cc38649aa69255e9a5c4c6bb2e2"
+    },
+    {
+      "uri": "event://qk/human-accept",
+      "type": "DECISION",
+      "event_id": "ev-qk-10",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-9",
+      "idempotency_key": "idem-qk-10",
+      "signature": "signed-by-person://qk/customer",
+      "occurred_at": "2026-09-01T10:10:00Z",
+      "actor": "person://qk/customer",
+      "detail": "human verified & accepted offer://qk/o-norcrete -> engage",
+      "state_update": [
+        {
+          "uri": "decision://qk/human-accept",
+          "by": "person://qk/customer",
+          "authority": "authority://qk/for-matching",
+          "alternatives": [
+            "offer://qk/o-solarworks"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "hire org://qk/norcrete",
+          "actual_outcome": "accepted",
+          "made_at": "2026-09-01T10:10:00Z",
+          "evidence": [
+            "evidence://qk/e-oidc"
+          ]
+        }
+      ],
+      "hash": "7834794e21cd4d1fe679ec879148af96484b84b134c89bfa3ef41cd48fa36ec2"
+    },
+    {
+      "uri": "event://qk/commit",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-qk-11",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-10",
+      "idempotency_key": "idem-qk-11",
+      "signature": "signed-by-agent://s2",
+      "occurred_at": "2026-09-01T10:11:00Z",
+      "actor": "agent://s2",
+      "detail": "commit matched offer offer://qk/o-norcrete as current state",
+      "state_update": [
+        {
+          "uri": "offer://qk/o-norcrete",
+          "provider": "org://qk/norcrete",
+          "service": "flat-roof replacement & repair",
+          "capability_keys": [
+            "roofing",
+            "repair"
+          ],
+          "price": 12400,
+          "currency": "USD",
+          "terms": "fixed-price, 2yr warranty",
+          "status": "COMMITTED",
+          "matched_by": "agent://s2",
+          "verified_by": "person://qk/customer",
+          "verified_at": "2026-09-01T10:11:00Z"
+        }
+      ],
+      "hash": "ee7e24e1eacef87972d157268f718038126fc75ad0b0fe3dd5da0d566f9f80ed"
+    },
+    {
+      "uri": "event://qk/expect-on-time",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-900",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-899",
+      "idempotency_key": "idem-s2-900",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s5",
+      "detail": "register expectation for on-time roofing completion",
+      "state_update": [
+        {
+          "uri": "expectation://qk/e-on-time",
+          "actor": "org://quoteko",
+          "subject": "contracted roofing job",
+          "condition": "complete by committed deadline",
+          "metric": "on_time",
+          "threshold": 0.8,
+          "deadline": "2026-09-20T00:00:00Z",
+          "evidence_required": "CLEAR"
+        }
+      ],
+      "hash": "231d7de7b113ddcf62c863008b7d0b2941703dde97f234349f47c7150678d6f4"
+    },
+    {
+      "uri": "event://qk/outcome-norcrete",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-1000",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-999",
+      "idempotency_key": "idem-s2-1000",
+      "signature": "signed-by-org://qk/norcrete",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "org://qk/norcrete",
+      "detail": "job job-norcrete by org://qk/norcrete: actual 2026-09-22T00:00:00Z vs committed 2026-09-20T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://qk/outcome-norcrete",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-1000",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-999",
+          "idempotency_key": "idem-s2-1000",
+          "signature": "signed-by-org://qk/norcrete",
+          "occurred_at": "2026-08-31T23:46:13Z",
+          "actor": "org://qk/norcrete",
+          "detail": "job job-norcrete by org://qk/norcrete: actual 2026-09-22T00:00:00Z vs committed 2026-09-20T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "job-norcrete",
+          "provider": "org://qk/norcrete",
+          "committed_deadline": "2026-09-20T00:00:00Z",
+          "actual_completed_at": "2026-09-22T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://qk/job-norcrete",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "job": "job-norcrete",
+      "provider": "org://qk/norcrete",
+      "committed_deadline": "2026-09-20T00:00:00Z",
+      "actual_completed_at": "2026-09-22T00:00:00Z",
+      "on_time": false,
+      "hash": "8a0dadddc8491150eb180b86779d70aad6359719e0b3cbbc116b34aec8bb83e1"
+    },
+    {
+      "uri": "event://qk/verify-job-norcrete",
+      "type": "DECISION",
+      "event_id": "ev-s2-1001",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-1000",
+      "idempotency_key": "idem-s2-1001",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://qk/norcrete completed job-norcrete by its committed deadline (on-time roofing completion)' -> degree 0.98 under procedure 'completion-anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://qk/job-norcrete",
+          "proposer": "agent://s5",
+          "statement": "org://qk/norcrete completed job-norcrete by its committed deadline (on-time roofing completion)"
+        },
+        {
+          "uri": "evidence://qk/job-norcrete",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "a515c25d7356bfe0a22f2470db2369b054ca73c3a1e17c35070c8426135f9d14"
+    },
+    {
+      "uri": "event://qk/trust-update-norcrete",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-1002",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-1001",
+      "idempotency_key": "idem-s2-1002",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s5",
+      "detail": "trust for org://qk/norcrete [roofing & repair reliability] 0.920 -> 0.528 (outcome=0, exp=0.8, ev=0.98, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://qk/t-norcrete",
+          "subject": "org://quoteko",
+          "target": "org://qk/norcrete",
+          "claim": "roofing & repair reliability",
+          "context": "relationship://qk/cust-cxn",
+          "score": 0.528,
+          "updated_at": "2026-08-31T23:46:13Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://qk/job-norcrete"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "117546827c99bee9f3f1adbf4616ba663cf66f1c61884245e9d931aaf32e0589"
+    },
+    {
+      "uri": "event://qk/outcome-solarworks",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-1010",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-1009",
+      "idempotency_key": "idem-s2-1010",
+      "signature": "signed-by-org://qk/solarworks",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "org://qk/solarworks",
+      "detail": "job job-solarworks by org://qk/solarworks: actual 2026-09-24T00:00:00Z vs committed 2026-09-25T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://qk/outcome-solarworks",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-1010",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-1009",
+          "idempotency_key": "idem-s2-1010",
+          "signature": "signed-by-org://qk/solarworks",
+          "occurred_at": "2026-08-31T23:46:13Z",
+          "actor": "org://qk/solarworks",
+          "detail": "job job-solarworks by org://qk/solarworks: actual 2026-09-24T00:00:00Z vs committed 2026-09-25T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "job-solarworks",
+          "provider": "org://qk/solarworks",
+          "committed_deadline": "2026-09-25T00:00:00Z",
+          "actual_completed_at": "2026-09-24T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://qk/job-solarworks",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "job": "job-solarworks",
+      "provider": "org://qk/solarworks",
+      "committed_deadline": "2026-09-25T00:00:00Z",
+      "actual_completed_at": "2026-09-24T00:00:00Z",
+      "on_time": true,
+      "hash": "cc7f8c74f9e3d7e8017a70f95707e0e938186e7d129b23af6fd2728d1d0e5f30"
+    },
+    {
+      "uri": "event://qk/verify-job-solarworks",
+      "type": "DECISION",
+      "event_id": "ev-s2-1011",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-1010",
+      "idempotency_key": "idem-s2-1011",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://qk/solarworks completed job-solarworks by its committed deadline (on-time roofing completion)' -> degree 0.98 under procedure 'completion-anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://qk/job-solarworks",
+          "proposer": "agent://s5",
+          "statement": "org://qk/solarworks completed job-solarworks by its committed deadline (on-time roofing completion)"
+        },
+        {
+          "uri": "evidence://qk/job-solarworks",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "5211f62e7302475d62d2ca62e308e6598c5e8e3e8a7c1f99f9b19b657c717402"
+    },
+    {
+      "uri": "event://qk/trust-update-solarworks",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-1012",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-1011",
+      "idempotency_key": "idem-s2-1012",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s5",
+      "detail": "trust for org://qk/solarworks [roofing & repair reliability] 0.610 -> 0.708 (outcome=1, exp=0.8, ev=0.98, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://qk/t-solarworks",
+          "subject": "org://quoteko",
+          "target": "org://qk/solarworks",
+          "claim": "roofing & repair reliability",
+          "context": "relationship://qk/cust-cxn",
+          "score": 0.708,
+          "updated_at": "2026-08-31T23:46:13Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://qk/job-solarworks"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "dfcfb60dd15e8cc4f25a43d6644ce4bf3e5e8757d0cd27d8780bfc4b730538e1"
+    },
+    {
+      "uri": "event://qk/s3-provision",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s3-2000",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-1999",
+      "idempotency_key": "idem-s3-2000",
+      "signature": "signed-by-agent://s1",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s1",
+      "detail": "provision S3 orchestrator + worker fleet with bounded delegations",
+      "state_update": [
+        {
+          "uri": "agent://s3",
+          "type": "AGENT"
+        },
+        {
+          "uri": "agent://w-local",
+          "type": "AGENT"
+        },
+        {
+          "uri": "agent://w-cloud",
+          "type": "AGENT"
+        },
+        {
+          "uri": "agent://w-frontier",
+          "type": "AGENT"
+        },
+        {
+          "uri": "delegation://qk/s3-execute",
+          "grantor": "org://quoteko",
+          "grantee": "agent://s3",
+          "scope": [
+            "rule://qk/s3-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://qk/w-local",
+          "grantor": "org://quoteko",
+          "grantee": "agent://w-local",
+          "scope": [
+            "rule://qk/w-local-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://qk/w-cloud",
+          "grantor": "org://quoteko",
+          "grantee": "agent://w-cloud",
+          "scope": [
+            "rule://qk/w-cloud-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://qk/w-frontier",
+          "grantor": "org://quoteko",
+          "grantee": "agent://w-frontier",
+          "scope": [
+            "rule://qk/w-frontier-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "authority://qk/for-exec",
+          "grants": [
+            "release_final_payment",
+            "approve_final_payment"
+          ],
+          "holder": "org://quoteko"
+        },
+        {
+          "uri": "rule://qk/s3-run",
+          "kind": "POLICY",
+          "text": "S3 orchestrator may split + commit a matched job under Quoteko",
+          "grants": [
+            "orchestrate",
+            "split_work",
+            "commit_job"
+          ]
+        },
+        {
+          "uri": "rule://qk/w-local-run",
+          "kind": "POLICY",
+          "text": "local worker prepares work order + schedule (reversible)",
+          "grants": [
+            "prepare_work_order_and_schedule"
+          ]
+        },
+        {
+          "uri": "rule://qk/w-cloud-run",
+          "kind": "POLICY",
+          "text": "cloud worker dispatches + verifies materials (reversible)",
+          "grants": [
+            "dispatch_dispatcher_and_verify_materials"
+          ]
+        },
+        {
+          "uri": "rule://qk/w-frontier-run",
+          "kind": "POLICY",
+          "text": "frontier worker may release final payment ONLY after human acknowledgement",
+          "grants": [
+            "release_final_payment"
+          ]
+        }
+      ],
+      "hash": "fc7a6b40a009ea559f134a14650b40d27fce7a939335d6f3311acb9b935740be"
+    },
+    {
+      "uri": "event://qk/s3-human-accept",
+      "type": "DECISION",
+      "event_id": "ev-s3-2010",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2009",
+      "idempotency_key": "idem-s3-2010",
+      "signature": "signed-by-person://qk/customer",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "person://qk/customer",
+      "detail": "customer verified & accepted offer://qk/o-solarworks (2nd engagement) -> engage",
+      "state_update": [
+        {
+          "uri": "decision://qk/s3-human-accept",
+          "by": "person://qk/customer",
+          "authority": "authority://qk/for-exec",
+          "alternatives": [
+            "offer://qk/o-norcrete"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "engage org://qk/solarworks",
+          "actual_outcome": "accepted",
+          "made_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "3364ebced814a070c153de909b6a7da3da2b1ecba5a8404fcb2641d604bac3d1"
+    },
+    {
+      "uri": "event://qk/s3-commit-solarworks",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s3-2020",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2019",
+      "idempotency_key": "idem-s3-2020",
+      "signature": "signed-by-agent://s3",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s3",
+      "detail": "commit matched offer offer://qk/o-solarworks -> commitment://qk/c-solarworks (AGREED)",
+      "state_update": [
+        {
+          "uri": "commitment://qk/c-solarworks",
+          "by": "agent://s3",
+          "to": "org://qk/solarworks",
+          "obligation": "offer://qk/o-solarworks",
+          "expectation": "expectation://qk/e-on-time",
+          "status": "AGREED",
+          "terms": {
+            "price": 18900,
+            "currency": "USD",
+            "warranty": "5yr",
+            "signed": true
+          },
+          "agreed_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "91fcd8e9626172093566ec296948f3ce5b13f570397d08ae2b2fa0883a19b337"
+    },
+    {
+      "uri": "event://qk/s3-split-c-solarworks",
+      "type": "DECISION",
+      "event_id": "ev-s3-2030",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2029",
+      "idempotency_key": "idem-s3-2030",
+      "signature": "signed-by-agent://s3",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s3",
+      "detail": "orchestrate org://qk/solarworks: 3 tasks across the routing seam (trust 0.708)",
+      "state_update": [
+        {
+          "uri": "decision://qk/s3-split-c-solarworks",
+          "by": "agent://s3",
+          "authority": "delegation://qk/s3-execute",
+          "alternatives": [
+            "execute serially",
+            "defer job",
+            "renegotiate terms"
+          ],
+          "confidence": 0.9,
+          "expected_outcome": "3 fleet tasks under the routing seam",
+          "actual_outcome": "plan sealed",
+          "detail": {
+            "commitment": "commitment://qk/c-solarworks",
+            "provider": "org://qk/solarworks",
+            "trust": 0.708,
+            "tasks": [
+              {
+                "task_id": "t1",
+                "action": "prepare_work_order_and_schedule",
+                "worker": "agent://w-local",
+                "seam_tier": "local",
+                "tier": "local",
+                "reversible": true,
+                "cost_knowable": true,
+                "authority": "delegation://qk/w-local",
+                "status": "PENDING"
+              },
+              {
+                "task_id": "t2",
+                "action": "dispatch_dispatcher_and_verify_materials",
+                "worker": "agent://w-cloud",
+                "seam_tier": "private-cloud",
+                "tier": "private-cloud",
+                "reversible": true,
+                "cost_knowable": true,
+                "authority": "delegation://qk/w-cloud",
+                "status": "PENDING"
+              },
+              {
+                "task_id": "t3",
+                "action": "release_final_payment",
+                "worker": "agent://w-frontier",
+                "seam_tier": "frontier",
+                "tier": "human",
+                "reversible": false,
+                "cost_knowable": false,
+                "authority": "delegation://qk/w-frontier",
+                "status": "ESCALATED"
+              }
+            ]
+          },
+          "made_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "3ad2deea3aa43277bc9f27ee46f22d740d18765d533d078755f7f012e3fa7431"
+    },
+    {
+      "uri": "event://qk/s3-step-t1",
+      "type": "ACTION",
+      "event_id": "ev-s3-2041",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2040",
+      "idempotency_key": "idem-s3-2041",
+      "signature": "signed-by-agent://w-local",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://w-local",
+      "detail": "agent://w-local [prepare_work_order_and_schedule @ local] executed (authorized via delegation://qk/w-local)",
+      "state_update": [],
+      "worker": "agent://w-local",
+      "action": "prepare_work_order_and_schedule",
+      "task_id": "t1",
+      "tier": "local",
+      "outcome": "done",
+      "hash": "bc6ca820bc8dd0e3ab7519c0d61bd174854dce4fdd2aed40acb2d70e8c623369"
+    },
+    {
+      "uri": "event://qk/s3-step-t2",
+      "type": "ACTION",
+      "event_id": "ev-s3-2042",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2041",
+      "idempotency_key": "idem-s3-2042",
+      "signature": "signed-by-agent://w-cloud",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://w-cloud",
+      "detail": "agent://w-cloud [dispatch_dispatcher_and_verify_materials @ private-cloud] executed (authorized via delegation://qk/w-cloud)",
+      "state_update": [],
+      "worker": "agent://w-cloud",
+      "action": "dispatch_dispatcher_and_verify_materials",
+      "task_id": "t2",
+      "tier": "private-cloud",
+      "outcome": "done",
+      "hash": "88fde307df7cd215b82ad9490fbb580a14f897a02574fb7fe456cf3520a55613"
+    },
+    {
+      "uri": "event://qk/s3-escalate-t3",
+      "type": "DECISION",
+      "event_id": "ev-s3-2050",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2049",
+      "idempotency_key": "idem-s3-2050",
+      "signature": "signed-by-agent://s3",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s3",
+      "detail": "release_final_payment is irreversible/unknowable-cost -> escalated to person://qk/approver; NOT auto-executed",
+      "state_update": [
+        {
+          "uri": "decision://qk/s3-esc-t3",
+          "by": "agent://s3",
+          "authority": "delegation://qk/w-frontier",
+          "alternatives": [
+            "auto-release (NOT permitted: irreversible/unknowable)",
+            "hold pending human acknowledgement"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "escalate release_final_payment to person://qk/approver",
+          "actual_outcome": "ESCALATED, NOT auto-executed",
+          "detail": {
+            "task": {
+              "task_id": "t3",
+              "action": "release_final_payment",
+              "worker": "agent://w-frontier",
+              "seam_tier": "frontier",
+              "tier": "human",
+              "reversible": false,
+              "cost_knowable": false,
+              "authority": "delegation://qk/w-frontier",
+              "status": "ESCALATED"
+            },
+            "commitment": "commitment://qk/c-solarworks",
+            "trigger": {
+              "irreversible_failure": true,
+              "cost_failure_unknowable": true
+            }
+          },
+          "made_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "6d02e305894f12a49063bf9fa311dab7db7a9882fa58f6273139b814ca6c6e47"
+    },
+    {
+      "uri": "event://qk/s3-human-t3",
+      "type": "DECISION",
+      "event_id": "ev-s3-2060",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2059",
+      "idempotency_key": "idem-s3-2060",
+      "signature": "signed-by-person://qk/approver",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "person://qk/approver",
+      "detail": "person://qk/approver signed acknowledgement -> enumerates alternatives and commits release_final_payment",
+      "state_update": [
+        {
+          "uri": "decision://qk/s3-human-t3",
+          "by": "person://qk/approver",
+          "authority": "authority://qk/for-exec",
+          "alternatives": [
+            "release_in_full",
+            "hold_pending_inspection",
+            "release_partial_and_hold_if_fault",
+            "open_dispute"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "release_final_payment",
+          "actual_outcome": "release_in_full (human approved)",
+          "evidence": [
+            "evidence://qk/e-oidc"
+          ],
+          "detail": {
+            "task": "t3",
+            "action": "release_final_payment",
+            "commitment": "commitment://qk/c-solarworks",
+            "trigger": {
+              "irreversible_failure": true,
+              "cost_failure_unknowable": true
+            }
+          },
+          "made_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "4c0a87ed691e9615c428e28af76dee2ac3d2e886d01cafc7cb438b9e3c9d58a1"
+    },
+    {
+      "uri": "event://qk/s3-step-t3",
+      "type": "ACTION",
+      "event_id": "ev-s3-2070",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2069",
+      "idempotency_key": "idem-s3-2070",
+      "signature": "signed-by-agent://w-frontier",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://w-frontier",
+      "detail": "agent://w-frontier [release_final_payment @ human] executed (authorized via delegation://qk/w-frontier)",
+      "state_update": [],
+      "worker": "agent://w-frontier",
+      "action": "release_final_payment",
+      "task_id": "t3",
+      "tier": "human",
+      "outcome": "done",
+      "hash": "7f81050a25bf5ff8b3b2066a356ad66082136b534fcfaf9c2d2e6ce1cbd63d7e"
+    },
+    {
+      "uri": "event://qk/outcome-solarworks-s3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-3000",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-2999",
+      "idempotency_key": "idem-s2-3000",
+      "signature": "signed-by-org://qk/solarworks",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "org://qk/solarworks",
+      "detail": "job job-solarworks-s3 by org://qk/solarworks: actual 2026-09-29T00:00:00Z vs committed 2026-10-01T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://qk/outcome-solarworks-s3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-3000",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-2999",
+          "idempotency_key": "idem-s2-3000",
+          "signature": "signed-by-org://qk/solarworks",
+          "occurred_at": "2026-08-31T23:46:13Z",
+          "actor": "org://qk/solarworks",
+          "detail": "job job-solarworks-s3 by org://qk/solarworks: actual 2026-09-29T00:00:00Z vs committed 2026-10-01T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "job-solarworks-s3",
+          "provider": "org://qk/solarworks",
+          "committed_deadline": "2026-10-01T00:00:00Z",
+          "actual_completed_at": "2026-09-29T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://qk/job-solarworks-s3",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "job": "job-solarworks-s3",
+      "provider": "org://qk/solarworks",
+      "committed_deadline": "2026-10-01T00:00:00Z",
+      "actual_completed_at": "2026-09-29T00:00:00Z",
+      "on_time": true,
+      "hash": "1bb9ad838782e0edfd26d5b0c1fcaa3c5be0b1b5b5276695a4b95234d8a9b1e0"
+    },
+    {
+      "uri": "event://qk/verify-job-solarworks-s3",
+      "type": "DECISION",
+      "event_id": "ev-s2-3001",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-3000",
+      "idempotency_key": "idem-s2-3001",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://qk/solarworks completed job-solarworks-s3 by its committed deadline' -> degree 0.98 under procedure 'completion-anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://qk/job-solarworks-s3",
+          "proposer": "agent://s5",
+          "statement": "org://qk/solarworks completed job-solarworks-s3 by its committed deadline"
+        },
+        {
+          "uri": "evidence://qk/job-solarworks-s3",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "5e46c40363a18ceff59f1535f629f013020fa18abb06c505c4b82b0124e2b1b7"
+    },
+    {
+      "uri": "event://qk/trust-update-solarworks",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-3002",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-3001",
+      "idempotency_key": "idem-s2-3002",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s5",
+      "detail": "trust for org://qk/solarworks [roofing & repair reliability] 0.708 -> 0.806 (outcome=1, exp=0.8, ev=0.98, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://qk/t-solarworks",
+          "subject": "org://quoteko",
+          "target": "org://qk/solarworks",
+          "claim": "roofing & repair reliability",
+          "context": "relationship://qk/cust-cxn",
+          "score": 0.806,
+          "updated_at": "2026-08-31T23:46:13Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://qk/job-solarworks-s3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "2e2958e11e2023ab5cea8a5d58280752203a6d705d9f659f6cb3c94951791ab1"
+    },
+    {
+      "uri": "event://qk/s4-provision",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s4-4000",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-3999",
+      "idempotency_key": "idem-s4-4000",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "provision S4 settlement authority + expectation",
+      "state_update": [
+        {
+          "uri": "authority://qk/for-settlement",
+          "holder": "org://quoteko",
+          "grants": [
+            "settle",
+            "release_settlement"
+          ],
+          "roles": [
+            "settlement_service"
+          ]
+        },
+        {
+          "uri": "expectation://qk/e-settle-solarworks",
+          "actor": "org://quoteko",
+          "subject": "solarworks roofing job",
+          "condition": "full and on-time settlement of the agreed value",
+          "metric": "settled_value",
+          "threshold": 18900,
+          "deadline": "2026-10-01T00:00:00Z",
+          "evidence_required": "CLEAR"
+        }
+      ],
+      "hash": "1fa5dff3f2ee1b70324c7f73a01a8d8ccd2db4bf013c7a65a172db783b0ffa8d"
+    },
+    {
+      "uri": "event://qk/s4-exchange-solarworks",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-4010",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-4009",
+      "idempotency_key": "idem-s4-4010",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange solarworks: 18900 USD org://quoteko->org://qk/solarworks (value 18900, cost 18900)",
+      "state_update": [
+        {
+          "uri": "asset://money/qk-escrow-solarworks",
+          "kind": "MONEY",
+          "title": "org://qk/solarworks",
+          "custody": "cleared",
+          "value": 18900,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://quoteko for org://qk/solarworks (solarworks)"
+        },
+        {
+          "uri": "obligation://qk/s4-pay-solarworks",
+          "subject": "org://quoteko",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 18900 USD for contracted work by org://qk/solarworks",
+          "due_by": "2026-10-01T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-30T00:00:00Z"
+        },
+        {
+          "uri": "receipt://qk/s4-receipt-solarworks",
+          "kind": "SETTLEMENT",
+          "from": "org://quoteko",
+          "to": "org://qk/solarworks",
+          "amount": 18900,
+          "currency": "USD",
+          "received_at": "2026-09-30T00:00:00Z"
+        },
+        {
+          "uri": "decision://qk/s4-recon-solarworks",
+          "by": "agent://s4",
+          "authority": "authority://qk/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 18900 USD from org://quoteko",
+          "actual_outcome": "matched exactly: settled 18900 USD",
+          "detail": {
+            "slug": "solarworks",
+            "expected": 18900,
+            "actual": 18900,
+            "matched": true,
+            "buyer": "org://quoteko",
+            "provider": "org://qk/solarworks",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-08-31T23:46:13Z"
+        },
+        {
+          "uri": "event://qk/s4-exchange-solarworks",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-4010",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-4009",
+          "idempotency_key": "idem-s4-4010",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-08-31T23:46:13Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange solarworks: 18900 USD org://quoteko->org://qk/solarworks (value 18900, cost 18900)",
+          "state_update": [],
+          "value": 18900,
+          "cost": 18900,
+          "price": 18900,
+          "currency": "USD",
+          "buyer": "org://quoteko",
+          "provider": "org://qk/solarworks",
+          "settled_at": "2026-09-30T00:00:00Z",
+          "exchange_of": "commitment://qk/c-solarworks"
+        }
+      ],
+      "value": 18900,
+      "cost": 18900,
+      "price": 18900,
+      "currency": "USD",
+      "buyer": "org://quoteko",
+      "provider": "org://qk/solarworks",
+      "settled_at": "2026-09-30T00:00:00Z",
+      "exchange_of": "commitment://qk/c-solarworks",
+      "hash": "0ece89220b3beafe2d701d8bf59958c25166b5aaccf54faff594c51496bf90cf"
+    },
+    {
+      "uri": "event://qk/s4-outcome-solarworks",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-4020",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-4019",
+      "idempotency_key": "idem-s4-4020",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle solarworks: settled 18900 vs expected 18900 by 2026-10-01T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://qk/s4-outcome-solarworks",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-4020",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-4019",
+          "idempotency_key": "idem-s4-4020",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-08-31T23:46:13Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle solarworks: settled 18900 vs expected 18900 by 2026-10-01T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 18900,
+          "actual": 18900,
+          "deadline": "2026-10-01T00:00:00Z",
+          "settled_at": "2026-09-30T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 18900,
+      "actual": 18900,
+      "deadline": "2026-10-01T00:00:00Z",
+      "settled_at": "2026-09-30T00:00:00Z",
+      "score": 1.0,
+      "hash": "71a4c78360a70f3a3bce528bbdc84b934fc7110661ec3edafed225c390ddc0cc"
+    },
+    {
+      "uri": "event://qk/s4-verify-solarworks",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-4030",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-4029",
+      "idempotency_key": "idem-s2-4030",
+      "signature": "signed-by-org://qk/solarworks",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "org://qk/solarworks",
+      "detail": "job job-solarworks-s4 by org://qk/solarworks: actual 2026-09-30T00:00:00Z vs committed 2026-10-01T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://qk/s4-verify-solarworks",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-4030",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-4029",
+          "idempotency_key": "idem-s2-4030",
+          "signature": "signed-by-org://qk/solarworks",
+          "occurred_at": "2026-08-31T23:46:13Z",
+          "actor": "org://qk/solarworks",
+          "detail": "job job-solarworks-s4 by org://qk/solarworks: actual 2026-09-30T00:00:00Z vs committed 2026-10-01T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "job-solarworks-s4",
+          "provider": "org://qk/solarworks",
+          "committed_deadline": "2026-10-01T00:00:00Z",
+          "actual_completed_at": "2026-09-30T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://qk/job-solarworks-s4",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "job": "job-solarworks-s4",
+      "provider": "org://qk/solarworks",
+      "committed_deadline": "2026-10-01T00:00:00Z",
+      "actual_completed_at": "2026-09-30T00:00:00Z",
+      "on_time": true,
+      "hash": "8a2d61e549ca2407e46bf81054e6c3bd13593fef4ab6eba3316823261b093e7b"
+    },
+    {
+      "uri": "event://qk/verify-job-solarworks-s4",
+      "type": "DECISION",
+      "event_id": "ev-s2-4031",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-4030",
+      "idempotency_key": "idem-s2-4031",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://qk/solarworks settled the exchange met per event://qk/s4-outcome-solarworks' -> degree 0.98 under procedure 'completion-anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://qk/job-solarworks-s4",
+          "proposer": "agent://s5",
+          "statement": "org://qk/solarworks settled the exchange met per event://qk/s4-outcome-solarworks"
+        },
+        {
+          "uri": "evidence://qk/job-solarworks-s4",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "1444264dff2bc32c6ba0b1fdecebffcc51737863f7ef230a6c5faec845c4ab64"
+    },
+    {
+      "uri": "event://qk/trust-update-solarworks",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-4032",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-4031",
+      "idempotency_key": "idem-s2-4032",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s5",
+      "detail": "trust for org://qk/solarworks [roofing & repair reliability] 0.806 -> 0.904 (outcome=1, exp=0.8, ev=0.98, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://qk/t-solarworks",
+          "subject": "org://quoteko",
+          "target": "org://qk/solarworks",
+          "claim": "roofing & repair reliability",
+          "context": "relationship://qk/cust-cxn",
+          "score": 0.904,
+          "updated_at": "2026-08-31T23:46:13Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://qk/job-solarworks-s4"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "6f714f785e85481e4850b17f339fb93490898cadeb093f612c889eecccc7ae2b"
+    },
+    {
+      "uri": "event://qk/s42-provision",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s4-5000",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-4999",
+      "idempotency_key": "idem-s4-5000",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "extend relationship to two roles (customer+employee) with scoped authz+trust",
+      "state_update": [
+        {
+          "uri": "relationship://qk/cust-cxn",
+          "participants": [
+            "person://qk/customer",
+            "org://quoteko"
+          ],
+          "roles": {
+            "person://qk/customer": [
+              "customer",
+              "employee"
+            ],
+            "org://quoteko": [
+              "service_provider",
+              "employer"
+            ]
+          },
+          "context": {
+            "organization": "org://quoteko",
+            "relationship": "relationship://qk/cust-cxn",
+            "role": "customer",
+            "jurisdiction": "US-NM",
+            "time": "2026-09-01T10:00:00Z",
+            "purpose": "purpose://qk/quoting",
+            "rules": [
+              "rule://qk/tos"
+            ]
+          },
+          "purpose": "property-services quoting/triage",
+          "status": "ACTIVE",
+          "created_at": "2026-09-01T10:00:00Z",
+          "effective_from": "2026-09-01T10:00:00Z",
+          "authority": [
+            "authority://qk/for-matching"
+          ],
+          "authority_by_role": {
+            "customer": "authority://qk/for-matching",
+            "employee": "authority://qk/for-employment"
+          },
+          "consent": [
+            "consent://qk/match-data",
+            "consent://qk/employee-consent"
+          ]
+        },
+        {
+          "uri": "authority://qk/for-employment",
+          "holder": "org://quoteko",
+          "grants": [
+            "submit_timesheet",
+            "enroll_benefits",
+            "receive_payroll"
+          ],
+          "roles": [
+            "employee"
+          ]
+        },
+        {
+          "uri": "rule://qk/emp-actions",
+          "kind": "POLICY",
+          "text": "employee-role actions within Quoteko",
+          "grants": [
+            "submit_timesheet",
+            "enroll_benefits",
+            "receive_payroll"
+          ]
+        },
+        {
+          "uri": "consent://qk/employee-consent",
+          "granted_by": "person://qk/customer",
+          "granted_for": "employment & payroll rights with Quoteko as employer",
+          "scope": [
+            "rule://qk/emp-actions"
+          ],
+          "duration": {
+            "effective": "2026-09-01T00:00:00Z",
+            "expires": "2027-09-01T00:00:00Z"
+          },
+          "revocable": true,
+          "status": "GRANTED"
+        },
+        {
+          "uri": "trust://qk/t-emp-quoteko",
+          "subject": "person://qk/customer",
+          "target": "org://quoteko",
+          "claim": "payroll & benefits reliability",
+          "context": "relationship://qk/cust-cxn?role=employee",
+          "score": 0.5,
+          "updated_at": "2026-08-31T23:46:13Z"
+        },
+        {
+          "uri": "offer://qk/o-payroll",
+          "provider": "org://quoteko",
+          "service": "payroll & benefits services to employees",
+          "capability_keys": [
+            "payroll"
+          ],
+          "price": 0,
+          "currency": "USD",
+          "terms": "employment service",
+          "status": "AVAILABLE"
+        },
+        {
+          "uri": "offer://qk/o-benefits",
+          "provider": "org://quoteko",
+          "service": "benefits administration",
+          "capability_keys": [
+            "benefits"
+          ],
+          "price": 0,
+          "currency": "USD",
+          "terms": "employment service",
+          "status": "AVAILABLE"
+        },
+        {
+          "uri": "agent://w-payroll",
+          "type": "AGENT"
+        },
+        {
+          "uri": "rule://qk/w-payroll-run",
+          "kind": "POLICY",
+          "text": "payroll worker may issue paystub & disburse (reversible)",
+          "grants": [
+            "issue_paystub_and_disburse"
+          ]
+        },
+        {
+          "uri": "delegation://qk/w-payroll",
+          "grantor": "org://quoteko",
+          "grantee": "agent://w-payroll",
+          "scope": [
+            "rule://qk/w-payroll-run"
+          ],
+          "status": "ACTIVE"
+        }
+      ],
+      "hash": "4428d465a621c1e22080f28570794142431ff9a13c20d17d9d0cd844f03bb042"
+    },
+    {
+      "uri": "event://qk/s42-authz",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s4-5010",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-5009",
+      "idempotency_key": "idem-s4-5010",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "role-scoped authorization proven both ways (same relationship, both roles)",
+      "state_update": [
+        {
+          "uri": "decision://qk/s42-role-authz",
+          "by": "agent://s4",
+          "authority": "authority://qk/for-employment",
+          "confidence": 1.0,
+          "actual_outcome": "scoped per role",
+          "detail": {
+            "employee": {
+              "submit_timesheet": true,
+              "receive_payroll": true,
+              "request_quote_denied": true
+            },
+            "customer": {
+              "request_quote": true,
+              "receive_payroll_denied": true
+            }
+          },
+          "made_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "d2b322f9c2807596f094bb78d45df9b18182faa323aa8016f3d427a3758b766b"
+    },
+    {
+      "uri": "event://qk/s42-match",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s4-5020",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-5019",
+      "idempotency_key": "idem-s4-5020",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "employee-role match: offer://qk/o-payroll (score 0.500)",
+      "state_update": [
+        {
+          "uri": "decision://qk/s42-match",
+          "by": "agent://s2",
+          "authority": "delegation://qk/s2-match",
+          "alternatives": [
+            "defer"
+          ],
+          "confidence": 0.9,
+          "expected_outcome": "offer://qk/o-payroll",
+          "detail": {
+            "offer": "offer://qk/o-payroll",
+            "provider": "org://quoteko",
+            "fit": 1.0,
+            "trust": 0.5,
+            "score": 0.5
+          },
+          "made_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "1082035b192a35816c120b53fdf764430e3e5ecaa57345697b9648b10f2b9d1b"
+    },
+    {
+      "uri": "event://qk/s3-commit-quoteko",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s3-5030",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-5029",
+      "idempotency_key": "idem-s3-5030",
+      "signature": "signed-by-agent://s3",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s3",
+      "detail": "commit matched offer offer://qk/o-payroll -> commitment://qk/c-quoteko (AGREED)",
+      "state_update": [
+        {
+          "uri": "commitment://qk/c-quoteko",
+          "by": "agent://s3",
+          "to": "org://quoteko",
+          "obligation": "offer://qk/o-payroll",
+          "expectation": "expectation://qk/e-settle-emp-payroll",
+          "status": "AGREED",
+          "terms": {
+            "currency": "USD",
+            "kind": "payroll",
+            "signed": true
+          },
+          "agreed_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "003dd8a28b751653fea5fdb1895c40899ef0d2620224a6b7048ff025308aa485"
+    },
+    {
+      "uri": "event://qk/s3-step-t-payroll",
+      "type": "ACTION",
+      "event_id": "ev-s3-5040",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-5039",
+      "idempotency_key": "idem-s3-5040",
+      "signature": "signed-by-agent://w-payroll",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://w-payroll",
+      "detail": "agent://w-payroll [issue_paystub_and_disburse @ private-cloud] executed (authorized via delegation://qk/w-payroll)",
+      "state_update": [],
+      "worker": "agent://w-payroll",
+      "action": "issue_paystub_and_disburse",
+      "task_id": "t-payroll",
+      "tier": "private-cloud",
+      "outcome": "done",
+      "hash": "19665550d9cd1331a4e9b9347e4303824833942e4a200cc7c32e7718717bc22e"
+    },
+    {
+      "uri": "event://qk/s42-emp-exp",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s4-5050",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-5049",
+      "idempotency_key": "idem-s4-5050",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "register payroll expectation",
+      "state_update": [
+        {
+          "uri": "expectation://qk/e-settle-emp-payroll",
+          "actor": "org://quoteko",
+          "subject": "employee payroll",
+          "condition": "full and on-time settlement of the agreed value",
+          "metric": "settled_value",
+          "threshold": 3200,
+          "deadline": "2026-10-31T00:00:00Z",
+          "evidence_required": "CLEAR"
+        }
+      ],
+      "hash": "1d829309320542a5590a1f00a7495b0bf4e83cbc894d1be4cd3f65c6f545cbfc"
+    },
+    {
+      "uri": "event://qk/s4-exchange-emp-payroll",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-5060",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-5059",
+      "idempotency_key": "idem-s4-5060",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange emp-payroll: 3200 USD org://quoteko->person://qk/customer (value 3200, cost 3200)",
+      "state_update": [
+        {
+          "uri": "asset://money/qk-escrow-emp-payroll",
+          "kind": "MONEY",
+          "title": "person://qk/customer",
+          "custody": "cleared",
+          "value": 3200,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://quoteko for person://qk/customer (emp-payroll)"
+        },
+        {
+          "uri": "obligation://qk/s4-pay-emp-payroll",
+          "subject": "org://quoteko",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 3200 USD for contracted work by person://qk/customer",
+          "due_by": "2026-10-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-30T00:00:00Z"
+        },
+        {
+          "uri": "receipt://qk/s4-receipt-emp-payroll",
+          "kind": "SETTLEMENT",
+          "from": "org://quoteko",
+          "to": "person://qk/customer",
+          "amount": 3200,
+          "currency": "USD",
+          "received_at": "2026-09-30T00:00:00Z"
+        },
+        {
+          "uri": "decision://qk/s4-recon-emp-payroll",
+          "by": "agent://s4",
+          "authority": "authority://qk/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 3200 USD from org://quoteko",
+          "actual_outcome": "matched exactly: settled 3200 USD",
+          "detail": {
+            "slug": "emp-payroll",
+            "expected": 3200,
+            "actual": 3200,
+            "matched": true,
+            "buyer": "org://quoteko",
+            "provider": "person://qk/customer",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-08-31T23:46:13Z"
+        },
+        {
+          "uri": "event://qk/s4-exchange-emp-payroll",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-5060",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-5059",
+          "idempotency_key": "idem-s4-5060",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-08-31T23:46:13Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange emp-payroll: 3200 USD org://quoteko->person://qk/customer (value 3200, cost 3200)",
+          "state_update": [],
+          "value": 3200,
+          "cost": 3200,
+          "price": 3200,
+          "currency": "USD",
+          "buyer": "org://quoteko",
+          "provider": "person://qk/customer",
+          "settled_at": "2026-09-30T00:00:00Z",
+          "exchange_of": "commitment://qk/c-quoteko"
+        }
+      ],
+      "value": 3200,
+      "cost": 3200,
+      "price": 3200,
+      "currency": "USD",
+      "buyer": "org://quoteko",
+      "provider": "person://qk/customer",
+      "settled_at": "2026-09-30T00:00:00Z",
+      "exchange_of": "commitment://qk/c-quoteko",
+      "hash": "57aad4e43b13ea78a6106fb39c43e16bd287afba382c30d74237a468cbe4bb73"
+    },
+    {
+      "uri": "event://qk/s4-outcome-emp-payroll",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-5070",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-5069",
+      "idempotency_key": "idem-s4-5070",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle emp-payroll: settled 3200 vs expected 3200 by 2026-10-31T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://qk/s4-outcome-emp-payroll",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-5070",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-5069",
+          "idempotency_key": "idem-s4-5070",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-08-31T23:46:13Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle emp-payroll: settled 3200 vs expected 3200 by 2026-10-31T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 3200,
+          "actual": 3200,
+          "deadline": "2026-10-31T00:00:00Z",
+          "settled_at": "2026-09-30T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 3200,
+      "actual": 3200,
+      "deadline": "2026-10-31T00:00:00Z",
+      "settled_at": "2026-09-30T00:00:00Z",
+      "score": 1.0,
+      "hash": "d440ec3cd5de41ea4a00ee3585a898ae0deff10b63c47dd98ccbdcec450b5595"
+    },
+    {
+      "uri": "event://qk/s42-verify-payroll",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-5080",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-5079",
+      "idempotency_key": "idem-s2-5080",
+      "signature": "signed-by-org://quoteko",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "org://quoteko",
+      "detail": "job job-emp-payroll-s4 by org://quoteko: actual 2026-09-30T00:00:00Z vs committed 2026-10-31T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://qk/s42-verify-payroll",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-5080",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-5079",
+          "idempotency_key": "idem-s2-5080",
+          "signature": "signed-by-org://quoteko",
+          "occurred_at": "2026-08-31T23:46:13Z",
+          "actor": "org://quoteko",
+          "detail": "job job-emp-payroll-s4 by org://quoteko: actual 2026-09-30T00:00:00Z vs committed 2026-10-31T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "job-emp-payroll-s4",
+          "provider": "org://quoteko",
+          "committed_deadline": "2026-10-31T00:00:00Z",
+          "actual_completed_at": "2026-09-30T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://qk/job-emp-payroll-s4",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "job": "job-emp-payroll-s4",
+      "provider": "org://quoteko",
+      "committed_deadline": "2026-10-31T00:00:00Z",
+      "actual_completed_at": "2026-09-30T00:00:00Z",
+      "on_time": true,
+      "hash": "71d8406b9a640cd030a58876959ba6817a9ef78eeb3c4c9cbe851badd374261f"
+    },
+    {
+      "uri": "event://qk/verify-job-emp-payroll-s4",
+      "type": "DECISION",
+      "event_id": "ev-s2-5081",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-5080",
+      "idempotency_key": "idem-s2-5081",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s5",
+      "detail": "verify 'Quoteko payroll service met per event://qk/s4-outcome-emp-payroll' -> degree 0.98 under procedure 'completion-anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://qk/job-emp-payroll-s4",
+          "proposer": "agent://s5",
+          "statement": "Quoteko payroll service met per event://qk/s4-outcome-emp-payroll"
+        },
+        {
+          "uri": "evidence://qk/job-emp-payroll-s4",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "a235c564e69331dec2035df60bf9970ceaaa7e4b587bebb36f189f521229a979"
+    },
+    {
+      "uri": "event://qk/trust-update-quoteko",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-5082",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-5081",
+      "idempotency_key": "idem-s2-5082",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s5",
+      "detail": "trust for org://quoteko [payroll & benefits reliability] 0.500 -> 0.598 (outcome=1, exp=0.8, ev=0.98, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://qk/t-emp-quoteko",
+          "subject": "person://qk/customer",
+          "target": "org://quoteko",
+          "claim": "payroll & benefits reliability",
+          "context": "relationship://qk/cust-cxn?role=employee",
+          "score": 0.598,
+          "updated_at": "2026-08-31T23:46:13Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://qk/job-emp-payroll-s4"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "796af9b0de1ac60ed214d860543a94906d39f899e2cc4237cc6be999767cfa74"
+    },
+    {
+      "uri": "event://qk/s43-provision",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s4-6000",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-5999",
+      "idempotency_key": "idem-s4-6000",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "provision cross-org (private<->charitable) relationship + fleet",
+      "state_update": [
+        {
+          "uri": "org://qk/sunsetshelter",
+          "type": "ORG"
+        },
+        {
+          "uri": "purpose://qk/pv-quoteko",
+          "for": "org://quoteko",
+          "kind": "FOR_PROFIT",
+          "statement": "Quoteko creates value and generates a financial return (\u00a73.1 private)"
+        },
+        {
+          "uri": "purpose://qk/pv-shelter",
+          "for": "org://qk/sunsetshelter",
+          "kind": "NONPROFIT_CHARITABLE",
+          "statement": "Sunsetshelter pursues a charitable solar/mission benefit (\u00a73.1)"
+        },
+        {
+          "uri": "relationship://qk/charity-cxn",
+          "participants": [
+            "org://quoteko",
+            "org://qk/sunsetshelter"
+          ],
+          "roles": {
+            "org://quoteko": [
+              "donor"
+            ],
+            "org://qk/sunsetshelter": [
+              "beneficiary"
+            ]
+          },
+          "context": {
+            "organization": "org://qk/sunsetshelter",
+            "relationship": "relationship://qk/charity-cxn",
+            "role": "donor",
+            "jurisdiction": "US-NM",
+            "purpose": "purpose://qk/pv-shelter",
+            "time": "2026-08-31T23:46:13Z"
+          },
+          "purpose": "charitable solar installation at the shelter",
+          "authority": [
+            "authority://qk/for-charity"
+          ],
+          "consent": [
+            "consent://qk/charity-use"
+          ],
+          "authority_by_role": {
+            "donor": "authority://qk/for-charity",
+            "beneficiary": "authority://qk/for-charity"
+          },
+          "status": "ACTIVE",
+          "created_at": "2026-08-31T23:46:13Z",
+          "effective_from": "2026-08-31T23:46:13Z"
+        },
+        {
+          "uri": "authority://qk/for-charity",
+          "holder": "org://quoteko",
+          "grants": [
+            "donate_install",
+            "release_charitable_grant"
+          ],
+          "roles": [
+            "donor",
+            "beneficiary"
+          ]
+        },
+        {
+          "uri": "consent://qk/charity-use",
+          "granted_by": "org://qk/sunsetshelter",
+          "granted_for": "receive the charitable solar installation and grant",
+          "scope": [],
+          "duration": {
+            "effective": "2026-09-01T00:00:00Z",
+            "expires": "2027-09-01T00:00:00Z"
+          },
+          "revocable": true,
+          "status": "GRANTED"
+        },
+        {
+          "uri": "trust://qk/t-shelter",
+          "subject": "org://quoteko",
+          "target": "org://qk/sunsetshelter",
+          "claim": "charitable installation reliability",
+          "context": "relationship://qk/charity-cxn",
+          "score": 0.5,
+          "updated_at": "2026-08-31T23:46:13Z"
+        },
+        {
+          "uri": "offer://qk/o-shelter-solar",
+          "provider": "org://qk/sunsetshelter",
+          "service": "charitable solar installation at the shelter",
+          "capability_keys": [
+            "solar",
+            "install"
+          ],
+          "price": 0,
+          "currency": "USD",
+          "terms": "pro bono; purpose-constrained to the shelter mission",
+          "status": "AVAILABLE"
+        },
+        {
+          "uri": "agent://w-charity-install",
+          "type": "AGENT"
+        },
+        {
+          "uri": "agent://w-charity-dispatch",
+          "type": "AGENT"
+        },
+        {
+          "uri": "agent://w-charity-grant",
+          "type": "AGENT"
+        },
+        {
+          "uri": "rule://qk/w-charity-install-run",
+          "kind": "POLICY",
+          "text": "charity worker may prepare installation (reversible)",
+          "grants": [
+            "prepare_installation"
+          ]
+        },
+        {
+          "uri": "rule://qk/w-charity-dispatch-run",
+          "kind": "POLICY",
+          "text": "charity worker may dispatch the solar crew (reversible)",
+          "grants": [
+            "dispatch_solar_crew"
+          ]
+        },
+        {
+          "uri": "rule://qk/w-charity-grant-run",
+          "kind": "POLICY",
+          "text": "grant worker may release the charitable grant ONLY after human acknowledgement",
+          "grants": [
+            "release_charitable_grant"
+          ]
+        },
+        {
+          "uri": "delegation://qk/w-charity-install",
+          "grantor": "org://quoteko",
+          "grantee": "agent://w-charity-install",
+          "scope": [
+            "rule://qk/w-charity-install-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://qk/w-charity-dispatch",
+          "grantor": "org://quoteko",
+          "grantee": "agent://w-charity-dispatch",
+          "scope": [
+            "rule://qk/w-charity-dispatch-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://qk/w-charity-grant",
+          "grantor": "org://quoteko",
+          "grantee": "agent://w-charity-grant",
+          "scope": [
+            "rule://qk/w-charity-grant-run"
+          ],
+          "status": "ACTIVE"
+        }
+      ],
+      "hash": "b6414480bfbaf16f088be95feb39302f23356d6e8303fd9aec0d40af2f38a366"
+    },
+    {
+      "uri": "event://qk/s43-authz",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s4-6010",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-6009",
+      "idempotency_key": "idem-s4-6010",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "cross-org role resolution + authorize (donor can donate_install)",
+      "state_update": [
+        {
+          "uri": "decision://qk/s43-authz",
+          "by": "agent://s4",
+          "authority": "authority://qk/for-charity",
+          "confidence": 1.0,
+          "actual_outcome": "donor authorized",
+          "detail": {
+            "donor": true,
+            "beneficiary": true,
+            "donate_install": true
+          },
+          "made_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "c6a69da8dba73047aa5faf8fe48e92e14ed6d7f268f0b26dfff8cfa1ab64861f"
+    },
+    {
+      "uri": "event://qk/s43-match",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s4-6020",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-6019",
+      "idempotency_key": "idem-s4-6020",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "charity-context match: offer://qk/o-shelter-solar (score 0.500)",
+      "state_update": [
+        {
+          "uri": "decision://qk/s43-match",
+          "by": "agent://s2",
+          "authority": "delegation://qk/s2-match",
+          "alternatives": [
+            "do nothing"
+          ],
+          "confidence": 0.9,
+          "expected_outcome": "offer://qk/o-shelter-solar",
+          "detail": {
+            "offer": "offer://qk/o-shelter-solar",
+            "provider": "org://qk/sunsetshelter",
+            "fit": 1.0,
+            "trust": 0.5,
+            "score": 0.5
+          },
+          "made_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "ad0a39430349ae7efa60f3638ddd6c9ab80efa01d798873abfbd8986393b9dbc"
+    },
+    {
+      "uri": "event://qk/s3-commit-sunsetshelter",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s3-6030",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-6029",
+      "idempotency_key": "idem-s3-6030",
+      "signature": "signed-by-agent://s3",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s3",
+      "detail": "commit matched offer offer://qk/o-shelter-solar -> commitment://qk/c-sunsetshelter (AGREED)",
+      "state_update": [
+        {
+          "uri": "commitment://qk/c-sunsetshelter",
+          "by": "agent://s3",
+          "to": "org://qk/sunsetshelter",
+          "obligation": "offer://qk/o-shelter-solar",
+          "expectation": "expectation://qk/e-on-time",
+          "status": "AGREED",
+          "terms": {
+            "currency": "USD",
+            "kind": "charitable-grant",
+            "purpose": "shelter solar",
+            "signed": true
+          },
+          "agreed_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "761c2cef231cb391c9a5c5af780115a9239bf11194de112152269dbe41df33b1"
+    },
+    {
+      "uri": "event://qk/s4-split-charity",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s4-6035",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-6034",
+      "idempotency_key": "idem-s4-6035",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "orchestrate shelter job: 2 reversible fleet steps + 1 irreversible grant",
+      "state_update": [
+        {
+          "uri": "decision://qk/s4-split-charity",
+          "by": "agent://s3",
+          "authority": "authority://qk/for-charity",
+          "alternatives": [
+            "defer"
+          ],
+          "confidence": 0.9,
+          "expected_outcome": "install; grant time-locked to human",
+          "actual_outcome": "plan sealed",
+          "made_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "8a9791a391f32fcc0fcfb291f479d0adbda3c527e9325c5c798f141e2d1dcd42"
+    },
+    {
+      "uri": "event://qk/s3-step-t-charity-prep",
+      "type": "ACTION",
+      "event_id": "ev-s3-6040",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-6039",
+      "idempotency_key": "idem-s3-6040",
+      "signature": "signed-by-agent://w-charity-install",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://w-charity-install",
+      "detail": "agent://w-charity-install [prepare_installation @ private-cloud] executed (authorized via delegation://qk/w-charity-install)",
+      "state_update": [],
+      "worker": "agent://w-charity-install",
+      "action": "prepare_installation",
+      "task_id": "t-charity-prep",
+      "tier": "private-cloud",
+      "outcome": "done",
+      "hash": "bb365a83810b92e0529e0d2dd457fdab3cec1fe27eb24c1f1df11e6d9a33030d"
+    },
+    {
+      "uri": "event://qk/s3-step-t-charity-dispatch",
+      "type": "ACTION",
+      "event_id": "ev-s3-6041",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-6040",
+      "idempotency_key": "idem-s3-6041",
+      "signature": "signed-by-agent://w-charity-dispatch",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://w-charity-dispatch",
+      "detail": "agent://w-charity-dispatch [dispatch_solar_crew @ frontier] executed (authorized via delegation://qk/w-charity-dispatch)",
+      "state_update": [],
+      "worker": "agent://w-charity-dispatch",
+      "action": "dispatch_solar_crew",
+      "task_id": "t-charity-dispatch",
+      "tier": "frontier",
+      "outcome": "done",
+      "hash": "b0ce69741afa7be212a522ba5e2cadf797978cffd8a07d065958f1297434f15e"
+    },
+    {
+      "uri": "event://qk/s3-escalate-t-charity-grant",
+      "type": "DECISION",
+      "event_id": "ev-s3-6050",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-6049",
+      "idempotency_key": "idem-s3-6050",
+      "signature": "signed-by-agent://s3",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s3",
+      "detail": "release_charitable_grant is irreversible/unknowable-cost -> escalated to person://qk/approver; NOT auto-executed",
+      "state_update": [
+        {
+          "uri": "decision://qk/s3-esc-t-charity-grant",
+          "by": "agent://s3",
+          "authority": "delegation://qk/w-charity-grant",
+          "alternatives": [
+            "auto-release (NOT permitted: irreversible/unknowable)",
+            "hold pending human acknowledgement"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "escalate release_charitable_grant to person://qk/approver",
+          "actual_outcome": "ESCALATED, NOT auto-executed",
+          "detail": {
+            "task": {
+              "task_id": "t-charity-grant",
+              "action": "release_charitable_grant",
+              "worker": "agent://w-charity-grant",
+              "seam_tier": "frontier",
+              "tier": "human",
+              "reversible": false,
+              "cost_knowable": false,
+              "authority": "delegation://qk/w-charity-grant",
+              "status": "ESCALATED"
+            },
+            "commitment": "commitment://qk/c-sunsetshelter",
+            "trigger": {
+              "irreversible_failure": true,
+              "cost_failure_unknowable": true
+            }
+          },
+          "made_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "357045eae7a405bb6c4bc16a19dc7cc199d289892e076864558e80613034f70a"
+    },
+    {
+      "uri": "event://qk/s3-human-t-charity-grant",
+      "type": "DECISION",
+      "event_id": "ev-s3-6060",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-6059",
+      "idempotency_key": "idem-s3-6060",
+      "signature": "signed-by-person://qk/approver",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "person://qk/approver",
+      "detail": "person://qk/approver signed acknowledgement -> enumerates alternatives and commits release_charitable_grant",
+      "state_update": [
+        {
+          "uri": "decision://qk/s3-human-t-charity-grant",
+          "by": "person://qk/approver",
+          "authority": "authority://qk/for-charity",
+          "alternatives": [
+            "release_in_full",
+            "hold_pending_inspection",
+            "release_partial_and_hold_if_fault",
+            "open_dispute"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "release_charitable_grant",
+          "actual_outcome": "release_in_full (human approved)",
+          "evidence": [
+            "evidence://qk/e-oidc"
+          ],
+          "detail": {
+            "task": "t-charity-grant",
+            "action": "release_charitable_grant",
+            "commitment": "commitment://qk/c-sunsetshelter",
+            "trigger": {
+              "irreversible_failure": true,
+              "cost_failure_unknowable": true
+            }
+          },
+          "made_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "1424d661dfcddeeaff3890a4441009e9ca04e13312ac2deaaa04b4435039095a"
+    },
+    {
+      "uri": "event://qk/s3-step-t-charity-grant",
+      "type": "ACTION",
+      "event_id": "ev-s3-6070",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-6069",
+      "idempotency_key": "idem-s3-6070",
+      "signature": "signed-by-agent://w-charity-grant",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://w-charity-grant",
+      "detail": "agent://w-charity-grant [release_charitable_grant @ human] executed (authorized via delegation://qk/w-charity-grant)",
+      "state_update": [],
+      "worker": "agent://w-charity-grant",
+      "action": "release_charitable_grant",
+      "task_id": "t-charity-grant",
+      "tier": "human",
+      "outcome": "done",
+      "hash": "95168d246435af297b5ac1a12ef95a2a1329b1718aa74d424b4d832f9d5b22e6"
+    },
+    {
+      "uri": "event://qk/s43-exp",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s4-6080",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-6079",
+      "idempotency_key": "idem-s4-6080",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "register charitable expectation",
+      "state_update": [
+        {
+          "uri": "expectation://qk/e-settle-shelter-solar",
+          "actor": "org://quoteko",
+          "subject": "charitable solar install",
+          "condition": "full and on-time settlement of the agreed value",
+          "metric": "settled_value",
+          "threshold": 0,
+          "deadline": "2026-12-31T00:00:00Z",
+          "evidence_required": "CLEAR"
+        }
+      ],
+      "hash": "9dffeaff2361cc6a3d6d4da50a7425c44fd5bf208dc2c2aec1e25161ddeeec2b"
+    },
+    {
+      "uri": "event://qk/s4-exchange-shelter-solar",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-6090",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-6089",
+      "idempotency_key": "idem-s4-6090",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange shelter-solar: 0 USD org://quoteko->org://qk/sunsetshelter (value 0, cost 18000)",
+      "state_update": [
+        {
+          "uri": "asset://money/qk-escrow-shelter-solar",
+          "kind": "MONEY",
+          "title": "org://qk/sunsetshelter",
+          "custody": "cleared",
+          "value": 0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://quoteko for org://qk/sunsetshelter (shelter-solar)"
+        },
+        {
+          "uri": "obligation://qk/s4-pay-shelter-solar",
+          "subject": "org://quoteko",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 0 USD for contracted work by org://qk/sunsetshelter",
+          "due_by": "2026-12-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-11-20T00:00:00Z"
+        },
+        {
+          "uri": "receipt://qk/s4-receipt-shelter-solar",
+          "kind": "SETTLEMENT",
+          "from": "org://quoteko",
+          "to": "org://qk/sunsetshelter",
+          "amount": 0,
+          "currency": "USD",
+          "received_at": "2026-11-20T00:00:00Z"
+        },
+        {
+          "uri": "decision://qk/s4-recon-shelter-solar",
+          "by": "agent://s4",
+          "authority": "authority://qk/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 0 USD from org://quoteko",
+          "actual_outcome": "matched exactly: settled 0 USD",
+          "detail": {
+            "slug": "shelter-solar",
+            "expected": 0,
+            "actual": 0,
+            "matched": true,
+            "buyer": "org://quoteko",
+            "provider": "org://qk/sunsetshelter",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-08-31T23:46:13Z"
+        },
+        {
+          "uri": "event://qk/s4-exchange-shelter-solar",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-6090",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-6089",
+          "idempotency_key": "idem-s4-6090",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-08-31T23:46:13Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange shelter-solar: 0 USD org://quoteko->org://qk/sunsetshelter (value 0, cost 18000)",
+          "state_update": [],
+          "value": 0,
+          "cost": 18000,
+          "price": 0,
+          "currency": "USD",
+          "buyer": "org://quoteko",
+          "provider": "org://qk/sunsetshelter",
+          "settled_at": "2026-11-20T00:00:00Z",
+          "exchange_of": "commitment://qk/c-sunsetshelter"
+        }
+      ],
+      "value": 0,
+      "cost": 18000,
+      "price": 0,
+      "currency": "USD",
+      "buyer": "org://quoteko",
+      "provider": "org://qk/sunsetshelter",
+      "settled_at": "2026-11-20T00:00:00Z",
+      "exchange_of": "commitment://qk/c-sunsetshelter",
+      "hash": "b31110978e9e3c51b9996fd84eae59298cc760adbfffcd91462ba6dbdf93e886"
+    },
+    {
+      "uri": "event://qk/s4-outcome-shelter-solar",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-6100",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-6099",
+      "idempotency_key": "idem-s4-6100",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle shelter-solar: settled 0 vs expected 0 by 2026-12-31T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://qk/s4-outcome-shelter-solar",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-6100",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-6099",
+          "idempotency_key": "idem-s4-6100",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-08-31T23:46:13Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle shelter-solar: settled 0 vs expected 0 by 2026-12-31T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 0,
+          "actual": 0,
+          "deadline": "2026-12-31T00:00:00Z",
+          "settled_at": "2026-11-20T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 0,
+      "actual": 0,
+      "deadline": "2026-12-31T00:00:00Z",
+      "settled_at": "2026-11-20T00:00:00Z",
+      "score": 1.0,
+      "hash": "8d65343c19aefd87ef9a45047b664f89603528736307486e89f22a984311e0e1"
+    },
+    {
+      "uri": "event://qk/s43-verify-shelter",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-6110",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-6109",
+      "idempotency_key": "idem-s2-6110",
+      "signature": "signed-by-org://qk/sunsetshelter",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "org://qk/sunsetshelter",
+      "detail": "job job-shelter-solar-s4 by org://qk/sunsetshelter: actual 2026-11-20T00:00:00Z vs committed 2026-12-31T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://qk/s43-verify-shelter",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-6110",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-6109",
+          "idempotency_key": "idem-s2-6110",
+          "signature": "signed-by-org://qk/sunsetshelter",
+          "occurred_at": "2026-08-31T23:46:13Z",
+          "actor": "org://qk/sunsetshelter",
+          "detail": "job job-shelter-solar-s4 by org://qk/sunsetshelter: actual 2026-11-20T00:00:00Z vs committed 2026-12-31T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "job-shelter-solar-s4",
+          "provider": "org://qk/sunsetshelter",
+          "committed_deadline": "2026-12-31T00:00:00Z",
+          "actual_completed_at": "2026-11-20T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://qk/job-shelter-solar-s4",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "job": "job-shelter-solar-s4",
+      "provider": "org://qk/sunsetshelter",
+      "committed_deadline": "2026-12-31T00:00:00Z",
+      "actual_completed_at": "2026-11-20T00:00:00Z",
+      "on_time": true,
+      "hash": "35bb38a2e6f281e76c3ac0703a00a4057cea81ee2df6f3b7d8ca40ecba2685a5"
+    },
+    {
+      "uri": "event://qk/verify-job-shelter-solar-s4",
+      "type": "DECISION",
+      "event_id": "ev-s2-6111",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-6110",
+      "idempotency_key": "idem-s2-6111",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://qk/sunsetshelter charitable install met per event://qk/s4-outcome-shelter-solar' -> degree 0.98 under procedure 'completion-anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://qk/job-shelter-solar-s4",
+          "proposer": "agent://s5",
+          "statement": "org://qk/sunsetshelter charitable install met per event://qk/s4-outcome-shelter-solar"
+        },
+        {
+          "uri": "evidence://qk/job-shelter-solar-s4",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:13Z"
+        }
+      ],
+      "hash": "a468c68d0cd8daa2572ec36b743255e1c1d3d38975a8f992cbc14a50a4f42489"
+    },
+    {
+      "uri": "event://qk/trust-update-sunsetshelter",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-6112",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-6111",
+      "idempotency_key": "idem-s2-6112",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:13Z",
+      "actor": "agent://s5",
+      "detail": "trust for org://qk/sunsetshelter [charitable installation reliability] 0.500 -> 0.598 (outcome=1, exp=0.8, ev=0.98, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://qk/t-shelter",
+          "subject": "org://quoteko",
+          "target": "org://qk/sunsetshelter",
+          "claim": "charitable installation reliability",
+          "context": "relationship://qk/charity-cxn",
+          "score": 0.598,
+          "updated_at": "2026-08-31T23:46:13Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://qk/job-shelter-solar-s4"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "bcd9aeec62c5b66112b8714ba4228d0c50f65a4ee7516fe42eab49010fd33164"
+    }
+  ]
+}

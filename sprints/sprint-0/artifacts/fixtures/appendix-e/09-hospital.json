@@ -1,0 +1,43 @@
+[
+  {
+    "uri": "person://e09/pat",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e09/hospital",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e09/care",
+    "participants": [
+      "person://e09/pat",
+      "org://e09/hospital"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "person://e09/pat": [
+        "patient"
+      ]
+    }
+  },
+  {
+    "uri": "consent://e09/c1",
+    "granted_by": "person://e09/pat",
+    "granted_for": "treatment + PHI processing"
+  },
+  {
+    "uri": "claim://e09/dx",
+    "proposer": "org://e09/hospital",
+    "statement": "diagnosis of per the record"
+  },
+  {
+    "uri": "evidence://e09/record",
+    "kind": "RECORD",
+    "source": "org://e09/hospital/emr#visit"
+  },
+  {
+    "uri": "interaction://e09/care",
+    "of": "relationship://e09/care",
+    "kind": "ACTION"
+  }
+]

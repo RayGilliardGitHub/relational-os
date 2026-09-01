@@ -1,0 +1,15 @@
+[
+  {
+    "uri": "policy://telco/allocation",
+    "name": "telco allocation",
+    "condition": "a new committed delivery is to be allocated",
+    "decision": "ALLOCATE by fit AND scoped Trust; contractors below the Trust floor need a gate before new buildouts. (learned 2026-09-01)",
+    "action": "allocate to the top-ranked fitted partner; gate laggard",
+    "scope": [
+      "expectation://telco/e-on-time"
+    ],
+    "version": 3,
+    "policy_status": "EFFECTIVE",
+    "learning": "decision://telco/learning"
+  }
+]

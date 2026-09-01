@@ -1,0 +1,42 @@
+[
+  {
+    "uri": "expectation://qk/e-on-time",
+    "actor": "org://quoteko",
+    "subject": "contracted roofing job",
+    "condition": "complete by committed deadline",
+    "metric": "on_time",
+    "threshold": 0.8,
+    "deadline": "2026-09-20T00:00:00Z",
+    "evidence_required": "CLEAR"
+  },
+  {
+    "uri": "expectation://qk/e-settle-solarworks",
+    "actor": "org://quoteko",
+    "subject": "solarworks roofing job",
+    "condition": "full and on-time settlement of the agreed value",
+    "metric": "settled_value",
+    "threshold": 18900,
+    "deadline": "2026-10-01T00:00:00Z",
+    "evidence_required": "CLEAR"
+  },
+  {
+    "uri": "expectation://qk/e-settle-emp-payroll",
+    "actor": "org://quoteko",
+    "subject": "employee payroll",
+    "condition": "full and on-time settlement of the agreed value",
+    "metric": "settled_value",
+    "threshold": 3200,
+    "deadline": "2026-10-31T00:00:00Z",
+    "evidence_required": "CLEAR"
+  },
+  {
+    "uri": "expectation://qk/e-settle-shelter-solar",
+    "actor": "org://quoteko",
+    "subject": "charitable solar install",
+    "condition": "full and on-time settlement of the agreed value",
+    "metric": "settled_value",
+    "threshold": 0,
+    "deadline": "2026-12-31T00:00:00Z",
+    "evidence_required": "CLEAR"
+  }
+]

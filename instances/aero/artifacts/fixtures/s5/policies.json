@@ -1,0 +1,15 @@
+[
+  {
+    "uri": "policy://aero/allocation",
+    "name": "aero allocation",
+    "condition": "a new committed delivery is to be allocated",
+    "decision": "ALLOCATE by fit AND scoped Trust; integrators below the Trust floor need a performance gate before new work. (learned 2026-09-01)",
+    "action": "allocate to the top-ranked fitted partner; gate laggard",
+    "scope": [
+      "expectation://aero/e-on-time"
+    ],
+    "version": 3,
+    "policy_status": "EFFECTIVE",
+    "learning": "decision://aero/learning"
+  }
+]

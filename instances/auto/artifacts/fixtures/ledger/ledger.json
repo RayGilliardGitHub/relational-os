@@ -1,0 +1,2539 @@
+{
+  "uri": "db://ledger/auto-2026",
+  "head_hash": "015429636e51ca9a6ff40c8b1ccd06c6c5bf65bbf3bd445ca86c5991fe64b763",
+  "entries": [
+    {
+      "uri": "event://auto/s5-state-2",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-2",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-1",
+      "idempotency_key": "idem-s5-2",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "provision Automotive base (actors, relationships, authority + operator + policy + expectation)",
+      "state_update": [
+        {
+          "uri": "org://auto/forge-auto",
+          "type": "ORG",
+          "identity": {
+            "attestations": [
+              "business-license"
+            ]
+          },
+          "brand": {
+            "tagline": "Parts on the line, on the build.",
+            "mission": "Deliver committed OEM part lots reliably and on time so assembly lines stay scheduled, stays running, and no plant shuts down waiting on a supplier.",
+            "vision": "An automotive supply chain where line-side parts are a given, and our on-time record keeps assembly floors from ever going dark.",
+            "values": [
+              [
+                "Line integrity",
+                "A missed part lot can stop a whole line; we treat the date accordingly."
+              ],
+              [
+                "Quality at the core",
+                "On time is never at the expense of a defective part."
+              ],
+              [
+                "Traceability",
+                "We prove every part lot against the ledger, from source to line-side."
+              ],
+              [
+                "Assembly partnership",
+                "OEMs plan around us; we make that planning safe."
+              ],
+              [
+                "Continuous improvement",
+                "Every miss is a system fix, not a blame."
+              ]
+            ],
+            "about": "Forge Auto is an automotive OEM supplier. We take committed part-lot deliveries and land them line-side on the scheduled date \u2014 verified, traceable, right-first-time. When a whole assembly line depends on a supplier keeping the date, our on-time evidence is not a nicety; it is what keeps the plant scheduled and the warranty quiet.",
+            "fast_facts": [
+              "Founded 1989, automotive OEM parts",
+              "1,200+ part variants delivered",
+              "Line-side programs with 40+ assembly plants"
+            ],
+            "history": [
+              [
+                "1989",
+                "Founded as a forge supplying drivetrain parts."
+              ],
+              [
+                "2005",
+                "Scaled to full line-side OEM part-lot delivery."
+              ],
+              [
+                "2018",
+                "Digitised every lot to ledger-verified on-time evidence."
+              ]
+            ],
+            "leadership": [
+              [
+                "Grant Kowalski",
+                "Chief Executive",
+                "Cast and forged parts his whole career before leading Forge Auto."
+              ],
+              [
+                "Nadia Foster",
+                "Chief Operations Officer",
+                "Owns the supply network and the on-time gate across plants."
+              ]
+            ],
+            "products_services": [
+              "OEM part-lot design and delivery",
+              "Line-side supply scheduling",
+              "Supplier quality assurance"
+            ],
+            "testimonials": [
+              [
+                "Forge Auto is the one supplier our line can run without watching the clock for.",
+                "OEM plant director"
+              ]
+            ],
+            "trust": [
+              [
+                "98.9% committed part-lot on-time rate (2025)",
+                "Forge Auto delivery ledger"
+              ],
+              [
+                "IATF 16949 automotive quality certification",
+                "third-party audit"
+              ]
+            ],
+            "locations": "Toledo, OH (HQ) \u00b7 plants and line-side hubs serving 40+ OEM assembly sites",
+            "faq": [
+              [
+                "What proves your on-time claim?",
+                "Each committed part lot anchors to a signed ledger event with a verified delivery time \u2014 auditable from order to line-side."
+              ],
+              [
+                "Do you support just-in-time delivery?",
+                "Yes, JIT line-side scheduling is core, and the on-time gate applies to every committed lot."
+              ]
+            ],
+            "contact": "supply@forgeauto.example \u00b7 +1-419-555-0127",
+            "careers": "Keep the line scheduled: supply chain, quality, logistics, manufacturing engineering.",
+            "investors": "Privately held. Plant reliability data shared with OEM customers.",
+            "press": "media@forgeauto.example \u2014 plant and quality announcements.",
+            "esg": "Low-emissions forging, part-traceability for circularity, apprenticeship programs.",
+            "legal": [
+              "Privacy",
+              "Terms",
+              "California Rights",
+              "Do Not Sell or Share"
+            ],
+            "nav": [
+              "About",
+              "Capabilities",
+              "Plants",
+              "Quality",
+              "Careers",
+              "Investors",
+              "Press",
+              "Contact"
+            ],
+            "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+            "design": {
+              "palette": [
+                [
+                  "Anvil Grey",
+                  "#3A3D42"
+                ],
+                [
+                  "Machining Silver",
+                  "#C7CCD1"
+                ],
+                [
+                  "Redline Red",
+                  "#C4262E"
+                ],
+                [
+                  "Deep Forge",
+                  "#15171A"
+                ]
+              ],
+              "typography": {
+                "heading": "Solid industrial sans (e.g. Oswald)",
+                "body": "Workhorse sans (e.g. Source Sans 3)"
+              },
+              "logo": {
+                "wordmark": "FORGE AUTO in heavy caps",
+                "character": "an ingot/anvil mark",
+                "usage": "clear space heavy; red as accent, grey+silver standard"
+              },
+              "imagery": "Assembly lines, forged parts, machining in motion \u2014 heavy, capable, precise",
+              "tone": "Built, dependable, plain; about keeping the line running."
+            }
+          }
+        },
+        {
+          "uri": "org://auto/cypress-assembly",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://auto/stellar-auto",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://auto/corvair-parts",
+          "type": "ORG"
+        },
+        {
+          "uri": "person://auto/vpo",
+          "type": "PERSON"
+        },
+        {
+          "uri": "agent://auto/supply-ops",
+          "type": "AGENT"
+        },
+        {
+          "uri": "relationship://auto/ops-rel",
+          "participants": [
+            "org://auto/forge-auto",
+            "org://auto/cypress-assembly"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://auto/forge-auto": [
+              "provider"
+            ],
+            "org://auto/cypress-assembly": [
+              "client"
+            ]
+          },
+          "authority": [
+            "authority://auto/for-ops"
+          ],
+          "purpose": "automotive operating relationship"
+        },
+        {
+          "uri": "relationship://auto/partner-net",
+          "participants": [
+            "org://auto/forge-auto",
+            "org://auto/stellar-auto",
+            "org://auto/corvair-parts"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://auto/forge-auto": [
+              "operator"
+            ],
+            "org://auto/stellar-auto": [
+              "partner"
+            ],
+            "org://auto/corvair-parts": [
+              "partner"
+            ]
+          },
+          "authority": [
+            "authority://auto/for-ops"
+          ],
+          "purpose": "automotive partner network"
+        },
+        {
+          "uri": "authority://auto/for-ops",
+          "holder": "org://auto/forge-auto",
+          "grants": [
+            "triage_case",
+            "assign_case",
+            "close_case",
+            "approve_learning",
+            "rebalance_commitment",
+            "gate_partner",
+            "release_committed_action"
+          ],
+          "roles": [
+            "operator"
+          ]
+        },
+        {
+          "uri": "rule://auto/ops-run",
+          "kind": "POLICY",
+          "text": "agent://auto/supply-ops may re-balance resource commitment and gate partner performance",
+          "grants": [
+            "rebalance_commitment",
+            "gate_partner"
+          ]
+        },
+        {
+          "uri": "rule://auto/match-run",
+          "kind": "POLICY",
+          "text": "S2 may run Trust-weighted matching for the client",
+          "grants": [
+            "run_match"
+          ]
+        },
+        {
+          "uri": "delegation://auto/ops",
+          "grantor": "org://auto/forge-auto",
+          "grantee": "agent://auto/supply-ops",
+          "scope": [
+            "rule://auto/ops-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://auto/s2-match",
+          "grantor": "org://auto/forge-auto",
+          "grantee": "agent://s2",
+          "scope": [
+            "rule://auto/match-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "expectation://auto/e-on-time",
+          "actor": "person://auto/vpo",
+          "subject": "OEM part-lot delivery",
+          "condition": "fully deliver the committed OEM part-lot delivery by its committed deadline",
+          "metric": "on_time",
+          "threshold": 0.95,
+          "deadline": "2026-12-31T00:00:00Z",
+          "evidence_required": "CLEAR"
+        },
+        {
+          "uri": "policy://auto/allocation",
+          "name": "auto allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "select the partner with the highest fit x scoped Trust",
+          "action": "allocate to the top-ranked fitted partner",
+          "scope": [
+            "expectation://auto/e-on-time"
+          ],
+          "version": 1
+        },
+        {
+          "uri": "process://auto/pr-core",
+          "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+          "steps": [
+            "triage",
+            "assign",
+            "execute",
+            "verify_outcome",
+            "learning"
+          ]
+        },
+        {
+          "uri": "process_instance://auto/pi-core",
+          "process": "process://auto/pr-core",
+          "status": "RUNNING",
+          "started_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "13d2208ae4645cad21e483b4b3a99cbb6a582d2c1a9ce7a341425bb8c56c63fb"
+    },
+    {
+      "uri": "event://auto/s5-state-100",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-100",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-99",
+      "idempotency_key": "idem-s5-100",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "seed scoped Trust org://auto/stellar-auto = 0.6",
+      "state_update": [
+        {
+          "uri": "trust://auto/t-stellar-auto",
+          "subject": "org://auto/forge-auto",
+          "target": "org://auto/stellar-auto",
+          "claim": "OEM part-lot delivery reliability",
+          "context": "relationship://auto/partner-net",
+          "score": 0.6
+        }
+      ],
+      "hash": "9065d93717adb5ec86bc9899fa10ce5409e0787d59430a4728d4e10561c42a9d"
+    },
+    {
+      "uri": "event://auto/s5-state-101",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-101",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-100",
+      "idempotency_key": "idem-s5-101",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "seed scoped Trust org://auto/corvair-parts = 0.9",
+      "state_update": [
+        {
+          "uri": "trust://auto/t-corvair-parts",
+          "subject": "org://auto/forge-auto",
+          "target": "org://auto/corvair-parts",
+          "claim": "OEM part-lot delivery reliability",
+          "context": "relationship://auto/partner-net",
+          "score": 0.9
+        }
+      ],
+      "hash": "de2a6524d88725fe78f6a1910cb21455bd0d136b2399695264d355fe39c40fa7"
+    },
+    {
+      "uri": "event://auto/s5-state-102",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-102",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-101",
+      "idempotency_key": "idem-s5-102",
+      "signature": "signed-by-agent://auto/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s2",
+      "detail": "register resource-commitment offer from org://auto/stellar-auto",
+      "state_update": [
+        {
+          "uri": "offer://auto/o-g",
+          "provider": "org://auto/stellar-auto",
+          "price": 2000000.0,
+          "currency": "USD",
+          "capability_keys": [
+            "oem-parts",
+            "delivery"
+          ],
+          "fit_note": "automotive partner delivery line"
+        }
+      ],
+      "hash": "f4be01c2beef7dc8fa69dac923ad2ce14c5175b720ac8b62d3b6dba5afc3c778"
+    },
+    {
+      "uri": "event://auto/s5-state-103",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-103",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-102",
+      "idempotency_key": "idem-s5-103",
+      "signature": "signed-by-agent://auto/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s2",
+      "detail": "register resource-commitment offer from org://auto/corvair-parts",
+      "state_update": [
+        {
+          "uri": "offer://auto/o-l",
+          "provider": "org://auto/corvair-parts",
+          "price": 2000000.0,
+          "currency": "USD",
+          "capability_keys": [
+            "oem-parts",
+            "delivery"
+          ],
+          "fit_note": "automotive partner delivery line"
+        }
+      ],
+      "hash": "9a7b5f8dc47b09f92e7e8fe3d730cc46dca033f2c0125ef5f04dbee8c77d51aa"
+    },
+    {
+      "uri": "event://auto/s5-state-104",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-104",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-103",
+      "idempotency_key": "idem-s5-104",
+      "signature": "signed-by-agent://auto/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s2",
+      "detail": "initial match ranked offer://auto/o-l (score 0.900) \u2014 base ranking",
+      "state_update": [
+        {
+          "uri": "decision://auto/s2-match-baseline",
+          "by": "agent://s2",
+          "authority": "delegation://auto/s2-match",
+          "alternatives": [
+            "offer://auto/o-l",
+            "offer://auto/o-g",
+            "none"
+          ],
+          "confidence": 0.9,
+          "expected_outcome": "lag partner ranked #1 on existing Trust",
+          "actual_outcome": "offer://auto/o-l",
+          "detail": [
+            {
+              "offer": "offer://auto/o-l",
+              "provider": "org://auto/corvair-parts",
+              "fit": 1.0,
+              "trust": 0.9,
+              "score": 0.9
+            },
+            {
+              "offer": "offer://auto/o-g",
+              "provider": "org://auto/stellar-auto",
+              "fit": 1.0,
+              "trust": 0.6,
+              "score": 0.6
+            }
+          ],
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "a17493e597303b3471efd63bf00ad849fad7210606cfa1d4680c71abc66d3b6d"
+    },
+    {
+      "uri": "event://auto/s4-exchange-corvair-partsQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-105",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-104",
+      "idempotency_key": "idem-s4-105",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange corvair-partsQ3: 2000000.0 USD org://auto/forge-auto->org://auto/corvair-parts (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/auto-escrow-corvair-partsQ3",
+          "kind": "MONEY",
+          "title": "org://auto/corvair-parts",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://auto/forge-auto for org://auto/corvair-parts (corvair-partsQ3)"
+        },
+        {
+          "uri": "obligation://auto/s4-pay-corvair-partsQ3",
+          "subject": "org://auto/forge-auto",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://auto/corvair-parts",
+          "due_by": "2026-08-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-02T00:00:00Z"
+        },
+        {
+          "uri": "receipt://auto/s4-receipt-corvair-partsQ3",
+          "kind": "SETTLEMENT",
+          "from": "org://auto/forge-auto",
+          "to": "org://auto/corvair-parts",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-09-02T00:00:00Z"
+        },
+        {
+          "uri": "decision://auto/s4-recon-corvair-partsQ3",
+          "by": "agent://s4",
+          "authority": "authority://auto/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://auto/forge-auto",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "corvair-partsQ3",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://auto/forge-auto",
+            "provider": "org://auto/corvair-parts",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://auto/s4-exchange-corvair-partsQ3",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-105",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-104",
+          "idempotency_key": "idem-s4-105",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange corvair-partsQ3: 2000000.0 USD org://auto/forge-auto->org://auto/corvair-parts (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://auto/forge-auto",
+          "provider": "org://auto/corvair-parts",
+          "settled_at": "2026-09-02T00:00:00Z",
+          "exchange_of": "commitment://auto/c-corvair-partsQ3"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://auto/forge-auto",
+      "provider": "org://auto/corvair-parts",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "exchange_of": "commitment://auto/c-corvair-partsQ3",
+      "hash": "2a3cfeea5ef0dd9b81b402a4714593f358528d69514b27b603f3b6ee8a5dad3e"
+    },
+    {
+      "uri": "event://auto/s4-outcome-corvair-partsQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-106",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-105",
+      "idempotency_key": "idem-s4-106",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle corvair-partsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+      "state_update": [
+        {
+          "uri": "event://auto/s4-outcome-corvair-partsQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-106",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-105",
+          "idempotency_key": "idem-s4-106",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle corvair-partsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+          "state_update": [],
+          "evaluation": "partial",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-08-31T00:00:00Z",
+          "settled_at": "2026-09-02T00:00:00Z",
+          "score": 0.5
+        }
+      ],
+      "evaluation": "partial",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "score": 0.5,
+      "hash": "e1d73536ec203cb3db1318f5ab00bf352a06851775a2355fa5a10bb7d34b01d8"
+    },
+    {
+      "uri": "event://auto/outcome-committed-corvair-partsQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-107",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-106",
+      "idempotency_key": "idem-s2-107",
+      "signature": "signed-by-org://auto/corvair-parts",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://auto/corvair-parts",
+      "detail": "job committed-corvair-partsQ3 by org://auto/corvair-parts: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://auto/outcome-committed-corvair-partsQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-107",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-106",
+          "idempotency_key": "idem-s2-107",
+          "signature": "signed-by-org://auto/corvair-parts",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://auto/corvair-parts",
+          "detail": "job committed-corvair-partsQ3 by org://auto/corvair-parts: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "committed-corvair-partsQ3",
+          "provider": "org://auto/corvair-parts",
+          "committed_deadline": "2026-08-31T00:00:00Z",
+          "actual_completed_at": "2026-09-02T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://auto/committed-corvair-partsQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-OEM part-lot delivery record + auto anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-corvair-partsQ3",
+      "provider": "org://auto/corvair-parts",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-09-02T00:00:00Z",
+      "on_time": false,
+      "hash": "0fa67cd99a75b25214d72a45a8a1faf3931a1b4b0b41b4c5afe04361cf6641ef"
+    },
+    {
+      "uri": "event://auto/verify-committed-corvair-partsQ3",
+      "type": "DECISION",
+      "event_id": "ev-s2-108",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-107",
+      "idempotency_key": "idem-s2-108",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://auto/corvair-parts delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://auto/committed-corvair-partsQ3",
+          "proposer": "agent://s5",
+          "statement": "org://auto/corvair-parts delivered the committed resource LATE"
+        },
+        {
+          "uri": "evidence://auto/committed-corvair-partsQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-OEM part-lot delivery record + auto anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "2df6ccfa5e4c51440412e3df2bc01fcc6ff740708dfde9be700eb7fd0c1ad5fc"
+    },
+    {
+      "uri": "event://auto/trust-update-corvair-parts",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-109",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-108",
+      "idempotency_key": "idem-s2-109",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "trust for org://auto/corvair-parts [OEM part-lot delivery reliability] 0.900 -> 0.520 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://auto/t-corvair-parts",
+          "subject": "org://auto/forge-auto",
+          "target": "org://auto/corvair-parts",
+          "claim": "OEM part-lot delivery reliability",
+          "context": "relationship://auto/partner-net",
+          "score": 0.52,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://auto/committed-corvair-partsQ3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "b0f51200f46f92eae19912766964ac366334a3ffa24cad3005103784ec7eef02"
+    },
+    {
+      "uri": "event://auto/s4-exchange-stellar-autoQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-110",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-109",
+      "idempotency_key": "idem-s4-110",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange stellar-autoQ3: 2000000.0 USD org://auto/forge-auto->org://auto/stellar-auto (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/auto-escrow-stellar-autoQ3",
+          "kind": "MONEY",
+          "title": "org://auto/stellar-auto",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://auto/forge-auto for org://auto/stellar-auto (stellar-autoQ3)"
+        },
+        {
+          "uri": "obligation://auto/s4-pay-stellar-autoQ3",
+          "subject": "org://auto/forge-auto",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://auto/stellar-auto",
+          "due_by": "2026-08-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-08-30T00:00:00Z"
+        },
+        {
+          "uri": "receipt://auto/s4-receipt-stellar-autoQ3",
+          "kind": "SETTLEMENT",
+          "from": "org://auto/forge-auto",
+          "to": "org://auto/stellar-auto",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-08-30T00:00:00Z"
+        },
+        {
+          "uri": "decision://auto/s4-recon-stellar-autoQ3",
+          "by": "agent://s4",
+          "authority": "authority://auto/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://auto/forge-auto",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "stellar-autoQ3",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://auto/forge-auto",
+            "provider": "org://auto/stellar-auto",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://auto/s4-exchange-stellar-autoQ3",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-110",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-109",
+          "idempotency_key": "idem-s4-110",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange stellar-autoQ3: 2000000.0 USD org://auto/forge-auto->org://auto/stellar-auto (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://auto/forge-auto",
+          "provider": "org://auto/stellar-auto",
+          "settled_at": "2026-08-30T00:00:00Z",
+          "exchange_of": "commitment://auto/c-stellar-autoQ3"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://auto/forge-auto",
+      "provider": "org://auto/stellar-auto",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "exchange_of": "commitment://auto/c-stellar-autoQ3",
+      "hash": "a04d71ca2ecfb75472273a601a8cd3f35518c814c0e52573d8c11de0254fee37"
+    },
+    {
+      "uri": "event://auto/s4-outcome-stellar-autoQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-111",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-110",
+      "idempotency_key": "idem-s4-111",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle stellar-autoQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://auto/s4-outcome-stellar-autoQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-111",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-110",
+          "idempotency_key": "idem-s4-111",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle stellar-autoQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-08-31T00:00:00Z",
+          "settled_at": "2026-08-30T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "score": 1.0,
+      "hash": "e657dfec5f42eece679e2beccbf0eed43fb0dfe4176af167c56b9c197a8366e3"
+    },
+    {
+      "uri": "event://auto/outcome-committed-stellar-autoQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-112",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-111",
+      "idempotency_key": "idem-s2-112",
+      "signature": "signed-by-org://auto/stellar-auto",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://auto/stellar-auto",
+      "detail": "job committed-stellar-autoQ3 by org://auto/stellar-auto: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://auto/outcome-committed-stellar-autoQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-112",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-111",
+          "idempotency_key": "idem-s2-112",
+          "signature": "signed-by-org://auto/stellar-auto",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://auto/stellar-auto",
+          "detail": "job committed-stellar-autoQ3 by org://auto/stellar-auto: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "committed-stellar-autoQ3",
+          "provider": "org://auto/stellar-auto",
+          "committed_deadline": "2026-08-31T00:00:00Z",
+          "actual_completed_at": "2026-08-30T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://auto/committed-stellar-autoQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-OEM part-lot delivery record + auto anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-stellar-autoQ3",
+      "provider": "org://auto/stellar-auto",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-08-30T00:00:00Z",
+      "on_time": true,
+      "hash": "125e4c7db40e6a10daaa05ec10c2ee3430dba8c48bc61a491b2768d414dbc9a7"
+    },
+    {
+      "uri": "event://auto/verify-committed-stellar-autoQ3",
+      "type": "DECISION",
+      "event_id": "ev-s2-113",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-112",
+      "idempotency_key": "idem-s2-113",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://auto/stellar-auto delivered the committed resource on time' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://auto/committed-stellar-autoQ3",
+          "proposer": "agent://s5",
+          "statement": "org://auto/stellar-auto delivered the committed resource on time"
+        },
+        {
+          "uri": "evidence://auto/committed-stellar-autoQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-OEM part-lot delivery record + auto anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "a882bd93568781ff7fc7e1ff2f63fe9247434f42ad53ed6f9029ab102c0bd070"
+    },
+    {
+      "uri": "event://auto/trust-update-stellar-auto",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-114",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-113",
+      "idempotency_key": "idem-s2-114",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "trust for org://auto/stellar-auto [OEM part-lot delivery reliability] 0.600 -> 0.695 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://auto/t-stellar-auto",
+          "subject": "org://auto/forge-auto",
+          "target": "org://auto/stellar-auto",
+          "claim": "OEM part-lot delivery reliability",
+          "context": "relationship://auto/partner-net",
+          "score": 0.695,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://auto/committed-stellar-autoQ3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "1125026b5ccf4b19633dc4736f87fa5b24dc046f11ab8a3eab9a6f48221df43d"
+    },
+    {
+      "uri": "event://auto/s4-exchange-corvair-partsQ4",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-115",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-114",
+      "idempotency_key": "idem-s4-115",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange corvair-partsQ4: 1600000.0 USD org://auto/forge-auto->org://auto/corvair-parts (value 1600000.0, cost 1600000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/auto-escrow-corvair-partsQ4",
+          "kind": "MONEY",
+          "title": "org://auto/corvair-parts",
+          "custody": "cleared",
+          "value": 1600000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://auto/forge-auto for org://auto/corvair-parts (corvair-partsQ4)"
+        },
+        {
+          "uri": "obligation://auto/s4-pay-corvair-partsQ4",
+          "subject": "org://auto/forge-auto",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 1600000.0 USD for contracted work by org://auto/corvair-parts",
+          "due_by": "2026-09-15T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-17T00:00:00Z"
+        },
+        {
+          "uri": "receipt://auto/s4-receipt-corvair-partsQ4",
+          "kind": "SETTLEMENT",
+          "from": "org://auto/forge-auto",
+          "to": "org://auto/corvair-parts",
+          "amount": 1600000.0,
+          "currency": "USD",
+          "received_at": "2026-09-17T00:00:00Z"
+        },
+        {
+          "uri": "decision://auto/s4-recon-corvair-partsQ4",
+          "by": "agent://s4",
+          "authority": "authority://auto/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 1600000.0 USD from org://auto/forge-auto",
+          "actual_outcome": "matched exactly: settled 1600000.0 USD",
+          "detail": {
+            "slug": "corvair-partsQ4",
+            "expected": 1600000.0,
+            "actual": 1600000.0,
+            "matched": true,
+            "buyer": "org://auto/forge-auto",
+            "provider": "org://auto/corvair-parts",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://auto/s4-exchange-corvair-partsQ4",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-115",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-114",
+          "idempotency_key": "idem-s4-115",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange corvair-partsQ4: 1600000.0 USD org://auto/forge-auto->org://auto/corvair-parts (value 1600000.0, cost 1600000.0)",
+          "state_update": [],
+          "value": 1600000.0,
+          "cost": 1600000.0,
+          "price": 1600000.0,
+          "currency": "USD",
+          "buyer": "org://auto/forge-auto",
+          "provider": "org://auto/corvair-parts",
+          "settled_at": "2026-09-17T00:00:00Z",
+          "exchange_of": "commitment://auto/c-corvair-partsQ4"
+        }
+      ],
+      "value": 1600000.0,
+      "cost": 1600000.0,
+      "price": 1600000.0,
+      "currency": "USD",
+      "buyer": "org://auto/forge-auto",
+      "provider": "org://auto/corvair-parts",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "exchange_of": "commitment://auto/c-corvair-partsQ4",
+      "hash": "c64e59320edba7971f7fb2eb6ec6ae54eb0a8e60e9cffc99f4e1a87cb7f3bfb4"
+    },
+    {
+      "uri": "event://auto/s4-outcome-corvair-partsQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-116",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-115",
+      "idempotency_key": "idem-s4-116",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle corvair-partsQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+      "state_update": [
+        {
+          "uri": "event://auto/s4-outcome-corvair-partsQ4",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-116",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-115",
+          "idempotency_key": "idem-s4-116",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle corvair-partsQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+          "state_update": [],
+          "evaluation": "partial",
+          "expected": 1600000.0,
+          "actual": 1600000.0,
+          "deadline": "2026-09-15T00:00:00Z",
+          "settled_at": "2026-09-17T00:00:00Z",
+          "score": 0.5
+        }
+      ],
+      "evaluation": "partial",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "deadline": "2026-09-15T00:00:00Z",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "score": 0.5,
+      "hash": "11afdcc2bd72277ce2ef5cdbd7b19035023f0a197572b9c401a11d4188108a70"
+    },
+    {
+      "uri": "event://auto/outcome-committed-corvair-partsQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-117",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-116",
+      "idempotency_key": "idem-s2-117",
+      "signature": "signed-by-org://auto/corvair-parts",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://auto/corvair-parts",
+      "detail": "job committed-corvair-partsQ4 by org://auto/corvair-parts: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://auto/outcome-committed-corvair-partsQ4",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-117",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-116",
+          "idempotency_key": "idem-s2-117",
+          "signature": "signed-by-org://auto/corvair-parts",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://auto/corvair-parts",
+          "detail": "job committed-corvair-partsQ4 by org://auto/corvair-parts: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "committed-corvair-partsQ4",
+          "provider": "org://auto/corvair-parts",
+          "committed_deadline": "2026-09-15T00:00:00Z",
+          "actual_completed_at": "2026-09-17T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://auto/committed-corvair-partsQ4",
+          "kind": "ANCHORED",
+          "source": "signed committed-OEM part-lot delivery record + auto anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-corvair-partsQ4",
+      "provider": "org://auto/corvair-parts",
+      "committed_deadline": "2026-09-15T00:00:00Z",
+      "actual_completed_at": "2026-09-17T00:00:00Z",
+      "on_time": false,
+      "hash": "ef6a624258a55845246297a655597095d3d552ad8033dc53bd10a2ba53d7206c"
+    },
+    {
+      "uri": "event://auto/verify-committed-corvair-partsQ4",
+      "type": "DECISION",
+      "event_id": "ev-s2-118",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-117",
+      "idempotency_key": "idem-s2-118",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://auto/corvair-parts delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://auto/committed-corvair-partsQ4",
+          "proposer": "agent://s5",
+          "statement": "org://auto/corvair-parts delivered the committed resource LATE"
+        },
+        {
+          "uri": "evidence://auto/committed-corvair-partsQ4",
+          "kind": "ANCHORED",
+          "source": "signed committed-OEM part-lot delivery record + auto anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "2b17474e143f3c6c06155458d6af3cc5eb1ded93cbb55649d92a9e59a8bf34d7"
+    },
+    {
+      "uri": "event://auto/trust-update-corvair-parts",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-119",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-118",
+      "idempotency_key": "idem-s2-119",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "trust for org://auto/corvair-parts [OEM part-lot delivery reliability] 0.520 -> 0.140 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://auto/t-corvair-parts",
+          "subject": "org://auto/forge-auto",
+          "target": "org://auto/corvair-parts",
+          "claim": "OEM part-lot delivery reliability",
+          "context": "relationship://auto/partner-net",
+          "score": 0.14,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://auto/committed-corvair-partsQ4"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "2934ab4ae82728399686749125c1441b27af2ae10223aebc2c1433ccf4d1b6e6"
+    },
+    {
+      "uri": "event://auto/s5-state-7000",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7000",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-6999",
+      "idempotency_key": "idem-s5-7000",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "open case case://auto/c-on-time (committed OEM part-lot delivery below target on time)",
+      "state_update": [
+        {
+          "uri": "case://auto/c-on-time",
+          "subject": "committed OEM part-lot delivery below target on time",
+          "status": "OPEN",
+          "owner": "person://auto/vpo",
+          "actors": [
+            "org://auto/forge-auto",
+            "person://auto/vpo",
+            "agent://auto/supply-ops"
+          ],
+          "relationships": [
+            "relationship://auto/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target"
+        }
+      ],
+      "hash": "b322c6a2c8a347c932b886518db7e89ef6ed44d239f77b41098c11bcbc06edf3"
+    },
+    {
+      "uri": "event://auto/s5-state-7001",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7001",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7000",
+      "idempotency_key": "idem-s5-7001",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "record exception heartbeat on the case",
+      "state_update": [
+        {
+          "uri": "case://auto/c-on-time",
+          "subject": "committed OEM part-lot delivery below target on time",
+          "status": "OPEN",
+          "owner": "person://auto/vpo",
+          "actors": [
+            "org://auto/forge-auto",
+            "person://auto/vpo",
+            "agent://auto/supply-ops"
+          ],
+          "relationships": [
+            "relationship://auto/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed oem part-lot delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "tier failure \u2014 org://auto/corvair-parts missed its committed part-lot delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed OEM part lots to the verified on-time vendor (stellar-auto) and gate the laggard (corvair-parts)",
+          "metric": "metric://auto/m-on-time"
+        }
+      ],
+      "hash": "25fa4d26f4ab8281f26a7ab0389f4fb3db82d876558f4ce49f44a3fb520a9372"
+    },
+    {
+      "uri": "event://auto/s5-state-7002",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7002",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7001",
+      "idempotency_key": "idem-s5-7002",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "case triage: exception assessed, root nominated",
+      "state_update": [
+        {
+          "uri": "decision://auto/s5-triage",
+          "by": "agent://auto/s5",
+          "authority": "authority://auto/for-ops",
+          "alternatives": [
+            "accept",
+            "dismiss as anomaly"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "accept as a real risk",
+          "actual_outcome": "accepted; root nominated",
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "fac2fc69bf7a8e238485e5318e4156117d049d253466cc491d001f4acb172375"
+    },
+    {
+      "uri": "event://auto/s5-case-triage",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7003",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7002",
+      "idempotency_key": "idem-s5-7003",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "case triaged",
+      "state_update": [
+        {
+          "uri": "case://auto/c-on-time",
+          "subject": "committed OEM part-lot delivery below target on time",
+          "status": "TRIAGE",
+          "owner": "person://auto/vpo",
+          "actors": [
+            "org://auto/forge-auto",
+            "person://auto/vpo",
+            "agent://auto/supply-ops"
+          ],
+          "relationships": [
+            "relationship://auto/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-triage"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed oem part-lot delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "tier failure \u2014 org://auto/corvair-parts missed its committed part-lot delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed OEM part lots to the verified on-time vendor (stellar-auto) and gate the laggard (corvair-parts)",
+          "metric": "metric://auto/m-on-time"
+        }
+      ],
+      "hash": "a06f91ff3076031877b825f8ef04767d400bfdd1af2ddbfee32954460e7d9421"
+    },
+    {
+      "uri": "event://auto/s5-state-7004",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7004",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7003",
+      "idempotency_key": "idem-s5-7004",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "case assigned; task becomes assigned authorized work (#8)",
+      "state_update": [
+        {
+          "uri": "task://auto/t-rebalance",
+          "assigned_to": "agent://auto/supply-ops",
+          "created_by": "agent://auto/s5",
+          "objective": "re-balance OEM part allocation to the verified on-time vendor (stellar-auto) and gate the laggard (corvair-parts)",
+          "dependencies": [],
+          "authority": "authority://auto/for-ops",
+          "deadline": "2026-10-15T00:00:00Z",
+          "priority": 0.695,
+          "status": "ASSIGNED",
+          "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+          "why_here": "derived from the on-time exception (case OPEN)",
+          "importance": "restores line-on-time, protecting assembly scoped Trust",
+          "evidence": [
+            "evidence://auto/committed-corvair-partsQ3",
+            "evidence://auto/committed-stellar-autoQ3",
+            "evidence://auto/committed-corvair-partsQ4"
+          ],
+          "decision_required": "approve the re-allocation",
+          "priority_factors": {
+            "impact": 0.85,
+            "urgency": 0.9,
+            "confidence": 0.7,
+            "irreversibility": false,
+            "relationship_importance": 0.8,
+            "cost_of_delay": 0.75
+          },
+          "assigned_capacity": 1.0
+        },
+        {
+          "uri": "decision://auto/s5-assign",
+          "by": "person://auto/vpo",
+          "authority": "authority://auto/for-ops",
+          "alternatives": [
+            "assign",
+            "defer"
+          ],
+          "confidence": 0.95,
+          "expected_outcome": "task in progress",
+          "detail": {
+            "task": "task://auto/t-rebalance",
+            "assigned_to": "agent://auto/supply-ops",
+            "authority": "authority://auto/for-ops",
+            "priority": 0.695,
+            "capacity": 1.0
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "8cc2cfc7cee1f78af516d9f8c108510bd62a9764deb9c5edc2db1446d05acfc5"
+    },
+    {
+      "uri": "event://auto/s5-case-assigned",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7005",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7004",
+      "idempotency_key": "idem-s5-7005",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "case assigned",
+      "state_update": [
+        {
+          "uri": "case://auto/c-on-time",
+          "subject": "committed OEM part-lot delivery below target on time",
+          "status": "ASSIGNED",
+          "owner": "person://auto/vpo",
+          "actors": [
+            "org://auto/forge-auto",
+            "person://auto/vpo",
+            "agent://auto/supply-ops"
+          ],
+          "relationships": [
+            "relationship://auto/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-assigned"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed oem part-lot delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "tier failure \u2014 org://auto/corvair-parts missed its committed part-lot delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed OEM part lots to the verified on-time vendor (stellar-auto) and gate the laggard (corvair-parts)",
+          "metric": "metric://auto/m-on-time"
+        }
+      ],
+      "hash": "d90867e953de095adf495d3e429751f028031436b6b3b99f6402e966e1dcc30c"
+    },
+    {
+      "uri": "event://auto/s5-case-inprogress",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7006",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7005",
+      "idempotency_key": "idem-s5-7006",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "task execution began",
+      "state_update": [
+        {
+          "uri": "case://auto/c-on-time",
+          "subject": "committed OEM part-lot delivery below target on time",
+          "status": "IN_PROGRESS",
+          "owner": "person://auto/vpo",
+          "actors": [
+            "org://auto/forge-auto",
+            "person://auto/vpo",
+            "agent://auto/supply-ops"
+          ],
+          "relationships": [
+            "relationship://auto/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-inprogress"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed oem part-lot delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "tier failure \u2014 org://auto/corvair-parts missed its committed part-lot delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed OEM part lots to the verified on-time vendor (stellar-auto) and gate the laggard (corvair-parts)",
+          "metric": "metric://auto/m-on-time"
+        }
+      ],
+      "hash": "9371945fd7023ffe4c014f706df6f198f3a42fa76b6db9302dc28d6712df6eb8"
+    },
+    {
+      "uri": "event://auto/s5-state-7007",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7007",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7006",
+      "idempotency_key": "idem-s5-7007",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "policy updated: allocate by fit AND scoped Trust",
+      "state_update": [
+        {
+          "uri": "policy://auto/allocation",
+          "name": "auto allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "select by fit x scoped Trust; laggard (< floor) needs a performance gate",
+          "action": "allocate to the top-ranked fitted partner; gate laggard",
+          "scope": [
+            "expectation://auto/e-on-time"
+          ],
+          "version": 2,
+          "policy_status": "REVISED"
+        }
+      ],
+      "hash": "521e836fc17b78c64c34368c036686c1026e0187afb7665f7c396c521a7deb73"
+    },
+    {
+      "uri": "event://auto/s5-state-7008",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7008",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7007",
+      "idempotency_key": "idem-s5-7008",
+      "signature": "signed-by-agent://auto/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s2",
+      "detail": "task effect: next committed work ranked offer://auto/o-g (score 0.695)",
+      "state_update": [
+        {
+          "uri": "decision://auto/s5-match-recorded",
+          "by": "agent://s2",
+          "authority": "delegation://auto/s2-match",
+          "alternatives": [
+            "offer://auto/o-g",
+            "none"
+          ],
+          "confidence": 0.92,
+          "expected_outcome": "good partner ranked #1",
+          "actual_outcome": "offer://auto/o-g",
+          "detail": [
+            {
+              "offer": "offer://auto/o-g",
+              "provider": "org://auto/stellar-auto",
+              "fit": 1.0,
+              "trust": 0.695,
+              "score": 0.695
+            }
+          ],
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "a057377441f4d0527b0826c750c036f5abe0d827be80b1df5b0ca34d47a81efb"
+    },
+    {
+      "uri": "event://auto/s5-escalate",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7009",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7008",
+      "idempotency_key": "idem-s5-7009",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "escalation: the committed action is irreversible and cost-unknowable once done (\u00a76 floor)",
+      "state_update": [
+        {
+          "uri": "escalation://auto/escalate-release",
+          "trigger": "external line-side release \u2014 irreversible and cost-unknowable once in the build",
+          "severity": "WARN",
+          "recipient": "person://auto/vpo",
+          "deadline": "2026-11-15T00:00:00Z",
+          "fallback": "agent://auto/s4",
+          "authority": "authority://auto/for-ops",
+          "acknowledgement": "approve then execute"
+        }
+      ],
+      "hash": "62caed10c9a6e747b73f325b5528639cfe8408522bb04bdf8897ee2dc5fb396d"
+    },
+    {
+      "uri": "event://auto/owner-human",
+      "type": "DECISION",
+      "event_id": "ev-auto-7010",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-auto-7009",
+      "idempotency_key": "idem-auto-7010",
+      "signature": "signed-by-person://auto/vpo",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "person://auto/vpo",
+      "detail": "person://auto/vpo signed approval to release the committed action (\u00a76 floor)",
+      "state_update": [
+        {
+          "uri": "decision://auto/owner-human",
+          "by": "person://auto/vpo",
+          "authority": "authority://auto/for-ops",
+          "alternatives": [
+            "release_in_full",
+            "hold",
+            "release_partial_and_hold_if_shortfall",
+            "open_dispute"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "release to the verified partner",
+          "actual_outcome": "release_in_full (human approved)",
+          "detail": {
+            "task": "task://auto/t-rebalance",
+            "action": "release_committed_action",
+            "irreversible_failure": true,
+            "cost_failure_unknowable": true
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "5e782e069850b4a8dcde48b319a382a1bfa41e1d970bc6ffbadb40eaf7096e49"
+    },
+    {
+      "uri": "event://auto/action-release",
+      "type": "ACTION",
+      "event_id": "ev-auto-7011",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-auto-7010",
+      "idempotency_key": "idem-auto-7011",
+      "signature": "signed-by-person://auto/vpo",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/supply-ops",
+      "detail": "rebalance_commitment executed after human approval",
+      "worker": "agent://auto/supply-ops",
+      "action": "rebalance_commitment",
+      "task_id": "t-rebalance",
+      "tier": "human",
+      "outcome": "done",
+      "state_update": [],
+      "hash": "aa5dfacfd9d2d828dc311b9e761a9d1cf411f97be79b366eeb1274e1a2d09c4d"
+    },
+    {
+      "uri": "event://auto/s5-case-blocked",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7012",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7011",
+      "idempotency_key": "idem-s5-7012",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "case blocked pending the rallied committed delivery's verification",
+      "state_update": [
+        {
+          "uri": "case://auto/c-on-time",
+          "subject": "committed OEM part-lot delivery below target on time",
+          "status": "BLOCKED",
+          "owner": "person://auto/vpo",
+          "actors": [
+            "org://auto/forge-auto",
+            "person://auto/vpo",
+            "agent://auto/supply-ops"
+          ],
+          "relationships": [
+            "relationship://auto/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-blocked"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed oem part-lot delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "tier failure \u2014 org://auto/corvair-parts missed its committed part-lot delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed OEM part lots to the verified on-time vendor (stellar-auto) and gate the laggard (corvair-parts)",
+          "metric": "metric://auto/m-on-time"
+        }
+      ],
+      "hash": "946f97b3a0d2118449e8b102902353b3d9a5b3437ce503dccb77343bc7db4830"
+    },
+    {
+      "uri": "event://auto/s5-state-7013",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7013",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7012",
+      "idempotency_key": "idem-s5-7013",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "rallied committed work allocated to org://auto/stellar-auto (the fix)",
+      "state_update": [
+        {
+          "uri": "commitment://auto/c-stellar-auto-followup",
+          "by": "agent://auto/s5",
+          "to": "org://auto/stellar-auto",
+          "obligation": "offer://auto/o-g",
+          "expectation": "expectation://auto/e-routed-stellar-autoR",
+          "status": "AGREED",
+          "terms": {
+            "kind": "OEM part-lot delivery follow-up",
+            "signed": true
+          },
+          "agreed_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "03361a66a4296c829822e33487aad50714c6cba04d7d56b427d702cdd865e3e1"
+    },
+    {
+      "uri": "event://auto/s5-state-7014",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7014",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7013",
+      "idempotency_key": "idem-s5-7014",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "register follow-on expectation",
+      "state_update": [
+        {
+          "uri": "expectation://auto/e-stellar-autoR",
+          "actor": "person://auto/vpo",
+          "subject": "OEM part-lot delivery",
+          "condition": "fully deliver the committed resource by its committed deadline",
+          "metric": "settled_value",
+          "threshold": 2000000.0,
+          "deadline": "2026-11-15T00:00:00Z",
+          "evidence_required": "CLEAR"
+        }
+      ],
+      "hash": "438057495597fe7159c18eee52eed0213e9a679d9b6593f04b869a78fef47b0f"
+    },
+    {
+      "uri": "event://auto/s4-exchange-stellar-autoR",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-7015",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7014",
+      "idempotency_key": "idem-s4-7015",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange stellar-autoR: 2000000.0 USD org://auto/forge-auto->org://auto/stellar-auto (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/auto-escrow-stellar-autoR",
+          "kind": "MONEY",
+          "title": "org://auto/stellar-auto",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://auto/forge-auto for org://auto/stellar-auto (stellar-autoR)"
+        },
+        {
+          "uri": "obligation://auto/s4-pay-stellar-autoR",
+          "subject": "org://auto/forge-auto",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://auto/stellar-auto",
+          "due_by": "2026-11-15T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-11-12T00:00:00Z"
+        },
+        {
+          "uri": "receipt://auto/s4-receipt-stellar-autoR",
+          "kind": "SETTLEMENT",
+          "from": "org://auto/forge-auto",
+          "to": "org://auto/stellar-auto",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-11-12T00:00:00Z"
+        },
+        {
+          "uri": "decision://auto/s4-recon-stellar-autoR",
+          "by": "agent://s4",
+          "authority": "authority://auto/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://auto/forge-auto",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "stellar-autoR",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://auto/forge-auto",
+            "provider": "org://auto/stellar-auto",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://auto/s4-exchange-stellar-autoR",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-7015",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-7014",
+          "idempotency_key": "idem-s4-7015",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange stellar-autoR: 2000000.0 USD org://auto/forge-auto->org://auto/stellar-auto (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://auto/forge-auto",
+          "provider": "org://auto/stellar-auto",
+          "settled_at": "2026-11-12T00:00:00Z",
+          "exchange_of": "commitment://auto/c-stellar-autoR"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://auto/forge-auto",
+      "provider": "org://auto/stellar-auto",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "exchange_of": "commitment://auto/c-stellar-autoR",
+      "hash": "659098c30721eec5607b33f7ea4e4e4d57e194f0c986a2af26373d9841970ac7"
+    },
+    {
+      "uri": "event://auto/s4-outcome-stellar-autoR",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-7016",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7015",
+      "idempotency_key": "idem-s4-7016",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle stellar-autoR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://auto/s4-outcome-stellar-autoR",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-7016",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-7015",
+          "idempotency_key": "idem-s4-7016",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle stellar-autoR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-11-15T00:00:00Z",
+          "settled_at": "2026-11-12T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "score": 1.0,
+      "hash": "bb0b56676b47d6e3a7800b18c49eb350f2505871dc30fe904573ebc339492bb9"
+    },
+    {
+      "uri": "event://auto/outcome-routed-stellar-autoR",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-7017",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7016",
+      "idempotency_key": "idem-s2-7017",
+      "signature": "signed-by-org://auto/stellar-auto",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://auto/stellar-auto",
+      "detail": "job routed-stellar-autoR by org://auto/stellar-auto: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://auto/outcome-routed-stellar-autoR",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-7017",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-7016",
+          "idempotency_key": "idem-s2-7017",
+          "signature": "signed-by-org://auto/stellar-auto",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://auto/stellar-auto",
+          "detail": "job routed-stellar-autoR by org://auto/stellar-auto: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "routed-stellar-autoR",
+          "provider": "org://auto/stellar-auto",
+          "committed_deadline": "2026-11-15T00:00:00Z",
+          "actual_completed_at": "2026-11-12T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://auto/routed-stellar-autoR",
+          "kind": "ANCHORED",
+          "source": "signed committed-OEM part-lot delivery record + auto anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "routed-stellar-autoR",
+      "provider": "org://auto/stellar-auto",
+      "committed_deadline": "2026-11-15T00:00:00Z",
+      "actual_completed_at": "2026-11-12T00:00:00Z",
+      "on_time": true,
+      "hash": "f39e34742c74994a9e608c2a1348365f916601460c5016f86101c74ffd8592a0"
+    },
+    {
+      "uri": "event://auto/verify-routed-stellar-autoR",
+      "type": "DECISION",
+      "event_id": "ev-s2-7018",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7017",
+      "idempotency_key": "idem-s2-7018",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://auto/stellar-auto delivered the rallied committed OEM part-lot delivery on time' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://auto/routed-stellar-autoR",
+          "proposer": "agent://s5",
+          "statement": "org://auto/stellar-auto delivered the rallied committed OEM part-lot delivery on time"
+        },
+        {
+          "uri": "evidence://auto/routed-stellar-autoR",
+          "kind": "ANCHORED",
+          "source": "signed committed-OEM part-lot delivery record + auto anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "c71be8cf76efa365eb1806e395678c9596b2d87001cf180cc38f5a8eedb7f443"
+    },
+    {
+      "uri": "event://auto/trust-update-stellar-auto",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-7019",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7018",
+      "idempotency_key": "idem-s2-7019",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "trust for org://auto/stellar-auto [OEM part-lot delivery reliability] 0.695 -> 0.790 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://auto/t-stellar-auto",
+          "subject": "org://auto/forge-auto",
+          "target": "org://auto/stellar-auto",
+          "claim": "OEM part-lot delivery reliability",
+          "context": "relationship://auto/partner-net",
+          "score": 0.79,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://auto/routed-stellar-autoR"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "ff6cb0122f60b9c9b143776a007694f4ba56346b87f8f4ca67a851da1730757f"
+    },
+    {
+      "uri": "event://auto/s5-case-resolved",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7020",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7019",
+      "idempotency_key": "idem-s5-7020",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "exception resolved: rallied committed work verified on time; forward on-time = 1.0; cumulative 2/4",
+      "state_update": [
+        {
+          "uri": "case://auto/c-on-time",
+          "subject": "committed OEM part-lot delivery below target on time",
+          "status": "RESOLVED",
+          "owner": "person://auto/vpo",
+          "actors": [
+            "org://auto/forge-auto",
+            "person://auto/vpo",
+            "agent://auto/supply-ops"
+          ],
+          "relationships": [
+            "relationship://auto/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-blocked"
+            },
+            {
+              "status": "RESOLVED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-resolved"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed oem part-lot delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "tier failure \u2014 org://auto/corvair-parts missed its committed part-lot delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed OEM part lots to the verified on-time vendor (stellar-auto) and gate the laggard (corvair-parts)",
+          "metric": "metric://auto/m-on-time",
+          "verified_outcome": "forward on-time restored to 1.0; org://auto/stellar-auto delivered the rallied OEM part-lot delivery on time (evidence://auto/routed-stellar-autoR); org://auto/stellar-auto Trust 0.79"
+        }
+      ],
+      "hash": "9806cec57792ec78d7804f86d5506cd58a3a9042ea0010ada749f8b74c59e437"
+    },
+    {
+      "uri": "event://auto/s5-state-7021",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7021",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7020",
+      "idempotency_key": "idem-s5-7021",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "learning entry decision://auto/learning: Routing part lots via a vendor with verified on-time delivery (stellar-auto), while gating the laggard (corvair-parts), restored on-time supply. Verified good deliveries compound scoped Trust.",
+      "state_update": [
+        {
+          "uri": "decision://auto/learning",
+          "by": "agent://auto/s5",
+          "authority": "authority://auto/for-operations",
+          "subject": "OEM part-lot delivery on-time management",
+          "expected": 0.95,
+          "actual": 1.0,
+          "variance": 0.05,
+          "why": "Routing part lots via a vendor with verified on-time delivery (stellar-auto), while gating the laggard (corvair-parts), restored on-time supply. Verified good deliveries compound scoped Trust.",
+          "change_future_policy": "ALLOCATE by fit AND scoped Trust; vendors below the Trust floor need a gate before new lots.",
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "95f6c84917dafc4c62942a1a773ca03296a0973b930d791c016a4358543ce7e2"
+    },
+    {
+      "uri": "event://auto/s5-state-7022",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7022",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7021",
+      "idempotency_key": "idem-s5-7022",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "close case; learning recorded; future policy updated",
+      "state_update": [
+        {
+          "uri": "policy://auto/allocation",
+          "name": "auto allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "ALLOCATE by fit AND scoped Trust; vendors below the Trust floor need a gate before new lots. (learned 2026-09-01)",
+          "action": "allocate to the top-ranked fitted partner; gate laggard",
+          "scope": [
+            "expectation://auto/e-on-time"
+          ],
+          "version": 3,
+          "policy_status": "EFFECTIVE",
+          "learning": "decision://auto/learning"
+        }
+      ],
+      "hash": "7bc8b7f96058bc5a1879867e6be366d34a2fc52409e9ae6d75d1432ec154bd83"
+    },
+    {
+      "uri": "event://auto/s5-case-closed",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7022",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7021",
+      "idempotency_key": "idem-s5-7022",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "case closed",
+      "state_update": [
+        {
+          "uri": "case://auto/c-on-time",
+          "subject": "committed OEM part-lot delivery below target on time",
+          "status": "CLOSED",
+          "owner": "person://auto/vpo",
+          "actors": [
+            "org://auto/forge-auto",
+            "person://auto/vpo",
+            "agent://auto/supply-ops"
+          ],
+          "relationships": [
+            "relationship://auto/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-blocked"
+            },
+            {
+              "status": "RESOLVED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-resolved"
+            },
+            {
+              "status": "CLOSED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://auto/s5-case-closed"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed oem part-lot delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "tier failure \u2014 org://auto/corvair-parts missed its committed part-lot delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed OEM part lots to the verified on-time vendor (stellar-auto) and gate the laggard (corvair-parts)",
+          "metric": "metric://auto/m-on-time",
+          "verified_outcome": "forward on-time restored to 1.0; org://auto/stellar-auto delivered the rallied OEM part-lot delivery on time (evidence://auto/routed-stellar-autoR); org://auto/stellar-auto Trust 0.79"
+        }
+      ],
+      "hash": "09e91161021bbbe410a01ca41abae8ad524f8c9add62959e60bc53bc9e27e3c8"
+    },
+    {
+      "uri": "event://auto/s5-state-7023",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7023",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7022",
+      "idempotency_key": "idem-s5-7023",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "register goal + ledger-projected metrics",
+      "state_update": [
+        {
+          "uri": "goal://auto/g-core",
+          "for": "org://auto/forge-auto",
+          "statement": "Consistently deliver committed OEM part lots on time so assembly lines trust Forge Auto enough to stay scheduled.",
+          "horizon": "quarter",
+          "owner": "person://auto/vpo",
+          "metrics": [
+            "metric://auto/m-on-time",
+            "metric://auto/m-trust",
+            "metric://auto/m-settled-value"
+          ]
+        },
+        {
+          "uri": "metric://auto/m-on-time",
+          "name": "Committed-oem part-lot delivery on-time rate",
+          "definition": "share of committed OEM part-lot delivery deliveries verified on time",
+          "unit": "fraction",
+          "formula": "on_time / (on_time + late) from ledger",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 0.95,
+          "threshold": 0.8,
+          "period": "quarter",
+          "source": "ledger committed-delivery records",
+          "owner": "person://auto/vpo",
+          "actual": 0.5,
+          "forecast": 0.5,
+          "variance": -0.45,
+          "root_cause": "tier failure \u2014 org://auto/corvair-parts missed its committed part-lot delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED"
+        },
+        {
+          "uri": "metric://auto/m-trust",
+          "name": "Partner scoped-trust score",
+          "definition": "best scoped Trust on the partner network (per \u00a75)",
+          "unit": "score",
+          "formula": "T(subject->target, claim, context) per \u00a75",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 0.9,
+          "threshold": 0.6,
+          "period": "rolling",
+          "source": "S5 scoped Trust graph",
+          "owner": "person://auto/vpo",
+          "actual": 0.79,
+          "forecast": 0.92,
+          "variance": -0.11,
+          "root_cause_status": "UNKNOWN"
+        },
+        {
+          "uri": "metric://auto/m-settled-value",
+          "name": "Settled committed value",
+          "definition": "value of EXCHANGE events settled this period",
+          "unit": "USD",
+          "formula": "sum(EXCHANGE.price) from ledger",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 7600000.0,
+          "threshold": 4180000.0000000005,
+          "period": "quarter",
+          "source": "ledger EXCHANGE events",
+          "owner": "person://auto/vpo",
+          "actual": 7600000.0,
+          "forecast": 8740000.0,
+          "variance": 0.0,
+          "root_cause_status": "UNKNOWN"
+        }
+      ],
+      "hash": "59f66d81920eabcc5faedfd4a45535e3764cc52a138376819b3e50a43ee040ef"
+    },
+    {
+      "uri": "event://auto/s5-state-7024",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7024",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7023",
+      "idempotency_key": "idem-s5-7024",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "goal->metric->variance->decision->action->outcome",
+      "state_update": [
+        {
+          "uri": "decision://auto/s5-metric-loop",
+          "by": "agent://auto/s5",
+          "authority": "authority://auto/for-operations",
+          "alternatives": [
+            "do nothing",
+            "rebalance provider allocation"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "metric://auto/m-on-time variance reduced toward target",
+          "detail": {
+            "goal": "goal://auto/g-core",
+            "metric": "metric://auto/m-on-time",
+            "actual": 0.5,
+            "variance": -0.45,
+            "action": "task://auto/t-rebalance",
+            "outcome": "event://auto/outcome-routed-stellar-autoR"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "b87f7e76cd7e00d5de296781059f36601755886ee4a3a4fb7c0e6e2d13f59e07"
+    },
+    {
+      "uri": "event://auto/s5-state-7025",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7025",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7024",
+      "idempotency_key": "idem-s5-7025",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "priority-ordered attention list",
+      "state_update": [
+        {
+          "uri": "decision://auto/s5-attention",
+          "by": "agent://auto/s5",
+          "authority": "authority://auto/for-ops",
+          "confidence": 0.9,
+          "expected_outcome": "top-of-attention ranked",
+          "actual_outcome": "attention prioritized by derived score",
+          "detail": {
+            "attention": [
+              {
+                "uri": "task://auto/t-rebalance",
+                "label": "re-balance committed work",
+                "priority": 0.695
+              },
+              {
+                "uri": "task://auto/t-followup",
+                "label": "rallied follow-on (good partner)",
+                "priority": 0.58
+              }
+            ]
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "8e89daf7f94c570c8e98247884e76301a8de42fdd93cfc2368fcf304be2f1898"
+    },
+    {
+      "uri": "event://auto/s5-state-7026",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7026",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7025",
+      "idempotency_key": "idem-s5-7026",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "dependency dependency://auto/d-rb-enables-fu: task://auto/t-rebalance ENABLES task://auto/t-followup",
+      "state_update": [
+        {
+          "uri": "dependency://auto/d-rb-enables-fu",
+          "from": "task://auto/t-rebalance",
+          "to": "task://auto/t-followup",
+          "kind": "ENABLES"
+        }
+      ],
+      "hash": "286bd846aec958dce5ab079e71446bf1ba882fe54bc5ec001c67c6c7e51d53dc"
+    },
+    {
+      "uri": "event://auto/s5-state-7027",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7027",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7026",
+      "idempotency_key": "idem-s5-7027",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "dependency dependency://auto/d-fu-requires-pol: task://auto/t-followup REQUIRES policy://auto/allocation",
+      "state_update": [
+        {
+          "uri": "dependency://auto/d-fu-requires-pol",
+          "from": "task://auto/t-followup",
+          "to": "policy://auto/allocation",
+          "kind": "REQUIRES"
+        }
+      ],
+      "hash": "34a3e557e56f48269041e9fe15e6bc4e71d550f0a5d937d39eac86612b52b339"
+    },
+    {
+      "uri": "event://auto/s5-state-7028",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7028",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7027",
+      "idempotency_key": "idem-s5-7028",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "dependency dependency://auto/d-fu-blocks-case: task://auto/t-followup BLOCKS case://auto/c-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://auto/d-fu-blocks-case",
+          "from": "task://auto/t-followup",
+          "to": "case://auto/c-on-time",
+          "kind": "BLOCKS"
+        }
+      ],
+      "hash": "15ce836710489190d578946d5aed49e4e153f59c62482629141a55f1f0230151"
+    },
+    {
+      "uri": "event://auto/s5-state-7029",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7029",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7028",
+      "idempotency_key": "idem-s5-7029",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "dependency dependency://auto/d-case-from-metric: case://auto/c-on-time DERIVED_FROM metric://auto/m-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://auto/d-case-from-metric",
+          "from": "case://auto/c-on-time",
+          "to": "metric://auto/m-on-time",
+          "kind": "DERIVED_FROM"
+        }
+      ],
+      "hash": "b7d43a96643d9b015b1e53ca6d0ef32b0a8d5ecdf0e4ae9e0d412cf083b85cdc"
+    },
+    {
+      "uri": "event://auto/s5-state-7030",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7030",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7029",
+      "idempotency_key": "idem-s5-7030",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "dependency dependency://auto/d-metric-impacts-goal: metric://auto/m-on-time IMPACTS goal://auto/g-core",
+      "state_update": [
+        {
+          "uri": "dependency://auto/d-metric-impacts-goal",
+          "from": "metric://auto/m-on-time",
+          "to": "goal://auto/g-core",
+          "kind": "IMPACTS"
+        }
+      ],
+      "hash": "0496b280140a6818d13b927b8da8660653eaa9588ae8f259c5bb49d43ccd81f9"
+    },
+    {
+      "uri": "event://auto/s5-state-7031",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7031",
+      "correlation_id": "corr-auto-bol-1",
+      "causation_id": "ev-s5-7030",
+      "idempotency_key": "idem-s5-7031",
+      "signature": "signed-by-agent://auto/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://auto/s5",
+      "detail": "dependency dependency://auto/d-rb-blocks-case: task://auto/t-rebalance BLOCKS case://auto/c-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://auto/d-rb-blocks-case",
+          "from": "task://auto/t-rebalance",
+          "to": "case://auto/c-on-time",
+          "kind": "BLOCKS"
+        }
+      ],
+      "hash": "015429636e51ca9a6ff40c8b1ccd06c6c5bf65bbf3bd445ca86c5991fe64b763"
+    }
+  ]
+}

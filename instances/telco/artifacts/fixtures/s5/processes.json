@@ -1,0 +1,29 @@
+[
+  {
+    "uri": "process://telco/pr-core",
+    "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+    "steps": [
+      "triage",
+      "assign",
+      "execute",
+      "verify_outcome",
+      "learning"
+    ]
+  },
+  {
+    "uri": "process_instance://telco/pi-core",
+    "process": "process://telco/pr-core",
+    "status": "RUNNING",
+    "started_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "escalation://telco/escalate-release",
+    "trigger": "external site handover \u2014 irreversible and cost-unknowable once energized",
+    "severity": "WARN",
+    "recipient": "person://telco/cno",
+    "deadline": "2026-11-15T00:00:00Z",
+    "fallback": "agent://telco/s4",
+    "authority": "authority://telco/for-ops",
+    "acknowledgement": "approve then execute"
+  }
+]

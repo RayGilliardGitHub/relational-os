@@ -1,0 +1,34 @@
+[
+  {
+    "uri": "trust://logi/t-keystone-lines",
+    "subject": "org://logi/hawkline",
+    "target": "org://logi/keystone-lines",
+    "claim": "freight-dispatch settlement reliability",
+    "context": "relationship://logi/partner-net",
+    "score": 0.79,
+    "updated_at": "2026-09-01T00:29:53Z",
+    "expected": 0.8,
+    "outcome": 1.0,
+    "evidence": [
+      "evidence://logi/routed-keystone-linesR"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  },
+  {
+    "uri": "trust://logi/t-barnacle-freight",
+    "subject": "org://logi/hawkline",
+    "target": "org://logi/barnacle-freight",
+    "claim": "freight-dispatch settlement reliability",
+    "context": "relationship://logi/partner-net",
+    "score": 0.14,
+    "updated_at": "2026-09-01T00:29:53Z",
+    "expected": 0.8,
+    "outcome": 0.0,
+    "evidence": [
+      "evidence://logi/committed-barnacle-freightQ4"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  }
+]

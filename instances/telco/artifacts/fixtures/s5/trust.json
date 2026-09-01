@@ -1,0 +1,34 @@
+[
+  {
+    "uri": "trust://telco/t-meridian-tower",
+    "subject": "org://telco/nimbuscom",
+    "target": "org://telco/meridian-tower",
+    "claim": "cell-site buildout reliability",
+    "context": "relationship://telco/partner-net",
+    "score": 0.79,
+    "updated_at": "2026-09-01T00:29:53Z",
+    "expected": 0.8,
+    "outcome": 1.0,
+    "evidence": [
+      "evidence://telco/routed-meridian-towerR"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  },
+  {
+    "uri": "trust://telco/t-nimbus-networks",
+    "subject": "org://telco/nimbuscom",
+    "target": "org://telco/nimbus-networks",
+    "claim": "cell-site buildout reliability",
+    "context": "relationship://telco/partner-net",
+    "score": 0.14,
+    "updated_at": "2026-09-01T00:29:53Z",
+    "expected": 0.8,
+    "outcome": 0.0,
+    "evidence": [
+      "evidence://telco/committed-nimbus-networksQ4"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  }
+]

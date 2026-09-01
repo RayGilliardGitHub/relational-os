@@ -1,0 +1,2538 @@
+{
+  "uri": "db://ledger/media-2026",
+  "head_hash": "de3c7ecb635465b6c3dd69c661fce61fa7f96d15eabafd1c86719abd4d0214fd",
+  "entries": [
+    {
+      "uri": "event://media/s5-state-2",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-2",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-1",
+      "idempotency_key": "idem-s5-2",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "provision Media base (actors, relationships, authority + operator + policy + expectation)",
+      "state_update": [
+        {
+          "uri": "org://media/hollowmedia",
+          "type": "ORG",
+          "identity": {
+            "attestations": [
+              "business-license"
+            ]
+          },
+          "brand": {
+            "tagline": "Campaigns that land on the date.",
+            "mission": "Deliver committed content-delivery campaigns reliably and on time so platforms and brands stay in the mix and audiences see the story on schedule.",
+            "vision": "A media marketplace where a campaign release date is a contract audiences can count on.",
+            "values": [
+              [
+                "The date is the story",
+                "A late campaign is a missed audience moment."
+              ],
+              [
+                "Creative rigour",
+                "Great work delivered on time, never rushed at the end."
+              ],
+              [
+                "Measured impact",
+                "We verify every run against the ledger; reach is a fact."
+              ],
+              [
+                "Platform partnership",
+                "We make our partners' schedules look good."
+              ],
+              [
+                "Audience respect",
+                "We deliver content audiences actually want, when they want it."
+              ]
+            ],
+            "about": "Hollow Media produces and delivers committed content-delivery campaigns \u2014 from concept through to an energized, measured launch on the agreed date. In a business where timing is the whole story, we back every campaign release with ledger-verified on-time evidence, so a 'drop' date is a real commitment, not a hopeful aspiration.",
+            "fast_facts": [
+              "Founded 2007, media & content production",
+              "400+ campaigns delivered",
+              "Multi-format distribution across platforms"
+            ],
+            "history": [
+              [
+                "2007",
+                "Founded producing branded content."
+              ],
+              [
+                "2014",
+                "Launched the content-delivery campaign business."
+              ],
+              [
+                "2022",
+                "Verifying every campaign release against the ledger."
+              ]
+            ],
+            "leadership": [
+              [
+                "Celine Wexler",
+                "Chief Executive",
+                "Producer-turned-executive who built Hollow on delivered dates."
+              ],
+              [
+                "Omar Delgado",
+                "Chief Media Officer",
+                "Owns the distribution network and campaign timing."
+              ]
+            ],
+            "products_services": [
+              "Content-delivery campaigns (concept to launch)",
+              "Multi-platform distribution",
+              "Campaign measurement and reporting"
+            ],
+            "testimonials": [
+              [
+                "Hollow delivered the campaign on the exact date we'd promised our brand. That never happens in media.",
+                "Brand marketing lead"
+              ]
+            ],
+            "trust": [
+              [
+                "99.3% committed campaign on-time rate (2025)",
+                "Hollow delivery ledger"
+              ],
+              [
+                "MARC (Media Rating Council) aligned measurement",
+                "independent audit"
+              ]
+            ],
+            "locations": "LA (HQ) \u00b7 production + distribution hubs across 3 regions",
+            "faq": [
+              [
+                "How can you commit a creative launch date?",
+                "We treat the release like a delivery: planned backwards from the date, verified at launch, and measured against the ledger."
+              ],
+              [
+                "Do you handle distribution yourselves?",
+                "Yes, multi-platform distribution is core and part of the on-time commitment."
+              ]
+            ],
+            "contact": "hello@hollowmedia.example \u00b7 +1-310-555-0188",
+            "careers": "Drop stories on time: production, distribution, data, and campaign leads.",
+            "investors": "Privately held. Campaign performance data shared with brands on request.",
+            "press": "press@hollowmedia.example \u2014 launches, shows, and reliability stories.",
+            "esg": "Sustainable production practices, audience-inclusive content, creator equity programs.",
+            "legal": [
+              "Privacy",
+              "Terms",
+              "California Rights",
+              "Do Not Sell or Share",
+              "Content Policy"
+            ],
+            "nav": [
+              "About",
+              "Work",
+              "Distribution",
+              "Press",
+              "Careers",
+              "Contact"
+            ],
+            "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+            "design": {
+              "palette": [
+                [
+                  "Studio Black",
+                  "#111214"
+                ],
+                [
+                  "Hollow Cerise",
+                  "#D41159"
+                ],
+                [
+                  "Screen White",
+                  "#F7F5F2"
+                ],
+                [
+                  "Signal Teal",
+                  "#0F7A72"
+                ]
+              ],
+              "typography": {
+                "heading": "Contemporary display serif (e.g. Playfair Display)",
+                "body": "Neutral sans (e.g. Inter)"
+              },
+              "logo": {
+                "wordmark": "hollow",
+                "character": "a hollow-circle/cutout mark",
+                "usage": "clear space fine; cerise-on-black primary, teal for data accents"
+              },
+              "imagery": "Cinematic stills, editing bays, campaign storyboards \u2014 dark, bold, precise",
+              "tone": "Confident, slightly provocative, disciplined about timing; the date is the point."
+            }
+          }
+        },
+        {
+          "uri": "org://media/cascade-vantage",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://media/lyra-ops",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://media/hollowpoint-digital",
+          "type": "ORG"
+        },
+        {
+          "uri": "person://media/cmo",
+          "type": "PERSON"
+        },
+        {
+          "uri": "agent://media/campaign-ops",
+          "type": "AGENT"
+        },
+        {
+          "uri": "relationship://media/ops-rel",
+          "participants": [
+            "org://media/hollowmedia",
+            "org://media/cascade-vantage"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://media/hollowmedia": [
+              "provider"
+            ],
+            "org://media/cascade-vantage": [
+              "client"
+            ]
+          },
+          "authority": [
+            "authority://media/for-ops"
+          ],
+          "purpose": "media operating relationship"
+        },
+        {
+          "uri": "relationship://media/partner-net",
+          "participants": [
+            "org://media/hollowmedia",
+            "org://media/lyra-ops",
+            "org://media/hollowpoint-digital"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://media/hollowmedia": [
+              "operator"
+            ],
+            "org://media/lyra-ops": [
+              "partner"
+            ],
+            "org://media/hollowpoint-digital": [
+              "partner"
+            ]
+          },
+          "authority": [
+            "authority://media/for-ops"
+          ],
+          "purpose": "media partner network"
+        },
+        {
+          "uri": "authority://media/for-ops",
+          "holder": "org://media/hollowmedia",
+          "grants": [
+            "triage_case",
+            "assign_case",
+            "close_case",
+            "approve_learning",
+            "rebalance_commitment",
+            "gate_partner",
+            "release_committed_action"
+          ],
+          "roles": [
+            "operator"
+          ]
+        },
+        {
+          "uri": "rule://media/ops-run",
+          "kind": "POLICY",
+          "text": "agent://media/campaign-ops may re-balance resource commitment and gate partner performance",
+          "grants": [
+            "rebalance_commitment",
+            "gate_partner"
+          ]
+        },
+        {
+          "uri": "rule://media/match-run",
+          "kind": "POLICY",
+          "text": "S2 may run Trust-weighted matching for the client",
+          "grants": [
+            "run_match"
+          ]
+        },
+        {
+          "uri": "delegation://media/ops",
+          "grantor": "org://media/hollowmedia",
+          "grantee": "agent://media/campaign-ops",
+          "scope": [
+            "rule://media/ops-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://media/s2-match",
+          "grantor": "org://media/hollowmedia",
+          "grantee": "agent://s2",
+          "scope": [
+            "rule://media/match-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "expectation://media/e-on-time",
+          "actor": "person://media/cmo",
+          "subject": "content-delivery campaign",
+          "condition": "fully deliver the committed content-delivery campaign by its committed deadline",
+          "metric": "on_time",
+          "threshold": 0.95,
+          "deadline": "2026-12-31T00:00:00Z",
+          "evidence_required": "CLEAR"
+        },
+        {
+          "uri": "policy://media/allocation",
+          "name": "media allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "select the partner with the highest fit x scoped Trust",
+          "action": "allocate to the top-ranked fitted partner",
+          "scope": [
+            "expectation://media/e-on-time"
+          ],
+          "version": 1
+        },
+        {
+          "uri": "process://media/pr-core",
+          "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+          "steps": [
+            "triage",
+            "assign",
+            "execute",
+            "verify_outcome",
+            "learning"
+          ]
+        },
+        {
+          "uri": "process_instance://media/pi-core",
+          "process": "process://media/pr-core",
+          "status": "RUNNING",
+          "started_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "c15639fcbf070cf5b9480c02e4bff4c0e38d8dc44fb37e00449f8b028375250f"
+    },
+    {
+      "uri": "event://media/s5-state-100",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-100",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-99",
+      "idempotency_key": "idem-s5-100",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "seed scoped Trust org://media/lyra-ops = 0.6",
+      "state_update": [
+        {
+          "uri": "trust://media/t-lyra-ops",
+          "subject": "org://media/hollowmedia",
+          "target": "org://media/lyra-ops",
+          "claim": "content-delivery campaign reliability",
+          "context": "relationship://media/partner-net",
+          "score": 0.6
+        }
+      ],
+      "hash": "fb43052a619e20dec17dccf35c18f82ee793b4509bb6d81de8a44b2d81bb7c18"
+    },
+    {
+      "uri": "event://media/s5-state-101",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-101",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-100",
+      "idempotency_key": "idem-s5-101",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "seed scoped Trust org://media/hollowpoint-digital = 0.9",
+      "state_update": [
+        {
+          "uri": "trust://media/t-hollowpoint-digital",
+          "subject": "org://media/hollowmedia",
+          "target": "org://media/hollowpoint-digital",
+          "claim": "content-delivery campaign reliability",
+          "context": "relationship://media/partner-net",
+          "score": 0.9
+        }
+      ],
+      "hash": "505cab83d76eaa01eb1579a6648479a32628d229586b8f6768a319ea97f646a2"
+    },
+    {
+      "uri": "event://media/s5-state-102",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-102",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-101",
+      "idempotency_key": "idem-s5-102",
+      "signature": "signed-by-agent://media/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s2",
+      "detail": "register resource-commitment offer from org://media/lyra-ops",
+      "state_update": [
+        {
+          "uri": "offer://media/o-g",
+          "provider": "org://media/lyra-ops",
+          "price": 2000000.0,
+          "currency": "USD",
+          "capability_keys": [
+            "distribution",
+            "campaign"
+          ],
+          "fit_note": "media partner delivery line"
+        }
+      ],
+      "hash": "18454fe474c089bfbdecdb8f231ed912c6936cba580ec0ecd048eb4ce65dfcfc"
+    },
+    {
+      "uri": "event://media/s5-state-103",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-103",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-102",
+      "idempotency_key": "idem-s5-103",
+      "signature": "signed-by-agent://media/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s2",
+      "detail": "register resource-commitment offer from org://media/hollowpoint-digital",
+      "state_update": [
+        {
+          "uri": "offer://media/o-l",
+          "provider": "org://media/hollowpoint-digital",
+          "price": 2000000.0,
+          "currency": "USD",
+          "capability_keys": [
+            "distribution",
+            "campaign"
+          ],
+          "fit_note": "media partner delivery line"
+        }
+      ],
+      "hash": "c44ef871444a5ba176d2a9311ba7e5a114a27f1e09d86732431cad5cd9214d57"
+    },
+    {
+      "uri": "event://media/s5-state-104",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-104",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-103",
+      "idempotency_key": "idem-s5-104",
+      "signature": "signed-by-agent://media/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s2",
+      "detail": "initial match ranked offer://media/o-l (score 0.900) \u2014 base ranking",
+      "state_update": [
+        {
+          "uri": "decision://media/s2-match-baseline",
+          "by": "agent://s2",
+          "authority": "delegation://media/s2-match",
+          "alternatives": [
+            "offer://media/o-l",
+            "offer://media/o-g",
+            "none"
+          ],
+          "confidence": 0.9,
+          "expected_outcome": "lag partner ranked #1 on existing Trust",
+          "actual_outcome": "offer://media/o-l",
+          "detail": [
+            {
+              "offer": "offer://media/o-l",
+              "provider": "org://media/hollowpoint-digital",
+              "fit": 1.0,
+              "trust": 0.9,
+              "score": 0.9
+            },
+            {
+              "offer": "offer://media/o-g",
+              "provider": "org://media/lyra-ops",
+              "fit": 1.0,
+              "trust": 0.6,
+              "score": 0.6
+            }
+          ],
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "1e1c1f03b0a7ef5baeda05913e3b14eb39b024cf2b3a35cd9db1f9f85d2d9d8f"
+    },
+    {
+      "uri": "event://media/s4-exchange-hollowpoint-digitalQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-105",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-104",
+      "idempotency_key": "idem-s4-105",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange hollowpoint-digitalQ3: 2000000.0 USD org://media/hollowmedia->org://media/hollowpoint-digital (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/media-escrow-hollowpoint-digitalQ3",
+          "kind": "MONEY",
+          "title": "org://media/hollowpoint-digital",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://media/hollowmedia for org://media/hollowpoint-digital (hollowpoint-digitalQ3)"
+        },
+        {
+          "uri": "obligation://media/s4-pay-hollowpoint-digitalQ3",
+          "subject": "org://media/hollowmedia",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://media/hollowpoint-digital",
+          "due_by": "2026-08-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-02T00:00:00Z"
+        },
+        {
+          "uri": "receipt://media/s4-receipt-hollowpoint-digitalQ3",
+          "kind": "SETTLEMENT",
+          "from": "org://media/hollowmedia",
+          "to": "org://media/hollowpoint-digital",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-09-02T00:00:00Z"
+        },
+        {
+          "uri": "decision://media/s4-recon-hollowpoint-digitalQ3",
+          "by": "agent://s4",
+          "authority": "authority://media/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://media/hollowmedia",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "hollowpoint-digitalQ3",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://media/hollowmedia",
+            "provider": "org://media/hollowpoint-digital",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://media/s4-exchange-hollowpoint-digitalQ3",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-105",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-104",
+          "idempotency_key": "idem-s4-105",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange hollowpoint-digitalQ3: 2000000.0 USD org://media/hollowmedia->org://media/hollowpoint-digital (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://media/hollowmedia",
+          "provider": "org://media/hollowpoint-digital",
+          "settled_at": "2026-09-02T00:00:00Z",
+          "exchange_of": "commitment://media/c-hollowpoint-digitalQ3"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://media/hollowmedia",
+      "provider": "org://media/hollowpoint-digital",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "exchange_of": "commitment://media/c-hollowpoint-digitalQ3",
+      "hash": "4e27d9f36665051eb3a663e8a1ffdda6c3abf62402f313e1ffc474a6eb6e2c38"
+    },
+    {
+      "uri": "event://media/s4-outcome-hollowpoint-digitalQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-106",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-105",
+      "idempotency_key": "idem-s4-106",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle hollowpoint-digitalQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+      "state_update": [
+        {
+          "uri": "event://media/s4-outcome-hollowpoint-digitalQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-106",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-105",
+          "idempotency_key": "idem-s4-106",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle hollowpoint-digitalQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+          "state_update": [],
+          "evaluation": "partial",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-08-31T00:00:00Z",
+          "settled_at": "2026-09-02T00:00:00Z",
+          "score": 0.5
+        }
+      ],
+      "evaluation": "partial",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "score": 0.5,
+      "hash": "6841f958e162ac3ac56865f71019ff0738fc1e2d8c4e53942fd2e21274a6a3d2"
+    },
+    {
+      "uri": "event://media/outcome-committed-hollowpoint-digitalQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-107",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-106",
+      "idempotency_key": "idem-s2-107",
+      "signature": "signed-by-org://media/hollowpoint-digital",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://media/hollowpoint-digital",
+      "detail": "job committed-hollowpoint-digitalQ3 by org://media/hollowpoint-digital: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://media/outcome-committed-hollowpoint-digitalQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-107",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-106",
+          "idempotency_key": "idem-s2-107",
+          "signature": "signed-by-org://media/hollowpoint-digital",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://media/hollowpoint-digital",
+          "detail": "job committed-hollowpoint-digitalQ3 by org://media/hollowpoint-digital: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "committed-hollowpoint-digitalQ3",
+          "provider": "org://media/hollowpoint-digital",
+          "committed_deadline": "2026-08-31T00:00:00Z",
+          "actual_completed_at": "2026-09-02T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://media/committed-hollowpoint-digitalQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-content-delivery campaign record + media anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-hollowpoint-digitalQ3",
+      "provider": "org://media/hollowpoint-digital",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-09-02T00:00:00Z",
+      "on_time": false,
+      "hash": "78eeaa37011a27c019c251535b910ca77b463c8e0f63e065a9a3da14378317f1"
+    },
+    {
+      "uri": "event://media/verify-committed-hollowpoint-digitalQ3",
+      "type": "DECISION",
+      "event_id": "ev-s2-108",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-107",
+      "idempotency_key": "idem-s2-108",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://media/hollowpoint-digital delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://media/committed-hollowpoint-digitalQ3",
+          "proposer": "agent://s5",
+          "statement": "org://media/hollowpoint-digital delivered the committed resource LATE"
+        },
+        {
+          "uri": "evidence://media/committed-hollowpoint-digitalQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-content-delivery campaign record + media anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "8502b00f393ecfb2d57fd911f063ba359ba87941172c4917146a5276f8336337"
+    },
+    {
+      "uri": "event://media/trust-update-hollowpoint-digital",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-109",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-108",
+      "idempotency_key": "idem-s2-109",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "trust for org://media/hollowpoint-digital [content-delivery campaign reliability] 0.900 -> 0.520 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://media/t-hollowpoint-digital",
+          "subject": "org://media/hollowmedia",
+          "target": "org://media/hollowpoint-digital",
+          "claim": "content-delivery campaign reliability",
+          "context": "relationship://media/partner-net",
+          "score": 0.52,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://media/committed-hollowpoint-digitalQ3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "acfc999d7e936ccf8ad9c6760aede419cf1a71bb35d9c9339113e92ea2eda0e6"
+    },
+    {
+      "uri": "event://media/s4-exchange-lyra-opsQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-110",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-109",
+      "idempotency_key": "idem-s4-110",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange lyra-opsQ3: 2000000.0 USD org://media/hollowmedia->org://media/lyra-ops (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/media-escrow-lyra-opsQ3",
+          "kind": "MONEY",
+          "title": "org://media/lyra-ops",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://media/hollowmedia for org://media/lyra-ops (lyra-opsQ3)"
+        },
+        {
+          "uri": "obligation://media/s4-pay-lyra-opsQ3",
+          "subject": "org://media/hollowmedia",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://media/lyra-ops",
+          "due_by": "2026-08-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-08-30T00:00:00Z"
+        },
+        {
+          "uri": "receipt://media/s4-receipt-lyra-opsQ3",
+          "kind": "SETTLEMENT",
+          "from": "org://media/hollowmedia",
+          "to": "org://media/lyra-ops",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-08-30T00:00:00Z"
+        },
+        {
+          "uri": "decision://media/s4-recon-lyra-opsQ3",
+          "by": "agent://s4",
+          "authority": "authority://media/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://media/hollowmedia",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "lyra-opsQ3",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://media/hollowmedia",
+            "provider": "org://media/lyra-ops",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://media/s4-exchange-lyra-opsQ3",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-110",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-109",
+          "idempotency_key": "idem-s4-110",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange lyra-opsQ3: 2000000.0 USD org://media/hollowmedia->org://media/lyra-ops (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://media/hollowmedia",
+          "provider": "org://media/lyra-ops",
+          "settled_at": "2026-08-30T00:00:00Z",
+          "exchange_of": "commitment://media/c-lyra-opsQ3"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://media/hollowmedia",
+      "provider": "org://media/lyra-ops",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "exchange_of": "commitment://media/c-lyra-opsQ3",
+      "hash": "71e562f011df010fa0747f9459bc24c58e1a120e678e8124917673e36f83c479"
+    },
+    {
+      "uri": "event://media/s4-outcome-lyra-opsQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-111",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-110",
+      "idempotency_key": "idem-s4-111",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle lyra-opsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://media/s4-outcome-lyra-opsQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-111",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-110",
+          "idempotency_key": "idem-s4-111",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle lyra-opsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-08-31T00:00:00Z",
+          "settled_at": "2026-08-30T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "score": 1.0,
+      "hash": "e8b2d476d1052e9c3fbd10deb3a3644132d4e8549da00f7d46ff515cf2aa17ad"
+    },
+    {
+      "uri": "event://media/outcome-committed-lyra-opsQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-112",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-111",
+      "idempotency_key": "idem-s2-112",
+      "signature": "signed-by-org://media/lyra-ops",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://media/lyra-ops",
+      "detail": "job committed-lyra-opsQ3 by org://media/lyra-ops: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://media/outcome-committed-lyra-opsQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-112",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-111",
+          "idempotency_key": "idem-s2-112",
+          "signature": "signed-by-org://media/lyra-ops",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://media/lyra-ops",
+          "detail": "job committed-lyra-opsQ3 by org://media/lyra-ops: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "committed-lyra-opsQ3",
+          "provider": "org://media/lyra-ops",
+          "committed_deadline": "2026-08-31T00:00:00Z",
+          "actual_completed_at": "2026-08-30T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://media/committed-lyra-opsQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-content-delivery campaign record + media anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-lyra-opsQ3",
+      "provider": "org://media/lyra-ops",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-08-30T00:00:00Z",
+      "on_time": true,
+      "hash": "14b967b59ac2701cbf135e454105107dcf0d04a0a6896ae97235baa8ea98980a"
+    },
+    {
+      "uri": "event://media/verify-committed-lyra-opsQ3",
+      "type": "DECISION",
+      "event_id": "ev-s2-113",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-112",
+      "idempotency_key": "idem-s2-113",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://media/lyra-ops delivered the committed resource on time' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://media/committed-lyra-opsQ3",
+          "proposer": "agent://s5",
+          "statement": "org://media/lyra-ops delivered the committed resource on time"
+        },
+        {
+          "uri": "evidence://media/committed-lyra-opsQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-content-delivery campaign record + media anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "af4b086bea185bb5fd7258223d41f79ef533f9e91a1496ae1beaea958d9b002d"
+    },
+    {
+      "uri": "event://media/trust-update-lyra-ops",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-114",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-113",
+      "idempotency_key": "idem-s2-114",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "trust for org://media/lyra-ops [content-delivery campaign reliability] 0.600 -> 0.695 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://media/t-lyra-ops",
+          "subject": "org://media/hollowmedia",
+          "target": "org://media/lyra-ops",
+          "claim": "content-delivery campaign reliability",
+          "context": "relationship://media/partner-net",
+          "score": 0.695,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://media/committed-lyra-opsQ3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "2abef06a35bd5e30ae1285cb3d1e13f2a792e33cee0c08d890759f622660ce18"
+    },
+    {
+      "uri": "event://media/s4-exchange-hollowpoint-digitalQ4",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-115",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-114",
+      "idempotency_key": "idem-s4-115",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange hollowpoint-digitalQ4: 1600000.0 USD org://media/hollowmedia->org://media/hollowpoint-digital (value 1600000.0, cost 1600000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/media-escrow-hollowpoint-digitalQ4",
+          "kind": "MONEY",
+          "title": "org://media/hollowpoint-digital",
+          "custody": "cleared",
+          "value": 1600000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://media/hollowmedia for org://media/hollowpoint-digital (hollowpoint-digitalQ4)"
+        },
+        {
+          "uri": "obligation://media/s4-pay-hollowpoint-digitalQ4",
+          "subject": "org://media/hollowmedia",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 1600000.0 USD for contracted work by org://media/hollowpoint-digital",
+          "due_by": "2026-09-15T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-17T00:00:00Z"
+        },
+        {
+          "uri": "receipt://media/s4-receipt-hollowpoint-digitalQ4",
+          "kind": "SETTLEMENT",
+          "from": "org://media/hollowmedia",
+          "to": "org://media/hollowpoint-digital",
+          "amount": 1600000.0,
+          "currency": "USD",
+          "received_at": "2026-09-17T00:00:00Z"
+        },
+        {
+          "uri": "decision://media/s4-recon-hollowpoint-digitalQ4",
+          "by": "agent://s4",
+          "authority": "authority://media/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 1600000.0 USD from org://media/hollowmedia",
+          "actual_outcome": "matched exactly: settled 1600000.0 USD",
+          "detail": {
+            "slug": "hollowpoint-digitalQ4",
+            "expected": 1600000.0,
+            "actual": 1600000.0,
+            "matched": true,
+            "buyer": "org://media/hollowmedia",
+            "provider": "org://media/hollowpoint-digital",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://media/s4-exchange-hollowpoint-digitalQ4",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-115",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-114",
+          "idempotency_key": "idem-s4-115",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange hollowpoint-digitalQ4: 1600000.0 USD org://media/hollowmedia->org://media/hollowpoint-digital (value 1600000.0, cost 1600000.0)",
+          "state_update": [],
+          "value": 1600000.0,
+          "cost": 1600000.0,
+          "price": 1600000.0,
+          "currency": "USD",
+          "buyer": "org://media/hollowmedia",
+          "provider": "org://media/hollowpoint-digital",
+          "settled_at": "2026-09-17T00:00:00Z",
+          "exchange_of": "commitment://media/c-hollowpoint-digitalQ4"
+        }
+      ],
+      "value": 1600000.0,
+      "cost": 1600000.0,
+      "price": 1600000.0,
+      "currency": "USD",
+      "buyer": "org://media/hollowmedia",
+      "provider": "org://media/hollowpoint-digital",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "exchange_of": "commitment://media/c-hollowpoint-digitalQ4",
+      "hash": "e9cddcdd056eb3e6f5e9362efe2e50e9a04317ffb32a9a2396be3b8d19e327f9"
+    },
+    {
+      "uri": "event://media/s4-outcome-hollowpoint-digitalQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-116",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-115",
+      "idempotency_key": "idem-s4-116",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle hollowpoint-digitalQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+      "state_update": [
+        {
+          "uri": "event://media/s4-outcome-hollowpoint-digitalQ4",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-116",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-115",
+          "idempotency_key": "idem-s4-116",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle hollowpoint-digitalQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+          "state_update": [],
+          "evaluation": "partial",
+          "expected": 1600000.0,
+          "actual": 1600000.0,
+          "deadline": "2026-09-15T00:00:00Z",
+          "settled_at": "2026-09-17T00:00:00Z",
+          "score": 0.5
+        }
+      ],
+      "evaluation": "partial",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "deadline": "2026-09-15T00:00:00Z",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "score": 0.5,
+      "hash": "95a131fca5d8906b1b48e6443cc05d80f16c1a9ba3d883fc4cf538fc2eb62bf5"
+    },
+    {
+      "uri": "event://media/outcome-committed-hollowpoint-digitalQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-117",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-116",
+      "idempotency_key": "idem-s2-117",
+      "signature": "signed-by-org://media/hollowpoint-digital",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://media/hollowpoint-digital",
+      "detail": "job committed-hollowpoint-digitalQ4 by org://media/hollowpoint-digital: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://media/outcome-committed-hollowpoint-digitalQ4",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-117",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-116",
+          "idempotency_key": "idem-s2-117",
+          "signature": "signed-by-org://media/hollowpoint-digital",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://media/hollowpoint-digital",
+          "detail": "job committed-hollowpoint-digitalQ4 by org://media/hollowpoint-digital: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "committed-hollowpoint-digitalQ4",
+          "provider": "org://media/hollowpoint-digital",
+          "committed_deadline": "2026-09-15T00:00:00Z",
+          "actual_completed_at": "2026-09-17T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://media/committed-hollowpoint-digitalQ4",
+          "kind": "ANCHORED",
+          "source": "signed committed-content-delivery campaign record + media anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-hollowpoint-digitalQ4",
+      "provider": "org://media/hollowpoint-digital",
+      "committed_deadline": "2026-09-15T00:00:00Z",
+      "actual_completed_at": "2026-09-17T00:00:00Z",
+      "on_time": false,
+      "hash": "b646faa445b4691a0d93302e3d759872d658bc47cf521d62212365fa79ecac23"
+    },
+    {
+      "uri": "event://media/verify-committed-hollowpoint-digitalQ4",
+      "type": "DECISION",
+      "event_id": "ev-s2-118",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-117",
+      "idempotency_key": "idem-s2-118",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://media/hollowpoint-digital delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://media/committed-hollowpoint-digitalQ4",
+          "proposer": "agent://s5",
+          "statement": "org://media/hollowpoint-digital delivered the committed resource LATE"
+        },
+        {
+          "uri": "evidence://media/committed-hollowpoint-digitalQ4",
+          "kind": "ANCHORED",
+          "source": "signed committed-content-delivery campaign record + media anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "97c2601dac588bfebcd15872cac74e5ad666276a951dbb6992ee3e15dcf080d5"
+    },
+    {
+      "uri": "event://media/trust-update-hollowpoint-digital",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-119",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-118",
+      "idempotency_key": "idem-s2-119",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "trust for org://media/hollowpoint-digital [content-delivery campaign reliability] 0.520 -> 0.140 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://media/t-hollowpoint-digital",
+          "subject": "org://media/hollowmedia",
+          "target": "org://media/hollowpoint-digital",
+          "claim": "content-delivery campaign reliability",
+          "context": "relationship://media/partner-net",
+          "score": 0.14,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://media/committed-hollowpoint-digitalQ4"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "adcd7589500d007a03f39334969833f0eab9adaa76e91a53767ca51ee06e15f3"
+    },
+    {
+      "uri": "event://media/s5-state-7000",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7000",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-6999",
+      "idempotency_key": "idem-s5-7000",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "open case case://media/c-on-time (committed content-delivery campaign below target on time)",
+      "state_update": [
+        {
+          "uri": "case://media/c-on-time",
+          "subject": "committed content-delivery campaign below target on time",
+          "status": "OPEN",
+          "owner": "person://media/cmo",
+          "actors": [
+            "org://media/hollowmedia",
+            "person://media/cmo",
+            "agent://media/campaign-ops"
+          ],
+          "relationships": [
+            "relationship://media/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target"
+        }
+      ],
+      "hash": "615ac0d2449fccb6efae582dcc67315ca0b5f87e8a381f8e39b8906ced283ddd"
+    },
+    {
+      "uri": "event://media/s5-state-7001",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7001",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7000",
+      "idempotency_key": "idem-s5-7001",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "record exception heartbeat on the case",
+      "state_update": [
+        {
+          "uri": "case://media/c-on-time",
+          "subject": "committed content-delivery campaign below target on time",
+          "status": "OPEN",
+          "owner": "person://media/cmo",
+          "actors": [
+            "org://media/hollowmedia",
+            "person://media/cmo",
+            "agent://media/campaign-ops"
+          ],
+          "relationships": [
+            "relationship://media/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed content-delivery campaign on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://media/hollowpoint-digital missed its committed content-delivery campaign by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed media distribution to the verified on-time partner (lyra-ops) and gate the laggard (hollowpoint-digital)",
+          "metric": "metric://media/m-on-time"
+        }
+      ],
+      "hash": "8ca454a8b42b12aecfcdc5b96d28fd721a15fa01a268e2da8e83923fd46e34b1"
+    },
+    {
+      "uri": "event://media/s5-state-7002",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7002",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7001",
+      "idempotency_key": "idem-s5-7002",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "case triage: exception assessed, root nominated",
+      "state_update": [
+        {
+          "uri": "decision://media/s5-triage",
+          "by": "agent://media/s5",
+          "authority": "authority://media/for-ops",
+          "alternatives": [
+            "accept",
+            "dismiss as anomaly"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "accept as a real risk",
+          "actual_outcome": "accepted; root nominated",
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "3647a69f806a267c4b8088313f0e6daa33e990151b9c3daa1c61a40560b38e0f"
+    },
+    {
+      "uri": "event://media/s5-case-triage",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7003",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7002",
+      "idempotency_key": "idem-s5-7003",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "case triaged",
+      "state_update": [
+        {
+          "uri": "case://media/c-on-time",
+          "subject": "committed content-delivery campaign below target on time",
+          "status": "TRIAGE",
+          "owner": "person://media/cmo",
+          "actors": [
+            "org://media/hollowmedia",
+            "person://media/cmo",
+            "agent://media/campaign-ops"
+          ],
+          "relationships": [
+            "relationship://media/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-triage"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed content-delivery campaign on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://media/hollowpoint-digital missed its committed content-delivery campaign by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed media distribution to the verified on-time partner (lyra-ops) and gate the laggard (hollowpoint-digital)",
+          "metric": "metric://media/m-on-time"
+        }
+      ],
+      "hash": "674997c7a2744abbc35381df2c77230fa3a51281394407192df6bf270a640c46"
+    },
+    {
+      "uri": "event://media/s5-state-7004",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7004",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7003",
+      "idempotency_key": "idem-s5-7004",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "case assigned; task becomes assigned authorized work (#8)",
+      "state_update": [
+        {
+          "uri": "task://media/t-rebalance",
+          "assigned_to": "agent://media/campaign-ops",
+          "created_by": "agent://media/s5",
+          "objective": "re-balance media distribution to the verified on-time partner (lyra-ops) and gate the laggard (hollowpoint-digital)",
+          "dependencies": [],
+          "authority": "authority://media/for-ops",
+          "deadline": "2026-10-15T00:00:00Z",
+          "priority": 0.695,
+          "status": "ASSIGNED",
+          "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+          "why_here": "derived from the on-time exception (case OPEN)",
+          "importance": "restores campaign-on-time, protecting audience scoped Trust",
+          "evidence": [
+            "evidence://media/committed-hollowpoint-digitalQ3",
+            "evidence://media/committed-lyra-opsQ3",
+            "evidence://media/committed-hollowpoint-digitalQ4"
+          ],
+          "decision_required": "approve the re-allocation",
+          "priority_factors": {
+            "impact": 0.85,
+            "urgency": 0.9,
+            "confidence": 0.7,
+            "irreversibility": false,
+            "relationship_importance": 0.8,
+            "cost_of_delay": 0.75
+          },
+          "assigned_capacity": 1.0
+        },
+        {
+          "uri": "decision://media/s5-assign",
+          "by": "person://media/cmo",
+          "authority": "authority://media/for-ops",
+          "alternatives": [
+            "assign",
+            "defer"
+          ],
+          "confidence": 0.95,
+          "expected_outcome": "task in progress",
+          "detail": {
+            "task": "task://media/t-rebalance",
+            "assigned_to": "agent://media/campaign-ops",
+            "authority": "authority://media/for-ops",
+            "priority": 0.695,
+            "capacity": 1.0
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "7e56f26dab8b32f926193722c55504c3c7ab49c402a9e75a89e92f5537179a31"
+    },
+    {
+      "uri": "event://media/s5-case-assigned",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7005",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7004",
+      "idempotency_key": "idem-s5-7005",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "case assigned",
+      "state_update": [
+        {
+          "uri": "case://media/c-on-time",
+          "subject": "committed content-delivery campaign below target on time",
+          "status": "ASSIGNED",
+          "owner": "person://media/cmo",
+          "actors": [
+            "org://media/hollowmedia",
+            "person://media/cmo",
+            "agent://media/campaign-ops"
+          ],
+          "relationships": [
+            "relationship://media/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-assigned"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed content-delivery campaign on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://media/hollowpoint-digital missed its committed content-delivery campaign by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed media distribution to the verified on-time partner (lyra-ops) and gate the laggard (hollowpoint-digital)",
+          "metric": "metric://media/m-on-time"
+        }
+      ],
+      "hash": "74ae32f71296f96d19f96c2bc725010b1b17bfb1426a9d47cc1e287184902d03"
+    },
+    {
+      "uri": "event://media/s5-case-inprogress",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7006",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7005",
+      "idempotency_key": "idem-s5-7006",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "task execution began",
+      "state_update": [
+        {
+          "uri": "case://media/c-on-time",
+          "subject": "committed content-delivery campaign below target on time",
+          "status": "IN_PROGRESS",
+          "owner": "person://media/cmo",
+          "actors": [
+            "org://media/hollowmedia",
+            "person://media/cmo",
+            "agent://media/campaign-ops"
+          ],
+          "relationships": [
+            "relationship://media/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-inprogress"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed content-delivery campaign on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://media/hollowpoint-digital missed its committed content-delivery campaign by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed media distribution to the verified on-time partner (lyra-ops) and gate the laggard (hollowpoint-digital)",
+          "metric": "metric://media/m-on-time"
+        }
+      ],
+      "hash": "f3c7645d22d9256617deacc8ef48d67a6686d58985043d595218985cb627887a"
+    },
+    {
+      "uri": "event://media/s5-state-7007",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7007",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7006",
+      "idempotency_key": "idem-s5-7007",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "policy updated: allocate by fit AND scoped Trust",
+      "state_update": [
+        {
+          "uri": "policy://media/allocation",
+          "name": "media allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "select by fit x scoped Trust; laggard (< floor) needs a performance gate",
+          "action": "allocate to the top-ranked fitted partner; gate laggard",
+          "scope": [
+            "expectation://media/e-on-time"
+          ],
+          "version": 2,
+          "policy_status": "REVISED"
+        }
+      ],
+      "hash": "35e1e95ad440526777f14b94ceafefd602a20729f02026d048e38de54706face"
+    },
+    {
+      "uri": "event://media/s5-state-7008",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7008",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7007",
+      "idempotency_key": "idem-s5-7008",
+      "signature": "signed-by-agent://media/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s2",
+      "detail": "task effect: next committed work ranked offer://media/o-g (score 0.695)",
+      "state_update": [
+        {
+          "uri": "decision://media/s5-match-recorded",
+          "by": "agent://s2",
+          "authority": "delegation://media/s2-match",
+          "alternatives": [
+            "offer://media/o-g",
+            "none"
+          ],
+          "confidence": 0.92,
+          "expected_outcome": "good partner ranked #1",
+          "actual_outcome": "offer://media/o-g",
+          "detail": [
+            {
+              "offer": "offer://media/o-g",
+              "provider": "org://media/lyra-ops",
+              "fit": 1.0,
+              "trust": 0.695,
+              "score": 0.695
+            }
+          ],
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "0cd71c66d224c92311115281c904a741e262d656727755badc2e79cb6e374043"
+    },
+    {
+      "uri": "event://media/s5-escalate",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7009",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7008",
+      "idempotency_key": "idem-s5-7009",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "escalation: the committed action is irreversible and cost-unknowable once done (\u00a76 floor)",
+      "state_update": [
+        {
+          "uri": "escalation://media/escalate-release",
+          "trigger": "external campaign release \u2014 irreversible and cost-unknowable once live",
+          "severity": "WARN",
+          "recipient": "person://media/cmo",
+          "deadline": "2026-11-15T00:00:00Z",
+          "fallback": "agent://media/s4",
+          "authority": "authority://media/for-ops",
+          "acknowledgement": "approve then execute"
+        }
+      ],
+      "hash": "b2c89d218ba9e1bf928a0fb87d6b541d21e2a45d50a243fce3c7006411b399e5"
+    },
+    {
+      "uri": "event://media/owner-human",
+      "type": "DECISION",
+      "event_id": "ev-media-7010",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-media-7009",
+      "idempotency_key": "idem-media-7010",
+      "signature": "signed-by-person://media/cmo",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "person://media/cmo",
+      "detail": "person://media/cmo signed approval to release the committed action (\u00a76 floor)",
+      "state_update": [
+        {
+          "uri": "decision://media/owner-human",
+          "by": "person://media/cmo",
+          "authority": "authority://media/for-ops",
+          "alternatives": [
+            "release_in_full",
+            "hold",
+            "release_partial_and_hold_if_shortfall",
+            "open_dispute"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "release to the verified partner",
+          "actual_outcome": "release_in_full (human approved)",
+          "detail": {
+            "task": "task://media/t-rebalance",
+            "action": "release_committed_action",
+            "irreversible_failure": true,
+            "cost_failure_unknowable": true
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "68ceba7fbc38da2fa75a897eb02922ac1a95cf5233739a9cdb038d8475bf5e7e"
+    },
+    {
+      "uri": "event://media/action-release",
+      "type": "ACTION",
+      "event_id": "ev-media-7011",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-media-7010",
+      "idempotency_key": "idem-media-7011",
+      "signature": "signed-by-person://media/cmo",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/campaign-ops",
+      "detail": "rebalance_commitment executed after human approval",
+      "worker": "agent://media/campaign-ops",
+      "action": "rebalance_commitment",
+      "task_id": "t-rebalance",
+      "tier": "human",
+      "outcome": "done",
+      "state_update": [],
+      "hash": "ea7c987ddaa8346874233192a271a4cfd80bd50726f452f30e3a97d6ae916865"
+    },
+    {
+      "uri": "event://media/s5-case-blocked",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7012",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7011",
+      "idempotency_key": "idem-s5-7012",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "case blocked pending the rallied committed delivery's verification",
+      "state_update": [
+        {
+          "uri": "case://media/c-on-time",
+          "subject": "committed content-delivery campaign below target on time",
+          "status": "BLOCKED",
+          "owner": "person://media/cmo",
+          "actors": [
+            "org://media/hollowmedia",
+            "person://media/cmo",
+            "agent://media/campaign-ops"
+          ],
+          "relationships": [
+            "relationship://media/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-blocked"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed content-delivery campaign on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://media/hollowpoint-digital missed its committed content-delivery campaign by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed media distribution to the verified on-time partner (lyra-ops) and gate the laggard (hollowpoint-digital)",
+          "metric": "metric://media/m-on-time"
+        }
+      ],
+      "hash": "25247331873474abe4003f77190b705df3da3c01688258ae9fb2781e4f1646f2"
+    },
+    {
+      "uri": "event://media/s5-state-7013",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7013",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7012",
+      "idempotency_key": "idem-s5-7013",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "rallied committed work allocated to org://media/lyra-ops (the fix)",
+      "state_update": [
+        {
+          "uri": "commitment://media/c-lyra-ops-followup",
+          "by": "agent://media/s5",
+          "to": "org://media/lyra-ops",
+          "obligation": "offer://media/o-g",
+          "expectation": "expectation://media/e-routed-lyra-opsR",
+          "status": "AGREED",
+          "terms": {
+            "kind": "content-delivery campaign follow-up",
+            "signed": true
+          },
+          "agreed_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "15672a92b311b17dbd8a2ddbeb9e232247bc36a923ee16593007c0bf6e88d135"
+    },
+    {
+      "uri": "event://media/s5-state-7014",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7014",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7013",
+      "idempotency_key": "idem-s5-7014",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "register follow-on expectation",
+      "state_update": [
+        {
+          "uri": "expectation://media/e-lyra-opsR",
+          "actor": "person://media/cmo",
+          "subject": "content-delivery campaign",
+          "condition": "fully deliver the committed resource by its committed deadline",
+          "metric": "settled_value",
+          "threshold": 2000000.0,
+          "deadline": "2026-11-15T00:00:00Z",
+          "evidence_required": "CLEAR"
+        }
+      ],
+      "hash": "5ad86292b4a1cc6dc4cc396ae95636455626aac0429b0f919e9057ce32a876bd"
+    },
+    {
+      "uri": "event://media/s4-exchange-lyra-opsR",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-7015",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7014",
+      "idempotency_key": "idem-s4-7015",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange lyra-opsR: 2000000.0 USD org://media/hollowmedia->org://media/lyra-ops (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/media-escrow-lyra-opsR",
+          "kind": "MONEY",
+          "title": "org://media/lyra-ops",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://media/hollowmedia for org://media/lyra-ops (lyra-opsR)"
+        },
+        {
+          "uri": "obligation://media/s4-pay-lyra-opsR",
+          "subject": "org://media/hollowmedia",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://media/lyra-ops",
+          "due_by": "2026-11-15T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-11-12T00:00:00Z"
+        },
+        {
+          "uri": "receipt://media/s4-receipt-lyra-opsR",
+          "kind": "SETTLEMENT",
+          "from": "org://media/hollowmedia",
+          "to": "org://media/lyra-ops",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-11-12T00:00:00Z"
+        },
+        {
+          "uri": "decision://media/s4-recon-lyra-opsR",
+          "by": "agent://s4",
+          "authority": "authority://media/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://media/hollowmedia",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "lyra-opsR",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://media/hollowmedia",
+            "provider": "org://media/lyra-ops",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://media/s4-exchange-lyra-opsR",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-7015",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-7014",
+          "idempotency_key": "idem-s4-7015",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange lyra-opsR: 2000000.0 USD org://media/hollowmedia->org://media/lyra-ops (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://media/hollowmedia",
+          "provider": "org://media/lyra-ops",
+          "settled_at": "2026-11-12T00:00:00Z",
+          "exchange_of": "commitment://media/c-lyra-opsR"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://media/hollowmedia",
+      "provider": "org://media/lyra-ops",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "exchange_of": "commitment://media/c-lyra-opsR",
+      "hash": "d0d51dcdc7f4a8679b79a41faae956a6688040bdf16f0c9c29343c92aeefe404"
+    },
+    {
+      "uri": "event://media/s4-outcome-lyra-opsR",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-7016",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7015",
+      "idempotency_key": "idem-s4-7016",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle lyra-opsR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://media/s4-outcome-lyra-opsR",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-7016",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-7015",
+          "idempotency_key": "idem-s4-7016",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle lyra-opsR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-11-15T00:00:00Z",
+          "settled_at": "2026-11-12T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "score": 1.0,
+      "hash": "976d57c3d7601ab42866794aba30304e253a3227be5739b2d02eb08370ea4e1e"
+    },
+    {
+      "uri": "event://media/outcome-routed-lyra-opsR",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-7017",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7016",
+      "idempotency_key": "idem-s2-7017",
+      "signature": "signed-by-org://media/lyra-ops",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://media/lyra-ops",
+      "detail": "job routed-lyra-opsR by org://media/lyra-ops: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://media/outcome-routed-lyra-opsR",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-7017",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-7016",
+          "idempotency_key": "idem-s2-7017",
+          "signature": "signed-by-org://media/lyra-ops",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://media/lyra-ops",
+          "detail": "job routed-lyra-opsR by org://media/lyra-ops: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "routed-lyra-opsR",
+          "provider": "org://media/lyra-ops",
+          "committed_deadline": "2026-11-15T00:00:00Z",
+          "actual_completed_at": "2026-11-12T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://media/routed-lyra-opsR",
+          "kind": "ANCHORED",
+          "source": "signed committed-content-delivery campaign record + media anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "routed-lyra-opsR",
+      "provider": "org://media/lyra-ops",
+      "committed_deadline": "2026-11-15T00:00:00Z",
+      "actual_completed_at": "2026-11-12T00:00:00Z",
+      "on_time": true,
+      "hash": "09899f7602660440f6d6d3fcf3a1d4073229156d774f06d3b3cf3405fd71c3b2"
+    },
+    {
+      "uri": "event://media/verify-routed-lyra-opsR",
+      "type": "DECISION",
+      "event_id": "ev-s2-7018",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7017",
+      "idempotency_key": "idem-s2-7018",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://media/lyra-ops delivered the rallied committed content-delivery campaign on time' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://media/routed-lyra-opsR",
+          "proposer": "agent://s5",
+          "statement": "org://media/lyra-ops delivered the rallied committed content-delivery campaign on time"
+        },
+        {
+          "uri": "evidence://media/routed-lyra-opsR",
+          "kind": "ANCHORED",
+          "source": "signed committed-content-delivery campaign record + media anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "ad344cc8382032265a16bcf6889067cfe2863e645afd5fd3d6a653ea14a7e781"
+    },
+    {
+      "uri": "event://media/trust-update-lyra-ops",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-7019",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7018",
+      "idempotency_key": "idem-s2-7019",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "trust for org://media/lyra-ops [content-delivery campaign reliability] 0.695 -> 0.790 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://media/t-lyra-ops",
+          "subject": "org://media/hollowmedia",
+          "target": "org://media/lyra-ops",
+          "claim": "content-delivery campaign reliability",
+          "context": "relationship://media/partner-net",
+          "score": 0.79,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://media/routed-lyra-opsR"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "f9d31a415d24cd4e275f4da1e9061e8eff5d9265cdc1c05905c0e09a36567f7c"
+    },
+    {
+      "uri": "event://media/s5-case-resolved",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7020",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7019",
+      "idempotency_key": "idem-s5-7020",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "exception resolved: rallied committed work verified on time; forward on-time = 1.0; cumulative 2/4",
+      "state_update": [
+        {
+          "uri": "case://media/c-on-time",
+          "subject": "committed content-delivery campaign below target on time",
+          "status": "RESOLVED",
+          "owner": "person://media/cmo",
+          "actors": [
+            "org://media/hollowmedia",
+            "person://media/cmo",
+            "agent://media/campaign-ops"
+          ],
+          "relationships": [
+            "relationship://media/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-blocked"
+            },
+            {
+              "status": "RESOLVED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-resolved"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed content-delivery campaign on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://media/hollowpoint-digital missed its committed content-delivery campaign by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed media distribution to the verified on-time partner (lyra-ops) and gate the laggard (hollowpoint-digital)",
+          "metric": "metric://media/m-on-time",
+          "verified_outcome": "forward on-time restored to 1.0; org://media/lyra-ops delivered the rallied content-delivery campaign on time (evidence://media/routed-lyra-opsR); org://media/lyra-ops Trust 0.79"
+        }
+      ],
+      "hash": "1d4718ccb696a391451945a9e76241eefc3340ddfdd075ca362a6aa9a6bfde19"
+    },
+    {
+      "uri": "event://media/s5-state-7021",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7021",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7020",
+      "idempotency_key": "idem-s5-7021",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "learning entry decision://media/learning: Routing distribution via a partner with verified on-time delivery (lyra-ops), while gating the laggard (hollowpoint-digital), restored on-time campaigns. Verified good runs compound scoped Trust.",
+      "state_update": [
+        {
+          "uri": "decision://media/learning",
+          "by": "agent://media/s5",
+          "authority": "authority://media/for-operations",
+          "subject": "content-delivery campaign on-time management",
+          "expected": 0.95,
+          "actual": 1.0,
+          "variance": 0.05,
+          "why": "Routing distribution via a partner with verified on-time delivery (lyra-ops), while gating the laggard (hollowpoint-digital), restored on-time campaigns. Verified good runs compound scoped Trust.",
+          "change_future_policy": "ALLOCATE by fit AND scoped Trust; partners below the Trust floor need a gate before new campaigns.",
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "e2ec78fb9bad90f043b6a9c16272c21d1920fb317350d6cb1b3d13d7b96c0fa3"
+    },
+    {
+      "uri": "event://media/s5-state-7022",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7022",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7021",
+      "idempotency_key": "idem-s5-7022",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "close case; learning recorded; future policy updated",
+      "state_update": [
+        {
+          "uri": "policy://media/allocation",
+          "name": "media allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "ALLOCATE by fit AND scoped Trust; partners below the Trust floor need a gate before new campaigns. (learned 2026-09-01)",
+          "action": "allocate to the top-ranked fitted partner; gate laggard",
+          "scope": [
+            "expectation://media/e-on-time"
+          ],
+          "version": 3,
+          "policy_status": "EFFECTIVE",
+          "learning": "decision://media/learning"
+        }
+      ],
+      "hash": "9350522edc56299226f464ac5892e3bb36114553c4cdfdd91d5cf9fc41511602"
+    },
+    {
+      "uri": "event://media/s5-case-closed",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7022",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7021",
+      "idempotency_key": "idem-s5-7022",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "case closed",
+      "state_update": [
+        {
+          "uri": "case://media/c-on-time",
+          "subject": "committed content-delivery campaign below target on time",
+          "status": "CLOSED",
+          "owner": "person://media/cmo",
+          "actors": [
+            "org://media/hollowmedia",
+            "person://media/cmo",
+            "agent://media/campaign-ops"
+          ],
+          "relationships": [
+            "relationship://media/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-blocked"
+            },
+            {
+              "status": "RESOLVED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-resolved"
+            },
+            {
+              "status": "CLOSED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://media/s5-case-closed"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed content-delivery campaign on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://media/hollowpoint-digital missed its committed content-delivery campaign by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed media distribution to the verified on-time partner (lyra-ops) and gate the laggard (hollowpoint-digital)",
+          "metric": "metric://media/m-on-time",
+          "verified_outcome": "forward on-time restored to 1.0; org://media/lyra-ops delivered the rallied content-delivery campaign on time (evidence://media/routed-lyra-opsR); org://media/lyra-ops Trust 0.79"
+        }
+      ],
+      "hash": "f276799b2fab297c85edf99e2cd82642cce1fe4f702708d91645382d50402553"
+    },
+    {
+      "uri": "event://media/s5-state-7023",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7023",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7022",
+      "idempotency_key": "idem-s5-7023",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "register goal + ledger-projected metrics",
+      "state_update": [
+        {
+          "uri": "goal://media/g-core",
+          "for": "org://media/hollowmedia",
+          "statement": "Consistently deliver committed content-delivery campaigns on time so platforms keep Hollow Media in the mix.",
+          "horizon": "quarter",
+          "owner": "person://media/cmo",
+          "metrics": [
+            "metric://media/m-on-time",
+            "metric://media/m-trust",
+            "metric://media/m-settled-value"
+          ]
+        },
+        {
+          "uri": "metric://media/m-on-time",
+          "name": "Committed-content-delivery campaign on-time rate",
+          "definition": "share of committed content-delivery campaign deliveries verified on time",
+          "unit": "fraction",
+          "formula": "on_time / (on_time + late) from ledger",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 0.95,
+          "threshold": 0.8,
+          "period": "quarter",
+          "source": "ledger committed-delivery records",
+          "owner": "person://media/cmo",
+          "actual": 0.5,
+          "forecast": 0.5,
+          "variance": -0.45,
+          "root_cause": "distribution failure \u2014 org://media/hollowpoint-digital missed its committed content-delivery campaign by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED"
+        },
+        {
+          "uri": "metric://media/m-trust",
+          "name": "Partner scoped-trust score",
+          "definition": "best scoped Trust on the partner network (per \u00a75)",
+          "unit": "score",
+          "formula": "T(subject->target, claim, context) per \u00a75",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 0.9,
+          "threshold": 0.6,
+          "period": "rolling",
+          "source": "S5 scoped Trust graph",
+          "owner": "person://media/cmo",
+          "actual": 0.79,
+          "forecast": 0.92,
+          "variance": -0.11,
+          "root_cause_status": "UNKNOWN"
+        },
+        {
+          "uri": "metric://media/m-settled-value",
+          "name": "Settled committed value",
+          "definition": "value of EXCHANGE events settled this period",
+          "unit": "USD",
+          "formula": "sum(EXCHANGE.price) from ledger",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 7600000.0,
+          "threshold": 4180000.0000000005,
+          "period": "quarter",
+          "source": "ledger EXCHANGE events",
+          "owner": "person://media/cmo",
+          "actual": 7600000.0,
+          "forecast": 8740000.0,
+          "variance": 0.0,
+          "root_cause_status": "UNKNOWN"
+        }
+      ],
+      "hash": "e9afc97ece5bb16a6c75de3f961b19dae59b10f732c978b3fb135bbe01dfb23d"
+    },
+    {
+      "uri": "event://media/s5-state-7024",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7024",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7023",
+      "idempotency_key": "idem-s5-7024",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "goal->metric->variance->decision->action->outcome",
+      "state_update": [
+        {
+          "uri": "decision://media/s5-metric-loop",
+          "by": "agent://media/s5",
+          "authority": "authority://media/for-operations",
+          "alternatives": [
+            "do nothing",
+            "rebalance provider allocation"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "metric://media/m-on-time variance reduced toward target",
+          "detail": {
+            "goal": "goal://media/g-core",
+            "metric": "metric://media/m-on-time",
+            "actual": 0.5,
+            "variance": -0.45,
+            "action": "task://media/t-rebalance",
+            "outcome": "event://media/outcome-routed-lyra-opsR"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "937090a69dd86ed40cf7866083c1225a5cebd86b7ce13b7e42fe913b288a389e"
+    },
+    {
+      "uri": "event://media/s5-state-7025",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7025",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7024",
+      "idempotency_key": "idem-s5-7025",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "priority-ordered attention list",
+      "state_update": [
+        {
+          "uri": "decision://media/s5-attention",
+          "by": "agent://media/s5",
+          "authority": "authority://media/for-ops",
+          "confidence": 0.9,
+          "expected_outcome": "top-of-attention ranked",
+          "actual_outcome": "attention prioritized by derived score",
+          "detail": {
+            "attention": [
+              {
+                "uri": "task://media/t-rebalance",
+                "label": "re-balance committed work",
+                "priority": 0.695
+              },
+              {
+                "uri": "task://media/t-followup",
+                "label": "rallied follow-on (good partner)",
+                "priority": 0.58
+              }
+            ]
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "856ac63a6c77ca185679cdb3fdcd66180cd22050229ebcd930fb259c2acfc3dc"
+    },
+    {
+      "uri": "event://media/s5-state-7026",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7026",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7025",
+      "idempotency_key": "idem-s5-7026",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "dependency dependency://media/d-rb-enables-fu: task://media/t-rebalance ENABLES task://media/t-followup",
+      "state_update": [
+        {
+          "uri": "dependency://media/d-rb-enables-fu",
+          "from": "task://media/t-rebalance",
+          "to": "task://media/t-followup",
+          "kind": "ENABLES"
+        }
+      ],
+      "hash": "677b34d3fa15db4fae43f9205b33ba4c85ca72939643492139aec556d01e7dea"
+    },
+    {
+      "uri": "event://media/s5-state-7027",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7027",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7026",
+      "idempotency_key": "idem-s5-7027",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "dependency dependency://media/d-fu-requires-pol: task://media/t-followup REQUIRES policy://media/allocation",
+      "state_update": [
+        {
+          "uri": "dependency://media/d-fu-requires-pol",
+          "from": "task://media/t-followup",
+          "to": "policy://media/allocation",
+          "kind": "REQUIRES"
+        }
+      ],
+      "hash": "9defac104edcf97784c1f9c0923b0877f02b9621013c5abf11366f47c5c8ef63"
+    },
+    {
+      "uri": "event://media/s5-state-7028",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7028",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7027",
+      "idempotency_key": "idem-s5-7028",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "dependency dependency://media/d-fu-blocks-case: task://media/t-followup BLOCKS case://media/c-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://media/d-fu-blocks-case",
+          "from": "task://media/t-followup",
+          "to": "case://media/c-on-time",
+          "kind": "BLOCKS"
+        }
+      ],
+      "hash": "2de59fe0b72fc7313400ea1a6fa7f90ae289de7272c88b187ee2c4cc19e676ea"
+    },
+    {
+      "uri": "event://media/s5-state-7029",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7029",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7028",
+      "idempotency_key": "idem-s5-7029",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "dependency dependency://media/d-case-from-metric: case://media/c-on-time DERIVED_FROM metric://media/m-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://media/d-case-from-metric",
+          "from": "case://media/c-on-time",
+          "to": "metric://media/m-on-time",
+          "kind": "DERIVED_FROM"
+        }
+      ],
+      "hash": "680261463f11809e077406717e19ac47c69ccd20cb780f29c3007fac5bc7dc2d"
+    },
+    {
+      "uri": "event://media/s5-state-7030",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7030",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7029",
+      "idempotency_key": "idem-s5-7030",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "dependency dependency://media/d-metric-impacts-goal: metric://media/m-on-time IMPACTS goal://media/g-core",
+      "state_update": [
+        {
+          "uri": "dependency://media/d-metric-impacts-goal",
+          "from": "metric://media/m-on-time",
+          "to": "goal://media/g-core",
+          "kind": "IMPACTS"
+        }
+      ],
+      "hash": "6e5a21cdcb111a15719676263d5f1cab3cdf0a8c47055274d824b920ad3fe69c"
+    },
+    {
+      "uri": "event://media/s5-state-7031",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7031",
+      "correlation_id": "corr-media-bol-1",
+      "causation_id": "ev-s5-7030",
+      "idempotency_key": "idem-s5-7031",
+      "signature": "signed-by-agent://media/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://media/s5",
+      "detail": "dependency dependency://media/d-rb-blocks-case: task://media/t-rebalance BLOCKS case://media/c-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://media/d-rb-blocks-case",
+          "from": "task://media/t-rebalance",
+          "to": "case://media/c-on-time",
+          "kind": "BLOCKS"
+        }
+      ],
+      "hash": "de3c7ecb635465b6c3dd69c661fce61fa7f96d15eabafd1c86719abd4d0214fd"
+    }
+  ]
+}

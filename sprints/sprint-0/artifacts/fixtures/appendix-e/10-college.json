@@ -1,0 +1,44 @@
+[
+  {
+    "uri": "person://e10/std",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e10/uni",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e10/enroll",
+    "participants": [
+      "person://e10/std",
+      "org://e10/uni"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "person://e10/std": [
+        "student"
+      ]
+    }
+  },
+  {
+    "uri": "student_record://e10/rec",
+    "type": "enrollment",
+    "person": "person://e10/std"
+  },
+  {
+    "uri": "interaction://e10/exchange",
+    "of": "relationship://e10/enroll",
+    "kind": "EXCHANGE"
+  },
+  {
+    "uri": "event://e10/exchange",
+    "type": "EXCHANGE",
+    "event_id": "event-e10/exchange",
+    "correlation_id": "event-ce10/exchange",
+    "causation_id": "event-cae10/exchange",
+    "idempotency_key": "event-ie10/exchange",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "person://e10/std"
+  }
+]

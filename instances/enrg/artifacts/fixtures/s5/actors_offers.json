@@ -1,0 +1,248 @@
+[
+  {
+    "uri": "org://enrg/basinline",
+    "type": "ORG",
+    "identity": {
+      "attestations": [
+        "business-license"
+      ]
+    },
+    "brand": {
+      "tagline": "Energy that arrives when it's supposed to.",
+      "mission": "Deliver committed refined-products tanker and chemical cargoes reliably and on time so term customers can run their operations without a barrel of uncertainty.",
+      "vision": "An energy market where 'it's on the water' means it will be there \u2014 measured, verified, and on the agreed date.",
+      "values": [
+        [
+          "Dependability",
+          "A charter is a commitment; delivering late is a failure, not a forecast."
+        ],
+        [
+          "Safety first",
+          "On time never means cutting corners on the creole, the tank, or the port."
+        ],
+        [
+          "Evidence over rumor",
+          "We prove when cargoes arrive with ledger-verified records."
+        ],
+        [
+          "Stewardship",
+          "We move energy responsibly and report the footprint."
+        ],
+        [
+          "Partnership",
+          "Term customers plan around us; we honour that trust."
+        ]
+      ],
+      "about": "Basinline Energy is a refined-products and chemicals logistics operator. We take committed tanker deliveries and make discharge dates as firm as a bank statement, backing every arrival with ledger-verified evidence. For term customers whose whole plant schedule hinges on a cargo, our on-time record is not a marketing line \u2014 it is the working relationship.",
+      "fast_facts": [
+        "Founded 1998, energy & chemicals logistics",
+        "Fleet of 40+ contracted tankers",
+        "Terminal and refining connections across the Gulf"
+      ],
+      "history": [
+        [
+          "1998",
+          "Founded in Houston as a fuel-hauling operation."
+        ],
+        [
+          "2010",
+          "Entered refined-products tanker chartering."
+        ],
+        [
+          "2023",
+          "Verifying every cargo discharge against the ledger for on-time proof."
+        ]
+      ],
+      "leadership": [
+        [
+          "Wade Okonkwo",
+          "Chief Executive",
+          "25 years in energy shipping; built Basinline on discharge reliability."
+        ],
+        [
+          "Lena Alvarado",
+          "Chief Supply Officer",
+          "Runs the tanker network and terminal relationships."
+        ]
+      ],
+      "products_services": [
+        "Refined-products tanker delivery",
+        "Chemical cargo logistics",
+        "Terminal discharge coordination"
+      ],
+      "testimonials": [
+        [
+          "Basinline's discharge dates are the only ones in the market I'd build a schedule around.",
+          "Term customer, refining"
+        ]
+      ],
+      "trust": [
+        [
+          "98.7% committed tanker discharge on-time rate (2025)",
+          "Basinline discharge ledger"
+        ],
+        [
+          "OCIMF/ISGOTT-aligned tanker safety programme",
+          "audited annually"
+        ]
+      ],
+      "locations": "Houston, TX (HQ) \u00b7 Gulf terminals; global charter coverage to order",
+      "faq": [
+        [
+          "Why is your on-time claim credible?",
+          "Every cargo discharge is anchored to a signed ledger event with a verified completion time \u2014 auditable, not asserted."
+        ],
+        [
+          "Do you coordinate the terminal side too?",
+          "Yes, we manage both vessel and terminal, so the commitment covers the full landing."
+        ]
+      ],
+      "contact": "charter@basinline.example \u00b7 +1-713-555-0149",
+      "careers": "Keep the barrels moving on schedule: marine ops, chartering, terminal logistics, safety.",
+      "investors": "Privately held. Fleet and reliability data shared on request.",
+      "press": "media@basinline.example \u2014 safety and reliability reporting.",
+      "esg": "Emissions-tracking per voyage, ballast and spill stewardship, port-community partnerships.",
+      "legal": [
+        "Privacy",
+        "Terms",
+        "Caifornia Rights",
+        "Do Not Sell or Share"
+      ],
+      "nav": [
+        "About",
+        "What We Move",
+        "Terminals",
+        "Safety",
+        "Careers",
+        "Investors",
+        "Press",
+        "Contact"
+      ],
+      "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+      "design": {
+        "palette": [
+          [
+            "Pipeline Black",
+            "#1B1E24"
+          ],
+          [
+            "Refinery Amber",
+            "#F2A124"
+          ],
+          [
+            "Marine Steel",
+            "#5B6470"
+          ],
+          [
+            "Terminal Teal",
+            "#0E7C86"
+          ]
+        ],
+        "typography": {
+          "heading": "Strong industrial sans (e.g. Archivo)",
+          "body": "Neutral sans (e.g. Roboto)"
+        },
+        "logo": {
+          "wordmark": "BASINLINE in strong caps",
+          "character": "a tanker/pipeline chevron mark",
+          "usage": "clear space wide; dark-on-light, amber as accent only"
+        },
+        "imagery": "Open-water tankers, terminals, pipelines at scale \u2014 powerful and engineered",
+        "tone": "Solid, understated, exact; heavy on measured facts over adjectives."
+      }
+    }
+  },
+  {
+    "uri": "org://enrg/terminal-west",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://enrg/gyre-marine",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://enrg/peridot-shipping",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://enrg/supt",
+    "type": "PERSON"
+  },
+  {
+    "uri": "agent://enrg/logistics-ops",
+    "type": "AGENT"
+  },
+  {
+    "uri": "authority://enrg/for-ops",
+    "holder": "org://enrg/basinline",
+    "grants": [
+      "triage_case",
+      "assign_case",
+      "close_case",
+      "approve_learning",
+      "rebalance_commitment",
+      "gate_partner",
+      "release_committed_action"
+    ],
+    "roles": [
+      "operator"
+    ]
+  },
+  {
+    "uri": "rule://enrg/ops-run",
+    "kind": "POLICY",
+    "text": "agent://enrg/logistics-ops may re-balance resource commitment and gate partner performance",
+    "grants": [
+      "rebalance_commitment",
+      "gate_partner"
+    ]
+  },
+  {
+    "uri": "rule://enrg/match-run",
+    "kind": "POLICY",
+    "text": "S2 may run Trust-weighted matching for the client",
+    "grants": [
+      "run_match"
+    ]
+  },
+  {
+    "uri": "delegation://enrg/ops",
+    "grantor": "org://enrg/basinline",
+    "grantee": "agent://enrg/logistics-ops",
+    "scope": [
+      "rule://enrg/ops-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://enrg/s2-match",
+    "grantor": "org://enrg/basinline",
+    "grantee": "agent://s2",
+    "scope": [
+      "rule://enrg/match-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "offer://enrg/o-g",
+    "provider": "org://enrg/gyre-marine",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "tanker",
+      "delivery"
+    ],
+    "fit_note": "energy / chemicals partner delivery line"
+  },
+  {
+    "uri": "offer://enrg/o-l",
+    "provider": "org://enrg/peridot-shipping",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "tanker",
+      "delivery"
+    ],
+    "fit_note": "energy / chemicals partner delivery line"
+  }
+]

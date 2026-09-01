@@ -1,0 +1,163 @@
+{
+  "cockpit": {
+    "company": "Quoteko (fictional)",
+    "generated": "2026-09-01T00:29:54Z",
+    "health": [
+      {
+        "metric": "metric://qk/m-on-time",
+        "name": "On-time delivery rate",
+        "unit": "fraction",
+        "target": 0.95,
+        "actual": 0.857,
+        "variance": -0.093,
+        "status": "CRITICAL",
+        "forecast": 0.83
+      },
+      {
+        "metric": "metric://qk/m-customer-trust",
+        "name": "Customer-trust score",
+        "unit": "score",
+        "target": 0.9,
+        "actual": 1.0,
+        "variance": 0.1,
+        "status": "OK",
+        "forecast": 0.92
+      },
+      {
+        "metric": "metric://qk/m-settled-value",
+        "name": "Settled value",
+        "unit": "USD",
+        "target": 25000.0,
+        "actual": 24850.0,
+        "variance": -150.0,
+        "status": "WARN",
+        "forecast": 30000.0
+      }
+    ],
+    "attention_line": "2 things requiring attention today",
+    "attention": [
+      {
+        "uri": "task://qk/t-provider-rebalance",
+        "label": "re-balance provider allocation",
+        "priority": 0.695,
+        "factors": {
+          "impact": 0.85,
+          "urgency": 0.9,
+          "confidence": 0.7,
+          "irreversibility": false,
+          "relationship_importance": 0.8,
+          "cost_of_delay": 0.75
+        }
+      },
+      {
+        "uri": "task://qk/t-followup-routed",
+        "label": "rallied follow-on delivery (solarworks)",
+        "priority": 0.58,
+        "factors": {
+          "impact": 0.7,
+          "urgency": 0.75,
+          "confidence": 0.6,
+          "irreversibility": false,
+          "relationship_importance": 0.7,
+          "cost_of_delay": 0.6
+        }
+      }
+    ],
+    "exception": {
+      "expected": 0.95,
+      "actual": 0.833,
+      "variance": -0.117,
+      "significance": "CRITICAL",
+      "on": 5,
+      "total": 6
+    },
+    "case": "case://qk/c-on-time-delivery",
+    "case_status": "CLOSED",
+    "recommendation": {
+      "summary": "task://qk/t-provider-rebalance",
+      "authority_required": "authority://qk/for-operations",
+      "options": [
+        "re-balance to verified on-time provider",
+        "gate the laggard (norcrete)",
+        "do nothing"
+      ],
+      "includes_do_nothing": true,
+      "tradeoff": "Re-balancing concentrates work with solarworks (higher short-term concentration risk) but restores on-time fulfilment and protects scoped customer Trust; doing nothing keeps on-time below target.",
+      "confidence": 0.85,
+      "expected_impact": "forward-period on-time delivery returns to 1.0 (verified, rallied solarworks delivery on time).",
+      "decision": "decision://qk/s5-assign"
+    },
+    "verified_outcome": {
+      "exchange": "event://qk/s4-exchange-routed-solarworks",
+      "outcome": "event://qk/s4-outcome-routed-solarworks",
+      "evaluation": "met",
+      "evidence": "evidence://qk/job-routed-solarworks",
+      "after_trust": 1.0,
+      "forward_on_time": 1.0,
+      "cumulative_after": 0.857
+    },
+    "learning": "decision://qk/s5-learning-on-time",
+    "ledger": 97,
+    "graph": 160
+  },
+  "seven": [
+    {
+      "uri": "task://qk/t-provider-rebalance",
+      "label": "re-balance provider allocation",
+      "priority": 0.695,
+      "factors": {
+        "impact": 0.85,
+        "urgency": 0.9,
+        "confidence": 0.7,
+        "irreversibility": false,
+        "relationship_importance": 0.8,
+        "cost_of_delay": 0.75
+      }
+    },
+    {
+      "uri": "task://qk/t-followup-routed",
+      "label": "rallied follow-on delivery (solarworks)",
+      "priority": 0.58,
+      "factors": {
+        "impact": 0.7,
+        "urgency": 0.75,
+        "confidence": 0.6,
+        "irreversibility": false,
+        "relationship_importance": 0.7,
+        "cost_of_delay": 0.6
+      }
+    }
+  ],
+  "health": [
+    {
+      "metric": "metric://qk/m-on-time",
+      "name": "On-time delivery rate",
+      "unit": "fraction",
+      "target": 0.95,
+      "actual": 0.857,
+      "variance": -0.093,
+      "status": "CRITICAL",
+      "forecast": 0.83
+    },
+    {
+      "metric": "metric://qk/m-customer-trust",
+      "name": "Customer-trust score",
+      "unit": "score",
+      "target": 0.9,
+      "actual": 1.0,
+      "variance": 0.1,
+      "status": "OK",
+      "forecast": 0.92
+    },
+    {
+      "metric": "metric://qk/m-settled-value",
+      "name": "Settled value",
+      "unit": "USD",
+      "target": 25000.0,
+      "actual": 24850.0,
+      "variance": -150.0,
+      "status": "WARN",
+      "forecast": 30000.0
+    }
+  ]
+}

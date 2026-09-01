@@ -1,0 +1,29 @@
+[
+  {
+    "uri": "process://media/pr-core",
+    "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+    "steps": [
+      "triage",
+      "assign",
+      "execute",
+      "verify_outcome",
+      "learning"
+    ]
+  },
+  {
+    "uri": "process_instance://media/pi-core",
+    "process": "process://media/pr-core",
+    "status": "RUNNING",
+    "started_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "escalation://media/escalate-release",
+    "trigger": "external campaign release \u2014 irreversible and cost-unknowable once live",
+    "severity": "WARN",
+    "recipient": "person://media/cmo",
+    "deadline": "2026-11-15T00:00:00Z",
+    "fallback": "agent://media/s4",
+    "authority": "authority://media/for-ops",
+    "acknowledgement": "approve then execute"
+  }
+]

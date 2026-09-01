@@ -1,0 +1,248 @@
+[
+  {
+    "uri": "org://auto/forge-auto",
+    "type": "ORG",
+    "identity": {
+      "attestations": [
+        "business-license"
+      ]
+    },
+    "brand": {
+      "tagline": "Parts on the line, on the build.",
+      "mission": "Deliver committed OEM part lots reliably and on time so assembly lines stay scheduled, stays running, and no plant shuts down waiting on a supplier.",
+      "vision": "An automotive supply chain where line-side parts are a given, and our on-time record keeps assembly floors from ever going dark.",
+      "values": [
+        [
+          "Line integrity",
+          "A missed part lot can stop a whole line; we treat the date accordingly."
+        ],
+        [
+          "Quality at the core",
+          "On time is never at the expense of a defective part."
+        ],
+        [
+          "Traceability",
+          "We prove every part lot against the ledger, from source to line-side."
+        ],
+        [
+          "Assembly partnership",
+          "OEMs plan around us; we make that planning safe."
+        ],
+        [
+          "Continuous improvement",
+          "Every miss is a system fix, not a blame."
+        ]
+      ],
+      "about": "Forge Auto is an automotive OEM supplier. We take committed part-lot deliveries and land them line-side on the scheduled date \u2014 verified, traceable, right-first-time. When a whole assembly line depends on a supplier keeping the date, our on-time evidence is not a nicety; it is what keeps the plant scheduled and the warranty quiet.",
+      "fast_facts": [
+        "Founded 1989, automotive OEM parts",
+        "1,200+ part variants delivered",
+        "Line-side programs with 40+ assembly plants"
+      ],
+      "history": [
+        [
+          "1989",
+          "Founded as a forge supplying drivetrain parts."
+        ],
+        [
+          "2005",
+          "Scaled to full line-side OEM part-lot delivery."
+        ],
+        [
+          "2018",
+          "Digitised every lot to ledger-verified on-time evidence."
+        ]
+      ],
+      "leadership": [
+        [
+          "Grant Kowalski",
+          "Chief Executive",
+          "Cast and forged parts his whole career before leading Forge Auto."
+        ],
+        [
+          "Nadia Foster",
+          "Chief Operations Officer",
+          "Owns the supply network and the on-time gate across plants."
+        ]
+      ],
+      "products_services": [
+        "OEM part-lot design and delivery",
+        "Line-side supply scheduling",
+        "Supplier quality assurance"
+      ],
+      "testimonials": [
+        [
+          "Forge Auto is the one supplier our line can run without watching the clock for.",
+          "OEM plant director"
+        ]
+      ],
+      "trust": [
+        [
+          "98.9% committed part-lot on-time rate (2025)",
+          "Forge Auto delivery ledger"
+        ],
+        [
+          "IATF 16949 automotive quality certification",
+          "third-party audit"
+        ]
+      ],
+      "locations": "Toledo, OH (HQ) \u00b7 plants and line-side hubs serving 40+ OEM assembly sites",
+      "faq": [
+        [
+          "What proves your on-time claim?",
+          "Each committed part lot anchors to a signed ledger event with a verified delivery time \u2014 auditable from order to line-side."
+        ],
+        [
+          "Do you support just-in-time delivery?",
+          "Yes, JIT line-side scheduling is core, and the on-time gate applies to every committed lot."
+        ]
+      ],
+      "contact": "supply@forgeauto.example \u00b7 +1-419-555-0127",
+      "careers": "Keep the line scheduled: supply chain, quality, logistics, manufacturing engineering.",
+      "investors": "Privately held. Plant reliability data shared with OEM customers.",
+      "press": "media@forgeauto.example \u2014 plant and quality announcements.",
+      "esg": "Low-emissions forging, part-traceability for circularity, apprenticeship programs.",
+      "legal": [
+        "Privacy",
+        "Terms",
+        "California Rights",
+        "Do Not Sell or Share"
+      ],
+      "nav": [
+        "About",
+        "Capabilities",
+        "Plants",
+        "Quality",
+        "Careers",
+        "Investors",
+        "Press",
+        "Contact"
+      ],
+      "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+      "design": {
+        "palette": [
+          [
+            "Anvil Grey",
+            "#3A3D42"
+          ],
+          [
+            "Machining Silver",
+            "#C7CCD1"
+          ],
+          [
+            "Redline Red",
+            "#C4262E"
+          ],
+          [
+            "Deep Forge",
+            "#15171A"
+          ]
+        ],
+        "typography": {
+          "heading": "Solid industrial sans (e.g. Oswald)",
+          "body": "Workhorse sans (e.g. Source Sans 3)"
+        },
+        "logo": {
+          "wordmark": "FORGE AUTO in heavy caps",
+          "character": "an ingot/anvil mark",
+          "usage": "clear space heavy; red as accent, grey+silver standard"
+        },
+        "imagery": "Assembly lines, forged parts, machining in motion \u2014 heavy, capable, precise",
+        "tone": "Built, dependable, plain; about keeping the line running."
+      }
+    }
+  },
+  {
+    "uri": "org://auto/cypress-assembly",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://auto/stellar-auto",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://auto/corvair-parts",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://auto/vpo",
+    "type": "PERSON"
+  },
+  {
+    "uri": "agent://auto/supply-ops",
+    "type": "AGENT"
+  },
+  {
+    "uri": "authority://auto/for-ops",
+    "holder": "org://auto/forge-auto",
+    "grants": [
+      "triage_case",
+      "assign_case",
+      "close_case",
+      "approve_learning",
+      "rebalance_commitment",
+      "gate_partner",
+      "release_committed_action"
+    ],
+    "roles": [
+      "operator"
+    ]
+  },
+  {
+    "uri": "rule://auto/ops-run",
+    "kind": "POLICY",
+    "text": "agent://auto/supply-ops may re-balance resource commitment and gate partner performance",
+    "grants": [
+      "rebalance_commitment",
+      "gate_partner"
+    ]
+  },
+  {
+    "uri": "rule://auto/match-run",
+    "kind": "POLICY",
+    "text": "S2 may run Trust-weighted matching for the client",
+    "grants": [
+      "run_match"
+    ]
+  },
+  {
+    "uri": "delegation://auto/ops",
+    "grantor": "org://auto/forge-auto",
+    "grantee": "agent://auto/supply-ops",
+    "scope": [
+      "rule://auto/ops-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://auto/s2-match",
+    "grantor": "org://auto/forge-auto",
+    "grantee": "agent://s2",
+    "scope": [
+      "rule://auto/match-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "offer://auto/o-g",
+    "provider": "org://auto/stellar-auto",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "oem-parts",
+      "delivery"
+    ],
+    "fit_note": "automotive partner delivery line"
+  },
+  {
+    "uri": "offer://auto/o-l",
+    "provider": "org://auto/corvair-parts",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "oem-parts",
+      "delivery"
+    ],
+    "fit_note": "automotive partner delivery line"
+  }
+]

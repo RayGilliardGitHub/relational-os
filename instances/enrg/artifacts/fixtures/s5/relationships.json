@@ -1,0 +1,46 @@
+[
+  {
+    "uri": "relationship://enrg/ops-rel",
+    "participants": [
+      "org://enrg/basinline",
+      "org://enrg/terminal-west"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://enrg/basinline": [
+        "provider"
+      ],
+      "org://enrg/terminal-west": [
+        "client"
+      ]
+    },
+    "authority": [
+      "authority://enrg/for-ops"
+    ],
+    "purpose": "energy / chemicals operating relationship"
+  },
+  {
+    "uri": "relationship://enrg/partner-net",
+    "participants": [
+      "org://enrg/basinline",
+      "org://enrg/gyre-marine",
+      "org://enrg/peridot-shipping"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://enrg/basinline": [
+        "operator"
+      ],
+      "org://enrg/gyre-marine": [
+        "partner"
+      ],
+      "org://enrg/peridot-shipping": [
+        "partner"
+      ]
+    },
+    "authority": [
+      "authority://enrg/for-ops"
+    ],
+    "purpose": "energy / chemicals partner network"
+  }
+]

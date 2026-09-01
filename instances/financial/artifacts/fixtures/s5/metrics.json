@@ -1,0 +1,60 @@
+[
+  {
+    "uri": "metric://fin/m-on-time-settlement",
+    "name": "Funding on-time settlement rate",
+    "definition": "share of committed funding tranches verified settled on time",
+    "unit": "fraction",
+    "formula": "on_time / (on_time + late) from ledger",
+    "dimensions": [
+      "counterparty"
+    ],
+    "target": 0.95,
+    "threshold": 0.8,
+    "period": "quarter",
+    "source": "ledger committed-settlement records",
+    "owner": "person://fin/treasurer",
+    "actual": 0.5,
+    "forecast": 0.5,
+    "variance": -0.45,
+    "root_cause": "funding-ops failure (kaplen missed committed deadline)",
+    "root_cause_status": "SUPPORTED"
+  },
+  {
+    "uri": "metric://fin/m-funder-trust",
+    "name": "Counterparty settlement-trust score",
+    "definition": "best scoped settlement Trust on the funding relationship",
+    "unit": "score",
+    "formula": "T(subject->target, claim, context) per \u00a75",
+    "dimensions": [
+      "counterparty"
+    ],
+    "target": 0.9,
+    "threshold": 0.6,
+    "period": "rolling",
+    "source": "S5 scoped Trust graph",
+    "owner": "person://fin/treasurer",
+    "actual": 0.79,
+    "forecast": 0.92,
+    "variance": -0.11,
+    "root_cause_status": "UNKNOWN"
+  },
+  {
+    "uri": "metric://fin/m-settled-value",
+    "name": "Settled committed value",
+    "definition": "value of EXCHANGE events settled this period",
+    "unit": "USD",
+    "formula": "sum(EXCHANGE.price) from ledger",
+    "dimensions": [
+      "counterparty"
+    ],
+    "target": 6000000.0,
+    "threshold": 3500000.0,
+    "period": "quarter",
+    "source": "ledger EXCHANGE events",
+    "owner": "person://fin/treasurer",
+    "actual": 5700000.0,
+    "forecast": 7000000.0,
+    "variance": -300000.0,
+    "root_cause_status": "UNKNOWN"
+  }
+]

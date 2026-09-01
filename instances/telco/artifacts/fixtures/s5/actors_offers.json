@@ -1,0 +1,249 @@
+[
+  {
+    "uri": "org://telco/nimbuscom",
+    "type": "ORG",
+    "identity": {
+      "attestations": [
+        "business-license"
+      ]
+    },
+    "brand": {
+      "tagline": "Coverage where you need it, on schedule.",
+      "mission": "Deliver committed cell-site buildouts reliably and on time so metropolitan communities and subscribers get the coverage they were promised, when they were promised it.",
+      "vision": "A connected city where 'we're building coverage' means the tower is coming up on the scheduled date.",
+      "values": [
+        [
+          "Coverage is a promise",
+          "A site on time means a neighbourhood connected on time."
+        ],
+        [
+          "Build it right",
+          "Speed never trades away a safe, code-compliant handover."
+        ],
+        [
+          "Evidence in hand",
+          "We verify every energized site against the ledger."
+        ],
+        [
+          "Subscriber trust",
+          "People count on us to make the signal real; we protect that."
+        ],
+        [
+          "Metro partnership",
+          "We build with the community, not around it."
+        ]
+      ],
+      "about": "NimbusCom is a telecom operator that builds and lights up cellular coverage. We take committed cell-site buildouts and energize them on schedule \u2014 verified, code-compliant, ready to carry traffic. Between the promise on a coverage map and the bars on a subscriber's phone, there is a site that has to come up on the date; that handover is the work we are built for.",
+      "fast_facts": [
+        "Founded 2003, mobile network operator",
+        "2,100+ cell sites lit",
+        "Metropolitan coverage across 3 metro regions"
+      ],
+      "history": [
+        [
+          "2003",
+          "Founded rolling out metro coverage."
+        ],
+        [
+          "2011",
+          "Accelerated the cell-site buildout business."
+        ],
+        [
+          "2022",
+          "Verifying every energized handover against the ledger."
+        ]
+      ],
+      "leadership": [
+        [
+          "CEO \u2014 Lena Park",
+          "Chief Executive",
+          "Ran network engineering for years before leading NimbusCom."
+        ],
+        [
+          "Tanaji Rao",
+          "Chief Network Officer",
+          "Owns buildout schedule and handover integrity."
+        ]
+      ],
+      "products_services": [
+        "Mobile network operation",
+        "Cell-site buildout and erection",
+        "Coverage expansion and modernization"
+      ],
+      "testimonials": [
+        [
+          "NimbusCom lit the site on the exact date they committed. Our coverage story changed that day.",
+          "Metro community liaison"
+        ]
+      ],
+      "trust": [
+        [
+          "98.8% committed cell-site on-time rate (2025)",
+          "NimbusCom buildout ledger"
+        ],
+        [
+          "FCC-compliant, code-certified site handovers",
+          "independent inspection"
+        ]
+      ],
+      "locations": "Metro HQ across 3 regions; build teams dispatched per site programme",
+      "faq": [
+        [
+          "What counts as 'on time' for a site?",
+          "The committed energization date, verified by a signed ledger event at handover \u2014 measured, not promised."
+        ],
+        [
+          "Do you handle permits and community outreach?",
+          "Yes, buildout includes permitting, outreach, and code handover, all on a schedule."
+        ]
+      ],
+      "contact": "coverage@nimbuscom.example \u00b7 +1-512-555-0110",
+      "careers": "Light up whole neighbourhoods: site engineering, buildout ops, network, field coordination.",
+      "investors": "Privately held. Coverage and buildout reliability shared on request.",
+      "press": "news@nimbuscom.example \u2014 new sites and coverage announcements.",
+      "esg": "Carbon-aware build scheduling, site-power efficiency, community digital-inclusion grants.",
+      "legal": [
+        "Privacy",
+        "Terms",
+        "California Rights",
+        "Do Not Sell or Share",
+        "Health & Safety"
+      ],
+      "nav": [
+        "About",
+        "Coverage",
+        "Buildout",
+        "Community",
+        "Careers",
+        "Investors",
+        "Press",
+        "Contact"
+      ],
+      "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+      "design": {
+        "palette": [
+          [
+            "Signal Purple",
+            "#5A2F8A"
+          ],
+          [
+            "Lumen Blue",
+            "#1E7BD8"
+          ],
+          [
+            "Dark Sky",
+            "#101A2E"
+          ],
+          [
+            "Zing Yellow",
+            "#F5B700"
+          ]
+        ],
+        "typography": {
+          "heading": "Modern geometric sans (e.g. Nunito Sans)",
+          "body": "Open sans (e.g. Roboto)"
+        },
+        "logo": {
+          "wordmark": "nimbuscom",
+          "character": "a tower/signal-wave mark",
+          "usage": "clear space fixed; purple+blue standard, yellow for energy accents"
+        },
+        "imagery": "City skylines, towers on the skyline, energized coverage maps \u2014 bright and forward",
+        "tone": "Energised, clear, reassuring; speaks in coverage and connection."
+      }
+    }
+  },
+  {
+    "uri": "org://telco/fairfield-metro",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://telco/meridian-tower",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://telco/nimbus-networks",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://telco/cno",
+    "type": "PERSON"
+  },
+  {
+    "uri": "agent://telco/build-ops",
+    "type": "AGENT"
+  },
+  {
+    "uri": "authority://telco/for-ops",
+    "holder": "org://telco/nimbuscom",
+    "grants": [
+      "triage_case",
+      "assign_case",
+      "close_case",
+      "approve_learning",
+      "rebalance_commitment",
+      "gate_partner",
+      "release_committed_action"
+    ],
+    "roles": [
+      "operator"
+    ]
+  },
+  {
+    "uri": "rule://telco/ops-run",
+    "kind": "POLICY",
+    "text": "agent://telco/build-ops may re-balance resource commitment and gate partner performance",
+    "grants": [
+      "rebalance_commitment",
+      "gate_partner"
+    ]
+  },
+  {
+    "uri": "rule://telco/match-run",
+    "kind": "POLICY",
+    "text": "S2 may run Trust-weighted matching for the client",
+    "grants": [
+      "run_match"
+    ]
+  },
+  {
+    "uri": "delegation://telco/ops",
+    "grantor": "org://telco/nimbuscom",
+    "grantee": "agent://telco/build-ops",
+    "scope": [
+      "rule://telco/ops-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://telco/s2-match",
+    "grantor": "org://telco/nimbuscom",
+    "grantee": "agent://s2",
+    "scope": [
+      "rule://telco/match-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "offer://telco/o-g",
+    "provider": "org://telco/meridian-tower",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "buildout",
+      "erection"
+    ],
+    "fit_note": "telecom partner delivery line"
+  },
+  {
+    "uri": "offer://telco/o-l",
+    "provider": "org://telco/nimbus-networks",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "buildout",
+      "erection"
+    ],
+    "fit_note": "telecom partner delivery line"
+  }
+]

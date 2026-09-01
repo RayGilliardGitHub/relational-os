@@ -1,0 +1,52 @@
+[
+  {
+    "uri": "expectation://fin/e-on-time-funding",
+    "actor": "person://fin/treasurer",
+    "subject": "committed funding settlement",
+    "condition": "settle each committed funding tranche by its committed deadline",
+    "metric": "on_time",
+    "threshold": 0.95,
+    "deadline": "2026-12-31T00:00:00Z",
+    "evidence_required": "CLEAR"
+  },
+  {
+    "uri": "expectation://fin/e-kaplen-q3",
+    "actor": "person://fin/treasurer",
+    "subject": "syndicated committed funding",
+    "condition": "fully settle the committed funding tranche by its committed deadline",
+    "metric": "settled_value",
+    "threshold": 1500000,
+    "deadline": "2026-08-31T00:00:00Z",
+    "evidence_required": "CLEAR"
+  },
+  {
+    "uri": "expectation://fin/e-adamvale-q3",
+    "actor": "person://fin/treasurer",
+    "subject": "syndicated committed funding",
+    "condition": "fully settle the committed funding tranche by its committed deadline",
+    "metric": "settled_value",
+    "threshold": 1500000,
+    "deadline": "2026-08-31T00:00:00Z",
+    "evidence_required": "CLEAR"
+  },
+  {
+    "uri": "expectation://fin/e-kaplen-q4",
+    "actor": "person://fin/treasurer",
+    "subject": "syndicated committed funding",
+    "condition": "fully settle the committed funding tranche by its committed deadline",
+    "metric": "settled_value",
+    "threshold": 1200000,
+    "deadline": "2026-09-15T00:00:00Z",
+    "evidence_required": "CLEAR"
+  },
+  {
+    "uri": "expectation://fin/e-routed-adamvale",
+    "actor": "person://fin/treasurer",
+    "subject": "committed funding follow-up",
+    "condition": "fully settle the committed funding tranche by its committed deadline",
+    "metric": "settled_value",
+    "threshold": 1500000,
+    "deadline": "2026-11-15T00:00:00Z",
+    "evidence_required": "CLEAR"
+  }
+]

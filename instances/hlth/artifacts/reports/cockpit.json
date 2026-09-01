@@ -1,0 +1,231 @@
+{
+  "cockpit": {
+    "company": "Lumen Health (Healthcare / Pharma, fictional)",
+    "generated": "2026-09-01T00:29:53Z",
+    "health": [
+      {
+        "metric": "metric://hlth/m-on-time",
+        "name": "Committed-pharmaceutical delivery on-time rate",
+        "unit": "fraction",
+        "target": 0.95,
+        "actual": 0.5,
+        "variance": -0.45,
+        "status": "CRITICAL",
+        "forecast": 0.5
+      },
+      {
+        "metric": "metric://hlth/m-trust",
+        "name": "Partner scoped-trust score",
+        "unit": "score",
+        "target": 0.9,
+        "actual": 0.79,
+        "variance": -0.11,
+        "status": "CRITICAL",
+        "forecast": 0.92
+      },
+      {
+        "metric": "metric://hlth/m-settled-value",
+        "name": "Settled committed value",
+        "unit": "USD",
+        "target": 7600000.0,
+        "actual": 7600000.0,
+        "variance": 0.0,
+        "status": "OK",
+        "forecast": 8740000.0
+      }
+    ],
+    "attention_line": "2 things requiring attention today",
+    "attention": [
+      {
+        "uri": "task://hlth/t-rebalance",
+        "label": "re-balance committed work",
+        "priority": 0.695
+      },
+      {
+        "uri": "task://hlth/t-followup",
+        "label": "rallied follow-on (good partner)",
+        "priority": 0.58
+      }
+    ],
+    "exception": {
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "on": 1,
+      "total": 3
+    },
+    "case": "case://hlth/c-on-time",
+    "case_status": "CLOSED",
+    "recommendation": {
+      "summary": "task://hlth/t-rebalance",
+      "authority_required": "authority://hlth/for-ops",
+      "options": [
+        "re-balance pharmaceutical supply to the verified on-time distributor",
+        "gate the laggard (meridian-med)",
+        "do nothing"
+      ],
+      "includes_do_nothing": true,
+      "tradeoff": "Concentrating supply with cortica-supply restores on-time delivery (higher short-term concentration risk) but protects facility-trust; doing nothing keeps below target.",
+      "confidence": 0.85,
+      "expected_impact": "forward on-time returns to 1.0",
+      "decision": "decision://hlth/s5-assign"
+    },
+    "verified_outcome": {
+      "exchange": "event://hlth/s4-exchange-cortica-supplyR",
+      "outcome": "event://hlth/s4-outcome-cortica-supplyR",
+      "evaluation": "met",
+      "evidence": "evidence://hlth/routed-cortica-supplyR",
+      "after_trust": 0.79,
+      "forward_on_time": 1.0,
+      "cumulative_after": 0.5
+    },
+    "learning": "decision://hlth/learning",
+    "ledger": 54,
+    "graph": 80
+  },
+  "brand": {
+    "tagline": "Supply that heals, on schedule.",
+    "mission": "Move committed pharmaceutical supply reliably and on time so care facilities always have the medicine they ordered, exactly when they ordered it.",
+    "vision": "A healthcare supply chain so dependable that a pharmacy's worry is one less thing in the operating room.",
+    "values": [
+      [
+        "Patients first",
+        "Every shipment carries a patient at the other end."
+      ],
+      [
+        "On-time is safety",
+        "A delayed essential medicine is a clinical risk, not an inventory hiccup."
+      ],
+      [
+        "Evidence-based",
+        "We verify every delivery against the ledger; nothing ships on trust alone."
+      ],
+      [
+        "Compassion",
+        "We treat supply failures as care failures, and fix the system, not the blame."
+      ],
+      [
+        "Accountability",
+        "If a delivery misses, we say so, we learn, and the policy changes."
+      ]
+    ],
+    "about": "Lumen Health is a healthcare and pharmaceutical supply operator. We run committed pharmaceutical distribution for care facilities \u2014 and we treat an on-time release the same way clinicians treat a vital sign: it is either within range, or it gets immediate, documented attention. By anchoring each committed delivery to ledger evidence, we give pharmacies and their patients the rarest thing in the supply chain \u2014 certainty.",
+    "fast_facts": [
+      "Founded 2009, pharmaceutical distribution",
+      "3,200+ care facilities served",
+      "Cold-chain and schedule-critical delivery practice"
+    ],
+    "history": [
+      [
+        "2009",
+        "Founded in Minneapolis to fix fragile pharma distribution."
+      ],
+      [
+        "2015",
+        "Launched the committed pharmaceutical-delivery line."
+      ],
+      [
+        "2022",
+        "Placed every committed delivery under ledger-verified on-time evidence."
+      ]
+    ],
+    "leadership": [
+      [
+        "Dana Okafor",
+        "Chief Operating Officer",
+        "Former hospital pharmacy director who joined Lumen to put reliability at the centre of supply."
+      ],
+      [
+        "Marco Beltran",
+        "VP, Distribution",
+        "Owns the distributor network and the on-time bar."
+      ]
+    ],
+    "products_services": [
+      "Committed pharmaceutical supply and distribution",
+      "Cold-chain logistics",
+      "Supply-reliability assurance for care facilities"
+    ],
+    "testimonials": [
+      [
+        "Since Lumen, 'reorder' is boring again. That is exactly what I want it to be.",
+        "Facility pharmacy director"
+      ]
+    ],
+    "trust": [
+      [
+        "99.4% committed pharmacy-delivery on-time rate (2025)",
+        "Lumen delivery ledger"
+      ],
+      [
+        "GDP (Good Distribution Practice) aligned cold-chain",
+        "third-party audit"
+      ]
+    ],
+    "locations": "Minneapolis, MN (HQ) \u00b7 regional depots across the Midwest",
+    "faq": [
+      [
+        "How do you prove a delivery was on time?",
+        "Each committed delivery anchors to a signed ledger event with a verified completion time \u2014 auditable end to end."
+      ],
+      [
+        "Do you handle temperature-sensitive product?",
+        "Yes, cold-chain is a first-class service with its own verification and reporting."
+      ]
+    ],
+    "contact": "supply@lumenhealth.example \u00b7 +1-612-555-0177",
+    "careers": "Help us make healthcare supply boring again: distribution leads, cold-chain specialists, supply ops.",
+    "investors": "Privately held. On-time and reliability reporting available on request.",
+    "press": "media@lumenhealth.example \u2014 spokespeople and reliability data.",
+    "esg": "Cold-chain energy efficiency, temperature-monitoring transparency, community medication-access grants.",
+    "legal": [
+      "Privacy",
+      "Terms",
+      "Health Privacy Notice",
+      "State Rights"
+    ],
+    "nav": [
+      "About",
+      "What We Do",
+      "Facilities",
+      "Careers",
+      "Investors",
+      "Press",
+      "Sustainability",
+      "Contact"
+    ],
+    "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Health-Privacy Preferences (links)",
+    "design": {
+      "palette": [
+        [
+          "Healing Teal",
+          "#0E8575"
+        ],
+        [
+          "Clinical White",
+          "#FDFDFD"
+        ],
+        [
+          "Patient Warmth",
+          "#F2C14E"
+        ],
+        [
+          "Trust Navy",
+          "#14324A"
+        ]
+      ],
+      "typography": {
+        "heading": "Clean serif (e.g. Lora)",
+        "body": "Open sans-serif (e.g. Source Sans 3)"
+      },
+      "logo": {
+        "wordmark": "Lumen Health in rounded friendly caps",
+        "character": "a pulse-line leaf mark",
+        "usage": "clear space around the leaf; calm tones only"
+      },
+      "imagery": "Human and calm: clinicians, care settings, organized supply \u2014 never sterile or alarming",
+      "tone": "Calm, caring, and rigorous; speaks in outcomes for patients."
+    }
+  }
+}

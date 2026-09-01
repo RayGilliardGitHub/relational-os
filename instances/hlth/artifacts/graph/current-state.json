@@ -1,0 +1,1246 @@
+{
+  "kind": "GRAPH",
+  "objects": [
+    {
+      "uri": "org://hlth/lumenhealth",
+      "type": "ORG",
+      "identity": {
+        "attestations": [
+          "business-license"
+        ]
+      },
+      "brand": {
+        "tagline": "Supply that heals, on schedule.",
+        "mission": "Move committed pharmaceutical supply reliably and on time so care facilities always have the medicine they ordered, exactly when they ordered it.",
+        "vision": "A healthcare supply chain so dependable that a pharmacy's worry is one less thing in the operating room.",
+        "values": [
+          [
+            "Patients first",
+            "Every shipment carries a patient at the other end."
+          ],
+          [
+            "On-time is safety",
+            "A delayed essential medicine is a clinical risk, not an inventory hiccup."
+          ],
+          [
+            "Evidence-based",
+            "We verify every delivery against the ledger; nothing ships on trust alone."
+          ],
+          [
+            "Compassion",
+            "We treat supply failures as care failures, and fix the system, not the blame."
+          ],
+          [
+            "Accountability",
+            "If a delivery misses, we say so, we learn, and the policy changes."
+          ]
+        ],
+        "about": "Lumen Health is a healthcare and pharmaceutical supply operator. We run committed pharmaceutical distribution for care facilities \u2014 and we treat an on-time release the same way clinicians treat a vital sign: it is either within range, or it gets immediate, documented attention. By anchoring each committed delivery to ledger evidence, we give pharmacies and their patients the rarest thing in the supply chain \u2014 certainty.",
+        "fast_facts": [
+          "Founded 2009, pharmaceutical distribution",
+          "3,200+ care facilities served",
+          "Cold-chain and schedule-critical delivery practice"
+        ],
+        "history": [
+          [
+            "2009",
+            "Founded in Minneapolis to fix fragile pharma distribution."
+          ],
+          [
+            "2015",
+            "Launched the committed pharmaceutical-delivery line."
+          ],
+          [
+            "2022",
+            "Placed every committed delivery under ledger-verified on-time evidence."
+          ]
+        ],
+        "leadership": [
+          [
+            "Dana Okafor",
+            "Chief Operating Officer",
+            "Former hospital pharmacy director who joined Lumen to put reliability at the centre of supply."
+          ],
+          [
+            "Marco Beltran",
+            "VP, Distribution",
+            "Owns the distributor network and the on-time bar."
+          ]
+        ],
+        "products_services": [
+          "Committed pharmaceutical supply and distribution",
+          "Cold-chain logistics",
+          "Supply-reliability assurance for care facilities"
+        ],
+        "testimonials": [
+          [
+            "Since Lumen, 'reorder' is boring again. That is exactly what I want it to be.",
+            "Facility pharmacy director"
+          ]
+        ],
+        "trust": [
+          [
+            "99.4% committed pharmacy-delivery on-time rate (2025)",
+            "Lumen delivery ledger"
+          ],
+          [
+            "GDP (Good Distribution Practice) aligned cold-chain",
+            "third-party audit"
+          ]
+        ],
+        "locations": "Minneapolis, MN (HQ) \u00b7 regional depots across the Midwest",
+        "faq": [
+          [
+            "How do you prove a delivery was on time?",
+            "Each committed delivery anchors to a signed ledger event with a verified completion time \u2014 auditable end to end."
+          ],
+          [
+            "Do you handle temperature-sensitive product?",
+            "Yes, cold-chain is a first-class service with its own verification and reporting."
+          ]
+        ],
+        "contact": "supply@lumenhealth.example \u00b7 +1-612-555-0177",
+        "careers": "Help us make healthcare supply boring again: distribution leads, cold-chain specialists, supply ops.",
+        "investors": "Privately held. On-time and reliability reporting available on request.",
+        "press": "media@lumenhealth.example \u2014 spokespeople and reliability data.",
+        "esg": "Cold-chain energy efficiency, temperature-monitoring transparency, community medication-access grants.",
+        "legal": [
+          "Privacy",
+          "Terms",
+          "Health Privacy Notice",
+          "State Rights"
+        ],
+        "nav": [
+          "About",
+          "What We Do",
+          "Facilities",
+          "Careers",
+          "Investors",
+          "Press",
+          "Sustainability",
+          "Contact"
+        ],
+        "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Health-Privacy Preferences (links)",
+        "design": {
+          "palette": [
+            [
+              "Healing Teal",
+              "#0E8575"
+            ],
+            [
+              "Clinical White",
+              "#FDFDFD"
+            ],
+            [
+              "Patient Warmth",
+              "#F2C14E"
+            ],
+            [
+              "Trust Navy",
+              "#14324A"
+            ]
+          ],
+          "typography": {
+            "heading": "Clean serif (e.g. Lora)",
+            "body": "Open sans-serif (e.g. Source Sans 3)"
+          },
+          "logo": {
+            "wordmark": "Lumen Health in rounded friendly caps",
+            "character": "a pulse-line leaf mark",
+            "usage": "clear space around the leaf; calm tones only"
+          },
+          "imagery": "Human and calm: clinicians, care settings, organized supply \u2014 never sterile or alarming",
+          "tone": "Calm, caring, and rigorous; speaks in outcomes for patients."
+        }
+      }
+    },
+    {
+      "uri": "org://hlth/northgate-care",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://hlth/cortica-supply",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://hlth/meridian-med",
+      "type": "ORG"
+    },
+    {
+      "uri": "person://hlth/oph",
+      "type": "PERSON"
+    },
+    {
+      "uri": "agent://hlth/supply-ops",
+      "type": "AGENT"
+    },
+    {
+      "uri": "relationship://hlth/ops-rel",
+      "participants": [
+        "org://hlth/lumenhealth",
+        "org://hlth/northgate-care"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://hlth/lumenhealth": [
+          "provider"
+        ],
+        "org://hlth/northgate-care": [
+          "client"
+        ]
+      },
+      "authority": [
+        "authority://hlth/for-ops"
+      ],
+      "purpose": "healthcare / pharma operating relationship"
+    },
+    {
+      "uri": "relationship://hlth/partner-net",
+      "participants": [
+        "org://hlth/lumenhealth",
+        "org://hlth/cortica-supply",
+        "org://hlth/meridian-med"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://hlth/lumenhealth": [
+          "operator"
+        ],
+        "org://hlth/cortica-supply": [
+          "partner"
+        ],
+        "org://hlth/meridian-med": [
+          "partner"
+        ]
+      },
+      "authority": [
+        "authority://hlth/for-ops"
+      ],
+      "purpose": "healthcare / pharma partner network"
+    },
+    {
+      "uri": "authority://hlth/for-ops",
+      "holder": "org://hlth/lumenhealth",
+      "grants": [
+        "triage_case",
+        "assign_case",
+        "close_case",
+        "approve_learning",
+        "rebalance_commitment",
+        "gate_partner",
+        "release_committed_action"
+      ],
+      "roles": [
+        "operator"
+      ]
+    },
+    {
+      "uri": "rule://hlth/ops-run",
+      "kind": "POLICY",
+      "text": "agent://hlth/supply-ops may re-balance resource commitment and gate partner performance",
+      "grants": [
+        "rebalance_commitment",
+        "gate_partner"
+      ]
+    },
+    {
+      "uri": "rule://hlth/match-run",
+      "kind": "POLICY",
+      "text": "S2 may run Trust-weighted matching for the client",
+      "grants": [
+        "run_match"
+      ]
+    },
+    {
+      "uri": "delegation://hlth/ops",
+      "grantor": "org://hlth/lumenhealth",
+      "grantee": "agent://hlth/supply-ops",
+      "scope": [
+        "rule://hlth/ops-run"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "uri": "delegation://hlth/s2-match",
+      "grantor": "org://hlth/lumenhealth",
+      "grantee": "agent://s2",
+      "scope": [
+        "rule://hlth/match-run"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "uri": "expectation://hlth/e-on-time",
+      "actor": "person://hlth/oph",
+      "subject": "pharmaceutical delivery",
+      "condition": "fully deliver the committed pharmaceutical delivery by its committed deadline",
+      "metric": "on_time",
+      "threshold": 0.95,
+      "deadline": "2026-12-31T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "policy://hlth/allocation",
+      "name": "hlth allocation",
+      "condition": "a new committed delivery is to be allocated",
+      "decision": "ALLOCATE by fit AND scoped Trust (not fit alone); distributors below the Trust floor require a performance checkpoint before a new order. (learned 2026-09-01)",
+      "action": "allocate to the top-ranked fitted partner; gate laggard",
+      "scope": [
+        "expectation://hlth/e-on-time"
+      ],
+      "version": 3,
+      "policy_status": "EFFECTIVE",
+      "learning": "decision://hlth/learning"
+    },
+    {
+      "uri": "process://hlth/pr-core",
+      "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+      "steps": [
+        "triage",
+        "assign",
+        "execute",
+        "verify_outcome",
+        "learning"
+      ]
+    },
+    {
+      "uri": "process_instance://hlth/pi-core",
+      "process": "process://hlth/pr-core",
+      "status": "RUNNING",
+      "started_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "trust://hlth/t-cortica-supply",
+      "subject": "org://hlth/lumenhealth",
+      "target": "org://hlth/cortica-supply",
+      "claim": "pharmaceutical delivery reliability",
+      "context": "relationship://hlth/partner-net",
+      "score": 0.79,
+      "updated_at": "2026-09-01T00:29:53Z",
+      "expected": 0.8,
+      "outcome": 1.0,
+      "evidence": [
+        "evidence://hlth/routed-cortica-supplyR"
+      ],
+      "alpha": 0.5,
+      "recency": 1.0
+    },
+    {
+      "uri": "trust://hlth/t-meridian-med",
+      "subject": "org://hlth/lumenhealth",
+      "target": "org://hlth/meridian-med",
+      "claim": "pharmaceutical delivery reliability",
+      "context": "relationship://hlth/partner-net",
+      "score": 0.14,
+      "updated_at": "2026-09-01T00:29:53Z",
+      "expected": 0.8,
+      "outcome": 0.0,
+      "evidence": [
+        "evidence://hlth/committed-meridian-medQ4"
+      ],
+      "alpha": 0.5,
+      "recency": 1.0
+    },
+    {
+      "uri": "offer://hlth/o-g",
+      "provider": "org://hlth/cortica-supply",
+      "price": 2000000.0,
+      "currency": "USD",
+      "capability_keys": [
+        "supply",
+        "distribution"
+      ],
+      "fit_note": "healthcare / pharma partner delivery line"
+    },
+    {
+      "uri": "offer://hlth/o-l",
+      "provider": "org://hlth/meridian-med",
+      "price": 2000000.0,
+      "currency": "USD",
+      "capability_keys": [
+        "supply",
+        "distribution"
+      ],
+      "fit_note": "healthcare / pharma partner delivery line"
+    },
+    {
+      "uri": "decision://hlth/s2-match-baseline",
+      "by": "agent://s2",
+      "authority": "delegation://hlth/s2-match",
+      "alternatives": [
+        "offer://hlth/o-l",
+        "offer://hlth/o-g",
+        "none"
+      ],
+      "confidence": 0.9,
+      "expected_outcome": "lag partner ranked #1 on existing Trust",
+      "actual_outcome": "offer://hlth/o-l",
+      "detail": [
+        {
+          "offer": "offer://hlth/o-l",
+          "provider": "org://hlth/meridian-med",
+          "fit": 1.0,
+          "trust": 0.9,
+          "score": 0.9
+        },
+        {
+          "offer": "offer://hlth/o-g",
+          "provider": "org://hlth/cortica-supply",
+          "fit": 1.0,
+          "trust": 0.6,
+          "score": 0.6
+        }
+      ],
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "asset://money/hlth-escrow-meridian-medQ3",
+      "kind": "MONEY",
+      "title": "org://hlth/meridian-med",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://hlth/lumenhealth for org://hlth/meridian-med (meridian-medQ3)"
+    },
+    {
+      "uri": "obligation://hlth/s4-pay-meridian-medQ3",
+      "subject": "org://hlth/lumenhealth",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://hlth/meridian-med",
+      "due_by": "2026-08-31T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-09-02T00:00:00Z"
+    },
+    {
+      "uri": "receipt://hlth/s4-receipt-meridian-medQ3",
+      "kind": "SETTLEMENT",
+      "from": "org://hlth/lumenhealth",
+      "to": "org://hlth/meridian-med",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-09-02T00:00:00Z"
+    },
+    {
+      "uri": "decision://hlth/s4-recon-meridian-medQ3",
+      "by": "agent://s4",
+      "authority": "authority://hlth/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://hlth/lumenhealth",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "meridian-medQ3",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://hlth/lumenhealth",
+        "provider": "org://hlth/meridian-med",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://hlth/s4-exchange-meridian-medQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-105",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-104",
+      "idempotency_key": "idem-s4-105",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange meridian-medQ3: 2000000.0 USD org://hlth/lumenhealth->org://hlth/meridian-med (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://hlth/lumenhealth",
+      "provider": "org://hlth/meridian-med",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "exchange_of": "commitment://hlth/c-meridian-medQ3"
+    },
+    {
+      "uri": "event://hlth/s4-outcome-meridian-medQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-106",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-105",
+      "idempotency_key": "idem-s4-106",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle meridian-medQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+      "state_update": [],
+      "evaluation": "partial",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "score": 0.5
+    },
+    {
+      "uri": "event://hlth/outcome-committed-meridian-medQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-107",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-106",
+      "idempotency_key": "idem-s2-107",
+      "signature": "signed-by-org://hlth/meridian-med",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://hlth/meridian-med",
+      "detail": "job committed-meridian-medQ3 by org://hlth/meridian-med: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+      "state_update": [],
+      "job": "committed-meridian-medQ3",
+      "provider": "org://hlth/meridian-med",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-09-02T00:00:00Z",
+      "on_time": false
+    },
+    {
+      "uri": "evidence://hlth/committed-meridian-medQ3",
+      "kind": "ANCHORED",
+      "source": "signed committed-pharmaceutical delivery record + hlth anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://hlth/committed-meridian-medQ3",
+      "proposer": "agent://s5",
+      "statement": "org://hlth/meridian-med delivered the committed resource LATE"
+    },
+    {
+      "uri": "asset://money/hlth-escrow-cortica-supplyQ3",
+      "kind": "MONEY",
+      "title": "org://hlth/cortica-supply",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://hlth/lumenhealth for org://hlth/cortica-supply (cortica-supplyQ3)"
+    },
+    {
+      "uri": "obligation://hlth/s4-pay-cortica-supplyQ3",
+      "subject": "org://hlth/lumenhealth",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://hlth/cortica-supply",
+      "due_by": "2026-08-31T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-08-30T00:00:00Z"
+    },
+    {
+      "uri": "receipt://hlth/s4-receipt-cortica-supplyQ3",
+      "kind": "SETTLEMENT",
+      "from": "org://hlth/lumenhealth",
+      "to": "org://hlth/cortica-supply",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-08-30T00:00:00Z"
+    },
+    {
+      "uri": "decision://hlth/s4-recon-cortica-supplyQ3",
+      "by": "agent://s4",
+      "authority": "authority://hlth/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://hlth/lumenhealth",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "cortica-supplyQ3",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://hlth/lumenhealth",
+        "provider": "org://hlth/cortica-supply",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://hlth/s4-exchange-cortica-supplyQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-110",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-109",
+      "idempotency_key": "idem-s4-110",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange cortica-supplyQ3: 2000000.0 USD org://hlth/lumenhealth->org://hlth/cortica-supply (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://hlth/lumenhealth",
+      "provider": "org://hlth/cortica-supply",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "exchange_of": "commitment://hlth/c-cortica-supplyQ3"
+    },
+    {
+      "uri": "event://hlth/s4-outcome-cortica-supplyQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-111",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-110",
+      "idempotency_key": "idem-s4-111",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle cortica-supplyQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+      "state_update": [],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "score": 1.0
+    },
+    {
+      "uri": "event://hlth/outcome-committed-cortica-supplyQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-112",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-111",
+      "idempotency_key": "idem-s2-112",
+      "signature": "signed-by-org://hlth/cortica-supply",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://hlth/cortica-supply",
+      "detail": "job committed-cortica-supplyQ3 by org://hlth/cortica-supply: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+      "state_update": [],
+      "job": "committed-cortica-supplyQ3",
+      "provider": "org://hlth/cortica-supply",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-08-30T00:00:00Z",
+      "on_time": true
+    },
+    {
+      "uri": "evidence://hlth/committed-cortica-supplyQ3",
+      "kind": "ANCHORED",
+      "source": "signed committed-pharmaceutical delivery record + hlth anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://hlth/committed-cortica-supplyQ3",
+      "proposer": "agent://s5",
+      "statement": "org://hlth/cortica-supply delivered the committed resource on time"
+    },
+    {
+      "uri": "asset://money/hlth-escrow-meridian-medQ4",
+      "kind": "MONEY",
+      "title": "org://hlth/meridian-med",
+      "custody": "cleared",
+      "value": 1600000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://hlth/lumenhealth for org://hlth/meridian-med (meridian-medQ4)"
+    },
+    {
+      "uri": "obligation://hlth/s4-pay-meridian-medQ4",
+      "subject": "org://hlth/lumenhealth",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 1600000.0 USD for contracted work by org://hlth/meridian-med",
+      "due_by": "2026-09-15T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-09-17T00:00:00Z"
+    },
+    {
+      "uri": "receipt://hlth/s4-receipt-meridian-medQ4",
+      "kind": "SETTLEMENT",
+      "from": "org://hlth/lumenhealth",
+      "to": "org://hlth/meridian-med",
+      "amount": 1600000.0,
+      "currency": "USD",
+      "received_at": "2026-09-17T00:00:00Z"
+    },
+    {
+      "uri": "decision://hlth/s4-recon-meridian-medQ4",
+      "by": "agent://s4",
+      "authority": "authority://hlth/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 1600000.0 USD from org://hlth/lumenhealth",
+      "actual_outcome": "matched exactly: settled 1600000.0 USD",
+      "detail": {
+        "slug": "meridian-medQ4",
+        "expected": 1600000.0,
+        "actual": 1600000.0,
+        "matched": true,
+        "buyer": "org://hlth/lumenhealth",
+        "provider": "org://hlth/meridian-med",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://hlth/s4-exchange-meridian-medQ4",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-115",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-114",
+      "idempotency_key": "idem-s4-115",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange meridian-medQ4: 1600000.0 USD org://hlth/lumenhealth->org://hlth/meridian-med (value 1600000.0, cost 1600000.0)",
+      "state_update": [],
+      "value": 1600000.0,
+      "cost": 1600000.0,
+      "price": 1600000.0,
+      "currency": "USD",
+      "buyer": "org://hlth/lumenhealth",
+      "provider": "org://hlth/meridian-med",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "exchange_of": "commitment://hlth/c-meridian-medQ4"
+    },
+    {
+      "uri": "event://hlth/s4-outcome-meridian-medQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-116",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-115",
+      "idempotency_key": "idem-s4-116",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle meridian-medQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+      "state_update": [],
+      "evaluation": "partial",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "deadline": "2026-09-15T00:00:00Z",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "score": 0.5
+    },
+    {
+      "uri": "event://hlth/outcome-committed-meridian-medQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-117",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-116",
+      "idempotency_key": "idem-s2-117",
+      "signature": "signed-by-org://hlth/meridian-med",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://hlth/meridian-med",
+      "detail": "job committed-meridian-medQ4 by org://hlth/meridian-med: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+      "state_update": [],
+      "job": "committed-meridian-medQ4",
+      "provider": "org://hlth/meridian-med",
+      "committed_deadline": "2026-09-15T00:00:00Z",
+      "actual_completed_at": "2026-09-17T00:00:00Z",
+      "on_time": false
+    },
+    {
+      "uri": "evidence://hlth/committed-meridian-medQ4",
+      "kind": "ANCHORED",
+      "source": "signed committed-pharmaceutical delivery record + hlth anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://hlth/committed-meridian-medQ4",
+      "proposer": "agent://s5",
+      "statement": "org://hlth/meridian-med delivered the committed resource LATE"
+    },
+    {
+      "uri": "case://hlth/c-on-time",
+      "subject": "committed pharmaceutical delivery below target on time",
+      "status": "CLOSED",
+      "owner": "person://hlth/oph",
+      "actors": [
+        "org://hlth/lumenhealth",
+        "person://hlth/oph",
+        "agent://hlth/supply-ops"
+      ],
+      "relationships": [
+        "relationship://hlth/ops-rel"
+      ],
+      "created_at": "2026-09-01T00:29:53Z",
+      "history": [
+        {
+          "status": "OPEN",
+          "at": "2026-09-01T00:29:53Z",
+          "event": null
+        },
+        {
+          "status": "TRIAGE",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://hlth/s5-case-triage"
+        },
+        {
+          "status": "ASSIGNED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://hlth/s5-case-assigned"
+        },
+        {
+          "status": "IN_PROGRESS",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://hlth/s5-case-inprogress"
+        },
+        {
+          "status": "BLOCKED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://hlth/s5-case-blocked"
+        },
+        {
+          "status": "RESOLVED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://hlth/s5-case-resolved"
+        },
+        {
+          "status": "CLOSED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://hlth/s5-case-closed"
+        }
+      ],
+      "suggestion": "ledger-projected on-time below target",
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "exception": "Committed pharmaceutical delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+      "root_cause": "supply failure \u2014 org://hlth/meridian-med missed its committed pharmaceutical delivery by 2 days; scoped Trust fell 0.90->0.51",
+      "root_cause_status": "SUPPORTED",
+      "recommended_action": "Re-allocate committed pharmaceutical supply to the verified on-time distributor (cortica-supply) and gate the laggard (meridian-med) with a checkpoint before any new order",
+      "metric": "metric://hlth/m-on-time",
+      "verified_outcome": "forward on-time restored to 1.0; org://hlth/cortica-supply delivered the rallied pharmaceutical delivery on time (evidence://hlth/routed-cortica-supplyR); org://hlth/cortica-supply Trust 0.79"
+    },
+    {
+      "uri": "decision://hlth/s5-triage",
+      "by": "agent://hlth/s5",
+      "authority": "authority://hlth/for-ops",
+      "alternatives": [
+        "accept",
+        "dismiss as anomaly"
+      ],
+      "confidence": 0.85,
+      "expected_outcome": "accept as a real risk",
+      "actual_outcome": "accepted; root nominated",
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "task://hlth/t-rebalance",
+      "assigned_to": "agent://hlth/supply-ops",
+      "created_by": "agent://hlth/s5",
+      "objective": "re-balance committed pharmaceutical supply to the verified on-time distributor (cortica-supply) and gate the laggard (meridian-med)",
+      "dependencies": [],
+      "authority": "authority://hlth/for-ops",
+      "deadline": "2026-10-15T00:00:00Z",
+      "priority": 0.695,
+      "status": "ASSIGNED",
+      "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+      "why_here": "derived from the on-time exception (case OPEN)",
+      "importance": "restores on-time supply, protecting facility patient-trust scores",
+      "evidence": [
+        "evidence://hlth/committed-meridian-medQ3",
+        "evidence://hlth/committed-cortica-supplyQ3",
+        "evidence://hlth/committed-meridian-medQ4"
+      ],
+      "decision_required": "approve the re-allocation",
+      "priority_factors": {
+        "impact": 0.85,
+        "urgency": 0.9,
+        "confidence": 0.7,
+        "irreversibility": false,
+        "relationship_importance": 0.8,
+        "cost_of_delay": 0.75
+      },
+      "assigned_capacity": 1.0
+    },
+    {
+      "uri": "decision://hlth/s5-assign",
+      "by": "person://hlth/oph",
+      "authority": "authority://hlth/for-ops",
+      "alternatives": [
+        "assign",
+        "defer"
+      ],
+      "confidence": 0.95,
+      "expected_outcome": "task in progress",
+      "detail": {
+        "task": "task://hlth/t-rebalance",
+        "assigned_to": "agent://hlth/supply-ops",
+        "authority": "authority://hlth/for-ops",
+        "priority": 0.695,
+        "capacity": 1.0
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "decision://hlth/s5-match-recorded",
+      "by": "agent://s2",
+      "authority": "delegation://hlth/s2-match",
+      "alternatives": [
+        "offer://hlth/o-g",
+        "none"
+      ],
+      "confidence": 0.92,
+      "expected_outcome": "good partner ranked #1",
+      "actual_outcome": "offer://hlth/o-g",
+      "detail": [
+        {
+          "offer": "offer://hlth/o-g",
+          "provider": "org://hlth/cortica-supply",
+          "fit": 1.0,
+          "trust": 0.695,
+          "score": 0.695
+        }
+      ],
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "escalation://hlth/escalate-release",
+      "trigger": "external pharmaceutical release \u2014 irreversible and cost-unknowable once shipped",
+      "severity": "WARN",
+      "recipient": "person://hlth/oph",
+      "deadline": "2026-11-15T00:00:00Z",
+      "fallback": "agent://hlth/s4",
+      "authority": "authority://hlth/for-ops",
+      "acknowledgement": "approve then execute"
+    },
+    {
+      "uri": "decision://hlth/owner-human",
+      "by": "person://hlth/oph",
+      "authority": "authority://hlth/for-ops",
+      "alternatives": [
+        "release_in_full",
+        "hold",
+        "release_partial_and_hold_if_shortfall",
+        "open_dispute"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "release to the verified partner",
+      "actual_outcome": "release_in_full (human approved)",
+      "detail": {
+        "task": "task://hlth/t-rebalance",
+        "action": "release_committed_action",
+        "irreversible_failure": true,
+        "cost_failure_unknowable": true
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "commitment://hlth/c-cortica-supply-followup",
+      "by": "agent://hlth/s5",
+      "to": "org://hlth/cortica-supply",
+      "obligation": "offer://hlth/o-g",
+      "expectation": "expectation://hlth/e-routed-cortica-supplyR",
+      "status": "AGREED",
+      "terms": {
+        "kind": "pharmaceutical delivery follow-up",
+        "signed": true
+      },
+      "agreed_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "expectation://hlth/e-cortica-supplyR",
+      "actor": "person://hlth/oph",
+      "subject": "pharmaceutical delivery",
+      "condition": "fully deliver the committed resource by its committed deadline",
+      "metric": "settled_value",
+      "threshold": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "asset://money/hlth-escrow-cortica-supplyR",
+      "kind": "MONEY",
+      "title": "org://hlth/cortica-supply",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://hlth/lumenhealth for org://hlth/cortica-supply (cortica-supplyR)"
+    },
+    {
+      "uri": "obligation://hlth/s4-pay-cortica-supplyR",
+      "subject": "org://hlth/lumenhealth",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://hlth/cortica-supply",
+      "due_by": "2026-11-15T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-11-12T00:00:00Z"
+    },
+    {
+      "uri": "receipt://hlth/s4-receipt-cortica-supplyR",
+      "kind": "SETTLEMENT",
+      "from": "org://hlth/lumenhealth",
+      "to": "org://hlth/cortica-supply",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-11-12T00:00:00Z"
+    },
+    {
+      "uri": "decision://hlth/s4-recon-cortica-supplyR",
+      "by": "agent://s4",
+      "authority": "authority://hlth/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://hlth/lumenhealth",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "cortica-supplyR",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://hlth/lumenhealth",
+        "provider": "org://hlth/cortica-supply",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://hlth/s4-exchange-cortica-supplyR",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-7015",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7014",
+      "idempotency_key": "idem-s4-7015",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange cortica-supplyR: 2000000.0 USD org://hlth/lumenhealth->org://hlth/cortica-supply (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://hlth/lumenhealth",
+      "provider": "org://hlth/cortica-supply",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "exchange_of": "commitment://hlth/c-cortica-supplyR"
+    },
+    {
+      "uri": "event://hlth/s4-outcome-cortica-supplyR",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-7016",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7015",
+      "idempotency_key": "idem-s4-7016",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle cortica-supplyR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+      "state_update": [],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "score": 1.0
+    },
+    {
+      "uri": "event://hlth/outcome-routed-cortica-supplyR",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-7017",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7016",
+      "idempotency_key": "idem-s2-7017",
+      "signature": "signed-by-org://hlth/cortica-supply",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://hlth/cortica-supply",
+      "detail": "job routed-cortica-supplyR by org://hlth/cortica-supply: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+      "state_update": [],
+      "job": "routed-cortica-supplyR",
+      "provider": "org://hlth/cortica-supply",
+      "committed_deadline": "2026-11-15T00:00:00Z",
+      "actual_completed_at": "2026-11-12T00:00:00Z",
+      "on_time": true
+    },
+    {
+      "uri": "evidence://hlth/routed-cortica-supplyR",
+      "kind": "ANCHORED",
+      "source": "signed committed-pharmaceutical delivery record + hlth anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://hlth/routed-cortica-supplyR",
+      "proposer": "agent://s5",
+      "statement": "org://hlth/cortica-supply delivered the rallied committed pharmaceutical delivery on time"
+    },
+    {
+      "uri": "decision://hlth/learning",
+      "by": "agent://hlth/s5",
+      "authority": "authority://hlth/for-operations",
+      "subject": "pharmaceutical delivery on-time management",
+      "expected": 0.95,
+      "actual": 1.0,
+      "variance": 0.05,
+      "why": "Concentrating supply with a distributor that has verified on-time delivery (cortica-supply), while gating the laggard (meridian-med), restored on-time pharmaceutical delivery. Verified good deliveries compound scoped Trust.",
+      "change_future_policy": "ALLOCATE by fit AND scoped Trust (not fit alone); distributors below the Trust floor require a performance checkpoint before a new order.",
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "goal://hlth/g-core",
+      "for": "org://hlth/lumenhealth",
+      "statement": "Consistently deliver committed pharmaceutical supply on time so care facilities trust Lumen Health enough to keep ordering.",
+      "horizon": "quarter",
+      "owner": "person://hlth/oph",
+      "metrics": [
+        "metric://hlth/m-on-time",
+        "metric://hlth/m-trust",
+        "metric://hlth/m-settled-value"
+      ]
+    },
+    {
+      "uri": "metric://hlth/m-on-time",
+      "name": "Committed-pharmaceutical delivery on-time rate",
+      "definition": "share of committed pharmaceutical delivery deliveries verified on time",
+      "unit": "fraction",
+      "formula": "on_time / (on_time + late) from ledger",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 0.95,
+      "threshold": 0.8,
+      "period": "quarter",
+      "source": "ledger committed-delivery records",
+      "owner": "person://hlth/oph",
+      "actual": 0.5,
+      "forecast": 0.5,
+      "variance": -0.45,
+      "root_cause": "supply failure \u2014 org://hlth/meridian-med missed its committed pharmaceutical delivery by 2 days; scoped Trust fell 0.90->0.51",
+      "root_cause_status": "SUPPORTED"
+    },
+    {
+      "uri": "metric://hlth/m-trust",
+      "name": "Partner scoped-trust score",
+      "definition": "best scoped Trust on the partner network (per \u00a75)",
+      "unit": "score",
+      "formula": "T(subject->target, claim, context) per \u00a75",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 0.9,
+      "threshold": 0.6,
+      "period": "rolling",
+      "source": "S5 scoped Trust graph",
+      "owner": "person://hlth/oph",
+      "actual": 0.79,
+      "forecast": 0.92,
+      "variance": -0.11,
+      "root_cause_status": "UNKNOWN"
+    },
+    {
+      "uri": "metric://hlth/m-settled-value",
+      "name": "Settled committed value",
+      "definition": "value of EXCHANGE events settled this period",
+      "unit": "USD",
+      "formula": "sum(EXCHANGE.price) from ledger",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 7600000.0,
+      "threshold": 4180000.0000000005,
+      "period": "quarter",
+      "source": "ledger EXCHANGE events",
+      "owner": "person://hlth/oph",
+      "actual": 7600000.0,
+      "forecast": 8740000.0,
+      "variance": 0.0,
+      "root_cause_status": "UNKNOWN"
+    },
+    {
+      "uri": "decision://hlth/s5-metric-loop",
+      "by": "agent://hlth/s5",
+      "authority": "authority://hlth/for-operations",
+      "alternatives": [
+        "do nothing",
+        "rebalance provider allocation"
+      ],
+      "confidence": 0.85,
+      "expected_outcome": "metric://hlth/m-on-time variance reduced toward target",
+      "detail": {
+        "goal": "goal://hlth/g-core",
+        "metric": "metric://hlth/m-on-time",
+        "actual": 0.5,
+        "variance": -0.45,
+        "action": "task://hlth/t-rebalance",
+        "outcome": "event://hlth/outcome-routed-cortica-supplyR"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "decision://hlth/s5-attention",
+      "by": "agent://hlth/s5",
+      "authority": "authority://hlth/for-ops",
+      "confidence": 0.9,
+      "expected_outcome": "top-of-attention ranked",
+      "actual_outcome": "attention prioritized by derived score",
+      "detail": {
+        "attention": [
+          {
+            "uri": "task://hlth/t-rebalance",
+            "label": "re-balance committed work",
+            "priority": 0.695
+          },
+          {
+            "uri": "task://hlth/t-followup",
+            "label": "rallied follow-on (good partner)",
+            "priority": 0.58
+          }
+        ]
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "dependency://hlth/d-rb-enables-fu",
+      "from": "task://hlth/t-rebalance",
+      "to": "task://hlth/t-followup",
+      "kind": "ENABLES"
+    },
+    {
+      "uri": "dependency://hlth/d-fu-requires-pol",
+      "from": "task://hlth/t-followup",
+      "to": "policy://hlth/allocation",
+      "kind": "REQUIRES"
+    },
+    {
+      "uri": "dependency://hlth/d-fu-blocks-case",
+      "from": "task://hlth/t-followup",
+      "to": "case://hlth/c-on-time",
+      "kind": "BLOCKS"
+    },
+    {
+      "uri": "dependency://hlth/d-case-from-metric",
+      "from": "case://hlth/c-on-time",
+      "to": "metric://hlth/m-on-time",
+      "kind": "DERIVED_FROM"
+    },
+    {
+      "uri": "dependency://hlth/d-metric-impacts-goal",
+      "from": "metric://hlth/m-on-time",
+      "to": "goal://hlth/g-core",
+      "kind": "IMPACTS"
+    },
+    {
+      "uri": "dependency://hlth/d-rb-blocks-case",
+      "from": "task://hlth/t-rebalance",
+      "to": "case://hlth/c-on-time",
+      "kind": "BLOCKS"
+    }
+  ]
+}

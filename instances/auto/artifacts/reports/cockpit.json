@@ -1,0 +1,231 @@
+{
+  "cockpit": {
+    "company": "Forge Auto (Automotive, fictional)",
+    "generated": "2026-09-01T00:29:53Z",
+    "health": [
+      {
+        "metric": "metric://auto/m-on-time",
+        "name": "Committed-oem part-lot delivery on-time rate",
+        "unit": "fraction",
+        "target": 0.95,
+        "actual": 0.5,
+        "variance": -0.45,
+        "status": "CRITICAL",
+        "forecast": 0.5
+      },
+      {
+        "metric": "metric://auto/m-trust",
+        "name": "Partner scoped-trust score",
+        "unit": "score",
+        "target": 0.9,
+        "actual": 0.79,
+        "variance": -0.11,
+        "status": "CRITICAL",
+        "forecast": 0.92
+      },
+      {
+        "metric": "metric://auto/m-settled-value",
+        "name": "Settled committed value",
+        "unit": "USD",
+        "target": 7600000.0,
+        "actual": 7600000.0,
+        "variance": 0.0,
+        "status": "OK",
+        "forecast": 8740000.0
+      }
+    ],
+    "attention_line": "2 things requiring attention today",
+    "attention": [
+      {
+        "uri": "task://auto/t-rebalance",
+        "label": "re-balance committed work",
+        "priority": 0.695
+      },
+      {
+        "uri": "task://auto/t-followup",
+        "label": "rallied follow-on (good partner)",
+        "priority": 0.58
+      }
+    ],
+    "exception": {
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "on": 1,
+      "total": 3
+    },
+    "case": "case://auto/c-on-time",
+    "case_status": "CLOSED",
+    "recommendation": {
+      "summary": "task://auto/t-rebalance",
+      "authority_required": "authority://auto/for-ops",
+      "options": [
+        "re-balance OEM part lots to the verified on-time vendor",
+        "gate the laggard (corvair-parts)",
+        "do nothing"
+      ],
+      "includes_do_nothing": true,
+      "tradeoff": "Routing via stellar-auto restores on-time supply (higher short-term concentration risk) but protects line Trust; doing nothing keeps below target.",
+      "confidence": 0.85,
+      "expected_impact": "forward on-time returns to 1.0",
+      "decision": "decision://auto/s5-assign"
+    },
+    "verified_outcome": {
+      "exchange": "event://auto/s4-exchange-stellar-autoR",
+      "outcome": "event://auto/s4-outcome-stellar-autoR",
+      "evaluation": "met",
+      "evidence": "evidence://auto/routed-stellar-autoR",
+      "after_trust": 0.79,
+      "forward_on_time": 1.0,
+      "cumulative_after": 0.5
+    },
+    "learning": "decision://auto/learning",
+    "ledger": 54,
+    "graph": 80
+  },
+  "brand": {
+    "tagline": "Parts on the line, on the build.",
+    "mission": "Deliver committed OEM part lots reliably and on time so assembly lines stay scheduled, stays running, and no plant shuts down waiting on a supplier.",
+    "vision": "An automotive supply chain where line-side parts are a given, and our on-time record keeps assembly floors from ever going dark.",
+    "values": [
+      [
+        "Line integrity",
+        "A missed part lot can stop a whole line; we treat the date accordingly."
+      ],
+      [
+        "Quality at the core",
+        "On time is never at the expense of a defective part."
+      ],
+      [
+        "Traceability",
+        "We prove every part lot against the ledger, from source to line-side."
+      ],
+      [
+        "Assembly partnership",
+        "OEMs plan around us; we make that planning safe."
+      ],
+      [
+        "Continuous improvement",
+        "Every miss is a system fix, not a blame."
+      ]
+    ],
+    "about": "Forge Auto is an automotive OEM supplier. We take committed part-lot deliveries and land them line-side on the scheduled date \u2014 verified, traceable, right-first-time. When a whole assembly line depends on a supplier keeping the date, our on-time evidence is not a nicety; it is what keeps the plant scheduled and the warranty quiet.",
+    "fast_facts": [
+      "Founded 1989, automotive OEM parts",
+      "1,200+ part variants delivered",
+      "Line-side programs with 40+ assembly plants"
+    ],
+    "history": [
+      [
+        "1989",
+        "Founded as a forge supplying drivetrain parts."
+      ],
+      [
+        "2005",
+        "Scaled to full line-side OEM part-lot delivery."
+      ],
+      [
+        "2018",
+        "Digitised every lot to ledger-verified on-time evidence."
+      ]
+    ],
+    "leadership": [
+      [
+        "Grant Kowalski",
+        "Chief Executive",
+        "Cast and forged parts his whole career before leading Forge Auto."
+      ],
+      [
+        "Nadia Foster",
+        "Chief Operations Officer",
+        "Owns the supply network and the on-time gate across plants."
+      ]
+    ],
+    "products_services": [
+      "OEM part-lot design and delivery",
+      "Line-side supply scheduling",
+      "Supplier quality assurance"
+    ],
+    "testimonials": [
+      [
+        "Forge Auto is the one supplier our line can run without watching the clock for.",
+        "OEM plant director"
+      ]
+    ],
+    "trust": [
+      [
+        "98.9% committed part-lot on-time rate (2025)",
+        "Forge Auto delivery ledger"
+      ],
+      [
+        "IATF 16949 automotive quality certification",
+        "third-party audit"
+      ]
+    ],
+    "locations": "Toledo, OH (HQ) \u00b7 plants and line-side hubs serving 40+ OEM assembly sites",
+    "faq": [
+      [
+        "What proves your on-time claim?",
+        "Each committed part lot anchors to a signed ledger event with a verified delivery time \u2014 auditable from order to line-side."
+      ],
+      [
+        "Do you support just-in-time delivery?",
+        "Yes, JIT line-side scheduling is core, and the on-time gate applies to every committed lot."
+      ]
+    ],
+    "contact": "supply@forgeauto.example \u00b7 +1-419-555-0127",
+    "careers": "Keep the line scheduled: supply chain, quality, logistics, manufacturing engineering.",
+    "investors": "Privately held. Plant reliability data shared with OEM customers.",
+    "press": "media@forgeauto.example \u2014 plant and quality announcements.",
+    "esg": "Low-emissions forging, part-traceability for circularity, apprenticeship programs.",
+    "legal": [
+      "Privacy",
+      "Terms",
+      "California Rights",
+      "Do Not Sell or Share"
+    ],
+    "nav": [
+      "About",
+      "Capabilities",
+      "Plants",
+      "Quality",
+      "Careers",
+      "Investors",
+      "Press",
+      "Contact"
+    ],
+    "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+    "design": {
+      "palette": [
+        [
+          "Anvil Grey",
+          "#3A3D42"
+        ],
+        [
+          "Machining Silver",
+          "#C7CCD1"
+        ],
+        [
+          "Redline Red",
+          "#C4262E"
+        ],
+        [
+          "Deep Forge",
+          "#15171A"
+        ]
+      ],
+      "typography": {
+        "heading": "Solid industrial sans (e.g. Oswald)",
+        "body": "Workhorse sans (e.g. Source Sans 3)"
+      },
+      "logo": {
+        "wordmark": "FORGE AUTO in heavy caps",
+        "character": "an ingot/anvil mark",
+        "usage": "clear space heavy; red as accent, grey+silver standard"
+      },
+      "imagery": "Assembly lines, forged parts, machining in motion \u2014 heavy, capable, precise",
+      "tone": "Built, dependable, plain; about keeping the line running."
+    }
+  }
+}

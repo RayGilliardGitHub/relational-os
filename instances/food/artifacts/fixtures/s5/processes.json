@@ -1,0 +1,29 @@
+[
+  {
+    "uri": "process://food/pr-core",
+    "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+    "steps": [
+      "triage",
+      "assign",
+      "execute",
+      "verify_outcome",
+      "learning"
+    ]
+  },
+  {
+    "uri": "process_instance://food/pi-core",
+    "process": "process://food/pr-core",
+    "status": "RUNNING",
+    "started_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "escalation://food/escalate-release",
+    "trigger": "external restock truck release \u2014 irreversible and cost-unknowable once en route",
+    "severity": "WARN",
+    "recipient": "person://food/cso",
+    "deadline": "2026-11-15T00:00:00Z",
+    "fallback": "agent://food/s4",
+    "authority": "authority://food/for-ops",
+    "acknowledgement": "approve then execute"
+  }
+]

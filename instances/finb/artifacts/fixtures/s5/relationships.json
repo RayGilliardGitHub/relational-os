@@ -1,0 +1,46 @@
+[
+  {
+    "uri": "relationship://finb/ops-rel",
+    "participants": [
+      "org://finb/northglen",
+      "org://finb/zephyr"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://finb/northglen": [
+        "provider"
+      ],
+      "org://finb/zephyr": [
+        "client"
+      ]
+    },
+    "authority": [
+      "authority://finb/for-ops"
+    ],
+    "purpose": "financial operating relationship"
+  },
+  {
+    "uri": "relationship://finb/partner-net",
+    "participants": [
+      "org://finb/northglen",
+      "org://finb/adamvale",
+      "org://finb/kaplen"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://finb/northglen": [
+        "operator"
+      ],
+      "org://finb/adamvale": [
+        "partner"
+      ],
+      "org://finb/kaplen": [
+        "partner"
+      ]
+    },
+    "authority": [
+      "authority://finb/for-ops"
+    ],
+    "purpose": "financial partner network"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "uri": "process://indu/pr-core",
+    "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+    "steps": [
+      "triage",
+      "assign",
+      "execute",
+      "verify_outcome",
+      "learning"
+    ]
+  },
+  {
+    "uri": "process_instance://indu/pi-core",
+    "process": "process://indu/pr-core",
+    "status": "RUNNING",
+    "started_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "escalation://indu/escalate-release",
+    "trigger": "external line release \u2014 irreversible and cost-unknowable once in production",
+    "severity": "WARN",
+    "recipient": "person://indu/plant-mgr",
+    "deadline": "2026-11-15T00:00:00Z",
+    "fallback": "agent://indu/s4",
+    "authority": "authority://indu/for-ops",
+    "acknowledgement": "approve then execute"
+  }
+]

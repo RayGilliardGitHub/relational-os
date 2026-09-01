@@ -1,0 +1,30 @@
+[
+  {
+    "uri": "task://qk/t-provider-rebalance",
+    "assigned_to": "agent://w-ops",
+    "created_by": "agent://s5",
+    "objective": "re-balance provider allocation to the verified on-time provider (solarworks) and gate the laggard (norcrete)",
+    "dependencies": [],
+    "authority": "authority://qk/for-operations",
+    "deadline": "2026-10-01T00:00:00Z",
+    "priority": 0.695,
+    "status": "ASSIGNED",
+    "expected_outcome": "next contracted job routed to a verified on-time provider; policy updated",
+    "why_here": "derived from the on-time delivery exception (case OPEN)",
+    "importance": "restores on-time fulfilment, protecting customer scoped Trust",
+    "evidence": [
+      "evidence://qk/job-norcrete",
+      "evidence://qk/job-solarworks"
+    ],
+    "decision_required": "approve the provider re-allocation",
+    "priority_factors": {
+      "impact": 0.85,
+      "urgency": 0.9,
+      "confidence": 0.7,
+      "irreversibility": false,
+      "relationship_importance": 0.8,
+      "cost_of_delay": 0.75
+    },
+    "assigned_capacity": 1.0
+  }
+]

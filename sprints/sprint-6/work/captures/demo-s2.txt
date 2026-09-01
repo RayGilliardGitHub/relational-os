@@ -1,0 +1,66 @@
+=== Sprint 2 — S5 Trust engine minimum (Quoteko) ===
+
+--- 2.1 S5 capture + verify (outcome class: on-time completion) ---
+  norcrete: evidence://qk/job-norcrete kind=ANCHORED verity={'procedure': 'completion-anchor-conformance', 'confidence': 0.98}
+         claim='org://qk/norcrete completed job-norcrete by its committed deadline (on-time roofing completion)'
+         outcome norcrete: on_time=False actual=2026-09-22T00:00:00Z vs dl=2026-09-20T00:00:00Z
+  solarworks: evidence://qk/job-solarworks kind=ANCHORED verity={'procedure': 'completion-anchor-conformance', 'confidence': 0.98}
+         claim='org://qk/solarworks completed job-solarworks by its committed deadline (on-time roofing completion)'
+         outcome solarworks: on_time=True actual=2026-09-24T00:00:00Z vs dl=2026-09-25T00:00:00Z
+
+--- 2.2 Trust update (scoped, clamped, persisted) ---
+  alpha=0.5 expectation=0.8 recency=1.0
+  norcrete (bad)   : 0.92 -> 0.528   (delta -0.392)
+  solarworks (good): 0.61 -> 0.708   (delta +0.098)
+  generalco (other claim): 0.42 (untouched -> scope, not global)
+
+--- 2.3 Flywheel: Trust re-ranks S2 ---
+  BEFORE ranking: [('org://qk/norcrete', 0.92), ('org://qk/solarworks', 0.61)]
+  AFTER  ranking: [('org://qk/solarworks', 0.708), ('org://qk/norcrete', 0.528)]
+
+--- Ledger / Graph wiring ---
+  ledger events: 19 | head_hash 2a759c028415…
+  graph current-state objects: 35
+
+--- checks ---
+
+  [check:s1]
+    [PASS] role resolved as customer  — got customer
+    [PASS] role is relationship-scoped (absent elsewhere)  — got None
+    [PASS] authz permitted within the relationship  — Permission(request_quote, scoped@['request_quote'])
+    [PASS] authz denied outside the relationship  — no such relationship relationship://qk/other
+    [PASS] delegation grants scoped capability  — Permission(run_matching, scoped@['run_matching'])
+    [PASS] revoked delegation -> denial (capability voided)  — delegation://qk/s2-match not active (REVOKED)
+
+  [check:roundtrip]
+    [PASS] ledger hash-chain + signatures intact  — ok
+    [PASS] graph state reconstructs to ledger events  — 35 graph objects rebuilt from 19 events
+    [PASS] ledger==history & graph==state (not conflated)  — history=True, state-objects=True
+
+  [check:s5]
+    [PASS] capture -> signed evidence:// on Graph  — {'uri': 'evidence://qk/job-norcrete', 'kind': 'ANCHORED', 'source': 'signed provider job-completion record + S5 anchor', 'verity': {'procedure': 'completion-anchor-conformance', 'confidence': 0.98}, 'captured_at': '2026-08-31T23:46:01Z'}
+    [PASS] capture -> OUTCOME event on Ledger  — 1 ledger entry
+    [PASS] evidence verity = procedure + confidence (degree under procedure, §3.17)  — {'procedure': 'completion-anchor-conformance', 'confidence': 0.98}
+    [PASS] trust objects carry subject/target/claim/context + score  — norcrete=0.528, solarworks=0.708
+    [PASS] trust stays clamped to [0,1)  — in range
+    [PASS] generalco (different claim) untouched by updates (scoped, not global)  — score=0.42
+    [PASS] trust write -> signed STATE_CHANGE ledger event  — 1 entry, sig=signed-by-agent://s5
+
+  [check:flywheel]
+    [PASS] same fit -> rank decided by Trust (flywheel)  — before ['offer://qk/o-norcrete', 'offer://qk/o-solarworks'] -> after ['offer://qk/o-solarworks', 'offer://qk/o-norcrete']
+    [PASS] Trust moved as §5 predicts (good up, bad down)  — solarworks 0.708 (was 0.61), norcrete 0.528 (was 0.92)
+    [PASS] ranking matches equation output (score = fit x trust)  — solar score 0.708 = fit 1.0 x trust 0.708
+
+--- emit fixtures ---
+  wrote evidence.json -> file:///home/rlg/relational-os/sprints/sprint-2/artifacts/fixtures/s5/evidence.json
+  wrote claim.json -> file:///home/rlg/relational-os/sprints/sprint-2/artifacts/fixtures/s5/claim.json
+  wrote expectation.json -> file:///home/rlg/relational-os/sprints/sprint-2/artifacts/fixtures/s5/expectation.json
+  wrote trust.json -> file:///home/rlg/relational-os/sprints/sprint-2/artifacts/fixtures/s5/trust.json
+  wrote events.json -> file:///home/rlg/relational-os/sprints/sprint-2/artifacts/fixtures/s5/events.json
+  wrote relationship.json -> file:///home/rlg/relational-os/sprints/sprint-2/artifacts/fixtures/statemachines/relationship.json
+  wrote actors_offers.json -> file:///home/rlg/relational-os/sprints/sprint-2/artifacts/fixtures/s5/actors_offers.json
+  wrote decisions.json -> file:///home/rlg/relational-os/sprints/sprint-2/artifacts/fixtures/s5/decisions.json
+  wrote ledger-quoteko.json -> file:///home/rlg/relational-os/sprints/sprint-2/artifacts/fixtures/ledger/ledger-quoteko.json
+  wrote current-state.json -> file:///home/rlg/relational-os/sprints/sprint-2/artifacts/graph/current-state.json
+
+RESULT: ALL PASS

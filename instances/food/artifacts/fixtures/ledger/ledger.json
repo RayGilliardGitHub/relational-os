@@ -1,0 +1,2538 @@
+{
+  "uri": "db://ledger/food-2026",
+  "head_hash": "2de2955c49dbf38771a127f57d13cbeea1c65c9e4c74b88d7d5b95bf4baf39dc",
+  "entries": [
+    {
+      "uri": "event://food/s5-state-2",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-2",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-1",
+      "idempotency_key": "idem-s5-2",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "provision Food / Bev / Consumer base (actors, relationships, authority + operator + policy + expectation)",
+      "state_update": [
+        {
+          "uri": "org://food/maplehurst",
+          "type": "ORG",
+          "identity": {
+            "attestations": [
+              "business-license"
+            ]
+          },
+          "brand": {
+            "tagline": "Fresh on the shelf, right on schedule.",
+            "mission": "Deliver committed restock shipments reliably and on time so retailers can promise their own customers freshness and never run dry.",
+            "vision": "A pantry where nothing runs out because the shipment was late \u2014 only because it sold.",
+            "values": [
+              [
+                "Freshness is a promise",
+                "On-time restock keeps quality at the centre of the shelf."
+              ],
+              [
+                "Shelf truth",
+                "We ship to the schedule, because an empty shelf costs everyone."
+              ],
+              [
+                "Fair to partners",
+                "Reliable volume in, honest communication out."
+              ],
+              [
+                "Reduce waste",
+                "Right amount, right time, right place \u2014 less product thrown away."
+              ],
+              [
+                "Taste and trust",
+                "Consumers trust a stocked shelf; we protect that every run."
+              ]
+            ],
+            "about": "Maplehurst Foods moves committed restock shipments and consumer goods so retailers keep the shelf full. Our origin story is a produce manager's complaint \u2014 that good food kept arriving a day late and getting pushed to markdown. We built a restock operation on the opposite principle: committed delivery is verified, on time, and the shelf is the report card.",
+            "fast_facts": [
+              "Founded 2004, food & beverage distribution",
+              "8,500+ retail shelves served",
+              "Own-brand consumer staples line"
+            ],
+            "history": [
+              [
+                "2004",
+                "Founded in Cincinnati around a refrigerated truck and a promise."
+              ],
+              [
+                "2011",
+                "Expanded from produce to the full food-and-bev restock line."
+              ],
+              [
+                "2020",
+                "Automated restock scheduling to keep the shelf on time at scale."
+              ]
+            ],
+            "leadership": [
+              [
+                "Sofia Marchetti",
+                "Chief Executive",
+                "Third-generation food distributor who built Maplehurst around freshness."
+              ],
+              [
+                "Andre Whitfield",
+                "Chief Supply Officer",
+                "Owns the distributor network running today's restock."
+              ]
+            ],
+            "products_services": [
+              "Retail restock shipments (frozen, fresh, grocery)",
+              "Consumer-brand staples manufactured in-house",
+              "Shelf-on-time logistics for retailers"
+            ],
+            "testimonials": [
+              [
+                "Markdown went from a weekly guessing game to a rounding error.",
+                "Regional grocery chain buyer"
+              ]
+            ],
+            "trust": [
+              [
+                "99.1% committed restock on-time rate (2025)",
+                "Maplehurst delivery ledger"
+              ],
+              [
+                "FSSC 22000 food-safety certification",
+                "third-party audit"
+              ]
+            ],
+            "locations": "Cincinnati, OH (HQ) \u00b7 distribution centres in 6 states",
+            "faq": [
+              [
+                "What makes Maplehurst 'on time' different?",
+                "Every committed shipment is tracked to a verified ledger completion \u2014 'on time' is a measured fact, not a promise."
+              ],
+              [
+                "Can you handle frozen and fresh in one order?",
+                "Yes, our restock service spans the temperature range with verification on every leg."
+              ]
+            ],
+            "contact": "orders@maplehurst.example \u00b7 +1-513-555-0163",
+            "careers": "Keep good food out of the markdown bin: logistics, food-safety, supply planning, route operations.",
+            "investors": "Privately held; family-owned. On-time reliability data on request.",
+            "press": "news@maplehurst.example \u2014 brand and freshness stories.",
+            "esg": "Waste-reduction routing, food-recovery donations, fuel-efficient fleet, sustainable packaging for own-brand.",
+            "legal": [
+              "Privacy",
+              "Terms",
+              "California Rights",
+              "Do Not Sell or Share"
+            ],
+            "nav": [
+              "About",
+              "Our Brands",
+              "For Retailers",
+              "Sustainability",
+              "Careers",
+              "Press",
+              "Contact"
+            ],
+            "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+            "design": {
+              "palette": [
+                [
+                  "Orchard Green",
+                  "#4E7C2A"
+                ],
+                [
+                  "Cream Butter",
+                  "#F6EFD9"
+                ],
+                [
+                  "Berry Red",
+                  "#A63C3C"
+                ],
+                [
+                  "Midnight Cocoa",
+                  "#2A1F1A"
+                ]
+              ],
+              "typography": {
+                "heading": "Warm friendly sans (e.g. Quicksand)",
+                "body": "Humanist sans (e.g. Lato)"
+              },
+              "logo": {
+                "wordmark": "Maplehurst in rounded case",
+                "character": "a maple-leaf/apple mark",
+                "usage": "clear space generous; food photography must keep greens true"
+              },
+              "imagery": "Bright, appetising, real food; family tables; full shelves \u2014 warmth and freshness",
+              "tone": "Warm, genuine, modest; talks about freshness and the people who depend on it."
+            }
+          }
+        },
+        {
+          "uri": "org://food/caseway",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://food/crestline",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://food/harlow",
+          "type": "ORG"
+        },
+        {
+          "uri": "person://food/cso",
+          "type": "PERSON"
+        },
+        {
+          "uri": "agent://food/restock-ops",
+          "type": "AGENT"
+        },
+        {
+          "uri": "relationship://food/ops-rel",
+          "participants": [
+            "org://food/maplehurst",
+            "org://food/caseway"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://food/maplehurst": [
+              "provider"
+            ],
+            "org://food/caseway": [
+              "client"
+            ]
+          },
+          "authority": [
+            "authority://food/for-ops"
+          ],
+          "purpose": "food / bev / consumer operating relationship"
+        },
+        {
+          "uri": "relationship://food/partner-net",
+          "participants": [
+            "org://food/maplehurst",
+            "org://food/crestline",
+            "org://food/harlow"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://food/maplehurst": [
+              "operator"
+            ],
+            "org://food/crestline": [
+              "partner"
+            ],
+            "org://food/harlow": [
+              "partner"
+            ]
+          },
+          "authority": [
+            "authority://food/for-ops"
+          ],
+          "purpose": "food / bev / consumer partner network"
+        },
+        {
+          "uri": "authority://food/for-ops",
+          "holder": "org://food/maplehurst",
+          "grants": [
+            "triage_case",
+            "assign_case",
+            "close_case",
+            "approve_learning",
+            "rebalance_commitment",
+            "gate_partner",
+            "release_committed_action"
+          ],
+          "roles": [
+            "operator"
+          ]
+        },
+        {
+          "uri": "rule://food/ops-run",
+          "kind": "POLICY",
+          "text": "agent://food/restock-ops may re-balance resource commitment and gate partner performance",
+          "grants": [
+            "rebalance_commitment",
+            "gate_partner"
+          ]
+        },
+        {
+          "uri": "rule://food/match-run",
+          "kind": "POLICY",
+          "text": "S2 may run Trust-weighted matching for the client",
+          "grants": [
+            "run_match"
+          ]
+        },
+        {
+          "uri": "delegation://food/ops",
+          "grantor": "org://food/maplehurst",
+          "grantee": "agent://food/restock-ops",
+          "scope": [
+            "rule://food/ops-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://food/s2-match",
+          "grantor": "org://food/maplehurst",
+          "grantee": "agent://s2",
+          "scope": [
+            "rule://food/match-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "expectation://food/e-on-time",
+          "actor": "person://food/cso",
+          "subject": "retail restock shipment",
+          "condition": "fully deliver the committed retail restock shipment by its committed deadline",
+          "metric": "on_time",
+          "threshold": 0.95,
+          "deadline": "2026-12-31T00:00:00Z",
+          "evidence_required": "CLEAR"
+        },
+        {
+          "uri": "policy://food/allocation",
+          "name": "food allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "select the partner with the highest fit x scoped Trust",
+          "action": "allocate to the top-ranked fitted partner",
+          "scope": [
+            "expectation://food/e-on-time"
+          ],
+          "version": 1
+        },
+        {
+          "uri": "process://food/pr-core",
+          "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+          "steps": [
+            "triage",
+            "assign",
+            "execute",
+            "verify_outcome",
+            "learning"
+          ]
+        },
+        {
+          "uri": "process_instance://food/pi-core",
+          "process": "process://food/pr-core",
+          "status": "RUNNING",
+          "started_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "cdfffbb8120af42ee254d2752947ef751775428f8541260ad6f7c03bb5a974fa"
+    },
+    {
+      "uri": "event://food/s5-state-100",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-100",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-99",
+      "idempotency_key": "idem-s5-100",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "seed scoped Trust org://food/crestline = 0.6",
+      "state_update": [
+        {
+          "uri": "trust://food/t-crestline",
+          "subject": "org://food/maplehurst",
+          "target": "org://food/crestline",
+          "claim": "retail restock shipment reliability",
+          "context": "relationship://food/partner-net",
+          "score": 0.6
+        }
+      ],
+      "hash": "b1b7a9c7750e5c81c30560400977a516a9c8016741f4a8e786fe0a9399e24742"
+    },
+    {
+      "uri": "event://food/s5-state-101",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-101",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-100",
+      "idempotency_key": "idem-s5-101",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "seed scoped Trust org://food/harlow = 0.9",
+      "state_update": [
+        {
+          "uri": "trust://food/t-harlow",
+          "subject": "org://food/maplehurst",
+          "target": "org://food/harlow",
+          "claim": "retail restock shipment reliability",
+          "context": "relationship://food/partner-net",
+          "score": 0.9
+        }
+      ],
+      "hash": "60fed0cbf121a4a7671cdc56edd29a425655003f291d1b0a27f4a9e86727b854"
+    },
+    {
+      "uri": "event://food/s5-state-102",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-102",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-101",
+      "idempotency_key": "idem-s5-102",
+      "signature": "signed-by-agent://food/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s2",
+      "detail": "register resource-commitment offer from org://food/crestline",
+      "state_update": [
+        {
+          "uri": "offer://food/o-g",
+          "provider": "org://food/crestline",
+          "price": 2000000.0,
+          "currency": "USD",
+          "capability_keys": [
+            "restock",
+            "delivery"
+          ],
+          "fit_note": "food / bev / consumer partner delivery line"
+        }
+      ],
+      "hash": "152d7b3e0ff4956ff34b61f92468b9938a125931fcf125ebf7c199c256923b85"
+    },
+    {
+      "uri": "event://food/s5-state-103",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-103",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-102",
+      "idempotency_key": "idem-s5-103",
+      "signature": "signed-by-agent://food/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s2",
+      "detail": "register resource-commitment offer from org://food/harlow",
+      "state_update": [
+        {
+          "uri": "offer://food/o-l",
+          "provider": "org://food/harlow",
+          "price": 2000000.0,
+          "currency": "USD",
+          "capability_keys": [
+            "restock",
+            "delivery"
+          ],
+          "fit_note": "food / bev / consumer partner delivery line"
+        }
+      ],
+      "hash": "ed07efa8f9a9f9ea5e96a6918ab5de82db853768e308a20158eb1d292269e68a"
+    },
+    {
+      "uri": "event://food/s5-state-104",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-104",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-103",
+      "idempotency_key": "idem-s5-104",
+      "signature": "signed-by-agent://food/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s2",
+      "detail": "initial match ranked offer://food/o-l (score 0.900) \u2014 base ranking",
+      "state_update": [
+        {
+          "uri": "decision://food/s2-match-baseline",
+          "by": "agent://s2",
+          "authority": "delegation://food/s2-match",
+          "alternatives": [
+            "offer://food/o-l",
+            "offer://food/o-g",
+            "none"
+          ],
+          "confidence": 0.9,
+          "expected_outcome": "lag partner ranked #1 on existing Trust",
+          "actual_outcome": "offer://food/o-l",
+          "detail": [
+            {
+              "offer": "offer://food/o-l",
+              "provider": "org://food/harlow",
+              "fit": 1.0,
+              "trust": 0.9,
+              "score": 0.9
+            },
+            {
+              "offer": "offer://food/o-g",
+              "provider": "org://food/crestline",
+              "fit": 1.0,
+              "trust": 0.6,
+              "score": 0.6
+            }
+          ],
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "703dc4cb621583e7ed82a52876ca9de99adae411bc8efe346574b31a20001dac"
+    },
+    {
+      "uri": "event://food/s4-exchange-harlowQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-105",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-104",
+      "idempotency_key": "idem-s4-105",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange harlowQ3: 2000000.0 USD org://food/maplehurst->org://food/harlow (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/food-escrow-harlowQ3",
+          "kind": "MONEY",
+          "title": "org://food/harlow",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://food/maplehurst for org://food/harlow (harlowQ3)"
+        },
+        {
+          "uri": "obligation://food/s4-pay-harlowQ3",
+          "subject": "org://food/maplehurst",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://food/harlow",
+          "due_by": "2026-08-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-02T00:00:00Z"
+        },
+        {
+          "uri": "receipt://food/s4-receipt-harlowQ3",
+          "kind": "SETTLEMENT",
+          "from": "org://food/maplehurst",
+          "to": "org://food/harlow",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-09-02T00:00:00Z"
+        },
+        {
+          "uri": "decision://food/s4-recon-harlowQ3",
+          "by": "agent://s4",
+          "authority": "authority://food/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://food/maplehurst",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "harlowQ3",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://food/maplehurst",
+            "provider": "org://food/harlow",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://food/s4-exchange-harlowQ3",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-105",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-104",
+          "idempotency_key": "idem-s4-105",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange harlowQ3: 2000000.0 USD org://food/maplehurst->org://food/harlow (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://food/maplehurst",
+          "provider": "org://food/harlow",
+          "settled_at": "2026-09-02T00:00:00Z",
+          "exchange_of": "commitment://food/c-harlowQ3"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://food/maplehurst",
+      "provider": "org://food/harlow",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "exchange_of": "commitment://food/c-harlowQ3",
+      "hash": "99323db7f299ab5590c3f7351ca9a68ddc870858d0f98826a8b237a4559b0793"
+    },
+    {
+      "uri": "event://food/s4-outcome-harlowQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-106",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-105",
+      "idempotency_key": "idem-s4-106",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle harlowQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+      "state_update": [
+        {
+          "uri": "event://food/s4-outcome-harlowQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-106",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-105",
+          "idempotency_key": "idem-s4-106",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle harlowQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+          "state_update": [],
+          "evaluation": "partial",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-08-31T00:00:00Z",
+          "settled_at": "2026-09-02T00:00:00Z",
+          "score": 0.5
+        }
+      ],
+      "evaluation": "partial",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "score": 0.5,
+      "hash": "6052f55ee4d6e5d2f5b815bb97ed7283692e29add85e71bf6951924c4db7c7f6"
+    },
+    {
+      "uri": "event://food/outcome-committed-harlowQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-107",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-106",
+      "idempotency_key": "idem-s2-107",
+      "signature": "signed-by-org://food/harlow",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://food/harlow",
+      "detail": "job committed-harlowQ3 by org://food/harlow: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://food/outcome-committed-harlowQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-107",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-106",
+          "idempotency_key": "idem-s2-107",
+          "signature": "signed-by-org://food/harlow",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://food/harlow",
+          "detail": "job committed-harlowQ3 by org://food/harlow: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "committed-harlowQ3",
+          "provider": "org://food/harlow",
+          "committed_deadline": "2026-08-31T00:00:00Z",
+          "actual_completed_at": "2026-09-02T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://food/committed-harlowQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-retail restock shipment record + food anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-harlowQ3",
+      "provider": "org://food/harlow",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-09-02T00:00:00Z",
+      "on_time": false,
+      "hash": "ba53d7ee60d7ef297502548466ed4ecfd8070ebf425df4b3da77c81c8362d785"
+    },
+    {
+      "uri": "event://food/verify-committed-harlowQ3",
+      "type": "DECISION",
+      "event_id": "ev-s2-108",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-107",
+      "idempotency_key": "idem-s2-108",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://food/harlow delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://food/committed-harlowQ3",
+          "proposer": "agent://s5",
+          "statement": "org://food/harlow delivered the committed resource LATE"
+        },
+        {
+          "uri": "evidence://food/committed-harlowQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-retail restock shipment record + food anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "6362d97e8890eb2c3c796fbb2667c6336abc0d3db4cee7f488caf0cdacd65f60"
+    },
+    {
+      "uri": "event://food/trust-update-harlow",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-109",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-108",
+      "idempotency_key": "idem-s2-109",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "trust for org://food/harlow [retail restock shipment reliability] 0.900 -> 0.520 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://food/t-harlow",
+          "subject": "org://food/maplehurst",
+          "target": "org://food/harlow",
+          "claim": "retail restock shipment reliability",
+          "context": "relationship://food/partner-net",
+          "score": 0.52,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://food/committed-harlowQ3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "bfa124a54d245c70892e7fa70cdbddaea9abbe3ce549dc099c3ce99a57f82765"
+    },
+    {
+      "uri": "event://food/s4-exchange-crestlineQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-110",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-109",
+      "idempotency_key": "idem-s4-110",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange crestlineQ3: 2000000.0 USD org://food/maplehurst->org://food/crestline (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/food-escrow-crestlineQ3",
+          "kind": "MONEY",
+          "title": "org://food/crestline",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://food/maplehurst for org://food/crestline (crestlineQ3)"
+        },
+        {
+          "uri": "obligation://food/s4-pay-crestlineQ3",
+          "subject": "org://food/maplehurst",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://food/crestline",
+          "due_by": "2026-08-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-08-30T00:00:00Z"
+        },
+        {
+          "uri": "receipt://food/s4-receipt-crestlineQ3",
+          "kind": "SETTLEMENT",
+          "from": "org://food/maplehurst",
+          "to": "org://food/crestline",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-08-30T00:00:00Z"
+        },
+        {
+          "uri": "decision://food/s4-recon-crestlineQ3",
+          "by": "agent://s4",
+          "authority": "authority://food/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://food/maplehurst",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "crestlineQ3",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://food/maplehurst",
+            "provider": "org://food/crestline",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://food/s4-exchange-crestlineQ3",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-110",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-109",
+          "idempotency_key": "idem-s4-110",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange crestlineQ3: 2000000.0 USD org://food/maplehurst->org://food/crestline (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://food/maplehurst",
+          "provider": "org://food/crestline",
+          "settled_at": "2026-08-30T00:00:00Z",
+          "exchange_of": "commitment://food/c-crestlineQ3"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://food/maplehurst",
+      "provider": "org://food/crestline",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "exchange_of": "commitment://food/c-crestlineQ3",
+      "hash": "d337b930fbed93fc1648bd9ac9602da76f3f8f249b41a2ebcd506641209a51e7"
+    },
+    {
+      "uri": "event://food/s4-outcome-crestlineQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-111",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-110",
+      "idempotency_key": "idem-s4-111",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle crestlineQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://food/s4-outcome-crestlineQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-111",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-110",
+          "idempotency_key": "idem-s4-111",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle crestlineQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-08-31T00:00:00Z",
+          "settled_at": "2026-08-30T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "score": 1.0,
+      "hash": "37e33fa02a90cee16bed076e3e63578b373a9dbf8e78e8f9faa1293e621832f2"
+    },
+    {
+      "uri": "event://food/outcome-committed-crestlineQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-112",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-111",
+      "idempotency_key": "idem-s2-112",
+      "signature": "signed-by-org://food/crestline",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://food/crestline",
+      "detail": "job committed-crestlineQ3 by org://food/crestline: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://food/outcome-committed-crestlineQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-112",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-111",
+          "idempotency_key": "idem-s2-112",
+          "signature": "signed-by-org://food/crestline",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://food/crestline",
+          "detail": "job committed-crestlineQ3 by org://food/crestline: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "committed-crestlineQ3",
+          "provider": "org://food/crestline",
+          "committed_deadline": "2026-08-31T00:00:00Z",
+          "actual_completed_at": "2026-08-30T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://food/committed-crestlineQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-retail restock shipment record + food anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-crestlineQ3",
+      "provider": "org://food/crestline",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-08-30T00:00:00Z",
+      "on_time": true,
+      "hash": "8844c8bee2aee9e35e5229731dd22d899c7746744995e4f9bd465ed540b62877"
+    },
+    {
+      "uri": "event://food/verify-committed-crestlineQ3",
+      "type": "DECISION",
+      "event_id": "ev-s2-113",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-112",
+      "idempotency_key": "idem-s2-113",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://food/crestline delivered the committed resource on time' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://food/committed-crestlineQ3",
+          "proposer": "agent://s5",
+          "statement": "org://food/crestline delivered the committed resource on time"
+        },
+        {
+          "uri": "evidence://food/committed-crestlineQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-retail restock shipment record + food anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "3f76de82f6249c987b1f0a857a0f4f7a41a83ebbed7fa3f13b7b14d3394602a9"
+    },
+    {
+      "uri": "event://food/trust-update-crestline",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-114",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-113",
+      "idempotency_key": "idem-s2-114",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "trust for org://food/crestline [retail restock shipment reliability] 0.600 -> 0.695 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://food/t-crestline",
+          "subject": "org://food/maplehurst",
+          "target": "org://food/crestline",
+          "claim": "retail restock shipment reliability",
+          "context": "relationship://food/partner-net",
+          "score": 0.695,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://food/committed-crestlineQ3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "25ed32c5a6a278cbf699e6b12d7fc2a2dbaad673f1adcd463e78c0611b3584e3"
+    },
+    {
+      "uri": "event://food/s4-exchange-harlowQ4",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-115",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-114",
+      "idempotency_key": "idem-s4-115",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange harlowQ4: 1600000.0 USD org://food/maplehurst->org://food/harlow (value 1600000.0, cost 1600000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/food-escrow-harlowQ4",
+          "kind": "MONEY",
+          "title": "org://food/harlow",
+          "custody": "cleared",
+          "value": 1600000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://food/maplehurst for org://food/harlow (harlowQ4)"
+        },
+        {
+          "uri": "obligation://food/s4-pay-harlowQ4",
+          "subject": "org://food/maplehurst",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 1600000.0 USD for contracted work by org://food/harlow",
+          "due_by": "2026-09-15T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-17T00:00:00Z"
+        },
+        {
+          "uri": "receipt://food/s4-receipt-harlowQ4",
+          "kind": "SETTLEMENT",
+          "from": "org://food/maplehurst",
+          "to": "org://food/harlow",
+          "amount": 1600000.0,
+          "currency": "USD",
+          "received_at": "2026-09-17T00:00:00Z"
+        },
+        {
+          "uri": "decision://food/s4-recon-harlowQ4",
+          "by": "agent://s4",
+          "authority": "authority://food/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 1600000.0 USD from org://food/maplehurst",
+          "actual_outcome": "matched exactly: settled 1600000.0 USD",
+          "detail": {
+            "slug": "harlowQ4",
+            "expected": 1600000.0,
+            "actual": 1600000.0,
+            "matched": true,
+            "buyer": "org://food/maplehurst",
+            "provider": "org://food/harlow",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://food/s4-exchange-harlowQ4",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-115",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-114",
+          "idempotency_key": "idem-s4-115",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange harlowQ4: 1600000.0 USD org://food/maplehurst->org://food/harlow (value 1600000.0, cost 1600000.0)",
+          "state_update": [],
+          "value": 1600000.0,
+          "cost": 1600000.0,
+          "price": 1600000.0,
+          "currency": "USD",
+          "buyer": "org://food/maplehurst",
+          "provider": "org://food/harlow",
+          "settled_at": "2026-09-17T00:00:00Z",
+          "exchange_of": "commitment://food/c-harlowQ4"
+        }
+      ],
+      "value": 1600000.0,
+      "cost": 1600000.0,
+      "price": 1600000.0,
+      "currency": "USD",
+      "buyer": "org://food/maplehurst",
+      "provider": "org://food/harlow",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "exchange_of": "commitment://food/c-harlowQ4",
+      "hash": "73a9fe9a588eabe049841183b24acb19897544a839871602feeeb16eb8e8513c"
+    },
+    {
+      "uri": "event://food/s4-outcome-harlowQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-116",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-115",
+      "idempotency_key": "idem-s4-116",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle harlowQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+      "state_update": [
+        {
+          "uri": "event://food/s4-outcome-harlowQ4",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-116",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-115",
+          "idempotency_key": "idem-s4-116",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle harlowQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+          "state_update": [],
+          "evaluation": "partial",
+          "expected": 1600000.0,
+          "actual": 1600000.0,
+          "deadline": "2026-09-15T00:00:00Z",
+          "settled_at": "2026-09-17T00:00:00Z",
+          "score": 0.5
+        }
+      ],
+      "evaluation": "partial",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "deadline": "2026-09-15T00:00:00Z",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "score": 0.5,
+      "hash": "9f9fd0b2bd4a5ac0ee8bb859e19706eb87caec3bf433c5a5cd9a1c5bb41c2154"
+    },
+    {
+      "uri": "event://food/outcome-committed-harlowQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-117",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-116",
+      "idempotency_key": "idem-s2-117",
+      "signature": "signed-by-org://food/harlow",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://food/harlow",
+      "detail": "job committed-harlowQ4 by org://food/harlow: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://food/outcome-committed-harlowQ4",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-117",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-116",
+          "idempotency_key": "idem-s2-117",
+          "signature": "signed-by-org://food/harlow",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://food/harlow",
+          "detail": "job committed-harlowQ4 by org://food/harlow: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "committed-harlowQ4",
+          "provider": "org://food/harlow",
+          "committed_deadline": "2026-09-15T00:00:00Z",
+          "actual_completed_at": "2026-09-17T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://food/committed-harlowQ4",
+          "kind": "ANCHORED",
+          "source": "signed committed-retail restock shipment record + food anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-harlowQ4",
+      "provider": "org://food/harlow",
+      "committed_deadline": "2026-09-15T00:00:00Z",
+      "actual_completed_at": "2026-09-17T00:00:00Z",
+      "on_time": false,
+      "hash": "ed8e29e7872fa9dc2d20731df9cd103e9fb51b73612ec6a8194fa6b6a9677ad7"
+    },
+    {
+      "uri": "event://food/verify-committed-harlowQ4",
+      "type": "DECISION",
+      "event_id": "ev-s2-118",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-117",
+      "idempotency_key": "idem-s2-118",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://food/harlow delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://food/committed-harlowQ4",
+          "proposer": "agent://s5",
+          "statement": "org://food/harlow delivered the committed resource LATE"
+        },
+        {
+          "uri": "evidence://food/committed-harlowQ4",
+          "kind": "ANCHORED",
+          "source": "signed committed-retail restock shipment record + food anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "5f8ae122955db92add92e4b8149438eb668c0f375b98355b19aaaba59ad93715"
+    },
+    {
+      "uri": "event://food/trust-update-harlow",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-119",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-118",
+      "idempotency_key": "idem-s2-119",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "trust for org://food/harlow [retail restock shipment reliability] 0.520 -> 0.140 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://food/t-harlow",
+          "subject": "org://food/maplehurst",
+          "target": "org://food/harlow",
+          "claim": "retail restock shipment reliability",
+          "context": "relationship://food/partner-net",
+          "score": 0.14,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://food/committed-harlowQ4"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "a6945031452b497538c7ccd341fe8cca820383f91b076701b7d214c0bd259913"
+    },
+    {
+      "uri": "event://food/s5-state-7000",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7000",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-6999",
+      "idempotency_key": "idem-s5-7000",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "open case case://food/c-on-time (committed retail restock shipment below target on time)",
+      "state_update": [
+        {
+          "uri": "case://food/c-on-time",
+          "subject": "committed retail restock shipment below target on time",
+          "status": "OPEN",
+          "owner": "person://food/cso",
+          "actors": [
+            "org://food/maplehurst",
+            "person://food/cso",
+            "agent://food/restock-ops"
+          ],
+          "relationships": [
+            "relationship://food/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target"
+        }
+      ],
+      "hash": "98a057e0ff86bcf498053395b5a9fd8fb4661079a8e1e9dcacc0979158987797"
+    },
+    {
+      "uri": "event://food/s5-state-7001",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7001",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7000",
+      "idempotency_key": "idem-s5-7001",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "record exception heartbeat on the case",
+      "state_update": [
+        {
+          "uri": "case://food/c-on-time",
+          "subject": "committed retail restock shipment below target on time",
+          "status": "OPEN",
+          "owner": "person://food/cso",
+          "actors": [
+            "org://food/maplehurst",
+            "person://food/cso",
+            "agent://food/restock-ops"
+          ],
+          "relationships": [
+            "relationship://food/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed retail restock shipment on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://food/harlow missed its committed restock shipment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed restock volume to the verified on-time distributor (crestline) and gate the laggard (harlow) before new orders",
+          "metric": "metric://food/m-on-time"
+        }
+      ],
+      "hash": "3adce0282c5691b5ab2fe26da5be614a5f612af7fd063a040b59122163ceace0"
+    },
+    {
+      "uri": "event://food/s5-state-7002",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7002",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7001",
+      "idempotency_key": "idem-s5-7002",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "case triage: exception assessed, root nominated",
+      "state_update": [
+        {
+          "uri": "decision://food/s5-triage",
+          "by": "agent://food/s5",
+          "authority": "authority://food/for-ops",
+          "alternatives": [
+            "accept",
+            "dismiss as anomaly"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "accept as a real risk",
+          "actual_outcome": "accepted; root nominated",
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "6dcd2dae7e026d81ebed8464f72e15d199198a0fb27a940cf6aa8aaa9d4e4440"
+    },
+    {
+      "uri": "event://food/s5-case-triage",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7003",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7002",
+      "idempotency_key": "idem-s5-7003",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "case triaged",
+      "state_update": [
+        {
+          "uri": "case://food/c-on-time",
+          "subject": "committed retail restock shipment below target on time",
+          "status": "TRIAGE",
+          "owner": "person://food/cso",
+          "actors": [
+            "org://food/maplehurst",
+            "person://food/cso",
+            "agent://food/restock-ops"
+          ],
+          "relationships": [
+            "relationship://food/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-triage"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed retail restock shipment on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://food/harlow missed its committed restock shipment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed restock volume to the verified on-time distributor (crestline) and gate the laggard (harlow) before new orders",
+          "metric": "metric://food/m-on-time"
+        }
+      ],
+      "hash": "16df01856f14194917564296bfee09bd10a922d164150f8f5b20f37a2ac45a48"
+    },
+    {
+      "uri": "event://food/s5-state-7004",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7004",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7003",
+      "idempotency_key": "idem-s5-7004",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "case assigned; task becomes assigned authorized work (#8)",
+      "state_update": [
+        {
+          "uri": "task://food/t-rebalance",
+          "assigned_to": "agent://food/restock-ops",
+          "created_by": "agent://food/s5",
+          "objective": "re-balance restock allocation to the verified on-time distributor (crestline) and gate the laggard (harlow)",
+          "dependencies": [],
+          "authority": "authority://food/for-ops",
+          "deadline": "2026-10-15T00:00:00Z",
+          "priority": 0.695,
+          "status": "ASSIGNED",
+          "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+          "why_here": "derived from the on-time exception (case OPEN)",
+          "importance": "restores shelf on-time, protecting retailer scoped Trust",
+          "evidence": [
+            "evidence://food/committed-harlowQ3",
+            "evidence://food/committed-crestlineQ3",
+            "evidence://food/committed-harlowQ4"
+          ],
+          "decision_required": "approve the re-allocation",
+          "priority_factors": {
+            "impact": 0.85,
+            "urgency": 0.9,
+            "confidence": 0.7,
+            "irreversibility": false,
+            "relationship_importance": 0.8,
+            "cost_of_delay": 0.75
+          },
+          "assigned_capacity": 1.0
+        },
+        {
+          "uri": "decision://food/s5-assign",
+          "by": "person://food/cso",
+          "authority": "authority://food/for-ops",
+          "alternatives": [
+            "assign",
+            "defer"
+          ],
+          "confidence": 0.95,
+          "expected_outcome": "task in progress",
+          "detail": {
+            "task": "task://food/t-rebalance",
+            "assigned_to": "agent://food/restock-ops",
+            "authority": "authority://food/for-ops",
+            "priority": 0.695,
+            "capacity": 1.0
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "596dd2d2aeb3ea2ddcda1f53341ee7a3ef21b1ac0787839cb03e453b29a1380f"
+    },
+    {
+      "uri": "event://food/s5-case-assigned",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7005",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7004",
+      "idempotency_key": "idem-s5-7005",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "case assigned",
+      "state_update": [
+        {
+          "uri": "case://food/c-on-time",
+          "subject": "committed retail restock shipment below target on time",
+          "status": "ASSIGNED",
+          "owner": "person://food/cso",
+          "actors": [
+            "org://food/maplehurst",
+            "person://food/cso",
+            "agent://food/restock-ops"
+          ],
+          "relationships": [
+            "relationship://food/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-assigned"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed retail restock shipment on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://food/harlow missed its committed restock shipment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed restock volume to the verified on-time distributor (crestline) and gate the laggard (harlow) before new orders",
+          "metric": "metric://food/m-on-time"
+        }
+      ],
+      "hash": "43be0786026d6e30281a91c46822b63df636c247938891d34ab1fd9af60f403b"
+    },
+    {
+      "uri": "event://food/s5-case-inprogress",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7006",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7005",
+      "idempotency_key": "idem-s5-7006",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "task execution began",
+      "state_update": [
+        {
+          "uri": "case://food/c-on-time",
+          "subject": "committed retail restock shipment below target on time",
+          "status": "IN_PROGRESS",
+          "owner": "person://food/cso",
+          "actors": [
+            "org://food/maplehurst",
+            "person://food/cso",
+            "agent://food/restock-ops"
+          ],
+          "relationships": [
+            "relationship://food/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-inprogress"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed retail restock shipment on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://food/harlow missed its committed restock shipment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed restock volume to the verified on-time distributor (crestline) and gate the laggard (harlow) before new orders",
+          "metric": "metric://food/m-on-time"
+        }
+      ],
+      "hash": "8560e8e2b1fcb06ea016e3051751ab4427a3544ac433f5db457c67a276dcf5a6"
+    },
+    {
+      "uri": "event://food/s5-state-7007",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7007",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7006",
+      "idempotency_key": "idem-s5-7007",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "policy updated: allocate by fit AND scoped Trust",
+      "state_update": [
+        {
+          "uri": "policy://food/allocation",
+          "name": "food allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "select by fit x scoped Trust; laggard (< floor) needs a performance gate",
+          "action": "allocate to the top-ranked fitted partner; gate laggard",
+          "scope": [
+            "expectation://food/e-on-time"
+          ],
+          "version": 2,
+          "policy_status": "REVISED"
+        }
+      ],
+      "hash": "398df31b74e880333f7c49fc35212160b999b986ed58a6477179e5013b5cb8ab"
+    },
+    {
+      "uri": "event://food/s5-state-7008",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7008",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7007",
+      "idempotency_key": "idem-s5-7008",
+      "signature": "signed-by-agent://food/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s2",
+      "detail": "task effect: next committed work ranked offer://food/o-g (score 0.695)",
+      "state_update": [
+        {
+          "uri": "decision://food/s5-match-recorded",
+          "by": "agent://s2",
+          "authority": "delegation://food/s2-match",
+          "alternatives": [
+            "offer://food/o-g",
+            "none"
+          ],
+          "confidence": 0.92,
+          "expected_outcome": "good partner ranked #1",
+          "actual_outcome": "offer://food/o-g",
+          "detail": [
+            {
+              "offer": "offer://food/o-g",
+              "provider": "org://food/crestline",
+              "fit": 1.0,
+              "trust": 0.695,
+              "score": 0.695
+            }
+          ],
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "9e5f752c0d892aecfc7383cf0316d8d3ee8032bd9638008bf341b6553494accb"
+    },
+    {
+      "uri": "event://food/s5-escalate",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7009",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7008",
+      "idempotency_key": "idem-s5-7009",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "escalation: the committed action is irreversible and cost-unknowable once done (\u00a76 floor)",
+      "state_update": [
+        {
+          "uri": "escalation://food/escalate-release",
+          "trigger": "external restock truck release \u2014 irreversible and cost-unknowable once en route",
+          "severity": "WARN",
+          "recipient": "person://food/cso",
+          "deadline": "2026-11-15T00:00:00Z",
+          "fallback": "agent://food/s4",
+          "authority": "authority://food/for-ops",
+          "acknowledgement": "approve then execute"
+        }
+      ],
+      "hash": "5c457f7fd2c793bc0b1729aa73bde20273695a04f176adcf81c947c57976d12d"
+    },
+    {
+      "uri": "event://food/owner-human",
+      "type": "DECISION",
+      "event_id": "ev-food-7010",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-food-7009",
+      "idempotency_key": "idem-food-7010",
+      "signature": "signed-by-person://food/cso",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "person://food/cso",
+      "detail": "person://food/cso signed approval to release the committed action (\u00a76 floor)",
+      "state_update": [
+        {
+          "uri": "decision://food/owner-human",
+          "by": "person://food/cso",
+          "authority": "authority://food/for-ops",
+          "alternatives": [
+            "release_in_full",
+            "hold",
+            "release_partial_and_hold_if_shortfall",
+            "open_dispute"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "release to the verified partner",
+          "actual_outcome": "release_in_full (human approved)",
+          "detail": {
+            "task": "task://food/t-rebalance",
+            "action": "release_committed_action",
+            "irreversible_failure": true,
+            "cost_failure_unknowable": true
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "bd27371ac3dcd1b84a96a35f4727f14d9b0a66cac856bb7adc40a3a212c95492"
+    },
+    {
+      "uri": "event://food/action-release",
+      "type": "ACTION",
+      "event_id": "ev-food-7011",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-food-7010",
+      "idempotency_key": "idem-food-7011",
+      "signature": "signed-by-person://food/cso",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/restock-ops",
+      "detail": "rebalance_commitment executed after human approval",
+      "worker": "agent://food/restock-ops",
+      "action": "rebalance_commitment",
+      "task_id": "t-rebalance",
+      "tier": "human",
+      "outcome": "done",
+      "state_update": [],
+      "hash": "3fc55c22a719ecc857413d88676e0248fe28065d64ebb4f902092b90951737a9"
+    },
+    {
+      "uri": "event://food/s5-case-blocked",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7012",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7011",
+      "idempotency_key": "idem-s5-7012",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "case blocked pending the rallied committed delivery's verification",
+      "state_update": [
+        {
+          "uri": "case://food/c-on-time",
+          "subject": "committed retail restock shipment below target on time",
+          "status": "BLOCKED",
+          "owner": "person://food/cso",
+          "actors": [
+            "org://food/maplehurst",
+            "person://food/cso",
+            "agent://food/restock-ops"
+          ],
+          "relationships": [
+            "relationship://food/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-blocked"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed retail restock shipment on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://food/harlow missed its committed restock shipment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed restock volume to the verified on-time distributor (crestline) and gate the laggard (harlow) before new orders",
+          "metric": "metric://food/m-on-time"
+        }
+      ],
+      "hash": "22d339c610bb9e7167e0e53413eda6d2882b1266777db18ff8014a5dfb836279"
+    },
+    {
+      "uri": "event://food/s5-state-7013",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7013",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7012",
+      "idempotency_key": "idem-s5-7013",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "rallied committed work allocated to org://food/crestline (the fix)",
+      "state_update": [
+        {
+          "uri": "commitment://food/c-crestline-followup",
+          "by": "agent://food/s5",
+          "to": "org://food/crestline",
+          "obligation": "offer://food/o-g",
+          "expectation": "expectation://food/e-routed-crestlineR",
+          "status": "AGREED",
+          "terms": {
+            "kind": "retail restock shipment follow-up",
+            "signed": true
+          },
+          "agreed_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "e05e56db33eed58eb9d6d4b9c6a5e502e68fae725d0d8e9dbce3e7e26a23ab7c"
+    },
+    {
+      "uri": "event://food/s5-state-7014",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7014",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7013",
+      "idempotency_key": "idem-s5-7014",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "register follow-on expectation",
+      "state_update": [
+        {
+          "uri": "expectation://food/e-crestlineR",
+          "actor": "person://food/cso",
+          "subject": "retail restock shipment",
+          "condition": "fully deliver the committed resource by its committed deadline",
+          "metric": "settled_value",
+          "threshold": 2000000.0,
+          "deadline": "2026-11-15T00:00:00Z",
+          "evidence_required": "CLEAR"
+        }
+      ],
+      "hash": "96006eb9433f9f98723783ea25c5111cce62a2ed8f165d14384a5c02b76d9630"
+    },
+    {
+      "uri": "event://food/s4-exchange-crestlineR",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-7015",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7014",
+      "idempotency_key": "idem-s4-7015",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange crestlineR: 2000000.0 USD org://food/maplehurst->org://food/crestline (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/food-escrow-crestlineR",
+          "kind": "MONEY",
+          "title": "org://food/crestline",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://food/maplehurst for org://food/crestline (crestlineR)"
+        },
+        {
+          "uri": "obligation://food/s4-pay-crestlineR",
+          "subject": "org://food/maplehurst",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://food/crestline",
+          "due_by": "2026-11-15T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-11-12T00:00:00Z"
+        },
+        {
+          "uri": "receipt://food/s4-receipt-crestlineR",
+          "kind": "SETTLEMENT",
+          "from": "org://food/maplehurst",
+          "to": "org://food/crestline",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-11-12T00:00:00Z"
+        },
+        {
+          "uri": "decision://food/s4-recon-crestlineR",
+          "by": "agent://s4",
+          "authority": "authority://food/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://food/maplehurst",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "crestlineR",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://food/maplehurst",
+            "provider": "org://food/crestline",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://food/s4-exchange-crestlineR",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-7015",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-7014",
+          "idempotency_key": "idem-s4-7015",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange crestlineR: 2000000.0 USD org://food/maplehurst->org://food/crestline (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://food/maplehurst",
+          "provider": "org://food/crestline",
+          "settled_at": "2026-11-12T00:00:00Z",
+          "exchange_of": "commitment://food/c-crestlineR"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://food/maplehurst",
+      "provider": "org://food/crestline",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "exchange_of": "commitment://food/c-crestlineR",
+      "hash": "d269ba4a7bf76df6a65aa27ef28641ccd678e3ba4126078f8e8f02bf83b6d571"
+    },
+    {
+      "uri": "event://food/s4-outcome-crestlineR",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-7016",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7015",
+      "idempotency_key": "idem-s4-7016",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle crestlineR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://food/s4-outcome-crestlineR",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-7016",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-7015",
+          "idempotency_key": "idem-s4-7016",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle crestlineR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-11-15T00:00:00Z",
+          "settled_at": "2026-11-12T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "score": 1.0,
+      "hash": "971a1cb822fa4e7918d9c035e980409697004f563fcd7d0f6a7491a04c45d1ee"
+    },
+    {
+      "uri": "event://food/outcome-routed-crestlineR",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-7017",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7016",
+      "idempotency_key": "idem-s2-7017",
+      "signature": "signed-by-org://food/crestline",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://food/crestline",
+      "detail": "job routed-crestlineR by org://food/crestline: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://food/outcome-routed-crestlineR",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-7017",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-7016",
+          "idempotency_key": "idem-s2-7017",
+          "signature": "signed-by-org://food/crestline",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://food/crestline",
+          "detail": "job routed-crestlineR by org://food/crestline: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "routed-crestlineR",
+          "provider": "org://food/crestline",
+          "committed_deadline": "2026-11-15T00:00:00Z",
+          "actual_completed_at": "2026-11-12T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://food/routed-crestlineR",
+          "kind": "ANCHORED",
+          "source": "signed committed-retail restock shipment record + food anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "routed-crestlineR",
+      "provider": "org://food/crestline",
+      "committed_deadline": "2026-11-15T00:00:00Z",
+      "actual_completed_at": "2026-11-12T00:00:00Z",
+      "on_time": true,
+      "hash": "183c614dd452ed9d447d249c51e7b2c5b90cc05f954e370cc747f3a997521f90"
+    },
+    {
+      "uri": "event://food/verify-routed-crestlineR",
+      "type": "DECISION",
+      "event_id": "ev-s2-7018",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7017",
+      "idempotency_key": "idem-s2-7018",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://food/crestline delivered the rallied committed retail restock shipment on time' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://food/routed-crestlineR",
+          "proposer": "agent://s5",
+          "statement": "org://food/crestline delivered the rallied committed retail restock shipment on time"
+        },
+        {
+          "uri": "evidence://food/routed-crestlineR",
+          "kind": "ANCHORED",
+          "source": "signed committed-retail restock shipment record + food anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "7e4e1da15aa8cc31a91183005eb5c471249556b44c8440279229ec2a0cdd4031"
+    },
+    {
+      "uri": "event://food/trust-update-crestline",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-7019",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7018",
+      "idempotency_key": "idem-s2-7019",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "trust for org://food/crestline [retail restock shipment reliability] 0.695 -> 0.790 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://food/t-crestline",
+          "subject": "org://food/maplehurst",
+          "target": "org://food/crestline",
+          "claim": "retail restock shipment reliability",
+          "context": "relationship://food/partner-net",
+          "score": 0.79,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://food/routed-crestlineR"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "37c3eb152c30308c7dde2becd3bc361276ecffbc430c833dea91ab914545df3e"
+    },
+    {
+      "uri": "event://food/s5-case-resolved",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7020",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7019",
+      "idempotency_key": "idem-s5-7020",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "exception resolved: rallied committed work verified on time; forward on-time = 1.0; cumulative 2/4",
+      "state_update": [
+        {
+          "uri": "case://food/c-on-time",
+          "subject": "committed retail restock shipment below target on time",
+          "status": "RESOLVED",
+          "owner": "person://food/cso",
+          "actors": [
+            "org://food/maplehurst",
+            "person://food/cso",
+            "agent://food/restock-ops"
+          ],
+          "relationships": [
+            "relationship://food/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-blocked"
+            },
+            {
+              "status": "RESOLVED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-resolved"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed retail restock shipment on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://food/harlow missed its committed restock shipment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed restock volume to the verified on-time distributor (crestline) and gate the laggard (harlow) before new orders",
+          "metric": "metric://food/m-on-time",
+          "verified_outcome": "forward on-time restored to 1.0; org://food/crestline delivered the rallied retail restock shipment on time (evidence://food/routed-crestlineR); org://food/crestline Trust 0.79"
+        }
+      ],
+      "hash": "967a999c2477e7f06ca3ed41b0f479a9c57a66ab3c3ca5c818a27577604f8f4f"
+    },
+    {
+      "uri": "event://food/s5-state-7021",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7021",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7020",
+      "idempotency_key": "idem-s5-7021",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "learning entry decision://food/learning: Concentrating restock volume with a distributor that has verified on-time delivery (crestline), while gating the laggard (harlow), restored on-time shipment. Verified good shipments compound scoped Trust.",
+      "state_update": [
+        {
+          "uri": "decision://food/learning",
+          "by": "agent://food/s5",
+          "authority": "authority://food/for-operations",
+          "subject": "retail restock shipment on-time management",
+          "expected": 0.95,
+          "actual": 1.0,
+          "variance": 0.05,
+          "why": "Concentrating restock volume with a distributor that has verified on-time delivery (crestline), while gating the laggard (harlow), restored on-time shipment. Verified good shipments compound scoped Trust.",
+          "change_future_policy": "ALLOCATE by fit AND scoped Trust; distributors below the Trust floor need a performance gate before new orders.",
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "725dc28bd2e2d02bfcc6bd97da4a0d798d6de993e89192de968c3f2ea4227a8e"
+    },
+    {
+      "uri": "event://food/s5-state-7022",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7022",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7021",
+      "idempotency_key": "idem-s5-7022",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "close case; learning recorded; future policy updated",
+      "state_update": [
+        {
+          "uri": "policy://food/allocation",
+          "name": "food allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "ALLOCATE by fit AND scoped Trust; distributors below the Trust floor need a performance gate before new orders. (learned 2026-09-01)",
+          "action": "allocate to the top-ranked fitted partner; gate laggard",
+          "scope": [
+            "expectation://food/e-on-time"
+          ],
+          "version": 3,
+          "policy_status": "EFFECTIVE",
+          "learning": "decision://food/learning"
+        }
+      ],
+      "hash": "d19a5fe3552199cf0ed6b067461f231a8094914a2b2b753c695729bd36e8e959"
+    },
+    {
+      "uri": "event://food/s5-case-closed",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7022",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7021",
+      "idempotency_key": "idem-s5-7022",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "case closed",
+      "state_update": [
+        {
+          "uri": "case://food/c-on-time",
+          "subject": "committed retail restock shipment below target on time",
+          "status": "CLOSED",
+          "owner": "person://food/cso",
+          "actors": [
+            "org://food/maplehurst",
+            "person://food/cso",
+            "agent://food/restock-ops"
+          ],
+          "relationships": [
+            "relationship://food/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-blocked"
+            },
+            {
+              "status": "RESOLVED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-resolved"
+            },
+            {
+              "status": "CLOSED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://food/s5-case-closed"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed retail restock shipment on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "distribution failure \u2014 org://food/harlow missed its committed restock shipment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed restock volume to the verified on-time distributor (crestline) and gate the laggard (harlow) before new orders",
+          "metric": "metric://food/m-on-time",
+          "verified_outcome": "forward on-time restored to 1.0; org://food/crestline delivered the rallied retail restock shipment on time (evidence://food/routed-crestlineR); org://food/crestline Trust 0.79"
+        }
+      ],
+      "hash": "1da4e3df8334cb270347ca343344a2e960bbb81a516f2455eb77a330ca9cfd93"
+    },
+    {
+      "uri": "event://food/s5-state-7023",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7023",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7022",
+      "idempotency_key": "idem-s5-7023",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "register goal + ledger-projected metrics",
+      "state_update": [
+        {
+          "uri": "goal://food/g-core",
+          "for": "org://food/maplehurst",
+          "statement": "Consistently deliver committed restock shipments on time so retailers keep Maplehurst on the shelf.",
+          "horizon": "quarter",
+          "owner": "person://food/cso",
+          "metrics": [
+            "metric://food/m-on-time",
+            "metric://food/m-trust",
+            "metric://food/m-settled-value"
+          ]
+        },
+        {
+          "uri": "metric://food/m-on-time",
+          "name": "Committed-retail restock shipment on-time rate",
+          "definition": "share of committed retail restock shipment deliveries verified on time",
+          "unit": "fraction",
+          "formula": "on_time / (on_time + late) from ledger",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 0.95,
+          "threshold": 0.8,
+          "period": "quarter",
+          "source": "ledger committed-delivery records",
+          "owner": "person://food/cso",
+          "actual": 0.5,
+          "forecast": 0.5,
+          "variance": -0.45,
+          "root_cause": "distribution failure \u2014 org://food/harlow missed its committed restock shipment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED"
+        },
+        {
+          "uri": "metric://food/m-trust",
+          "name": "Partner scoped-trust score",
+          "definition": "best scoped Trust on the partner network (per \u00a75)",
+          "unit": "score",
+          "formula": "T(subject->target, claim, context) per \u00a75",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 0.9,
+          "threshold": 0.6,
+          "period": "rolling",
+          "source": "S5 scoped Trust graph",
+          "owner": "person://food/cso",
+          "actual": 0.79,
+          "forecast": 0.92,
+          "variance": -0.11,
+          "root_cause_status": "UNKNOWN"
+        },
+        {
+          "uri": "metric://food/m-settled-value",
+          "name": "Settled committed value",
+          "definition": "value of EXCHANGE events settled this period",
+          "unit": "USD",
+          "formula": "sum(EXCHANGE.price) from ledger",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 7600000.0,
+          "threshold": 4180000.0000000005,
+          "period": "quarter",
+          "source": "ledger EXCHANGE events",
+          "owner": "person://food/cso",
+          "actual": 7600000.0,
+          "forecast": 8740000.0,
+          "variance": 0.0,
+          "root_cause_status": "UNKNOWN"
+        }
+      ],
+      "hash": "0c34cdff846831f1fe4c90e69aba4790b37e91781362f843a77261eaf7920e17"
+    },
+    {
+      "uri": "event://food/s5-state-7024",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7024",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7023",
+      "idempotency_key": "idem-s5-7024",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "goal->metric->variance->decision->action->outcome",
+      "state_update": [
+        {
+          "uri": "decision://food/s5-metric-loop",
+          "by": "agent://food/s5",
+          "authority": "authority://food/for-operations",
+          "alternatives": [
+            "do nothing",
+            "rebalance provider allocation"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "metric://food/m-on-time variance reduced toward target",
+          "detail": {
+            "goal": "goal://food/g-core",
+            "metric": "metric://food/m-on-time",
+            "actual": 0.5,
+            "variance": -0.45,
+            "action": "task://food/t-rebalance",
+            "outcome": "event://food/outcome-routed-crestlineR"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "cfafb4c0039c76fca67655da8b8f24664b8f19169efc2427f0ed35f99662d0b0"
+    },
+    {
+      "uri": "event://food/s5-state-7025",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7025",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7024",
+      "idempotency_key": "idem-s5-7025",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "priority-ordered attention list",
+      "state_update": [
+        {
+          "uri": "decision://food/s5-attention",
+          "by": "agent://food/s5",
+          "authority": "authority://food/for-ops",
+          "confidence": 0.9,
+          "expected_outcome": "top-of-attention ranked",
+          "actual_outcome": "attention prioritized by derived score",
+          "detail": {
+            "attention": [
+              {
+                "uri": "task://food/t-rebalance",
+                "label": "re-balance committed work",
+                "priority": 0.695
+              },
+              {
+                "uri": "task://food/t-followup",
+                "label": "rallied follow-on (good partner)",
+                "priority": 0.58
+              }
+            ]
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "44f1f15aba3ea70d0872ad9115c8b2946130c357cd85f7f2efd0ab8519ed1883"
+    },
+    {
+      "uri": "event://food/s5-state-7026",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7026",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7025",
+      "idempotency_key": "idem-s5-7026",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "dependency dependency://food/d-rb-enables-fu: task://food/t-rebalance ENABLES task://food/t-followup",
+      "state_update": [
+        {
+          "uri": "dependency://food/d-rb-enables-fu",
+          "from": "task://food/t-rebalance",
+          "to": "task://food/t-followup",
+          "kind": "ENABLES"
+        }
+      ],
+      "hash": "6caffc50092fdb769af04d8278b029a5ef78cadcf1d08a7a7bf494dfd3e61781"
+    },
+    {
+      "uri": "event://food/s5-state-7027",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7027",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7026",
+      "idempotency_key": "idem-s5-7027",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "dependency dependency://food/d-fu-requires-pol: task://food/t-followup REQUIRES policy://food/allocation",
+      "state_update": [
+        {
+          "uri": "dependency://food/d-fu-requires-pol",
+          "from": "task://food/t-followup",
+          "to": "policy://food/allocation",
+          "kind": "REQUIRES"
+        }
+      ],
+      "hash": "a0d97d82937c690fa6a4959c19b72789f7a408eb8ccd7ed3f353658276ac4e47"
+    },
+    {
+      "uri": "event://food/s5-state-7028",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7028",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7027",
+      "idempotency_key": "idem-s5-7028",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "dependency dependency://food/d-fu-blocks-case: task://food/t-followup BLOCKS case://food/c-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://food/d-fu-blocks-case",
+          "from": "task://food/t-followup",
+          "to": "case://food/c-on-time",
+          "kind": "BLOCKS"
+        }
+      ],
+      "hash": "710e7f6e9f6fdb326662e7d16be36f3c315bed11db0cc78894366e52084d5e54"
+    },
+    {
+      "uri": "event://food/s5-state-7029",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7029",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7028",
+      "idempotency_key": "idem-s5-7029",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "dependency dependency://food/d-case-from-metric: case://food/c-on-time DERIVED_FROM metric://food/m-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://food/d-case-from-metric",
+          "from": "case://food/c-on-time",
+          "to": "metric://food/m-on-time",
+          "kind": "DERIVED_FROM"
+        }
+      ],
+      "hash": "34b922c6d82f398d12294cac8785a36d031a0e75fa9b518a5f6189b5da342e0f"
+    },
+    {
+      "uri": "event://food/s5-state-7030",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7030",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7029",
+      "idempotency_key": "idem-s5-7030",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "dependency dependency://food/d-metric-impacts-goal: metric://food/m-on-time IMPACTS goal://food/g-core",
+      "state_update": [
+        {
+          "uri": "dependency://food/d-metric-impacts-goal",
+          "from": "metric://food/m-on-time",
+          "to": "goal://food/g-core",
+          "kind": "IMPACTS"
+        }
+      ],
+      "hash": "3b9d33d3d46a643da15c4d32f5ac8f98e3db9b2988bc40bda173d956fb035adc"
+    },
+    {
+      "uri": "event://food/s5-state-7031",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7031",
+      "correlation_id": "corr-food-bol-1",
+      "causation_id": "ev-s5-7030",
+      "idempotency_key": "idem-s5-7031",
+      "signature": "signed-by-agent://food/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://food/s5",
+      "detail": "dependency dependency://food/d-rb-blocks-case: task://food/t-rebalance BLOCKS case://food/c-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://food/d-rb-blocks-case",
+          "from": "task://food/t-rebalance",
+          "to": "case://food/c-on-time",
+          "kind": "BLOCKS"
+        }
+      ],
+      "hash": "2de2955c49dbf38771a127f57d13cbeea1c65c9e4c74b88d7d5b95bf4baf39dc"
+    }
+  ]
+}

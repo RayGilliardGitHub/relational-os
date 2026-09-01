@@ -1,0 +1,44 @@
+[
+  {
+    "uri": "person://e11/insd",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e11/insurer",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e11/policy",
+    "participants": [
+      "person://e11/insd",
+      "org://e11/insurer"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "policy://ins/e11-h22",
+    "type": "auto",
+    "holder": "person://e11/insd"
+  },
+  {
+    "uri": "right://e11/coverage",
+    "holder": "person://e11/insd",
+    "type": "RECEIVE_PAYMENT"
+  },
+  {
+    "uri": "interaction://e11/exchange",
+    "of": "relationship://e11/policy",
+    "kind": "EXCHANGE"
+  },
+  {
+    "uri": "event://e11/exchange",
+    "type": "EXCHANGE",
+    "event_id": "event-e11/exchange",
+    "correlation_id": "event-ce11/exchange",
+    "causation_id": "event-cae11/exchange",
+    "idempotency_key": "event-ie11/exchange",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "person://e11/insd"
+  }
+]

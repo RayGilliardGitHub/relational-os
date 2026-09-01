@@ -1,0 +1,2539 @@
+{
+  "uri": "db://ledger/enrg-2026",
+  "head_hash": "f7b332e2349ac654228940578bca90c6b2180c5e4cbc98ff8025c55685dfeec4",
+  "entries": [
+    {
+      "uri": "event://enrg/s5-state-2",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-2",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-1",
+      "idempotency_key": "idem-s5-2",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "provision Energy / Chemicals base (actors, relationships, authority + operator + policy + expectation)",
+      "state_update": [
+        {
+          "uri": "org://enrg/basinline",
+          "type": "ORG",
+          "identity": {
+            "attestations": [
+              "business-license"
+            ]
+          },
+          "brand": {
+            "tagline": "Energy that arrives when it's supposed to.",
+            "mission": "Deliver committed refined-products tanker and chemical cargoes reliably and on time so term customers can run their operations without a barrel of uncertainty.",
+            "vision": "An energy market where 'it's on the water' means it will be there \u2014 measured, verified, and on the agreed date.",
+            "values": [
+              [
+                "Dependability",
+                "A charter is a commitment; delivering late is a failure, not a forecast."
+              ],
+              [
+                "Safety first",
+                "On time never means cutting corners on the creole, the tank, or the port."
+              ],
+              [
+                "Evidence over rumor",
+                "We prove when cargoes arrive with ledger-verified records."
+              ],
+              [
+                "Stewardship",
+                "We move energy responsibly and report the footprint."
+              ],
+              [
+                "Partnership",
+                "Term customers plan around us; we honour that trust."
+              ]
+            ],
+            "about": "Basinline Energy is a refined-products and chemicals logistics operator. We take committed tanker deliveries and make discharge dates as firm as a bank statement, backing every arrival with ledger-verified evidence. For term customers whose whole plant schedule hinges on a cargo, our on-time record is not a marketing line \u2014 it is the working relationship.",
+            "fast_facts": [
+              "Founded 1998, energy & chemicals logistics",
+              "Fleet of 40+ contracted tankers",
+              "Terminal and refining connections across the Gulf"
+            ],
+            "history": [
+              [
+                "1998",
+                "Founded in Houston as a fuel-hauling operation."
+              ],
+              [
+                "2010",
+                "Entered refined-products tanker chartering."
+              ],
+              [
+                "2023",
+                "Verifying every cargo discharge against the ledger for on-time proof."
+              ]
+            ],
+            "leadership": [
+              [
+                "Wade Okonkwo",
+                "Chief Executive",
+                "25 years in energy shipping; built Basinline on discharge reliability."
+              ],
+              [
+                "Lena Alvarado",
+                "Chief Supply Officer",
+                "Runs the tanker network and terminal relationships."
+              ]
+            ],
+            "products_services": [
+              "Refined-products tanker delivery",
+              "Chemical cargo logistics",
+              "Terminal discharge coordination"
+            ],
+            "testimonials": [
+              [
+                "Basinline's discharge dates are the only ones in the market I'd build a schedule around.",
+                "Term customer, refining"
+              ]
+            ],
+            "trust": [
+              [
+                "98.7% committed tanker discharge on-time rate (2025)",
+                "Basinline discharge ledger"
+              ],
+              [
+                "OCIMF/ISGOTT-aligned tanker safety programme",
+                "audited annually"
+              ]
+            ],
+            "locations": "Houston, TX (HQ) \u00b7 Gulf terminals; global charter coverage to order",
+            "faq": [
+              [
+                "Why is your on-time claim credible?",
+                "Every cargo discharge is anchored to a signed ledger event with a verified completion time \u2014 auditable, not asserted."
+              ],
+              [
+                "Do you coordinate the terminal side too?",
+                "Yes, we manage both vessel and terminal, so the commitment covers the full landing."
+              ]
+            ],
+            "contact": "charter@basinline.example \u00b7 +1-713-555-0149",
+            "careers": "Keep the barrels moving on schedule: marine ops, chartering, terminal logistics, safety.",
+            "investors": "Privately held. Fleet and reliability data shared on request.",
+            "press": "media@basinline.example \u2014 safety and reliability reporting.",
+            "esg": "Emissions-tracking per voyage, ballast and spill stewardship, port-community partnerships.",
+            "legal": [
+              "Privacy",
+              "Terms",
+              "Caifornia Rights",
+              "Do Not Sell or Share"
+            ],
+            "nav": [
+              "About",
+              "What We Move",
+              "Terminals",
+              "Safety",
+              "Careers",
+              "Investors",
+              "Press",
+              "Contact"
+            ],
+            "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+            "design": {
+              "palette": [
+                [
+                  "Pipeline Black",
+                  "#1B1E24"
+                ],
+                [
+                  "Refinery Amber",
+                  "#F2A124"
+                ],
+                [
+                  "Marine Steel",
+                  "#5B6470"
+                ],
+                [
+                  "Terminal Teal",
+                  "#0E7C86"
+                ]
+              ],
+              "typography": {
+                "heading": "Strong industrial sans (e.g. Archivo)",
+                "body": "Neutral sans (e.g. Roboto)"
+              },
+              "logo": {
+                "wordmark": "BASINLINE in strong caps",
+                "character": "a tanker/pipeline chevron mark",
+                "usage": "clear space wide; dark-on-light, amber as accent only"
+              },
+              "imagery": "Open-water tankers, terminals, pipelines at scale \u2014 powerful and engineered",
+              "tone": "Solid, understated, exact; heavy on measured facts over adjectives."
+            }
+          }
+        },
+        {
+          "uri": "org://enrg/terminal-west",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://enrg/gyre-marine",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://enrg/peridot-shipping",
+          "type": "ORG"
+        },
+        {
+          "uri": "person://enrg/supt",
+          "type": "PERSON"
+        },
+        {
+          "uri": "agent://enrg/logistics-ops",
+          "type": "AGENT"
+        },
+        {
+          "uri": "relationship://enrg/ops-rel",
+          "participants": [
+            "org://enrg/basinline",
+            "org://enrg/terminal-west"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://enrg/basinline": [
+              "provider"
+            ],
+            "org://enrg/terminal-west": [
+              "client"
+            ]
+          },
+          "authority": [
+            "authority://enrg/for-ops"
+          ],
+          "purpose": "energy / chemicals operating relationship"
+        },
+        {
+          "uri": "relationship://enrg/partner-net",
+          "participants": [
+            "org://enrg/basinline",
+            "org://enrg/gyre-marine",
+            "org://enrg/peridot-shipping"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://enrg/basinline": [
+              "operator"
+            ],
+            "org://enrg/gyre-marine": [
+              "partner"
+            ],
+            "org://enrg/peridot-shipping": [
+              "partner"
+            ]
+          },
+          "authority": [
+            "authority://enrg/for-ops"
+          ],
+          "purpose": "energy / chemicals partner network"
+        },
+        {
+          "uri": "authority://enrg/for-ops",
+          "holder": "org://enrg/basinline",
+          "grants": [
+            "triage_case",
+            "assign_case",
+            "close_case",
+            "approve_learning",
+            "rebalance_commitment",
+            "gate_partner",
+            "release_committed_action"
+          ],
+          "roles": [
+            "operator"
+          ]
+        },
+        {
+          "uri": "rule://enrg/ops-run",
+          "kind": "POLICY",
+          "text": "agent://enrg/logistics-ops may re-balance resource commitment and gate partner performance",
+          "grants": [
+            "rebalance_commitment",
+            "gate_partner"
+          ]
+        },
+        {
+          "uri": "rule://enrg/match-run",
+          "kind": "POLICY",
+          "text": "S2 may run Trust-weighted matching for the client",
+          "grants": [
+            "run_match"
+          ]
+        },
+        {
+          "uri": "delegation://enrg/ops",
+          "grantor": "org://enrg/basinline",
+          "grantee": "agent://enrg/logistics-ops",
+          "scope": [
+            "rule://enrg/ops-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://enrg/s2-match",
+          "grantor": "org://enrg/basinline",
+          "grantee": "agent://s2",
+          "scope": [
+            "rule://enrg/match-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "expectation://enrg/e-on-time",
+          "actor": "person://enrg/supt",
+          "subject": "refined-products tanker delivery",
+          "condition": "fully deliver the committed refined-products tanker delivery by its committed deadline",
+          "metric": "on_time",
+          "threshold": 0.95,
+          "deadline": "2026-12-31T00:00:00Z",
+          "evidence_required": "CLEAR"
+        },
+        {
+          "uri": "policy://enrg/allocation",
+          "name": "enrg allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "select the partner with the highest fit x scoped Trust",
+          "action": "allocate to the top-ranked fitted partner",
+          "scope": [
+            "expectation://enrg/e-on-time"
+          ],
+          "version": 1
+        },
+        {
+          "uri": "process://enrg/pr-core",
+          "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+          "steps": [
+            "triage",
+            "assign",
+            "execute",
+            "verify_outcome",
+            "learning"
+          ]
+        },
+        {
+          "uri": "process_instance://enrg/pi-core",
+          "process": "process://enrg/pr-core",
+          "status": "RUNNING",
+          "started_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "16a43653e976b1c527978320ea3483b97f60aea4953b60a1cfe548bd84f65816"
+    },
+    {
+      "uri": "event://enrg/s5-state-100",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-100",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-99",
+      "idempotency_key": "idem-s5-100",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "seed scoped Trust org://enrg/gyre-marine = 0.6",
+      "state_update": [
+        {
+          "uri": "trust://enrg/t-gyre-marine",
+          "subject": "org://enrg/basinline",
+          "target": "org://enrg/gyre-marine",
+          "claim": "refined-products tanker delivery reliability",
+          "context": "relationship://enrg/partner-net",
+          "score": 0.6
+        }
+      ],
+      "hash": "ea34349421de60267a0d0049d824ea515cb934a67487a39e8c7549b0d7aad694"
+    },
+    {
+      "uri": "event://enrg/s5-state-101",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-101",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-100",
+      "idempotency_key": "idem-s5-101",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "seed scoped Trust org://enrg/peridot-shipping = 0.9",
+      "state_update": [
+        {
+          "uri": "trust://enrg/t-peridot-shipping",
+          "subject": "org://enrg/basinline",
+          "target": "org://enrg/peridot-shipping",
+          "claim": "refined-products tanker delivery reliability",
+          "context": "relationship://enrg/partner-net",
+          "score": 0.9
+        }
+      ],
+      "hash": "1fbda27b2aa203ea9212546d3bc987e40bc767533c768cfb99b122465c3d4843"
+    },
+    {
+      "uri": "event://enrg/s5-state-102",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-102",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-101",
+      "idempotency_key": "idem-s5-102",
+      "signature": "signed-by-agent://enrg/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s2",
+      "detail": "register resource-commitment offer from org://enrg/gyre-marine",
+      "state_update": [
+        {
+          "uri": "offer://enrg/o-g",
+          "provider": "org://enrg/gyre-marine",
+          "price": 2000000.0,
+          "currency": "USD",
+          "capability_keys": [
+            "tanker",
+            "delivery"
+          ],
+          "fit_note": "energy / chemicals partner delivery line"
+        }
+      ],
+      "hash": "42c7fdb2008a9cda92574b50a9ec8749d4a283fec7cd816c7925b1e627e07385"
+    },
+    {
+      "uri": "event://enrg/s5-state-103",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-103",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-102",
+      "idempotency_key": "idem-s5-103",
+      "signature": "signed-by-agent://enrg/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s2",
+      "detail": "register resource-commitment offer from org://enrg/peridot-shipping",
+      "state_update": [
+        {
+          "uri": "offer://enrg/o-l",
+          "provider": "org://enrg/peridot-shipping",
+          "price": 2000000.0,
+          "currency": "USD",
+          "capability_keys": [
+            "tanker",
+            "delivery"
+          ],
+          "fit_note": "energy / chemicals partner delivery line"
+        }
+      ],
+      "hash": "d27eb9761876124d9577c5e43836580786a39d5639747e4e13cb594bb61fdaa4"
+    },
+    {
+      "uri": "event://enrg/s5-state-104",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-104",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-103",
+      "idempotency_key": "idem-s5-104",
+      "signature": "signed-by-agent://enrg/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s2",
+      "detail": "initial match ranked offer://enrg/o-l (score 0.900) \u2014 base ranking",
+      "state_update": [
+        {
+          "uri": "decision://enrg/s2-match-baseline",
+          "by": "agent://s2",
+          "authority": "delegation://enrg/s2-match",
+          "alternatives": [
+            "offer://enrg/o-l",
+            "offer://enrg/o-g",
+            "none"
+          ],
+          "confidence": 0.9,
+          "expected_outcome": "lag partner ranked #1 on existing Trust",
+          "actual_outcome": "offer://enrg/o-l",
+          "detail": [
+            {
+              "offer": "offer://enrg/o-l",
+              "provider": "org://enrg/peridot-shipping",
+              "fit": 1.0,
+              "trust": 0.9,
+              "score": 0.9
+            },
+            {
+              "offer": "offer://enrg/o-g",
+              "provider": "org://enrg/gyre-marine",
+              "fit": 1.0,
+              "trust": 0.6,
+              "score": 0.6
+            }
+          ],
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "311408165c3df0f383864dfa6aa405fb9c40a7246aeb287a4b556a5f1a2173fc"
+    },
+    {
+      "uri": "event://enrg/s4-exchange-peridot-shippingQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-105",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-104",
+      "idempotency_key": "idem-s4-105",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange peridot-shippingQ3: 2000000.0 USD org://enrg/basinline->org://enrg/peridot-shipping (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/enrg-escrow-peridot-shippingQ3",
+          "kind": "MONEY",
+          "title": "org://enrg/peridot-shipping",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://enrg/basinline for org://enrg/peridot-shipping (peridot-shippingQ3)"
+        },
+        {
+          "uri": "obligation://enrg/s4-pay-peridot-shippingQ3",
+          "subject": "org://enrg/basinline",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://enrg/peridot-shipping",
+          "due_by": "2026-08-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-02T00:00:00Z"
+        },
+        {
+          "uri": "receipt://enrg/s4-receipt-peridot-shippingQ3",
+          "kind": "SETTLEMENT",
+          "from": "org://enrg/basinline",
+          "to": "org://enrg/peridot-shipping",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-09-02T00:00:00Z"
+        },
+        {
+          "uri": "decision://enrg/s4-recon-peridot-shippingQ3",
+          "by": "agent://s4",
+          "authority": "authority://enrg/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://enrg/basinline",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "peridot-shippingQ3",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://enrg/basinline",
+            "provider": "org://enrg/peridot-shipping",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://enrg/s4-exchange-peridot-shippingQ3",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-105",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-104",
+          "idempotency_key": "idem-s4-105",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange peridot-shippingQ3: 2000000.0 USD org://enrg/basinline->org://enrg/peridot-shipping (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://enrg/basinline",
+          "provider": "org://enrg/peridot-shipping",
+          "settled_at": "2026-09-02T00:00:00Z",
+          "exchange_of": "commitment://enrg/c-peridot-shippingQ3"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://enrg/basinline",
+      "provider": "org://enrg/peridot-shipping",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "exchange_of": "commitment://enrg/c-peridot-shippingQ3",
+      "hash": "2e48af8a7cc29fc022755a9f90db246c7dee675f60586b6210e68b4c723fa7b3"
+    },
+    {
+      "uri": "event://enrg/s4-outcome-peridot-shippingQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-106",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-105",
+      "idempotency_key": "idem-s4-106",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle peridot-shippingQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+      "state_update": [
+        {
+          "uri": "event://enrg/s4-outcome-peridot-shippingQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-106",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-105",
+          "idempotency_key": "idem-s4-106",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle peridot-shippingQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+          "state_update": [],
+          "evaluation": "partial",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-08-31T00:00:00Z",
+          "settled_at": "2026-09-02T00:00:00Z",
+          "score": 0.5
+        }
+      ],
+      "evaluation": "partial",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "score": 0.5,
+      "hash": "b33d3305193e9acbb0e2e8f9eeb7b2084f7ea7a8d0f4c14e466dda85aa37d93b"
+    },
+    {
+      "uri": "event://enrg/outcome-committed-peridot-shippingQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-107",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-106",
+      "idempotency_key": "idem-s2-107",
+      "signature": "signed-by-org://enrg/peridot-shipping",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://enrg/peridot-shipping",
+      "detail": "job committed-peridot-shippingQ3 by org://enrg/peridot-shipping: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://enrg/outcome-committed-peridot-shippingQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-107",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-106",
+          "idempotency_key": "idem-s2-107",
+          "signature": "signed-by-org://enrg/peridot-shipping",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://enrg/peridot-shipping",
+          "detail": "job committed-peridot-shippingQ3 by org://enrg/peridot-shipping: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "committed-peridot-shippingQ3",
+          "provider": "org://enrg/peridot-shipping",
+          "committed_deadline": "2026-08-31T00:00:00Z",
+          "actual_completed_at": "2026-09-02T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://enrg/committed-peridot-shippingQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-refined-products tanker delivery record + enrg anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-peridot-shippingQ3",
+      "provider": "org://enrg/peridot-shipping",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-09-02T00:00:00Z",
+      "on_time": false,
+      "hash": "5c5405633361edbc3c614ccd5569cd3c15fc220487ef09b8783faedc6f1eb509"
+    },
+    {
+      "uri": "event://enrg/verify-committed-peridot-shippingQ3",
+      "type": "DECISION",
+      "event_id": "ev-s2-108",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-107",
+      "idempotency_key": "idem-s2-108",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://enrg/peridot-shipping delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://enrg/committed-peridot-shippingQ3",
+          "proposer": "agent://s5",
+          "statement": "org://enrg/peridot-shipping delivered the committed resource LATE"
+        },
+        {
+          "uri": "evidence://enrg/committed-peridot-shippingQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-refined-products tanker delivery record + enrg anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "1b5fa8602bd088cc89ecd73e8847e38904db0a8dc8501cc7d1f7db9dd723e708"
+    },
+    {
+      "uri": "event://enrg/trust-update-peridot-shipping",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-109",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-108",
+      "idempotency_key": "idem-s2-109",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "trust for org://enrg/peridot-shipping [refined-products tanker delivery reliability] 0.900 -> 0.520 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://enrg/t-peridot-shipping",
+          "subject": "org://enrg/basinline",
+          "target": "org://enrg/peridot-shipping",
+          "claim": "refined-products tanker delivery reliability",
+          "context": "relationship://enrg/partner-net",
+          "score": 0.52,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://enrg/committed-peridot-shippingQ3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "020ea3c6af0b40bd1d5cebfe673918f392633fb967cf16a33b7266b8798a8ff4"
+    },
+    {
+      "uri": "event://enrg/s4-exchange-gyre-marineQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-110",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-109",
+      "idempotency_key": "idem-s4-110",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange gyre-marineQ3: 2000000.0 USD org://enrg/basinline->org://enrg/gyre-marine (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/enrg-escrow-gyre-marineQ3",
+          "kind": "MONEY",
+          "title": "org://enrg/gyre-marine",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://enrg/basinline for org://enrg/gyre-marine (gyre-marineQ3)"
+        },
+        {
+          "uri": "obligation://enrg/s4-pay-gyre-marineQ3",
+          "subject": "org://enrg/basinline",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://enrg/gyre-marine",
+          "due_by": "2026-08-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-08-30T00:00:00Z"
+        },
+        {
+          "uri": "receipt://enrg/s4-receipt-gyre-marineQ3",
+          "kind": "SETTLEMENT",
+          "from": "org://enrg/basinline",
+          "to": "org://enrg/gyre-marine",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-08-30T00:00:00Z"
+        },
+        {
+          "uri": "decision://enrg/s4-recon-gyre-marineQ3",
+          "by": "agent://s4",
+          "authority": "authority://enrg/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://enrg/basinline",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "gyre-marineQ3",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://enrg/basinline",
+            "provider": "org://enrg/gyre-marine",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://enrg/s4-exchange-gyre-marineQ3",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-110",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-109",
+          "idempotency_key": "idem-s4-110",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange gyre-marineQ3: 2000000.0 USD org://enrg/basinline->org://enrg/gyre-marine (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://enrg/basinline",
+          "provider": "org://enrg/gyre-marine",
+          "settled_at": "2026-08-30T00:00:00Z",
+          "exchange_of": "commitment://enrg/c-gyre-marineQ3"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://enrg/basinline",
+      "provider": "org://enrg/gyre-marine",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "exchange_of": "commitment://enrg/c-gyre-marineQ3",
+      "hash": "507adafce7c7b59749ebf9ffe1dbcd1e51a02ceda231fdf8430f8506c01cc63f"
+    },
+    {
+      "uri": "event://enrg/s4-outcome-gyre-marineQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-111",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-110",
+      "idempotency_key": "idem-s4-111",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle gyre-marineQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://enrg/s4-outcome-gyre-marineQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-111",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-110",
+          "idempotency_key": "idem-s4-111",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle gyre-marineQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-08-31T00:00:00Z",
+          "settled_at": "2026-08-30T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "score": 1.0,
+      "hash": "22e857adc2b211a6990a30c642fd5daea30000e04ce4a897ccd0b4ac7bdaea03"
+    },
+    {
+      "uri": "event://enrg/outcome-committed-gyre-marineQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-112",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-111",
+      "idempotency_key": "idem-s2-112",
+      "signature": "signed-by-org://enrg/gyre-marine",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://enrg/gyre-marine",
+      "detail": "job committed-gyre-marineQ3 by org://enrg/gyre-marine: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://enrg/outcome-committed-gyre-marineQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-112",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-111",
+          "idempotency_key": "idem-s2-112",
+          "signature": "signed-by-org://enrg/gyre-marine",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://enrg/gyre-marine",
+          "detail": "job committed-gyre-marineQ3 by org://enrg/gyre-marine: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "committed-gyre-marineQ3",
+          "provider": "org://enrg/gyre-marine",
+          "committed_deadline": "2026-08-31T00:00:00Z",
+          "actual_completed_at": "2026-08-30T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://enrg/committed-gyre-marineQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-refined-products tanker delivery record + enrg anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-gyre-marineQ3",
+      "provider": "org://enrg/gyre-marine",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-08-30T00:00:00Z",
+      "on_time": true,
+      "hash": "53a2f7b44aa5d16ab0dbb47a45c38a97e60d3b701a75601641061404f4a91f1a"
+    },
+    {
+      "uri": "event://enrg/verify-committed-gyre-marineQ3",
+      "type": "DECISION",
+      "event_id": "ev-s2-113",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-112",
+      "idempotency_key": "idem-s2-113",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://enrg/gyre-marine delivered the committed resource on time' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://enrg/committed-gyre-marineQ3",
+          "proposer": "agent://s5",
+          "statement": "org://enrg/gyre-marine delivered the committed resource on time"
+        },
+        {
+          "uri": "evidence://enrg/committed-gyre-marineQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-refined-products tanker delivery record + enrg anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "591ab827fed2d919beab7f8c8c3bfc84f5d8e5488bf37e835339c224a3f4d146"
+    },
+    {
+      "uri": "event://enrg/trust-update-gyre-marine",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-114",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-113",
+      "idempotency_key": "idem-s2-114",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "trust for org://enrg/gyre-marine [refined-products tanker delivery reliability] 0.600 -> 0.695 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://enrg/t-gyre-marine",
+          "subject": "org://enrg/basinline",
+          "target": "org://enrg/gyre-marine",
+          "claim": "refined-products tanker delivery reliability",
+          "context": "relationship://enrg/partner-net",
+          "score": 0.695,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://enrg/committed-gyre-marineQ3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "33b7e469e202f225c8e4af8f0ae48971d7cf21dce048fd1003700e3ce470a9fa"
+    },
+    {
+      "uri": "event://enrg/s4-exchange-peridot-shippingQ4",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-115",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-114",
+      "idempotency_key": "idem-s4-115",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange peridot-shippingQ4: 1600000.0 USD org://enrg/basinline->org://enrg/peridot-shipping (value 1600000.0, cost 1600000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/enrg-escrow-peridot-shippingQ4",
+          "kind": "MONEY",
+          "title": "org://enrg/peridot-shipping",
+          "custody": "cleared",
+          "value": 1600000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://enrg/basinline for org://enrg/peridot-shipping (peridot-shippingQ4)"
+        },
+        {
+          "uri": "obligation://enrg/s4-pay-peridot-shippingQ4",
+          "subject": "org://enrg/basinline",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 1600000.0 USD for contracted work by org://enrg/peridot-shipping",
+          "due_by": "2026-09-15T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-17T00:00:00Z"
+        },
+        {
+          "uri": "receipt://enrg/s4-receipt-peridot-shippingQ4",
+          "kind": "SETTLEMENT",
+          "from": "org://enrg/basinline",
+          "to": "org://enrg/peridot-shipping",
+          "amount": 1600000.0,
+          "currency": "USD",
+          "received_at": "2026-09-17T00:00:00Z"
+        },
+        {
+          "uri": "decision://enrg/s4-recon-peridot-shippingQ4",
+          "by": "agent://s4",
+          "authority": "authority://enrg/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 1600000.0 USD from org://enrg/basinline",
+          "actual_outcome": "matched exactly: settled 1600000.0 USD",
+          "detail": {
+            "slug": "peridot-shippingQ4",
+            "expected": 1600000.0,
+            "actual": 1600000.0,
+            "matched": true,
+            "buyer": "org://enrg/basinline",
+            "provider": "org://enrg/peridot-shipping",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://enrg/s4-exchange-peridot-shippingQ4",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-115",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-114",
+          "idempotency_key": "idem-s4-115",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange peridot-shippingQ4: 1600000.0 USD org://enrg/basinline->org://enrg/peridot-shipping (value 1600000.0, cost 1600000.0)",
+          "state_update": [],
+          "value": 1600000.0,
+          "cost": 1600000.0,
+          "price": 1600000.0,
+          "currency": "USD",
+          "buyer": "org://enrg/basinline",
+          "provider": "org://enrg/peridot-shipping",
+          "settled_at": "2026-09-17T00:00:00Z",
+          "exchange_of": "commitment://enrg/c-peridot-shippingQ4"
+        }
+      ],
+      "value": 1600000.0,
+      "cost": 1600000.0,
+      "price": 1600000.0,
+      "currency": "USD",
+      "buyer": "org://enrg/basinline",
+      "provider": "org://enrg/peridot-shipping",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "exchange_of": "commitment://enrg/c-peridot-shippingQ4",
+      "hash": "0270d8b96eff99e1e902b86ed626e12f64016a845cf9e775f5127070b6c8e249"
+    },
+    {
+      "uri": "event://enrg/s4-outcome-peridot-shippingQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-116",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-115",
+      "idempotency_key": "idem-s4-116",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle peridot-shippingQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+      "state_update": [
+        {
+          "uri": "event://enrg/s4-outcome-peridot-shippingQ4",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-116",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-115",
+          "idempotency_key": "idem-s4-116",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle peridot-shippingQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+          "state_update": [],
+          "evaluation": "partial",
+          "expected": 1600000.0,
+          "actual": 1600000.0,
+          "deadline": "2026-09-15T00:00:00Z",
+          "settled_at": "2026-09-17T00:00:00Z",
+          "score": 0.5
+        }
+      ],
+      "evaluation": "partial",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "deadline": "2026-09-15T00:00:00Z",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "score": 0.5,
+      "hash": "c79b5fe8c70a47d7f7b11c4467808b30f8000ebf6d3a6873d7a38de7e57e95c7"
+    },
+    {
+      "uri": "event://enrg/outcome-committed-peridot-shippingQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-117",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-116",
+      "idempotency_key": "idem-s2-117",
+      "signature": "signed-by-org://enrg/peridot-shipping",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://enrg/peridot-shipping",
+      "detail": "job committed-peridot-shippingQ4 by org://enrg/peridot-shipping: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://enrg/outcome-committed-peridot-shippingQ4",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-117",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-116",
+          "idempotency_key": "idem-s2-117",
+          "signature": "signed-by-org://enrg/peridot-shipping",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://enrg/peridot-shipping",
+          "detail": "job committed-peridot-shippingQ4 by org://enrg/peridot-shipping: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "committed-peridot-shippingQ4",
+          "provider": "org://enrg/peridot-shipping",
+          "committed_deadline": "2026-09-15T00:00:00Z",
+          "actual_completed_at": "2026-09-17T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://enrg/committed-peridot-shippingQ4",
+          "kind": "ANCHORED",
+          "source": "signed committed-refined-products tanker delivery record + enrg anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-peridot-shippingQ4",
+      "provider": "org://enrg/peridot-shipping",
+      "committed_deadline": "2026-09-15T00:00:00Z",
+      "actual_completed_at": "2026-09-17T00:00:00Z",
+      "on_time": false,
+      "hash": "a61d5dee1a3f702d6e4121fa82c7faa94ef1aba2877abc8018252f4b11c62202"
+    },
+    {
+      "uri": "event://enrg/verify-committed-peridot-shippingQ4",
+      "type": "DECISION",
+      "event_id": "ev-s2-118",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-117",
+      "idempotency_key": "idem-s2-118",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://enrg/peridot-shipping delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://enrg/committed-peridot-shippingQ4",
+          "proposer": "agent://s5",
+          "statement": "org://enrg/peridot-shipping delivered the committed resource LATE"
+        },
+        {
+          "uri": "evidence://enrg/committed-peridot-shippingQ4",
+          "kind": "ANCHORED",
+          "source": "signed committed-refined-products tanker delivery record + enrg anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "76bd96e1342d0687bd4003ab4620216744071c2fc8fa7261920772a1ffe1050f"
+    },
+    {
+      "uri": "event://enrg/trust-update-peridot-shipping",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-119",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-118",
+      "idempotency_key": "idem-s2-119",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "trust for org://enrg/peridot-shipping [refined-products tanker delivery reliability] 0.520 -> 0.140 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://enrg/t-peridot-shipping",
+          "subject": "org://enrg/basinline",
+          "target": "org://enrg/peridot-shipping",
+          "claim": "refined-products tanker delivery reliability",
+          "context": "relationship://enrg/partner-net",
+          "score": 0.14,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://enrg/committed-peridot-shippingQ4"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "0efc4e2b38511e39f577a200485d3594460271ee42d7dbcaf12b8593857696d4"
+    },
+    {
+      "uri": "event://enrg/s5-state-7000",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7000",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-6999",
+      "idempotency_key": "idem-s5-7000",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "open case case://enrg/c-on-time (committed refined-products tanker delivery below target on time)",
+      "state_update": [
+        {
+          "uri": "case://enrg/c-on-time",
+          "subject": "committed refined-products tanker delivery below target on time",
+          "status": "OPEN",
+          "owner": "person://enrg/supt",
+          "actors": [
+            "org://enrg/basinline",
+            "person://enrg/supt",
+            "agent://enrg/logistics-ops"
+          ],
+          "relationships": [
+            "relationship://enrg/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target"
+        }
+      ],
+      "hash": "962e924e0e2b5226c944e44b241566bc19251ad7e4f4d7c6a2d5ff9a44125234"
+    },
+    {
+      "uri": "event://enrg/s5-state-7001",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7001",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7000",
+      "idempotency_key": "idem-s5-7001",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "record exception heartbeat on the case",
+      "state_update": [
+        {
+          "uri": "case://enrg/c-on-time",
+          "subject": "committed refined-products tanker delivery below target on time",
+          "status": "OPEN",
+          "owner": "person://enrg/supt",
+          "actors": [
+            "org://enrg/basinline",
+            "person://enrg/supt",
+            "agent://enrg/logistics-ops"
+          ],
+          "relationships": [
+            "relationship://enrg/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed refined-products tanker delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "shipping failure \u2014 org://enrg/peridot-shipping missed its committed tanker delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed tanker volume to the verified on-time carrier (gyre-marine) and gate the laggard (peridot-shipping)",
+          "metric": "metric://enrg/m-on-time"
+        }
+      ],
+      "hash": "2af313453262587810850191499b794fd8ed4e044302bd9e58580471e7a380e9"
+    },
+    {
+      "uri": "event://enrg/s5-state-7002",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7002",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7001",
+      "idempotency_key": "idem-s5-7002",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "case triage: exception assessed, root nominated",
+      "state_update": [
+        {
+          "uri": "decision://enrg/s5-triage",
+          "by": "agent://enrg/s5",
+          "authority": "authority://enrg/for-ops",
+          "alternatives": [
+            "accept",
+            "dismiss as anomaly"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "accept as a real risk",
+          "actual_outcome": "accepted; root nominated",
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "70d70b957730aeb1e95dd00c0b07d97c769731a91f18a0f0b0a6463c71cec6b6"
+    },
+    {
+      "uri": "event://enrg/s5-case-triage",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7003",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7002",
+      "idempotency_key": "idem-s5-7003",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "case triaged",
+      "state_update": [
+        {
+          "uri": "case://enrg/c-on-time",
+          "subject": "committed refined-products tanker delivery below target on time",
+          "status": "TRIAGE",
+          "owner": "person://enrg/supt",
+          "actors": [
+            "org://enrg/basinline",
+            "person://enrg/supt",
+            "agent://enrg/logistics-ops"
+          ],
+          "relationships": [
+            "relationship://enrg/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-triage"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed refined-products tanker delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "shipping failure \u2014 org://enrg/peridot-shipping missed its committed tanker delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed tanker volume to the verified on-time carrier (gyre-marine) and gate the laggard (peridot-shipping)",
+          "metric": "metric://enrg/m-on-time"
+        }
+      ],
+      "hash": "ceb62b57749bb75dc178d7c0d2e9358613f732877597a22e42ca816112263ea0"
+    },
+    {
+      "uri": "event://enrg/s5-state-7004",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7004",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7003",
+      "idempotency_key": "idem-s5-7004",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "case assigned; task becomes assigned authorized work (#8)",
+      "state_update": [
+        {
+          "uri": "task://enrg/t-rebalance",
+          "assigned_to": "agent://enrg/logistics-ops",
+          "created_by": "agent://enrg/s5",
+          "objective": "re-balance tanker allocation to the verified on-time carrier (gyre-marine) and gate the laggard (peridot-shipping)",
+          "dependencies": [],
+          "authority": "authority://enrg/for-ops",
+          "deadline": "2026-10-15T00:00:00Z",
+          "priority": 0.695,
+          "status": "ASSIGNED",
+          "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+          "why_here": "derived from the on-time exception (case OPEN)",
+          "importance": "restores terminal on-time, protecting counterpart scoped Trust",
+          "evidence": [
+            "evidence://enrg/committed-peridot-shippingQ3",
+            "evidence://enrg/committed-gyre-marineQ3",
+            "evidence://enrg/committed-peridot-shippingQ4"
+          ],
+          "decision_required": "approve the re-allocation",
+          "priority_factors": {
+            "impact": 0.85,
+            "urgency": 0.9,
+            "confidence": 0.7,
+            "irreversibility": false,
+            "relationship_importance": 0.8,
+            "cost_of_delay": 0.75
+          },
+          "assigned_capacity": 1.0
+        },
+        {
+          "uri": "decision://enrg/s5-assign",
+          "by": "person://enrg/supt",
+          "authority": "authority://enrg/for-ops",
+          "alternatives": [
+            "assign",
+            "defer"
+          ],
+          "confidence": 0.95,
+          "expected_outcome": "task in progress",
+          "detail": {
+            "task": "task://enrg/t-rebalance",
+            "assigned_to": "agent://enrg/logistics-ops",
+            "authority": "authority://enrg/for-ops",
+            "priority": 0.695,
+            "capacity": 1.0
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "690738a1a83e7eb6392eaf702749d069a2b78a83fd536a775a1f791f131ecac1"
+    },
+    {
+      "uri": "event://enrg/s5-case-assigned",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7005",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7004",
+      "idempotency_key": "idem-s5-7005",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "case assigned",
+      "state_update": [
+        {
+          "uri": "case://enrg/c-on-time",
+          "subject": "committed refined-products tanker delivery below target on time",
+          "status": "ASSIGNED",
+          "owner": "person://enrg/supt",
+          "actors": [
+            "org://enrg/basinline",
+            "person://enrg/supt",
+            "agent://enrg/logistics-ops"
+          ],
+          "relationships": [
+            "relationship://enrg/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-assigned"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed refined-products tanker delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "shipping failure \u2014 org://enrg/peridot-shipping missed its committed tanker delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed tanker volume to the verified on-time carrier (gyre-marine) and gate the laggard (peridot-shipping)",
+          "metric": "metric://enrg/m-on-time"
+        }
+      ],
+      "hash": "da519adbfa2b069e857c483274f9935c2464fd0e9783bf7e1212979659efd28f"
+    },
+    {
+      "uri": "event://enrg/s5-case-inprogress",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7006",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7005",
+      "idempotency_key": "idem-s5-7006",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "task execution began",
+      "state_update": [
+        {
+          "uri": "case://enrg/c-on-time",
+          "subject": "committed refined-products tanker delivery below target on time",
+          "status": "IN_PROGRESS",
+          "owner": "person://enrg/supt",
+          "actors": [
+            "org://enrg/basinline",
+            "person://enrg/supt",
+            "agent://enrg/logistics-ops"
+          ],
+          "relationships": [
+            "relationship://enrg/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-inprogress"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed refined-products tanker delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "shipping failure \u2014 org://enrg/peridot-shipping missed its committed tanker delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed tanker volume to the verified on-time carrier (gyre-marine) and gate the laggard (peridot-shipping)",
+          "metric": "metric://enrg/m-on-time"
+        }
+      ],
+      "hash": "8fb11d8dd42a0a0043dfa30032ce11f8fc1398b06a50ee8eec092f417da3ca59"
+    },
+    {
+      "uri": "event://enrg/s5-state-7007",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7007",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7006",
+      "idempotency_key": "idem-s5-7007",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "policy updated: allocate by fit AND scoped Trust",
+      "state_update": [
+        {
+          "uri": "policy://enrg/allocation",
+          "name": "enrg allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "select by fit x scoped Trust; laggard (< floor) needs a performance gate",
+          "action": "allocate to the top-ranked fitted partner; gate laggard",
+          "scope": [
+            "expectation://enrg/e-on-time"
+          ],
+          "version": 2,
+          "policy_status": "REVISED"
+        }
+      ],
+      "hash": "d9d392fbc68da0b3cc8e3a5e053e5e95ea06bc61042f680426710f4b2e7352ca"
+    },
+    {
+      "uri": "event://enrg/s5-state-7008",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7008",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7007",
+      "idempotency_key": "idem-s5-7008",
+      "signature": "signed-by-agent://enrg/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s2",
+      "detail": "task effect: next committed work ranked offer://enrg/o-g (score 0.695)",
+      "state_update": [
+        {
+          "uri": "decision://enrg/s5-match-recorded",
+          "by": "agent://s2",
+          "authority": "delegation://enrg/s2-match",
+          "alternatives": [
+            "offer://enrg/o-g",
+            "none"
+          ],
+          "confidence": 0.92,
+          "expected_outcome": "good partner ranked #1",
+          "actual_outcome": "offer://enrg/o-g",
+          "detail": [
+            {
+              "offer": "offer://enrg/o-g",
+              "provider": "org://enrg/gyre-marine",
+              "fit": 1.0,
+              "trust": 0.695,
+              "score": 0.695
+            }
+          ],
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "5569bccb16bca0f9a520daeecc5ef9351d9815e196aa32fb097232d489b4df24"
+    },
+    {
+      "uri": "event://enrg/s5-escalate",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7009",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7008",
+      "idempotency_key": "idem-s5-7009",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "escalation: the committed action is irreversible and cost-unknowable once done (\u00a76 floor)",
+      "state_update": [
+        {
+          "uri": "escalation://enrg/escalate-release",
+          "trigger": "external tanker discharge \u2014 irreversible and cost-unknowable once loaded",
+          "severity": "WARN",
+          "recipient": "person://enrg/supt",
+          "deadline": "2026-11-15T00:00:00Z",
+          "fallback": "agent://enrg/s4",
+          "authority": "authority://enrg/for-ops",
+          "acknowledgement": "approve then execute"
+        }
+      ],
+      "hash": "38f6bc4a3f7b19fecda6cebb432a92fc4681f229edd248be7a65a70bcbc22cc3"
+    },
+    {
+      "uri": "event://enrg/owner-human",
+      "type": "DECISION",
+      "event_id": "ev-enrg-7010",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-enrg-7009",
+      "idempotency_key": "idem-enrg-7010",
+      "signature": "signed-by-person://enrg/supt",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "person://enrg/supt",
+      "detail": "person://enrg/supt signed approval to release the committed action (\u00a76 floor)",
+      "state_update": [
+        {
+          "uri": "decision://enrg/owner-human",
+          "by": "person://enrg/supt",
+          "authority": "authority://enrg/for-ops",
+          "alternatives": [
+            "release_in_full",
+            "hold",
+            "release_partial_and_hold_if_shortfall",
+            "open_dispute"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "release to the verified partner",
+          "actual_outcome": "release_in_full (human approved)",
+          "detail": {
+            "task": "task://enrg/t-rebalance",
+            "action": "release_committed_action",
+            "irreversible_failure": true,
+            "cost_failure_unknowable": true
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "555963839da242a3722d36a3843eb5d913ed36fef4b96cccbacec43d1177a696"
+    },
+    {
+      "uri": "event://enrg/action-release",
+      "type": "ACTION",
+      "event_id": "ev-enrg-7011",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-enrg-7010",
+      "idempotency_key": "idem-enrg-7011",
+      "signature": "signed-by-person://enrg/supt",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/logistics-ops",
+      "detail": "rebalance_commitment executed after human approval",
+      "worker": "agent://enrg/logistics-ops",
+      "action": "rebalance_commitment",
+      "task_id": "t-rebalance",
+      "tier": "human",
+      "outcome": "done",
+      "state_update": [],
+      "hash": "280d135c5bdecb1eebb4bf8fdfc8f0231c9b35fd982f5b7d527d4924b6e5a1e8"
+    },
+    {
+      "uri": "event://enrg/s5-case-blocked",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7012",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7011",
+      "idempotency_key": "idem-s5-7012",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "case blocked pending the rallied committed delivery's verification",
+      "state_update": [
+        {
+          "uri": "case://enrg/c-on-time",
+          "subject": "committed refined-products tanker delivery below target on time",
+          "status": "BLOCKED",
+          "owner": "person://enrg/supt",
+          "actors": [
+            "org://enrg/basinline",
+            "person://enrg/supt",
+            "agent://enrg/logistics-ops"
+          ],
+          "relationships": [
+            "relationship://enrg/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-blocked"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed refined-products tanker delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "shipping failure \u2014 org://enrg/peridot-shipping missed its committed tanker delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed tanker volume to the verified on-time carrier (gyre-marine) and gate the laggard (peridot-shipping)",
+          "metric": "metric://enrg/m-on-time"
+        }
+      ],
+      "hash": "cd0a8254c806920a62be3e32a5c4ffbbfac94d9ca7792141e9734c7e97cba201"
+    },
+    {
+      "uri": "event://enrg/s5-state-7013",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7013",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7012",
+      "idempotency_key": "idem-s5-7013",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "rallied committed work allocated to org://enrg/gyre-marine (the fix)",
+      "state_update": [
+        {
+          "uri": "commitment://enrg/c-gyre-marine-followup",
+          "by": "agent://enrg/s5",
+          "to": "org://enrg/gyre-marine",
+          "obligation": "offer://enrg/o-g",
+          "expectation": "expectation://enrg/e-routed-gyre-marineR",
+          "status": "AGREED",
+          "terms": {
+            "kind": "refined-products tanker delivery follow-up",
+            "signed": true
+          },
+          "agreed_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "bd9ccc68072d68cf29fd895da2d2e6a8d30cbb39b57b5343bd6f2feb97a46f81"
+    },
+    {
+      "uri": "event://enrg/s5-state-7014",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7014",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7013",
+      "idempotency_key": "idem-s5-7014",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "register follow-on expectation",
+      "state_update": [
+        {
+          "uri": "expectation://enrg/e-gyre-marineR",
+          "actor": "person://enrg/supt",
+          "subject": "refined-products tanker delivery",
+          "condition": "fully deliver the committed resource by its committed deadline",
+          "metric": "settled_value",
+          "threshold": 2000000.0,
+          "deadline": "2026-11-15T00:00:00Z",
+          "evidence_required": "CLEAR"
+        }
+      ],
+      "hash": "1bf932a2ee4b8631a3b6d10235300ea5a49a893eca35cddd5d67f913610a2ab1"
+    },
+    {
+      "uri": "event://enrg/s4-exchange-gyre-marineR",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-7015",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7014",
+      "idempotency_key": "idem-s4-7015",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange gyre-marineR: 2000000.0 USD org://enrg/basinline->org://enrg/gyre-marine (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/enrg-escrow-gyre-marineR",
+          "kind": "MONEY",
+          "title": "org://enrg/gyre-marine",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://enrg/basinline for org://enrg/gyre-marine (gyre-marineR)"
+        },
+        {
+          "uri": "obligation://enrg/s4-pay-gyre-marineR",
+          "subject": "org://enrg/basinline",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://enrg/gyre-marine",
+          "due_by": "2026-11-15T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-11-12T00:00:00Z"
+        },
+        {
+          "uri": "receipt://enrg/s4-receipt-gyre-marineR",
+          "kind": "SETTLEMENT",
+          "from": "org://enrg/basinline",
+          "to": "org://enrg/gyre-marine",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-11-12T00:00:00Z"
+        },
+        {
+          "uri": "decision://enrg/s4-recon-gyre-marineR",
+          "by": "agent://s4",
+          "authority": "authority://enrg/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://enrg/basinline",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "gyre-marineR",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://enrg/basinline",
+            "provider": "org://enrg/gyre-marine",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://enrg/s4-exchange-gyre-marineR",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-7015",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-7014",
+          "idempotency_key": "idem-s4-7015",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange gyre-marineR: 2000000.0 USD org://enrg/basinline->org://enrg/gyre-marine (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://enrg/basinline",
+          "provider": "org://enrg/gyre-marine",
+          "settled_at": "2026-11-12T00:00:00Z",
+          "exchange_of": "commitment://enrg/c-gyre-marineR"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://enrg/basinline",
+      "provider": "org://enrg/gyre-marine",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "exchange_of": "commitment://enrg/c-gyre-marineR",
+      "hash": "ecf82d9191d7433d84f4afc65edf922ebc6ec1fa25ed370a1d3a365ea9ff511b"
+    },
+    {
+      "uri": "event://enrg/s4-outcome-gyre-marineR",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-7016",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7015",
+      "idempotency_key": "idem-s4-7016",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle gyre-marineR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://enrg/s4-outcome-gyre-marineR",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-7016",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-7015",
+          "idempotency_key": "idem-s4-7016",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle gyre-marineR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-11-15T00:00:00Z",
+          "settled_at": "2026-11-12T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "score": 1.0,
+      "hash": "1d58f075783ae4267c2a87f60cb526a771655c10d2bafaea662462ead4fbe54c"
+    },
+    {
+      "uri": "event://enrg/outcome-routed-gyre-marineR",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-7017",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7016",
+      "idempotency_key": "idem-s2-7017",
+      "signature": "signed-by-org://enrg/gyre-marine",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://enrg/gyre-marine",
+      "detail": "job routed-gyre-marineR by org://enrg/gyre-marine: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://enrg/outcome-routed-gyre-marineR",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-7017",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-7016",
+          "idempotency_key": "idem-s2-7017",
+          "signature": "signed-by-org://enrg/gyre-marine",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://enrg/gyre-marine",
+          "detail": "job routed-gyre-marineR by org://enrg/gyre-marine: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "routed-gyre-marineR",
+          "provider": "org://enrg/gyre-marine",
+          "committed_deadline": "2026-11-15T00:00:00Z",
+          "actual_completed_at": "2026-11-12T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://enrg/routed-gyre-marineR",
+          "kind": "ANCHORED",
+          "source": "signed committed-refined-products tanker delivery record + enrg anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "routed-gyre-marineR",
+      "provider": "org://enrg/gyre-marine",
+      "committed_deadline": "2026-11-15T00:00:00Z",
+      "actual_completed_at": "2026-11-12T00:00:00Z",
+      "on_time": true,
+      "hash": "b0c4bef544ea09839fb0685033e9cc1b3439b45fe12969f9f96729faece40290"
+    },
+    {
+      "uri": "event://enrg/verify-routed-gyre-marineR",
+      "type": "DECISION",
+      "event_id": "ev-s2-7018",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7017",
+      "idempotency_key": "idem-s2-7018",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://enrg/gyre-marine delivered the rallied committed refined-products tanker delivery on time' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://enrg/routed-gyre-marineR",
+          "proposer": "agent://s5",
+          "statement": "org://enrg/gyre-marine delivered the rallied committed refined-products tanker delivery on time"
+        },
+        {
+          "uri": "evidence://enrg/routed-gyre-marineR",
+          "kind": "ANCHORED",
+          "source": "signed committed-refined-products tanker delivery record + enrg anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "3d8143928c5e266579093d7f937d23fae02de0d6f61ef1732bd0d8f15ef64a45"
+    },
+    {
+      "uri": "event://enrg/trust-update-gyre-marine",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-7019",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7018",
+      "idempotency_key": "idem-s2-7019",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "trust for org://enrg/gyre-marine [refined-products tanker delivery reliability] 0.695 -> 0.790 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://enrg/t-gyre-marine",
+          "subject": "org://enrg/basinline",
+          "target": "org://enrg/gyre-marine",
+          "claim": "refined-products tanker delivery reliability",
+          "context": "relationship://enrg/partner-net",
+          "score": 0.79,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://enrg/routed-gyre-marineR"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "d79d3b090b2ad019ac4f6f46deab5856887c664c095074b1b6ce1843c00ce347"
+    },
+    {
+      "uri": "event://enrg/s5-case-resolved",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7020",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7019",
+      "idempotency_key": "idem-s5-7020",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "exception resolved: rallied committed work verified on time; forward on-time = 1.0; cumulative 2/4",
+      "state_update": [
+        {
+          "uri": "case://enrg/c-on-time",
+          "subject": "committed refined-products tanker delivery below target on time",
+          "status": "RESOLVED",
+          "owner": "person://enrg/supt",
+          "actors": [
+            "org://enrg/basinline",
+            "person://enrg/supt",
+            "agent://enrg/logistics-ops"
+          ],
+          "relationships": [
+            "relationship://enrg/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-blocked"
+            },
+            {
+              "status": "RESOLVED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-resolved"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed refined-products tanker delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "shipping failure \u2014 org://enrg/peridot-shipping missed its committed tanker delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed tanker volume to the verified on-time carrier (gyre-marine) and gate the laggard (peridot-shipping)",
+          "metric": "metric://enrg/m-on-time",
+          "verified_outcome": "forward on-time restored to 1.0; org://enrg/gyre-marine delivered the rallied refined-products tanker delivery on time (evidence://enrg/routed-gyre-marineR); org://enrg/gyre-marine Trust 0.79"
+        }
+      ],
+      "hash": "105a8951da9e743c02b36fd5f5888c8eabdba414b267dc45340e0d8fbd690115"
+    },
+    {
+      "uri": "event://enrg/s5-state-7021",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7021",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7020",
+      "idempotency_key": "idem-s5-7021",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "learning entry decision://enrg/learning: Routing tanker volume via a carrier with verified on-time discharge (gyre-marine), while gating the laggard (peridot-shipping), restored on-time delivery. Verified good discharges compound scoped Trust.",
+      "state_update": [
+        {
+          "uri": "decision://enrg/learning",
+          "by": "agent://enrg/s5",
+          "authority": "authority://enrg/for-operations",
+          "subject": "refined-products tanker delivery on-time management",
+          "expected": 0.95,
+          "actual": 1.0,
+          "variance": 0.05,
+          "why": "Routing tanker volume via a carrier with verified on-time discharge (gyre-marine), while gating the laggard (peridot-shipping), restored on-time delivery. Verified good discharges compound scoped Trust.",
+          "change_future_policy": "ALLOCATE by fit AND scoped Trust; carriers below the Trust floor need a gate before new charter terms.",
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "ec7ff0253df28992251ceebb25a506b419327126a7e864631f6ee101d0c8a939"
+    },
+    {
+      "uri": "event://enrg/s5-state-7022",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7022",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7021",
+      "idempotency_key": "idem-s5-7022",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "close case; learning recorded; future policy updated",
+      "state_update": [
+        {
+          "uri": "policy://enrg/allocation",
+          "name": "enrg allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "ALLOCATE by fit AND scoped Trust; carriers below the Trust floor need a gate before new charter terms. (learned 2026-09-01)",
+          "action": "allocate to the top-ranked fitted partner; gate laggard",
+          "scope": [
+            "expectation://enrg/e-on-time"
+          ],
+          "version": 3,
+          "policy_status": "EFFECTIVE",
+          "learning": "decision://enrg/learning"
+        }
+      ],
+      "hash": "6fc3f9a351289a65aad9e93d92f14b19ee5516d7cb250dae69cb97432363c43b"
+    },
+    {
+      "uri": "event://enrg/s5-case-closed",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7022",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7021",
+      "idempotency_key": "idem-s5-7022",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "case closed",
+      "state_update": [
+        {
+          "uri": "case://enrg/c-on-time",
+          "subject": "committed refined-products tanker delivery below target on time",
+          "status": "CLOSED",
+          "owner": "person://enrg/supt",
+          "actors": [
+            "org://enrg/basinline",
+            "person://enrg/supt",
+            "agent://enrg/logistics-ops"
+          ],
+          "relationships": [
+            "relationship://enrg/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-blocked"
+            },
+            {
+              "status": "RESOLVED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-resolved"
+            },
+            {
+              "status": "CLOSED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://enrg/s5-case-closed"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed refined-products tanker delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "shipping failure \u2014 org://enrg/peridot-shipping missed its committed tanker delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed tanker volume to the verified on-time carrier (gyre-marine) and gate the laggard (peridot-shipping)",
+          "metric": "metric://enrg/m-on-time",
+          "verified_outcome": "forward on-time restored to 1.0; org://enrg/gyre-marine delivered the rallied refined-products tanker delivery on time (evidence://enrg/routed-gyre-marineR); org://enrg/gyre-marine Trust 0.79"
+        }
+      ],
+      "hash": "f70d7fa7ae40d30d1e37ada2c5d94e4cfcbb4e606ef7729caf8f06abf7392eac"
+    },
+    {
+      "uri": "event://enrg/s5-state-7023",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7023",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7022",
+      "idempotency_key": "idem-s5-7023",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "register goal + ledger-projected metrics",
+      "state_update": [
+        {
+          "uri": "goal://enrg/g-core",
+          "for": "org://enrg/basinline",
+          "statement": "Consistently deliver committed refined-products tanker terms on time so term customers keep contracting Basinline.",
+          "horizon": "quarter",
+          "owner": "person://enrg/supt",
+          "metrics": [
+            "metric://enrg/m-on-time",
+            "metric://enrg/m-trust",
+            "metric://enrg/m-settled-value"
+          ]
+        },
+        {
+          "uri": "metric://enrg/m-on-time",
+          "name": "Committed-refined-products tanker delivery on-time rate",
+          "definition": "share of committed refined-products tanker delivery deliveries verified on time",
+          "unit": "fraction",
+          "formula": "on_time / (on_time + late) from ledger",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 0.95,
+          "threshold": 0.8,
+          "period": "quarter",
+          "source": "ledger committed-delivery records",
+          "owner": "person://enrg/supt",
+          "actual": 0.5,
+          "forecast": 0.5,
+          "variance": -0.45,
+          "root_cause": "shipping failure \u2014 org://enrg/peridot-shipping missed its committed tanker delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED"
+        },
+        {
+          "uri": "metric://enrg/m-trust",
+          "name": "Partner scoped-trust score",
+          "definition": "best scoped Trust on the partner network (per \u00a75)",
+          "unit": "score",
+          "formula": "T(subject->target, claim, context) per \u00a75",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 0.9,
+          "threshold": 0.6,
+          "period": "rolling",
+          "source": "S5 scoped Trust graph",
+          "owner": "person://enrg/supt",
+          "actual": 0.79,
+          "forecast": 0.92,
+          "variance": -0.11,
+          "root_cause_status": "UNKNOWN"
+        },
+        {
+          "uri": "metric://enrg/m-settled-value",
+          "name": "Settled committed value",
+          "definition": "value of EXCHANGE events settled this period",
+          "unit": "USD",
+          "formula": "sum(EXCHANGE.price) from ledger",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 7600000.0,
+          "threshold": 4180000.0000000005,
+          "period": "quarter",
+          "source": "ledger EXCHANGE events",
+          "owner": "person://enrg/supt",
+          "actual": 7600000.0,
+          "forecast": 8740000.0,
+          "variance": 0.0,
+          "root_cause_status": "UNKNOWN"
+        }
+      ],
+      "hash": "a90a2fe25b1404feae4253a91f116693ca72f55fb58daa52c33789440b467e4b"
+    },
+    {
+      "uri": "event://enrg/s5-state-7024",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7024",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7023",
+      "idempotency_key": "idem-s5-7024",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "goal->metric->variance->decision->action->outcome",
+      "state_update": [
+        {
+          "uri": "decision://enrg/s5-metric-loop",
+          "by": "agent://enrg/s5",
+          "authority": "authority://enrg/for-operations",
+          "alternatives": [
+            "do nothing",
+            "rebalance provider allocation"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "metric://enrg/m-on-time variance reduced toward target",
+          "detail": {
+            "goal": "goal://enrg/g-core",
+            "metric": "metric://enrg/m-on-time",
+            "actual": 0.5,
+            "variance": -0.45,
+            "action": "task://enrg/t-rebalance",
+            "outcome": "event://enrg/outcome-routed-gyre-marineR"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "10bcf66d4ff72eb7ec5d0ac4478d898d8421bc5f067bdfb77b8009451756b23c"
+    },
+    {
+      "uri": "event://enrg/s5-state-7025",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7025",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7024",
+      "idempotency_key": "idem-s5-7025",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "priority-ordered attention list",
+      "state_update": [
+        {
+          "uri": "decision://enrg/s5-attention",
+          "by": "agent://enrg/s5",
+          "authority": "authority://enrg/for-ops",
+          "confidence": 0.9,
+          "expected_outcome": "top-of-attention ranked",
+          "actual_outcome": "attention prioritized by derived score",
+          "detail": {
+            "attention": [
+              {
+                "uri": "task://enrg/t-rebalance",
+                "label": "re-balance committed work",
+                "priority": 0.695
+              },
+              {
+                "uri": "task://enrg/t-followup",
+                "label": "rallied follow-on (good partner)",
+                "priority": 0.58
+              }
+            ]
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "d571474ec8b03efa05faaa0712df99a5934309e91c0731e19070068ef2fe9886"
+    },
+    {
+      "uri": "event://enrg/s5-state-7026",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7026",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7025",
+      "idempotency_key": "idem-s5-7026",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "dependency dependency://enrg/d-rb-enables-fu: task://enrg/t-rebalance ENABLES task://enrg/t-followup",
+      "state_update": [
+        {
+          "uri": "dependency://enrg/d-rb-enables-fu",
+          "from": "task://enrg/t-rebalance",
+          "to": "task://enrg/t-followup",
+          "kind": "ENABLES"
+        }
+      ],
+      "hash": "da449126141855efd1fc611e337ade989b9b497faccd5103a33678834ab8d35f"
+    },
+    {
+      "uri": "event://enrg/s5-state-7027",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7027",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7026",
+      "idempotency_key": "idem-s5-7027",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "dependency dependency://enrg/d-fu-requires-pol: task://enrg/t-followup REQUIRES policy://enrg/allocation",
+      "state_update": [
+        {
+          "uri": "dependency://enrg/d-fu-requires-pol",
+          "from": "task://enrg/t-followup",
+          "to": "policy://enrg/allocation",
+          "kind": "REQUIRES"
+        }
+      ],
+      "hash": "67ddc3267f00f5319aa75f704c14af32bf2f94f25d6fd5b0b34624c1ced3c670"
+    },
+    {
+      "uri": "event://enrg/s5-state-7028",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7028",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7027",
+      "idempotency_key": "idem-s5-7028",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "dependency dependency://enrg/d-fu-blocks-case: task://enrg/t-followup BLOCKS case://enrg/c-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://enrg/d-fu-blocks-case",
+          "from": "task://enrg/t-followup",
+          "to": "case://enrg/c-on-time",
+          "kind": "BLOCKS"
+        }
+      ],
+      "hash": "8ace9746c4a2e0ca28311c7b7f39a191a39de70ad71b3526a8abba46183f1b85"
+    },
+    {
+      "uri": "event://enrg/s5-state-7029",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7029",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7028",
+      "idempotency_key": "idem-s5-7029",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "dependency dependency://enrg/d-case-from-metric: case://enrg/c-on-time DERIVED_FROM metric://enrg/m-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://enrg/d-case-from-metric",
+          "from": "case://enrg/c-on-time",
+          "to": "metric://enrg/m-on-time",
+          "kind": "DERIVED_FROM"
+        }
+      ],
+      "hash": "034ea33d82c9899745b3380155c1e63b094ab9ed33d05809f2429e18ea50076b"
+    },
+    {
+      "uri": "event://enrg/s5-state-7030",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7030",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7029",
+      "idempotency_key": "idem-s5-7030",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "dependency dependency://enrg/d-metric-impacts-goal: metric://enrg/m-on-time IMPACTS goal://enrg/g-core",
+      "state_update": [
+        {
+          "uri": "dependency://enrg/d-metric-impacts-goal",
+          "from": "metric://enrg/m-on-time",
+          "to": "goal://enrg/g-core",
+          "kind": "IMPACTS"
+        }
+      ],
+      "hash": "215116cbba9387b4bcfa21c25f71f906813137a2ddb0578284a316abc8777ab0"
+    },
+    {
+      "uri": "event://enrg/s5-state-7031",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7031",
+      "correlation_id": "corr-enrg-bol-1",
+      "causation_id": "ev-s5-7030",
+      "idempotency_key": "idem-s5-7031",
+      "signature": "signed-by-agent://enrg/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://enrg/s5",
+      "detail": "dependency dependency://enrg/d-rb-blocks-case: task://enrg/t-rebalance BLOCKS case://enrg/c-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://enrg/d-rb-blocks-case",
+          "from": "task://enrg/t-rebalance",
+          "to": "case://enrg/c-on-time",
+          "kind": "BLOCKS"
+        }
+      ],
+      "hash": "f7b332e2349ac654228940578bca90c6b2180c5e4cbc98ff8025c55685dfeec4"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+[
+  {
+    "uri": "decision://enrg/s2-match-baseline",
+    "by": "agent://s2",
+    "authority": "delegation://enrg/s2-match",
+    "alternatives": [
+      "offer://enrg/o-l",
+      "offer://enrg/o-g",
+      "none"
+    ],
+    "confidence": 0.9,
+    "expected_outcome": "lag partner ranked #1 on existing Trust",
+    "actual_outcome": "offer://enrg/o-l",
+    "detail": [
+      {
+        "offer": "offer://enrg/o-l",
+        "provider": "org://enrg/peridot-shipping",
+        "fit": 1.0,
+        "trust": 0.9,
+        "score": 0.9
+      },
+      {
+        "offer": "offer://enrg/o-g",
+        "provider": "org://enrg/gyre-marine",
+        "fit": 1.0,
+        "trust": 0.6,
+        "score": 0.6
+      }
+    ],
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://enrg/s4-recon-peridot-shippingQ3",
+    "by": "agent://s4",
+    "authority": "authority://enrg/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://enrg/basinline",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "peridot-shippingQ3",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://enrg/basinline",
+      "provider": "org://enrg/peridot-shipping",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://enrg/s4-recon-gyre-marineQ3",
+    "by": "agent://s4",
+    "authority": "authority://enrg/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://enrg/basinline",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "gyre-marineQ3",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://enrg/basinline",
+      "provider": "org://enrg/gyre-marine",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://enrg/s4-recon-peridot-shippingQ4",
+    "by": "agent://s4",
+    "authority": "authority://enrg/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 1600000.0 USD from org://enrg/basinline",
+    "actual_outcome": "matched exactly: settled 1600000.0 USD",
+    "detail": {
+      "slug": "peridot-shippingQ4",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "matched": true,
+      "buyer": "org://enrg/basinline",
+      "provider": "org://enrg/peridot-shipping",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://enrg/s5-triage",
+    "by": "agent://enrg/s5",
+    "authority": "authority://enrg/for-ops",
+    "alternatives": [
+      "accept",
+      "dismiss as anomaly"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "accept as a real risk",
+    "actual_outcome": "accepted; root nominated",
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://enrg/s5-assign",
+    "by": "person://enrg/supt",
+    "authority": "authority://enrg/for-ops",
+    "alternatives": [
+      "assign",
+      "defer"
+    ],
+    "confidence": 0.95,
+    "expected_outcome": "task in progress",
+    "detail": {
+      "task": "task://enrg/t-rebalance",
+      "assigned_to": "agent://enrg/logistics-ops",
+      "authority": "authority://enrg/for-ops",
+      "priority": 0.695,
+      "capacity": 1.0
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://enrg/s5-match-recorded",
+    "by": "agent://s2",
+    "authority": "delegation://enrg/s2-match",
+    "alternatives": [
+      "offer://enrg/o-g",
+      "none"
+    ],
+    "confidence": 0.92,
+    "expected_outcome": "good partner ranked #1",
+    "actual_outcome": "offer://enrg/o-g",
+    "detail": [
+      {
+        "offer": "offer://enrg/o-g",
+        "provider": "org://enrg/gyre-marine",
+        "fit": 1.0,
+        "trust": 0.695,
+        "score": 0.695
+      }
+    ],
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://enrg/owner-human",
+    "by": "person://enrg/supt",
+    "authority": "authority://enrg/for-ops",
+    "alternatives": [
+      "release_in_full",
+      "hold",
+      "release_partial_and_hold_if_shortfall",
+      "open_dispute"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "release to the verified partner",
+    "actual_outcome": "release_in_full (human approved)",
+    "detail": {
+      "task": "task://enrg/t-rebalance",
+      "action": "release_committed_action",
+      "irreversible_failure": true,
+      "cost_failure_unknowable": true
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://enrg/s4-recon-gyre-marineR",
+    "by": "agent://s4",
+    "authority": "authority://enrg/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://enrg/basinline",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "gyre-marineR",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://enrg/basinline",
+      "provider": "org://enrg/gyre-marine",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://enrg/learning",
+    "by": "agent://enrg/s5",
+    "authority": "authority://enrg/for-operations",
+    "subject": "refined-products tanker delivery on-time management",
+    "expected": 0.95,
+    "actual": 1.0,
+    "variance": 0.05,
+    "why": "Routing tanker volume via a carrier with verified on-time discharge (gyre-marine), while gating the laggard (peridot-shipping), restored on-time delivery. Verified good discharges compound scoped Trust.",
+    "change_future_policy": "ALLOCATE by fit AND scoped Trust; carriers below the Trust floor need a gate before new charter terms.",
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://enrg/s5-metric-loop",
+    "by": "agent://enrg/s5",
+    "authority": "authority://enrg/for-operations",
+    "alternatives": [
+      "do nothing",
+      "rebalance provider allocation"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "metric://enrg/m-on-time variance reduced toward target",
+    "detail": {
+      "goal": "goal://enrg/g-core",
+      "metric": "metric://enrg/m-on-time",
+      "actual": 0.5,
+      "variance": -0.45,
+      "action": "task://enrg/t-rebalance",
+      "outcome": "event://enrg/outcome-routed-gyre-marineR"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://enrg/s5-attention",
+    "by": "agent://enrg/s5",
+    "authority": "authority://enrg/for-ops",
+    "confidence": 0.9,
+    "expected_outcome": "top-of-attention ranked",
+    "actual_outcome": "attention prioritized by derived score",
+    "detail": {
+      "attention": [
+        {
+          "uri": "task://enrg/t-rebalance",
+          "label": "re-balance committed work",
+          "priority": 0.695
+        },
+        {
+          "uri": "task://enrg/t-followup",
+          "label": "rallied follow-on (good partner)",
+          "priority": 0.58
+        }
+      ]
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  }
+]

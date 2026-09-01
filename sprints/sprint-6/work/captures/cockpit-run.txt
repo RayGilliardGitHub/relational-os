@@ -1,0 +1,154 @@
+=== Sprint 5 — Business Operating Layer (the product) — Quoteko ===
+
+--- [S1/S2/S3/S4/S5] re-used Sprint-1..4 checks (no regression on the full state) ---
+
+  [check:s1]
+    [PASS] role resolved as customer  — got customer
+    [PASS] role is relationship-scoped (absent elsewhere)  — got None
+    [PASS] authz permitted within the relationship  — Permission(request_quote, scoped@['request_quote'])
+    [PASS] authz denied outside the relationship  — no such relationship relationship://qk/other
+    [PASS] delegation grants scoped capability  — Permission(run_matching, scoped@['run_matching'])
+    [PASS] revoked delegation -> denial (capability voided)  — delegation://qk/s2-match not active (REVOKED)
+
+  [check:roundtrip]
+    [PASS] ledger hash-chain + signatures intact  — ok
+    [PASS] graph state reconstructs to ledger events  — 122 graph objects rebuilt from 64 events
+    [PASS] ledger==history & graph==state (not conflated)  — history=True, state-objects=True
+
+  [check:s5]
+    [PASS] capture -> signed evidence:// on Graph  — {'uri': 'evidence://qk/job-norcrete', 'kind': 'ANCHORED', 'source': 'signed provider job-completion record + S5 anchor', 'verity': {'procedure': 'completion-anchor-conformance', 'confidence': 0.98}, 'captured_at': '2026-08-31T23:45:57Z'}
+    [PASS] capture -> OUTCOME event on Ledger  — 1 ledger entry
+    [PASS] evidence verity = procedure + confidence (degree under procedure, §3.17)  — {'procedure': 'completion-anchor-conformance', 'confidence': 0.98}
+    [PASS] trust objects carry subject/target/claim/context + score  — norcrete=0.528, solarworks=0.904
+    [PASS] trust stays clamped to [0,1)  — in range
+    [PASS] generalco (different claim) untouched by updates (scoped, not global)  — score=0.42
+    [PASS] trust write -> signed STATE_CHANGE ledger event  — 1 entry, sig=signed-by-agent://s5
+
+  [check:s3]
+    [PASS] commit -> commitment:// AGREED on Graph  — 'AGREED'
+    [PASS] commit -> signed STATE_CHANGE ledger event  — 1 entry
+    [PASS] orchestrate -> signed decision:// for the split  — [{'task_id': 't1', 'action': 'prepare_work_order_and_schedule', 'worker': 'agent://w-local', 'seam_tier': 'local', 'tier': 'local', 'reversible': True, 'cost_knowable': True, 'authority': 'delegation://qk/w-local', 'status': 'PENDING'}, {'task_id': 't2', 'action': 'dispatch_dispatcher_and_verify_materials', 'worker': 'agent://w-cloud', 'seam_tier': 'private-cloud', 'tier': 'private-cloud', 'reversible': True, 'cost_knowable': True, 'authority': 'delegation://qk/w-cloud', 'status': 'PENDING'}, {'task_id': 't3', 'action': 'release_final_payment', 'worker': 'agent://w-frontier', 'seam_tier': 'frontier', 'tier': 'human', 'reversible': False, 'cost_knowable': False, 'authority': 'delegation://qk/w-frontier', 'status': 'ESCALATED'}]
+    [PASS] >=2 agent-worker ACTION steps on the Ledger  — 7 steps: ['event://qk/s3-step-t1', 'event://qk/s3-step-t2', 'event://qk/s3-step-t3', 'event://qk/s3-step-t-payroll', 'event://qk/s3-step-t-charity-prep', 'event://qk/s3-step-t-charity-dispatch', 'event://qk/s3-step-t-charity-grant']
+    [PASS] each worker step signed + action-named  — ['prepare_work_order_and_schedule', 'dispatch_dispatcher_and_verify_materials', 'release_final_payment', 'issue_paystub_and_disburse', 'prepare_installation', 'dispatch_solar_crew', 'release_charitable_grant']
+
+  [check:escalate]
+    [PASS] escalation decision recorded before human acknowledgement  — esc@25 hum@26
+    [PASS] irreversible action NOT auto-executed: split < escalate < human < release  — split@22 esc@25 hum@26 release@27
+    [PASS] release_final_payment exists and runs only after the human commit  — 1 release event
+    [PASS] human decision is signed + made by person://qk/approver  — by=person://qk/approver
+    [PASS] human decision enumerates >=3 alternatives  — ['release_in_full', 'hold_pending_inspection', 'release_partial_and_hold_if_fault', 'open_dispute']
+
+  [check:loop]
+    [PASS] S3-executed outcome captured as signed evidence:// (2nd S5 cycle)  — {'uri': 'evidence://qk/job-solarworks-s3', 'kind': 'ANCHORED', 'source': 'signed provider job-completion record + S5 anchor', 'verity': {'procedure': 'completion-anchor-conformance', 'confidence': 0.98}, 'captured_at': '2026-08-31T23:45:57Z'}
+    [PASS] Trust updated from the S3 outcome (solarworks rose past 0.708)  — score=0.904
+    [PASS] updated trust carries its auditable inputs (expected/outcome/evidence/alpha/recency)  — keys=['alpha', 'evidence', 'expected', 'outcome', 'recency']
+    [PASS] unrelated target's trust untouched (scoped, not global)  — norcrete=0.528
+    [PASS] next S2 match re-ranked by the updated Trust (solarworks #1, loop closed)  — [('offer://qk/o-solarworks', 0.806), ('offer://qk/o-norcrete', 0.528)]
+
+  [check:s4]
+    [PASS] settle -> signed EXCHANGE ledger event  — 1 entry
+    [PASS] each settlement artifact is a signed Ledger event (state rides the EXCHANGE entry)  — obligation+receipt+reconciliation embedded in the signed EXCHANGE event
+    [PASS] Asset Ledger title/custody moved (asset:// money, §4b, not a copy)  — {'uri': 'asset://money/qk-escrow-solarworks', 'kind': 'MONEY', 'title': 'org://qk/solarworks', 'custody': 'cleared', 'value': 18900, 'currency': 'USD', 'status': 'DELIVERED', 'provenance': 'settled by org://quoteko for org://qk/solarworks (solarworks)'}
+    [PASS] payment obligation recorded (VOLUNTARILY_UNDERTAKEN)  — 'VOLUNTARILY_UNDERTAKEN'
+    [PASS] receipt + reconciliation recorded  — receipt=True, recon.matched=True
+    [PASS] evaluate -> signed OUTCOME event (met)  — eval=met
+    [PASS] settled OUTCOME fed S5 Trust update (solarworks rose past 0.806)  — score=0.904
+    [PASS] next S2 match re-ranked by the settled Trust (solarworks #1, loop closed WITH settlement)  — [{'offer': 'offer://qk/o-solarworks', 'provider': 'org://qk/solarworks', 'fit': 1.0, 'trust': 0.904, 'score': 0.904}, {'offer': 'offer://qk/o-norcrete', 'provider': 'org://qk/norcrete', 'fit': 1.0, 'trust': 0.528, 'score': 0.528}]
+
+  [check:role]
+    [PASS] ONE relationship carries TWO roles for the same actor (§3.2/§C2)  — roles=['customer', 'employee']
+    [PASS] role-scoped authority grants the right action per role  — emp.submit_timesheet=True, cust.request_quote=True
+    [PASS] role-scoped authority DENIES the other role's actions (separation of role, not all-or-nothing)  — emp.request_quote denied=True, cust.receive_payroll denied=True
+    [PASS] employee-role Trust updated on the ?role=employee scope (§3.14, not a global score)  — score=0.598 ctx=relationship://qk/cust-cxn?role=employee
+    [PASS] customer-role Trust untouched by the employee loop (scoped per role)  — customer(cust-cxn) solarworks=0.904 (was 0.904)
+    [PASS] full employee-role loop closed with S4 settlement in the middle  — pay=event://qk/s3-step-t-payroll, settle=event://qk/s4-exchange-emp-payroll, outcome=met
+
+  [check:org]
+    [PASS] organization-kind attribute carried per §3.1 (private FOR_PROFIT vs charitable)  — quoteko=FOR_PROFIT, sunsetshelter=NONPROFIT_CHARITABLE
+    [PASS] cross-org relationship + purpose-constrained pro-bono offer (§3.9 price=0)  — roles={'org://quoteko': ['donor'], 'org://qk/sunsetshelter': ['beneficiary']}, price=0
+    [PASS] charity-context Trust updated (shelter rose past 0.5)  — score=0.598
+    [PASS] §6 floor still gates the irreversible cross-org settlement (NOT auto-executed)  — split@52 esc@55 hum@56 release@57
+    [PASS] the ONLY grant-release action ran after the human commit  — 1 release event
+    [PASS] human decision signed by person://qk/approver + enumerates alternatives  — ['release_in_full', 'hold_pending_inspection', 'release_partial_and_hold_if_fault', 'open_dispute']
+    [PASS] full cross-org loop closed (S4 settlement + S5 Trust re-ranks S2)  — outcome=met, next=[{'offer': 'offer://qk/o-shelter-solar', 'provider': 'org://qk/sunsetshelter', 'fit': 1.0, 'trust': 0.598, 'score': 0.598}]
+
+======== 5.1  CASE-LED LOOP + EXCEPTION HEARTBEAT + LEARNING ========
+exception: expected 0.95, actual 0.833, variance -0.117 (CRITICAL) — ledger 5/6 on time
+case case://qk/c-on-time-delivery lifecycle OPEN->TRIAGE->ASSIGNED->IN_PROGRESS->BLOCKED->RESOLVED->CLOSED -> final CLOSED
+#8 task task://qk/t-provider-rebalance (assigned_to agent://w-ops, authority authority://qk/for-operations, priority 0.695)
+verified outcome: rallied event://qk/s4-exchange-routed-solarworks outcome met (ev evidence://qk/job-routed-solarworks); forward on-time 1.0; solarworks Trust -> 1.0
+learning entry decision://qk/s5-learning-on-time; policy v3
+
+======== 5.2  GOALS / METRICS / PRIORITY / DEPENDENCY ========
+  health On-time delivery rate: target 0.95, actual 0.857, variance -0.093 -> CRITICAL
+  health Customer-trust score: target 0.9, actual 1.0, variance 0.1 -> OK
+  health Settled value: target 25000.0, actual 24850.0, variance -150.0 -> WARN
+  priority-ordered attention: task://qk/t-provider-rebalance@0.69, task://qk/t-followup-routed@0.58
+  impact(followup task) -> ['case://qk/c-on-time-delivery', 'goal://qk/g-customer-trust', 'metric://qk/m-on-time', 'policy://qk/provider-allocation']
+
+======== 5.3  THE COCKPIT (business health + attention + recommendation) ========
+attention_line: 2 things requiring attention today
+AI recommendation -> task://qk/t-provider-rebalance  (authority authority://qk/for-operations, confidence 0.85)
+
+--- emit fixtures + cockpit report ---
+  wrote cases.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/cases.json
+  wrote goals.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/goals.json
+  wrote metrics.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/metrics.json
+  wrote tasks.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/tasks.json
+  wrote dependencies.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/dependencies.json
+  wrote policies.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/policies.json
+  wrote processes.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/processes.json
+  wrote decisions.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/decisions.json
+  wrote expectations.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/expectations.json
+  wrote evidence.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/evidence.json
+  wrote trust.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/trust.json
+  wrote claims.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/claims.json
+  wrote actors_offers.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/actors_offers.json
+  wrote relationships.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/relationships.json
+  wrote events.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/s5/events.json
+  wrote ledger-quoteko.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/ledger/ledger-quoteko.json
+  wrote relationship.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/statemachines/relationship.json
+  wrote case.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/statemachines/case.json
+  wrote current-state.json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/graph/current-state.json
+  cockpit -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/reports/cockpit.md
+  cockpit json -> file:///home/rlg/relational-os/sprints/sprint-5/artifacts/reports/cockpit.json
+
+--- Sprint-5 checks ---
+
+  [check:bol]
+    [PASS] case:// on graph  — 'case://qk/c-on-time-delivery'
+    [PASS] case lifecycle completes OPEN->...->CLOSED (legal transitions)  — ['OPEN', 'TRIAGE', 'ASSIGNED', 'IN_PROGRESS', 'BLOCKED', 'RESOLVED', 'CLOSED']
+    [PASS] exception heartbeat populated (§7J.2 EXPECTED->...->VERIFIED)  — significance=CRITICAL, variance=-0.117
+    [PASS] root-cause carries an epistemic status (§7K.2)  — status=SUPPORTED
+    [PASS] #8 becomes assigned authorized Task (owner worker + authority)  — assigned_to=agent://w-ops, priority=0.695
+    [PASS] Learning entry (§7K.1 Decision->Expected->Actual->Variance->WHY->change-future-policy)  — why=Concentrating contracted work with a provider that
+    [PASS] verified outcome evidence captured (rallied delivery on time)  — 'evidence://qk/job-routed-solarworks'
+    [PASS] future policy updated by Learning (version 3 + learning ref)  — version=3
+
+  [check:health]
+    [PASS] metrics carry actual + variance (ledger-derived)  — on-time actual=0.857, trust actual=1.0, value actual=24850.0
+    [PASS] on-time metric actual matches the ledger projection  — actual=0.857
+    [PASS] attention is priority-ordered (deterministic score)  — [0.695, 0.58]
+    [PASS] Priority = f(impact,urgency,confidence,irreversibility,relationship,cost-of-delay) deterministic  — score=0.6
+    [PASS] Dependencies represented (requires/blocks/enables/derived_from/impacts)  — kinds=['BLOCKS', 'DERIVED_FROM', 'ENABLES', 'IMPACTS', 'REQUIRES']
+    [PASS] impact analysis traces the exception->case->task chain (what breaks if the task fails)  — impacted=['case://qk/c-on-time-delivery', 'goal://qk/g-customer-trust', 'metric://qk/m-on-time', 'policy://qk/provider-allocation', 'task://qk/t-followup-routed']
+    [PASS] business-health panel derives from ledger-projected metrics  — statuses=['CRITICAL', 'OK', 'WARN']
+
+  [check:cockpit]
+    [PASS] cockpit health panel present  — 3 metrics
+    [PASS] cockpit shows prioritized attention (§7J.2 'things today')  — top=task://qk/t-provider-rebalance
+    [PASS] AI recommendation carries the authority it requires (§7J.9)  — auth=authority://qk/for-operations
+    [PASS] #8 is assigned, authorized work in the ledger (task + decision)  — task://qk/t-provider-rebalance + decision://qk/s5-assign
+    [PASS] #10 verified outcome + Learning recorded  — forward_on_time=1.0, learning=decision://qk/s5-learning-on-time
+    [PASS] §7L report written (cockpit.md + cockpit.json)  — reports/
+
+--- Ledger / Graph wiring ---
+  ledger hash-chain + signatures: OK | entries 97
+  graph current-state objects: 160
+
+  [check:roundtrip] full Sprint-5 state (whole Graph rebuilds from the whole Ledger, §3.16)
+    [PASS] ledger hash-chain + signatures intact  — ok
+    [PASS] graph state reconstructs to ledger events  — 160 graph objects rebuilt from 97 events
+    [PASS] ledger==history & graph==state (not conflated)  — history=True, state-objects=True
+
+RESULT: ALL PASS

@@ -1,0 +1,39 @@
+[
+  {
+    "uri": "person://e05/d",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e05/state",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e05/lic",
+    "participants": [
+      "person://e05/d",
+      "org://e05/state"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "license://e05/dl-123456",
+    "type": "drivers",
+    "holder": "person://e05/d"
+  },
+  {
+    "uri": "interaction://e05/grant",
+    "of": "relationship://e05/lic",
+    "kind": "DECISION"
+  },
+  {
+    "uri": "event://e05/decision",
+    "type": "DECISION",
+    "event_id": "event-e05/decision",
+    "correlation_id": "event-ce05/decision",
+    "causation_id": "event-cae05/decision",
+    "idempotency_key": "event-ie05/decision",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "org://e05/state"
+  }
+]

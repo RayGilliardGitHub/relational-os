@@ -1,0 +1,1245 @@
+{
+  "kind": "GRAPH",
+  "objects": [
+    {
+      "uri": "org://logi/hawkline",
+      "type": "ORG",
+      "identity": {
+        "attestations": [
+          "business-license"
+        ]
+      },
+      "brand": {
+        "tagline": "Freight that moves on the minute.",
+        "mission": "Settle committed freight dispatches reliably and on time so shippers run their operations to a schedule they can bank on, lane by lane.",
+        "vision": "A logistics network where 'dispatched on time' is so reliable it fades into the background of our shippers' day.",
+        "values": [
+          [
+            "The deadline is the deal",
+            "A freight commitment is a promise to a schedule."
+          ],
+          [
+            "Proof of movement",
+            "We verify every dispatch against the ledger; 'in transit' is a measured fact."
+          ],
+          [
+            "Shipper trust",
+            "Shippers plan capacity and customer delivery around our lanes."
+          ],
+          [
+            "Efficiency",
+            "Every mile earned is a price we can keep fair."
+          ],
+          [
+            "Transparency",
+            "If a dispatch slips, shippers hear it from us first."
+          ]
+        ],
+        "about": "Hawkline Logistics is a freight and transport operator. We take committed freight dispatches and settle them on time, lane by lane, backing every movement with ledger-verified evidence. For shippers whose entire customer promise depends on a load leaving on schedule, our on-time record is the quiet foundation they plan around.",
+        "fast_facts": [
+          "Founded 1994, freight & transport",
+          "Lane network across 3 continents",
+          "Freight-dispatch settlement operation"
+        ],
+        "history": [
+          [
+            "1994",
+            "Founded with a single truck lane."
+          ],
+          [
+            "2006",
+            "Expanded into a national freight-settlement network."
+          ],
+          [
+            "2019",
+            "Digitised every dispatch to ledger-verified on-time evidence."
+          ]
+        ],
+        "leadership": [
+          [
+            "Dana Ferrell",
+            "Chief Executive",
+            "Ran two carriers before founding Hawkline on schedule trust."
+          ],
+          [
+            "Melvin Ashe",
+            "Chief Commercial Officer",
+            "Owns lanes, carrier network, and dispatch reliability."
+          ]
+        ],
+        "products_services": [
+          "Freight dispatch and settlement",
+          "Dedicated and shared-lane transport",
+          "Shipment tracking and proof-of-movement reporting"
+        ],
+        "testimonials": [
+          [
+            "Hawkline's dispatch clock is the one I can set my whole week by.",
+            "Shipper operations manager"
+          ]
+        ],
+        "trust": [
+          [
+            "98.5% committed freight dispatch on-time rate (2025)",
+            "Hawkline dispatch ledger"
+          ],
+          [
+            "FMCSA-compliant safety programme",
+            "audited annually"
+          ]
+        ],
+        "locations": "Nashville, TN (HQ) \u00b7 dispatch hubs across the lane network",
+        "faq": [
+          [
+            "What makes your on-time claim auditable?",
+            "Every dispatch settles to a signed ledger event with a verified timestamp \u2014 shippers can see the proof, not just hear the claim."
+          ],
+          [
+            "Do you run dedicated lanes?",
+            "Yes, both dedicated and shared lanes, each with a committed dispatch schedule we verify."
+          ]
+        ],
+        "contact": "dispatch@hawkline.example \u00b7 +1-615-555-0135",
+        "careers": "Move freight on the minute: dispatch, fleet ops, lane management, carrier relations.",
+        "investors": "Privately held. Lane reliability data shared with qualified shippers.",
+        "press": "media@hawkline.example \u2014 network and reliability stories.",
+        "esg": "Fuel-efficiency routing, backhaul reduction to cut empty miles, driver wellbeing programs.",
+        "legal": [
+          "Privacy",
+          "Terms",
+          "California Rights",
+          "Do Not Sell or Share"
+        ],
+        "nav": [
+          "About",
+          "Lanes",
+          "Services",
+          "Careers",
+          "Investors",
+          "Press",
+          "Contact"
+        ],
+        "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+        "design": {
+          "palette": [
+            [
+              "Roadway Black",
+              "#1D1F22"
+            ],
+            [
+              "Highway Amber",
+              "#F0A81E"
+            ],
+            [
+              "Freight Orange",
+              "#E3621A"
+            ],
+            [
+              "Signal Grey",
+              "#C7CBCF"
+            ]
+          ],
+          "typography": {
+            "heading": "Clear transport sans (e.g. Archivo)",
+            "body": "Open neutral sans (e.g. Roboto)"
+          },
+          "logo": {
+            "wordmark": "HAWKLINE in sharp caps",
+            "character": "a hawk/freight-chevron mark",
+            "usage": "clear space wide; amber+orange accents on dark"
+          },
+          "imagery": "Traffic-lane motion, trucks under speed, dispatch boards \u2014 momentum and control",
+          "tone": "Direct, efficient, factual; the clock matters more than the adjectives."
+        }
+      }
+    },
+    {
+      "uri": "org://logi/papercreek",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://logi/keystone-lines",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://logi/barnacle-freight",
+      "type": "ORG"
+    },
+    {
+      "uri": "person://logi/cco",
+      "type": "PERSON"
+    },
+    {
+      "uri": "agent://logi/fleet-ops",
+      "type": "AGENT"
+    },
+    {
+      "uri": "relationship://logi/ops-rel",
+      "participants": [
+        "org://logi/hawkline",
+        "org://logi/papercreek"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://logi/hawkline": [
+          "provider"
+        ],
+        "org://logi/papercreek": [
+          "client"
+        ]
+      },
+      "authority": [
+        "authority://logi/for-ops"
+      ],
+      "purpose": "logistics / transport operating relationship"
+    },
+    {
+      "uri": "relationship://logi/partner-net",
+      "participants": [
+        "org://logi/hawkline",
+        "org://logi/keystone-lines",
+        "org://logi/barnacle-freight"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://logi/hawkline": [
+          "operator"
+        ],
+        "org://logi/keystone-lines": [
+          "partner"
+        ],
+        "org://logi/barnacle-freight": [
+          "partner"
+        ]
+      },
+      "authority": [
+        "authority://logi/for-ops"
+      ],
+      "purpose": "logistics / transport partner network"
+    },
+    {
+      "uri": "authority://logi/for-ops",
+      "holder": "org://logi/hawkline",
+      "grants": [
+        "triage_case",
+        "assign_case",
+        "close_case",
+        "approve_learning",
+        "rebalance_commitment",
+        "gate_partner",
+        "release_committed_action"
+      ],
+      "roles": [
+        "operator"
+      ]
+    },
+    {
+      "uri": "rule://logi/ops-run",
+      "kind": "POLICY",
+      "text": "agent://logi/fleet-ops may re-balance resource commitment and gate partner performance",
+      "grants": [
+        "rebalance_commitment",
+        "gate_partner"
+      ]
+    },
+    {
+      "uri": "rule://logi/match-run",
+      "kind": "POLICY",
+      "text": "S2 may run Trust-weighted matching for the client",
+      "grants": [
+        "run_match"
+      ]
+    },
+    {
+      "uri": "delegation://logi/ops",
+      "grantor": "org://logi/hawkline",
+      "grantee": "agent://logi/fleet-ops",
+      "scope": [
+        "rule://logi/ops-run"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "uri": "delegation://logi/s2-match",
+      "grantor": "org://logi/hawkline",
+      "grantee": "agent://s2",
+      "scope": [
+        "rule://logi/match-run"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "uri": "expectation://logi/e-on-time",
+      "actor": "person://logi/cco",
+      "subject": "freight-dispatch settlement",
+      "condition": "fully deliver the committed freight-dispatch settlement by its committed deadline",
+      "metric": "on_time",
+      "threshold": 0.95,
+      "deadline": "2026-12-31T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "policy://logi/allocation",
+      "name": "logi allocation",
+      "condition": "a new committed delivery is to be allocated",
+      "decision": "ALLOCATE by fit AND scoped Trust; carriers below the Trust floor need a gate before new dispatches. (learned 2026-09-01)",
+      "action": "allocate to the top-ranked fitted partner; gate laggard",
+      "scope": [
+        "expectation://logi/e-on-time"
+      ],
+      "version": 3,
+      "policy_status": "EFFECTIVE",
+      "learning": "decision://logi/learning"
+    },
+    {
+      "uri": "process://logi/pr-core",
+      "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+      "steps": [
+        "triage",
+        "assign",
+        "execute",
+        "verify_outcome",
+        "learning"
+      ]
+    },
+    {
+      "uri": "process_instance://logi/pi-core",
+      "process": "process://logi/pr-core",
+      "status": "RUNNING",
+      "started_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "trust://logi/t-keystone-lines",
+      "subject": "org://logi/hawkline",
+      "target": "org://logi/keystone-lines",
+      "claim": "freight-dispatch settlement reliability",
+      "context": "relationship://logi/partner-net",
+      "score": 0.79,
+      "updated_at": "2026-09-01T00:29:53Z",
+      "expected": 0.8,
+      "outcome": 1.0,
+      "evidence": [
+        "evidence://logi/routed-keystone-linesR"
+      ],
+      "alpha": 0.5,
+      "recency": 1.0
+    },
+    {
+      "uri": "trust://logi/t-barnacle-freight",
+      "subject": "org://logi/hawkline",
+      "target": "org://logi/barnacle-freight",
+      "claim": "freight-dispatch settlement reliability",
+      "context": "relationship://logi/partner-net",
+      "score": 0.14,
+      "updated_at": "2026-09-01T00:29:53Z",
+      "expected": 0.8,
+      "outcome": 0.0,
+      "evidence": [
+        "evidence://logi/committed-barnacle-freightQ4"
+      ],
+      "alpha": 0.5,
+      "recency": 1.0
+    },
+    {
+      "uri": "offer://logi/o-g",
+      "provider": "org://logi/keystone-lines",
+      "price": 2000000.0,
+      "currency": "USD",
+      "capability_keys": [
+        "dispatch",
+        "freight"
+      ],
+      "fit_note": "logistics / transport partner delivery line"
+    },
+    {
+      "uri": "offer://logi/o-l",
+      "provider": "org://logi/barnacle-freight",
+      "price": 2000000.0,
+      "currency": "USD",
+      "capability_keys": [
+        "dispatch",
+        "freight"
+      ],
+      "fit_note": "logistics / transport partner delivery line"
+    },
+    {
+      "uri": "decision://logi/s2-match-baseline",
+      "by": "agent://s2",
+      "authority": "delegation://logi/s2-match",
+      "alternatives": [
+        "offer://logi/o-l",
+        "offer://logi/o-g",
+        "none"
+      ],
+      "confidence": 0.9,
+      "expected_outcome": "lag partner ranked #1 on existing Trust",
+      "actual_outcome": "offer://logi/o-l",
+      "detail": [
+        {
+          "offer": "offer://logi/o-l",
+          "provider": "org://logi/barnacle-freight",
+          "fit": 1.0,
+          "trust": 0.9,
+          "score": 0.9
+        },
+        {
+          "offer": "offer://logi/o-g",
+          "provider": "org://logi/keystone-lines",
+          "fit": 1.0,
+          "trust": 0.6,
+          "score": 0.6
+        }
+      ],
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "asset://money/logi-escrow-barnacle-freightQ3",
+      "kind": "MONEY",
+      "title": "org://logi/barnacle-freight",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://logi/hawkline for org://logi/barnacle-freight (barnacle-freightQ3)"
+    },
+    {
+      "uri": "obligation://logi/s4-pay-barnacle-freightQ3",
+      "subject": "org://logi/hawkline",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://logi/barnacle-freight",
+      "due_by": "2026-08-31T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-09-02T00:00:00Z"
+    },
+    {
+      "uri": "receipt://logi/s4-receipt-barnacle-freightQ3",
+      "kind": "SETTLEMENT",
+      "from": "org://logi/hawkline",
+      "to": "org://logi/barnacle-freight",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-09-02T00:00:00Z"
+    },
+    {
+      "uri": "decision://logi/s4-recon-barnacle-freightQ3",
+      "by": "agent://s4",
+      "authority": "authority://logi/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://logi/hawkline",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "barnacle-freightQ3",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://logi/hawkline",
+        "provider": "org://logi/barnacle-freight",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://logi/s4-exchange-barnacle-freightQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-105",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-104",
+      "idempotency_key": "idem-s4-105",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange barnacle-freightQ3: 2000000.0 USD org://logi/hawkline->org://logi/barnacle-freight (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://logi/hawkline",
+      "provider": "org://logi/barnacle-freight",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "exchange_of": "commitment://logi/c-barnacle-freightQ3"
+    },
+    {
+      "uri": "event://logi/s4-outcome-barnacle-freightQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-106",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-105",
+      "idempotency_key": "idem-s4-106",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle barnacle-freightQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+      "state_update": [],
+      "evaluation": "partial",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "score": 0.5
+    },
+    {
+      "uri": "event://logi/outcome-committed-barnacle-freightQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-107",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-106",
+      "idempotency_key": "idem-s2-107",
+      "signature": "signed-by-org://logi/barnacle-freight",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://logi/barnacle-freight",
+      "detail": "job committed-barnacle-freightQ3 by org://logi/barnacle-freight: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+      "state_update": [],
+      "job": "committed-barnacle-freightQ3",
+      "provider": "org://logi/barnacle-freight",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-09-02T00:00:00Z",
+      "on_time": false
+    },
+    {
+      "uri": "evidence://logi/committed-barnacle-freightQ3",
+      "kind": "ANCHORED",
+      "source": "signed committed-freight-dispatch settlement record + logi anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://logi/committed-barnacle-freightQ3",
+      "proposer": "agent://s5",
+      "statement": "org://logi/barnacle-freight delivered the committed resource LATE"
+    },
+    {
+      "uri": "asset://money/logi-escrow-keystone-linesQ3",
+      "kind": "MONEY",
+      "title": "org://logi/keystone-lines",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://logi/hawkline for org://logi/keystone-lines (keystone-linesQ3)"
+    },
+    {
+      "uri": "obligation://logi/s4-pay-keystone-linesQ3",
+      "subject": "org://logi/hawkline",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://logi/keystone-lines",
+      "due_by": "2026-08-31T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-08-30T00:00:00Z"
+    },
+    {
+      "uri": "receipt://logi/s4-receipt-keystone-linesQ3",
+      "kind": "SETTLEMENT",
+      "from": "org://logi/hawkline",
+      "to": "org://logi/keystone-lines",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-08-30T00:00:00Z"
+    },
+    {
+      "uri": "decision://logi/s4-recon-keystone-linesQ3",
+      "by": "agent://s4",
+      "authority": "authority://logi/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://logi/hawkline",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "keystone-linesQ3",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://logi/hawkline",
+        "provider": "org://logi/keystone-lines",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://logi/s4-exchange-keystone-linesQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-110",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-109",
+      "idempotency_key": "idem-s4-110",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange keystone-linesQ3: 2000000.0 USD org://logi/hawkline->org://logi/keystone-lines (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://logi/hawkline",
+      "provider": "org://logi/keystone-lines",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "exchange_of": "commitment://logi/c-keystone-linesQ3"
+    },
+    {
+      "uri": "event://logi/s4-outcome-keystone-linesQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-111",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-110",
+      "idempotency_key": "idem-s4-111",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle keystone-linesQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+      "state_update": [],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "score": 1.0
+    },
+    {
+      "uri": "event://logi/outcome-committed-keystone-linesQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-112",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-111",
+      "idempotency_key": "idem-s2-112",
+      "signature": "signed-by-org://logi/keystone-lines",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://logi/keystone-lines",
+      "detail": "job committed-keystone-linesQ3 by org://logi/keystone-lines: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+      "state_update": [],
+      "job": "committed-keystone-linesQ3",
+      "provider": "org://logi/keystone-lines",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-08-30T00:00:00Z",
+      "on_time": true
+    },
+    {
+      "uri": "evidence://logi/committed-keystone-linesQ3",
+      "kind": "ANCHORED",
+      "source": "signed committed-freight-dispatch settlement record + logi anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://logi/committed-keystone-linesQ3",
+      "proposer": "agent://s5",
+      "statement": "org://logi/keystone-lines delivered the committed resource on time"
+    },
+    {
+      "uri": "asset://money/logi-escrow-barnacle-freightQ4",
+      "kind": "MONEY",
+      "title": "org://logi/barnacle-freight",
+      "custody": "cleared",
+      "value": 1600000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://logi/hawkline for org://logi/barnacle-freight (barnacle-freightQ4)"
+    },
+    {
+      "uri": "obligation://logi/s4-pay-barnacle-freightQ4",
+      "subject": "org://logi/hawkline",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 1600000.0 USD for contracted work by org://logi/barnacle-freight",
+      "due_by": "2026-09-15T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-09-17T00:00:00Z"
+    },
+    {
+      "uri": "receipt://logi/s4-receipt-barnacle-freightQ4",
+      "kind": "SETTLEMENT",
+      "from": "org://logi/hawkline",
+      "to": "org://logi/barnacle-freight",
+      "amount": 1600000.0,
+      "currency": "USD",
+      "received_at": "2026-09-17T00:00:00Z"
+    },
+    {
+      "uri": "decision://logi/s4-recon-barnacle-freightQ4",
+      "by": "agent://s4",
+      "authority": "authority://logi/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 1600000.0 USD from org://logi/hawkline",
+      "actual_outcome": "matched exactly: settled 1600000.0 USD",
+      "detail": {
+        "slug": "barnacle-freightQ4",
+        "expected": 1600000.0,
+        "actual": 1600000.0,
+        "matched": true,
+        "buyer": "org://logi/hawkline",
+        "provider": "org://logi/barnacle-freight",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://logi/s4-exchange-barnacle-freightQ4",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-115",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-114",
+      "idempotency_key": "idem-s4-115",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange barnacle-freightQ4: 1600000.0 USD org://logi/hawkline->org://logi/barnacle-freight (value 1600000.0, cost 1600000.0)",
+      "state_update": [],
+      "value": 1600000.0,
+      "cost": 1600000.0,
+      "price": 1600000.0,
+      "currency": "USD",
+      "buyer": "org://logi/hawkline",
+      "provider": "org://logi/barnacle-freight",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "exchange_of": "commitment://logi/c-barnacle-freightQ4"
+    },
+    {
+      "uri": "event://logi/s4-outcome-barnacle-freightQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-116",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-115",
+      "idempotency_key": "idem-s4-116",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle barnacle-freightQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+      "state_update": [],
+      "evaluation": "partial",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "deadline": "2026-09-15T00:00:00Z",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "score": 0.5
+    },
+    {
+      "uri": "event://logi/outcome-committed-barnacle-freightQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-117",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-116",
+      "idempotency_key": "idem-s2-117",
+      "signature": "signed-by-org://logi/barnacle-freight",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://logi/barnacle-freight",
+      "detail": "job committed-barnacle-freightQ4 by org://logi/barnacle-freight: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+      "state_update": [],
+      "job": "committed-barnacle-freightQ4",
+      "provider": "org://logi/barnacle-freight",
+      "committed_deadline": "2026-09-15T00:00:00Z",
+      "actual_completed_at": "2026-09-17T00:00:00Z",
+      "on_time": false
+    },
+    {
+      "uri": "evidence://logi/committed-barnacle-freightQ4",
+      "kind": "ANCHORED",
+      "source": "signed committed-freight-dispatch settlement record + logi anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://logi/committed-barnacle-freightQ4",
+      "proposer": "agent://s5",
+      "statement": "org://logi/barnacle-freight delivered the committed resource LATE"
+    },
+    {
+      "uri": "case://logi/c-on-time",
+      "subject": "committed freight-dispatch settlement below target on time",
+      "status": "CLOSED",
+      "owner": "person://logi/cco",
+      "actors": [
+        "org://logi/hawkline",
+        "person://logi/cco",
+        "agent://logi/fleet-ops"
+      ],
+      "relationships": [
+        "relationship://logi/ops-rel"
+      ],
+      "created_at": "2026-09-01T00:29:53Z",
+      "history": [
+        {
+          "status": "OPEN",
+          "at": "2026-09-01T00:29:53Z",
+          "event": null
+        },
+        {
+          "status": "TRIAGE",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://logi/s5-case-triage"
+        },
+        {
+          "status": "ASSIGNED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://logi/s5-case-assigned"
+        },
+        {
+          "status": "IN_PROGRESS",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://logi/s5-case-inprogress"
+        },
+        {
+          "status": "BLOCKED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://logi/s5-case-blocked"
+        },
+        {
+          "status": "RESOLVED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://logi/s5-case-resolved"
+        },
+        {
+          "status": "CLOSED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://logi/s5-case-closed"
+        }
+      ],
+      "suggestion": "ledger-projected on-time below target",
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "exception": "Committed freight-dispatch settlement on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+      "root_cause": "carrier failure \u2014 org://logi/barnacle-freight missed its committed freight dispatch by 2 days; scoped Trust fell 0.90->0.51",
+      "root_cause_status": "SUPPORTED",
+      "recommended_action": "Re-allocate committed freight dispatches to the verified on-time carrier (keystone-lines) and gate the laggard (barnacle-freight)",
+      "metric": "metric://logi/m-on-time",
+      "verified_outcome": "forward on-time restored to 1.0; org://logi/keystone-lines delivered the rallied freight-dispatch settlement on time (evidence://logi/routed-keystone-linesR); org://logi/keystone-lines Trust 0.79"
+    },
+    {
+      "uri": "decision://logi/s5-triage",
+      "by": "agent://logi/s5",
+      "authority": "authority://logi/for-ops",
+      "alternatives": [
+        "accept",
+        "dismiss as anomaly"
+      ],
+      "confidence": 0.85,
+      "expected_outcome": "accept as a real risk",
+      "actual_outcome": "accepted; root nominated",
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "task://logi/t-rebalance",
+      "assigned_to": "agent://logi/fleet-ops",
+      "created_by": "agent://logi/s5",
+      "objective": "re-balance freight allocation to the verified on-time carrier (keystone-lines) and gate the laggard (barnacle-freight)",
+      "dependencies": [],
+      "authority": "authority://logi/for-ops",
+      "deadline": "2026-10-15T00:00:00Z",
+      "priority": 0.695,
+      "status": "ASSIGNED",
+      "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+      "why_here": "derived from the on-time exception (case OPEN)",
+      "importance": "restores dispatch-on-time, protecting shipper scoped Trust",
+      "evidence": [
+        "evidence://logi/committed-barnacle-freightQ3",
+        "evidence://logi/committed-keystone-linesQ3",
+        "evidence://logi/committed-barnacle-freightQ4"
+      ],
+      "decision_required": "approve the re-allocation",
+      "priority_factors": {
+        "impact": 0.85,
+        "urgency": 0.9,
+        "confidence": 0.7,
+        "irreversibility": false,
+        "relationship_importance": 0.8,
+        "cost_of_delay": 0.75
+      },
+      "assigned_capacity": 1.0
+    },
+    {
+      "uri": "decision://logi/s5-assign",
+      "by": "person://logi/cco",
+      "authority": "authority://logi/for-ops",
+      "alternatives": [
+        "assign",
+        "defer"
+      ],
+      "confidence": 0.95,
+      "expected_outcome": "task in progress",
+      "detail": {
+        "task": "task://logi/t-rebalance",
+        "assigned_to": "agent://logi/fleet-ops",
+        "authority": "authority://logi/for-ops",
+        "priority": 0.695,
+        "capacity": 1.0
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "decision://logi/s5-match-recorded",
+      "by": "agent://s2",
+      "authority": "delegation://logi/s2-match",
+      "alternatives": [
+        "offer://logi/o-g",
+        "none"
+      ],
+      "confidence": 0.92,
+      "expected_outcome": "good partner ranked #1",
+      "actual_outcome": "offer://logi/o-g",
+      "detail": [
+        {
+          "offer": "offer://logi/o-g",
+          "provider": "org://logi/keystone-lines",
+          "fit": 1.0,
+          "trust": 0.695,
+          "score": 0.695
+        }
+      ],
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "escalation://logi/escalate-release",
+      "trigger": "external freight release \u2014 irreversible and cost-unknowable once dispatched",
+      "severity": "WARN",
+      "recipient": "person://logi/cco",
+      "deadline": "2026-11-15T00:00:00Z",
+      "fallback": "agent://logi/s4",
+      "authority": "authority://logi/for-ops",
+      "acknowledgement": "approve then execute"
+    },
+    {
+      "uri": "decision://logi/owner-human",
+      "by": "person://logi/cco",
+      "authority": "authority://logi/for-ops",
+      "alternatives": [
+        "release_in_full",
+        "hold",
+        "release_partial_and_hold_if_shortfall",
+        "open_dispute"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "release to the verified partner",
+      "actual_outcome": "release_in_full (human approved)",
+      "detail": {
+        "task": "task://logi/t-rebalance",
+        "action": "release_committed_action",
+        "irreversible_failure": true,
+        "cost_failure_unknowable": true
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "commitment://logi/c-keystone-lines-followup",
+      "by": "agent://logi/s5",
+      "to": "org://logi/keystone-lines",
+      "obligation": "offer://logi/o-g",
+      "expectation": "expectation://logi/e-routed-keystone-linesR",
+      "status": "AGREED",
+      "terms": {
+        "kind": "freight-dispatch settlement follow-up",
+        "signed": true
+      },
+      "agreed_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "expectation://logi/e-keystone-linesR",
+      "actor": "person://logi/cco",
+      "subject": "freight-dispatch settlement",
+      "condition": "fully deliver the committed resource by its committed deadline",
+      "metric": "settled_value",
+      "threshold": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "asset://money/logi-escrow-keystone-linesR",
+      "kind": "MONEY",
+      "title": "org://logi/keystone-lines",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://logi/hawkline for org://logi/keystone-lines (keystone-linesR)"
+    },
+    {
+      "uri": "obligation://logi/s4-pay-keystone-linesR",
+      "subject": "org://logi/hawkline",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://logi/keystone-lines",
+      "due_by": "2026-11-15T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-11-12T00:00:00Z"
+    },
+    {
+      "uri": "receipt://logi/s4-receipt-keystone-linesR",
+      "kind": "SETTLEMENT",
+      "from": "org://logi/hawkline",
+      "to": "org://logi/keystone-lines",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-11-12T00:00:00Z"
+    },
+    {
+      "uri": "decision://logi/s4-recon-keystone-linesR",
+      "by": "agent://s4",
+      "authority": "authority://logi/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://logi/hawkline",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "keystone-linesR",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://logi/hawkline",
+        "provider": "org://logi/keystone-lines",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://logi/s4-exchange-keystone-linesR",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-7015",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7014",
+      "idempotency_key": "idem-s4-7015",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange keystone-linesR: 2000000.0 USD org://logi/hawkline->org://logi/keystone-lines (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://logi/hawkline",
+      "provider": "org://logi/keystone-lines",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "exchange_of": "commitment://logi/c-keystone-linesR"
+    },
+    {
+      "uri": "event://logi/s4-outcome-keystone-linesR",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-7016",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7015",
+      "idempotency_key": "idem-s4-7016",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle keystone-linesR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+      "state_update": [],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "score": 1.0
+    },
+    {
+      "uri": "event://logi/outcome-routed-keystone-linesR",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-7017",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7016",
+      "idempotency_key": "idem-s2-7017",
+      "signature": "signed-by-org://logi/keystone-lines",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://logi/keystone-lines",
+      "detail": "job routed-keystone-linesR by org://logi/keystone-lines: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+      "state_update": [],
+      "job": "routed-keystone-linesR",
+      "provider": "org://logi/keystone-lines",
+      "committed_deadline": "2026-11-15T00:00:00Z",
+      "actual_completed_at": "2026-11-12T00:00:00Z",
+      "on_time": true
+    },
+    {
+      "uri": "evidence://logi/routed-keystone-linesR",
+      "kind": "ANCHORED",
+      "source": "signed committed-freight-dispatch settlement record + logi anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://logi/routed-keystone-linesR",
+      "proposer": "agent://s5",
+      "statement": "org://logi/keystone-lines delivered the rallied committed freight-dispatch settlement on time"
+    },
+    {
+      "uri": "decision://logi/learning",
+      "by": "agent://logi/s5",
+      "authority": "authority://logi/for-operations",
+      "subject": "freight-dispatch settlement on-time management",
+      "expected": 0.95,
+      "actual": 1.0,
+      "variance": 0.05,
+      "why": "Routing freight dispatches via a carrier with verified on-time delivery (keystone-lines), while gating the laggard (barnacle-freight), restored on-time dispatch. Verified good dispatches compound scoped Trust.",
+      "change_future_policy": "ALLOCATE by fit AND scoped Trust; carriers below the Trust floor need a gate before new dispatches.",
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "goal://logi/g-core",
+      "for": "org://logi/hawkline",
+      "statement": "Consistently settle committed freight dispatches on time so shippers keep Hawkline lines booked.",
+      "horizon": "quarter",
+      "owner": "person://logi/cco",
+      "metrics": [
+        "metric://logi/m-on-time",
+        "metric://logi/m-trust",
+        "metric://logi/m-settled-value"
+      ]
+    },
+    {
+      "uri": "metric://logi/m-on-time",
+      "name": "Committed-freight-dispatch settlement on-time rate",
+      "definition": "share of committed freight-dispatch settlement deliveries verified on time",
+      "unit": "fraction",
+      "formula": "on_time / (on_time + late) from ledger",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 0.95,
+      "threshold": 0.8,
+      "period": "quarter",
+      "source": "ledger committed-delivery records",
+      "owner": "person://logi/cco",
+      "actual": 0.5,
+      "forecast": 0.5,
+      "variance": -0.45,
+      "root_cause": "carrier failure \u2014 org://logi/barnacle-freight missed its committed freight dispatch by 2 days; scoped Trust fell 0.90->0.51",
+      "root_cause_status": "SUPPORTED"
+    },
+    {
+      "uri": "metric://logi/m-trust",
+      "name": "Partner scoped-trust score",
+      "definition": "best scoped Trust on the partner network (per \u00a75)",
+      "unit": "score",
+      "formula": "T(subject->target, claim, context) per \u00a75",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 0.9,
+      "threshold": 0.6,
+      "period": "rolling",
+      "source": "S5 scoped Trust graph",
+      "owner": "person://logi/cco",
+      "actual": 0.79,
+      "forecast": 0.92,
+      "variance": -0.11,
+      "root_cause_status": "UNKNOWN"
+    },
+    {
+      "uri": "metric://logi/m-settled-value",
+      "name": "Settled committed value",
+      "definition": "value of EXCHANGE events settled this period",
+      "unit": "USD",
+      "formula": "sum(EXCHANGE.price) from ledger",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 7600000.0,
+      "threshold": 4180000.0000000005,
+      "period": "quarter",
+      "source": "ledger EXCHANGE events",
+      "owner": "person://logi/cco",
+      "actual": 7600000.0,
+      "forecast": 8740000.0,
+      "variance": 0.0,
+      "root_cause_status": "UNKNOWN"
+    },
+    {
+      "uri": "decision://logi/s5-metric-loop",
+      "by": "agent://logi/s5",
+      "authority": "authority://logi/for-operations",
+      "alternatives": [
+        "do nothing",
+        "rebalance provider allocation"
+      ],
+      "confidence": 0.85,
+      "expected_outcome": "metric://logi/m-on-time variance reduced toward target",
+      "detail": {
+        "goal": "goal://logi/g-core",
+        "metric": "metric://logi/m-on-time",
+        "actual": 0.5,
+        "variance": -0.45,
+        "action": "task://logi/t-rebalance",
+        "outcome": "event://logi/outcome-routed-keystone-linesR"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "decision://logi/s5-attention",
+      "by": "agent://logi/s5",
+      "authority": "authority://logi/for-ops",
+      "confidence": 0.9,
+      "expected_outcome": "top-of-attention ranked",
+      "actual_outcome": "attention prioritized by derived score",
+      "detail": {
+        "attention": [
+          {
+            "uri": "task://logi/t-rebalance",
+            "label": "re-balance committed work",
+            "priority": 0.695
+          },
+          {
+            "uri": "task://logi/t-followup",
+            "label": "rallied follow-on (good partner)",
+            "priority": 0.58
+          }
+        ]
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "dependency://logi/d-rb-enables-fu",
+      "from": "task://logi/t-rebalance",
+      "to": "task://logi/t-followup",
+      "kind": "ENABLES"
+    },
+    {
+      "uri": "dependency://logi/d-fu-requires-pol",
+      "from": "task://logi/t-followup",
+      "to": "policy://logi/allocation",
+      "kind": "REQUIRES"
+    },
+    {
+      "uri": "dependency://logi/d-fu-blocks-case",
+      "from": "task://logi/t-followup",
+      "to": "case://logi/c-on-time",
+      "kind": "BLOCKS"
+    },
+    {
+      "uri": "dependency://logi/d-case-from-metric",
+      "from": "case://logi/c-on-time",
+      "to": "metric://logi/m-on-time",
+      "kind": "DERIVED_FROM"
+    },
+    {
+      "uri": "dependency://logi/d-metric-impacts-goal",
+      "from": "metric://logi/m-on-time",
+      "to": "goal://logi/g-core",
+      "kind": "IMPACTS"
+    },
+    {
+      "uri": "dependency://logi/d-rb-blocks-case",
+      "from": "task://logi/t-rebalance",
+      "to": "case://logi/c-on-time",
+      "kind": "BLOCKS"
+    }
+  ]
+}

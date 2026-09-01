@@ -1,0 +1,45 @@
+[
+  {
+    "uri": "person://e04/filer",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e04/irs",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e04/tax",
+    "participants": [
+      "person://e04/filer",
+      "org://e04/irs"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "obligation://e04/taxob",
+    "subject": "person://e04/filer",
+    "source": "IMPOSED",
+    "content": "file federal return"
+  },
+  {
+    "uri": "interaction://e04/file",
+    "of": "relationship://e04/tax",
+    "kind": "OUTCOME"
+  },
+  {
+    "uri": "return://e04/1040-2025",
+    "kind": "tax-return",
+    "subject_to": "person://e04/filer"
+  },
+  {
+    "uri": "event://e04/outcome",
+    "type": "OUTCOME",
+    "event_id": "event-e04/outcome",
+    "correlation_id": "event-ce04/outcome",
+    "causation_id": "event-cae04/outcome",
+    "idempotency_key": "event-ie04/outcome",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "person://e04/filer"
+  }
+]

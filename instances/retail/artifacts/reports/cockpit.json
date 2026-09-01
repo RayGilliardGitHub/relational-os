@@ -1,0 +1,232 @@
+{
+  "cockpit": {
+    "company": "HardVale Stores (Retail, fictional)",
+    "generated": "2026-09-01T00:29:53Z",
+    "health": [
+      {
+        "metric": "metric://retail/m-on-time",
+        "name": "Committed-store replenishment delivery on-time rate",
+        "unit": "fraction",
+        "target": 0.95,
+        "actual": 0.5,
+        "variance": -0.45,
+        "status": "CRITICAL",
+        "forecast": 0.5
+      },
+      {
+        "metric": "metric://retail/m-trust",
+        "name": "Partner scoped-trust score",
+        "unit": "score",
+        "target": 0.9,
+        "actual": 0.79,
+        "variance": -0.11,
+        "status": "CRITICAL",
+        "forecast": 0.92
+      },
+      {
+        "metric": "metric://retail/m-settled-value",
+        "name": "Settled committed value",
+        "unit": "USD",
+        "target": 7600000.0,
+        "actual": 7600000.0,
+        "variance": 0.0,
+        "status": "OK",
+        "forecast": 8740000.0
+      }
+    ],
+    "attention_line": "2 things requiring attention today",
+    "attention": [
+      {
+        "uri": "task://retail/t-rebalance",
+        "label": "re-balance committed work",
+        "priority": 0.695
+      },
+      {
+        "uri": "task://retail/t-followup",
+        "label": "rallied follow-on (good partner)",
+        "priority": 0.58
+      }
+    ],
+    "exception": {
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "on": 1,
+      "total": 3
+    },
+    "case": "case://retail/c-on-time",
+    "case_status": "CLOSED",
+    "recommendation": {
+      "summary": "task://retail/t-rebalance",
+      "authority_required": "authority://retail/for-ops",
+      "options": [
+        "re-balance replenishment to the verified on-time carrier",
+        "gate the laggard (corvus-logistics)",
+        "do nothing"
+      ],
+      "includes_do_nothing": true,
+      "tradeoff": "Routing via atlas-freight restores on-time (higher short-term concentration risk) but protects shopper Trust; doing nothing keeps below target.",
+      "confidence": 0.85,
+      "expected_impact": "forward on-time returns to 1.0",
+      "decision": "decision://retail/s5-assign"
+    },
+    "verified_outcome": {
+      "exchange": "event://retail/s4-exchange-atlas-freightR",
+      "outcome": "event://retail/s4-outcome-atlas-freightR",
+      "evaluation": "met",
+      "evidence": "evidence://retail/routed-atlas-freightR",
+      "after_trust": 0.79,
+      "forward_on_time": 1.0,
+      "cumulative_after": 0.5
+    },
+    "learning": "decision://retail/learning",
+    "ledger": 54,
+    "graph": 80
+  },
+  "brand": {
+    "tagline": "Stock for every store, on time.",
+    "mission": "Deliver committed store replenishment reliably and on time so every HardVale customer finds what they came for, every day, at every store.",
+    "vision": "Shoppers who never think about whether the shelf will be there \u2014 because it always is.",
+    "values": [
+      [
+        "Customer first",
+        "Behind every pallet is a shopper who chose us."
+      ],
+      [
+        "Shelf faith",
+        "We guard the simple promise that the item will be there."
+      ],
+      [
+        "Efficient by habit",
+        "We move stock efficiently so prices stay fair."
+      ],
+      [
+        "Community store",
+        "Our stores are neighbourhoods; we stock them like neighbours."
+      ],
+      [
+        "Own the outcome",
+        "A store that runs out is our problem to solve, not an excuse to make."
+      ]
+    ],
+    "about": "HardVale Stores runs a chain of community retail stores and the replenishment operation that keeps their shelves honest. We take committed store replenishment deliveries and make them land so reliably that running out of a staple stops being a plot point in our shoppers' day. Every delivery is verified, every store is a promise, every shelf is the metric.",
+    "fast_facts": [
+      "Founded 1996, retail stores",
+      "460+ stores across the region",
+      "Committed replenishment delivery network"
+    ],
+    "history": [
+      [
+        "1996",
+        "Opened the first HardVale store in a converted warehouse."
+      ],
+      [
+        "2008",
+        "Built our own replenishment logistics to end bare shelves."
+      ],
+      [
+        "2019",
+        "Digitised every restock run to ledger-verified on-time evidence."
+      ]
+    ],
+    "leadership": [
+      [
+        "Elena Vasquez",
+        "Chief Executive",
+        "Retail lifer who has run stores, buying, and now the whole chain."
+      ],
+      [
+        "Tyrone Grant",
+        "Chief Merchandising Officer",
+        "Connects what shoppers want to what the shelf holds."
+      ]
+    ],
+    "products_services": [
+      "Community retail stores",
+      "Store replenishment and distribution",
+      "Efficient price leadership on essentials"
+    ],
+    "testimonials": [
+      [
+        "I can count on the staples always being there. That is why I keep coming back.",
+        "HardVale shopper"
+      ]
+    ],
+    "trust": [
+      [
+        "99.0% committed store-replenishment on-time rate (2025)",
+        "HardVale logistics ledger"
+      ],
+      [
+        "5-year shopper satisfaction programme",
+        "independent survey"
+      ]
+    ],
+    "locations": "Regional HQ + 460+ stores; distribution parks in 4 states",
+    "faq": [
+      [
+        "How do you keep shelves full?",
+        "Every committed replenishment is tracked to a verified on-time ledger completion; stores below target get immediate attention, not excuses."
+      ],
+      [
+        "Do you deliver to stores every day?",
+        "Cadence varies by store and category; the committed deliveries on those cadences are the ones we verify."
+      ]
+    ],
+    "contact": "care@hardvale.example \u00b7 +1-800-STOCKED",
+    "careers": "Grow with a store that keeps its promise: store ops, logistics, buying, sustainability.",
+    "investors": "Privately held. Store-level reliability data shared with partners on request.",
+    "press": "press@hardvale.example \u2014 new stores, community programs, reliability stories.",
+    "esg": "Waste-less replenishment, community food programs, efficient fleet, sustainable packaging for own-brand.",
+    "legal": [
+      "Privacy",
+      "Terms",
+      "California Rights",
+      "Do Not Sell or Share",
+      "Accessibility"
+    ],
+    "nav": [
+      "About",
+      "Stores",
+      "Our Brands",
+      "Careers",
+      "Investors",
+      "Press",
+      "Sustainability",
+      "Contact"
+    ],
+    "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+    "design": {
+      "palette": [
+        [
+          "Bullseye Red",
+          "#C8102E"
+        ],
+        [
+          "Navy Briefcase",
+          "#1F2A44"
+        ],
+        [
+          "Shelf Grey",
+          "#E6E3DC"
+        ],
+        [
+          "Fresh White",
+          "#FFFFFF"
+        ]
+      ],
+      "typography": {
+        "heading": "Bold condensed sans (e.g. Barlow Condensed)",
+        "body": "Open sans (e.g. Work Sans)"
+      },
+      "logo": {
+        "wordmark": "HARDVALE (bold)",
+        "character": "a target/chevron mark",
+        "usage": "clear space fixed; red on white or navy on white primary"
+      },
+      "imagery": "Bright store scenes, stocked shelves, real shoppers \u2014 energy and value",
+      "tone": "Friendly, confident, plain-spoken; about the shopper's day going well."
+    }
+  }
+}

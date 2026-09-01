@@ -1,0 +1,65 @@
+[
+  {
+    "uri": "case://media/c-on-time",
+    "subject": "committed content-delivery campaign below target on time",
+    "status": "CLOSED",
+    "owner": "person://media/cmo",
+    "actors": [
+      "org://media/hollowmedia",
+      "person://media/cmo",
+      "agent://media/campaign-ops"
+    ],
+    "relationships": [
+      "relationship://media/ops-rel"
+    ],
+    "created_at": "2026-09-01T00:29:53Z",
+    "history": [
+      {
+        "status": "OPEN",
+        "at": "2026-09-01T00:29:53Z",
+        "event": null
+      },
+      {
+        "status": "TRIAGE",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://media/s5-case-triage"
+      },
+      {
+        "status": "ASSIGNED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://media/s5-case-assigned"
+      },
+      {
+        "status": "IN_PROGRESS",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://media/s5-case-inprogress"
+      },
+      {
+        "status": "BLOCKED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://media/s5-case-blocked"
+      },
+      {
+        "status": "RESOLVED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://media/s5-case-resolved"
+      },
+      {
+        "status": "CLOSED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://media/s5-case-closed"
+      }
+    ],
+    "suggestion": "ledger-projected on-time below target",
+    "expected": 0.95,
+    "actual": 0.333,
+    "variance": -0.617,
+    "significance": "CRITICAL",
+    "exception": "Committed content-delivery campaign on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+    "root_cause": "distribution failure \u2014 org://media/hollowpoint-digital missed its committed content-delivery campaign by 2 days; scoped Trust fell 0.90->0.51",
+    "root_cause_status": "SUPPORTED",
+    "recommended_action": "Re-allocate committed media distribution to the verified on-time partner (lyra-ops) and gate the laggard (hollowpoint-digital)",
+    "metric": "metric://media/m-on-time",
+    "verified_outcome": "forward on-time restored to 1.0; org://media/lyra-ops delivered the rallied content-delivery campaign on time (evidence://media/routed-lyra-opsR); org://media/lyra-ops Trust 0.79"
+  }
+]

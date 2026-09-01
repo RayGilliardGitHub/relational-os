@@ -1,0 +1,30 @@
+{
+  "uri": "db://ledger/meridian-2026",
+  "head_hash": "f65b0773bb6193cf30c31e22e6d6621871911f8781aed053aa5dfc66cf300ac1",
+  "entries": [
+    {
+      "event_id": "lg-1",
+      "actor": "person://meridian/cfo",
+      "event_type": "DECISION",
+      "action": "approve dual-source",
+      "signature": "sig:a",
+      "hash": "741dad74f95d6bc73ef77659ce6529c0d01d07f7607169fedfe650220c359641"
+    },
+    {
+      "event_id": "lg-2",
+      "actor": "person://meridian/buyer",
+      "event_type": "ACTION",
+      "action": "sign supplier agreement",
+      "signature": "sig:b",
+      "hash": "a9c33fb6adb552ec1fa4134a321a795c266f873e3f495b322af5a9c7090829e5"
+    },
+    {
+      "event_id": "lg-3",
+      "actor": "org://meridian/supplier",
+      "event_type": "EXCHANGE",
+      "action": "shipment dispatched",
+      "signature": "sig:c",
+      "hash": "f65b0773bb6193cf30c31e22e6d6621871911f8781aed053aa5dfc66cf300ac1"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "cockpit": {
+    "company": "Basinline Energy (Energy / Chemicals, fictional)",
+    "generated": "2026-09-01T00:29:53Z",
+    "health": [
+      {
+        "metric": "metric://enrg/m-on-time",
+        "name": "Committed-refined-products tanker delivery on-time rate",
+        "unit": "fraction",
+        "target": 0.95,
+        "actual": 0.5,
+        "variance": -0.45,
+        "status": "CRITICAL",
+        "forecast": 0.5
+      },
+      {
+        "metric": "metric://enrg/m-trust",
+        "name": "Partner scoped-trust score",
+        "unit": "score",
+        "target": 0.9,
+        "actual": 0.79,
+        "variance": -0.11,
+        "status": "CRITICAL",
+        "forecast": 0.92
+      },
+      {
+        "metric": "metric://enrg/m-settled-value",
+        "name": "Settled committed value",
+        "unit": "USD",
+        "target": 7600000.0,
+        "actual": 7600000.0,
+        "variance": 0.0,
+        "status": "OK",
+        "forecast": 8740000.0
+      }
+    ],
+    "attention_line": "2 things requiring attention today",
+    "attention": [
+      {
+        "uri": "task://enrg/t-rebalance",
+        "label": "re-balance committed work",
+        "priority": 0.695
+      },
+      {
+        "uri": "task://enrg/t-followup",
+        "label": "rallied follow-on (good partner)",
+        "priority": 0.58
+      }
+    ],
+    "exception": {
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "on": 1,
+      "total": 3
+    },
+    "case": "case://enrg/c-on-time",
+    "case_status": "CLOSED",
+    "recommendation": {
+      "summary": "task://enrg/t-rebalance",
+      "authority_required": "authority://enrg/for-ops",
+      "options": [
+        "re-balance tanker volume to the verified on-time carrier",
+        "gate the laggard (peridot-shipping)",
+        "do nothing"
+      ],
+      "includes_do_nothing": true,
+      "tradeoff": "Routing via gyre-marine restores on-time discharge (higher short-term concentration risk) but protects term-customer Trust; doing nothing keeps below target.",
+      "confidence": 0.85,
+      "expected_impact": "forward on-time returns to 1.0",
+      "decision": "decision://enrg/s5-assign"
+    },
+    "verified_outcome": {
+      "exchange": "event://enrg/s4-exchange-gyre-marineR",
+      "outcome": "event://enrg/s4-outcome-gyre-marineR",
+      "evaluation": "met",
+      "evidence": "evidence://enrg/routed-gyre-marineR",
+      "after_trust": 0.79,
+      "forward_on_time": 1.0,
+      "cumulative_after": 0.5
+    },
+    "learning": "decision://enrg/learning",
+    "ledger": 54,
+    "graph": 80
+  },
+  "brand": {
+    "tagline": "Energy that arrives when it's supposed to.",
+    "mission": "Deliver committed refined-products tanker and chemical cargoes reliably and on time so term customers can run their operations without a barrel of uncertainty.",
+    "vision": "An energy market where 'it's on the water' means it will be there \u2014 measured, verified, and on the agreed date.",
+    "values": [
+      [
+        "Dependability",
+        "A charter is a commitment; delivering late is a failure, not a forecast."
+      ],
+      [
+        "Safety first",
+        "On time never means cutting corners on the creole, the tank, or the port."
+      ],
+      [
+        "Evidence over rumor",
+        "We prove when cargoes arrive with ledger-verified records."
+      ],
+      [
+        "Stewardship",
+        "We move energy responsibly and report the footprint."
+      ],
+      [
+        "Partnership",
+        "Term customers plan around us; we honour that trust."
+      ]
+    ],
+    "about": "Basinline Energy is a refined-products and chemicals logistics operator. We take committed tanker deliveries and make discharge dates as firm as a bank statement, backing every arrival with ledger-verified evidence. For term customers whose whole plant schedule hinges on a cargo, our on-time record is not a marketing line \u2014 it is the working relationship.",
+    "fast_facts": [
+      "Founded 1998, energy & chemicals logistics",
+      "Fleet of 40+ contracted tankers",
+      "Terminal and refining connections across the Gulf"
+    ],
+    "history": [
+      [
+        "1998",
+        "Founded in Houston as a fuel-hauling operation."
+      ],
+      [
+        "2010",
+        "Entered refined-products tanker chartering."
+      ],
+      [
+        "2023",
+        "Verifying every cargo discharge against the ledger for on-time proof."
+      ]
+    ],
+    "leadership": [
+      [
+        "Wade Okonkwo",
+        "Chief Executive",
+        "25 years in energy shipping; built Basinline on discharge reliability."
+      ],
+      [
+        "Lena Alvarado",
+        "Chief Supply Officer",
+        "Runs the tanker network and terminal relationships."
+      ]
+    ],
+    "products_services": [
+      "Refined-products tanker delivery",
+      "Chemical cargo logistics",
+      "Terminal discharge coordination"
+    ],
+    "testimonials": [
+      [
+        "Basinline's discharge dates are the only ones in the market I'd build a schedule around.",
+        "Term customer, refining"
+      ]
+    ],
+    "trust": [
+      [
+        "98.7% committed tanker discharge on-time rate (2025)",
+        "Basinline discharge ledger"
+      ],
+      [
+        "OCIMF/ISGOTT-aligned tanker safety programme",
+        "audited annually"
+      ]
+    ],
+    "locations": "Houston, TX (HQ) \u00b7 Gulf terminals; global charter coverage to order",
+    "faq": [
+      [
+        "Why is your on-time claim credible?",
+        "Every cargo discharge is anchored to a signed ledger event with a verified completion time \u2014 auditable, not asserted."
+      ],
+      [
+        "Do you coordinate the terminal side too?",
+        "Yes, we manage both vessel and terminal, so the commitment covers the full landing."
+      ]
+    ],
+    "contact": "charter@basinline.example \u00b7 +1-713-555-0149",
+    "careers": "Keep the barrels moving on schedule: marine ops, chartering, terminal logistics, safety.",
+    "investors": "Privately held. Fleet and reliability data shared on request.",
+    "press": "media@basinline.example \u2014 safety and reliability reporting.",
+    "esg": "Emissions-tracking per voyage, ballast and spill stewardship, port-community partnerships.",
+    "legal": [
+      "Privacy",
+      "Terms",
+      "Caifornia Rights",
+      "Do Not Sell or Share"
+    ],
+    "nav": [
+      "About",
+      "What We Move",
+      "Terminals",
+      "Safety",
+      "Careers",
+      "Investors",
+      "Press",
+      "Contact"
+    ],
+    "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+    "design": {
+      "palette": [
+        [
+          "Pipeline Black",
+          "#1B1E24"
+        ],
+        [
+          "Refinery Amber",
+          "#F2A124"
+        ],
+        [
+          "Marine Steel",
+          "#5B6470"
+        ],
+        [
+          "Terminal Teal",
+          "#0E7C86"
+        ]
+      ],
+      "typography": {
+        "heading": "Strong industrial sans (e.g. Archivo)",
+        "body": "Neutral sans (e.g. Roboto)"
+      },
+      "logo": {
+        "wordmark": "BASINLINE in strong caps",
+        "character": "a tanker/pipeline chevron mark",
+        "usage": "clear space wide; dark-on-light, amber as accent only"
+      },
+      "imagery": "Open-water tankers, terminals, pipelines at scale \u2014 powerful and engineered",
+      "tone": "Solid, understated, exact; heavy on measured facts over adjectives."
+    }
+  }
+}

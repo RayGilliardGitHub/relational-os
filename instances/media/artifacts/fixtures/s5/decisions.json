@@ -1,0 +1,246 @@
+[
+  {
+    "uri": "decision://media/s2-match-baseline",
+    "by": "agent://s2",
+    "authority": "delegation://media/s2-match",
+    "alternatives": [
+      "offer://media/o-l",
+      "offer://media/o-g",
+      "none"
+    ],
+    "confidence": 0.9,
+    "expected_outcome": "lag partner ranked #1 on existing Trust",
+    "actual_outcome": "offer://media/o-l",
+    "detail": [
+      {
+        "offer": "offer://media/o-l",
+        "provider": "org://media/hollowpoint-digital",
+        "fit": 1.0,
+        "trust": 0.9,
+        "score": 0.9
+      },
+      {
+        "offer": "offer://media/o-g",
+        "provider": "org://media/lyra-ops",
+        "fit": 1.0,
+        "trust": 0.6,
+        "score": 0.6
+      }
+    ],
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://media/s4-recon-hollowpoint-digitalQ3",
+    "by": "agent://s4",
+    "authority": "authority://media/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://media/hollowmedia",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "hollowpoint-digitalQ3",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://media/hollowmedia",
+      "provider": "org://media/hollowpoint-digital",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://media/s4-recon-lyra-opsQ3",
+    "by": "agent://s4",
+    "authority": "authority://media/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://media/hollowmedia",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "lyra-opsQ3",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://media/hollowmedia",
+      "provider": "org://media/lyra-ops",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://media/s4-recon-hollowpoint-digitalQ4",
+    "by": "agent://s4",
+    "authority": "authority://media/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 1600000.0 USD from org://media/hollowmedia",
+    "actual_outcome": "matched exactly: settled 1600000.0 USD",
+    "detail": {
+      "slug": "hollowpoint-digitalQ4",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "matched": true,
+      "buyer": "org://media/hollowmedia",
+      "provider": "org://media/hollowpoint-digital",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://media/s5-triage",
+    "by": "agent://media/s5",
+    "authority": "authority://media/for-ops",
+    "alternatives": [
+      "accept",
+      "dismiss as anomaly"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "accept as a real risk",
+    "actual_outcome": "accepted; root nominated",
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://media/s5-assign",
+    "by": "person://media/cmo",
+    "authority": "authority://media/for-ops",
+    "alternatives": [
+      "assign",
+      "defer"
+    ],
+    "confidence": 0.95,
+    "expected_outcome": "task in progress",
+    "detail": {
+      "task": "task://media/t-rebalance",
+      "assigned_to": "agent://media/campaign-ops",
+      "authority": "authority://media/for-ops",
+      "priority": 0.695,
+      "capacity": 1.0
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://media/s5-match-recorded",
+    "by": "agent://s2",
+    "authority": "delegation://media/s2-match",
+    "alternatives": [
+      "offer://media/o-g",
+      "none"
+    ],
+    "confidence": 0.92,
+    "expected_outcome": "good partner ranked #1",
+    "actual_outcome": "offer://media/o-g",
+    "detail": [
+      {
+        "offer": "offer://media/o-g",
+        "provider": "org://media/lyra-ops",
+        "fit": 1.0,
+        "trust": 0.695,
+        "score": 0.695
+      }
+    ],
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://media/owner-human",
+    "by": "person://media/cmo",
+    "authority": "authority://media/for-ops",
+    "alternatives": [
+      "release_in_full",
+      "hold",
+      "release_partial_and_hold_if_shortfall",
+      "open_dispute"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "release to the verified partner",
+    "actual_outcome": "release_in_full (human approved)",
+    "detail": {
+      "task": "task://media/t-rebalance",
+      "action": "release_committed_action",
+      "irreversible_failure": true,
+      "cost_failure_unknowable": true
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://media/s4-recon-lyra-opsR",
+    "by": "agent://s4",
+    "authority": "authority://media/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://media/hollowmedia",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "lyra-opsR",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://media/hollowmedia",
+      "provider": "org://media/lyra-ops",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://media/learning",
+    "by": "agent://media/s5",
+    "authority": "authority://media/for-operations",
+    "subject": "content-delivery campaign on-time management",
+    "expected": 0.95,
+    "actual": 1.0,
+    "variance": 0.05,
+    "why": "Routing distribution via a partner with verified on-time delivery (lyra-ops), while gating the laggard (hollowpoint-digital), restored on-time campaigns. Verified good runs compound scoped Trust.",
+    "change_future_policy": "ALLOCATE by fit AND scoped Trust; partners below the Trust floor need a gate before new campaigns.",
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://media/s5-metric-loop",
+    "by": "agent://media/s5",
+    "authority": "authority://media/for-operations",
+    "alternatives": [
+      "do nothing",
+      "rebalance provider allocation"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "metric://media/m-on-time variance reduced toward target",
+    "detail": {
+      "goal": "goal://media/g-core",
+      "metric": "metric://media/m-on-time",
+      "actual": 0.5,
+      "variance": -0.45,
+      "action": "task://media/t-rebalance",
+      "outcome": "event://media/outcome-routed-lyra-opsR"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://media/s5-attention",
+    "by": "agent://media/s5",
+    "authority": "authority://media/for-ops",
+    "confidence": 0.9,
+    "expected_outcome": "top-of-attention ranked",
+    "actual_outcome": "attention prioritized by derived score",
+    "detail": {
+      "attention": [
+        {
+          "uri": "task://media/t-rebalance",
+          "label": "re-balance committed work",
+          "priority": 0.695
+        },
+        {
+          "uri": "task://media/t-followup",
+          "label": "rallied follow-on (good partner)",
+          "priority": 0.58
+        }
+      ]
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  }
+]

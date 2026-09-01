@@ -1,0 +1,211 @@
+[
+  {
+    "uri": "decision://qk/intent",
+    "by": "agent://s2",
+    "authority": "delegation://qk/s2-match",
+    "alternatives": [
+      "defer",
+      "request more detail"
+    ],
+    "confidence": 0.9,
+    "expected_outcome": "quote matched and verified",
+    "detail": {
+      "subject": "person://qk/customer",
+      "need": "roof replacement/repair",
+      "capability_keys": [
+        "repair",
+        "roofing"
+      ],
+      "urgency": "high",
+      "budget": 15000,
+      "inferred_by": "agent://s2"
+    },
+    "made_at": "2026-09-01T10:05:00Z"
+  },
+  {
+    "uri": "decision://qk/match-1",
+    "by": "agent://s2",
+    "authority": "delegation://qk/s2-match",
+    "alternatives": [
+      "do nothing"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "offer://qk/o-norcrete",
+    "detail": {
+      "offer": "offer://qk/o-norcrete",
+      "provider": "org://qk/norcrete",
+      "fit": 1.0,
+      "trust": 0.92,
+      "score": 0.92
+    },
+    "made_at": "2026-09-01T10:06:00Z"
+  },
+  {
+    "uri": "decision://qk/match-2",
+    "by": "agent://s2",
+    "authority": "delegation://qk/s2-match",
+    "alternatives": [
+      "do nothing"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "offer://qk/o-solarworks",
+    "detail": {
+      "offer": "offer://qk/o-solarworks",
+      "provider": "org://qk/solarworks",
+      "fit": 1.0,
+      "trust": 0.61,
+      "score": 0.61
+    },
+    "made_at": "2026-09-01T10:07:00Z"
+  },
+  {
+    "uri": "decision://qk/floor-generalco",
+    "by": "agent://s2",
+    "authority": "delegation://qk/s2-match",
+    "confidence": 0.99,
+    "detail": {
+      "offer": "offer://qk/o-generalco",
+      "rejected": "below trust floor"
+    },
+    "made_at": "2026-09-01T10:08:00Z"
+  },
+  {
+    "uri": "decision://qk/human-accept",
+    "by": "person://qk/customer",
+    "authority": "authority://qk/for-matching",
+    "alternatives": [
+      "offer://qk/o-solarworks"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "hire org://qk/norcrete",
+    "actual_outcome": "accepted",
+    "made_at": "2026-09-01T10:10:00Z",
+    "evidence": [
+      "evidence://qk/e-oidc"
+    ]
+  },
+  {
+    "uri": "decision://qk/s3-human-accept",
+    "by": "person://qk/customer",
+    "authority": "authority://qk/for-exec",
+    "alternatives": [
+      "offer://qk/o-norcrete"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "engage org://qk/solarworks",
+    "actual_outcome": "accepted",
+    "made_at": "2026-08-31T23:38:10Z"
+  },
+  {
+    "uri": "decision://qk/s3-split-c-solarworks",
+    "by": "agent://s3",
+    "authority": "delegation://qk/s3-execute",
+    "alternatives": [
+      "execute serially",
+      "defer job",
+      "renegotiate terms"
+    ],
+    "confidence": 0.9,
+    "expected_outcome": "3 fleet tasks under the routing seam",
+    "actual_outcome": "plan sealed",
+    "detail": {
+      "commitment": "commitment://qk/c-solarworks",
+      "provider": "org://qk/solarworks",
+      "trust": 0.708,
+      "tasks": [
+        {
+          "task_id": "t1",
+          "action": "prepare_work_order_and_schedule",
+          "worker": "agent://w-local",
+          "seam_tier": "local",
+          "tier": "local",
+          "reversible": true,
+          "cost_knowable": true,
+          "authority": "delegation://qk/w-local",
+          "status": "PENDING"
+        },
+        {
+          "task_id": "t2",
+          "action": "dispatch_dispatcher_and_verify_materials",
+          "worker": "agent://w-cloud",
+          "seam_tier": "private-cloud",
+          "tier": "private-cloud",
+          "reversible": true,
+          "cost_knowable": true,
+          "authority": "delegation://qk/w-cloud",
+          "status": "PENDING"
+        },
+        {
+          "task_id": "t3",
+          "action": "release_final_payment",
+          "worker": "agent://w-frontier",
+          "seam_tier": "frontier",
+          "tier": "human",
+          "reversible": false,
+          "cost_knowable": false,
+          "authority": "delegation://qk/w-frontier",
+          "status": "ESCALATED"
+        }
+      ]
+    },
+    "made_at": "2026-08-31T23:38:10Z"
+  },
+  {
+    "uri": "decision://qk/s3-esc-t3",
+    "by": "agent://s3",
+    "authority": "delegation://qk/w-frontier",
+    "alternatives": [
+      "auto-release (NOT permitted: irreversible/unknowable)",
+      "hold pending human acknowledgement"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "escalate release_final_payment to person://qk/approver",
+    "actual_outcome": "ESCALATED, NOT auto-executed",
+    "detail": {
+      "task": {
+        "task_id": "t3",
+        "action": "release_final_payment",
+        "worker": "agent://w-frontier",
+        "seam_tier": "frontier",
+        "tier": "human",
+        "reversible": false,
+        "cost_knowable": false,
+        "authority": "delegation://qk/w-frontier",
+        "status": "ESCALATED"
+      },
+      "commitment": "commitment://qk/c-solarworks",
+      "trigger": {
+        "irreversible_failure": true,
+        "cost_failure_unknowable": true
+      }
+    },
+    "made_at": "2026-08-31T23:38:10Z"
+  },
+  {
+    "uri": "decision://qk/s3-human-t3",
+    "by": "person://qk/approver",
+    "authority": "authority://qk/for-exec",
+    "alternatives": [
+      "release_in_full",
+      "hold_pending_inspection",
+      "release_partial_and_hold_if_fault",
+      "open_dispute"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "release_final_payment",
+    "actual_outcome": "release_in_full (human approved)",
+    "evidence": [
+      "evidence://qk/e-oidc"
+    ],
+    "detail": {
+      "task": "t3",
+      "action": "release_final_payment",
+      "commitment": "commitment://qk/c-solarworks",
+      "trigger": {
+        "irreversible_failure": true,
+        "cost_failure_unknowable": true
+      }
+    },
+    "made_at": "2026-08-31T23:38:10Z"
+  }
+]

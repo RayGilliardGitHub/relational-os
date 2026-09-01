@@ -1,0 +1,46 @@
+[
+  {
+    "uri": "relationship://auto/ops-rel",
+    "participants": [
+      "org://auto/forge-auto",
+      "org://auto/cypress-assembly"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://auto/forge-auto": [
+        "provider"
+      ],
+      "org://auto/cypress-assembly": [
+        "client"
+      ]
+    },
+    "authority": [
+      "authority://auto/for-ops"
+    ],
+    "purpose": "automotive operating relationship"
+  },
+  {
+    "uri": "relationship://auto/partner-net",
+    "participants": [
+      "org://auto/forge-auto",
+      "org://auto/stellar-auto",
+      "org://auto/corvair-parts"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://auto/forge-auto": [
+        "operator"
+      ],
+      "org://auto/stellar-auto": [
+        "partner"
+      ],
+      "org://auto/corvair-parts": [
+        "partner"
+      ]
+    },
+    "authority": [
+      "authority://auto/for-ops"
+    ],
+    "purpose": "automotive partner network"
+  }
+]

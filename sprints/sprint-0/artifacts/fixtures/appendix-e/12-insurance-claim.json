@@ -1,0 +1,42 @@
+[
+  {
+    "uri": "person://e12/insd",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e12/insurer",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e12/claimrel",
+    "participants": [
+      "person://e12/insd",
+      "org://e12/insurer"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "claim://e12/c1",
+    "proposer": "person://e12/insd",
+    "statement": "collision damage covered by policy"
+  },
+  {
+    "uri": "evidence://e12/photo",
+    "kind": "OBSERVATION",
+    "source": "adjuster report"
+  },
+  {
+    "uri": "dispute://e12/d1",
+    "about": "claim://e12/c1",
+    "parties": [
+      "person://e12/insd",
+      "org://e12/insurer"
+    ],
+    "status": "OPEN"
+  },
+  {
+    "uri": "interaction://e12/claim",
+    "of": "relationship://e12/claimrel",
+    "kind": "DISPUTE"
+  }
+]

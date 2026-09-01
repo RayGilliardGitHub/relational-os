@@ -1,0 +1,41 @@
+[
+  {
+    "uri": "person://e13/homeowner",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://e13/contractor",
+    "type": "PERSON"
+  },
+  {
+    "uri": "relationship://e13/hire",
+    "participants": [
+      "person://e13/homeowner",
+      "person://e13/contractor"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "contract://e13/c1",
+    "parties": [
+      "person://e13/homeowner",
+      "person://e13/contractor"
+    ]
+  },
+  {
+    "uri": "interaction://e13/offer",
+    "of": "relationship://e13/hire",
+    "kind": "OFFER"
+  },
+  {
+    "uri": "event://e13/decision",
+    "type": "DECISION",
+    "event_id": "event-e13/decision",
+    "correlation_id": "event-ce13/decision",
+    "causation_id": "event-cae13/decision",
+    "idempotency_key": "event-ie13/decision",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "person://e13/homeowner"
+  }
+]

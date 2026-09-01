@@ -1,0 +1,34 @@
+[
+  {
+    "uri": "trust://retail/t-atlas-freight",
+    "subject": "org://retail/hardvale",
+    "target": "org://retail/atlas-freight",
+    "claim": "store replenishment delivery reliability",
+    "context": "relationship://retail/partner-net",
+    "score": 0.79,
+    "updated_at": "2026-09-01T00:29:53Z",
+    "expected": 0.8,
+    "outcome": 1.0,
+    "evidence": [
+      "evidence://retail/routed-atlas-freightR"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  },
+  {
+    "uri": "trust://retail/t-corvus-logistics",
+    "subject": "org://retail/hardvale",
+    "target": "org://retail/corvus-logistics",
+    "claim": "store replenishment delivery reliability",
+    "context": "relationship://retail/partner-net",
+    "score": 0.14,
+    "updated_at": "2026-09-01T00:29:53Z",
+    "expected": 0.8,
+    "outcome": 0.0,
+    "evidence": [
+      "evidence://retail/committed-corvus-logisticsQ4"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  }
+]

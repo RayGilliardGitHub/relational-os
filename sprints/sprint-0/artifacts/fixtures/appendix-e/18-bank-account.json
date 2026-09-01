@@ -1,0 +1,44 @@
+[
+  {
+    "uri": "person://e18/accountholder",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e18/bank",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e18/acct",
+    "participants": [
+      "person://e18/accountholder",
+      "org://e18/bank"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "consent://e18/c1",
+    "granted_by": "person://e18/accountholder",
+    "granted_for": "KYC + account terms"
+  },
+  {
+    "uri": "acct://e18/checking",
+    "kind": "customer-account",
+    "holder": "person://e18/accountholder"
+  },
+  {
+    "uri": "interaction://e18/open",
+    "of": "relationship://e18/acct",
+    "kind": "OFFER"
+  },
+  {
+    "uri": "event://e18/decision",
+    "type": "DECISION",
+    "event_id": "event-e18/decision",
+    "correlation_id": "event-ce18/decision",
+    "causation_id": "event-cae18/decision",
+    "idempotency_key": "event-ie18/decision",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "org://e18/bank"
+  }
+]

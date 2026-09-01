@@ -1,0 +1,46 @@
+[
+  {
+    "uri": "relationship://media/ops-rel",
+    "participants": [
+      "org://media/hollowmedia",
+      "org://media/cascade-vantage"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://media/hollowmedia": [
+        "provider"
+      ],
+      "org://media/cascade-vantage": [
+        "client"
+      ]
+    },
+    "authority": [
+      "authority://media/for-ops"
+    ],
+    "purpose": "media operating relationship"
+  },
+  {
+    "uri": "relationship://media/partner-net",
+    "participants": [
+      "org://media/hollowmedia",
+      "org://media/lyra-ops",
+      "org://media/hollowpoint-digital"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://media/hollowmedia": [
+        "operator"
+      ],
+      "org://media/lyra-ops": [
+        "partner"
+      ],
+      "org://media/hollowpoint-digital": [
+        "partner"
+      ]
+    },
+    "authority": [
+      "authority://media/for-ops"
+    ],
+    "purpose": "media partner network"
+  }
+]

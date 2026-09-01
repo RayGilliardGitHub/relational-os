@@ -1,0 +1,46 @@
+[
+  {
+    "uri": "relationship://fin/loan-ops",
+    "participants": [
+      "org://fin/northglen",
+      "org://fin/zephyr"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://fin/northglen": [
+        "bank"
+      ],
+      "org://fin/zephyr": [
+        "borrower"
+      ]
+    },
+    "authority": [
+      "authority://fin/for-treasury"
+    ],
+    "purpose": "commercial working-capital lending"
+  },
+  {
+    "uri": "relationship://fin/funding-net",
+    "participants": [
+      "org://fin/northglen",
+      "org://fin/adamvale",
+      "org://fin/kaplen"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://fin/northglen": [
+        "treasury"
+      ],
+      "org://fin/adamvale": [
+        "correspondent"
+      ],
+      "org://fin/kaplen": [
+        "correspondent"
+      ]
+    },
+    "authority": [
+      "authority://fin/for-treasury"
+    ],
+    "purpose": "syndicated committed funding"
+  }
+]

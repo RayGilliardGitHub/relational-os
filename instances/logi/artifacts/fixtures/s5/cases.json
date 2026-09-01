@@ -1,0 +1,65 @@
+[
+  {
+    "uri": "case://logi/c-on-time",
+    "subject": "committed freight-dispatch settlement below target on time",
+    "status": "CLOSED",
+    "owner": "person://logi/cco",
+    "actors": [
+      "org://logi/hawkline",
+      "person://logi/cco",
+      "agent://logi/fleet-ops"
+    ],
+    "relationships": [
+      "relationship://logi/ops-rel"
+    ],
+    "created_at": "2026-09-01T00:29:53Z",
+    "history": [
+      {
+        "status": "OPEN",
+        "at": "2026-09-01T00:29:53Z",
+        "event": null
+      },
+      {
+        "status": "TRIAGE",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://logi/s5-case-triage"
+      },
+      {
+        "status": "ASSIGNED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://logi/s5-case-assigned"
+      },
+      {
+        "status": "IN_PROGRESS",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://logi/s5-case-inprogress"
+      },
+      {
+        "status": "BLOCKED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://logi/s5-case-blocked"
+      },
+      {
+        "status": "RESOLVED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://logi/s5-case-resolved"
+      },
+      {
+        "status": "CLOSED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://logi/s5-case-closed"
+      }
+    ],
+    "suggestion": "ledger-projected on-time below target",
+    "expected": 0.95,
+    "actual": 0.333,
+    "variance": -0.617,
+    "significance": "CRITICAL",
+    "exception": "Committed freight-dispatch settlement on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+    "root_cause": "carrier failure \u2014 org://logi/barnacle-freight missed its committed freight dispatch by 2 days; scoped Trust fell 0.90->0.51",
+    "root_cause_status": "SUPPORTED",
+    "recommended_action": "Re-allocate committed freight dispatches to the verified on-time carrier (keystone-lines) and gate the laggard (barnacle-freight)",
+    "metric": "metric://logi/m-on-time",
+    "verified_outcome": "forward on-time restored to 1.0; org://logi/keystone-lines delivered the rallied freight-dispatch settlement on time (evidence://logi/routed-keystone-linesR); org://logi/keystone-lines Trust 0.79"
+  }
+]

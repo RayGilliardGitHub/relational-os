@@ -1,0 +1,29 @@
+[
+  {
+    "uri": "process://enrg/pr-core",
+    "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+    "steps": [
+      "triage",
+      "assign",
+      "execute",
+      "verify_outcome",
+      "learning"
+    ]
+  },
+  {
+    "uri": "process_instance://enrg/pi-core",
+    "process": "process://enrg/pr-core",
+    "status": "RUNNING",
+    "started_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "escalation://enrg/escalate-release",
+    "trigger": "external tanker discharge \u2014 irreversible and cost-unknowable once loaded",
+    "severity": "WARN",
+    "recipient": "person://enrg/supt",
+    "deadline": "2026-11-15T00:00:00Z",
+    "fallback": "agent://enrg/s4",
+    "authority": "authority://enrg/for-ops",
+    "acknowledgement": "approve then execute"
+  }
+]

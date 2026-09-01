@@ -1,0 +1,230 @@
+{
+  "cockpit": {
+    "company": "Hollow Media (Media, fictional)",
+    "generated": "2026-09-01T00:29:53Z",
+    "health": [
+      {
+        "metric": "metric://media/m-on-time",
+        "name": "Committed-content-delivery campaign on-time rate",
+        "unit": "fraction",
+        "target": 0.95,
+        "actual": 0.5,
+        "variance": -0.45,
+        "status": "CRITICAL",
+        "forecast": 0.5
+      },
+      {
+        "metric": "metric://media/m-trust",
+        "name": "Partner scoped-trust score",
+        "unit": "score",
+        "target": 0.9,
+        "actual": 0.79,
+        "variance": -0.11,
+        "status": "CRITICAL",
+        "forecast": 0.92
+      },
+      {
+        "metric": "metric://media/m-settled-value",
+        "name": "Settled committed value",
+        "unit": "USD",
+        "target": 7600000.0,
+        "actual": 7600000.0,
+        "variance": 0.0,
+        "status": "OK",
+        "forecast": 8740000.0
+      }
+    ],
+    "attention_line": "2 things requiring attention today",
+    "attention": [
+      {
+        "uri": "task://media/t-rebalance",
+        "label": "re-balance committed work",
+        "priority": 0.695
+      },
+      {
+        "uri": "task://media/t-followup",
+        "label": "rallied follow-on (good partner)",
+        "priority": 0.58
+      }
+    ],
+    "exception": {
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "on": 1,
+      "total": 3
+    },
+    "case": "case://media/c-on-time",
+    "case_status": "CLOSED",
+    "recommendation": {
+      "summary": "task://media/t-rebalance",
+      "authority_required": "authority://media/for-ops",
+      "options": [
+        "re-balance media distribution to the verified on-time partner",
+        "gate the laggard (hollowpoint-digital)",
+        "do nothing"
+      ],
+      "includes_do_nothing": true,
+      "tradeoff": "Routing via lyra-ops restores on-time campaigns (higher short-term concentration risk) but protects platform Trust; doing nothing keeps below target.",
+      "confidence": 0.85,
+      "expected_impact": "forward on-time returns to 1.0",
+      "decision": "decision://media/s5-assign"
+    },
+    "verified_outcome": {
+      "exchange": "event://media/s4-exchange-lyra-opsR",
+      "outcome": "event://media/s4-outcome-lyra-opsR",
+      "evaluation": "met",
+      "evidence": "evidence://media/routed-lyra-opsR",
+      "after_trust": 0.79,
+      "forward_on_time": 1.0,
+      "cumulative_after": 0.5
+    },
+    "learning": "decision://media/learning",
+    "ledger": 54,
+    "graph": 80
+  },
+  "brand": {
+    "tagline": "Campaigns that land on the date.",
+    "mission": "Deliver committed content-delivery campaigns reliably and on time so platforms and brands stay in the mix and audiences see the story on schedule.",
+    "vision": "A media marketplace where a campaign release date is a contract audiences can count on.",
+    "values": [
+      [
+        "The date is the story",
+        "A late campaign is a missed audience moment."
+      ],
+      [
+        "Creative rigour",
+        "Great work delivered on time, never rushed at the end."
+      ],
+      [
+        "Measured impact",
+        "We verify every run against the ledger; reach is a fact."
+      ],
+      [
+        "Platform partnership",
+        "We make our partners' schedules look good."
+      ],
+      [
+        "Audience respect",
+        "We deliver content audiences actually want, when they want it."
+      ]
+    ],
+    "about": "Hollow Media produces and delivers committed content-delivery campaigns \u2014 from concept through to an energized, measured launch on the agreed date. In a business where timing is the whole story, we back every campaign release with ledger-verified on-time evidence, so a 'drop' date is a real commitment, not a hopeful aspiration.",
+    "fast_facts": [
+      "Founded 2007, media & content production",
+      "400+ campaigns delivered",
+      "Multi-format distribution across platforms"
+    ],
+    "history": [
+      [
+        "2007",
+        "Founded producing branded content."
+      ],
+      [
+        "2014",
+        "Launched the content-delivery campaign business."
+      ],
+      [
+        "2022",
+        "Verifying every campaign release against the ledger."
+      ]
+    ],
+    "leadership": [
+      [
+        "Celine Wexler",
+        "Chief Executive",
+        "Producer-turned-executive who built Hollow on delivered dates."
+      ],
+      [
+        "Omar Delgado",
+        "Chief Media Officer",
+        "Owns the distribution network and campaign timing."
+      ]
+    ],
+    "products_services": [
+      "Content-delivery campaigns (concept to launch)",
+      "Multi-platform distribution",
+      "Campaign measurement and reporting"
+    ],
+    "testimonials": [
+      [
+        "Hollow delivered the campaign on the exact date we'd promised our brand. That never happens in media.",
+        "Brand marketing lead"
+      ]
+    ],
+    "trust": [
+      [
+        "99.3% committed campaign on-time rate (2025)",
+        "Hollow delivery ledger"
+      ],
+      [
+        "MARC (Media Rating Council) aligned measurement",
+        "independent audit"
+      ]
+    ],
+    "locations": "LA (HQ) \u00b7 production + distribution hubs across 3 regions",
+    "faq": [
+      [
+        "How can you commit a creative launch date?",
+        "We treat the release like a delivery: planned backwards from the date, verified at launch, and measured against the ledger."
+      ],
+      [
+        "Do you handle distribution yourselves?",
+        "Yes, multi-platform distribution is core and part of the on-time commitment."
+      ]
+    ],
+    "contact": "hello@hollowmedia.example \u00b7 +1-310-555-0188",
+    "careers": "Drop stories on time: production, distribution, data, and campaign leads.",
+    "investors": "Privately held. Campaign performance data shared with brands on request.",
+    "press": "press@hollowmedia.example \u2014 launches, shows, and reliability stories.",
+    "esg": "Sustainable production practices, audience-inclusive content, creator equity programs.",
+    "legal": [
+      "Privacy",
+      "Terms",
+      "California Rights",
+      "Do Not Sell or Share",
+      "Content Policy"
+    ],
+    "nav": [
+      "About",
+      "Work",
+      "Distribution",
+      "Press",
+      "Careers",
+      "Contact"
+    ],
+    "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+    "design": {
+      "palette": [
+        [
+          "Studio Black",
+          "#111214"
+        ],
+        [
+          "Hollow Cerise",
+          "#D41159"
+        ],
+        [
+          "Screen White",
+          "#F7F5F2"
+        ],
+        [
+          "Signal Teal",
+          "#0F7A72"
+        ]
+      ],
+      "typography": {
+        "heading": "Contemporary display serif (e.g. Playfair Display)",
+        "body": "Neutral sans (e.g. Inter)"
+      },
+      "logo": {
+        "wordmark": "hollow",
+        "character": "a hollow-circle/cutout mark",
+        "usage": "clear space fine; cerise-on-black primary, teal for data accents"
+      },
+      "imagery": "Cinematic stills, editing bays, campaign storyboards \u2014 dark, bold, precise",
+      "tone": "Confident, slightly provocative, disciplined about timing; the date is the point."
+    }
+  }
+}

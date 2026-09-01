@@ -1,0 +1,15 @@
+[
+  {
+    "uri": "policy://retail/allocation",
+    "name": "retail allocation",
+    "condition": "a new committed delivery is to be allocated",
+    "decision": "ALLOCATE by fit AND scoped Trust; carriers below the Trust floor need a performance gate before new runs. (learned 2026-09-01)",
+    "action": "allocate to the top-ranked fitted partner; gate laggard",
+    "scope": [
+      "expectation://retail/e-on-time"
+    ],
+    "version": 3,
+    "policy_status": "EFFECTIVE",
+    "learning": "decision://retail/learning"
+  }
+]

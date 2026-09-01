@@ -1,0 +1,248 @@
+[
+  {
+    "uri": "org://tech/vantagecloud",
+    "type": "ORG",
+    "identity": {
+      "attestations": [
+        "business-license"
+      ]
+    },
+    "brand": {
+      "tagline": "The cloud that keeps its word.",
+      "mission": "Deliver platform upgrades and integrated cloud environments reliably, on time, so every enterprise customer can trust us to keep their business moving.",
+      "vision": "A world where enterprises stop managing delivery risk and start compounding the value of reliably shipped software.",
+      "values": [
+        [
+          "Trust over speed",
+          "We earn enterprise confidence one verified, on-time delivery at a time."
+        ],
+        [
+          "Verify, don't assume",
+          "Evidence outranks opinion; on-time is a ledger fact, not a promise."
+        ],
+        [
+          "Customer success",
+          "Our win is our customer's fleet running clean on the scheduled date."
+        ],
+        [
+          "Candour",
+          "We say what is true about a release even when it is inconvenient."
+        ],
+        [
+          "Engineering depth",
+          "Hard problems are where we live."
+        ]
+      ],
+      "about": "VantageCloud is a technology operator that runs and integrates enterprise cloud platforms. We take committed platform-upgrade deployments and make them land \u2014 on time, verified, with the audit trail to prove it. Born out of a simple frustration, that a contract is only as good as the schedule it shipped on, we build trust the same way we build systems: observably, incrementally, and without shortcuts.",
+      "fast_facts": [
+        "Founded 2012, enterprise cloud operations",
+        "1,400+ integrator partners across 3 regional clouds",
+        "99.2% committed-deployment on-time track record"
+      ],
+      "history": [
+        [
+          "2012",
+          "Founded in Austin, TX to end late software cutovers."
+        ],
+        [
+          "2016",
+          "Opened the platform-upgrade business that became our core."
+        ],
+        [
+          "2021",
+          "Standardized every delivery on ledger-verifiable on-time evidence."
+        ]
+      ],
+      "leadership": [
+        [
+          "Adrian Cross",
+          "Chief Executive",
+          "Former reliability engineer who founded VantageCloud on the principle that uptime is a commitment."
+        ],
+        [
+          "Priya Raman",
+          "Chief Digital Office",
+          "Runs the deployment practice and the platform-upgrade portfolio."
+        ]
+      ],
+      "products_services": [
+        "Platform-upgrade deployment and cutover",
+        "Cloud environment integration and migration",
+        "Delivery-reliability engineering and audit"
+      ],
+      "testimonials": [
+        [
+          "Our quarterly upgrades used to be a gamble. VantageCloud made them a scheduled fact.",
+          "Enterprise platform director, retail"
+        ]
+      ],
+      "trust": [
+        [
+          "99.2% committed-deployment on-time rate (2025)",
+          "VantageCloud delivery ledger"
+        ],
+        [
+          "SOC 2 Type II attestation",
+          "independent audit"
+        ]
+      ],
+      "locations": "Austin, TX (HQ) \u00b7 regional delivery hubs in Europe and Asia-Pacific",
+      "faq": [
+        [
+          "What does an on-time guarantee actually prove?",
+          "We anchor every committed deployment to ledger-verified evidence, so 'on time' is auditable, not asserted."
+        ],
+        [
+          "Do you take over existing environments?",
+          "Yes \u2014 integration and migration are core, and they are treated as committed deployments with the same evidence bar."
+        ]
+      ],
+      "contact": "partners@vantagecloud.example \u00b7 +1-512-555-0142",
+      "careers": "Build the cloud that keeps its word: reliability engineers, delivery leads, platform architects.",
+      "investors": "Privately held. Delivery-reliability data and growth material on request.",
+      "press": "newsroom@vantagecloud.example \u2014 media kit, release history, leadership interviews.",
+      "esg": "Carbon-aware scheduling for our own cloud estate; open tooling grants; 1-1-1 model for engineering time.",
+      "legal": [
+        "Privacy",
+        "Terms",
+        "California Rights",
+        "Do Not Sell or Share"
+      ],
+      "nav": [
+        "About",
+        "Products & Services",
+        "Customers",
+        "Careers",
+        "Investors",
+        "Press",
+        "Sustainability",
+        "Contact"
+      ],
+      "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+      "design": {
+        "palette": [
+          [
+            "Deep Indigo",
+            "#2B2D72"
+          ],
+          [
+            "Signal Cyan",
+            "#00A8E8"
+          ],
+          [
+            "Cloud White",
+            "#F7F9FC"
+          ],
+          [
+            "Verified Green",
+            "#1FA05A"
+          ]
+        ],
+        "typography": {
+          "heading": "Sans-serif geometric (e.g. Space Grotesk)",
+          "body": "Humanist sans (e.g. Inter)"
+        },
+        "logo": {
+          "wordmark": "VANTAGECLOUD in letterspaced caps",
+          "character": "a cloud-chevron mark",
+          "usage": "clear space = x-height; never recolor outside light/dark approved pairs"
+        },
+        "imagery": "Clean data scenes: dashboards, server rooms, abstract cloud geometry \u2014 optimistic and precise",
+        "tone": "Confident and precise; evidence-first; never hype."
+      }
+    }
+  },
+  {
+    "uri": "org://tech/sierra-coast",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://tech/sentinel-labs",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://tech/revan-digital",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://tech/cdo",
+    "type": "PERSON"
+  },
+  {
+    "uri": "agent://tech/deploy-ops",
+    "type": "AGENT"
+  },
+  {
+    "uri": "authority://tech/for-ops",
+    "holder": "org://tech/vantagecloud",
+    "grants": [
+      "triage_case",
+      "assign_case",
+      "close_case",
+      "approve_learning",
+      "rebalance_commitment",
+      "gate_partner",
+      "release_committed_action"
+    ],
+    "roles": [
+      "operator"
+    ]
+  },
+  {
+    "uri": "rule://tech/ops-run",
+    "kind": "POLICY",
+    "text": "agent://tech/deploy-ops may re-balance resource commitment and gate partner performance",
+    "grants": [
+      "rebalance_commitment",
+      "gate_partner"
+    ]
+  },
+  {
+    "uri": "rule://tech/match-run",
+    "kind": "POLICY",
+    "text": "S2 may run Trust-weighted matching for the client",
+    "grants": [
+      "run_match"
+    ]
+  },
+  {
+    "uri": "delegation://tech/ops",
+    "grantor": "org://tech/vantagecloud",
+    "grantee": "agent://tech/deploy-ops",
+    "scope": [
+      "rule://tech/ops-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://tech/s2-match",
+    "grantor": "org://tech/vantagecloud",
+    "grantee": "agent://s2",
+    "scope": [
+      "rule://tech/match-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "offer://tech/o-g",
+    "provider": "org://tech/sentinel-labs",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "deployment",
+      "integration"
+    ],
+    "fit_note": "technology partner delivery line"
+  },
+  {
+    "uri": "offer://tech/o-l",
+    "provider": "org://tech/revan-digital",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "deployment",
+      "integration"
+    ],
+    "fit_note": "technology partner delivery line"
+  }
+]

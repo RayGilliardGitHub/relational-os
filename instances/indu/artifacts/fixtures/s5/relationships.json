@@ -1,0 +1,46 @@
+[
+  {
+    "uri": "relationship://indu/ops-rel",
+    "participants": [
+      "org://indu/ferrousworks",
+      "org://indu/downfield"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://indu/ferrousworks": [
+        "provider"
+      ],
+      "org://indu/downfield": [
+        "client"
+      ]
+    },
+    "authority": [
+      "authority://indu/for-ops"
+    ],
+    "purpose": "industrial operating relationship"
+  },
+  {
+    "uri": "relationship://indu/partner-net",
+    "participants": [
+      "org://indu/ferrousworks",
+      "org://indu/quadrant-works",
+      "org://indu/cadence-tools"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://indu/ferrousworks": [
+        "operator"
+      ],
+      "org://indu/quadrant-works": [
+        "partner"
+      ],
+      "org://indu/cadence-tools": [
+        "partner"
+      ]
+    },
+    "authority": [
+      "authority://indu/for-ops"
+    ],
+    "purpose": "industrial partner network"
+  }
+]

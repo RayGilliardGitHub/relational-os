@@ -1,0 +1,49 @@
+[
+  {
+    "uri": "person://e08/v",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e08/charity",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e08/vol",
+    "participants": [
+      "person://e08/v",
+      "org://e08/charity"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "person://e08/v": [
+        "volunteer"
+      ]
+    }
+  },
+  {
+    "uri": "resource://e08/labor",
+    "kind": "LABOR",
+    "provided_by": "person://e08/v"
+  },
+  {
+    "uri": "resource://e08/time",
+    "kind": "TIME",
+    "provided_by": "person://e08/v"
+  },
+  {
+    "uri": "interaction://e08/action",
+    "of": "relationship://e08/vol",
+    "kind": "ACTION"
+  },
+  {
+    "uri": "event://e08/action",
+    "type": "ACTION",
+    "event_id": "event-e08/action",
+    "correlation_id": "event-ce08/action",
+    "causation_id": "event-cae08/action",
+    "idempotency_key": "event-ie08/action",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "person://e08/v"
+  }
+]

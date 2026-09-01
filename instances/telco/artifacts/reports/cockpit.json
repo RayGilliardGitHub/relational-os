@@ -1,0 +1,232 @@
+{
+  "cockpit": {
+    "company": "NimbusCom (Telecom, fictional)",
+    "generated": "2026-09-01T00:29:53Z",
+    "health": [
+      {
+        "metric": "metric://telco/m-on-time",
+        "name": "Committed-cell-site buildout on-time rate",
+        "unit": "fraction",
+        "target": 0.95,
+        "actual": 0.5,
+        "variance": -0.45,
+        "status": "CRITICAL",
+        "forecast": 0.5
+      },
+      {
+        "metric": "metric://telco/m-trust",
+        "name": "Partner scoped-trust score",
+        "unit": "score",
+        "target": 0.9,
+        "actual": 0.79,
+        "variance": -0.11,
+        "status": "CRITICAL",
+        "forecast": 0.92
+      },
+      {
+        "metric": "metric://telco/m-settled-value",
+        "name": "Settled committed value",
+        "unit": "USD",
+        "target": 7600000.0,
+        "actual": 7600000.0,
+        "variance": 0.0,
+        "status": "OK",
+        "forecast": 8740000.0
+      }
+    ],
+    "attention_line": "2 things requiring attention today",
+    "attention": [
+      {
+        "uri": "task://telco/t-rebalance",
+        "label": "re-balance committed work",
+        "priority": 0.695
+      },
+      {
+        "uri": "task://telco/t-followup",
+        "label": "rallied follow-on (good partner)",
+        "priority": 0.58
+      }
+    ],
+    "exception": {
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "on": 1,
+      "total": 3
+    },
+    "case": "case://telco/c-on-time",
+    "case_status": "CLOSED",
+    "recommendation": {
+      "summary": "task://telco/t-rebalance",
+      "authority_required": "authority://telco/for-ops",
+      "options": [
+        "re-balance cell-site buildout to the verified on-time contractor",
+        "gate the laggard (nimbus-networks)",
+        "do nothing"
+      ],
+      "includes_do_nothing": true,
+      "tradeoff": "Routing via meridian-tower restores on-time buildout (higher short-term concentration risk) but protects coverage Trust; doing nothing keeps below target.",
+      "confidence": 0.85,
+      "expected_impact": "forward on-time returns to 1.0",
+      "decision": "decision://telco/s5-assign"
+    },
+    "verified_outcome": {
+      "exchange": "event://telco/s4-exchange-meridian-towerR",
+      "outcome": "event://telco/s4-outcome-meridian-towerR",
+      "evaluation": "met",
+      "evidence": "evidence://telco/routed-meridian-towerR",
+      "after_trust": 0.79,
+      "forward_on_time": 1.0,
+      "cumulative_after": 0.5
+    },
+    "learning": "decision://telco/learning",
+    "ledger": 54,
+    "graph": 80
+  },
+  "brand": {
+    "tagline": "Coverage where you need it, on schedule.",
+    "mission": "Deliver committed cell-site buildouts reliably and on time so metropolitan communities and subscribers get the coverage they were promised, when they were promised it.",
+    "vision": "A connected city where 'we're building coverage' means the tower is coming up on the scheduled date.",
+    "values": [
+      [
+        "Coverage is a promise",
+        "A site on time means a neighbourhood connected on time."
+      ],
+      [
+        "Build it right",
+        "Speed never trades away a safe, code-compliant handover."
+      ],
+      [
+        "Evidence in hand",
+        "We verify every energized site against the ledger."
+      ],
+      [
+        "Subscriber trust",
+        "People count on us to make the signal real; we protect that."
+      ],
+      [
+        "Metro partnership",
+        "We build with the community, not around it."
+      ]
+    ],
+    "about": "NimbusCom is a telecom operator that builds and lights up cellular coverage. We take committed cell-site buildouts and energize them on schedule \u2014 verified, code-compliant, ready to carry traffic. Between the promise on a coverage map and the bars on a subscriber's phone, there is a site that has to come up on the date; that handover is the work we are built for.",
+    "fast_facts": [
+      "Founded 2003, mobile network operator",
+      "2,100+ cell sites lit",
+      "Metropolitan coverage across 3 metro regions"
+    ],
+    "history": [
+      [
+        "2003",
+        "Founded rolling out metro coverage."
+      ],
+      [
+        "2011",
+        "Accelerated the cell-site buildout business."
+      ],
+      [
+        "2022",
+        "Verifying every energized handover against the ledger."
+      ]
+    ],
+    "leadership": [
+      [
+        "CEO \u2014 Lena Park",
+        "Chief Executive",
+        "Ran network engineering for years before leading NimbusCom."
+      ],
+      [
+        "Tanaji Rao",
+        "Chief Network Officer",
+        "Owns buildout schedule and handover integrity."
+      ]
+    ],
+    "products_services": [
+      "Mobile network operation",
+      "Cell-site buildout and erection",
+      "Coverage expansion and modernization"
+    ],
+    "testimonials": [
+      [
+        "NimbusCom lit the site on the exact date they committed. Our coverage story changed that day.",
+        "Metro community liaison"
+      ]
+    ],
+    "trust": [
+      [
+        "98.8% committed cell-site on-time rate (2025)",
+        "NimbusCom buildout ledger"
+      ],
+      [
+        "FCC-compliant, code-certified site handovers",
+        "independent inspection"
+      ]
+    ],
+    "locations": "Metro HQ across 3 regions; build teams dispatched per site programme",
+    "faq": [
+      [
+        "What counts as 'on time' for a site?",
+        "The committed energization date, verified by a signed ledger event at handover \u2014 measured, not promised."
+      ],
+      [
+        "Do you handle permits and community outreach?",
+        "Yes, buildout includes permitting, outreach, and code handover, all on a schedule."
+      ]
+    ],
+    "contact": "coverage@nimbuscom.example \u00b7 +1-512-555-0110",
+    "careers": "Light up whole neighbourhoods: site engineering, buildout ops, network, field coordination.",
+    "investors": "Privately held. Coverage and buildout reliability shared on request.",
+    "press": "news@nimbuscom.example \u2014 new sites and coverage announcements.",
+    "esg": "Carbon-aware build scheduling, site-power efficiency, community digital-inclusion grants.",
+    "legal": [
+      "Privacy",
+      "Terms",
+      "California Rights",
+      "Do Not Sell or Share",
+      "Health & Safety"
+    ],
+    "nav": [
+      "About",
+      "Coverage",
+      "Buildout",
+      "Community",
+      "Careers",
+      "Investors",
+      "Press",
+      "Contact"
+    ],
+    "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+    "design": {
+      "palette": [
+        [
+          "Signal Purple",
+          "#5A2F8A"
+        ],
+        [
+          "Lumen Blue",
+          "#1E7BD8"
+        ],
+        [
+          "Dark Sky",
+          "#101A2E"
+        ],
+        [
+          "Zing Yellow",
+          "#F5B700"
+        ]
+      ],
+      "typography": {
+        "heading": "Modern geometric sans (e.g. Nunito Sans)",
+        "body": "Open sans (e.g. Roboto)"
+      },
+      "logo": {
+        "wordmark": "nimbuscom",
+        "character": "a tower/signal-wave mark",
+        "usage": "clear space fixed; purple+blue standard, yellow for energy accents"
+      },
+      "imagery": "City skylines, towers on the skyline, energized coverage maps \u2014 bright and forward",
+      "tone": "Energised, clear, reassuring; speaks in coverage and connection."
+    }
+  }
+}

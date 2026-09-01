@@ -1,0 +1,60 @@
+[
+  {
+    "uri": "metric://qk/m-on-time",
+    "name": "On-time delivery rate",
+    "definition": "share of contracted completions verified on time",
+    "unit": "fraction",
+    "formula": "on_time / (on_time + late) from ledger",
+    "dimensions": [
+      "provider"
+    ],
+    "target": 0.95,
+    "threshold": 0.8,
+    "period": "quarter",
+    "source": "ledger completion records",
+    "owner": "person://qk/approver",
+    "actual": 0.857,
+    "forecast": 0.83,
+    "variance": -0.093,
+    "root_cause": "provider scheduling failure (norcrete missed deadline)",
+    "root_cause_status": "SUPPORTED"
+  },
+  {
+    "uri": "metric://qk/m-customer-trust",
+    "name": "Customer-trust score",
+    "definition": "best scoped delivery Trust on the customer relationship",
+    "unit": "score",
+    "formula": "T(subject->target, claim, context) per \u00a75",
+    "dimensions": [
+      "provider"
+    ],
+    "target": 0.9,
+    "threshold": 0.6,
+    "period": "rolling",
+    "source": "S5 scoped Trust graph",
+    "owner": "person://qk/approver",
+    "actual": 1.0,
+    "forecast": 0.92,
+    "variance": 0.1,
+    "root_cause_status": "UNKNOWN"
+  },
+  {
+    "uri": "metric://qk/m-settled-value",
+    "name": "Settled value",
+    "definition": "value of EXCHANGE events settled this period",
+    "unit": "USD",
+    "formula": "sum(EXCHANGE.price) from ledger",
+    "dimensions": [
+      "provider"
+    ],
+    "target": 25000.0,
+    "threshold": 15000.0,
+    "period": "quarter",
+    "source": "ledger EXCHANGE events",
+    "owner": "person://qk/approver",
+    "actual": 24850.0,
+    "forecast": 30000.0,
+    "variance": -150.0,
+    "root_cause_status": "UNKNOWN"
+  }
+]

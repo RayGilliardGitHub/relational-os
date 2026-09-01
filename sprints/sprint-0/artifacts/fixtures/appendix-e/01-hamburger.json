@@ -1,0 +1,58 @@
+[
+  {
+    "uri": "person://e01/customer",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e01/diner",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e01/r1",
+    "participants": [
+      "person://e01/customer",
+      "org://e01/diner"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "person://e01/customer": [
+        "customer"
+      ],
+      "org://e01/diner": [
+        "merchant"
+      ]
+    }
+  },
+  {
+    "uri": "interaction://e01/offer",
+    "of": "relationship://e01/r1",
+    "kind": "OFFER"
+  },
+  {
+    "uri": "interaction://e01/exchange",
+    "of": "relationship://e01/r1",
+    "kind": "EXCHANGE"
+  },
+  {
+    "uri": "event://e01/action",
+    "type": "ACTION",
+    "event_id": "event-e01/action",
+    "correlation_id": "event-ce01/action",
+    "causation_id": "event-cae01/action",
+    "idempotency_key": "event-ie01/action",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "person://e01/customer"
+  },
+  {
+    "uri": "event://e01/exchange",
+    "type": "EXCHANGE",
+    "event_id": "event-e01/exchange",
+    "correlation_id": "event-ce01/exchange",
+    "causation_id": "event-cae01/exchange",
+    "idempotency_key": "event-ie01/exchange",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "person://e01/customer"
+  }
+]

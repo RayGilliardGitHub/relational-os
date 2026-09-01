@@ -1,0 +1,45 @@
+[
+  {
+    "uri": "person://e15/accused",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e15/state",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e15/custody",
+    "participants": [
+      "person://e15/accused",
+      "org://e15/state"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "obligation://e15/o1",
+    "subject": "person://e15/accused",
+    "source": "IMPOSED",
+    "content": "submit to lawful arrest"
+  },
+  {
+    "uri": "right://e15/legalrep",
+    "holder": "person://e15/accused",
+    "type": "REPRESENTATION"
+  },
+  {
+    "uri": "interaction://e15/custody",
+    "of": "relationship://e15/custody",
+    "kind": "ACTION"
+  },
+  {
+    "uri": "event://e15/action",
+    "type": "ACTION",
+    "event_id": "event-e15/action",
+    "correlation_id": "event-ce15/action",
+    "causation_id": "event-cae15/action",
+    "idempotency_key": "event-ie15/action",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "org://e15/state"
+  }
+]

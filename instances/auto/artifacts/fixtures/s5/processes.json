@@ -1,0 +1,29 @@
+[
+  {
+    "uri": "process://auto/pr-core",
+    "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+    "steps": [
+      "triage",
+      "assign",
+      "execute",
+      "verify_outcome",
+      "learning"
+    ]
+  },
+  {
+    "uri": "process_instance://auto/pi-core",
+    "process": "process://auto/pr-core",
+    "status": "RUNNING",
+    "started_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "escalation://auto/escalate-release",
+    "trigger": "external line-side release \u2014 irreversible and cost-unknowable once in the build",
+    "severity": "WARN",
+    "recipient": "person://auto/vpo",
+    "deadline": "2026-11-15T00:00:00Z",
+    "fallback": "agent://auto/s4",
+    "authority": "authority://auto/for-ops",
+    "acknowledgement": "approve then execute"
+  }
+]

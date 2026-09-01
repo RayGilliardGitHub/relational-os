@@ -1,0 +1,31 @@
+[
+  {
+    "uri": "task://auto/t-rebalance",
+    "assigned_to": "agent://auto/supply-ops",
+    "created_by": "agent://auto/s5",
+    "objective": "re-balance OEM part allocation to the verified on-time vendor (stellar-auto) and gate the laggard (corvair-parts)",
+    "dependencies": [],
+    "authority": "authority://auto/for-ops",
+    "deadline": "2026-10-15T00:00:00Z",
+    "priority": 0.695,
+    "status": "ASSIGNED",
+    "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+    "why_here": "derived from the on-time exception (case OPEN)",
+    "importance": "restores line-on-time, protecting assembly scoped Trust",
+    "evidence": [
+      "evidence://auto/committed-corvair-partsQ3",
+      "evidence://auto/committed-stellar-autoQ3",
+      "evidence://auto/committed-corvair-partsQ4"
+    ],
+    "decision_required": "approve the re-allocation",
+    "priority_factors": {
+      "impact": 0.85,
+      "urgency": 0.9,
+      "confidence": 0.7,
+      "irreversibility": false,
+      "relationship_importance": 0.8,
+      "cost_of_delay": 0.75
+    },
+    "assigned_capacity": 1.0
+  }
+]

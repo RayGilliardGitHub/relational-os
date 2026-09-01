@@ -1,0 +1,75 @@
+[
+  {
+    "uri": "trust://qk/t-norcrete",
+    "subject": "org://quoteko",
+    "target": "org://qk/norcrete",
+    "claim": "roofing & repair reliability",
+    "context": "relationship://qk/cust-cxn",
+    "score": 0.528,
+    "updated_at": "2026-09-01T00:29:54Z",
+    "expected": 0.8,
+    "outcome": 0.0,
+    "evidence": [
+      "evidence://qk/job-norcrete"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  },
+  {
+    "uri": "trust://qk/t-solarworks",
+    "subject": "org://quoteko",
+    "target": "org://qk/solarworks",
+    "claim": "roofing & repair reliability",
+    "context": "relationship://qk/cust-cxn",
+    "score": 1.0,
+    "updated_at": "2026-09-01T00:29:54Z",
+    "expected": 0.8,
+    "outcome": 1.0,
+    "evidence": [
+      "evidence://qk/job-routed-solarworks"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  },
+  {
+    "uri": "trust://qk/t-generalco",
+    "subject": "org://quoteko",
+    "target": "org://qk/generalco",
+    "claim": "roofing reliability",
+    "context": "relationship://qk/cust-cxn",
+    "score": 0.42,
+    "updated_at": "2026-09-01T10:00:00Z"
+  },
+  {
+    "uri": "trust://qk/t-emp-quoteko",
+    "subject": "person://qk/customer",
+    "target": "org://quoteko",
+    "claim": "payroll & benefits reliability",
+    "context": "relationship://qk/cust-cxn?role=employee",
+    "score": 0.598,
+    "updated_at": "2026-09-01T00:29:54Z",
+    "expected": 0.8,
+    "outcome": 1.0,
+    "evidence": [
+      "evidence://qk/job-emp-payroll-s4"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  },
+  {
+    "uri": "trust://qk/t-shelter",
+    "subject": "org://quoteko",
+    "target": "org://qk/sunsetshelter",
+    "claim": "charitable installation reliability",
+    "context": "relationship://qk/charity-cxn",
+    "score": 0.598,
+    "updated_at": "2026-09-01T00:29:54Z",
+    "expected": 0.8,
+    "outcome": 1.0,
+    "evidence": [
+      "evidence://qk/job-shelter-solar-s4"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  }
+]

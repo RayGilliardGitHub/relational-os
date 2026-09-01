@@ -1,0 +1,134 @@
+(*
+RelationalOS — Lifecycle & Instance Grammar (EBNF)
+
+Reference: SPEC.md §3.16 (Relationship · Interaction · Event · State), §3.3 lifecycle,
+§7J (Business Operating Layer), §7K (operating semantics), Appendix C (URI catalog),
+Appendix F (starter schema). The machine-validatable JSON Schema
+(relational-os.schema.yaml) is the normative *type* contract; this EBNF is the
+*lifecycle* grammar that schema's structure implements. Scheme->$def classification is
+per conformance.py. RFC 3339 temporal fields are enforced (SPEC §2).
+
+Convention notes:
+  - A typed URI identifies an object, not a snapshot (SPEC §3.19).
+  - A query-qualified context on the SAME scheme (e.g. relationship://…?role=employee)
+    is a context scope, NOT a new URI or identity (SPEC §3.2, Sprint-4 F3).
+  - ONLY the five first-class operating nouns have URI schemes: case, goal, metric,
+    task, dependency. Exception, Priority, Recommendation, and Q9 capacity are derived/
+    additive envelope fields, never new schemes (SPEC §7J.11, §C16, Sprint-5 F1/F6).
+*)
+
+(* ---------------------------------------------------------------- top level *)
+Instance        = obj ;
+obj             = symbol '{' field { ',' field } '}' ;
+field           = name ':' ( scalar | obj | array ) ;
+array           = '[' [ value { ',' value } ] ']' ;
+value           = scalar | obj | array ;
+scalar          = string | signed_number | boolean | 'null' ;
+
+(* --------------------------------------------------------- typed URI (App C) *)
+uri             = scheme '://' uri_rest ;
+scheme          = lowercase { lowercase | digit | '+' | '-' | '.' } ;
+uri_rest        = pchar { pchar } [ '?' query ] ;
+pchar           = alnum | '/' | ':' | '.' | '_' | '~' | '$' | '&' | ',' | ';'
+                | '=' | '@' | '%' | '-' ;
+query           = ( key '=' uri_value ) { '&' key '=' uri_value } ;
+key             = identifier ;
+uri_value       = pchar { pchar } ;
+
+(* --------------------------------------------------------------- identity *)
+actor_uri       = person_uri | org_uri | agent_uri | system_uri ;
+person_uri      = 'person://' path ;
+org_uri         = 'org://' path ;
+agent_uri       = 'agent://' path ;
+system_uri      = 'system://' path ;
+path            = idseg { '/' idseg } ;                 (* e.g. qk/solarworks *)
+idseg           = ( letter | digit | '_' ) { letter | digit | '_' | '-' | '.' } ;
+
+(* ----------------------------------------------- the lifecycle spine (3.16) *)
+relationship_uri= 'relationship://' path ;              (* durable bond *)
+interaction_uri = 'interaction://' path ;               (* discrete episode *)
+event_uri       = 'event://' path ;                     (* atomic signed record *)
+(* Ledger = history (append-only signed events); Graph = current state. Never conflated *)
+
+(* ------------------------------------------- Relationship state machine (3.16) *)
+rel_status      = 'PROPOSED' | 'ACTIVE' | 'SUSPENDED' | 'TERMINATED' | 'ARCHIVED' ;
+rel_transition  = ( 'PROPOSED' , 'ACTIVE' )
+                | ( 'ACTIVE'   , 'SUSPENDED' | 'TERMINATED' )
+                | ( 'SUSPENDED', 'ACTIVE' | 'TERMINATED' )
+                | ( 'TERMINATED' , 'ARCHIVED' ) ;
+(* ACTIVE may recur on a renewal cycle; TERMINATED is terminal except to ARCHIVED. *)
+
+(* ----------------------------------------------------------- interaction kind *)
+interaction_kind = 'OFFER' | 'REQUEST' | 'DECISION' | 'ACTION' | 'EXCHANGE'
+                 | 'OUTCOME' | 'NEGOTIATION' | 'DISPUTE' | 'ACKNOWLEDGEMENT' ;
+
+(* ------------------------------ Event: atomic signed ledger record (3.16/7K.1) *)
+event_type      = 'ACTION' | 'DECISION' | 'EXCHANGE' | 'OUTCOME'
+                | 'STATE_CHANGE' | 'EXTERNAL' ;
+event_core      = 'uri' ':' event_uri ',' 'type' ':' event_type
+                , 'actor' ':' ( actor_uri | 'null' )
+                , 'signature' ':' string
+                , 'occurred_at' ':' timestamp
+                , 'state_update' ':' array ;            (* immutable snapshot
+                                                           (SPEC §3.16 Sprint-5 F2) *)
+tracer          = 'event_id' ':' string ',' 'correlation_id' ':' string
+                , 'causation_id' ':' string ',' 'idempotency_key' ':' string ;
+(* NOTE (Sprint-5 verified): a state delta is an immutable DEEP COPY at signing; an
+   object mutated after first signing is re-recorded as a fresh deep copy in a NEW
+   event, never edited in place inside an earlier signed entry. *)
+
+(* ----------------------------------------------- Case lifecycle (7J.3, conformance C5) *)
+case_uri        = 'case://' path ;
+case_status     = 'OPEN' | 'TRIAGE' | 'ASSIGNED' | 'IN_PROGRESS' | 'BLOCKED'
+                | 'RESOLVED' | 'CLOSED' ;
+case_transition = ( 'OPEN'       , 'TRIAGE' | 'ASSIGNED' | 'BLOCKED' | 'CLOSED' )
+                | ( 'TRIAGE'     , 'ASSIGNED' | 'BLOCKED' | 'CLOSED' )
+                | ( 'ASSIGNED'   , 'IN_PROGRESS' | 'BLOCKED' | 'RESOLVED' | 'CLOSED' )
+                | ( 'IN_PROGRESS', 'BLOCKED' | 'RESOLVED' | 'CLOSED' )
+                | ( 'BLOCKED'    , 'IN_PROGRESS' | 'ASSIGNED' | 'RESOLVED' | 'CLOSED' )
+                | ( 'RESOLVED'   , 'CLOSED' | 'OPEN' )          (* REOPEN *)
+                | ( 'CLOSED'     , 'OPEN' ) ;                   (* REOPEN *)
+
+(* -------------------------------------------- operating layer (7J): five nouns *)
+goal_uri        = 'goal://' path ;
+metric_uri      = 'metric://' path ;
+task_uri        = 'task://' path ;
+dependency_uri  = 'dependency://' path ;
+task_status     = 'INCOMING' | 'PRIORITIZED' | 'ASSIGNED' | 'IN_PROGRESS' | 'BLOCKED'
+                | 'AWAITING_HUMAN' | 'AWAITING_EXTERNAL' | 'COMPLETED' | 'FAILED' ;
+dependency_kind = 'REQUIRES' | 'BLOCKS' | 'ENABLES' | 'DERIVED_FROM' | 'IMPACTS' ;
+(* Derived, additive envelope fields (not URI schemes): *)
+exception_chain = 'EXPECTED' 'ACTUAL' 'VARIANCE' 'SIGNIFICANCE' 'EXCEPTION'
+                'ROOT' 'RECOMMENDED_ACTION' 'DECISION' 'EXECUTION' 'VERIFIED_OUTCOME' ;
+priority_f      = 'impact' | 'urgency' | 'confidence' | 'irreversibility'
+                | 'relationship_importance' | 'cost_of_delay' ;
+
+(* ----------------------------- operating-semantics assemblies (7K: no new nouns) *)
+decision_uri      = 'decision://' path ;
+expectation_uri   = 'expectation://' path ;
+policy_uri        = 'policy://' path ;
+escalation_uri    = 'escalation://' path ;
+process_uri       = 'process://' path ;
+process_inst_uri  = 'process_instance://' path ;
+learning          = decision_uri | 'expected' | 'actual' | 'variance' | 'why'
+                  | 'change_future_policy' ;   (* §7K.1 Organizational Learning *)
+
+(* ----------------------------------------------------------------- temporal *)
+timestamp       = date 'T' time ( 'Z' | hour_offset ) ;   (* RFC 3339, SPEC §2 *)
+date            = 4DIGIT '-' 2DIGIT '-' 2DIGIT ;
+time            = 2DIGIT ':' 2DIGIT ':' 2DIGIT [ '.' DIGIT { DIGIT } ] ;
+hour_offset     = ( '+' | '-' ) 2DIGIT ':' 2DIGIT ;
+
+(* ---------------------------------------------------------- lexical atoms *)
+string          = '"' { char } '"' ;                      (* UTF-8, SPEC §2 *)
+signed_number   = [ '-' ] DIGIT { DIGIT } [ '.' DIGIT { DIGIT } ] ;
+boolean         = 'true' | 'false' ;
+name            = identifier ;
+identifier      = ( letter | '_' ) { letter | digit | '_' } ;
+letter          = 'A'..'Z' | 'a'..'z' ;
+lowercase       = 'a'..'z' ;
+digit           = '0'..'9' ;
+alnum           = letter | digit ;
+
+(* ------------------------------------------------------------ terminals *)
+DIGIT           = '0'..'9' ;

@@ -1,0 +1,65 @@
+[
+  {
+    "uri": "case://food/c-on-time",
+    "subject": "committed retail restock shipment below target on time",
+    "status": "CLOSED",
+    "owner": "person://food/cso",
+    "actors": [
+      "org://food/maplehurst",
+      "person://food/cso",
+      "agent://food/restock-ops"
+    ],
+    "relationships": [
+      "relationship://food/ops-rel"
+    ],
+    "created_at": "2026-09-01T00:29:53Z",
+    "history": [
+      {
+        "status": "OPEN",
+        "at": "2026-09-01T00:29:53Z",
+        "event": null
+      },
+      {
+        "status": "TRIAGE",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://food/s5-case-triage"
+      },
+      {
+        "status": "ASSIGNED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://food/s5-case-assigned"
+      },
+      {
+        "status": "IN_PROGRESS",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://food/s5-case-inprogress"
+      },
+      {
+        "status": "BLOCKED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://food/s5-case-blocked"
+      },
+      {
+        "status": "RESOLVED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://food/s5-case-resolved"
+      },
+      {
+        "status": "CLOSED",
+        "at": "2026-09-01T00:29:53Z",
+        "event": "event://food/s5-case-closed"
+      }
+    ],
+    "suggestion": "ledger-projected on-time below target",
+    "expected": 0.95,
+    "actual": 0.333,
+    "variance": -0.617,
+    "significance": "CRITICAL",
+    "exception": "Committed retail restock shipment on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+    "root_cause": "distribution failure \u2014 org://food/harlow missed its committed restock shipment by 2 days; scoped Trust fell 0.90->0.51",
+    "root_cause_status": "SUPPORTED",
+    "recommended_action": "Re-allocate committed restock volume to the verified on-time distributor (crestline) and gate the laggard (harlow) before new orders",
+    "metric": "metric://food/m-on-time",
+    "verified_outcome": "forward on-time restored to 1.0; org://food/crestline delivered the rallied retail restock shipment on time (evidence://food/routed-crestlineR); org://food/crestline Trust 0.79"
+  }
+]

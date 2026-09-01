@@ -1,0 +1,34 @@
+[
+  {
+    "uri": "trust://hlth/t-cortica-supply",
+    "subject": "org://hlth/lumenhealth",
+    "target": "org://hlth/cortica-supply",
+    "claim": "pharmaceutical delivery reliability",
+    "context": "relationship://hlth/partner-net",
+    "score": 0.79,
+    "updated_at": "2026-09-01T00:29:53Z",
+    "expected": 0.8,
+    "outcome": 1.0,
+    "evidence": [
+      "evidence://hlth/routed-cortica-supplyR"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  },
+  {
+    "uri": "trust://hlth/t-meridian-med",
+    "subject": "org://hlth/lumenhealth",
+    "target": "org://hlth/meridian-med",
+    "claim": "pharmaceutical delivery reliability",
+    "context": "relationship://hlth/partner-net",
+    "score": 0.14,
+    "updated_at": "2026-09-01T00:29:53Z",
+    "expected": 0.8,
+    "outcome": 0.0,
+    "evidence": [
+      "evidence://hlth/committed-meridian-medQ4"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  }
+]

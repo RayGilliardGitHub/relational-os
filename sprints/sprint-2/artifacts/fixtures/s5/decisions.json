@@ -1,0 +1,87 @@
+[
+  {
+    "uri": "decision://qk/intent",
+    "by": "agent://s2",
+    "authority": "delegation://qk/s2-match",
+    "alternatives": [
+      "defer",
+      "request more detail"
+    ],
+    "confidence": 0.9,
+    "expected_outcome": "quote matched and verified",
+    "detail": {
+      "subject": "person://qk/customer",
+      "need": "roof replacement/repair",
+      "capability_keys": [
+        "repair",
+        "roofing"
+      ],
+      "urgency": "high",
+      "budget": 15000,
+      "inferred_by": "agent://s2"
+    },
+    "made_at": "2026-09-01T10:05:00Z"
+  },
+  {
+    "uri": "decision://qk/match-1",
+    "by": "agent://s2",
+    "authority": "delegation://qk/s2-match",
+    "alternatives": [
+      "do nothing"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "offer://qk/o-norcrete",
+    "detail": {
+      "offer": "offer://qk/o-norcrete",
+      "provider": "org://qk/norcrete",
+      "fit": 1.0,
+      "trust": 0.92,
+      "score": 0.92
+    },
+    "made_at": "2026-09-01T10:06:00Z"
+  },
+  {
+    "uri": "decision://qk/match-2",
+    "by": "agent://s2",
+    "authority": "delegation://qk/s2-match",
+    "alternatives": [
+      "do nothing"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "offer://qk/o-solarworks",
+    "detail": {
+      "offer": "offer://qk/o-solarworks",
+      "provider": "org://qk/solarworks",
+      "fit": 1.0,
+      "trust": 0.61,
+      "score": 0.61
+    },
+    "made_at": "2026-09-01T10:07:00Z"
+  },
+  {
+    "uri": "decision://qk/floor-generalco",
+    "by": "agent://s2",
+    "authority": "delegation://qk/s2-match",
+    "confidence": 0.99,
+    "detail": {
+      "offer": "offer://qk/o-generalco",
+      "rejected": "below trust floor"
+    },
+    "made_at": "2026-09-01T10:08:00Z"
+  },
+  {
+    "uri": "decision://qk/human-accept",
+    "by": "person://qk/customer",
+    "authority": "authority://qk/for-matching",
+    "alternatives": [
+      "offer://qk/o-solarworks"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "hire org://qk/norcrete",
+    "actual_outcome": "accepted",
+    "made_at": "2026-09-01T10:10:00Z",
+    "evidence": [
+      "evidence://qk/e-oidc"
+    ]
+  }
+]

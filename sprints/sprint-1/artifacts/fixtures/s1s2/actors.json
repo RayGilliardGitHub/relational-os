@@ -1,0 +1,71 @@
+[
+  {
+    "uri": "person://qk/customer",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://qk/approver",
+    "type": "PERSON",
+    "identity": {
+      "attestations": [
+        "employee"
+      ]
+    }
+  },
+  {
+    "uri": "org://quoteko",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://qk/norcrete",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://qk/solarworks",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://qk/generalco",
+    "type": "ORG"
+  },
+  {
+    "uri": "agent://s1",
+    "type": "AGENT"
+  },
+  {
+    "uri": "agent://s2",
+    "type": "AGENT"
+  },
+  {
+    "uri": "entity://qk/canon-customer",
+    "canonical": "person://qk/customer",
+    "aliases": [
+      "qk-customer-8832",
+      "C. Rivera"
+    ],
+    "kind": "PERSON"
+  },
+  {
+    "uri": "evidence://qk/e-oidc",
+    "kind": "ANCHORED",
+    "source": "OIDC assertion + attestation",
+    "verity": {
+      "procedure": "oidc-verification",
+      "confidence": 0.98
+    },
+    "captured_at": "2026-09-01T10:00:00Z"
+  },
+  {
+    "uri": "rule://qk/tos",
+    "kind": "POLICY",
+    "text": "vetted contractors; human-accept required for committed hire"
+  },
+  {
+    "uri": "rule://qk/s2-run-matching",
+    "kind": "POLICY",
+    "text": "S2 agent may run capability-bound matching under Quoteko",
+    "grants": [
+      "run_matching"
+    ]
+  }
+]

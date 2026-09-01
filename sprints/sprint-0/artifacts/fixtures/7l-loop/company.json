@@ -1,0 +1,210 @@
+[
+  {
+    "uri": "org://meridian",
+    "type": "ORG",
+    "identity": {
+      "attestations": [
+        "registered"
+      ]
+    }
+  },
+  {
+    "uri": "person://meridian/cfo",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://meridian/buyer",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://meridian/supplier",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://meridian/prod",
+    "participants": [
+      "org://meridian",
+      "org://meridian/supplier"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://meridian/supplier": [
+        "supplier"
+      ]
+    }
+  },
+  {
+    "uri": "event://meridian/e-ship",
+    "type": "EXCHANGE",
+    "event_id": "event-meridian/e-ship",
+    "correlation_id": "event-cmeridian/e-ship",
+    "causation_id": "event-cameridian/e-ship",
+    "idempotency_key": "event-imeridian/e-ship",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "org://meridian/supplier",
+    "of_interaction": "interaction://meridian/i-supply"
+  },
+  {
+    "uri": "metric://meridian/otd",
+    "name": "OnTimeDelivery",
+    "formula": "on_time/total",
+    "target": 0.95,
+    "threshold": 0.9,
+    "actual": 0.82,
+    "period": "2026-W35",
+    "owner": "person://meridian/cfo",
+    "unit": "ratio",
+    "source": "supplier_shipments",
+    "definition": "share of purchase orders received on time",
+    "variance": -0.08,
+    "forecast": 0.8
+  },
+  {
+    "uri": "case://meridian/otd-shortfall",
+    "subject": "OnTimeDelivery below threshold",
+    "status": "OPEN",
+    "owner": "person://meridian/buyer",
+    "relationships": [
+      "relationship://meridian/prod"
+    ],
+    "created_at": "2026-09-01T06:00:00Z",
+    "exception": {
+      "significance": "CRITICAL",
+      "exception": "OTD 0.82 vs threshold 0.90",
+      "expected": 0.95,
+      "actual": 0.82,
+      "variance": -0.13
+    }
+  },
+  {
+    "uri": "metric://meridian/otd",
+    "name": "OnTimeDelivery",
+    "formula": "on_time/total",
+    "target": 0.95,
+    "threshold": 0.9,
+    "actual": 0.82,
+    "period": "2026-W35",
+    "owner": "person://meridian/cfo",
+    "unit": "ratio",
+    "source": "supplier_shipments",
+    "definition": "share of PO received on time",
+    "variance": -0.08,
+    "forecast": 0.8,
+    "root_cause": "supplier capacity constraint (strike + no second source)",
+    "root_cause_status": "SUPPORTED",
+    "evidence": [
+      "evidence://meridian/e-strike"
+    ]
+  },
+  {
+    "uri": "evidence://meridian/e-strike",
+    "kind": "RECORD",
+    "source": "regulatory notice + supplier comms",
+    "confidence": 0.8,
+    "procedure": "cross-source verify"
+  },
+  {
+    "uri": "metric://meridian/otd",
+    "name": "OnTimeDelivery",
+    "formula": "on_time/total",
+    "target": 0.95,
+    "threshold": 0.9,
+    "actual": 0.82,
+    "period": "2026-W35",
+    "owner": "person://meridian/cfo",
+    "unit": "ratio",
+    "source": "supplier_shipments",
+    "definition": "OTD",
+    "variance": -0.08,
+    "forecast": 0.7,
+    "if_nothing_changes": "OTD trending to 0.70 by W37; production disruption"
+  },
+  {
+    "uri": "decision://meridian/options",
+    "by": "org://meridian",
+    "authority": "authority://meridian/cfo",
+    "confidence": 0.8,
+    "recommendation": {
+      "options": [
+        "expedite existing order",
+        "dual-source with second supplier",
+        "do nothing"
+      ],
+      "includes_do_nothing": true,
+      "tradeoff": "expedite is fastest but costly; dual-source adds lead time but derisks"
+    }
+  },
+  {
+    "uri": "decision://meridian/decision",
+    "by": "org://meridian",
+    "authority": "authority://meridian/cfo",
+    "confidence": 0.82,
+    "recommendation": {
+      "options": [
+        "dual-source"
+      ],
+      "includes_do_nothing": false,
+      "authority_required": "authority://meridian/cfo",
+      "expected_impact": "OTD back to 0.95 within 3 weeks"
+    },
+    "expected_outcome": "restore OTD",
+    "actual_outcome": "pending"
+  },
+  {
+    "uri": "task://meridian/t1",
+    "assigned_to": "person://meridian/buyer",
+    "created_by": "org://meridian",
+    "objective": "onboard second supplier for part P-773",
+    "authority": "delegation://meridian/dual-source",
+    "status": "ASSIGNED",
+    "priority": 0.9,
+    "deadline": "2026-09-08T17:00:00Z",
+    "expected_outcome": "contract signed"
+  },
+  {
+    "uri": "delegation://meridian/dual-source",
+    "grantor": "org://meridian",
+    "grantee": "person://meridian/buyer",
+    "scope": [
+      "rule://meridian/sign-supplier-agreements"
+    ]
+  },
+  {
+    "uri": "resource://meridian/buyer-cap",
+    "kind": "CAPABILITY",
+    "value": "value://meridian/alloc"
+  },
+  {
+    "uri": "event://meridian/e-verified",
+    "type": "OUTCOME",
+    "actor": "org://meridian",
+    "event_id": "event-meridian-e-verified",
+    "correlation_id": "event-meridian-e-verified-c",
+    "causation_id": "event-meridian-e-verified-ca",
+    "idempotency_key": "event-meridian-e-verified-i",
+    "signature": "signed-by-s5",
+    "occurred_at": "2026-09-29T09:00:00Z",
+    "verified": true
+  },
+  {
+    "uri": "task://meridian/t1",
+    "assigned_to": "person://meridian/buyer",
+    "created_by": "org://meridian",
+    "objective": "onboard second supplier P-773",
+    "authority": "delegation://meridian/dual-source",
+    "status": "COMPLETED",
+    "priority": 0.9,
+    "expected_outcome": "contract signed",
+    "actual_outcome": "2nd supplier live; OTD 0.96"
+  },
+  {
+    "uri": "decision://meridian/learned",
+    "by": "org://meridian",
+    "authority": "authority://meridian/cfo",
+    "confidence": 0.85,
+    "learning": "dual-sourcing became standard policy after supplier strike",
+    "expected_outcome": "derisk",
+    "actual_outcome": "derisk completed, OTD restored"
+  }
+]

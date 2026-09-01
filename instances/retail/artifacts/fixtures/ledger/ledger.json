@@ -1,0 +1,2540 @@
+{
+  "uri": "db://ledger/retail-2026",
+  "head_hash": "ae8877bdebc654434c70d6cd4c361c5a5042deeba65cdd3783c9bd32ea82fe17",
+  "entries": [
+    {
+      "uri": "event://retail/s5-state-2",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-2",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-1",
+      "idempotency_key": "idem-s5-2",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "provision Retail base (actors, relationships, authority + operator + policy + expectation)",
+      "state_update": [
+        {
+          "uri": "org://retail/hardvale",
+          "type": "ORG",
+          "identity": {
+            "attestations": [
+              "business-license"
+            ]
+          },
+          "brand": {
+            "tagline": "Stock for every store, on time.",
+            "mission": "Deliver committed store replenishment reliably and on time so every HardVale customer finds what they came for, every day, at every store.",
+            "vision": "Shoppers who never think about whether the shelf will be there \u2014 because it always is.",
+            "values": [
+              [
+                "Customer first",
+                "Behind every pallet is a shopper who chose us."
+              ],
+              [
+                "Shelf faith",
+                "We guard the simple promise that the item will be there."
+              ],
+              [
+                "Efficient by habit",
+                "We move stock efficiently so prices stay fair."
+              ],
+              [
+                "Community store",
+                "Our stores are neighbourhoods; we stock them like neighbours."
+              ],
+              [
+                "Own the outcome",
+                "A store that runs out is our problem to solve, not an excuse to make."
+              ]
+            ],
+            "about": "HardVale Stores runs a chain of community retail stores and the replenishment operation that keeps their shelves honest. We take committed store replenishment deliveries and make them land so reliably that running out of a staple stops being a plot point in our shoppers' day. Every delivery is verified, every store is a promise, every shelf is the metric.",
+            "fast_facts": [
+              "Founded 1996, retail stores",
+              "460+ stores across the region",
+              "Committed replenishment delivery network"
+            ],
+            "history": [
+              [
+                "1996",
+                "Opened the first HardVale store in a converted warehouse."
+              ],
+              [
+                "2008",
+                "Built our own replenishment logistics to end bare shelves."
+              ],
+              [
+                "2019",
+                "Digitised every restock run to ledger-verified on-time evidence."
+              ]
+            ],
+            "leadership": [
+              [
+                "Elena Vasquez",
+                "Chief Executive",
+                "Retail lifer who has run stores, buying, and now the whole chain."
+              ],
+              [
+                "Tyrone Grant",
+                "Chief Merchandising Officer",
+                "Connects what shoppers want to what the shelf holds."
+              ]
+            ],
+            "products_services": [
+              "Community retail stores",
+              "Store replenishment and distribution",
+              "Efficient price leadership on essentials"
+            ],
+            "testimonials": [
+              [
+                "I can count on the staples always being there. That is why I keep coming back.",
+                "HardVale shopper"
+              ]
+            ],
+            "trust": [
+              [
+                "99.0% committed store-replenishment on-time rate (2025)",
+                "HardVale logistics ledger"
+              ],
+              [
+                "5-year shopper satisfaction programme",
+                "independent survey"
+              ]
+            ],
+            "locations": "Regional HQ + 460+ stores; distribution parks in 4 states",
+            "faq": [
+              [
+                "How do you keep shelves full?",
+                "Every committed replenishment is tracked to a verified on-time ledger completion; stores below target get immediate attention, not excuses."
+              ],
+              [
+                "Do you deliver to stores every day?",
+                "Cadence varies by store and category; the committed deliveries on those cadences are the ones we verify."
+              ]
+            ],
+            "contact": "care@hardvale.example \u00b7 +1-800-STOCKED",
+            "careers": "Grow with a store that keeps its promise: store ops, logistics, buying, sustainability.",
+            "investors": "Privately held. Store-level reliability data shared with partners on request.",
+            "press": "press@hardvale.example \u2014 new stores, community programs, reliability stories.",
+            "esg": "Waste-less replenishment, community food programs, efficient fleet, sustainable packaging for own-brand.",
+            "legal": [
+              "Privacy",
+              "Terms",
+              "California Rights",
+              "Do Not Sell or Share",
+              "Accessibility"
+            ],
+            "nav": [
+              "About",
+              "Stores",
+              "Our Brands",
+              "Careers",
+              "Investors",
+              "Press",
+              "Sustainability",
+              "Contact"
+            ],
+            "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+            "design": {
+              "palette": [
+                [
+                  "Bullseye Red",
+                  "#C8102E"
+                ],
+                [
+                  "Navy Briefcase",
+                  "#1F2A44"
+                ],
+                [
+                  "Shelf Grey",
+                  "#E6E3DC"
+                ],
+                [
+                  "Fresh White",
+                  "#FFFFFF"
+                ]
+              ],
+              "typography": {
+                "heading": "Bold condensed sans (e.g. Barlow Condensed)",
+                "body": "Open sans (e.g. Work Sans)"
+              },
+              "logo": {
+                "wordmark": "HARDVALE (bold)",
+                "character": "a target/chevron mark",
+                "usage": "clear space fixed; red on white or navy on white primary"
+              },
+              "imagery": "Bright store scenes, stocked shelves, real shoppers \u2014 energy and value",
+              "tone": "Friendly, confident, plain-spoken; about the shopper's day going well."
+            }
+          }
+        },
+        {
+          "uri": "org://retail/southline",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://retail/atlas-freight",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://retail/corvus-logistics",
+          "type": "ORG"
+        },
+        {
+          "uri": "person://retail/cfo",
+          "type": "PERSON"
+        },
+        {
+          "uri": "agent://retail/inbound-ops",
+          "type": "AGENT"
+        },
+        {
+          "uri": "relationship://retail/ops-rel",
+          "participants": [
+            "org://retail/hardvale",
+            "org://retail/southline"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://retail/hardvale": [
+              "provider"
+            ],
+            "org://retail/southline": [
+              "client"
+            ]
+          },
+          "authority": [
+            "authority://retail/for-ops"
+          ],
+          "purpose": "retail operating relationship"
+        },
+        {
+          "uri": "relationship://retail/partner-net",
+          "participants": [
+            "org://retail/hardvale",
+            "org://retail/atlas-freight",
+            "org://retail/corvus-logistics"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://retail/hardvale": [
+              "operator"
+            ],
+            "org://retail/atlas-freight": [
+              "partner"
+            ],
+            "org://retail/corvus-logistics": [
+              "partner"
+            ]
+          },
+          "authority": [
+            "authority://retail/for-ops"
+          ],
+          "purpose": "retail partner network"
+        },
+        {
+          "uri": "authority://retail/for-ops",
+          "holder": "org://retail/hardvale",
+          "grants": [
+            "triage_case",
+            "assign_case",
+            "close_case",
+            "approve_learning",
+            "rebalance_commitment",
+            "gate_partner",
+            "release_committed_action"
+          ],
+          "roles": [
+            "operator"
+          ]
+        },
+        {
+          "uri": "rule://retail/ops-run",
+          "kind": "POLICY",
+          "text": "agent://retail/inbound-ops may re-balance resource commitment and gate partner performance",
+          "grants": [
+            "rebalance_commitment",
+            "gate_partner"
+          ]
+        },
+        {
+          "uri": "rule://retail/match-run",
+          "kind": "POLICY",
+          "text": "S2 may run Trust-weighted matching for the client",
+          "grants": [
+            "run_match"
+          ]
+        },
+        {
+          "uri": "delegation://retail/ops",
+          "grantor": "org://retail/hardvale",
+          "grantee": "agent://retail/inbound-ops",
+          "scope": [
+            "rule://retail/ops-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://retail/s2-match",
+          "grantor": "org://retail/hardvale",
+          "grantee": "agent://s2",
+          "scope": [
+            "rule://retail/match-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "expectation://retail/e-on-time",
+          "actor": "person://retail/cfo",
+          "subject": "store replenishment delivery",
+          "condition": "fully deliver the committed store replenishment delivery by its committed deadline",
+          "metric": "on_time",
+          "threshold": 0.95,
+          "deadline": "2026-12-31T00:00:00Z",
+          "evidence_required": "CLEAR"
+        },
+        {
+          "uri": "policy://retail/allocation",
+          "name": "retail allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "select the partner with the highest fit x scoped Trust",
+          "action": "allocate to the top-ranked fitted partner",
+          "scope": [
+            "expectation://retail/e-on-time"
+          ],
+          "version": 1
+        },
+        {
+          "uri": "process://retail/pr-core",
+          "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+          "steps": [
+            "triage",
+            "assign",
+            "execute",
+            "verify_outcome",
+            "learning"
+          ]
+        },
+        {
+          "uri": "process_instance://retail/pi-core",
+          "process": "process://retail/pr-core",
+          "status": "RUNNING",
+          "started_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "c43179510cc7d4e216a72beb2b6c0396ba7677dafcf7e7df2110f54f55e11cbd"
+    },
+    {
+      "uri": "event://retail/s5-state-100",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-100",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-99",
+      "idempotency_key": "idem-s5-100",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "seed scoped Trust org://retail/atlas-freight = 0.6",
+      "state_update": [
+        {
+          "uri": "trust://retail/t-atlas-freight",
+          "subject": "org://retail/hardvale",
+          "target": "org://retail/atlas-freight",
+          "claim": "store replenishment delivery reliability",
+          "context": "relationship://retail/partner-net",
+          "score": 0.6
+        }
+      ],
+      "hash": "e0754d31591beeadd89864f4b7fad0fb3011654cf4a8ed39b9c67daa65600a83"
+    },
+    {
+      "uri": "event://retail/s5-state-101",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-101",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-100",
+      "idempotency_key": "idem-s5-101",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "seed scoped Trust org://retail/corvus-logistics = 0.9",
+      "state_update": [
+        {
+          "uri": "trust://retail/t-corvus-logistics",
+          "subject": "org://retail/hardvale",
+          "target": "org://retail/corvus-logistics",
+          "claim": "store replenishment delivery reliability",
+          "context": "relationship://retail/partner-net",
+          "score": 0.9
+        }
+      ],
+      "hash": "b1d8fd1801bb7412468e9c11ef57de9d4b1f3a6de21d1dfd1a9691495c37f3af"
+    },
+    {
+      "uri": "event://retail/s5-state-102",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-102",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-101",
+      "idempotency_key": "idem-s5-102",
+      "signature": "signed-by-agent://retail/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s2",
+      "detail": "register resource-commitment offer from org://retail/atlas-freight",
+      "state_update": [
+        {
+          "uri": "offer://retail/o-g",
+          "provider": "org://retail/atlas-freight",
+          "price": 2000000.0,
+          "currency": "USD",
+          "capability_keys": [
+            "replenishment",
+            "logistics"
+          ],
+          "fit_note": "retail partner delivery line"
+        }
+      ],
+      "hash": "cafb71d15204bd0df5ddee177767d2402ff5d2363707076def0ef931d6039826"
+    },
+    {
+      "uri": "event://retail/s5-state-103",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-103",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-102",
+      "idempotency_key": "idem-s5-103",
+      "signature": "signed-by-agent://retail/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s2",
+      "detail": "register resource-commitment offer from org://retail/corvus-logistics",
+      "state_update": [
+        {
+          "uri": "offer://retail/o-l",
+          "provider": "org://retail/corvus-logistics",
+          "price": 2000000.0,
+          "currency": "USD",
+          "capability_keys": [
+            "replenishment",
+            "logistics"
+          ],
+          "fit_note": "retail partner delivery line"
+        }
+      ],
+      "hash": "c5e5d5f6fbb302c23ac030f03783dee7b8b4a835ef05c7ef638a94cbea693cb1"
+    },
+    {
+      "uri": "event://retail/s5-state-104",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-104",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-103",
+      "idempotency_key": "idem-s5-104",
+      "signature": "signed-by-agent://retail/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s2",
+      "detail": "initial match ranked offer://retail/o-l (score 0.900) \u2014 base ranking",
+      "state_update": [
+        {
+          "uri": "decision://retail/s2-match-baseline",
+          "by": "agent://s2",
+          "authority": "delegation://retail/s2-match",
+          "alternatives": [
+            "offer://retail/o-l",
+            "offer://retail/o-g",
+            "none"
+          ],
+          "confidence": 0.9,
+          "expected_outcome": "lag partner ranked #1 on existing Trust",
+          "actual_outcome": "offer://retail/o-l",
+          "detail": [
+            {
+              "offer": "offer://retail/o-l",
+              "provider": "org://retail/corvus-logistics",
+              "fit": 1.0,
+              "trust": 0.9,
+              "score": 0.9
+            },
+            {
+              "offer": "offer://retail/o-g",
+              "provider": "org://retail/atlas-freight",
+              "fit": 1.0,
+              "trust": 0.6,
+              "score": 0.6
+            }
+          ],
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "840643a005cd05c34a73f80fdf133213240c503dc9893ce988779f2d5f49b9d9"
+    },
+    {
+      "uri": "event://retail/s4-exchange-corvus-logisticsQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-105",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-104",
+      "idempotency_key": "idem-s4-105",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange corvus-logisticsQ3: 2000000.0 USD org://retail/hardvale->org://retail/corvus-logistics (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/retail-escrow-corvus-logisticsQ3",
+          "kind": "MONEY",
+          "title": "org://retail/corvus-logistics",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://retail/hardvale for org://retail/corvus-logistics (corvus-logisticsQ3)"
+        },
+        {
+          "uri": "obligation://retail/s4-pay-corvus-logisticsQ3",
+          "subject": "org://retail/hardvale",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://retail/corvus-logistics",
+          "due_by": "2026-08-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-02T00:00:00Z"
+        },
+        {
+          "uri": "receipt://retail/s4-receipt-corvus-logisticsQ3",
+          "kind": "SETTLEMENT",
+          "from": "org://retail/hardvale",
+          "to": "org://retail/corvus-logistics",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-09-02T00:00:00Z"
+        },
+        {
+          "uri": "decision://retail/s4-recon-corvus-logisticsQ3",
+          "by": "agent://s4",
+          "authority": "authority://retail/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://retail/hardvale",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "corvus-logisticsQ3",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://retail/hardvale",
+            "provider": "org://retail/corvus-logistics",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://retail/s4-exchange-corvus-logisticsQ3",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-105",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-104",
+          "idempotency_key": "idem-s4-105",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange corvus-logisticsQ3: 2000000.0 USD org://retail/hardvale->org://retail/corvus-logistics (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://retail/hardvale",
+          "provider": "org://retail/corvus-logistics",
+          "settled_at": "2026-09-02T00:00:00Z",
+          "exchange_of": "commitment://retail/c-corvus-logisticsQ3"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://retail/hardvale",
+      "provider": "org://retail/corvus-logistics",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "exchange_of": "commitment://retail/c-corvus-logisticsQ3",
+      "hash": "86a7038f61f85e2161a9bd61867e664b346c056344c934fdc4398ec6db9ac58d"
+    },
+    {
+      "uri": "event://retail/s4-outcome-corvus-logisticsQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-106",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-105",
+      "idempotency_key": "idem-s4-106",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle corvus-logisticsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+      "state_update": [
+        {
+          "uri": "event://retail/s4-outcome-corvus-logisticsQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-106",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-105",
+          "idempotency_key": "idem-s4-106",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle corvus-logisticsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+          "state_update": [],
+          "evaluation": "partial",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-08-31T00:00:00Z",
+          "settled_at": "2026-09-02T00:00:00Z",
+          "score": 0.5
+        }
+      ],
+      "evaluation": "partial",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "score": 0.5,
+      "hash": "84b8220e96d0427b0b5e1c7d25559db26297f63f6ef5301870b4e9ea36e84719"
+    },
+    {
+      "uri": "event://retail/outcome-committed-corvus-logisticsQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-107",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-106",
+      "idempotency_key": "idem-s2-107",
+      "signature": "signed-by-org://retail/corvus-logistics",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://retail/corvus-logistics",
+      "detail": "job committed-corvus-logisticsQ3 by org://retail/corvus-logistics: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://retail/outcome-committed-corvus-logisticsQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-107",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-106",
+          "idempotency_key": "idem-s2-107",
+          "signature": "signed-by-org://retail/corvus-logistics",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://retail/corvus-logistics",
+          "detail": "job committed-corvus-logisticsQ3 by org://retail/corvus-logistics: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "committed-corvus-logisticsQ3",
+          "provider": "org://retail/corvus-logistics",
+          "committed_deadline": "2026-08-31T00:00:00Z",
+          "actual_completed_at": "2026-09-02T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://retail/committed-corvus-logisticsQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-store replenishment delivery record + retail anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-corvus-logisticsQ3",
+      "provider": "org://retail/corvus-logistics",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-09-02T00:00:00Z",
+      "on_time": false,
+      "hash": "e23bd98c088b17fcca2d4aa97308c6b24c27cc206ce0d09f5f6cbdf3c6626e5d"
+    },
+    {
+      "uri": "event://retail/verify-committed-corvus-logisticsQ3",
+      "type": "DECISION",
+      "event_id": "ev-s2-108",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-107",
+      "idempotency_key": "idem-s2-108",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://retail/corvus-logistics delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://retail/committed-corvus-logisticsQ3",
+          "proposer": "agent://s5",
+          "statement": "org://retail/corvus-logistics delivered the committed resource LATE"
+        },
+        {
+          "uri": "evidence://retail/committed-corvus-logisticsQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-store replenishment delivery record + retail anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "97fa933dae92f5b4ac85979b74d6f4df5c64f7789c73fc3d5eddd373f34a6ae8"
+    },
+    {
+      "uri": "event://retail/trust-update-corvus-logistics",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-109",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-108",
+      "idempotency_key": "idem-s2-109",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "trust for org://retail/corvus-logistics [store replenishment delivery reliability] 0.900 -> 0.520 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://retail/t-corvus-logistics",
+          "subject": "org://retail/hardvale",
+          "target": "org://retail/corvus-logistics",
+          "claim": "store replenishment delivery reliability",
+          "context": "relationship://retail/partner-net",
+          "score": 0.52,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://retail/committed-corvus-logisticsQ3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "f75acd3328540fa4012a5ecd890691dbb3bb2c4d95388449ac2d2e7be6a389c3"
+    },
+    {
+      "uri": "event://retail/s4-exchange-atlas-freightQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-110",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-109",
+      "idempotency_key": "idem-s4-110",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange atlas-freightQ3: 2000000.0 USD org://retail/hardvale->org://retail/atlas-freight (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/retail-escrow-atlas-freightQ3",
+          "kind": "MONEY",
+          "title": "org://retail/atlas-freight",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://retail/hardvale for org://retail/atlas-freight (atlas-freightQ3)"
+        },
+        {
+          "uri": "obligation://retail/s4-pay-atlas-freightQ3",
+          "subject": "org://retail/hardvale",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://retail/atlas-freight",
+          "due_by": "2026-08-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-08-30T00:00:00Z"
+        },
+        {
+          "uri": "receipt://retail/s4-receipt-atlas-freightQ3",
+          "kind": "SETTLEMENT",
+          "from": "org://retail/hardvale",
+          "to": "org://retail/atlas-freight",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-08-30T00:00:00Z"
+        },
+        {
+          "uri": "decision://retail/s4-recon-atlas-freightQ3",
+          "by": "agent://s4",
+          "authority": "authority://retail/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://retail/hardvale",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "atlas-freightQ3",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://retail/hardvale",
+            "provider": "org://retail/atlas-freight",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://retail/s4-exchange-atlas-freightQ3",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-110",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-109",
+          "idempotency_key": "idem-s4-110",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange atlas-freightQ3: 2000000.0 USD org://retail/hardvale->org://retail/atlas-freight (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://retail/hardvale",
+          "provider": "org://retail/atlas-freight",
+          "settled_at": "2026-08-30T00:00:00Z",
+          "exchange_of": "commitment://retail/c-atlas-freightQ3"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://retail/hardvale",
+      "provider": "org://retail/atlas-freight",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "exchange_of": "commitment://retail/c-atlas-freightQ3",
+      "hash": "da2d64d97b6085a40dc0cf40ea51df43ba6109123da084f6c8aca42dc6819b6e"
+    },
+    {
+      "uri": "event://retail/s4-outcome-atlas-freightQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-111",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-110",
+      "idempotency_key": "idem-s4-111",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle atlas-freightQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://retail/s4-outcome-atlas-freightQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-111",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-110",
+          "idempotency_key": "idem-s4-111",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle atlas-freightQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-08-31T00:00:00Z",
+          "settled_at": "2026-08-30T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "score": 1.0,
+      "hash": "94700cdd5ebe8787d613f74be8596b70639e8938058c41769411395ad24edb76"
+    },
+    {
+      "uri": "event://retail/outcome-committed-atlas-freightQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-112",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-111",
+      "idempotency_key": "idem-s2-112",
+      "signature": "signed-by-org://retail/atlas-freight",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://retail/atlas-freight",
+      "detail": "job committed-atlas-freightQ3 by org://retail/atlas-freight: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://retail/outcome-committed-atlas-freightQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-112",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-111",
+          "idempotency_key": "idem-s2-112",
+          "signature": "signed-by-org://retail/atlas-freight",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://retail/atlas-freight",
+          "detail": "job committed-atlas-freightQ3 by org://retail/atlas-freight: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "committed-atlas-freightQ3",
+          "provider": "org://retail/atlas-freight",
+          "committed_deadline": "2026-08-31T00:00:00Z",
+          "actual_completed_at": "2026-08-30T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://retail/committed-atlas-freightQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-store replenishment delivery record + retail anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-atlas-freightQ3",
+      "provider": "org://retail/atlas-freight",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-08-30T00:00:00Z",
+      "on_time": true,
+      "hash": "2045b667e8637cfa283ced41bb50b3049529a633db4b170adb76b819107840ce"
+    },
+    {
+      "uri": "event://retail/verify-committed-atlas-freightQ3",
+      "type": "DECISION",
+      "event_id": "ev-s2-113",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-112",
+      "idempotency_key": "idem-s2-113",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://retail/atlas-freight delivered the committed resource on time' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://retail/committed-atlas-freightQ3",
+          "proposer": "agent://s5",
+          "statement": "org://retail/atlas-freight delivered the committed resource on time"
+        },
+        {
+          "uri": "evidence://retail/committed-atlas-freightQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-store replenishment delivery record + retail anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "9743bd2d858043122da80b6959a81aa2570867eb21d2d26a4279ece81474c667"
+    },
+    {
+      "uri": "event://retail/trust-update-atlas-freight",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-114",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-113",
+      "idempotency_key": "idem-s2-114",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "trust for org://retail/atlas-freight [store replenishment delivery reliability] 0.600 -> 0.695 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://retail/t-atlas-freight",
+          "subject": "org://retail/hardvale",
+          "target": "org://retail/atlas-freight",
+          "claim": "store replenishment delivery reliability",
+          "context": "relationship://retail/partner-net",
+          "score": 0.695,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://retail/committed-atlas-freightQ3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "bc82deceb0af81d295d2013349f875994ed2f504d24cd050438e323638cb416b"
+    },
+    {
+      "uri": "event://retail/s4-exchange-corvus-logisticsQ4",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-115",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-114",
+      "idempotency_key": "idem-s4-115",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange corvus-logisticsQ4: 1600000.0 USD org://retail/hardvale->org://retail/corvus-logistics (value 1600000.0, cost 1600000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/retail-escrow-corvus-logisticsQ4",
+          "kind": "MONEY",
+          "title": "org://retail/corvus-logistics",
+          "custody": "cleared",
+          "value": 1600000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://retail/hardvale for org://retail/corvus-logistics (corvus-logisticsQ4)"
+        },
+        {
+          "uri": "obligation://retail/s4-pay-corvus-logisticsQ4",
+          "subject": "org://retail/hardvale",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 1600000.0 USD for contracted work by org://retail/corvus-logistics",
+          "due_by": "2026-09-15T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-17T00:00:00Z"
+        },
+        {
+          "uri": "receipt://retail/s4-receipt-corvus-logisticsQ4",
+          "kind": "SETTLEMENT",
+          "from": "org://retail/hardvale",
+          "to": "org://retail/corvus-logistics",
+          "amount": 1600000.0,
+          "currency": "USD",
+          "received_at": "2026-09-17T00:00:00Z"
+        },
+        {
+          "uri": "decision://retail/s4-recon-corvus-logisticsQ4",
+          "by": "agent://s4",
+          "authority": "authority://retail/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 1600000.0 USD from org://retail/hardvale",
+          "actual_outcome": "matched exactly: settled 1600000.0 USD",
+          "detail": {
+            "slug": "corvus-logisticsQ4",
+            "expected": 1600000.0,
+            "actual": 1600000.0,
+            "matched": true,
+            "buyer": "org://retail/hardvale",
+            "provider": "org://retail/corvus-logistics",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://retail/s4-exchange-corvus-logisticsQ4",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-115",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-114",
+          "idempotency_key": "idem-s4-115",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange corvus-logisticsQ4: 1600000.0 USD org://retail/hardvale->org://retail/corvus-logistics (value 1600000.0, cost 1600000.0)",
+          "state_update": [],
+          "value": 1600000.0,
+          "cost": 1600000.0,
+          "price": 1600000.0,
+          "currency": "USD",
+          "buyer": "org://retail/hardvale",
+          "provider": "org://retail/corvus-logistics",
+          "settled_at": "2026-09-17T00:00:00Z",
+          "exchange_of": "commitment://retail/c-corvus-logisticsQ4"
+        }
+      ],
+      "value": 1600000.0,
+      "cost": 1600000.0,
+      "price": 1600000.0,
+      "currency": "USD",
+      "buyer": "org://retail/hardvale",
+      "provider": "org://retail/corvus-logistics",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "exchange_of": "commitment://retail/c-corvus-logisticsQ4",
+      "hash": "0268a4c199d3a96c1452f823d223b60f7b33d92ff7de2969497d7f40e295e847"
+    },
+    {
+      "uri": "event://retail/s4-outcome-corvus-logisticsQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-116",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-115",
+      "idempotency_key": "idem-s4-116",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle corvus-logisticsQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+      "state_update": [
+        {
+          "uri": "event://retail/s4-outcome-corvus-logisticsQ4",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-116",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-115",
+          "idempotency_key": "idem-s4-116",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle corvus-logisticsQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+          "state_update": [],
+          "evaluation": "partial",
+          "expected": 1600000.0,
+          "actual": 1600000.0,
+          "deadline": "2026-09-15T00:00:00Z",
+          "settled_at": "2026-09-17T00:00:00Z",
+          "score": 0.5
+        }
+      ],
+      "evaluation": "partial",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "deadline": "2026-09-15T00:00:00Z",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "score": 0.5,
+      "hash": "304642ac7185383eb8eaa266cb507e6a7d68fe4dcdbd69d097070d77ee86c66a"
+    },
+    {
+      "uri": "event://retail/outcome-committed-corvus-logisticsQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-117",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-116",
+      "idempotency_key": "idem-s2-117",
+      "signature": "signed-by-org://retail/corvus-logistics",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://retail/corvus-logistics",
+      "detail": "job committed-corvus-logisticsQ4 by org://retail/corvus-logistics: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://retail/outcome-committed-corvus-logisticsQ4",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-117",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-116",
+          "idempotency_key": "idem-s2-117",
+          "signature": "signed-by-org://retail/corvus-logistics",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://retail/corvus-logistics",
+          "detail": "job committed-corvus-logisticsQ4 by org://retail/corvus-logistics: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "committed-corvus-logisticsQ4",
+          "provider": "org://retail/corvus-logistics",
+          "committed_deadline": "2026-09-15T00:00:00Z",
+          "actual_completed_at": "2026-09-17T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://retail/committed-corvus-logisticsQ4",
+          "kind": "ANCHORED",
+          "source": "signed committed-store replenishment delivery record + retail anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-corvus-logisticsQ4",
+      "provider": "org://retail/corvus-logistics",
+      "committed_deadline": "2026-09-15T00:00:00Z",
+      "actual_completed_at": "2026-09-17T00:00:00Z",
+      "on_time": false,
+      "hash": "e4d3ab063bbfde3d7f8c72d6801b38c28c0a9f23054efa387d504928c235a3b6"
+    },
+    {
+      "uri": "event://retail/verify-committed-corvus-logisticsQ4",
+      "type": "DECISION",
+      "event_id": "ev-s2-118",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-117",
+      "idempotency_key": "idem-s2-118",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://retail/corvus-logistics delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://retail/committed-corvus-logisticsQ4",
+          "proposer": "agent://s5",
+          "statement": "org://retail/corvus-logistics delivered the committed resource LATE"
+        },
+        {
+          "uri": "evidence://retail/committed-corvus-logisticsQ4",
+          "kind": "ANCHORED",
+          "source": "signed committed-store replenishment delivery record + retail anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "635b89e6eb4057bfe406030d2e6ae3864085abfb4d0d6eec173131fae793c702"
+    },
+    {
+      "uri": "event://retail/trust-update-corvus-logistics",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-119",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-118",
+      "idempotency_key": "idem-s2-119",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "trust for org://retail/corvus-logistics [store replenishment delivery reliability] 0.520 -> 0.140 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://retail/t-corvus-logistics",
+          "subject": "org://retail/hardvale",
+          "target": "org://retail/corvus-logistics",
+          "claim": "store replenishment delivery reliability",
+          "context": "relationship://retail/partner-net",
+          "score": 0.14,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://retail/committed-corvus-logisticsQ4"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "4de5cf1a0f3a535cee136ddd06d9b8b597e349457255799c103fbb0e169fe5d0"
+    },
+    {
+      "uri": "event://retail/s5-state-7000",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7000",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-6999",
+      "idempotency_key": "idem-s5-7000",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "open case case://retail/c-on-time (committed store replenishment delivery below target on time)",
+      "state_update": [
+        {
+          "uri": "case://retail/c-on-time",
+          "subject": "committed store replenishment delivery below target on time",
+          "status": "OPEN",
+          "owner": "person://retail/cfo",
+          "actors": [
+            "org://retail/hardvale",
+            "person://retail/cfo",
+            "agent://retail/inbound-ops"
+          ],
+          "relationships": [
+            "relationship://retail/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target"
+        }
+      ],
+      "hash": "266b4be4e526e4f15d882bff19f52caa9c0fae1460965337a79160ec338fba4d"
+    },
+    {
+      "uri": "event://retail/s5-state-7001",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7001",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7000",
+      "idempotency_key": "idem-s5-7001",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "record exception heartbeat on the case",
+      "state_update": [
+        {
+          "uri": "case://retail/c-on-time",
+          "subject": "committed store replenishment delivery below target on time",
+          "status": "OPEN",
+          "owner": "person://retail/cfo",
+          "actors": [
+            "org://retail/hardvale",
+            "person://retail/cfo",
+            "agent://retail/inbound-ops"
+          ],
+          "relationships": [
+            "relationship://retail/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed store replenishment delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "logistics failure \u2014 org://retail/corvus-logistics missed its committed store replenishment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed store replenishment to the verified on-time carrier (atlas-freight) and gate the laggard (corvus-logistics)",
+          "metric": "metric://retail/m-on-time"
+        }
+      ],
+      "hash": "f2b11d0a2124599ca99a158450523b9f4f1106f86138d08a3fe07db33071fa10"
+    },
+    {
+      "uri": "event://retail/s5-state-7002",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7002",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7001",
+      "idempotency_key": "idem-s5-7002",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "case triage: exception assessed, root nominated",
+      "state_update": [
+        {
+          "uri": "decision://retail/s5-triage",
+          "by": "agent://retail/s5",
+          "authority": "authority://retail/for-ops",
+          "alternatives": [
+            "accept",
+            "dismiss as anomaly"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "accept as a real risk",
+          "actual_outcome": "accepted; root nominated",
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "d363474ae09ad0a68921ed54a831ebe920fa20e30f35825864637f4edf147c21"
+    },
+    {
+      "uri": "event://retail/s5-case-triage",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7003",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7002",
+      "idempotency_key": "idem-s5-7003",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "case triaged",
+      "state_update": [
+        {
+          "uri": "case://retail/c-on-time",
+          "subject": "committed store replenishment delivery below target on time",
+          "status": "TRIAGE",
+          "owner": "person://retail/cfo",
+          "actors": [
+            "org://retail/hardvale",
+            "person://retail/cfo",
+            "agent://retail/inbound-ops"
+          ],
+          "relationships": [
+            "relationship://retail/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-triage"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed store replenishment delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "logistics failure \u2014 org://retail/corvus-logistics missed its committed store replenishment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed store replenishment to the verified on-time carrier (atlas-freight) and gate the laggard (corvus-logistics)",
+          "metric": "metric://retail/m-on-time"
+        }
+      ],
+      "hash": "9489ed7d6629aa7e3c8205d2aa045cb197cb40c4308a4c88619a0b4c522dc275"
+    },
+    {
+      "uri": "event://retail/s5-state-7004",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7004",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7003",
+      "idempotency_key": "idem-s5-7004",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "case assigned; task becomes assigned authorized work (#8)",
+      "state_update": [
+        {
+          "uri": "task://retail/t-rebalance",
+          "assigned_to": "agent://retail/inbound-ops",
+          "created_by": "agent://retail/s5",
+          "objective": "re-balance store replenishment to the verified on-time carrier (atlas-freight) and gate the laggard (corvus-logistics)",
+          "dependencies": [],
+          "authority": "authority://retail/for-ops",
+          "deadline": "2026-10-15T00:00:00Z",
+          "priority": 0.695,
+          "status": "ASSIGNED",
+          "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+          "why_here": "derived from the on-time exception (case OPEN)",
+          "importance": "restores shelf-on-time, protecting shopper scoped Trust",
+          "evidence": [
+            "evidence://retail/committed-corvus-logisticsQ3",
+            "evidence://retail/committed-atlas-freightQ3",
+            "evidence://retail/committed-corvus-logisticsQ4"
+          ],
+          "decision_required": "approve the re-allocation",
+          "priority_factors": {
+            "impact": 0.85,
+            "urgency": 0.9,
+            "confidence": 0.7,
+            "irreversibility": false,
+            "relationship_importance": 0.8,
+            "cost_of_delay": 0.75
+          },
+          "assigned_capacity": 1.0
+        },
+        {
+          "uri": "decision://retail/s5-assign",
+          "by": "person://retail/cfo",
+          "authority": "authority://retail/for-ops",
+          "alternatives": [
+            "assign",
+            "defer"
+          ],
+          "confidence": 0.95,
+          "expected_outcome": "task in progress",
+          "detail": {
+            "task": "task://retail/t-rebalance",
+            "assigned_to": "agent://retail/inbound-ops",
+            "authority": "authority://retail/for-ops",
+            "priority": 0.695,
+            "capacity": 1.0
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "ce6bdaa47ce80a33d83c9f923cbf41f0cb00e94ffe2002d071b4d11abd8a6131"
+    },
+    {
+      "uri": "event://retail/s5-case-assigned",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7005",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7004",
+      "idempotency_key": "idem-s5-7005",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "case assigned",
+      "state_update": [
+        {
+          "uri": "case://retail/c-on-time",
+          "subject": "committed store replenishment delivery below target on time",
+          "status": "ASSIGNED",
+          "owner": "person://retail/cfo",
+          "actors": [
+            "org://retail/hardvale",
+            "person://retail/cfo",
+            "agent://retail/inbound-ops"
+          ],
+          "relationships": [
+            "relationship://retail/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-assigned"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed store replenishment delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "logistics failure \u2014 org://retail/corvus-logistics missed its committed store replenishment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed store replenishment to the verified on-time carrier (atlas-freight) and gate the laggard (corvus-logistics)",
+          "metric": "metric://retail/m-on-time"
+        }
+      ],
+      "hash": "e37983aa8019d648dc757f5219039f1a3a376d42000ac2419d5af9d2a56da898"
+    },
+    {
+      "uri": "event://retail/s5-case-inprogress",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7006",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7005",
+      "idempotency_key": "idem-s5-7006",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "task execution began",
+      "state_update": [
+        {
+          "uri": "case://retail/c-on-time",
+          "subject": "committed store replenishment delivery below target on time",
+          "status": "IN_PROGRESS",
+          "owner": "person://retail/cfo",
+          "actors": [
+            "org://retail/hardvale",
+            "person://retail/cfo",
+            "agent://retail/inbound-ops"
+          ],
+          "relationships": [
+            "relationship://retail/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-inprogress"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed store replenishment delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "logistics failure \u2014 org://retail/corvus-logistics missed its committed store replenishment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed store replenishment to the verified on-time carrier (atlas-freight) and gate the laggard (corvus-logistics)",
+          "metric": "metric://retail/m-on-time"
+        }
+      ],
+      "hash": "e88bd6f28ea73049d91be36cf494cb61b632a381d03474c1bf341967fcbcad26"
+    },
+    {
+      "uri": "event://retail/s5-state-7007",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7007",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7006",
+      "idempotency_key": "idem-s5-7007",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "policy updated: allocate by fit AND scoped Trust",
+      "state_update": [
+        {
+          "uri": "policy://retail/allocation",
+          "name": "retail allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "select by fit x scoped Trust; laggard (< floor) needs a performance gate",
+          "action": "allocate to the top-ranked fitted partner; gate laggard",
+          "scope": [
+            "expectation://retail/e-on-time"
+          ],
+          "version": 2,
+          "policy_status": "REVISED"
+        }
+      ],
+      "hash": "edfd03d056820326906ac7b64314b573087f8e77925807fa76c8f3314a5c0817"
+    },
+    {
+      "uri": "event://retail/s5-state-7008",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7008",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7007",
+      "idempotency_key": "idem-s5-7008",
+      "signature": "signed-by-agent://retail/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s2",
+      "detail": "task effect: next committed work ranked offer://retail/o-g (score 0.695)",
+      "state_update": [
+        {
+          "uri": "decision://retail/s5-match-recorded",
+          "by": "agent://s2",
+          "authority": "delegation://retail/s2-match",
+          "alternatives": [
+            "offer://retail/o-g",
+            "none"
+          ],
+          "confidence": 0.92,
+          "expected_outcome": "good partner ranked #1",
+          "actual_outcome": "offer://retail/o-g",
+          "detail": [
+            {
+              "offer": "offer://retail/o-g",
+              "provider": "org://retail/atlas-freight",
+              "fit": 1.0,
+              "trust": 0.695,
+              "score": 0.695
+            }
+          ],
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "e1096aa2e6208a393fb657f9a9d298516d00c345ac298c321ab07e7c4519e794"
+    },
+    {
+      "uri": "event://retail/s5-escalate",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7009",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7008",
+      "idempotency_key": "idem-s5-7009",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "escalation: the committed action is irreversible and cost-unknowable once done (\u00a76 floor)",
+      "state_update": [
+        {
+          "uri": "escalation://retail/escalate-release",
+          "trigger": "external replenishment release \u2014 irreversible and cost-unknowable once dispatched",
+          "severity": "WARN",
+          "recipient": "person://retail/cfo",
+          "deadline": "2026-11-15T00:00:00Z",
+          "fallback": "agent://retail/s4",
+          "authority": "authority://retail/for-ops",
+          "acknowledgement": "approve then execute"
+        }
+      ],
+      "hash": "63f83d9729260806989ecf2951a60f90175e6c98d47498f1799cd805ed2cb399"
+    },
+    {
+      "uri": "event://retail/owner-human",
+      "type": "DECISION",
+      "event_id": "ev-retail-7010",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-retail-7009",
+      "idempotency_key": "idem-retail-7010",
+      "signature": "signed-by-person://retail/cfo",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "person://retail/cfo",
+      "detail": "person://retail/cfo signed approval to release the committed action (\u00a76 floor)",
+      "state_update": [
+        {
+          "uri": "decision://retail/owner-human",
+          "by": "person://retail/cfo",
+          "authority": "authority://retail/for-ops",
+          "alternatives": [
+            "release_in_full",
+            "hold",
+            "release_partial_and_hold_if_shortfall",
+            "open_dispute"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "release to the verified partner",
+          "actual_outcome": "release_in_full (human approved)",
+          "detail": {
+            "task": "task://retail/t-rebalance",
+            "action": "release_committed_action",
+            "irreversible_failure": true,
+            "cost_failure_unknowable": true
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "60af426c2b307ee6e4af04d77a617c1add45388cd379e33bcf1aaf6c683996fa"
+    },
+    {
+      "uri": "event://retail/action-release",
+      "type": "ACTION",
+      "event_id": "ev-retail-7011",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-retail-7010",
+      "idempotency_key": "idem-retail-7011",
+      "signature": "signed-by-person://retail/cfo",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/inbound-ops",
+      "detail": "rebalance_commitment executed after human approval",
+      "worker": "agent://retail/inbound-ops",
+      "action": "rebalance_commitment",
+      "task_id": "t-rebalance",
+      "tier": "human",
+      "outcome": "done",
+      "state_update": [],
+      "hash": "3caebb16bcdd4311ba68c324effceb08ce79e7400dc4b363862cc30fe9ab0773"
+    },
+    {
+      "uri": "event://retail/s5-case-blocked",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7012",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7011",
+      "idempotency_key": "idem-s5-7012",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "case blocked pending the rallied committed delivery's verification",
+      "state_update": [
+        {
+          "uri": "case://retail/c-on-time",
+          "subject": "committed store replenishment delivery below target on time",
+          "status": "BLOCKED",
+          "owner": "person://retail/cfo",
+          "actors": [
+            "org://retail/hardvale",
+            "person://retail/cfo",
+            "agent://retail/inbound-ops"
+          ],
+          "relationships": [
+            "relationship://retail/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-blocked"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed store replenishment delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "logistics failure \u2014 org://retail/corvus-logistics missed its committed store replenishment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed store replenishment to the verified on-time carrier (atlas-freight) and gate the laggard (corvus-logistics)",
+          "metric": "metric://retail/m-on-time"
+        }
+      ],
+      "hash": "1b74666362d3296d2ac9ae29233d54fa52a6eb1ae181afb6a42f43109dceca27"
+    },
+    {
+      "uri": "event://retail/s5-state-7013",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7013",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7012",
+      "idempotency_key": "idem-s5-7013",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "rallied committed work allocated to org://retail/atlas-freight (the fix)",
+      "state_update": [
+        {
+          "uri": "commitment://retail/c-atlas-freight-followup",
+          "by": "agent://retail/s5",
+          "to": "org://retail/atlas-freight",
+          "obligation": "offer://retail/o-g",
+          "expectation": "expectation://retail/e-routed-atlas-freightR",
+          "status": "AGREED",
+          "terms": {
+            "kind": "store replenishment delivery follow-up",
+            "signed": true
+          },
+          "agreed_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "d83af0a24360237509a0bdbde32a5750fc855f6583bfd4a437988c82ef056f2d"
+    },
+    {
+      "uri": "event://retail/s5-state-7014",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7014",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7013",
+      "idempotency_key": "idem-s5-7014",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "register follow-on expectation",
+      "state_update": [
+        {
+          "uri": "expectation://retail/e-atlas-freightR",
+          "actor": "person://retail/cfo",
+          "subject": "store replenishment delivery",
+          "condition": "fully deliver the committed resource by its committed deadline",
+          "metric": "settled_value",
+          "threshold": 2000000.0,
+          "deadline": "2026-11-15T00:00:00Z",
+          "evidence_required": "CLEAR"
+        }
+      ],
+      "hash": "77c075b4ca9afe656c31223d942c358b1851817c624847e3b7aa218b07e6f5fa"
+    },
+    {
+      "uri": "event://retail/s4-exchange-atlas-freightR",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-7015",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7014",
+      "idempotency_key": "idem-s4-7015",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange atlas-freightR: 2000000.0 USD org://retail/hardvale->org://retail/atlas-freight (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/retail-escrow-atlas-freightR",
+          "kind": "MONEY",
+          "title": "org://retail/atlas-freight",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://retail/hardvale for org://retail/atlas-freight (atlas-freightR)"
+        },
+        {
+          "uri": "obligation://retail/s4-pay-atlas-freightR",
+          "subject": "org://retail/hardvale",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://retail/atlas-freight",
+          "due_by": "2026-11-15T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-11-12T00:00:00Z"
+        },
+        {
+          "uri": "receipt://retail/s4-receipt-atlas-freightR",
+          "kind": "SETTLEMENT",
+          "from": "org://retail/hardvale",
+          "to": "org://retail/atlas-freight",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-11-12T00:00:00Z"
+        },
+        {
+          "uri": "decision://retail/s4-recon-atlas-freightR",
+          "by": "agent://s4",
+          "authority": "authority://retail/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://retail/hardvale",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "atlas-freightR",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://retail/hardvale",
+            "provider": "org://retail/atlas-freight",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://retail/s4-exchange-atlas-freightR",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-7015",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-7014",
+          "idempotency_key": "idem-s4-7015",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange atlas-freightR: 2000000.0 USD org://retail/hardvale->org://retail/atlas-freight (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://retail/hardvale",
+          "provider": "org://retail/atlas-freight",
+          "settled_at": "2026-11-12T00:00:00Z",
+          "exchange_of": "commitment://retail/c-atlas-freightR"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://retail/hardvale",
+      "provider": "org://retail/atlas-freight",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "exchange_of": "commitment://retail/c-atlas-freightR",
+      "hash": "b932584b7a09ad76ae47056ac0dcdb918c552316937624709cba85ced5ae4bb6"
+    },
+    {
+      "uri": "event://retail/s4-outcome-atlas-freightR",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-7016",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7015",
+      "idempotency_key": "idem-s4-7016",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle atlas-freightR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://retail/s4-outcome-atlas-freightR",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-7016",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-7015",
+          "idempotency_key": "idem-s4-7016",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle atlas-freightR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-11-15T00:00:00Z",
+          "settled_at": "2026-11-12T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "score": 1.0,
+      "hash": "7cb36e5f6b141dbce651f0d8f94afcc5373651bb3dff5e1d15ed363640d4f62f"
+    },
+    {
+      "uri": "event://retail/outcome-routed-atlas-freightR",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-7017",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7016",
+      "idempotency_key": "idem-s2-7017",
+      "signature": "signed-by-org://retail/atlas-freight",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://retail/atlas-freight",
+      "detail": "job routed-atlas-freightR by org://retail/atlas-freight: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://retail/outcome-routed-atlas-freightR",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-7017",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-7016",
+          "idempotency_key": "idem-s2-7017",
+          "signature": "signed-by-org://retail/atlas-freight",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://retail/atlas-freight",
+          "detail": "job routed-atlas-freightR by org://retail/atlas-freight: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "routed-atlas-freightR",
+          "provider": "org://retail/atlas-freight",
+          "committed_deadline": "2026-11-15T00:00:00Z",
+          "actual_completed_at": "2026-11-12T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://retail/routed-atlas-freightR",
+          "kind": "ANCHORED",
+          "source": "signed committed-store replenishment delivery record + retail anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "routed-atlas-freightR",
+      "provider": "org://retail/atlas-freight",
+      "committed_deadline": "2026-11-15T00:00:00Z",
+      "actual_completed_at": "2026-11-12T00:00:00Z",
+      "on_time": true,
+      "hash": "eaf3501058e6bd55a1e0a4ac6a9f6dae8f026fe79cd106440b04996a45bf1227"
+    },
+    {
+      "uri": "event://retail/verify-routed-atlas-freightR",
+      "type": "DECISION",
+      "event_id": "ev-s2-7018",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7017",
+      "idempotency_key": "idem-s2-7018",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://retail/atlas-freight delivered the rallied committed store replenishment delivery on time' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://retail/routed-atlas-freightR",
+          "proposer": "agent://s5",
+          "statement": "org://retail/atlas-freight delivered the rallied committed store replenishment delivery on time"
+        },
+        {
+          "uri": "evidence://retail/routed-atlas-freightR",
+          "kind": "ANCHORED",
+          "source": "signed committed-store replenishment delivery record + retail anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "45d1cb2ef11f5a85bf0b8779808c05b801e03f4693293d05b78d9ac9d4c1d33a"
+    },
+    {
+      "uri": "event://retail/trust-update-atlas-freight",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-7019",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7018",
+      "idempotency_key": "idem-s2-7019",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "trust for org://retail/atlas-freight [store replenishment delivery reliability] 0.695 -> 0.790 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://retail/t-atlas-freight",
+          "subject": "org://retail/hardvale",
+          "target": "org://retail/atlas-freight",
+          "claim": "store replenishment delivery reliability",
+          "context": "relationship://retail/partner-net",
+          "score": 0.79,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://retail/routed-atlas-freightR"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "99d7fe65896f2a2860bc4b47c9ab6a6a716def386dab2df543980f175747b030"
+    },
+    {
+      "uri": "event://retail/s5-case-resolved",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7020",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7019",
+      "idempotency_key": "idem-s5-7020",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "exception resolved: rallied committed work verified on time; forward on-time = 1.0; cumulative 2/4",
+      "state_update": [
+        {
+          "uri": "case://retail/c-on-time",
+          "subject": "committed store replenishment delivery below target on time",
+          "status": "RESOLVED",
+          "owner": "person://retail/cfo",
+          "actors": [
+            "org://retail/hardvale",
+            "person://retail/cfo",
+            "agent://retail/inbound-ops"
+          ],
+          "relationships": [
+            "relationship://retail/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-blocked"
+            },
+            {
+              "status": "RESOLVED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-resolved"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed store replenishment delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "logistics failure \u2014 org://retail/corvus-logistics missed its committed store replenishment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed store replenishment to the verified on-time carrier (atlas-freight) and gate the laggard (corvus-logistics)",
+          "metric": "metric://retail/m-on-time",
+          "verified_outcome": "forward on-time restored to 1.0; org://retail/atlas-freight delivered the rallied store replenishment delivery on time (evidence://retail/routed-atlas-freightR); org://retail/atlas-freight Trust 0.79"
+        }
+      ],
+      "hash": "d92f2c96d897a42bb851e6a3f25232519fbdbc9199851851eab1daf0ad18a3c9"
+    },
+    {
+      "uri": "event://retail/s5-state-7021",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7021",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7020",
+      "idempotency_key": "idem-s5-7021",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "learning entry decision://retail/learning: Routing replenishment via a carrier with verified on-time delivery (atlas-freight), while gating the laggard (corvus-logistics), restored on-time replenishment. Verified good deliveries compound scoped Trust.",
+      "state_update": [
+        {
+          "uri": "decision://retail/learning",
+          "by": "agent://retail/s5",
+          "authority": "authority://retail/for-operations",
+          "subject": "store replenishment delivery on-time management",
+          "expected": 0.95,
+          "actual": 1.0,
+          "variance": 0.05,
+          "why": "Routing replenishment via a carrier with verified on-time delivery (atlas-freight), while gating the laggard (corvus-logistics), restored on-time replenishment. Verified good deliveries compound scoped Trust.",
+          "change_future_policy": "ALLOCATE by fit AND scoped Trust; carriers below the Trust floor need a performance gate before new runs.",
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "727b7d7999545e9fafbbd5cb8c8ba995b499feb55f2ff7137949a8903807affe"
+    },
+    {
+      "uri": "event://retail/s5-state-7022",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7022",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7021",
+      "idempotency_key": "idem-s5-7022",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "close case; learning recorded; future policy updated",
+      "state_update": [
+        {
+          "uri": "policy://retail/allocation",
+          "name": "retail allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "ALLOCATE by fit AND scoped Trust; carriers below the Trust floor need a performance gate before new runs. (learned 2026-09-01)",
+          "action": "allocate to the top-ranked fitted partner; gate laggard",
+          "scope": [
+            "expectation://retail/e-on-time"
+          ],
+          "version": 3,
+          "policy_status": "EFFECTIVE",
+          "learning": "decision://retail/learning"
+        }
+      ],
+      "hash": "90d79f66fb758f2ec41318258ee2f71bd7fd7540e5d23de675031b96948065ca"
+    },
+    {
+      "uri": "event://retail/s5-case-closed",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7022",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7021",
+      "idempotency_key": "idem-s5-7022",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "case closed",
+      "state_update": [
+        {
+          "uri": "case://retail/c-on-time",
+          "subject": "committed store replenishment delivery below target on time",
+          "status": "CLOSED",
+          "owner": "person://retail/cfo",
+          "actors": [
+            "org://retail/hardvale",
+            "person://retail/cfo",
+            "agent://retail/inbound-ops"
+          ],
+          "relationships": [
+            "relationship://retail/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-blocked"
+            },
+            {
+              "status": "RESOLVED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-resolved"
+            },
+            {
+              "status": "CLOSED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://retail/s5-case-closed"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed store replenishment delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "logistics failure \u2014 org://retail/corvus-logistics missed its committed store replenishment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed store replenishment to the verified on-time carrier (atlas-freight) and gate the laggard (corvus-logistics)",
+          "metric": "metric://retail/m-on-time",
+          "verified_outcome": "forward on-time restored to 1.0; org://retail/atlas-freight delivered the rallied store replenishment delivery on time (evidence://retail/routed-atlas-freightR); org://retail/atlas-freight Trust 0.79"
+        }
+      ],
+      "hash": "753bcd137b44082f51cb4775b5b9844f4a88fd6f209d6b011628f02eb6654715"
+    },
+    {
+      "uri": "event://retail/s5-state-7023",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7023",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7022",
+      "idempotency_key": "idem-s5-7023",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "register goal + ledger-projected metrics",
+      "state_update": [
+        {
+          "uri": "goal://retail/g-core",
+          "for": "org://retail/hardvale",
+          "statement": "Consistently deliver committed store replenishment on time so shoppers keep finding Stock at HardVale.",
+          "horizon": "quarter",
+          "owner": "person://retail/cfo",
+          "metrics": [
+            "metric://retail/m-on-time",
+            "metric://retail/m-trust",
+            "metric://retail/m-settled-value"
+          ]
+        },
+        {
+          "uri": "metric://retail/m-on-time",
+          "name": "Committed-store replenishment delivery on-time rate",
+          "definition": "share of committed store replenishment delivery deliveries verified on time",
+          "unit": "fraction",
+          "formula": "on_time / (on_time + late) from ledger",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 0.95,
+          "threshold": 0.8,
+          "period": "quarter",
+          "source": "ledger committed-delivery records",
+          "owner": "person://retail/cfo",
+          "actual": 0.5,
+          "forecast": 0.5,
+          "variance": -0.45,
+          "root_cause": "logistics failure \u2014 org://retail/corvus-logistics missed its committed store replenishment by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED"
+        },
+        {
+          "uri": "metric://retail/m-trust",
+          "name": "Partner scoped-trust score",
+          "definition": "best scoped Trust on the partner network (per \u00a75)",
+          "unit": "score",
+          "formula": "T(subject->target, claim, context) per \u00a75",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 0.9,
+          "threshold": 0.6,
+          "period": "rolling",
+          "source": "S5 scoped Trust graph",
+          "owner": "person://retail/cfo",
+          "actual": 0.79,
+          "forecast": 0.92,
+          "variance": -0.11,
+          "root_cause_status": "UNKNOWN"
+        },
+        {
+          "uri": "metric://retail/m-settled-value",
+          "name": "Settled committed value",
+          "definition": "value of EXCHANGE events settled this period",
+          "unit": "USD",
+          "formula": "sum(EXCHANGE.price) from ledger",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 7600000.0,
+          "threshold": 4180000.0000000005,
+          "period": "quarter",
+          "source": "ledger EXCHANGE events",
+          "owner": "person://retail/cfo",
+          "actual": 7600000.0,
+          "forecast": 8740000.0,
+          "variance": 0.0,
+          "root_cause_status": "UNKNOWN"
+        }
+      ],
+      "hash": "04c514c863df76ce66eee3bb30c1f9e0ff83569e2ca380ef4c14982b39234987"
+    },
+    {
+      "uri": "event://retail/s5-state-7024",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7024",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7023",
+      "idempotency_key": "idem-s5-7024",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "goal->metric->variance->decision->action->outcome",
+      "state_update": [
+        {
+          "uri": "decision://retail/s5-metric-loop",
+          "by": "agent://retail/s5",
+          "authority": "authority://retail/for-operations",
+          "alternatives": [
+            "do nothing",
+            "rebalance provider allocation"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "metric://retail/m-on-time variance reduced toward target",
+          "detail": {
+            "goal": "goal://retail/g-core",
+            "metric": "metric://retail/m-on-time",
+            "actual": 0.5,
+            "variance": -0.45,
+            "action": "task://retail/t-rebalance",
+            "outcome": "event://retail/outcome-routed-atlas-freightR"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "6cf1bf26df99103608b64b3850b41c457d090f73ccfdc3afa789ea45e64f0e8d"
+    },
+    {
+      "uri": "event://retail/s5-state-7025",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7025",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7024",
+      "idempotency_key": "idem-s5-7025",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "priority-ordered attention list",
+      "state_update": [
+        {
+          "uri": "decision://retail/s5-attention",
+          "by": "agent://retail/s5",
+          "authority": "authority://retail/for-ops",
+          "confidence": 0.9,
+          "expected_outcome": "top-of-attention ranked",
+          "actual_outcome": "attention prioritized by derived score",
+          "detail": {
+            "attention": [
+              {
+                "uri": "task://retail/t-rebalance",
+                "label": "re-balance committed work",
+                "priority": 0.695
+              },
+              {
+                "uri": "task://retail/t-followup",
+                "label": "rallied follow-on (good partner)",
+                "priority": 0.58
+              }
+            ]
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "de2f8320bc7448db5ada2b00a5e34384a82be87a924ef9057ba0e7036aed049e"
+    },
+    {
+      "uri": "event://retail/s5-state-7026",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7026",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7025",
+      "idempotency_key": "idem-s5-7026",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "dependency dependency://retail/d-rb-enables-fu: task://retail/t-rebalance ENABLES task://retail/t-followup",
+      "state_update": [
+        {
+          "uri": "dependency://retail/d-rb-enables-fu",
+          "from": "task://retail/t-rebalance",
+          "to": "task://retail/t-followup",
+          "kind": "ENABLES"
+        }
+      ],
+      "hash": "55328fdcef7615063541eff1196f69a9f84832de8f76e841deb1bf4114c19a86"
+    },
+    {
+      "uri": "event://retail/s5-state-7027",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7027",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7026",
+      "idempotency_key": "idem-s5-7027",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "dependency dependency://retail/d-fu-requires-pol: task://retail/t-followup REQUIRES policy://retail/allocation",
+      "state_update": [
+        {
+          "uri": "dependency://retail/d-fu-requires-pol",
+          "from": "task://retail/t-followup",
+          "to": "policy://retail/allocation",
+          "kind": "REQUIRES"
+        }
+      ],
+      "hash": "de13c16757b7395a1e42339dbe8b34d6ceaa79c0a88a079c0062194e4ca21242"
+    },
+    {
+      "uri": "event://retail/s5-state-7028",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7028",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7027",
+      "idempotency_key": "idem-s5-7028",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "dependency dependency://retail/d-fu-blocks-case: task://retail/t-followup BLOCKS case://retail/c-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://retail/d-fu-blocks-case",
+          "from": "task://retail/t-followup",
+          "to": "case://retail/c-on-time",
+          "kind": "BLOCKS"
+        }
+      ],
+      "hash": "3b37b747696dd401369e8a79b1673b6dec21a449afa2050e243474fe79323721"
+    },
+    {
+      "uri": "event://retail/s5-state-7029",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7029",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7028",
+      "idempotency_key": "idem-s5-7029",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "dependency dependency://retail/d-case-from-metric: case://retail/c-on-time DERIVED_FROM metric://retail/m-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://retail/d-case-from-metric",
+          "from": "case://retail/c-on-time",
+          "to": "metric://retail/m-on-time",
+          "kind": "DERIVED_FROM"
+        }
+      ],
+      "hash": "db9f8d1ba71ecb3b199257aa4ee69861b5c483f112b5346a124431c94356912b"
+    },
+    {
+      "uri": "event://retail/s5-state-7030",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7030",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7029",
+      "idempotency_key": "idem-s5-7030",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "dependency dependency://retail/d-metric-impacts-goal: metric://retail/m-on-time IMPACTS goal://retail/g-core",
+      "state_update": [
+        {
+          "uri": "dependency://retail/d-metric-impacts-goal",
+          "from": "metric://retail/m-on-time",
+          "to": "goal://retail/g-core",
+          "kind": "IMPACTS"
+        }
+      ],
+      "hash": "844bd9756efb301d5d91ea50033ee945a3d509debe6e35814dfa7d9e9bd0c289"
+    },
+    {
+      "uri": "event://retail/s5-state-7031",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7031",
+      "correlation_id": "corr-retail-bol-1",
+      "causation_id": "ev-s5-7030",
+      "idempotency_key": "idem-s5-7031",
+      "signature": "signed-by-agent://retail/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://retail/s5",
+      "detail": "dependency dependency://retail/d-rb-blocks-case: task://retail/t-rebalance BLOCKS case://retail/c-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://retail/d-rb-blocks-case",
+          "from": "task://retail/t-rebalance",
+          "to": "case://retail/c-on-time",
+          "kind": "BLOCKS"
+        }
+      ],
+      "hash": "ae8877bdebc654434c70d6cd4c361c5a5042deeba65cdd3783c9bd32ea82fe17"
+    }
+  ]
+}

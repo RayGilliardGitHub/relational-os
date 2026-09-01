@@ -1,0 +1,65 @@
+[
+  {
+    "uri": "case://qk/c-on-time-delivery",
+    "subject": "quarterly on-time fulfilment below target",
+    "status": "CLOSED",
+    "owner": "person://qk/approver",
+    "actors": [
+      "org://quoteko",
+      "person://qk/approver",
+      "agent://w-ops"
+    ],
+    "relationships": [
+      "relationship://qk/cust-cxn"
+    ],
+    "created_at": "2026-09-01T00:29:54Z",
+    "history": [
+      {
+        "status": "OPEN",
+        "at": "2026-09-01T00:29:54Z",
+        "event": null
+      },
+      {
+        "status": "TRIAGE",
+        "at": "2026-09-01T00:29:54Z",
+        "event": "event://qk/s5-case-triage"
+      },
+      {
+        "status": "ASSIGNED",
+        "at": "2026-09-01T00:29:54Z",
+        "event": "event://qk/s5-case-assigned"
+      },
+      {
+        "status": "IN_PROGRESS",
+        "at": "2026-09-01T00:29:54Z",
+        "event": "event://qk/s5-case-inprogress"
+      },
+      {
+        "status": "BLOCKED",
+        "at": "2026-09-01T00:29:54Z",
+        "event": "event://qk/s5-case-blocked"
+      },
+      {
+        "status": "RESOLVED",
+        "at": "2026-09-01T00:29:54Z",
+        "event": "event://qk/s5-case-resolved"
+      },
+      {
+        "status": "CLOSED",
+        "at": "2026-09-01T00:29:54Z",
+        "event": "event://qk/s5-case-closed"
+      }
+    ],
+    "suggestion": "ledger-projected on-time rate below target",
+    "expected": 0.95,
+    "actual": 0.833,
+    "variance": -0.117,
+    "significance": "CRITICAL",
+    "exception": "On-time delivery 0.83 below target 0.95 (ledger: 5/6 contracted completions on time)",
+    "root_cause": "provider scheduling failure \u2014 org://qk/norcrete missed its committed deadline by 2 days; scoped Trust fell 0.92->0.528",
+    "root_cause_status": "SUPPORTED",
+    "recommended_action": "Re-allocate contracted work to the verified on-time provider (org://qk/solarworks) and gate the laggard (org://qk/norcrete) with a performance checkpoint before any new commitment",
+    "metric": "metric://qk/m-on-time",
+    "verified_outcome": "forward-period on-time delivery restored to 1.0; org://qk/solarworks delivered the rallied job on time (evidence://qk/job-routed-solarworks); solarworks Trust 1.0"
+  }
+]

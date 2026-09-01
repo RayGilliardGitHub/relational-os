@@ -1,0 +1,34 @@
+[
+  {
+    "uri": "trust://aero/t-apex-aeronautics",
+    "subject": "org://aero/valiant-aero",
+    "target": "org://aero/apex-aeronautics",
+    "claim": "airframe-subsystem delivery reliability",
+    "context": "relationship://aero/partner-net",
+    "score": 0.79,
+    "updated_at": "2026-09-01T00:29:53Z",
+    "expected": 0.8,
+    "outcome": 1.0,
+    "evidence": [
+      "evidence://aero/routed-apex-aeronauticsR"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  },
+  {
+    "uri": "trust://aero/t-vireo-airframe",
+    "subject": "org://aero/valiant-aero",
+    "target": "org://aero/vireo-airframe",
+    "claim": "airframe-subsystem delivery reliability",
+    "context": "relationship://aero/partner-net",
+    "score": 0.14,
+    "updated_at": "2026-09-01T00:29:53Z",
+    "expected": 0.8,
+    "outcome": 0.0,
+    "evidence": [
+      "evidence://aero/committed-vireo-airframeQ4"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  }
+]

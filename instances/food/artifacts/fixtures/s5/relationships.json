@@ -1,0 +1,46 @@
+[
+  {
+    "uri": "relationship://food/ops-rel",
+    "participants": [
+      "org://food/maplehurst",
+      "org://food/caseway"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://food/maplehurst": [
+        "provider"
+      ],
+      "org://food/caseway": [
+        "client"
+      ]
+    },
+    "authority": [
+      "authority://food/for-ops"
+    ],
+    "purpose": "food / bev / consumer operating relationship"
+  },
+  {
+    "uri": "relationship://food/partner-net",
+    "participants": [
+      "org://food/maplehurst",
+      "org://food/crestline",
+      "org://food/harlow"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://food/maplehurst": [
+        "operator"
+      ],
+      "org://food/crestline": [
+        "partner"
+      ],
+      "org://food/harlow": [
+        "partner"
+      ]
+    },
+    "authority": [
+      "authority://food/for-ops"
+    ],
+    "purpose": "food / bev / consumer partner network"
+  }
+]

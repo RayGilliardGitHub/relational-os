@@ -1,0 +1,247 @@
+[
+  {
+    "uri": "org://logi/hawkline",
+    "type": "ORG",
+    "identity": {
+      "attestations": [
+        "business-license"
+      ]
+    },
+    "brand": {
+      "tagline": "Freight that moves on the minute.",
+      "mission": "Settle committed freight dispatches reliably and on time so shippers run their operations to a schedule they can bank on, lane by lane.",
+      "vision": "A logistics network where 'dispatched on time' is so reliable it fades into the background of our shippers' day.",
+      "values": [
+        [
+          "The deadline is the deal",
+          "A freight commitment is a promise to a schedule."
+        ],
+        [
+          "Proof of movement",
+          "We verify every dispatch against the ledger; 'in transit' is a measured fact."
+        ],
+        [
+          "Shipper trust",
+          "Shippers plan capacity and customer delivery around our lanes."
+        ],
+        [
+          "Efficiency",
+          "Every mile earned is a price we can keep fair."
+        ],
+        [
+          "Transparency",
+          "If a dispatch slips, shippers hear it from us first."
+        ]
+      ],
+      "about": "Hawkline Logistics is a freight and transport operator. We take committed freight dispatches and settle them on time, lane by lane, backing every movement with ledger-verified evidence. For shippers whose entire customer promise depends on a load leaving on schedule, our on-time record is the quiet foundation they plan around.",
+      "fast_facts": [
+        "Founded 1994, freight & transport",
+        "Lane network across 3 continents",
+        "Freight-dispatch settlement operation"
+      ],
+      "history": [
+        [
+          "1994",
+          "Founded with a single truck lane."
+        ],
+        [
+          "2006",
+          "Expanded into a national freight-settlement network."
+        ],
+        [
+          "2019",
+          "Digitised every dispatch to ledger-verified on-time evidence."
+        ]
+      ],
+      "leadership": [
+        [
+          "Dana Ferrell",
+          "Chief Executive",
+          "Ran two carriers before founding Hawkline on schedule trust."
+        ],
+        [
+          "Melvin Ashe",
+          "Chief Commercial Officer",
+          "Owns lanes, carrier network, and dispatch reliability."
+        ]
+      ],
+      "products_services": [
+        "Freight dispatch and settlement",
+        "Dedicated and shared-lane transport",
+        "Shipment tracking and proof-of-movement reporting"
+      ],
+      "testimonials": [
+        [
+          "Hawkline's dispatch clock is the one I can set my whole week by.",
+          "Shipper operations manager"
+        ]
+      ],
+      "trust": [
+        [
+          "98.5% committed freight dispatch on-time rate (2025)",
+          "Hawkline dispatch ledger"
+        ],
+        [
+          "FMCSA-compliant safety programme",
+          "audited annually"
+        ]
+      ],
+      "locations": "Nashville, TN (HQ) \u00b7 dispatch hubs across the lane network",
+      "faq": [
+        [
+          "What makes your on-time claim auditable?",
+          "Every dispatch settles to a signed ledger event with a verified timestamp \u2014 shippers can see the proof, not just hear the claim."
+        ],
+        [
+          "Do you run dedicated lanes?",
+          "Yes, both dedicated and shared lanes, each with a committed dispatch schedule we verify."
+        ]
+      ],
+      "contact": "dispatch@hawkline.example \u00b7 +1-615-555-0135",
+      "careers": "Move freight on the minute: dispatch, fleet ops, lane management, carrier relations.",
+      "investors": "Privately held. Lane reliability data shared with qualified shippers.",
+      "press": "media@hawkline.example \u2014 network and reliability stories.",
+      "esg": "Fuel-efficiency routing, backhaul reduction to cut empty miles, driver wellbeing programs.",
+      "legal": [
+        "Privacy",
+        "Terms",
+        "California Rights",
+        "Do Not Sell or Share"
+      ],
+      "nav": [
+        "About",
+        "Lanes",
+        "Services",
+        "Careers",
+        "Investors",
+        "Press",
+        "Contact"
+      ],
+      "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+      "design": {
+        "palette": [
+          [
+            "Roadway Black",
+            "#1D1F22"
+          ],
+          [
+            "Highway Amber",
+            "#F0A81E"
+          ],
+          [
+            "Freight Orange",
+            "#E3621A"
+          ],
+          [
+            "Signal Grey",
+            "#C7CBCF"
+          ]
+        ],
+        "typography": {
+          "heading": "Clear transport sans (e.g. Archivo)",
+          "body": "Open neutral sans (e.g. Roboto)"
+        },
+        "logo": {
+          "wordmark": "HAWKLINE in sharp caps",
+          "character": "a hawk/freight-chevron mark",
+          "usage": "clear space wide; amber+orange accents on dark"
+        },
+        "imagery": "Traffic-lane motion, trucks under speed, dispatch boards \u2014 momentum and control",
+        "tone": "Direct, efficient, factual; the clock matters more than the adjectives."
+      }
+    }
+  },
+  {
+    "uri": "org://logi/papercreek",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://logi/keystone-lines",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://logi/barnacle-freight",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://logi/cco",
+    "type": "PERSON"
+  },
+  {
+    "uri": "agent://logi/fleet-ops",
+    "type": "AGENT"
+  },
+  {
+    "uri": "authority://logi/for-ops",
+    "holder": "org://logi/hawkline",
+    "grants": [
+      "triage_case",
+      "assign_case",
+      "close_case",
+      "approve_learning",
+      "rebalance_commitment",
+      "gate_partner",
+      "release_committed_action"
+    ],
+    "roles": [
+      "operator"
+    ]
+  },
+  {
+    "uri": "rule://logi/ops-run",
+    "kind": "POLICY",
+    "text": "agent://logi/fleet-ops may re-balance resource commitment and gate partner performance",
+    "grants": [
+      "rebalance_commitment",
+      "gate_partner"
+    ]
+  },
+  {
+    "uri": "rule://logi/match-run",
+    "kind": "POLICY",
+    "text": "S2 may run Trust-weighted matching for the client",
+    "grants": [
+      "run_match"
+    ]
+  },
+  {
+    "uri": "delegation://logi/ops",
+    "grantor": "org://logi/hawkline",
+    "grantee": "agent://logi/fleet-ops",
+    "scope": [
+      "rule://logi/ops-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://logi/s2-match",
+    "grantor": "org://logi/hawkline",
+    "grantee": "agent://s2",
+    "scope": [
+      "rule://logi/match-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "offer://logi/o-g",
+    "provider": "org://logi/keystone-lines",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "dispatch",
+      "freight"
+    ],
+    "fit_note": "logistics / transport partner delivery line"
+  },
+  {
+    "uri": "offer://logi/o-l",
+    "provider": "org://logi/barnacle-freight",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "dispatch",
+      "freight"
+    ],
+    "fit_note": "logistics / transport partner delivery line"
+  }
+]

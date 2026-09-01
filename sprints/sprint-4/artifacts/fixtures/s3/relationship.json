@@ -1,0 +1,118 @@
+[
+  {
+    "uri": "relationship://qk/cust-cxn",
+    "participants": [
+      "person://qk/customer",
+      "org://quoteko"
+    ],
+    "roles": {
+      "person://qk/customer": [
+        "customer"
+      ],
+      "org://quoteko": [
+        "service_provider"
+      ]
+    },
+    "context": {
+      "organization": "org://quoteko",
+      "relationship": "relationship://qk/cust-cxn",
+      "role": "customer",
+      "jurisdiction": "US-NM",
+      "time": "2026-09-01T10:00:00Z",
+      "purpose": "purpose://qk/quoting",
+      "rules": [
+        "rule://qk/tos"
+      ]
+    },
+    "purpose": "property-services quoting/triage",
+    "status": "ACTIVE",
+    "created_at": "2026-09-01T10:00:00Z",
+    "effective_from": "2026-09-01T10:00:00Z",
+    "authority": [
+      "authority://qk/for-matching"
+    ]
+  },
+  {
+    "uri": "consent://qk/match-data",
+    "granted_by": "person://qk/customer",
+    "granted_for": "match my quote request to vetted service offers",
+    "scope": [
+      "permission://qk/read-profile",
+      "permission://qk/present-offers"
+    ],
+    "duration": {
+      "effective": "2026-09-01T10:00:00Z",
+      "expires": "2027-09-01T00:00:00Z"
+    },
+    "revocable": true,
+    "status": "GRANTED"
+  },
+  {
+    "uri": "delegation://qk/s2-match",
+    "grantor": "org://quoteko",
+    "grantee": "agent://s2",
+    "scope": [
+      "rule://qk/s2-run-matching"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "authority://qk/for-matching",
+    "grants": [
+      "request_quote"
+    ],
+    "holder": "org://quoteko"
+  },
+  {
+    "uri": "interaction://qk/req-quote",
+    "of": "relationship://qk/cust-cxn",
+    "kind": "REQUEST",
+    "events": [
+      "event://qk/request"
+    ]
+  },
+  {
+    "uri": "delegation://qk/s3-execute",
+    "grantor": "org://quoteko",
+    "grantee": "agent://s3",
+    "scope": [
+      "rule://qk/s3-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://qk/w-local",
+    "grantor": "org://quoteko",
+    "grantee": "agent://w-local",
+    "scope": [
+      "rule://qk/w-local-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://qk/w-cloud",
+    "grantor": "org://quoteko",
+    "grantee": "agent://w-cloud",
+    "scope": [
+      "rule://qk/w-cloud-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://qk/w-frontier",
+    "grantor": "org://quoteko",
+    "grantee": "agent://w-frontier",
+    "scope": [
+      "rule://qk/w-frontier-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "authority://qk/for-exec",
+    "grants": [
+      "release_final_payment",
+      "approve_final_payment"
+    ],
+    "holder": "org://quoteko"
+  }
+]

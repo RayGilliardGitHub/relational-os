@@ -1,0 +1,30 @@
+[
+  {
+    "uri": "task://fin/t-treasury-rebalance",
+    "assigned_to": "agent://fin/treasury-ops",
+    "created_by": "agent://fin/s5",
+    "objective": "re-balance funding allocation to the verified on-time counterparty (adamvale) and gate the laggard (kaplen)",
+    "dependencies": [],
+    "authority": "authority://fin/for-treasury",
+    "deadline": "2026-10-15T00:00:00Z",
+    "priority": 0.695,
+    "status": "ASSIGNED",
+    "expected_outcome": "next committed funding tranche routed to a verified on-time counterparty; policy updated",
+    "why_here": "derived from the funding on-time exception (case OPEN)",
+    "importance": "restores committed funding on-time, protecting the client's scoped Trust",
+    "evidence": [
+      "evidence://qk/funding-kaplen-q3",
+      "evidence://qk/funding-adamvale-q3"
+    ],
+    "decision_required": "approve the funding re-allocation",
+    "priority_factors": {
+      "impact": 0.85,
+      "urgency": 0.9,
+      "confidence": 0.7,
+      "irreversibility": false,
+      "relationship_importance": 0.8,
+      "cost_of_delay": 0.75
+    },
+    "assigned_capacity": 1.0
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "uri": "trust://fin/t-adamvale",
+    "subject": "org://fin/northglen",
+    "target": "org://fin/adamvale",
+    "claim": "timely committed settlement",
+    "context": "relationship://fin/funding-net",
+    "score": 0.79,
+    "updated_at": "2026-09-01T00:29:55Z",
+    "expected": 0.8,
+    "outcome": 1.0,
+    "evidence": [
+      "evidence://qk/funding-routed-adamvale"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  },
+  {
+    "uri": "trust://fin/t-kaplen",
+    "subject": "org://fin/northglen",
+    "target": "org://fin/kaplen",
+    "claim": "timely committed settlement",
+    "context": "relationship://fin/funding-net",
+    "score": 0.14,
+    "updated_at": "2026-09-01T00:29:55Z",
+    "expected": 0.8,
+    "outcome": 0.0,
+    "evidence": [
+      "evidence://qk/funding-kaplen-q4"
+    ],
+    "alpha": 0.5,
+    "recency": 1.0
+  }
+]

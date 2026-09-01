@@ -1,0 +1,246 @@
+[
+  {
+    "uri": "decision://hlth/s2-match-baseline",
+    "by": "agent://s2",
+    "authority": "delegation://hlth/s2-match",
+    "alternatives": [
+      "offer://hlth/o-l",
+      "offer://hlth/o-g",
+      "none"
+    ],
+    "confidence": 0.9,
+    "expected_outcome": "lag partner ranked #1 on existing Trust",
+    "actual_outcome": "offer://hlth/o-l",
+    "detail": [
+      {
+        "offer": "offer://hlth/o-l",
+        "provider": "org://hlth/meridian-med",
+        "fit": 1.0,
+        "trust": 0.9,
+        "score": 0.9
+      },
+      {
+        "offer": "offer://hlth/o-g",
+        "provider": "org://hlth/cortica-supply",
+        "fit": 1.0,
+        "trust": 0.6,
+        "score": 0.6
+      }
+    ],
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://hlth/s4-recon-meridian-medQ3",
+    "by": "agent://s4",
+    "authority": "authority://hlth/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://hlth/lumenhealth",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "meridian-medQ3",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://hlth/lumenhealth",
+      "provider": "org://hlth/meridian-med",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://hlth/s4-recon-cortica-supplyQ3",
+    "by": "agent://s4",
+    "authority": "authority://hlth/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://hlth/lumenhealth",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "cortica-supplyQ3",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://hlth/lumenhealth",
+      "provider": "org://hlth/cortica-supply",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://hlth/s4-recon-meridian-medQ4",
+    "by": "agent://s4",
+    "authority": "authority://hlth/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 1600000.0 USD from org://hlth/lumenhealth",
+    "actual_outcome": "matched exactly: settled 1600000.0 USD",
+    "detail": {
+      "slug": "meridian-medQ4",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "matched": true,
+      "buyer": "org://hlth/lumenhealth",
+      "provider": "org://hlth/meridian-med",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://hlth/s5-triage",
+    "by": "agent://hlth/s5",
+    "authority": "authority://hlth/for-ops",
+    "alternatives": [
+      "accept",
+      "dismiss as anomaly"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "accept as a real risk",
+    "actual_outcome": "accepted; root nominated",
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://hlth/s5-assign",
+    "by": "person://hlth/oph",
+    "authority": "authority://hlth/for-ops",
+    "alternatives": [
+      "assign",
+      "defer"
+    ],
+    "confidence": 0.95,
+    "expected_outcome": "task in progress",
+    "detail": {
+      "task": "task://hlth/t-rebalance",
+      "assigned_to": "agent://hlth/supply-ops",
+      "authority": "authority://hlth/for-ops",
+      "priority": 0.695,
+      "capacity": 1.0
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://hlth/s5-match-recorded",
+    "by": "agent://s2",
+    "authority": "delegation://hlth/s2-match",
+    "alternatives": [
+      "offer://hlth/o-g",
+      "none"
+    ],
+    "confidence": 0.92,
+    "expected_outcome": "good partner ranked #1",
+    "actual_outcome": "offer://hlth/o-g",
+    "detail": [
+      {
+        "offer": "offer://hlth/o-g",
+        "provider": "org://hlth/cortica-supply",
+        "fit": 1.0,
+        "trust": 0.695,
+        "score": 0.695
+      }
+    ],
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://hlth/owner-human",
+    "by": "person://hlth/oph",
+    "authority": "authority://hlth/for-ops",
+    "alternatives": [
+      "release_in_full",
+      "hold",
+      "release_partial_and_hold_if_shortfall",
+      "open_dispute"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "release to the verified partner",
+    "actual_outcome": "release_in_full (human approved)",
+    "detail": {
+      "task": "task://hlth/t-rebalance",
+      "action": "release_committed_action",
+      "irreversible_failure": true,
+      "cost_failure_unknowable": true
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://hlth/s4-recon-cortica-supplyR",
+    "by": "agent://s4",
+    "authority": "authority://hlth/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://hlth/lumenhealth",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "cortica-supplyR",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://hlth/lumenhealth",
+      "provider": "org://hlth/cortica-supply",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://hlth/learning",
+    "by": "agent://hlth/s5",
+    "authority": "authority://hlth/for-operations",
+    "subject": "pharmaceutical delivery on-time management",
+    "expected": 0.95,
+    "actual": 1.0,
+    "variance": 0.05,
+    "why": "Concentrating supply with a distributor that has verified on-time delivery (cortica-supply), while gating the laggard (meridian-med), restored on-time pharmaceutical delivery. Verified good deliveries compound scoped Trust.",
+    "change_future_policy": "ALLOCATE by fit AND scoped Trust (not fit alone); distributors below the Trust floor require a performance checkpoint before a new order.",
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://hlth/s5-metric-loop",
+    "by": "agent://hlth/s5",
+    "authority": "authority://hlth/for-operations",
+    "alternatives": [
+      "do nothing",
+      "rebalance provider allocation"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "metric://hlth/m-on-time variance reduced toward target",
+    "detail": {
+      "goal": "goal://hlth/g-core",
+      "metric": "metric://hlth/m-on-time",
+      "actual": 0.5,
+      "variance": -0.45,
+      "action": "task://hlth/t-rebalance",
+      "outcome": "event://hlth/outcome-routed-cortica-supplyR"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://hlth/s5-attention",
+    "by": "agent://hlth/s5",
+    "authority": "authority://hlth/for-ops",
+    "confidence": 0.9,
+    "expected_outcome": "top-of-attention ranked",
+    "actual_outcome": "attention prioritized by derived score",
+    "detail": {
+      "attention": [
+        {
+          "uri": "task://hlth/t-rebalance",
+          "label": "re-balance committed work",
+          "priority": 0.695
+        },
+        {
+          "uri": "task://hlth/t-followup",
+          "label": "rallied follow-on (good partner)",
+          "priority": 0.58
+        }
+      ]
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  }
+]

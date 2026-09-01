@@ -1,0 +1,29 @@
+[
+  {
+    "uri": "process://fin/pr-funding",
+    "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+    "steps": [
+      "triage",
+      "assign",
+      "execute",
+      "verify_outcome",
+      "learning"
+    ]
+  },
+  {
+    "uri": "process_instance://fin/pi-funding",
+    "process": "process://fin/pr-funding",
+    "status": "RUNNING",
+    "started_at": "2026-09-01T00:29:55Z"
+  },
+  {
+    "uri": "escalation://fin/escalate-tranche-release",
+    "trigger": "committed external funding disbursement \u2014 irreversible and cost-unknowable once released",
+    "severity": "WARN",
+    "recipient": "person://fin/treasurer",
+    "deadline": "2026-11-15T00:00:00Z",
+    "fallback": "agent://fin/s5",
+    "authority": "authority://fin/for-treasury",
+    "acknowledgement": "approve then execute"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "uri": "expectation://aero/e-on-time",
+    "actor": "person://aero/pgm",
+    "subject": "airframe-subsystem delivery",
+    "condition": "fully deliver the committed airframe-subsystem delivery by its committed deadline",
+    "metric": "on_time",
+    "threshold": 0.95,
+    "deadline": "2026-12-31T00:00:00Z",
+    "evidence_required": "CLEAR"
+  },
+  {
+    "uri": "expectation://aero/e-apex-aeronauticsR",
+    "actor": "person://aero/pgm",
+    "subject": "airframe-subsystem delivery",
+    "condition": "fully deliver the committed resource by its committed deadline",
+    "metric": "settled_value",
+    "threshold": 2000000.0,
+    "deadline": "2026-11-15T00:00:00Z",
+    "evidence_required": "CLEAR"
+  }
+]

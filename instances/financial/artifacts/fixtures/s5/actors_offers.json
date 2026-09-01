@@ -1,0 +1,248 @@
+[
+  {
+    "uri": "org://fin/northglen",
+    "type": "ORG",
+    "identity": {
+      "attestations": [
+        "chartered-bank-license"
+      ]
+    },
+    "brand": {
+      "tagline": "Funding that lands on the date.",
+      "mission": "Commit and settle funding tranches reliably and on time so corporate clients can run their working-capital plans to a schedule they can trust.",
+      "vision": "A commercial lending market where a committed tranche settling on time is a durable promise, backed by ledger-verified evidence.",
+      "values": [
+        [
+          "Commitment is covenant",
+          "A committed funding tranche is a promise to a date."
+        ],
+        [
+          "Evidence-first",
+          "We verify every settlement against the ledger; on time is a fact, not a target."
+        ],
+        [
+          "Client partnership",
+          "Corporate clients plan working capital around our settlements."
+        ],
+        [
+          "Prudence",
+          "On time never trades away sound credit judgement."
+        ],
+        [
+          "Transparency",
+          "If a settlement will slip, clients hear it from us first."
+        ]
+      ],
+      "about": "Northglen Bank is a regional commercial bank. We commit and settle funding tranches for corporate clients, and we run that commitment to the ledger-verified on-time standard of the platform. For a treasurer planning working capital around a committed settlement date, our on-time record is the reliable foundation of the relationship.",
+      "fast_facts": [
+        "Founded 1987, regional commercial banking",
+        "Corporate lending across the region",
+        "Ledger-verified settlement operation"
+      ],
+      "history": [
+        [
+          "1987",
+          "Chartered as a regional commercial bank."
+        ],
+        [
+          "2005",
+          "Expanded into syndicated committed funding."
+        ],
+        [
+          "2023",
+          "Placed every committed settlement under ledger-verified on-time evidence."
+        ]
+      ],
+      "leadership": [
+        [
+          "Ruth Calloway",
+          "Chief Executive",
+          "Two decades in commercial lending; built Northglen on settlement integrity."
+        ],
+        [
+          "Victor Hughes",
+          "Chief Treasury Officer",
+          "Owns the funding and correspondent network."
+        ]
+      ],
+      "products_services": [
+        "Committed working-capital funding tranches",
+        "Syndicated committed funding",
+        "Treasury and settlement operations"
+      ],
+      "testimonials": [
+        [
+          "Northglen's committed settlements are the ones our treasury calendar is built around.",
+          "Corporate treasurer"
+        ]
+      ],
+      "trust": [
+        [
+          "98.6% committed settlement on-time rate (2025)",
+          "Northglen settlement ledger"
+        ],
+        [
+          "Chartered bank; prudential oversight",
+          "state regulator"
+        ]
+      ],
+      "locations": "Regional HQ + branches across the state",
+      "faq": [
+        [
+          "How do you prove a settlement was on time?",
+          "Every committed tranche settles to a signed ledger event with a verified timestamp \u2014 auditable, not asserted."
+        ],
+        [
+          "Do you commit syndicated funding?",
+          "Yes, both bilateral and syndicated committed tranches run under the same evidence standard."
+        ]
+      ],
+      "contact": "treasury@northglen.example \u00b7 +1-505-555-0199",
+      "careers": "Back corporate plans with reliable funding: treasury, credit, settlement operations.",
+      "investors": "Public charter with regulated reporting; settlement reliability shared with regulators.",
+      "press": "media@northglen.example \u2014 lending, treasury, and community programs.",
+      "esg": "Responsible lending, financial-inclusion programs, branch-efficiency investments.",
+      "legal": [
+        "Privacy",
+        "Terms",
+        "Financial Privacy Notice",
+        "State Rights"
+      ],
+      "nav": [
+        "About",
+        "Lending",
+        "Treasury",
+        "Careers",
+        "Investors",
+        "Press",
+        "Community",
+        "Contact"
+      ],
+      "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+      "design": {
+        "palette": [
+          [
+            "Ledger Navy",
+            "#14314E"
+          ],
+          [
+            "Settlement Blue",
+            "#1B6CA8"
+          ],
+          [
+            "Vault Grey",
+            "#8A929B"
+          ],
+          [
+            "Trust White",
+            "#FAFBFC"
+          ]
+        ],
+        "typography": {
+          "heading": "Trusted serif (e.g. Source Serif 4)",
+          "body": "Open sans (e.g. Inter)"
+        },
+        "logo": {
+          "wordmark": "NORTHGLEN",
+          "character": "a chevron/vault-mark",
+          "usage": "clear space generous; navy+white primary, blue accent"
+        },
+        "imagery": "Calm and solid: banking halls, treasury operations, measured growth \u2014 trustworthy",
+        "tone": "Steady, precise, reassuring; speaks in commitments and verified settlements."
+      }
+    }
+  },
+  {
+    "uri": "org://fin/zephyr",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://fin/adamvale",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://fin/kaplen",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://fin/treasurer",
+    "type": "PERSON"
+  },
+  {
+    "uri": "agent://fin/treasury-ops",
+    "type": "AGENT"
+  },
+  {
+    "uri": "authority://fin/for-treasury",
+    "holder": "org://fin/northglen",
+    "grants": [
+      "triage_case",
+      "assign_case",
+      "close_case",
+      "approve_learning",
+      "rebalance_funding_allocation",
+      "gate_funder_performance",
+      "release_funding_tranche"
+    ],
+    "roles": [
+      "treasury"
+    ]
+  },
+  {
+    "uri": "rule://fin/treasury-ops-run",
+    "kind": "POLICY",
+    "text": "treasury ops worker may re-balance funding allocation and gate funder performance",
+    "grants": [
+      "rebalance_funding_allocation",
+      "gate_funder_performance"
+    ]
+  },
+  {
+    "uri": "rule://fin/match-run",
+    "kind": "POLICY",
+    "text": "S2 may run Trust-weighted funding matching for the client",
+    "grants": [
+      "run_funding_match"
+    ]
+  },
+  {
+    "uri": "delegation://fin/treasury-ops",
+    "grantor": "org://fin/northglen",
+    "grantee": "agent://fin/treasury-ops",
+    "scope": [
+      "rule://fin/treasury-ops-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://fin/s2-match",
+    "grantor": "org://fin/northglen",
+    "grantee": "agent://s2",
+    "scope": [
+      "rule://fin/match-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "offer://fin/o-adamvale",
+    "provider": "org://fin/adamvale",
+    "price": 1500000,
+    "currency": "USD",
+    "capability_keys": [
+      "syndication",
+      "funding"
+    ],
+    "fit_note": "correspondent syndicated funding line"
+  },
+  {
+    "uri": "offer://fin/o-kaplen",
+    "provider": "org://fin/kaplen",
+    "price": 1500000,
+    "currency": "USD",
+    "capability_keys": [
+      "syndication",
+      "funding"
+    ],
+    "fit_note": "correspondent syndicated funding line"
+  }
+]

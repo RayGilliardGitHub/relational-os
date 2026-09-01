@@ -1,0 +1,461 @@
+[
+  {
+    "uri": "person://qk/customer",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://qk/approver",
+    "type": "PERSON",
+    "identity": {
+      "attestations": [
+        "employee"
+      ]
+    }
+  },
+  {
+    "uri": "org://quoteko",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://qk/norcrete",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://qk/solarworks",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://qk/generalco",
+    "type": "ORG"
+  },
+  {
+    "uri": "agent://s1",
+    "type": "AGENT"
+  },
+  {
+    "uri": "agent://s2",
+    "type": "AGENT"
+  },
+  {
+    "uri": "entity://qk/canon-customer",
+    "canonical": "person://qk/customer",
+    "aliases": [
+      "qk-customer-8832",
+      "C. Rivera"
+    ],
+    "kind": "PERSON"
+  },
+  {
+    "uri": "consent://qk/match-data",
+    "granted_by": "person://qk/customer",
+    "granted_for": "match my quote request to vetted service offers",
+    "scope": [
+      "permission://qk/read-profile",
+      "permission://qk/present-offers"
+    ],
+    "duration": {
+      "effective": "2026-09-01T10:00:00Z",
+      "expires": "2027-09-01T00:00:00Z"
+    },
+    "revocable": true,
+    "status": "GRANTED"
+  },
+  {
+    "uri": "delegation://qk/s2-match",
+    "grantor": "org://quoteko",
+    "grantee": "agent://s2",
+    "scope": [
+      "rule://qk/s2-run-matching"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "authority://qk/for-matching",
+    "grants": [
+      "request_quote"
+    ],
+    "holder": "org://quoteko"
+  },
+  {
+    "uri": "rule://qk/tos",
+    "kind": "POLICY",
+    "text": "vetted contractors; human-accept required for committed hire"
+  },
+  {
+    "uri": "rule://qk/s2-run-matching",
+    "kind": "POLICY",
+    "text": "S2 agent may run capability-bound matching under Quoteko",
+    "grants": [
+      "run_matching"
+    ]
+  },
+  {
+    "uri": "offer://qk/o-norcrete",
+    "provider": "org://qk/norcrete",
+    "service": "flat-roof replacement & repair",
+    "capability_keys": [
+      "roofing",
+      "repair"
+    ],
+    "price": 12400,
+    "currency": "USD",
+    "terms": "fixed-price, 2yr warranty",
+    "status": "COMMITTED",
+    "matched_by": "agent://s2",
+    "verified_by": "person://qk/customer",
+    "verified_at": "2026-09-01T10:11:00Z"
+  },
+  {
+    "uri": "offer://qk/o-solarworks",
+    "provider": "org://qk/solarworks",
+    "service": "roof replacement + solar",
+    "capability_keys": [
+      "roofing",
+      "repair",
+      "solar"
+    ],
+    "price": 18900,
+    "currency": "USD",
+    "terms": "fixed-price, 5yr warranty",
+    "status": "AVAILABLE"
+  },
+  {
+    "uri": "offer://qk/o-generalco",
+    "provider": "org://qk/generalco",
+    "service": "roof patch",
+    "capability_keys": [
+      "roofing"
+    ],
+    "price": 9800,
+    "currency": "USD",
+    "terms": "time-and-materials",
+    "status": "AVAILABLE"
+  },
+  {
+    "uri": "agent://s3",
+    "type": "AGENT"
+  },
+  {
+    "uri": "agent://w-local",
+    "type": "AGENT"
+  },
+  {
+    "uri": "agent://w-cloud",
+    "type": "AGENT"
+  },
+  {
+    "uri": "agent://w-frontier",
+    "type": "AGENT"
+  },
+  {
+    "uri": "delegation://qk/s3-execute",
+    "grantor": "org://quoteko",
+    "grantee": "agent://s3",
+    "scope": [
+      "rule://qk/s3-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://qk/w-local",
+    "grantor": "org://quoteko",
+    "grantee": "agent://w-local",
+    "scope": [
+      "rule://qk/w-local-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://qk/w-cloud",
+    "grantor": "org://quoteko",
+    "grantee": "agent://w-cloud",
+    "scope": [
+      "rule://qk/w-cloud-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://qk/w-frontier",
+    "grantor": "org://quoteko",
+    "grantee": "agent://w-frontier",
+    "scope": [
+      "rule://qk/w-frontier-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "authority://qk/for-exec",
+    "grants": [
+      "release_final_payment",
+      "approve_final_payment"
+    ],
+    "holder": "org://quoteko"
+  },
+  {
+    "uri": "rule://qk/s3-run",
+    "kind": "POLICY",
+    "text": "S3 orchestrator may split + commit a matched job under Quoteko",
+    "grants": [
+      "orchestrate",
+      "split_work",
+      "commit_job"
+    ]
+  },
+  {
+    "uri": "rule://qk/w-local-run",
+    "kind": "POLICY",
+    "text": "local worker prepares work order + schedule (reversible)",
+    "grants": [
+      "prepare_work_order_and_schedule"
+    ]
+  },
+  {
+    "uri": "rule://qk/w-cloud-run",
+    "kind": "POLICY",
+    "text": "cloud worker dispatches + verifies materials (reversible)",
+    "grants": [
+      "dispatch_dispatcher_and_verify_materials"
+    ]
+  },
+  {
+    "uri": "rule://qk/w-frontier-run",
+    "kind": "POLICY",
+    "text": "frontier worker may release final payment ONLY after human acknowledgement",
+    "grants": [
+      "release_final_payment"
+    ]
+  },
+  {
+    "uri": "authority://qk/for-settlement",
+    "holder": "org://quoteko",
+    "grants": [
+      "settle",
+      "release_settlement"
+    ],
+    "roles": [
+      "settlement_service"
+    ]
+  },
+  {
+    "uri": "authority://qk/for-employment",
+    "holder": "org://quoteko",
+    "grants": [
+      "submit_timesheet",
+      "enroll_benefits",
+      "receive_payroll"
+    ],
+    "roles": [
+      "employee"
+    ]
+  },
+  {
+    "uri": "rule://qk/emp-actions",
+    "kind": "POLICY",
+    "text": "employee-role actions within Quoteko",
+    "grants": [
+      "submit_timesheet",
+      "enroll_benefits",
+      "receive_payroll"
+    ]
+  },
+  {
+    "uri": "consent://qk/employee-consent",
+    "granted_by": "person://qk/customer",
+    "granted_for": "employment & payroll rights with Quoteko as employer",
+    "scope": [
+      "rule://qk/emp-actions"
+    ],
+    "duration": {
+      "effective": "2026-09-01T00:00:00Z",
+      "expires": "2027-09-01T00:00:00Z"
+    },
+    "revocable": true,
+    "status": "GRANTED"
+  },
+  {
+    "uri": "offer://qk/o-payroll",
+    "provider": "org://quoteko",
+    "service": "payroll & benefits services to employees",
+    "capability_keys": [
+      "payroll"
+    ],
+    "price": 0,
+    "currency": "USD",
+    "terms": "employment service",
+    "status": "AVAILABLE"
+  },
+  {
+    "uri": "offer://qk/o-benefits",
+    "provider": "org://quoteko",
+    "service": "benefits administration",
+    "capability_keys": [
+      "benefits"
+    ],
+    "price": 0,
+    "currency": "USD",
+    "terms": "employment service",
+    "status": "AVAILABLE"
+  },
+  {
+    "uri": "agent://w-payroll",
+    "type": "AGENT"
+  },
+  {
+    "uri": "rule://qk/w-payroll-run",
+    "kind": "POLICY",
+    "text": "payroll worker may issue paystub & disburse (reversible)",
+    "grants": [
+      "issue_paystub_and_disburse"
+    ]
+  },
+  {
+    "uri": "delegation://qk/w-payroll",
+    "grantor": "org://quoteko",
+    "grantee": "agent://w-payroll",
+    "scope": [
+      "rule://qk/w-payroll-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "org://qk/sunsetshelter",
+    "type": "ORG"
+  },
+  {
+    "uri": "authority://qk/for-charity",
+    "holder": "org://quoteko",
+    "grants": [
+      "donate_install",
+      "release_charitable_grant"
+    ],
+    "roles": [
+      "donor",
+      "beneficiary"
+    ]
+  },
+  {
+    "uri": "consent://qk/charity-use",
+    "granted_by": "org://qk/sunsetshelter",
+    "granted_for": "receive the charitable solar installation and grant",
+    "scope": [],
+    "duration": {
+      "effective": "2026-09-01T00:00:00Z",
+      "expires": "2027-09-01T00:00:00Z"
+    },
+    "revocable": true,
+    "status": "GRANTED"
+  },
+  {
+    "uri": "offer://qk/o-shelter-solar",
+    "provider": "org://qk/sunsetshelter",
+    "service": "charitable solar installation at the shelter",
+    "capability_keys": [
+      "solar",
+      "install"
+    ],
+    "price": 0,
+    "currency": "USD",
+    "terms": "pro bono; purpose-constrained to the shelter mission",
+    "status": "AVAILABLE"
+  },
+  {
+    "uri": "agent://w-charity-install",
+    "type": "AGENT"
+  },
+  {
+    "uri": "agent://w-charity-dispatch",
+    "type": "AGENT"
+  },
+  {
+    "uri": "agent://w-charity-grant",
+    "type": "AGENT"
+  },
+  {
+    "uri": "rule://qk/w-charity-install-run",
+    "kind": "POLICY",
+    "text": "charity worker may prepare installation (reversible)",
+    "grants": [
+      "prepare_installation"
+    ]
+  },
+  {
+    "uri": "rule://qk/w-charity-dispatch-run",
+    "kind": "POLICY",
+    "text": "charity worker may dispatch the solar crew (reversible)",
+    "grants": [
+      "dispatch_solar_crew"
+    ]
+  },
+  {
+    "uri": "rule://qk/w-charity-grant-run",
+    "kind": "POLICY",
+    "text": "grant worker may release the charitable grant ONLY after human acknowledgement",
+    "grants": [
+      "release_charitable_grant"
+    ]
+  },
+  {
+    "uri": "delegation://qk/w-charity-install",
+    "grantor": "org://quoteko",
+    "grantee": "agent://w-charity-install",
+    "scope": [
+      "rule://qk/w-charity-install-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://qk/w-charity-dispatch",
+    "grantor": "org://quoteko",
+    "grantee": "agent://w-charity-dispatch",
+    "scope": [
+      "rule://qk/w-charity-dispatch-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://qk/w-charity-grant",
+    "grantor": "org://quoteko",
+    "grantee": "agent://w-charity-grant",
+    "scope": [
+      "rule://qk/w-charity-grant-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "authority://qk/for-operations",
+    "holder": "org://quoteko",
+    "grants": [
+      "triage_case",
+      "assign_case",
+      "close_case",
+      "approve_learning",
+      "rebalance_provider_allocation",
+      "gate_provider_performance"
+    ],
+    "roles": [
+      "operations"
+    ]
+  },
+  {
+    "uri": "agent://w-ops",
+    "type": "AGENT"
+  },
+  {
+    "uri": "rule://qk/w-ops-run",
+    "kind": "POLICY",
+    "text": "ops worker may re-balance provider allocation and gate performance",
+    "grants": [
+      "rebalance_provider_allocation",
+      "gate_provider_performance"
+    ]
+  },
+  {
+    "uri": "delegation://qk/w-ops",
+    "grantor": "org://quoteko",
+    "grantee": "agent://w-ops",
+    "scope": [
+      "rule://qk/w-ops-run"
+    ],
+    "status": "ACTIVE"
+  }
+]

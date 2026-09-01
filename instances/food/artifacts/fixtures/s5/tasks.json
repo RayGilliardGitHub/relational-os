@@ -1,0 +1,31 @@
+[
+  {
+    "uri": "task://food/t-rebalance",
+    "assigned_to": "agent://food/restock-ops",
+    "created_by": "agent://food/s5",
+    "objective": "re-balance restock allocation to the verified on-time distributor (crestline) and gate the laggard (harlow)",
+    "dependencies": [],
+    "authority": "authority://food/for-ops",
+    "deadline": "2026-10-15T00:00:00Z",
+    "priority": 0.695,
+    "status": "ASSIGNED",
+    "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+    "why_here": "derived from the on-time exception (case OPEN)",
+    "importance": "restores shelf on-time, protecting retailer scoped Trust",
+    "evidence": [
+      "evidence://food/committed-harlowQ3",
+      "evidence://food/committed-crestlineQ3",
+      "evidence://food/committed-harlowQ4"
+    ],
+    "decision_required": "approve the re-allocation",
+    "priority_factors": {
+      "impact": 0.85,
+      "urgency": 0.9,
+      "confidence": 0.7,
+      "irreversibility": false,
+      "relationship_importance": 0.8,
+      "cost_of_delay": 0.75
+    },
+    "assigned_capacity": 1.0
+  }
+]

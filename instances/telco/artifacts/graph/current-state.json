@@ -1,0 +1,1247 @@
+{
+  "kind": "GRAPH",
+  "objects": [
+    {
+      "uri": "org://telco/nimbuscom",
+      "type": "ORG",
+      "identity": {
+        "attestations": [
+          "business-license"
+        ]
+      },
+      "brand": {
+        "tagline": "Coverage where you need it, on schedule.",
+        "mission": "Deliver committed cell-site buildouts reliably and on time so metropolitan communities and subscribers get the coverage they were promised, when they were promised it.",
+        "vision": "A connected city where 'we're building coverage' means the tower is coming up on the scheduled date.",
+        "values": [
+          [
+            "Coverage is a promise",
+            "A site on time means a neighbourhood connected on time."
+          ],
+          [
+            "Build it right",
+            "Speed never trades away a safe, code-compliant handover."
+          ],
+          [
+            "Evidence in hand",
+            "We verify every energized site against the ledger."
+          ],
+          [
+            "Subscriber trust",
+            "People count on us to make the signal real; we protect that."
+          ],
+          [
+            "Metro partnership",
+            "We build with the community, not around it."
+          ]
+        ],
+        "about": "NimbusCom is a telecom operator that builds and lights up cellular coverage. We take committed cell-site buildouts and energize them on schedule \u2014 verified, code-compliant, ready to carry traffic. Between the promise on a coverage map and the bars on a subscriber's phone, there is a site that has to come up on the date; that handover is the work we are built for.",
+        "fast_facts": [
+          "Founded 2003, mobile network operator",
+          "2,100+ cell sites lit",
+          "Metropolitan coverage across 3 metro regions"
+        ],
+        "history": [
+          [
+            "2003",
+            "Founded rolling out metro coverage."
+          ],
+          [
+            "2011",
+            "Accelerated the cell-site buildout business."
+          ],
+          [
+            "2022",
+            "Verifying every energized handover against the ledger."
+          ]
+        ],
+        "leadership": [
+          [
+            "CEO \u2014 Lena Park",
+            "Chief Executive",
+            "Ran network engineering for years before leading NimbusCom."
+          ],
+          [
+            "Tanaji Rao",
+            "Chief Network Officer",
+            "Owns buildout schedule and handover integrity."
+          ]
+        ],
+        "products_services": [
+          "Mobile network operation",
+          "Cell-site buildout and erection",
+          "Coverage expansion and modernization"
+        ],
+        "testimonials": [
+          [
+            "NimbusCom lit the site on the exact date they committed. Our coverage story changed that day.",
+            "Metro community liaison"
+          ]
+        ],
+        "trust": [
+          [
+            "98.8% committed cell-site on-time rate (2025)",
+            "NimbusCom buildout ledger"
+          ],
+          [
+            "FCC-compliant, code-certified site handovers",
+            "independent inspection"
+          ]
+        ],
+        "locations": "Metro HQ across 3 regions; build teams dispatched per site programme",
+        "faq": [
+          [
+            "What counts as 'on time' for a site?",
+            "The committed energization date, verified by a signed ledger event at handover \u2014 measured, not promised."
+          ],
+          [
+            "Do you handle permits and community outreach?",
+            "Yes, buildout includes permitting, outreach, and code handover, all on a schedule."
+          ]
+        ],
+        "contact": "coverage@nimbuscom.example \u00b7 +1-512-555-0110",
+        "careers": "Light up whole neighbourhoods: site engineering, buildout ops, network, field coordination.",
+        "investors": "Privately held. Coverage and buildout reliability shared on request.",
+        "press": "news@nimbuscom.example \u2014 new sites and coverage announcements.",
+        "esg": "Carbon-aware build scheduling, site-power efficiency, community digital-inclusion grants.",
+        "legal": [
+          "Privacy",
+          "Terms",
+          "California Rights",
+          "Do Not Sell or Share",
+          "Health & Safety"
+        ],
+        "nav": [
+          "About",
+          "Coverage",
+          "Buildout",
+          "Community",
+          "Careers",
+          "Investors",
+          "Press",
+          "Contact"
+        ],
+        "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+        "design": {
+          "palette": [
+            [
+              "Signal Purple",
+              "#5A2F8A"
+            ],
+            [
+              "Lumen Blue",
+              "#1E7BD8"
+            ],
+            [
+              "Dark Sky",
+              "#101A2E"
+            ],
+            [
+              "Zing Yellow",
+              "#F5B700"
+            ]
+          ],
+          "typography": {
+            "heading": "Modern geometric sans (e.g. Nunito Sans)",
+            "body": "Open sans (e.g. Roboto)"
+          },
+          "logo": {
+            "wordmark": "nimbuscom",
+            "character": "a tower/signal-wave mark",
+            "usage": "clear space fixed; purple+blue standard, yellow for energy accents"
+          },
+          "imagery": "City skylines, towers on the skyline, energized coverage maps \u2014 bright and forward",
+          "tone": "Energised, clear, reassuring; speaks in coverage and connection."
+        }
+      }
+    },
+    {
+      "uri": "org://telco/fairfield-metro",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://telco/meridian-tower",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://telco/nimbus-networks",
+      "type": "ORG"
+    },
+    {
+      "uri": "person://telco/cno",
+      "type": "PERSON"
+    },
+    {
+      "uri": "agent://telco/build-ops",
+      "type": "AGENT"
+    },
+    {
+      "uri": "relationship://telco/ops-rel",
+      "participants": [
+        "org://telco/nimbuscom",
+        "org://telco/fairfield-metro"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://telco/nimbuscom": [
+          "provider"
+        ],
+        "org://telco/fairfield-metro": [
+          "client"
+        ]
+      },
+      "authority": [
+        "authority://telco/for-ops"
+      ],
+      "purpose": "telecom operating relationship"
+    },
+    {
+      "uri": "relationship://telco/partner-net",
+      "participants": [
+        "org://telco/nimbuscom",
+        "org://telco/meridian-tower",
+        "org://telco/nimbus-networks"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://telco/nimbuscom": [
+          "operator"
+        ],
+        "org://telco/meridian-tower": [
+          "partner"
+        ],
+        "org://telco/nimbus-networks": [
+          "partner"
+        ]
+      },
+      "authority": [
+        "authority://telco/for-ops"
+      ],
+      "purpose": "telecom partner network"
+    },
+    {
+      "uri": "authority://telco/for-ops",
+      "holder": "org://telco/nimbuscom",
+      "grants": [
+        "triage_case",
+        "assign_case",
+        "close_case",
+        "approve_learning",
+        "rebalance_commitment",
+        "gate_partner",
+        "release_committed_action"
+      ],
+      "roles": [
+        "operator"
+      ]
+    },
+    {
+      "uri": "rule://telco/ops-run",
+      "kind": "POLICY",
+      "text": "agent://telco/build-ops may re-balance resource commitment and gate partner performance",
+      "grants": [
+        "rebalance_commitment",
+        "gate_partner"
+      ]
+    },
+    {
+      "uri": "rule://telco/match-run",
+      "kind": "POLICY",
+      "text": "S2 may run Trust-weighted matching for the client",
+      "grants": [
+        "run_match"
+      ]
+    },
+    {
+      "uri": "delegation://telco/ops",
+      "grantor": "org://telco/nimbuscom",
+      "grantee": "agent://telco/build-ops",
+      "scope": [
+        "rule://telco/ops-run"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "uri": "delegation://telco/s2-match",
+      "grantor": "org://telco/nimbuscom",
+      "grantee": "agent://s2",
+      "scope": [
+        "rule://telco/match-run"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "uri": "expectation://telco/e-on-time",
+      "actor": "person://telco/cno",
+      "subject": "cell-site buildout",
+      "condition": "fully deliver the committed cell-site buildout by its committed deadline",
+      "metric": "on_time",
+      "threshold": 0.95,
+      "deadline": "2026-12-31T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "policy://telco/allocation",
+      "name": "telco allocation",
+      "condition": "a new committed delivery is to be allocated",
+      "decision": "ALLOCATE by fit AND scoped Trust; contractors below the Trust floor need a gate before new buildouts. (learned 2026-09-01)",
+      "action": "allocate to the top-ranked fitted partner; gate laggard",
+      "scope": [
+        "expectation://telco/e-on-time"
+      ],
+      "version": 3,
+      "policy_status": "EFFECTIVE",
+      "learning": "decision://telco/learning"
+    },
+    {
+      "uri": "process://telco/pr-core",
+      "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+      "steps": [
+        "triage",
+        "assign",
+        "execute",
+        "verify_outcome",
+        "learning"
+      ]
+    },
+    {
+      "uri": "process_instance://telco/pi-core",
+      "process": "process://telco/pr-core",
+      "status": "RUNNING",
+      "started_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "trust://telco/t-meridian-tower",
+      "subject": "org://telco/nimbuscom",
+      "target": "org://telco/meridian-tower",
+      "claim": "cell-site buildout reliability",
+      "context": "relationship://telco/partner-net",
+      "score": 0.79,
+      "updated_at": "2026-09-01T00:29:53Z",
+      "expected": 0.8,
+      "outcome": 1.0,
+      "evidence": [
+        "evidence://telco/routed-meridian-towerR"
+      ],
+      "alpha": 0.5,
+      "recency": 1.0
+    },
+    {
+      "uri": "trust://telco/t-nimbus-networks",
+      "subject": "org://telco/nimbuscom",
+      "target": "org://telco/nimbus-networks",
+      "claim": "cell-site buildout reliability",
+      "context": "relationship://telco/partner-net",
+      "score": 0.14,
+      "updated_at": "2026-09-01T00:29:53Z",
+      "expected": 0.8,
+      "outcome": 0.0,
+      "evidence": [
+        "evidence://telco/committed-nimbus-networksQ4"
+      ],
+      "alpha": 0.5,
+      "recency": 1.0
+    },
+    {
+      "uri": "offer://telco/o-g",
+      "provider": "org://telco/meridian-tower",
+      "price": 2000000.0,
+      "currency": "USD",
+      "capability_keys": [
+        "buildout",
+        "erection"
+      ],
+      "fit_note": "telecom partner delivery line"
+    },
+    {
+      "uri": "offer://telco/o-l",
+      "provider": "org://telco/nimbus-networks",
+      "price": 2000000.0,
+      "currency": "USD",
+      "capability_keys": [
+        "buildout",
+        "erection"
+      ],
+      "fit_note": "telecom partner delivery line"
+    },
+    {
+      "uri": "decision://telco/s2-match-baseline",
+      "by": "agent://s2",
+      "authority": "delegation://telco/s2-match",
+      "alternatives": [
+        "offer://telco/o-l",
+        "offer://telco/o-g",
+        "none"
+      ],
+      "confidence": 0.9,
+      "expected_outcome": "lag partner ranked #1 on existing Trust",
+      "actual_outcome": "offer://telco/o-l",
+      "detail": [
+        {
+          "offer": "offer://telco/o-l",
+          "provider": "org://telco/nimbus-networks",
+          "fit": 1.0,
+          "trust": 0.9,
+          "score": 0.9
+        },
+        {
+          "offer": "offer://telco/o-g",
+          "provider": "org://telco/meridian-tower",
+          "fit": 1.0,
+          "trust": 0.6,
+          "score": 0.6
+        }
+      ],
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "asset://money/telco-escrow-nimbus-networksQ3",
+      "kind": "MONEY",
+      "title": "org://telco/nimbus-networks",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://telco/nimbuscom for org://telco/nimbus-networks (nimbus-networksQ3)"
+    },
+    {
+      "uri": "obligation://telco/s4-pay-nimbus-networksQ3",
+      "subject": "org://telco/nimbuscom",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://telco/nimbus-networks",
+      "due_by": "2026-08-31T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-09-02T00:00:00Z"
+    },
+    {
+      "uri": "receipt://telco/s4-receipt-nimbus-networksQ3",
+      "kind": "SETTLEMENT",
+      "from": "org://telco/nimbuscom",
+      "to": "org://telco/nimbus-networks",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-09-02T00:00:00Z"
+    },
+    {
+      "uri": "decision://telco/s4-recon-nimbus-networksQ3",
+      "by": "agent://s4",
+      "authority": "authority://telco/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://telco/nimbuscom",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "nimbus-networksQ3",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://telco/nimbuscom",
+        "provider": "org://telco/nimbus-networks",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://telco/s4-exchange-nimbus-networksQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-105",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-104",
+      "idempotency_key": "idem-s4-105",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange nimbus-networksQ3: 2000000.0 USD org://telco/nimbuscom->org://telco/nimbus-networks (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://telco/nimbuscom",
+      "provider": "org://telco/nimbus-networks",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "exchange_of": "commitment://telco/c-nimbus-networksQ3"
+    },
+    {
+      "uri": "event://telco/s4-outcome-nimbus-networksQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-106",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-105",
+      "idempotency_key": "idem-s4-106",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle nimbus-networksQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+      "state_update": [],
+      "evaluation": "partial",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "score": 0.5
+    },
+    {
+      "uri": "event://telco/outcome-committed-nimbus-networksQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-107",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-106",
+      "idempotency_key": "idem-s2-107",
+      "signature": "signed-by-org://telco/nimbus-networks",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://telco/nimbus-networks",
+      "detail": "job committed-nimbus-networksQ3 by org://telco/nimbus-networks: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+      "state_update": [],
+      "job": "committed-nimbus-networksQ3",
+      "provider": "org://telco/nimbus-networks",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-09-02T00:00:00Z",
+      "on_time": false
+    },
+    {
+      "uri": "evidence://telco/committed-nimbus-networksQ3",
+      "kind": "ANCHORED",
+      "source": "signed committed-cell-site buildout record + telco anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://telco/committed-nimbus-networksQ3",
+      "proposer": "agent://s5",
+      "statement": "org://telco/nimbus-networks delivered the committed resource LATE"
+    },
+    {
+      "uri": "asset://money/telco-escrow-meridian-towerQ3",
+      "kind": "MONEY",
+      "title": "org://telco/meridian-tower",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://telco/nimbuscom for org://telco/meridian-tower (meridian-towerQ3)"
+    },
+    {
+      "uri": "obligation://telco/s4-pay-meridian-towerQ3",
+      "subject": "org://telco/nimbuscom",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://telco/meridian-tower",
+      "due_by": "2026-08-31T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-08-30T00:00:00Z"
+    },
+    {
+      "uri": "receipt://telco/s4-receipt-meridian-towerQ3",
+      "kind": "SETTLEMENT",
+      "from": "org://telco/nimbuscom",
+      "to": "org://telco/meridian-tower",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-08-30T00:00:00Z"
+    },
+    {
+      "uri": "decision://telco/s4-recon-meridian-towerQ3",
+      "by": "agent://s4",
+      "authority": "authority://telco/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://telco/nimbuscom",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "meridian-towerQ3",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://telco/nimbuscom",
+        "provider": "org://telco/meridian-tower",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://telco/s4-exchange-meridian-towerQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-110",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-109",
+      "idempotency_key": "idem-s4-110",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange meridian-towerQ3: 2000000.0 USD org://telco/nimbuscom->org://telco/meridian-tower (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://telco/nimbuscom",
+      "provider": "org://telco/meridian-tower",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "exchange_of": "commitment://telco/c-meridian-towerQ3"
+    },
+    {
+      "uri": "event://telco/s4-outcome-meridian-towerQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-111",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-110",
+      "idempotency_key": "idem-s4-111",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle meridian-towerQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+      "state_update": [],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "score": 1.0
+    },
+    {
+      "uri": "event://telco/outcome-committed-meridian-towerQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-112",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-111",
+      "idempotency_key": "idem-s2-112",
+      "signature": "signed-by-org://telco/meridian-tower",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://telco/meridian-tower",
+      "detail": "job committed-meridian-towerQ3 by org://telco/meridian-tower: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+      "state_update": [],
+      "job": "committed-meridian-towerQ3",
+      "provider": "org://telco/meridian-tower",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-08-30T00:00:00Z",
+      "on_time": true
+    },
+    {
+      "uri": "evidence://telco/committed-meridian-towerQ3",
+      "kind": "ANCHORED",
+      "source": "signed committed-cell-site buildout record + telco anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://telco/committed-meridian-towerQ3",
+      "proposer": "agent://s5",
+      "statement": "org://telco/meridian-tower delivered the committed resource on time"
+    },
+    {
+      "uri": "asset://money/telco-escrow-nimbus-networksQ4",
+      "kind": "MONEY",
+      "title": "org://telco/nimbus-networks",
+      "custody": "cleared",
+      "value": 1600000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://telco/nimbuscom for org://telco/nimbus-networks (nimbus-networksQ4)"
+    },
+    {
+      "uri": "obligation://telco/s4-pay-nimbus-networksQ4",
+      "subject": "org://telco/nimbuscom",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 1600000.0 USD for contracted work by org://telco/nimbus-networks",
+      "due_by": "2026-09-15T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-09-17T00:00:00Z"
+    },
+    {
+      "uri": "receipt://telco/s4-receipt-nimbus-networksQ4",
+      "kind": "SETTLEMENT",
+      "from": "org://telco/nimbuscom",
+      "to": "org://telco/nimbus-networks",
+      "amount": 1600000.0,
+      "currency": "USD",
+      "received_at": "2026-09-17T00:00:00Z"
+    },
+    {
+      "uri": "decision://telco/s4-recon-nimbus-networksQ4",
+      "by": "agent://s4",
+      "authority": "authority://telco/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 1600000.0 USD from org://telco/nimbuscom",
+      "actual_outcome": "matched exactly: settled 1600000.0 USD",
+      "detail": {
+        "slug": "nimbus-networksQ4",
+        "expected": 1600000.0,
+        "actual": 1600000.0,
+        "matched": true,
+        "buyer": "org://telco/nimbuscom",
+        "provider": "org://telco/nimbus-networks",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://telco/s4-exchange-nimbus-networksQ4",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-115",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-114",
+      "idempotency_key": "idem-s4-115",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange nimbus-networksQ4: 1600000.0 USD org://telco/nimbuscom->org://telco/nimbus-networks (value 1600000.0, cost 1600000.0)",
+      "state_update": [],
+      "value": 1600000.0,
+      "cost": 1600000.0,
+      "price": 1600000.0,
+      "currency": "USD",
+      "buyer": "org://telco/nimbuscom",
+      "provider": "org://telco/nimbus-networks",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "exchange_of": "commitment://telco/c-nimbus-networksQ4"
+    },
+    {
+      "uri": "event://telco/s4-outcome-nimbus-networksQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-116",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-115",
+      "idempotency_key": "idem-s4-116",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle nimbus-networksQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+      "state_update": [],
+      "evaluation": "partial",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "deadline": "2026-09-15T00:00:00Z",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "score": 0.5
+    },
+    {
+      "uri": "event://telco/outcome-committed-nimbus-networksQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-117",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-116",
+      "idempotency_key": "idem-s2-117",
+      "signature": "signed-by-org://telco/nimbus-networks",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://telco/nimbus-networks",
+      "detail": "job committed-nimbus-networksQ4 by org://telco/nimbus-networks: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+      "state_update": [],
+      "job": "committed-nimbus-networksQ4",
+      "provider": "org://telco/nimbus-networks",
+      "committed_deadline": "2026-09-15T00:00:00Z",
+      "actual_completed_at": "2026-09-17T00:00:00Z",
+      "on_time": false
+    },
+    {
+      "uri": "evidence://telco/committed-nimbus-networksQ4",
+      "kind": "ANCHORED",
+      "source": "signed committed-cell-site buildout record + telco anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://telco/committed-nimbus-networksQ4",
+      "proposer": "agent://s5",
+      "statement": "org://telco/nimbus-networks delivered the committed resource LATE"
+    },
+    {
+      "uri": "case://telco/c-on-time",
+      "subject": "committed cell-site buildout below target on time",
+      "status": "CLOSED",
+      "owner": "person://telco/cno",
+      "actors": [
+        "org://telco/nimbuscom",
+        "person://telco/cno",
+        "agent://telco/build-ops"
+      ],
+      "relationships": [
+        "relationship://telco/ops-rel"
+      ],
+      "created_at": "2026-09-01T00:29:53Z",
+      "history": [
+        {
+          "status": "OPEN",
+          "at": "2026-09-01T00:29:53Z",
+          "event": null
+        },
+        {
+          "status": "TRIAGE",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://telco/s5-case-triage"
+        },
+        {
+          "status": "ASSIGNED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://telco/s5-case-assigned"
+        },
+        {
+          "status": "IN_PROGRESS",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://telco/s5-case-inprogress"
+        },
+        {
+          "status": "BLOCKED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://telco/s5-case-blocked"
+        },
+        {
+          "status": "RESOLVED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://telco/s5-case-resolved"
+        },
+        {
+          "status": "CLOSED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://telco/s5-case-closed"
+        }
+      ],
+      "suggestion": "ledger-projected on-time below target",
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "exception": "Committed cell-site buildout on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+      "root_cause": "construction failure \u2014 org://telco/nimbus-networks missed its committed cell-site buildout by 2 days; scoped Trust fell 0.90->0.51",
+      "root_cause_status": "SUPPORTED",
+      "recommended_action": "Re-allocate committed cell-site buildout to the verified on-time contractor (meridian-tower) and gate the laggard (nimbus-networks)",
+      "metric": "metric://telco/m-on-time",
+      "verified_outcome": "forward on-time restored to 1.0; org://telco/meridian-tower delivered the rallied cell-site buildout on time (evidence://telco/routed-meridian-towerR); org://telco/meridian-tower Trust 0.79"
+    },
+    {
+      "uri": "decision://telco/s5-triage",
+      "by": "agent://telco/s5",
+      "authority": "authority://telco/for-ops",
+      "alternatives": [
+        "accept",
+        "dismiss as anomaly"
+      ],
+      "confidence": 0.85,
+      "expected_outcome": "accept as a real risk",
+      "actual_outcome": "accepted; root nominated",
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "task://telco/t-rebalance",
+      "assigned_to": "agent://telco/build-ops",
+      "created_by": "agent://telco/s5",
+      "objective": "re-balance cell-site buildout to the verified on-time contractor (meridian-tower) and gate the laggard (nimbus-networks)",
+      "dependencies": [],
+      "authority": "authority://telco/for-ops",
+      "deadline": "2026-10-15T00:00:00Z",
+      "priority": 0.695,
+      "status": "ASSIGNED",
+      "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+      "why_here": "derived from the on-time exception (case OPEN)",
+      "importance": "restores coverage-on-time, protecting subscriber scoped Trust",
+      "evidence": [
+        "evidence://telco/committed-nimbus-networksQ3",
+        "evidence://telco/committed-meridian-towerQ3",
+        "evidence://telco/committed-nimbus-networksQ4"
+      ],
+      "decision_required": "approve the re-allocation",
+      "priority_factors": {
+        "impact": 0.85,
+        "urgency": 0.9,
+        "confidence": 0.7,
+        "irreversibility": false,
+        "relationship_importance": 0.8,
+        "cost_of_delay": 0.75
+      },
+      "assigned_capacity": 1.0
+    },
+    {
+      "uri": "decision://telco/s5-assign",
+      "by": "person://telco/cno",
+      "authority": "authority://telco/for-ops",
+      "alternatives": [
+        "assign",
+        "defer"
+      ],
+      "confidence": 0.95,
+      "expected_outcome": "task in progress",
+      "detail": {
+        "task": "task://telco/t-rebalance",
+        "assigned_to": "agent://telco/build-ops",
+        "authority": "authority://telco/for-ops",
+        "priority": 0.695,
+        "capacity": 1.0
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "decision://telco/s5-match-recorded",
+      "by": "agent://s2",
+      "authority": "delegation://telco/s2-match",
+      "alternatives": [
+        "offer://telco/o-g",
+        "none"
+      ],
+      "confidence": 0.92,
+      "expected_outcome": "good partner ranked #1",
+      "actual_outcome": "offer://telco/o-g",
+      "detail": [
+        {
+          "offer": "offer://telco/o-g",
+          "provider": "org://telco/meridian-tower",
+          "fit": 1.0,
+          "trust": 0.695,
+          "score": 0.695
+        }
+      ],
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "escalation://telco/escalate-release",
+      "trigger": "external site handover \u2014 irreversible and cost-unknowable once energized",
+      "severity": "WARN",
+      "recipient": "person://telco/cno",
+      "deadline": "2026-11-15T00:00:00Z",
+      "fallback": "agent://telco/s4",
+      "authority": "authority://telco/for-ops",
+      "acknowledgement": "approve then execute"
+    },
+    {
+      "uri": "decision://telco/owner-human",
+      "by": "person://telco/cno",
+      "authority": "authority://telco/for-ops",
+      "alternatives": [
+        "release_in_full",
+        "hold",
+        "release_partial_and_hold_if_shortfall",
+        "open_dispute"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "release to the verified partner",
+      "actual_outcome": "release_in_full (human approved)",
+      "detail": {
+        "task": "task://telco/t-rebalance",
+        "action": "release_committed_action",
+        "irreversible_failure": true,
+        "cost_failure_unknowable": true
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "commitment://telco/c-meridian-tower-followup",
+      "by": "agent://telco/s5",
+      "to": "org://telco/meridian-tower",
+      "obligation": "offer://telco/o-g",
+      "expectation": "expectation://telco/e-routed-meridian-towerR",
+      "status": "AGREED",
+      "terms": {
+        "kind": "cell-site buildout follow-up",
+        "signed": true
+      },
+      "agreed_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "expectation://telco/e-meridian-towerR",
+      "actor": "person://telco/cno",
+      "subject": "cell-site buildout",
+      "condition": "fully deliver the committed resource by its committed deadline",
+      "metric": "settled_value",
+      "threshold": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "asset://money/telco-escrow-meridian-towerR",
+      "kind": "MONEY",
+      "title": "org://telco/meridian-tower",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://telco/nimbuscom for org://telco/meridian-tower (meridian-towerR)"
+    },
+    {
+      "uri": "obligation://telco/s4-pay-meridian-towerR",
+      "subject": "org://telco/nimbuscom",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://telco/meridian-tower",
+      "due_by": "2026-11-15T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-11-12T00:00:00Z"
+    },
+    {
+      "uri": "receipt://telco/s4-receipt-meridian-towerR",
+      "kind": "SETTLEMENT",
+      "from": "org://telco/nimbuscom",
+      "to": "org://telco/meridian-tower",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-11-12T00:00:00Z"
+    },
+    {
+      "uri": "decision://telco/s4-recon-meridian-towerR",
+      "by": "agent://s4",
+      "authority": "authority://telco/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://telco/nimbuscom",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "meridian-towerR",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://telco/nimbuscom",
+        "provider": "org://telco/meridian-tower",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://telco/s4-exchange-meridian-towerR",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-7015",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7014",
+      "idempotency_key": "idem-s4-7015",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange meridian-towerR: 2000000.0 USD org://telco/nimbuscom->org://telco/meridian-tower (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://telco/nimbuscom",
+      "provider": "org://telco/meridian-tower",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "exchange_of": "commitment://telco/c-meridian-towerR"
+    },
+    {
+      "uri": "event://telco/s4-outcome-meridian-towerR",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-7016",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7015",
+      "idempotency_key": "idem-s4-7016",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle meridian-towerR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+      "state_update": [],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "score": 1.0
+    },
+    {
+      "uri": "event://telco/outcome-routed-meridian-towerR",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-7017",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7016",
+      "idempotency_key": "idem-s2-7017",
+      "signature": "signed-by-org://telco/meridian-tower",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://telco/meridian-tower",
+      "detail": "job routed-meridian-towerR by org://telco/meridian-tower: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+      "state_update": [],
+      "job": "routed-meridian-towerR",
+      "provider": "org://telco/meridian-tower",
+      "committed_deadline": "2026-11-15T00:00:00Z",
+      "actual_completed_at": "2026-11-12T00:00:00Z",
+      "on_time": true
+    },
+    {
+      "uri": "evidence://telco/routed-meridian-towerR",
+      "kind": "ANCHORED",
+      "source": "signed committed-cell-site buildout record + telco anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://telco/routed-meridian-towerR",
+      "proposer": "agent://s5",
+      "statement": "org://telco/meridian-tower delivered the rallied committed cell-site buildout on time"
+    },
+    {
+      "uri": "decision://telco/learning",
+      "by": "agent://telco/s5",
+      "authority": "authority://telco/for-operations",
+      "subject": "cell-site buildout on-time management",
+      "expected": 0.95,
+      "actual": 1.0,
+      "variance": 0.05,
+      "why": "Routing buildout via a contractor with verified on-time delivery (meridian-tower), while gating the laggard (nimbus-networks), restored on-time buildout. Verified good handovers compound scoped Trust.",
+      "change_future_policy": "ALLOCATE by fit AND scoped Trust; contractors below the Trust floor need a gate before new buildouts.",
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "goal://telco/g-core",
+      "for": "org://telco/nimbuscom",
+      "statement": "Consistently deliver committed cell-site buildouts on time so metro subscribers keep trusting NimbusCom coverage.",
+      "horizon": "quarter",
+      "owner": "person://telco/cno",
+      "metrics": [
+        "metric://telco/m-on-time",
+        "metric://telco/m-trust",
+        "metric://telco/m-settled-value"
+      ]
+    },
+    {
+      "uri": "metric://telco/m-on-time",
+      "name": "Committed-cell-site buildout on-time rate",
+      "definition": "share of committed cell-site buildout deliveries verified on time",
+      "unit": "fraction",
+      "formula": "on_time / (on_time + late) from ledger",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 0.95,
+      "threshold": 0.8,
+      "period": "quarter",
+      "source": "ledger committed-delivery records",
+      "owner": "person://telco/cno",
+      "actual": 0.5,
+      "forecast": 0.5,
+      "variance": -0.45,
+      "root_cause": "construction failure \u2014 org://telco/nimbus-networks missed its committed cell-site buildout by 2 days; scoped Trust fell 0.90->0.51",
+      "root_cause_status": "SUPPORTED"
+    },
+    {
+      "uri": "metric://telco/m-trust",
+      "name": "Partner scoped-trust score",
+      "definition": "best scoped Trust on the partner network (per \u00a75)",
+      "unit": "score",
+      "formula": "T(subject->target, claim, context) per \u00a75",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 0.9,
+      "threshold": 0.6,
+      "period": "rolling",
+      "source": "S5 scoped Trust graph",
+      "owner": "person://telco/cno",
+      "actual": 0.79,
+      "forecast": 0.92,
+      "variance": -0.11,
+      "root_cause_status": "UNKNOWN"
+    },
+    {
+      "uri": "metric://telco/m-settled-value",
+      "name": "Settled committed value",
+      "definition": "value of EXCHANGE events settled this period",
+      "unit": "USD",
+      "formula": "sum(EXCHANGE.price) from ledger",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 7600000.0,
+      "threshold": 4180000.0000000005,
+      "period": "quarter",
+      "source": "ledger EXCHANGE events",
+      "owner": "person://telco/cno",
+      "actual": 7600000.0,
+      "forecast": 8740000.0,
+      "variance": 0.0,
+      "root_cause_status": "UNKNOWN"
+    },
+    {
+      "uri": "decision://telco/s5-metric-loop",
+      "by": "agent://telco/s5",
+      "authority": "authority://telco/for-operations",
+      "alternatives": [
+        "do nothing",
+        "rebalance provider allocation"
+      ],
+      "confidence": 0.85,
+      "expected_outcome": "metric://telco/m-on-time variance reduced toward target",
+      "detail": {
+        "goal": "goal://telco/g-core",
+        "metric": "metric://telco/m-on-time",
+        "actual": 0.5,
+        "variance": -0.45,
+        "action": "task://telco/t-rebalance",
+        "outcome": "event://telco/outcome-routed-meridian-towerR"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "decision://telco/s5-attention",
+      "by": "agent://telco/s5",
+      "authority": "authority://telco/for-ops",
+      "confidence": 0.9,
+      "expected_outcome": "top-of-attention ranked",
+      "actual_outcome": "attention prioritized by derived score",
+      "detail": {
+        "attention": [
+          {
+            "uri": "task://telco/t-rebalance",
+            "label": "re-balance committed work",
+            "priority": 0.695
+          },
+          {
+            "uri": "task://telco/t-followup",
+            "label": "rallied follow-on (good partner)",
+            "priority": 0.58
+          }
+        ]
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "dependency://telco/d-rb-enables-fu",
+      "from": "task://telco/t-rebalance",
+      "to": "task://telco/t-followup",
+      "kind": "ENABLES"
+    },
+    {
+      "uri": "dependency://telco/d-fu-requires-pol",
+      "from": "task://telco/t-followup",
+      "to": "policy://telco/allocation",
+      "kind": "REQUIRES"
+    },
+    {
+      "uri": "dependency://telco/d-fu-blocks-case",
+      "from": "task://telco/t-followup",
+      "to": "case://telco/c-on-time",
+      "kind": "BLOCKS"
+    },
+    {
+      "uri": "dependency://telco/d-case-from-metric",
+      "from": "case://telco/c-on-time",
+      "to": "metric://telco/m-on-time",
+      "kind": "DERIVED_FROM"
+    },
+    {
+      "uri": "dependency://telco/d-metric-impacts-goal",
+      "from": "metric://telco/m-on-time",
+      "to": "goal://telco/g-core",
+      "kind": "IMPACTS"
+    },
+    {
+      "uri": "dependency://telco/d-rb-blocks-case",
+      "from": "task://telco/t-rebalance",
+      "to": "case://telco/c-on-time",
+      "kind": "BLOCKS"
+    }
+  ]
+}

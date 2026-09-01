@@ -1,0 +1,230 @@
+{
+  "cockpit": {
+    "company": "Maplehurst Foods (Food / Bev / Consumer, fictional)",
+    "generated": "2026-09-01T00:29:53Z",
+    "health": [
+      {
+        "metric": "metric://food/m-on-time",
+        "name": "Committed-retail restock shipment on-time rate",
+        "unit": "fraction",
+        "target": 0.95,
+        "actual": 0.5,
+        "variance": -0.45,
+        "status": "CRITICAL",
+        "forecast": 0.5
+      },
+      {
+        "metric": "metric://food/m-trust",
+        "name": "Partner scoped-trust score",
+        "unit": "score",
+        "target": 0.9,
+        "actual": 0.79,
+        "variance": -0.11,
+        "status": "CRITICAL",
+        "forecast": 0.92
+      },
+      {
+        "metric": "metric://food/m-settled-value",
+        "name": "Settled committed value",
+        "unit": "USD",
+        "target": 7600000.0,
+        "actual": 7600000.0,
+        "variance": 0.0,
+        "status": "OK",
+        "forecast": 8740000.0
+      }
+    ],
+    "attention_line": "2 things requiring attention today",
+    "attention": [
+      {
+        "uri": "task://food/t-rebalance",
+        "label": "re-balance committed work",
+        "priority": 0.695
+      },
+      {
+        "uri": "task://food/t-followup",
+        "label": "rallied follow-on (good partner)",
+        "priority": 0.58
+      }
+    ],
+    "exception": {
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "on": 1,
+      "total": 3
+    },
+    "case": "case://food/c-on-time",
+    "case_status": "CLOSED",
+    "recommendation": {
+      "summary": "task://food/t-rebalance",
+      "authority_required": "authority://food/for-ops",
+      "options": [
+        "re-balance restock to the verified on-time distributor",
+        "gate the laggard (harlow)",
+        "do nothing"
+      ],
+      "includes_do_nothing": true,
+      "tradeoff": "Restocking via crestline restores on-time (higher short-term concentration risk) but protects retailer Trust; doing nothing keeps shipments below target.",
+      "confidence": 0.85,
+      "expected_impact": "forward on-time returns to 1.0",
+      "decision": "decision://food/s5-assign"
+    },
+    "verified_outcome": {
+      "exchange": "event://food/s4-exchange-crestlineR",
+      "outcome": "event://food/s4-outcome-crestlineR",
+      "evaluation": "met",
+      "evidence": "evidence://food/routed-crestlineR",
+      "after_trust": 0.79,
+      "forward_on_time": 1.0,
+      "cumulative_after": 0.5
+    },
+    "learning": "decision://food/learning",
+    "ledger": 54,
+    "graph": 80
+  },
+  "brand": {
+    "tagline": "Fresh on the shelf, right on schedule.",
+    "mission": "Deliver committed restock shipments reliably and on time so retailers can promise their own customers freshness and never run dry.",
+    "vision": "A pantry where nothing runs out because the shipment was late \u2014 only because it sold.",
+    "values": [
+      [
+        "Freshness is a promise",
+        "On-time restock keeps quality at the centre of the shelf."
+      ],
+      [
+        "Shelf truth",
+        "We ship to the schedule, because an empty shelf costs everyone."
+      ],
+      [
+        "Fair to partners",
+        "Reliable volume in, honest communication out."
+      ],
+      [
+        "Reduce waste",
+        "Right amount, right time, right place \u2014 less product thrown away."
+      ],
+      [
+        "Taste and trust",
+        "Consumers trust a stocked shelf; we protect that every run."
+      ]
+    ],
+    "about": "Maplehurst Foods moves committed restock shipments and consumer goods so retailers keep the shelf full. Our origin story is a produce manager's complaint \u2014 that good food kept arriving a day late and getting pushed to markdown. We built a restock operation on the opposite principle: committed delivery is verified, on time, and the shelf is the report card.",
+    "fast_facts": [
+      "Founded 2004, food & beverage distribution",
+      "8,500+ retail shelves served",
+      "Own-brand consumer staples line"
+    ],
+    "history": [
+      [
+        "2004",
+        "Founded in Cincinnati around a refrigerated truck and a promise."
+      ],
+      [
+        "2011",
+        "Expanded from produce to the full food-and-bev restock line."
+      ],
+      [
+        "2020",
+        "Automated restock scheduling to keep the shelf on time at scale."
+      ]
+    ],
+    "leadership": [
+      [
+        "Sofia Marchetti",
+        "Chief Executive",
+        "Third-generation food distributor who built Maplehurst around freshness."
+      ],
+      [
+        "Andre Whitfield",
+        "Chief Supply Officer",
+        "Owns the distributor network running today's restock."
+      ]
+    ],
+    "products_services": [
+      "Retail restock shipments (frozen, fresh, grocery)",
+      "Consumer-brand staples manufactured in-house",
+      "Shelf-on-time logistics for retailers"
+    ],
+    "testimonials": [
+      [
+        "Markdown went from a weekly guessing game to a rounding error.",
+        "Regional grocery chain buyer"
+      ]
+    ],
+    "trust": [
+      [
+        "99.1% committed restock on-time rate (2025)",
+        "Maplehurst delivery ledger"
+      ],
+      [
+        "FSSC 22000 food-safety certification",
+        "third-party audit"
+      ]
+    ],
+    "locations": "Cincinnati, OH (HQ) \u00b7 distribution centres in 6 states",
+    "faq": [
+      [
+        "What makes Maplehurst 'on time' different?",
+        "Every committed shipment is tracked to a verified ledger completion \u2014 'on time' is a measured fact, not a promise."
+      ],
+      [
+        "Can you handle frozen and fresh in one order?",
+        "Yes, our restock service spans the temperature range with verification on every leg."
+      ]
+    ],
+    "contact": "orders@maplehurst.example \u00b7 +1-513-555-0163",
+    "careers": "Keep good food out of the markdown bin: logistics, food-safety, supply planning, route operations.",
+    "investors": "Privately held; family-owned. On-time reliability data on request.",
+    "press": "news@maplehurst.example \u2014 brand and freshness stories.",
+    "esg": "Waste-reduction routing, food-recovery donations, fuel-efficient fleet, sustainable packaging for own-brand.",
+    "legal": [
+      "Privacy",
+      "Terms",
+      "California Rights",
+      "Do Not Sell or Share"
+    ],
+    "nav": [
+      "About",
+      "Our Brands",
+      "For Retailers",
+      "Sustainability",
+      "Careers",
+      "Press",
+      "Contact"
+    ],
+    "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+    "design": {
+      "palette": [
+        [
+          "Orchard Green",
+          "#4E7C2A"
+        ],
+        [
+          "Cream Butter",
+          "#F6EFD9"
+        ],
+        [
+          "Berry Red",
+          "#A63C3C"
+        ],
+        [
+          "Midnight Cocoa",
+          "#2A1F1A"
+        ]
+      ],
+      "typography": {
+        "heading": "Warm friendly sans (e.g. Quicksand)",
+        "body": "Humanist sans (e.g. Lato)"
+      },
+      "logo": {
+        "wordmark": "Maplehurst in rounded case",
+        "character": "a maple-leaf/apple mark",
+        "usage": "clear space generous; food photography must keep greens true"
+      },
+      "imagery": "Bright, appetising, real food; family tables; full shelves \u2014 warmth and freshness",
+      "tone": "Warm, genuine, modest; talks about freshness and the people who depend on it."
+    }
+  }
+}

@@ -1,0 +1,2540 @@
+{
+  "uri": "db://ledger/aero-2026",
+  "head_hash": "c1f3299a85acd4bd617c763144038a6878b6298a661114ccaa32f2913ec03e9a",
+  "entries": [
+    {
+      "uri": "event://aero/s5-state-2",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-2",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-1",
+      "idempotency_key": "idem-s5-2",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "provision Aerospace / Defense / Aviation base (actors, relationships, authority + operator + policy + expectation)",
+      "state_update": [
+        {
+          "uri": "org://aero/valiant-aero",
+          "type": "ORG",
+          "identity": {
+            "attestations": [
+              "business-license"
+            ]
+          },
+          "brand": {
+            "tagline": "Subsystems on the line, on the date.",
+            "mission": "Deliver committed airframe subsystems and flight-critical components reliably and on time so aviation customers can keep their programmes on schedule and their fleets flying.",
+            "vision": "Aerospace programmes where subsystem delivery is the dependable core, not the critical-path risk.",
+            "values": [
+              [
+                "Zero compromises",
+                "Flight-critical means the evidence bar is non-negotiable."
+              ],
+              [
+                "Schedule integrity",
+                "A late subsystem can ground a programme; we protect the date."
+              ],
+              [
+                "Verification culture",
+                "We prove readiness with data before anything is in the build."
+              ],
+              [
+                "Partnership",
+                "Fleet customers plan years ahead; we keep those plans honest."
+              ],
+              [
+                "Stewardship",
+                "We build responsibly \u2014 safety, export control, and ISO-grade process."
+              ]
+            ],
+            "about": "Valiant Aero is an aerospace, defense, and aviation subsystem operator. We take committed airframe-subsystem deliveries and bring them in on the building date \u2014 integrated, verified, and traceable to the part. For programmes where a missed subsystem is a schedule domino, we make delivery reliability the least anxious part of the build.",
+            "fast_facts": [
+              "Founded 2001, aerospace subsystems",
+              "Component-level to subsystem integration scope",
+              "Fleet and programme customers on 3 continents"
+            ],
+            "history": [
+              [
+                "2001",
+                "Founded near Dayton for precision aerospace work."
+              ],
+              [
+                "2013",
+                "Won our first major airframe-subsystem programme."
+              ],
+              [
+                "2021",
+                "Placed every committed subsystem delivery under ledger-verified evidence."
+              ]
+            ],
+            "leadership": [
+              [
+                "Colonel (ret.) Marta Reyes",
+                "Chief Executive",
+                "Former programme manager who runs Valiant Aero on delivery integrity."
+              ],
+              [
+                "Erik Lindqvist",
+                "Chief Program Officer",
+                "Owns subsystem integration across all active programmes."
+              ]
+            ],
+            "products_services": [
+              "Airframe-subsystem design and delivery",
+              "Flight-critical component integration",
+              "Aerospace programme schedule assurance"
+            ],
+            "testimonials": [
+              [
+                "Valiant Aero is the subsystem partner we can build our master schedule around.",
+                "Fleet programme lead"
+              ]
+            ],
+            "trust": [
+              [
+                "98.9% committed airframe-subsystem on-time rate (2025)",
+                "Valiant delivery ledger"
+              ],
+              [
+                "AS9100 aerospace quality certification",
+                "third-party audit"
+              ]
+            ],
+            "locations": "Near Dayton, OH (HQ) \u00b7 integration hangars and partner facilities on 3 continents",
+            "faq": [
+              [
+                "How does on-time delivery work with flight certification?",
+                "Verification and certification gates are built into the schedule; our on-time evidence covers the committed delivery on the agreed date."
+              ],
+              [
+                "Do you handle classified work?",
+                "Yes, we hold appropriate clearances and follow export-control process at every stage."
+              ]
+            ],
+            "contact": "programs@valiantaero.example \u00b7 +1-937-555-0104",
+            "careers": "Keep programmes on schedule and fleets flying: engineering, program mgmt, quality, integration.",
+            "investors": "Privately held. Programme-and-reliability reporting shared with defence customers under NDA.",
+            "press": "media@valiantaero.example \u2014 schedule, quality, and programme announcements.",
+            "esg": "ISO-grade process, responsible export control, engineering education partnerships.",
+            "legal": [
+              "Privacy",
+              "Terms",
+              "Export-Control Notice",
+              "California Rights",
+              "Do Not Sell or Share"
+            ],
+            "nav": [
+              "About",
+              "Capabilities",
+              "Programmes",
+              "Quality",
+              "Careers",
+              "Investors",
+              "Press",
+              "Contact"
+            ],
+            "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Security Preferences (links)",
+            "design": {
+              "palette": [
+                [
+                  "Flightline Grey",
+                  "#39434E"
+                ],
+                [
+                  "Signal Orange",
+                  "#F26522"
+                ],
+                [
+                  "Runway White",
+                  "#F4F6F8"
+                ],
+                [
+                  "Missile Teal",
+                  "#0F6E6E"
+                ]
+              ],
+              "typography": {
+                "heading": "Sharp technical sans (e.g. Chivo)",
+                "body": "Technical sans (e.g. Roboto Mono for data, Source Sans for prose)"
+              },
+              "logo": {
+                "wordmark": "VALIANT AERO in angular caps",
+                "character": "a chevron/wing mark",
+                "usage": "clear space wide; orange as a discipline accent only"
+              },
+              "imagery": "Precision and scale: airframes, integration bays, flightline \u2014 engineered and controlled",
+              "tone": "Precise, disciplined, confident; about programme integrity and schedule."
+            }
+          }
+        },
+        {
+          "uri": "org://aero/quantum-air",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://aero/apex-aeronautics",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://aero/vireo-airframe",
+          "type": "ORG"
+        },
+        {
+          "uri": "person://aero/pgm",
+          "type": "PERSON"
+        },
+        {
+          "uri": "agent://aero/prog-ops",
+          "type": "AGENT"
+        },
+        {
+          "uri": "relationship://aero/ops-rel",
+          "participants": [
+            "org://aero/valiant-aero",
+            "org://aero/quantum-air"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://aero/valiant-aero": [
+              "provider"
+            ],
+            "org://aero/quantum-air": [
+              "client"
+            ]
+          },
+          "authority": [
+            "authority://aero/for-ops"
+          ],
+          "purpose": "aerospace / defense / aviation operating relationship"
+        },
+        {
+          "uri": "relationship://aero/partner-net",
+          "participants": [
+            "org://aero/valiant-aero",
+            "org://aero/apex-aeronautics",
+            "org://aero/vireo-airframe"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://aero/valiant-aero": [
+              "operator"
+            ],
+            "org://aero/apex-aeronautics": [
+              "partner"
+            ],
+            "org://aero/vireo-airframe": [
+              "partner"
+            ]
+          },
+          "authority": [
+            "authority://aero/for-ops"
+          ],
+          "purpose": "aerospace / defense / aviation partner network"
+        },
+        {
+          "uri": "authority://aero/for-ops",
+          "holder": "org://aero/valiant-aero",
+          "grants": [
+            "triage_case",
+            "assign_case",
+            "close_case",
+            "approve_learning",
+            "rebalance_commitment",
+            "gate_partner",
+            "release_committed_action"
+          ],
+          "roles": [
+            "operator"
+          ]
+        },
+        {
+          "uri": "rule://aero/ops-run",
+          "kind": "POLICY",
+          "text": "agent://aero/prog-ops may re-balance resource commitment and gate partner performance",
+          "grants": [
+            "rebalance_commitment",
+            "gate_partner"
+          ]
+        },
+        {
+          "uri": "rule://aero/match-run",
+          "kind": "POLICY",
+          "text": "S2 may run Trust-weighted matching for the client",
+          "grants": [
+            "run_match"
+          ]
+        },
+        {
+          "uri": "delegation://aero/ops",
+          "grantor": "org://aero/valiant-aero",
+          "grantee": "agent://aero/prog-ops",
+          "scope": [
+            "rule://aero/ops-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://aero/s2-match",
+          "grantor": "org://aero/valiant-aero",
+          "grantee": "agent://s2",
+          "scope": [
+            "rule://aero/match-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "expectation://aero/e-on-time",
+          "actor": "person://aero/pgm",
+          "subject": "airframe-subsystem delivery",
+          "condition": "fully deliver the committed airframe-subsystem delivery by its committed deadline",
+          "metric": "on_time",
+          "threshold": 0.95,
+          "deadline": "2026-12-31T00:00:00Z",
+          "evidence_required": "CLEAR"
+        },
+        {
+          "uri": "policy://aero/allocation",
+          "name": "aero allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "select the partner with the highest fit x scoped Trust",
+          "action": "allocate to the top-ranked fitted partner",
+          "scope": [
+            "expectation://aero/e-on-time"
+          ],
+          "version": 1
+        },
+        {
+          "uri": "process://aero/pr-core",
+          "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+          "steps": [
+            "triage",
+            "assign",
+            "execute",
+            "verify_outcome",
+            "learning"
+          ]
+        },
+        {
+          "uri": "process_instance://aero/pi-core",
+          "process": "process://aero/pr-core",
+          "status": "RUNNING",
+          "started_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "3aa86dcce3e03213ffa442eede6b07e94f424ab4f941bcedc61e70ae6e7668eb"
+    },
+    {
+      "uri": "event://aero/s5-state-100",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-100",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-99",
+      "idempotency_key": "idem-s5-100",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "seed scoped Trust org://aero/apex-aeronautics = 0.6",
+      "state_update": [
+        {
+          "uri": "trust://aero/t-apex-aeronautics",
+          "subject": "org://aero/valiant-aero",
+          "target": "org://aero/apex-aeronautics",
+          "claim": "airframe-subsystem delivery reliability",
+          "context": "relationship://aero/partner-net",
+          "score": 0.6
+        }
+      ],
+      "hash": "5588f96e58d677f3d941d07f7a00602a3be1b8b73999c7e5e6fab7449cec9088"
+    },
+    {
+      "uri": "event://aero/s5-state-101",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-101",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-100",
+      "idempotency_key": "idem-s5-101",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "seed scoped Trust org://aero/vireo-airframe = 0.9",
+      "state_update": [
+        {
+          "uri": "trust://aero/t-vireo-airframe",
+          "subject": "org://aero/valiant-aero",
+          "target": "org://aero/vireo-airframe",
+          "claim": "airframe-subsystem delivery reliability",
+          "context": "relationship://aero/partner-net",
+          "score": 0.9
+        }
+      ],
+      "hash": "51bd53870643b6f658e3750d06bb2803b186d9fd367fa21aaab6ac32cc13245e"
+    },
+    {
+      "uri": "event://aero/s5-state-102",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-102",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-101",
+      "idempotency_key": "idem-s5-102",
+      "signature": "signed-by-agent://aero/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s2",
+      "detail": "register resource-commitment offer from org://aero/apex-aeronautics",
+      "state_update": [
+        {
+          "uri": "offer://aero/o-g",
+          "provider": "org://aero/apex-aeronautics",
+          "price": 2000000.0,
+          "currency": "USD",
+          "capability_keys": [
+            "subsystem",
+            "integration"
+          ],
+          "fit_note": "aerospace / defense / aviation partner delivery line"
+        }
+      ],
+      "hash": "e5a9d0c5da03685c761214752e38a57ed54e24d10aa38a67b8f7d07b7fd0a515"
+    },
+    {
+      "uri": "event://aero/s5-state-103",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-103",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-102",
+      "idempotency_key": "idem-s5-103",
+      "signature": "signed-by-agent://aero/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s2",
+      "detail": "register resource-commitment offer from org://aero/vireo-airframe",
+      "state_update": [
+        {
+          "uri": "offer://aero/o-l",
+          "provider": "org://aero/vireo-airframe",
+          "price": 2000000.0,
+          "currency": "USD",
+          "capability_keys": [
+            "subsystem",
+            "integration"
+          ],
+          "fit_note": "aerospace / defense / aviation partner delivery line"
+        }
+      ],
+      "hash": "449fe407529bccfb335afb8e959fe34182e5582b648eefc03d2f62765e63ea98"
+    },
+    {
+      "uri": "event://aero/s5-state-104",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-104",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-103",
+      "idempotency_key": "idem-s5-104",
+      "signature": "signed-by-agent://aero/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s2",
+      "detail": "initial match ranked offer://aero/o-l (score 0.900) \u2014 base ranking",
+      "state_update": [
+        {
+          "uri": "decision://aero/s2-match-baseline",
+          "by": "agent://s2",
+          "authority": "delegation://aero/s2-match",
+          "alternatives": [
+            "offer://aero/o-l",
+            "offer://aero/o-g",
+            "none"
+          ],
+          "confidence": 0.9,
+          "expected_outcome": "lag partner ranked #1 on existing Trust",
+          "actual_outcome": "offer://aero/o-l",
+          "detail": [
+            {
+              "offer": "offer://aero/o-l",
+              "provider": "org://aero/vireo-airframe",
+              "fit": 1.0,
+              "trust": 0.9,
+              "score": 0.9
+            },
+            {
+              "offer": "offer://aero/o-g",
+              "provider": "org://aero/apex-aeronautics",
+              "fit": 1.0,
+              "trust": 0.6,
+              "score": 0.6
+            }
+          ],
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "f52855e1a764048cb4e3cb8d3a72ed43e8abaa93a31e479a612ac4686c153c3a"
+    },
+    {
+      "uri": "event://aero/s4-exchange-vireo-airframeQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-105",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-104",
+      "idempotency_key": "idem-s4-105",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange vireo-airframeQ3: 2000000.0 USD org://aero/valiant-aero->org://aero/vireo-airframe (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/aero-escrow-vireo-airframeQ3",
+          "kind": "MONEY",
+          "title": "org://aero/vireo-airframe",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://aero/valiant-aero for org://aero/vireo-airframe (vireo-airframeQ3)"
+        },
+        {
+          "uri": "obligation://aero/s4-pay-vireo-airframeQ3",
+          "subject": "org://aero/valiant-aero",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://aero/vireo-airframe",
+          "due_by": "2026-08-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-02T00:00:00Z"
+        },
+        {
+          "uri": "receipt://aero/s4-receipt-vireo-airframeQ3",
+          "kind": "SETTLEMENT",
+          "from": "org://aero/valiant-aero",
+          "to": "org://aero/vireo-airframe",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-09-02T00:00:00Z"
+        },
+        {
+          "uri": "decision://aero/s4-recon-vireo-airframeQ3",
+          "by": "agent://s4",
+          "authority": "authority://aero/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://aero/valiant-aero",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "vireo-airframeQ3",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://aero/valiant-aero",
+            "provider": "org://aero/vireo-airframe",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://aero/s4-exchange-vireo-airframeQ3",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-105",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-104",
+          "idempotency_key": "idem-s4-105",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange vireo-airframeQ3: 2000000.0 USD org://aero/valiant-aero->org://aero/vireo-airframe (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://aero/valiant-aero",
+          "provider": "org://aero/vireo-airframe",
+          "settled_at": "2026-09-02T00:00:00Z",
+          "exchange_of": "commitment://aero/c-vireo-airframeQ3"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://aero/valiant-aero",
+      "provider": "org://aero/vireo-airframe",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "exchange_of": "commitment://aero/c-vireo-airframeQ3",
+      "hash": "2315140cf79d4be5c8a22acfae640b0f3b71836ee60d3aaec3aa7ae80f2b95ce"
+    },
+    {
+      "uri": "event://aero/s4-outcome-vireo-airframeQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-106",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-105",
+      "idempotency_key": "idem-s4-106",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle vireo-airframeQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+      "state_update": [
+        {
+          "uri": "event://aero/s4-outcome-vireo-airframeQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-106",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-105",
+          "idempotency_key": "idem-s4-106",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle vireo-airframeQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+          "state_update": [],
+          "evaluation": "partial",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-08-31T00:00:00Z",
+          "settled_at": "2026-09-02T00:00:00Z",
+          "score": 0.5
+        }
+      ],
+      "evaluation": "partial",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "score": 0.5,
+      "hash": "7f278c0c9bd2b6003a1e019f8743c4eb8817378e6122043d84b66280012ba2a7"
+    },
+    {
+      "uri": "event://aero/outcome-committed-vireo-airframeQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-107",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-106",
+      "idempotency_key": "idem-s2-107",
+      "signature": "signed-by-org://aero/vireo-airframe",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://aero/vireo-airframe",
+      "detail": "job committed-vireo-airframeQ3 by org://aero/vireo-airframe: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://aero/outcome-committed-vireo-airframeQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-107",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-106",
+          "idempotency_key": "idem-s2-107",
+          "signature": "signed-by-org://aero/vireo-airframe",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://aero/vireo-airframe",
+          "detail": "job committed-vireo-airframeQ3 by org://aero/vireo-airframe: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "committed-vireo-airframeQ3",
+          "provider": "org://aero/vireo-airframe",
+          "committed_deadline": "2026-08-31T00:00:00Z",
+          "actual_completed_at": "2026-09-02T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://aero/committed-vireo-airframeQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-airframe-subsystem delivery record + aero anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-vireo-airframeQ3",
+      "provider": "org://aero/vireo-airframe",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-09-02T00:00:00Z",
+      "on_time": false,
+      "hash": "ec34ccb998c54d24afca8b048348b45d78003c945de53c49ae8225dcd54410fe"
+    },
+    {
+      "uri": "event://aero/verify-committed-vireo-airframeQ3",
+      "type": "DECISION",
+      "event_id": "ev-s2-108",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-107",
+      "idempotency_key": "idem-s2-108",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://aero/vireo-airframe delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://aero/committed-vireo-airframeQ3",
+          "proposer": "agent://s5",
+          "statement": "org://aero/vireo-airframe delivered the committed resource LATE"
+        },
+        {
+          "uri": "evidence://aero/committed-vireo-airframeQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-airframe-subsystem delivery record + aero anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "6b599fede0e86f5c674f5b00562e1d5628c9fbee001253faff905499703a8631"
+    },
+    {
+      "uri": "event://aero/trust-update-vireo-airframe",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-109",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-108",
+      "idempotency_key": "idem-s2-109",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "trust for org://aero/vireo-airframe [airframe-subsystem delivery reliability] 0.900 -> 0.520 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://aero/t-vireo-airframe",
+          "subject": "org://aero/valiant-aero",
+          "target": "org://aero/vireo-airframe",
+          "claim": "airframe-subsystem delivery reliability",
+          "context": "relationship://aero/partner-net",
+          "score": 0.52,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://aero/committed-vireo-airframeQ3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "d3529a42c60e2b2168acefac273c614ff20c8147d9ae0107d1509a7cba330ad1"
+    },
+    {
+      "uri": "event://aero/s4-exchange-apex-aeronauticsQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-110",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-109",
+      "idempotency_key": "idem-s4-110",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange apex-aeronauticsQ3: 2000000.0 USD org://aero/valiant-aero->org://aero/apex-aeronautics (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/aero-escrow-apex-aeronauticsQ3",
+          "kind": "MONEY",
+          "title": "org://aero/apex-aeronautics",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://aero/valiant-aero for org://aero/apex-aeronautics (apex-aeronauticsQ3)"
+        },
+        {
+          "uri": "obligation://aero/s4-pay-apex-aeronauticsQ3",
+          "subject": "org://aero/valiant-aero",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://aero/apex-aeronautics",
+          "due_by": "2026-08-31T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-08-30T00:00:00Z"
+        },
+        {
+          "uri": "receipt://aero/s4-receipt-apex-aeronauticsQ3",
+          "kind": "SETTLEMENT",
+          "from": "org://aero/valiant-aero",
+          "to": "org://aero/apex-aeronautics",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-08-30T00:00:00Z"
+        },
+        {
+          "uri": "decision://aero/s4-recon-apex-aeronauticsQ3",
+          "by": "agent://s4",
+          "authority": "authority://aero/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://aero/valiant-aero",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "apex-aeronauticsQ3",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://aero/valiant-aero",
+            "provider": "org://aero/apex-aeronautics",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://aero/s4-exchange-apex-aeronauticsQ3",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-110",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-109",
+          "idempotency_key": "idem-s4-110",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange apex-aeronauticsQ3: 2000000.0 USD org://aero/valiant-aero->org://aero/apex-aeronautics (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://aero/valiant-aero",
+          "provider": "org://aero/apex-aeronautics",
+          "settled_at": "2026-08-30T00:00:00Z",
+          "exchange_of": "commitment://aero/c-apex-aeronauticsQ3"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://aero/valiant-aero",
+      "provider": "org://aero/apex-aeronautics",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "exchange_of": "commitment://aero/c-apex-aeronauticsQ3",
+      "hash": "3470406e7266612f303ebf8193ed0e5f55ba0bf01433f248c5c2099e00173ac6"
+    },
+    {
+      "uri": "event://aero/s4-outcome-apex-aeronauticsQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-111",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-110",
+      "idempotency_key": "idem-s4-111",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle apex-aeronauticsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://aero/s4-outcome-apex-aeronauticsQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-111",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-110",
+          "idempotency_key": "idem-s4-111",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle apex-aeronauticsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-08-31T00:00:00Z",
+          "settled_at": "2026-08-30T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "score": 1.0,
+      "hash": "744afb9c355ebae38cb650a44261b199c7fd31c515fb42e45852c27581f82286"
+    },
+    {
+      "uri": "event://aero/outcome-committed-apex-aeronauticsQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-112",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-111",
+      "idempotency_key": "idem-s2-112",
+      "signature": "signed-by-org://aero/apex-aeronautics",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://aero/apex-aeronautics",
+      "detail": "job committed-apex-aeronauticsQ3 by org://aero/apex-aeronautics: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://aero/outcome-committed-apex-aeronauticsQ3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-112",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-111",
+          "idempotency_key": "idem-s2-112",
+          "signature": "signed-by-org://aero/apex-aeronautics",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://aero/apex-aeronautics",
+          "detail": "job committed-apex-aeronauticsQ3 by org://aero/apex-aeronautics: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "committed-apex-aeronauticsQ3",
+          "provider": "org://aero/apex-aeronautics",
+          "committed_deadline": "2026-08-31T00:00:00Z",
+          "actual_completed_at": "2026-08-30T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://aero/committed-apex-aeronauticsQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-airframe-subsystem delivery record + aero anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-apex-aeronauticsQ3",
+      "provider": "org://aero/apex-aeronautics",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-08-30T00:00:00Z",
+      "on_time": true,
+      "hash": "c465e150a80965dca462f2e763bad15c7a16bf5f048507b43326359ddb139586"
+    },
+    {
+      "uri": "event://aero/verify-committed-apex-aeronauticsQ3",
+      "type": "DECISION",
+      "event_id": "ev-s2-113",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-112",
+      "idempotency_key": "idem-s2-113",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://aero/apex-aeronautics delivered the committed resource on time' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://aero/committed-apex-aeronauticsQ3",
+          "proposer": "agent://s5",
+          "statement": "org://aero/apex-aeronautics delivered the committed resource on time"
+        },
+        {
+          "uri": "evidence://aero/committed-apex-aeronauticsQ3",
+          "kind": "ANCHORED",
+          "source": "signed committed-airframe-subsystem delivery record + aero anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "ac7c8ac95dc6a9b3ab4197878a29bd51829d1010eeadbf0ed3e6ab876b9392db"
+    },
+    {
+      "uri": "event://aero/trust-update-apex-aeronautics",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-114",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-113",
+      "idempotency_key": "idem-s2-114",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "trust for org://aero/apex-aeronautics [airframe-subsystem delivery reliability] 0.600 -> 0.695 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://aero/t-apex-aeronautics",
+          "subject": "org://aero/valiant-aero",
+          "target": "org://aero/apex-aeronautics",
+          "claim": "airframe-subsystem delivery reliability",
+          "context": "relationship://aero/partner-net",
+          "score": 0.695,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://aero/committed-apex-aeronauticsQ3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "e981eb70d394c0c7b2a135f95f1149e93abd6b3272fde1884c28cd2c8291dcd8"
+    },
+    {
+      "uri": "event://aero/s4-exchange-vireo-airframeQ4",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-115",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-114",
+      "idempotency_key": "idem-s4-115",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange vireo-airframeQ4: 1600000.0 USD org://aero/valiant-aero->org://aero/vireo-airframe (value 1600000.0, cost 1600000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/aero-escrow-vireo-airframeQ4",
+          "kind": "MONEY",
+          "title": "org://aero/vireo-airframe",
+          "custody": "cleared",
+          "value": 1600000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://aero/valiant-aero for org://aero/vireo-airframe (vireo-airframeQ4)"
+        },
+        {
+          "uri": "obligation://aero/s4-pay-vireo-airframeQ4",
+          "subject": "org://aero/valiant-aero",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 1600000.0 USD for contracted work by org://aero/vireo-airframe",
+          "due_by": "2026-09-15T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-09-17T00:00:00Z"
+        },
+        {
+          "uri": "receipt://aero/s4-receipt-vireo-airframeQ4",
+          "kind": "SETTLEMENT",
+          "from": "org://aero/valiant-aero",
+          "to": "org://aero/vireo-airframe",
+          "amount": 1600000.0,
+          "currency": "USD",
+          "received_at": "2026-09-17T00:00:00Z"
+        },
+        {
+          "uri": "decision://aero/s4-recon-vireo-airframeQ4",
+          "by": "agent://s4",
+          "authority": "authority://aero/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 1600000.0 USD from org://aero/valiant-aero",
+          "actual_outcome": "matched exactly: settled 1600000.0 USD",
+          "detail": {
+            "slug": "vireo-airframeQ4",
+            "expected": 1600000.0,
+            "actual": 1600000.0,
+            "matched": true,
+            "buyer": "org://aero/valiant-aero",
+            "provider": "org://aero/vireo-airframe",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://aero/s4-exchange-vireo-airframeQ4",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-115",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-114",
+          "idempotency_key": "idem-s4-115",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange vireo-airframeQ4: 1600000.0 USD org://aero/valiant-aero->org://aero/vireo-airframe (value 1600000.0, cost 1600000.0)",
+          "state_update": [],
+          "value": 1600000.0,
+          "cost": 1600000.0,
+          "price": 1600000.0,
+          "currency": "USD",
+          "buyer": "org://aero/valiant-aero",
+          "provider": "org://aero/vireo-airframe",
+          "settled_at": "2026-09-17T00:00:00Z",
+          "exchange_of": "commitment://aero/c-vireo-airframeQ4"
+        }
+      ],
+      "value": 1600000.0,
+      "cost": 1600000.0,
+      "price": 1600000.0,
+      "currency": "USD",
+      "buyer": "org://aero/valiant-aero",
+      "provider": "org://aero/vireo-airframe",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "exchange_of": "commitment://aero/c-vireo-airframeQ4",
+      "hash": "349293e4cc52ea48848a9d21ce5b1c20ffdb90f16021fd3435d233634adc8313"
+    },
+    {
+      "uri": "event://aero/s4-outcome-vireo-airframeQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-116",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-115",
+      "idempotency_key": "idem-s4-116",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle vireo-airframeQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+      "state_update": [
+        {
+          "uri": "event://aero/s4-outcome-vireo-airframeQ4",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-116",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-115",
+          "idempotency_key": "idem-s4-116",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle vireo-airframeQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+          "state_update": [],
+          "evaluation": "partial",
+          "expected": 1600000.0,
+          "actual": 1600000.0,
+          "deadline": "2026-09-15T00:00:00Z",
+          "settled_at": "2026-09-17T00:00:00Z",
+          "score": 0.5
+        }
+      ],
+      "evaluation": "partial",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "deadline": "2026-09-15T00:00:00Z",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "score": 0.5,
+      "hash": "e47754f6c76270e87ea4afddbe222bc716d377cbbdabcbcf04fe703ba2df6361"
+    },
+    {
+      "uri": "event://aero/outcome-committed-vireo-airframeQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-117",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-116",
+      "idempotency_key": "idem-s2-117",
+      "signature": "signed-by-org://aero/vireo-airframe",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://aero/vireo-airframe",
+      "detail": "job committed-vireo-airframeQ4 by org://aero/vireo-airframe: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://aero/outcome-committed-vireo-airframeQ4",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-117",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-116",
+          "idempotency_key": "idem-s2-117",
+          "signature": "signed-by-org://aero/vireo-airframe",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://aero/vireo-airframe",
+          "detail": "job committed-vireo-airframeQ4 by org://aero/vireo-airframe: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "committed-vireo-airframeQ4",
+          "provider": "org://aero/vireo-airframe",
+          "committed_deadline": "2026-09-15T00:00:00Z",
+          "actual_completed_at": "2026-09-17T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://aero/committed-vireo-airframeQ4",
+          "kind": "ANCHORED",
+          "source": "signed committed-airframe-subsystem delivery record + aero anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "committed-vireo-airframeQ4",
+      "provider": "org://aero/vireo-airframe",
+      "committed_deadline": "2026-09-15T00:00:00Z",
+      "actual_completed_at": "2026-09-17T00:00:00Z",
+      "on_time": false,
+      "hash": "e8448071bd91cebe2988b235c36aa758017060b2a652c4a1ffe496576c80d9ab"
+    },
+    {
+      "uri": "event://aero/verify-committed-vireo-airframeQ4",
+      "type": "DECISION",
+      "event_id": "ev-s2-118",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-117",
+      "idempotency_key": "idem-s2-118",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://aero/vireo-airframe delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://aero/committed-vireo-airframeQ4",
+          "proposer": "agent://s5",
+          "statement": "org://aero/vireo-airframe delivered the committed resource LATE"
+        },
+        {
+          "uri": "evidence://aero/committed-vireo-airframeQ4",
+          "kind": "ANCHORED",
+          "source": "signed committed-airframe-subsystem delivery record + aero anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "d3e31d68891fe2deb300669022af77567ca542f0a81eebb79235aee81f99a049"
+    },
+    {
+      "uri": "event://aero/trust-update-vireo-airframe",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-119",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-118",
+      "idempotency_key": "idem-s2-119",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "trust for org://aero/vireo-airframe [airframe-subsystem delivery reliability] 0.520 -> 0.140 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://aero/t-vireo-airframe",
+          "subject": "org://aero/valiant-aero",
+          "target": "org://aero/vireo-airframe",
+          "claim": "airframe-subsystem delivery reliability",
+          "context": "relationship://aero/partner-net",
+          "score": 0.14,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://aero/committed-vireo-airframeQ4"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "5902a01f238685e5dc987a8a667b4e36e0ecac26ba9b13fa93b6c4f4999d1782"
+    },
+    {
+      "uri": "event://aero/s5-state-7000",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7000",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-6999",
+      "idempotency_key": "idem-s5-7000",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "open case case://aero/c-on-time (committed airframe-subsystem delivery below target on time)",
+      "state_update": [
+        {
+          "uri": "case://aero/c-on-time",
+          "subject": "committed airframe-subsystem delivery below target on time",
+          "status": "OPEN",
+          "owner": "person://aero/pgm",
+          "actors": [
+            "org://aero/valiant-aero",
+            "person://aero/pgm",
+            "agent://aero/prog-ops"
+          ],
+          "relationships": [
+            "relationship://aero/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target"
+        }
+      ],
+      "hash": "8c188f8efb962cdb464416f1e365bf3ea30e6e896441b05d2a36210c58688207"
+    },
+    {
+      "uri": "event://aero/s5-state-7001",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7001",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7000",
+      "idempotency_key": "idem-s5-7001",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "record exception heartbeat on the case",
+      "state_update": [
+        {
+          "uri": "case://aero/c-on-time",
+          "subject": "committed airframe-subsystem delivery below target on time",
+          "status": "OPEN",
+          "owner": "person://aero/pgm",
+          "actors": [
+            "org://aero/valiant-aero",
+            "person://aero/pgm",
+            "agent://aero/prog-ops"
+          ],
+          "relationships": [
+            "relationship://aero/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed airframe-subsystem delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "supplier failure \u2014 org://aero/vireo-airframe missed its committed airframe subsystem delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed subsystem work to the verified on-time integrator (apex-aeronautics) and gate the laggard (vireo-airframe)",
+          "metric": "metric://aero/m-on-time"
+        }
+      ],
+      "hash": "62aefa4d9579dbf55a23a2de50aad5b6c9e2757e5a6406bd115eb61f4685be40"
+    },
+    {
+      "uri": "event://aero/s5-state-7002",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7002",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7001",
+      "idempotency_key": "idem-s5-7002",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "case triage: exception assessed, root nominated",
+      "state_update": [
+        {
+          "uri": "decision://aero/s5-triage",
+          "by": "agent://aero/s5",
+          "authority": "authority://aero/for-ops",
+          "alternatives": [
+            "accept",
+            "dismiss as anomaly"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "accept as a real risk",
+          "actual_outcome": "accepted; root nominated",
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "ddb2151843bc7b6d44e4eabfcf5b9054a6597c4d169cd7bf60c1094999553af6"
+    },
+    {
+      "uri": "event://aero/s5-case-triage",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7003",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7002",
+      "idempotency_key": "idem-s5-7003",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "case triaged",
+      "state_update": [
+        {
+          "uri": "case://aero/c-on-time",
+          "subject": "committed airframe-subsystem delivery below target on time",
+          "status": "TRIAGE",
+          "owner": "person://aero/pgm",
+          "actors": [
+            "org://aero/valiant-aero",
+            "person://aero/pgm",
+            "agent://aero/prog-ops"
+          ],
+          "relationships": [
+            "relationship://aero/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-triage"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed airframe-subsystem delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "supplier failure \u2014 org://aero/vireo-airframe missed its committed airframe subsystem delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed subsystem work to the verified on-time integrator (apex-aeronautics) and gate the laggard (vireo-airframe)",
+          "metric": "metric://aero/m-on-time"
+        }
+      ],
+      "hash": "b2a9244852687213987932b6286a695970b26980e8eab5da11e4b140d41b3f6c"
+    },
+    {
+      "uri": "event://aero/s5-state-7004",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7004",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7003",
+      "idempotency_key": "idem-s5-7004",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "case assigned; task becomes assigned authorized work (#8)",
+      "state_update": [
+        {
+          "uri": "task://aero/t-rebalance",
+          "assigned_to": "agent://aero/prog-ops",
+          "created_by": "agent://aero/s5",
+          "objective": "re-balance subsystem allocation to the verified on-time integrator (apex-aeronautics) and gate the laggard (vireo-airframe)",
+          "dependencies": [],
+          "authority": "authority://aero/for-ops",
+          "deadline": "2026-10-15T00:00:00Z",
+          "priority": 0.695,
+          "status": "ASSIGNED",
+          "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+          "why_here": "derived from the on-time exception (case OPEN)",
+          "importance": "restores program-on-time, protecting fleet-customer scoped Trust",
+          "evidence": [
+            "evidence://aero/committed-vireo-airframeQ3",
+            "evidence://aero/committed-apex-aeronauticsQ3",
+            "evidence://aero/committed-vireo-airframeQ4"
+          ],
+          "decision_required": "approve the re-allocation",
+          "priority_factors": {
+            "impact": 0.85,
+            "urgency": 0.9,
+            "confidence": 0.7,
+            "irreversibility": false,
+            "relationship_importance": 0.8,
+            "cost_of_delay": 0.75
+          },
+          "assigned_capacity": 1.0
+        },
+        {
+          "uri": "decision://aero/s5-assign",
+          "by": "person://aero/pgm",
+          "authority": "authority://aero/for-ops",
+          "alternatives": [
+            "assign",
+            "defer"
+          ],
+          "confidence": 0.95,
+          "expected_outcome": "task in progress",
+          "detail": {
+            "task": "task://aero/t-rebalance",
+            "assigned_to": "agent://aero/prog-ops",
+            "authority": "authority://aero/for-ops",
+            "priority": 0.695,
+            "capacity": 1.0
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "cb4bd91655594780c015f3e459577294f716a3bf0e3c9d4189f6bcfa6b2ae67f"
+    },
+    {
+      "uri": "event://aero/s5-case-assigned",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7005",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7004",
+      "idempotency_key": "idem-s5-7005",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "case assigned",
+      "state_update": [
+        {
+          "uri": "case://aero/c-on-time",
+          "subject": "committed airframe-subsystem delivery below target on time",
+          "status": "ASSIGNED",
+          "owner": "person://aero/pgm",
+          "actors": [
+            "org://aero/valiant-aero",
+            "person://aero/pgm",
+            "agent://aero/prog-ops"
+          ],
+          "relationships": [
+            "relationship://aero/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-assigned"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed airframe-subsystem delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "supplier failure \u2014 org://aero/vireo-airframe missed its committed airframe subsystem delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed subsystem work to the verified on-time integrator (apex-aeronautics) and gate the laggard (vireo-airframe)",
+          "metric": "metric://aero/m-on-time"
+        }
+      ],
+      "hash": "ca383a1e032620d077412b305122ee3b5e3e2f5da4c9d71ba1a17b2fa50e4d17"
+    },
+    {
+      "uri": "event://aero/s5-case-inprogress",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7006",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7005",
+      "idempotency_key": "idem-s5-7006",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "task execution began",
+      "state_update": [
+        {
+          "uri": "case://aero/c-on-time",
+          "subject": "committed airframe-subsystem delivery below target on time",
+          "status": "IN_PROGRESS",
+          "owner": "person://aero/pgm",
+          "actors": [
+            "org://aero/valiant-aero",
+            "person://aero/pgm",
+            "agent://aero/prog-ops"
+          ],
+          "relationships": [
+            "relationship://aero/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-inprogress"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed airframe-subsystem delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "supplier failure \u2014 org://aero/vireo-airframe missed its committed airframe subsystem delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed subsystem work to the verified on-time integrator (apex-aeronautics) and gate the laggard (vireo-airframe)",
+          "metric": "metric://aero/m-on-time"
+        }
+      ],
+      "hash": "f857d6a63591fae0b03c3828e5aceff494274afeba444862410a72431985bccc"
+    },
+    {
+      "uri": "event://aero/s5-state-7007",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7007",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7006",
+      "idempotency_key": "idem-s5-7007",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "policy updated: allocate by fit AND scoped Trust",
+      "state_update": [
+        {
+          "uri": "policy://aero/allocation",
+          "name": "aero allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "select by fit x scoped Trust; laggard (< floor) needs a performance gate",
+          "action": "allocate to the top-ranked fitted partner; gate laggard",
+          "scope": [
+            "expectation://aero/e-on-time"
+          ],
+          "version": 2,
+          "policy_status": "REVISED"
+        }
+      ],
+      "hash": "b7b3be3675567f91d74ee8d189f08accad3779afc85cd517346d6572418c8418"
+    },
+    {
+      "uri": "event://aero/s5-state-7008",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7008",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7007",
+      "idempotency_key": "idem-s5-7008",
+      "signature": "signed-by-agent://aero/s2",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s2",
+      "detail": "task effect: next committed work ranked offer://aero/o-g (score 0.695)",
+      "state_update": [
+        {
+          "uri": "decision://aero/s5-match-recorded",
+          "by": "agent://s2",
+          "authority": "delegation://aero/s2-match",
+          "alternatives": [
+            "offer://aero/o-g",
+            "none"
+          ],
+          "confidence": 0.92,
+          "expected_outcome": "good partner ranked #1",
+          "actual_outcome": "offer://aero/o-g",
+          "detail": [
+            {
+              "offer": "offer://aero/o-g",
+              "provider": "org://aero/apex-aeronautics",
+              "fit": 1.0,
+              "trust": 0.695,
+              "score": 0.695
+            }
+          ],
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "157c252b7cc0f8a222ac2805ff08530d455a81109c622046d4d060088844e3e3"
+    },
+    {
+      "uri": "event://aero/s5-escalate",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7009",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7008",
+      "idempotency_key": "idem-s5-7009",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "escalation: the committed action is irreversible and cost-unknowable once done (\u00a76 floor)",
+      "state_update": [
+        {
+          "uri": "escalation://aero/escalate-release",
+          "trigger": "external flight-critical release \u2014 irreversible and cost-unknowable once in the build",
+          "severity": "WARN",
+          "recipient": "person://aero/pgm",
+          "deadline": "2026-11-15T00:00:00Z",
+          "fallback": "agent://aero/s4",
+          "authority": "authority://aero/for-ops",
+          "acknowledgement": "approve then execute"
+        }
+      ],
+      "hash": "01dec2b0d068acf02776d2d5f7eaac16dcb904a368bafb6b72cf989e7a3674b8"
+    },
+    {
+      "uri": "event://aero/owner-human",
+      "type": "DECISION",
+      "event_id": "ev-aero-7010",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-aero-7009",
+      "idempotency_key": "idem-aero-7010",
+      "signature": "signed-by-person://aero/pgm",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "person://aero/pgm",
+      "detail": "person://aero/pgm signed approval to release the committed action (\u00a76 floor)",
+      "state_update": [
+        {
+          "uri": "decision://aero/owner-human",
+          "by": "person://aero/pgm",
+          "authority": "authority://aero/for-ops",
+          "alternatives": [
+            "release_in_full",
+            "hold",
+            "release_partial_and_hold_if_shortfall",
+            "open_dispute"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "release to the verified partner",
+          "actual_outcome": "release_in_full (human approved)",
+          "detail": {
+            "task": "task://aero/t-rebalance",
+            "action": "release_committed_action",
+            "irreversible_failure": true,
+            "cost_failure_unknowable": true
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "e8a7dfc9145a64c66c11497ded33e5a9250f85fc70a7f827325c9611b203bd5a"
+    },
+    {
+      "uri": "event://aero/action-release",
+      "type": "ACTION",
+      "event_id": "ev-aero-7011",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-aero-7010",
+      "idempotency_key": "idem-aero-7011",
+      "signature": "signed-by-person://aero/pgm",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/prog-ops",
+      "detail": "rebalance_commitment executed after human approval",
+      "worker": "agent://aero/prog-ops",
+      "action": "rebalance_commitment",
+      "task_id": "t-rebalance",
+      "tier": "human",
+      "outcome": "done",
+      "state_update": [],
+      "hash": "d5cc67d5c0ce2ffb3ebd5dd67bb9609d63fc87705db0cabac2bb22d3d6f28482"
+    },
+    {
+      "uri": "event://aero/s5-case-blocked",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7012",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7011",
+      "idempotency_key": "idem-s5-7012",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "case blocked pending the rallied committed delivery's verification",
+      "state_update": [
+        {
+          "uri": "case://aero/c-on-time",
+          "subject": "committed airframe-subsystem delivery below target on time",
+          "status": "BLOCKED",
+          "owner": "person://aero/pgm",
+          "actors": [
+            "org://aero/valiant-aero",
+            "person://aero/pgm",
+            "agent://aero/prog-ops"
+          ],
+          "relationships": [
+            "relationship://aero/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-blocked"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed airframe-subsystem delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "supplier failure \u2014 org://aero/vireo-airframe missed its committed airframe subsystem delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed subsystem work to the verified on-time integrator (apex-aeronautics) and gate the laggard (vireo-airframe)",
+          "metric": "metric://aero/m-on-time"
+        }
+      ],
+      "hash": "699fae753d9e4abcf213990ed339799181318f19a7777bfc045c1e75c05d7d1d"
+    },
+    {
+      "uri": "event://aero/s5-state-7013",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7013",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7012",
+      "idempotency_key": "idem-s5-7013",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "rallied committed work allocated to org://aero/apex-aeronautics (the fix)",
+      "state_update": [
+        {
+          "uri": "commitment://aero/c-apex-aeronautics-followup",
+          "by": "agent://aero/s5",
+          "to": "org://aero/apex-aeronautics",
+          "obligation": "offer://aero/o-g",
+          "expectation": "expectation://aero/e-routed-apex-aeronauticsR",
+          "status": "AGREED",
+          "terms": {
+            "kind": "airframe-subsystem delivery follow-up",
+            "signed": true
+          },
+          "agreed_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "507691afbe5bef4f8fb2a3d6735f401ec95b0c86773d3655e9619135af6afa7f"
+    },
+    {
+      "uri": "event://aero/s5-state-7014",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7014",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7013",
+      "idempotency_key": "idem-s5-7014",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "register follow-on expectation",
+      "state_update": [
+        {
+          "uri": "expectation://aero/e-apex-aeronauticsR",
+          "actor": "person://aero/pgm",
+          "subject": "airframe-subsystem delivery",
+          "condition": "fully deliver the committed resource by its committed deadline",
+          "metric": "settled_value",
+          "threshold": 2000000.0,
+          "deadline": "2026-11-15T00:00:00Z",
+          "evidence_required": "CLEAR"
+        }
+      ],
+      "hash": "da63465bee75bb14a83ebb6cdb397b406dbc96eb4bf49c027cd1418a4a1e620b"
+    },
+    {
+      "uri": "event://aero/s4-exchange-apex-aeronauticsR",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-7015",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7014",
+      "idempotency_key": "idem-s4-7015",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange apex-aeronauticsR: 2000000.0 USD org://aero/valiant-aero->org://aero/apex-aeronautics (value 2000000.0, cost 2000000.0)",
+      "state_update": [
+        {
+          "uri": "asset://money/aero-escrow-apex-aeronauticsR",
+          "kind": "MONEY",
+          "title": "org://aero/apex-aeronautics",
+          "custody": "cleared",
+          "value": 2000000.0,
+          "currency": "USD",
+          "status": "DELIVERED",
+          "provenance": "settled by org://aero/valiant-aero for org://aero/apex-aeronautics (apex-aeronauticsR)"
+        },
+        {
+          "uri": "obligation://aero/s4-pay-apex-aeronauticsR",
+          "subject": "org://aero/valiant-aero",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "settle 2000000.0 USD for contracted work by org://aero/apex-aeronautics",
+          "due_by": "2026-11-15T00:00:00Z",
+          "status": "FULFILLED",
+          "settled_at": "2026-11-12T00:00:00Z"
+        },
+        {
+          "uri": "receipt://aero/s4-receipt-apex-aeronauticsR",
+          "kind": "SETTLEMENT",
+          "from": "org://aero/valiant-aero",
+          "to": "org://aero/apex-aeronautics",
+          "amount": 2000000.0,
+          "currency": "USD",
+          "received_at": "2026-11-12T00:00:00Z"
+        },
+        {
+          "uri": "decision://aero/s4-recon-apex-aeronauticsR",
+          "by": "agent://s4",
+          "authority": "authority://aero/for-settlement",
+          "alternatives": [
+            "reject"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "expected 2000000.0 USD from org://aero/valiant-aero",
+          "actual_outcome": "matched exactly: settled 2000000.0 USD",
+          "detail": {
+            "slug": "apex-aeronauticsR",
+            "expected": 2000000.0,
+            "actual": 2000000.0,
+            "matched": true,
+            "buyer": "org://aero/valiant-aero",
+            "provider": "org://aero/apex-aeronautics",
+            "reconciliation": "balanced"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        },
+        {
+          "uri": "event://aero/s4-exchange-apex-aeronauticsR",
+          "type": "EXCHANGE",
+          "event_id": "ev-s4-7015",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-7014",
+          "idempotency_key": "idem-s4-7015",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "settle exchange apex-aeronauticsR: 2000000.0 USD org://aero/valiant-aero->org://aero/apex-aeronautics (value 2000000.0, cost 2000000.0)",
+          "state_update": [],
+          "value": 2000000.0,
+          "cost": 2000000.0,
+          "price": 2000000.0,
+          "currency": "USD",
+          "buyer": "org://aero/valiant-aero",
+          "provider": "org://aero/apex-aeronautics",
+          "settled_at": "2026-11-12T00:00:00Z",
+          "exchange_of": "commitment://aero/c-apex-aeronauticsR"
+        }
+      ],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://aero/valiant-aero",
+      "provider": "org://aero/apex-aeronautics",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "exchange_of": "commitment://aero/c-apex-aeronauticsR",
+      "hash": "36560d7a33adabe78527166e0fcf89e6ac7bd4e0668cdf9b9b143cf461c81a9d"
+    },
+    {
+      "uri": "event://aero/s4-outcome-apex-aeronauticsR",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-7016",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7015",
+      "idempotency_key": "idem-s4-7016",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle apex-aeronauticsR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+      "state_update": [
+        {
+          "uri": "event://aero/s4-outcome-apex-aeronauticsR",
+          "type": "OUTCOME",
+          "event_id": "ev-s4-7016",
+          "correlation_id": "corr-qk-s4-1",
+          "causation_id": "ev-s4-7015",
+          "idempotency_key": "idem-s4-7016",
+          "signature": "signed-by-agent://s4",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "agent://s4",
+          "detail": "evaluate settle apex-aeronauticsR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+          "state_update": [],
+          "evaluation": "met",
+          "expected": 2000000.0,
+          "actual": 2000000.0,
+          "deadline": "2026-11-15T00:00:00Z",
+          "settled_at": "2026-11-12T00:00:00Z",
+          "score": 1.0
+        }
+      ],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "score": 1.0,
+      "hash": "fc0080d4fda290caf3b6559922f2024dcef4e96a77a6e4b7ea205e81c6af0543"
+    },
+    {
+      "uri": "event://aero/outcome-routed-apex-aeronauticsR",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-7017",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7016",
+      "idempotency_key": "idem-s2-7017",
+      "signature": "signed-by-org://aero/apex-aeronautics",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://aero/apex-aeronautics",
+      "detail": "job routed-apex-aeronauticsR by org://aero/apex-aeronautics: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://aero/outcome-routed-apex-aeronauticsR",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-7017",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-7016",
+          "idempotency_key": "idem-s2-7017",
+          "signature": "signed-by-org://aero/apex-aeronautics",
+          "occurred_at": "2026-09-01T00:29:53Z",
+          "actor": "org://aero/apex-aeronautics",
+          "detail": "job routed-apex-aeronauticsR by org://aero/apex-aeronautics: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "routed-apex-aeronauticsR",
+          "provider": "org://aero/apex-aeronautics",
+          "committed_deadline": "2026-11-15T00:00:00Z",
+          "actual_completed_at": "2026-11-12T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://aero/routed-apex-aeronauticsR",
+          "kind": "ANCHORED",
+          "source": "signed committed-airframe-subsystem delivery record + aero anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "job": "routed-apex-aeronauticsR",
+      "provider": "org://aero/apex-aeronautics",
+      "committed_deadline": "2026-11-15T00:00:00Z",
+      "actual_completed_at": "2026-11-12T00:00:00Z",
+      "on_time": true,
+      "hash": "0e29dbb04f3cfe38d609094df1bd99762540d1ba8be75c9c98f5bbc9c899f506"
+    },
+    {
+      "uri": "event://aero/verify-routed-apex-aeronauticsR",
+      "type": "DECISION",
+      "event_id": "ev-s2-7018",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7017",
+      "idempotency_key": "idem-s2-7018",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://aero/apex-aeronautics delivered the rallied committed airframe-subsystem delivery on time' -> degree 0.95 under procedure 'anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://aero/routed-apex-aeronauticsR",
+          "proposer": "agent://s5",
+          "statement": "org://aero/apex-aeronautics delivered the rallied committed airframe-subsystem delivery on time"
+        },
+        {
+          "uri": "evidence://aero/routed-apex-aeronauticsR",
+          "kind": "ANCHORED",
+          "source": "signed committed-airframe-subsystem delivery record + aero anchor",
+          "verity": {
+            "procedure": "anchor-conformance",
+            "confidence": 0.95
+          },
+          "captured_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "28d897ececdb214fcd9ed84b53e90448aac4830ed29b3c733f07d3f766d1f887"
+    },
+    {
+      "uri": "event://aero/trust-update-apex-aeronautics",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-7019",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7018",
+      "idempotency_key": "idem-s2-7019",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "trust for org://aero/apex-aeronautics [airframe-subsystem delivery reliability] 0.695 -> 0.790 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://aero/t-apex-aeronautics",
+          "subject": "org://aero/valiant-aero",
+          "target": "org://aero/apex-aeronautics",
+          "claim": "airframe-subsystem delivery reliability",
+          "context": "relationship://aero/partner-net",
+          "score": 0.79,
+          "updated_at": "2026-09-01T00:29:53Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://aero/routed-apex-aeronauticsR"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "1f64ed93b29fe2d6a25e17d83c3022698cd4eac4b0e5503b75067dbbbceb907a"
+    },
+    {
+      "uri": "event://aero/s5-case-resolved",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7020",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7019",
+      "idempotency_key": "idem-s5-7020",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "exception resolved: rallied committed work verified on time; forward on-time = 1.0; cumulative 2/4",
+      "state_update": [
+        {
+          "uri": "case://aero/c-on-time",
+          "subject": "committed airframe-subsystem delivery below target on time",
+          "status": "RESOLVED",
+          "owner": "person://aero/pgm",
+          "actors": [
+            "org://aero/valiant-aero",
+            "person://aero/pgm",
+            "agent://aero/prog-ops"
+          ],
+          "relationships": [
+            "relationship://aero/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-blocked"
+            },
+            {
+              "status": "RESOLVED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-resolved"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed airframe-subsystem delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "supplier failure \u2014 org://aero/vireo-airframe missed its committed airframe subsystem delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed subsystem work to the verified on-time integrator (apex-aeronautics) and gate the laggard (vireo-airframe)",
+          "metric": "metric://aero/m-on-time",
+          "verified_outcome": "forward on-time restored to 1.0; org://aero/apex-aeronautics delivered the rallied airframe-subsystem delivery on time (evidence://aero/routed-apex-aeronauticsR); org://aero/apex-aeronautics Trust 0.79"
+        }
+      ],
+      "hash": "dcc5ff5e0451ed3bed739efa098a84da39c2f0d6993ce636a442d2c42b8440f4"
+    },
+    {
+      "uri": "event://aero/s5-state-7021",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7021",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7020",
+      "idempotency_key": "idem-s5-7021",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "learning entry decision://aero/learning: Routing subsystem work via an integrator with verified on-time delivery (apex-aeronautics), while gating the laggard (vireo-airframe), restored on-time delivery. Verified good deliveries compound scoped Trust.",
+      "state_update": [
+        {
+          "uri": "decision://aero/learning",
+          "by": "agent://aero/s5",
+          "authority": "authority://aero/for-operations",
+          "subject": "airframe-subsystem delivery on-time management",
+          "expected": 0.95,
+          "actual": 1.0,
+          "variance": 0.05,
+          "why": "Routing subsystem work via an integrator with verified on-time delivery (apex-aeronautics), while gating the laggard (vireo-airframe), restored on-time delivery. Verified good deliveries compound scoped Trust.",
+          "change_future_policy": "ALLOCATE by fit AND scoped Trust; integrators below the Trust floor need a performance gate before new work.",
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "9b724dbaa7cb006f6be7def1b4f3ea6c332b36d7802a559f5b93db6eea6feba3"
+    },
+    {
+      "uri": "event://aero/s5-state-7022",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7022",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7021",
+      "idempotency_key": "idem-s5-7022",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "close case; learning recorded; future policy updated",
+      "state_update": [
+        {
+          "uri": "policy://aero/allocation",
+          "name": "aero allocation",
+          "condition": "a new committed delivery is to be allocated",
+          "decision": "ALLOCATE by fit AND scoped Trust; integrators below the Trust floor need a performance gate before new work. (learned 2026-09-01)",
+          "action": "allocate to the top-ranked fitted partner; gate laggard",
+          "scope": [
+            "expectation://aero/e-on-time"
+          ],
+          "version": 3,
+          "policy_status": "EFFECTIVE",
+          "learning": "decision://aero/learning"
+        }
+      ],
+      "hash": "1fcdce348d33946b607eaf61ee34646c6f816eaaf886a48967cd677b82eacf00"
+    },
+    {
+      "uri": "event://aero/s5-case-closed",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7022",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7021",
+      "idempotency_key": "idem-s5-7022",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "case closed",
+      "state_update": [
+        {
+          "uri": "case://aero/c-on-time",
+          "subject": "committed airframe-subsystem delivery below target on time",
+          "status": "CLOSED",
+          "owner": "person://aero/pgm",
+          "actors": [
+            "org://aero/valiant-aero",
+            "person://aero/pgm",
+            "agent://aero/prog-ops"
+          ],
+          "relationships": [
+            "relationship://aero/ops-rel"
+          ],
+          "created_at": "2026-09-01T00:29:53Z",
+          "history": [
+            {
+              "status": "OPEN",
+              "at": "2026-09-01T00:29:53Z",
+              "event": null
+            },
+            {
+              "status": "TRIAGE",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-triage"
+            },
+            {
+              "status": "ASSIGNED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-assigned"
+            },
+            {
+              "status": "IN_PROGRESS",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-inprogress"
+            },
+            {
+              "status": "BLOCKED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-blocked"
+            },
+            {
+              "status": "RESOLVED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-resolved"
+            },
+            {
+              "status": "CLOSED",
+              "at": "2026-09-01T00:29:53Z",
+              "event": "event://aero/s5-case-closed"
+            }
+          ],
+          "suggestion": "ledger-projected on-time below target",
+          "expected": 0.95,
+          "actual": 0.333,
+          "variance": -0.617,
+          "significance": "CRITICAL",
+          "exception": "Committed airframe-subsystem delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+          "root_cause": "supplier failure \u2014 org://aero/vireo-airframe missed its committed airframe subsystem delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED",
+          "recommended_action": "Re-allocate committed subsystem work to the verified on-time integrator (apex-aeronautics) and gate the laggard (vireo-airframe)",
+          "metric": "metric://aero/m-on-time",
+          "verified_outcome": "forward on-time restored to 1.0; org://aero/apex-aeronautics delivered the rallied airframe-subsystem delivery on time (evidence://aero/routed-apex-aeronauticsR); org://aero/apex-aeronautics Trust 0.79"
+        }
+      ],
+      "hash": "4fcb5f260e28ce86f52946a929c79fa531c272f492327a45145e84754e1cefb0"
+    },
+    {
+      "uri": "event://aero/s5-state-7023",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7023",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7022",
+      "idempotency_key": "idem-s5-7023",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "register goal + ledger-projected metrics",
+      "state_update": [
+        {
+          "uri": "goal://aero/g-core",
+          "for": "org://aero/valiant-aero",
+          "statement": "Consistently deliver committed airframe subsystems on time so aviation customers keep Valiant Aero on the program.",
+          "horizon": "quarter",
+          "owner": "person://aero/pgm",
+          "metrics": [
+            "metric://aero/m-on-time",
+            "metric://aero/m-trust",
+            "metric://aero/m-settled-value"
+          ]
+        },
+        {
+          "uri": "metric://aero/m-on-time",
+          "name": "Committed-airframe-subsystem delivery on-time rate",
+          "definition": "share of committed airframe-subsystem delivery deliveries verified on time",
+          "unit": "fraction",
+          "formula": "on_time / (on_time + late) from ledger",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 0.95,
+          "threshold": 0.8,
+          "period": "quarter",
+          "source": "ledger committed-delivery records",
+          "owner": "person://aero/pgm",
+          "actual": 0.5,
+          "forecast": 0.5,
+          "variance": -0.45,
+          "root_cause": "supplier failure \u2014 org://aero/vireo-airframe missed its committed airframe subsystem delivery by 2 days; scoped Trust fell 0.90->0.51",
+          "root_cause_status": "SUPPORTED"
+        },
+        {
+          "uri": "metric://aero/m-trust",
+          "name": "Partner scoped-trust score",
+          "definition": "best scoped Trust on the partner network (per \u00a75)",
+          "unit": "score",
+          "formula": "T(subject->target, claim, context) per \u00a75",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 0.9,
+          "threshold": 0.6,
+          "period": "rolling",
+          "source": "S5 scoped Trust graph",
+          "owner": "person://aero/pgm",
+          "actual": 0.79,
+          "forecast": 0.92,
+          "variance": -0.11,
+          "root_cause_status": "UNKNOWN"
+        },
+        {
+          "uri": "metric://aero/m-settled-value",
+          "name": "Settled committed value",
+          "definition": "value of EXCHANGE events settled this period",
+          "unit": "USD",
+          "formula": "sum(EXCHANGE.price) from ledger",
+          "dimensions": [
+            "partner"
+          ],
+          "target": 7600000.0,
+          "threshold": 4180000.0000000005,
+          "period": "quarter",
+          "source": "ledger EXCHANGE events",
+          "owner": "person://aero/pgm",
+          "actual": 7600000.0,
+          "forecast": 8740000.0,
+          "variance": 0.0,
+          "root_cause_status": "UNKNOWN"
+        }
+      ],
+      "hash": "23ec9015fc0468128c548eb12a2e88774c13f053ecdb7b5b6f6a858f0171ce0c"
+    },
+    {
+      "uri": "event://aero/s5-state-7024",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7024",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7023",
+      "idempotency_key": "idem-s5-7024",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "goal->metric->variance->decision->action->outcome",
+      "state_update": [
+        {
+          "uri": "decision://aero/s5-metric-loop",
+          "by": "agent://aero/s5",
+          "authority": "authority://aero/for-operations",
+          "alternatives": [
+            "do nothing",
+            "rebalance provider allocation"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "metric://aero/m-on-time variance reduced toward target",
+          "detail": {
+            "goal": "goal://aero/g-core",
+            "metric": "metric://aero/m-on-time",
+            "actual": 0.5,
+            "variance": -0.45,
+            "action": "task://aero/t-rebalance",
+            "outcome": "event://aero/outcome-routed-apex-aeronauticsR"
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "a9275429332d74701081a6a706fca4cf0b0331f74c91098796338ced0933ebc2"
+    },
+    {
+      "uri": "event://aero/s5-state-7025",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7025",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7024",
+      "idempotency_key": "idem-s5-7025",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "priority-ordered attention list",
+      "state_update": [
+        {
+          "uri": "decision://aero/s5-attention",
+          "by": "agent://aero/s5",
+          "authority": "authority://aero/for-ops",
+          "confidence": 0.9,
+          "expected_outcome": "top-of-attention ranked",
+          "actual_outcome": "attention prioritized by derived score",
+          "detail": {
+            "attention": [
+              {
+                "uri": "task://aero/t-rebalance",
+                "label": "re-balance committed work",
+                "priority": 0.695
+              },
+              {
+                "uri": "task://aero/t-followup",
+                "label": "rallied follow-on (good partner)",
+                "priority": 0.58
+              }
+            ]
+          },
+          "made_at": "2026-09-01T00:29:53Z"
+        }
+      ],
+      "hash": "111d944a6a34d957f75e06e7ae3f9530af648d1238d73f3d739faabbef861317"
+    },
+    {
+      "uri": "event://aero/s5-state-7026",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7026",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7025",
+      "idempotency_key": "idem-s5-7026",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "dependency dependency://aero/d-rb-enables-fu: task://aero/t-rebalance ENABLES task://aero/t-followup",
+      "state_update": [
+        {
+          "uri": "dependency://aero/d-rb-enables-fu",
+          "from": "task://aero/t-rebalance",
+          "to": "task://aero/t-followup",
+          "kind": "ENABLES"
+        }
+      ],
+      "hash": "d250758487792f260c3612f77047a00ffe11405ebf937c29d0d827171d699a03"
+    },
+    {
+      "uri": "event://aero/s5-state-7027",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7027",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7026",
+      "idempotency_key": "idem-s5-7027",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "dependency dependency://aero/d-fu-requires-pol: task://aero/t-followup REQUIRES policy://aero/allocation",
+      "state_update": [
+        {
+          "uri": "dependency://aero/d-fu-requires-pol",
+          "from": "task://aero/t-followup",
+          "to": "policy://aero/allocation",
+          "kind": "REQUIRES"
+        }
+      ],
+      "hash": "411423d21cec32c663ca39050ae9c413994e0a1f48303958aeb2a20058263a65"
+    },
+    {
+      "uri": "event://aero/s5-state-7028",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7028",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7027",
+      "idempotency_key": "idem-s5-7028",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "dependency dependency://aero/d-fu-blocks-case: task://aero/t-followup BLOCKS case://aero/c-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://aero/d-fu-blocks-case",
+          "from": "task://aero/t-followup",
+          "to": "case://aero/c-on-time",
+          "kind": "BLOCKS"
+        }
+      ],
+      "hash": "104d78a7fe268b3c9b866f32377a40dcf4d5fb68dfcee8530afdc13565325514"
+    },
+    {
+      "uri": "event://aero/s5-state-7029",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7029",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7028",
+      "idempotency_key": "idem-s5-7029",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "dependency dependency://aero/d-case-from-metric: case://aero/c-on-time DERIVED_FROM metric://aero/m-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://aero/d-case-from-metric",
+          "from": "case://aero/c-on-time",
+          "to": "metric://aero/m-on-time",
+          "kind": "DERIVED_FROM"
+        }
+      ],
+      "hash": "66d3fba90aec7b526b048ec6b14236bccc33526e186113aeecdff69287ec5d82"
+    },
+    {
+      "uri": "event://aero/s5-state-7030",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7030",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7029",
+      "idempotency_key": "idem-s5-7030",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "dependency dependency://aero/d-metric-impacts-goal: metric://aero/m-on-time IMPACTS goal://aero/g-core",
+      "state_update": [
+        {
+          "uri": "dependency://aero/d-metric-impacts-goal",
+          "from": "metric://aero/m-on-time",
+          "to": "goal://aero/g-core",
+          "kind": "IMPACTS"
+        }
+      ],
+      "hash": "93bc3ed1162a1a937d15e97519c31485339931ca2272ae40b80eb23e15c4763e"
+    },
+    {
+      "uri": "event://aero/s5-state-7031",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s5-7031",
+      "correlation_id": "corr-aero-bol-1",
+      "causation_id": "ev-s5-7030",
+      "idempotency_key": "idem-s5-7031",
+      "signature": "signed-by-agent://aero/s5",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://aero/s5",
+      "detail": "dependency dependency://aero/d-rb-blocks-case: task://aero/t-rebalance BLOCKS case://aero/c-on-time",
+      "state_update": [
+        {
+          "uri": "dependency://aero/d-rb-blocks-case",
+          "from": "task://aero/t-rebalance",
+          "to": "case://aero/c-on-time",
+          "kind": "BLOCKS"
+        }
+      ],
+      "hash": "c1f3299a85acd4bd617c763144038a6878b6298a661114ccaa32f2913ec03e9a"
+    }
+  ]
+}

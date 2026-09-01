@@ -1,0 +1,38 @@
+[
+  {
+    "uri": "dependency://auto/d-rb-enables-fu",
+    "from": "task://auto/t-rebalance",
+    "to": "task://auto/t-followup",
+    "kind": "ENABLES"
+  },
+  {
+    "uri": "dependency://auto/d-fu-requires-pol",
+    "from": "task://auto/t-followup",
+    "to": "policy://auto/allocation",
+    "kind": "REQUIRES"
+  },
+  {
+    "uri": "dependency://auto/d-fu-blocks-case",
+    "from": "task://auto/t-followup",
+    "to": "case://auto/c-on-time",
+    "kind": "BLOCKS"
+  },
+  {
+    "uri": "dependency://auto/d-case-from-metric",
+    "from": "case://auto/c-on-time",
+    "to": "metric://auto/m-on-time",
+    "kind": "DERIVED_FROM"
+  },
+  {
+    "uri": "dependency://auto/d-metric-impacts-goal",
+    "from": "metric://auto/m-on-time",
+    "to": "goal://auto/g-core",
+    "kind": "IMPACTS"
+  },
+  {
+    "uri": "dependency://auto/d-rb-blocks-case",
+    "from": "task://auto/t-rebalance",
+    "to": "case://auto/c-on-time",
+    "kind": "BLOCKS"
+  }
+]

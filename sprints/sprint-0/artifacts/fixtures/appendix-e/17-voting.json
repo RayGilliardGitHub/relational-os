@@ -1,0 +1,35 @@
+[
+  {
+    "uri": "person://e17/voter",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e17/state",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e17/vote",
+    "participants": [
+      "person://e17/voter",
+      "org://e17/state"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "person://e17/voter": [
+        "citizen"
+      ]
+    }
+  },
+  {
+    "uri": "event://e17/private",
+    "type": "ACTION",
+    "actor": "person://e17/voter",
+    "event_id": "event-e17-private",
+    "correlation_id": "event-e17-private-c",
+    "causation_id": "event-e17-private-ca",
+    "idempotency_key": "event-e17-private-i",
+    "signature": "zero-knowledge-proof",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "disclosure": "NON_DISCLOSURE"
+  }
+]

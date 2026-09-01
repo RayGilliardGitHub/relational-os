@@ -1,0 +1,51 @@
+[
+  {
+    "uri": "person://e03/emp",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e03/walmart",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e03/employ",
+    "participants": [
+      "person://e03/emp",
+      "org://e03/walmart"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "person://e03/emp": [
+        "employee"
+      ]
+    },
+    "effective_from": "2024-03-01T00:00:00Z"
+  },
+  {
+    "uri": "commitment://e03/c1",
+    "by": "person://e03/emp",
+    "to": "perform duties per role"
+  },
+  {
+    "uri": "obligation://e03/o1",
+    "subject": "org://e03/walmart",
+    "source": "IMPOSED",
+    "content": "pay wages"
+  },
+  {
+    "uri": "interaction://e03/payroll",
+    "of": "relationship://e03/employ",
+    "kind": "EXCHANGE"
+  },
+  {
+    "uri": "event://e03/exchange",
+    "type": "EXCHANGE",
+    "event_id": "event-e03/exchange",
+    "correlation_id": "event-ce03/exchange",
+    "causation_id": "event-cae03/exchange",
+    "idempotency_key": "event-ie03/exchange",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "org://e03/walmart"
+  }
+]

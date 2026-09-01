@@ -1,0 +1,52 @@
+[
+  {
+    "uri": "agent://e19/agent",
+    "type": "AGENT"
+  },
+  {
+    "uri": "org://e19/company",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e19/r1",
+    "participants": [
+      "agent://e19/agent",
+      "org://e19/company"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://e19/d1",
+    "grantor": "org://e19/company",
+    "grantee": "agent://e19/agent",
+    "scope": [
+      "rule://e19/approve-invoices-under-5k"
+    ]
+  },
+  {
+    "uri": "decision://e19/d1",
+    "by": "agent://e19/agent",
+    "authority": "delegation://e19/d1",
+    "alternatives": [
+      "approve",
+      "escalate"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "uri": "event://e19/decision",
+    "type": "DECISION",
+    "event_id": "event-e19/decision",
+    "correlation_id": "event-ce19/decision",
+    "causation_id": "event-cae19/decision",
+    "idempotency_key": "event-ie19/decision",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "agent://e19/agent"
+  },
+  {
+    "uri": "interaction://e19/approve",
+    "of": "relationship://e19/r1",
+    "kind": "DECISION"
+  }
+]

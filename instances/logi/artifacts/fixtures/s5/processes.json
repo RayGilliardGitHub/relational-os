@@ -1,0 +1,29 @@
+[
+  {
+    "uri": "process://logi/pr-core",
+    "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+    "steps": [
+      "triage",
+      "assign",
+      "execute",
+      "verify_outcome",
+      "learning"
+    ]
+  },
+  {
+    "uri": "process_instance://logi/pi-core",
+    "process": "process://logi/pr-core",
+    "status": "RUNNING",
+    "started_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "escalation://logi/escalate-release",
+    "trigger": "external freight release \u2014 irreversible and cost-unknowable once dispatched",
+    "severity": "WARN",
+    "recipient": "person://logi/cco",
+    "deadline": "2026-11-15T00:00:00Z",
+    "fallback": "agent://logi/s4",
+    "authority": "authority://logi/for-ops",
+    "acknowledgement": "approve then execute"
+  }
+]

@@ -1,0 +1,249 @@
+[
+  {
+    "uri": "org://aero/valiant-aero",
+    "type": "ORG",
+    "identity": {
+      "attestations": [
+        "business-license"
+      ]
+    },
+    "brand": {
+      "tagline": "Subsystems on the line, on the date.",
+      "mission": "Deliver committed airframe subsystems and flight-critical components reliably and on time so aviation customers can keep their programmes on schedule and their fleets flying.",
+      "vision": "Aerospace programmes where subsystem delivery is the dependable core, not the critical-path risk.",
+      "values": [
+        [
+          "Zero compromises",
+          "Flight-critical means the evidence bar is non-negotiable."
+        ],
+        [
+          "Schedule integrity",
+          "A late subsystem can ground a programme; we protect the date."
+        ],
+        [
+          "Verification culture",
+          "We prove readiness with data before anything is in the build."
+        ],
+        [
+          "Partnership",
+          "Fleet customers plan years ahead; we keep those plans honest."
+        ],
+        [
+          "Stewardship",
+          "We build responsibly \u2014 safety, export control, and ISO-grade process."
+        ]
+      ],
+      "about": "Valiant Aero is an aerospace, defense, and aviation subsystem operator. We take committed airframe-subsystem deliveries and bring them in on the building date \u2014 integrated, verified, and traceable to the part. For programmes where a missed subsystem is a schedule domino, we make delivery reliability the least anxious part of the build.",
+      "fast_facts": [
+        "Founded 2001, aerospace subsystems",
+        "Component-level to subsystem integration scope",
+        "Fleet and programme customers on 3 continents"
+      ],
+      "history": [
+        [
+          "2001",
+          "Founded near Dayton for precision aerospace work."
+        ],
+        [
+          "2013",
+          "Won our first major airframe-subsystem programme."
+        ],
+        [
+          "2021",
+          "Placed every committed subsystem delivery under ledger-verified evidence."
+        ]
+      ],
+      "leadership": [
+        [
+          "Colonel (ret.) Marta Reyes",
+          "Chief Executive",
+          "Former programme manager who runs Valiant Aero on delivery integrity."
+        ],
+        [
+          "Erik Lindqvist",
+          "Chief Program Officer",
+          "Owns subsystem integration across all active programmes."
+        ]
+      ],
+      "products_services": [
+        "Airframe-subsystem design and delivery",
+        "Flight-critical component integration",
+        "Aerospace programme schedule assurance"
+      ],
+      "testimonials": [
+        [
+          "Valiant Aero is the subsystem partner we can build our master schedule around.",
+          "Fleet programme lead"
+        ]
+      ],
+      "trust": [
+        [
+          "98.9% committed airframe-subsystem on-time rate (2025)",
+          "Valiant delivery ledger"
+        ],
+        [
+          "AS9100 aerospace quality certification",
+          "third-party audit"
+        ]
+      ],
+      "locations": "Near Dayton, OH (HQ) \u00b7 integration hangars and partner facilities on 3 continents",
+      "faq": [
+        [
+          "How does on-time delivery work with flight certification?",
+          "Verification and certification gates are built into the schedule; our on-time evidence covers the committed delivery on the agreed date."
+        ],
+        [
+          "Do you handle classified work?",
+          "Yes, we hold appropriate clearances and follow export-control process at every stage."
+        ]
+      ],
+      "contact": "programs@valiantaero.example \u00b7 +1-937-555-0104",
+      "careers": "Keep programmes on schedule and fleets flying: engineering, program mgmt, quality, integration.",
+      "investors": "Privately held. Programme-and-reliability reporting shared with defence customers under NDA.",
+      "press": "media@valiantaero.example \u2014 schedule, quality, and programme announcements.",
+      "esg": "ISO-grade process, responsible export control, engineering education partnerships.",
+      "legal": [
+        "Privacy",
+        "Terms",
+        "Export-Control Notice",
+        "California Rights",
+        "Do Not Sell or Share"
+      ],
+      "nav": [
+        "About",
+        "Capabilities",
+        "Programmes",
+        "Quality",
+        "Careers",
+        "Investors",
+        "Press",
+        "Contact"
+      ],
+      "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Security Preferences (links)",
+      "design": {
+        "palette": [
+          [
+            "Flightline Grey",
+            "#39434E"
+          ],
+          [
+            "Signal Orange",
+            "#F26522"
+          ],
+          [
+            "Runway White",
+            "#F4F6F8"
+          ],
+          [
+            "Missile Teal",
+            "#0F6E6E"
+          ]
+        ],
+        "typography": {
+          "heading": "Sharp technical sans (e.g. Chivo)",
+          "body": "Technical sans (e.g. Roboto Mono for data, Source Sans for prose)"
+        },
+        "logo": {
+          "wordmark": "VALIANT AERO in angular caps",
+          "character": "a chevron/wing mark",
+          "usage": "clear space wide; orange as a discipline accent only"
+        },
+        "imagery": "Precision and scale: airframes, integration bays, flightline \u2014 engineered and controlled",
+        "tone": "Precise, disciplined, confident; about programme integrity and schedule."
+      }
+    }
+  },
+  {
+    "uri": "org://aero/quantum-air",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://aero/apex-aeronautics",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://aero/vireo-airframe",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://aero/pgm",
+    "type": "PERSON"
+  },
+  {
+    "uri": "agent://aero/prog-ops",
+    "type": "AGENT"
+  },
+  {
+    "uri": "authority://aero/for-ops",
+    "holder": "org://aero/valiant-aero",
+    "grants": [
+      "triage_case",
+      "assign_case",
+      "close_case",
+      "approve_learning",
+      "rebalance_commitment",
+      "gate_partner",
+      "release_committed_action"
+    ],
+    "roles": [
+      "operator"
+    ]
+  },
+  {
+    "uri": "rule://aero/ops-run",
+    "kind": "POLICY",
+    "text": "agent://aero/prog-ops may re-balance resource commitment and gate partner performance",
+    "grants": [
+      "rebalance_commitment",
+      "gate_partner"
+    ]
+  },
+  {
+    "uri": "rule://aero/match-run",
+    "kind": "POLICY",
+    "text": "S2 may run Trust-weighted matching for the client",
+    "grants": [
+      "run_match"
+    ]
+  },
+  {
+    "uri": "delegation://aero/ops",
+    "grantor": "org://aero/valiant-aero",
+    "grantee": "agent://aero/prog-ops",
+    "scope": [
+      "rule://aero/ops-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://aero/s2-match",
+    "grantor": "org://aero/valiant-aero",
+    "grantee": "agent://s2",
+    "scope": [
+      "rule://aero/match-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "offer://aero/o-g",
+    "provider": "org://aero/apex-aeronautics",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "subsystem",
+      "integration"
+    ],
+    "fit_note": "aerospace / defense / aviation partner delivery line"
+  },
+  {
+    "uri": "offer://aero/o-l",
+    "provider": "org://aero/vireo-airframe",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "subsystem",
+      "integration"
+    ],
+    "fit_note": "aerospace / defense / aviation partner delivery line"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "uri": "dependency://logi/d-rb-enables-fu",
+    "from": "task://logi/t-rebalance",
+    "to": "task://logi/t-followup",
+    "kind": "ENABLES"
+  },
+  {
+    "uri": "dependency://logi/d-fu-requires-pol",
+    "from": "task://logi/t-followup",
+    "to": "policy://logi/allocation",
+    "kind": "REQUIRES"
+  },
+  {
+    "uri": "dependency://logi/d-fu-blocks-case",
+    "from": "task://logi/t-followup",
+    "to": "case://logi/c-on-time",
+    "kind": "BLOCKS"
+  },
+  {
+    "uri": "dependency://logi/d-case-from-metric",
+    "from": "case://logi/c-on-time",
+    "to": "metric://logi/m-on-time",
+    "kind": "DERIVED_FROM"
+  },
+  {
+    "uri": "dependency://logi/d-metric-impacts-goal",
+    "from": "metric://logi/m-on-time",
+    "to": "goal://logi/g-core",
+    "kind": "IMPACTS"
+  },
+  {
+    "uri": "dependency://logi/d-rb-blocks-case",
+    "from": "task://logi/t-rebalance",
+    "to": "case://logi/c-on-time",
+    "kind": "BLOCKS"
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "uri": "policy://tech/allocation",
+    "name": "tech allocation",
+    "condition": "a new committed delivery is to be allocated",
+    "decision": "ALLOCATE by fit AND scoped Trust (not fit alone); partners below the Trust floor require a performance gate before a new commitment. (learned 2026-09-01)",
+    "action": "allocate to the top-ranked fitted partner; gate laggard",
+    "scope": [
+      "expectation://tech/e-on-time"
+    ],
+    "version": 3,
+    "policy_status": "EFFECTIVE",
+    "learning": "decision://tech/learning"
+  }
+]

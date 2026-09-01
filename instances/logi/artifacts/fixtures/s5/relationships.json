@@ -1,0 +1,46 @@
+[
+  {
+    "uri": "relationship://logi/ops-rel",
+    "participants": [
+      "org://logi/hawkline",
+      "org://logi/papercreek"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://logi/hawkline": [
+        "provider"
+      ],
+      "org://logi/papercreek": [
+        "client"
+      ]
+    },
+    "authority": [
+      "authority://logi/for-ops"
+    ],
+    "purpose": "logistics / transport operating relationship"
+  },
+  {
+    "uri": "relationship://logi/partner-net",
+    "participants": [
+      "org://logi/hawkline",
+      "org://logi/keystone-lines",
+      "org://logi/barnacle-freight"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://logi/hawkline": [
+        "operator"
+      ],
+      "org://logi/keystone-lines": [
+        "partner"
+      ],
+      "org://logi/barnacle-freight": [
+        "partner"
+      ]
+    },
+    "authority": [
+      "authority://logi/for-ops"
+    ],
+    "purpose": "logistics / transport partner network"
+  }
+]

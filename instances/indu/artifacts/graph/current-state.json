@@ -1,0 +1,1246 @@
+{
+  "kind": "GRAPH",
+  "objects": [
+    {
+      "uri": "org://indu/ferrousworks",
+      "type": "ORG",
+      "identity": {
+        "attestations": [
+          "business-license"
+        ]
+      },
+      "brand": {
+        "tagline": "Parts that keep the line turning.",
+        "mission": "Deliver committed machinery parts reliably and on time so plants and workshops trust FerrousWorks enough to keep production lines scheduled without a backstop.",
+        "vision": "Industrial machinery where the part you ordered arrives exactly when the maintenance plan said \u2014 so uptime is planned, not hoped for.",
+        "values": [
+          [
+            "Uptime is the deliverable",
+            "A late part is a stopped line; we protect the schedule."
+          ],
+          [
+            "Machined right",
+            "On time never trades off tolerances or metallurgy."
+          ],
+          [
+            "Traceability",
+            "Every part lot is ledger-verified from material to machine."
+          ],
+          [
+            "Plant partnership",
+            "Planners lean on us to keep lines running."
+          ],
+          [
+            "Built to last",
+            "We make parts that outlast the maintenance cycle."
+          ]
+        ],
+        "about": "FerrousWorks is an industrial machinery-parts supplier. We take committed machinery parts deliveries and land them on the date the production plan needs them \u2014 machined, verified, traceable. In a plant where a missed part means a quiet line and idle labour, our on-time evidence is what lets planners schedule with confidence instead of contingency.",
+        "fast_facts": [
+          "Founded 1983, industrial machinery parts",
+          "5,000+ parts delivered annually",
+          "Serving plants, OEMs, and job shops"
+        ],
+        "history": [
+          [
+            "1983",
+            "Founded as a machine shop in the industrial Midwest."
+          ],
+          [
+            "1999",
+            "Scaled to committed machinery-parts supply."
+          ],
+          [
+            "2017",
+            "Digitised every lot to ledger-verified on-time evidence."
+          ]
+        ],
+        "leadership": [
+          [
+            "Ingrid Halvorsen",
+            "Chief Executive",
+            "Metallurgist and shop floor leader before taking the helm of FerrousWorks."
+          ],
+          [
+            "Carl Betancourt",
+            "Chief Operating Officer",
+            "Owns machining capacity and the on-time gate."
+          ]
+        ],
+        "products_services": [
+          "Machinery parts design and delivery",
+          "Precision machining and fabrication",
+          "Part-traceability and reliability reporting"
+        ],
+        "testimonials": [
+          [
+            "FerrousWorks is the one supplier our maintenance schedule doesn't hedge against.",
+            "Plant maintenance engineer"
+          ]
+        ],
+        "trust": [
+          [
+            "99.0% committed machinery-parts on-time rate (2025)",
+            "FerrousWorks delivery ledger"
+          ],
+          [
+            "ISO 9001 quality management certification",
+            "third-party audit"
+          ]
+        ],
+        "locations": "Cleveland, OH (HQ) \u00b7 machining plants serving the industrial Midwest and beyond",
+        "faq": [
+          [
+            "How is your on-time claim verified?",
+            "Each committed part lot anchors to a signed ledger event with a verified delivery time \u2014 traceable from material order to the plant."
+          ],
+          [
+            "Do you support emergency and planned maintenance parts?",
+            "Yes, both; every committed delivery, planned or rush, runs under the same on-time gate."
+          ]
+        ],
+        "contact": "orders@ferrousworks.example \u00b7 +1-216-555-0156",
+        "careers": "Keep the line turning: machining, metallurgy, supply, quality, planning.",
+        "investors": "Privately held. Plant reliability data shared on request.",
+        "press": "media@ferrousworks.example \u2014 capability and quality announcements.",
+        "esg": "Low-waste machining, material traceability for circularity, apprentice and upskilling programs.",
+        "legal": [
+          "Privacy",
+          "Terms",
+          "California Rights",
+          "Do Not Sell or Share"
+        ],
+        "nav": [
+          "About",
+          "Capabilities",
+          "Plants & Facilites",
+          "Quality",
+          "Careers",
+          "Investors",
+          "Press",
+          "Contact"
+        ],
+        "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+        "design": {
+          "palette": [
+            [
+              "Foundry Charcoal",
+              "#24262B"
+            ],
+            [
+              "Forge Orange",
+              "#D85C27"
+            ],
+            [
+              "Steel Grey",
+              "#9AA0A6"
+            ],
+            [
+              "Mill White",
+              "#F2F1EE"
+            ]
+          ],
+          "typography": {
+            "heading": "Sturdy industrial sans (e.g. Chivo)",
+            "body": "Workhorse sans (e.g. Source Sans 3)"
+          },
+          "logo": {
+            "wordmark": "FERROUSWORKS in hard caps",
+            "character": "a gear/ingot mark",
+            "usage": "clear space sturdy; forge orange as accent on charcoal"
+          },
+          "imagery": "Machining centre work, forged parts, shop floors at scale \u2014 heavy and precise",
+          "tone": "Built, straightforward, exact; about uptime and tolerances."
+        }
+      }
+    },
+    {
+      "uri": "org://indu/downfield",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://indu/quadrant-works",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://indu/cadence-tools",
+      "type": "ORG"
+    },
+    {
+      "uri": "person://indu/plant-mgr",
+      "type": "PERSON"
+    },
+    {
+      "uri": "agent://indu/line-ops",
+      "type": "AGENT"
+    },
+    {
+      "uri": "relationship://indu/ops-rel",
+      "participants": [
+        "org://indu/ferrousworks",
+        "org://indu/downfield"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://indu/ferrousworks": [
+          "provider"
+        ],
+        "org://indu/downfield": [
+          "client"
+        ]
+      },
+      "authority": [
+        "authority://indu/for-ops"
+      ],
+      "purpose": "industrial operating relationship"
+    },
+    {
+      "uri": "relationship://indu/partner-net",
+      "participants": [
+        "org://indu/ferrousworks",
+        "org://indu/quadrant-works",
+        "org://indu/cadence-tools"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://indu/ferrousworks": [
+          "operator"
+        ],
+        "org://indu/quadrant-works": [
+          "partner"
+        ],
+        "org://indu/cadence-tools": [
+          "partner"
+        ]
+      },
+      "authority": [
+        "authority://indu/for-ops"
+      ],
+      "purpose": "industrial partner network"
+    },
+    {
+      "uri": "authority://indu/for-ops",
+      "holder": "org://indu/ferrousworks",
+      "grants": [
+        "triage_case",
+        "assign_case",
+        "close_case",
+        "approve_learning",
+        "rebalance_commitment",
+        "gate_partner",
+        "release_committed_action"
+      ],
+      "roles": [
+        "operator"
+      ]
+    },
+    {
+      "uri": "rule://indu/ops-run",
+      "kind": "POLICY",
+      "text": "agent://indu/line-ops may re-balance resource commitment and gate partner performance",
+      "grants": [
+        "rebalance_commitment",
+        "gate_partner"
+      ]
+    },
+    {
+      "uri": "rule://indu/match-run",
+      "kind": "POLICY",
+      "text": "S2 may run Trust-weighted matching for the client",
+      "grants": [
+        "run_match"
+      ]
+    },
+    {
+      "uri": "delegation://indu/ops",
+      "grantor": "org://indu/ferrousworks",
+      "grantee": "agent://indu/line-ops",
+      "scope": [
+        "rule://indu/ops-run"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "uri": "delegation://indu/s2-match",
+      "grantor": "org://indu/ferrousworks",
+      "grantee": "agent://s2",
+      "scope": [
+        "rule://indu/match-run"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "uri": "expectation://indu/e-on-time",
+      "actor": "person://indu/plant-mgr",
+      "subject": "machinery parts delivery",
+      "condition": "fully deliver the committed machinery parts delivery by its committed deadline",
+      "metric": "on_time",
+      "threshold": 0.95,
+      "deadline": "2026-12-31T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "policy://indu/allocation",
+      "name": "indu allocation",
+      "condition": "a new committed delivery is to be allocated",
+      "decision": "ALLOCATE by fit AND scoped Trust; suppliers below the Trust floor need a gate before new lots. (learned 2026-09-01)",
+      "action": "allocate to the top-ranked fitted partner; gate laggard",
+      "scope": [
+        "expectation://indu/e-on-time"
+      ],
+      "version": 3,
+      "policy_status": "EFFECTIVE",
+      "learning": "decision://indu/learning"
+    },
+    {
+      "uri": "process://indu/pr-core",
+      "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+      "steps": [
+        "triage",
+        "assign",
+        "execute",
+        "verify_outcome",
+        "learning"
+      ]
+    },
+    {
+      "uri": "process_instance://indu/pi-core",
+      "process": "process://indu/pr-core",
+      "status": "RUNNING",
+      "started_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "trust://indu/t-quadrant-works",
+      "subject": "org://indu/ferrousworks",
+      "target": "org://indu/quadrant-works",
+      "claim": "machinery parts delivery reliability",
+      "context": "relationship://indu/partner-net",
+      "score": 0.79,
+      "updated_at": "2026-09-01T00:29:53Z",
+      "expected": 0.8,
+      "outcome": 1.0,
+      "evidence": [
+        "evidence://indu/routed-quadrant-worksR"
+      ],
+      "alpha": 0.5,
+      "recency": 1.0
+    },
+    {
+      "uri": "trust://indu/t-cadence-tools",
+      "subject": "org://indu/ferrousworks",
+      "target": "org://indu/cadence-tools",
+      "claim": "machinery parts delivery reliability",
+      "context": "relationship://indu/partner-net",
+      "score": 0.14,
+      "updated_at": "2026-09-01T00:29:53Z",
+      "expected": 0.8,
+      "outcome": 0.0,
+      "evidence": [
+        "evidence://indu/committed-cadence-toolsQ4"
+      ],
+      "alpha": 0.5,
+      "recency": 1.0
+    },
+    {
+      "uri": "offer://indu/o-g",
+      "provider": "org://indu/quadrant-works",
+      "price": 2000000.0,
+      "currency": "USD",
+      "capability_keys": [
+        "machinery",
+        "parts"
+      ],
+      "fit_note": "industrial partner delivery line"
+    },
+    {
+      "uri": "offer://indu/o-l",
+      "provider": "org://indu/cadence-tools",
+      "price": 2000000.0,
+      "currency": "USD",
+      "capability_keys": [
+        "machinery",
+        "parts"
+      ],
+      "fit_note": "industrial partner delivery line"
+    },
+    {
+      "uri": "decision://indu/s2-match-baseline",
+      "by": "agent://s2",
+      "authority": "delegation://indu/s2-match",
+      "alternatives": [
+        "offer://indu/o-l",
+        "offer://indu/o-g",
+        "none"
+      ],
+      "confidence": 0.9,
+      "expected_outcome": "lag partner ranked #1 on existing Trust",
+      "actual_outcome": "offer://indu/o-l",
+      "detail": [
+        {
+          "offer": "offer://indu/o-l",
+          "provider": "org://indu/cadence-tools",
+          "fit": 1.0,
+          "trust": 0.9,
+          "score": 0.9
+        },
+        {
+          "offer": "offer://indu/o-g",
+          "provider": "org://indu/quadrant-works",
+          "fit": 1.0,
+          "trust": 0.6,
+          "score": 0.6
+        }
+      ],
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "asset://money/indu-escrow-cadence-toolsQ3",
+      "kind": "MONEY",
+      "title": "org://indu/cadence-tools",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://indu/ferrousworks for org://indu/cadence-tools (cadence-toolsQ3)"
+    },
+    {
+      "uri": "obligation://indu/s4-pay-cadence-toolsQ3",
+      "subject": "org://indu/ferrousworks",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://indu/cadence-tools",
+      "due_by": "2026-08-31T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-09-02T00:00:00Z"
+    },
+    {
+      "uri": "receipt://indu/s4-receipt-cadence-toolsQ3",
+      "kind": "SETTLEMENT",
+      "from": "org://indu/ferrousworks",
+      "to": "org://indu/cadence-tools",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-09-02T00:00:00Z"
+    },
+    {
+      "uri": "decision://indu/s4-recon-cadence-toolsQ3",
+      "by": "agent://s4",
+      "authority": "authority://indu/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://indu/ferrousworks",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "cadence-toolsQ3",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://indu/ferrousworks",
+        "provider": "org://indu/cadence-tools",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://indu/s4-exchange-cadence-toolsQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-105",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-104",
+      "idempotency_key": "idem-s4-105",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange cadence-toolsQ3: 2000000.0 USD org://indu/ferrousworks->org://indu/cadence-tools (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://indu/ferrousworks",
+      "provider": "org://indu/cadence-tools",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "exchange_of": "commitment://indu/c-cadence-toolsQ3"
+    },
+    {
+      "uri": "event://indu/s4-outcome-cadence-toolsQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-106",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-105",
+      "idempotency_key": "idem-s4-106",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle cadence-toolsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+      "state_update": [],
+      "evaluation": "partial",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "score": 0.5
+    },
+    {
+      "uri": "event://indu/outcome-committed-cadence-toolsQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-107",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-106",
+      "idempotency_key": "idem-s2-107",
+      "signature": "signed-by-org://indu/cadence-tools",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://indu/cadence-tools",
+      "detail": "job committed-cadence-toolsQ3 by org://indu/cadence-tools: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+      "state_update": [],
+      "job": "committed-cadence-toolsQ3",
+      "provider": "org://indu/cadence-tools",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-09-02T00:00:00Z",
+      "on_time": false
+    },
+    {
+      "uri": "evidence://indu/committed-cadence-toolsQ3",
+      "kind": "ANCHORED",
+      "source": "signed committed-machinery parts delivery record + indu anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://indu/committed-cadence-toolsQ3",
+      "proposer": "agent://s5",
+      "statement": "org://indu/cadence-tools delivered the committed resource LATE"
+    },
+    {
+      "uri": "asset://money/indu-escrow-quadrant-worksQ3",
+      "kind": "MONEY",
+      "title": "org://indu/quadrant-works",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://indu/ferrousworks for org://indu/quadrant-works (quadrant-worksQ3)"
+    },
+    {
+      "uri": "obligation://indu/s4-pay-quadrant-worksQ3",
+      "subject": "org://indu/ferrousworks",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://indu/quadrant-works",
+      "due_by": "2026-08-31T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-08-30T00:00:00Z"
+    },
+    {
+      "uri": "receipt://indu/s4-receipt-quadrant-worksQ3",
+      "kind": "SETTLEMENT",
+      "from": "org://indu/ferrousworks",
+      "to": "org://indu/quadrant-works",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-08-30T00:00:00Z"
+    },
+    {
+      "uri": "decision://indu/s4-recon-quadrant-worksQ3",
+      "by": "agent://s4",
+      "authority": "authority://indu/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://indu/ferrousworks",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "quadrant-worksQ3",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://indu/ferrousworks",
+        "provider": "org://indu/quadrant-works",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://indu/s4-exchange-quadrant-worksQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-110",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-109",
+      "idempotency_key": "idem-s4-110",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange quadrant-worksQ3: 2000000.0 USD org://indu/ferrousworks->org://indu/quadrant-works (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://indu/ferrousworks",
+      "provider": "org://indu/quadrant-works",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "exchange_of": "commitment://indu/c-quadrant-worksQ3"
+    },
+    {
+      "uri": "event://indu/s4-outcome-quadrant-worksQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-111",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-110",
+      "idempotency_key": "idem-s4-111",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle quadrant-worksQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+      "state_update": [],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "score": 1.0
+    },
+    {
+      "uri": "event://indu/outcome-committed-quadrant-worksQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-112",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-111",
+      "idempotency_key": "idem-s2-112",
+      "signature": "signed-by-org://indu/quadrant-works",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://indu/quadrant-works",
+      "detail": "job committed-quadrant-worksQ3 by org://indu/quadrant-works: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+      "state_update": [],
+      "job": "committed-quadrant-worksQ3",
+      "provider": "org://indu/quadrant-works",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-08-30T00:00:00Z",
+      "on_time": true
+    },
+    {
+      "uri": "evidence://indu/committed-quadrant-worksQ3",
+      "kind": "ANCHORED",
+      "source": "signed committed-machinery parts delivery record + indu anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://indu/committed-quadrant-worksQ3",
+      "proposer": "agent://s5",
+      "statement": "org://indu/quadrant-works delivered the committed resource on time"
+    },
+    {
+      "uri": "asset://money/indu-escrow-cadence-toolsQ4",
+      "kind": "MONEY",
+      "title": "org://indu/cadence-tools",
+      "custody": "cleared",
+      "value": 1600000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://indu/ferrousworks for org://indu/cadence-tools (cadence-toolsQ4)"
+    },
+    {
+      "uri": "obligation://indu/s4-pay-cadence-toolsQ4",
+      "subject": "org://indu/ferrousworks",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 1600000.0 USD for contracted work by org://indu/cadence-tools",
+      "due_by": "2026-09-15T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-09-17T00:00:00Z"
+    },
+    {
+      "uri": "receipt://indu/s4-receipt-cadence-toolsQ4",
+      "kind": "SETTLEMENT",
+      "from": "org://indu/ferrousworks",
+      "to": "org://indu/cadence-tools",
+      "amount": 1600000.0,
+      "currency": "USD",
+      "received_at": "2026-09-17T00:00:00Z"
+    },
+    {
+      "uri": "decision://indu/s4-recon-cadence-toolsQ4",
+      "by": "agent://s4",
+      "authority": "authority://indu/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 1600000.0 USD from org://indu/ferrousworks",
+      "actual_outcome": "matched exactly: settled 1600000.0 USD",
+      "detail": {
+        "slug": "cadence-toolsQ4",
+        "expected": 1600000.0,
+        "actual": 1600000.0,
+        "matched": true,
+        "buyer": "org://indu/ferrousworks",
+        "provider": "org://indu/cadence-tools",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://indu/s4-exchange-cadence-toolsQ4",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-115",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-114",
+      "idempotency_key": "idem-s4-115",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange cadence-toolsQ4: 1600000.0 USD org://indu/ferrousworks->org://indu/cadence-tools (value 1600000.0, cost 1600000.0)",
+      "state_update": [],
+      "value": 1600000.0,
+      "cost": 1600000.0,
+      "price": 1600000.0,
+      "currency": "USD",
+      "buyer": "org://indu/ferrousworks",
+      "provider": "org://indu/cadence-tools",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "exchange_of": "commitment://indu/c-cadence-toolsQ4"
+    },
+    {
+      "uri": "event://indu/s4-outcome-cadence-toolsQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-116",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-115",
+      "idempotency_key": "idem-s4-116",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle cadence-toolsQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+      "state_update": [],
+      "evaluation": "partial",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "deadline": "2026-09-15T00:00:00Z",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "score": 0.5
+    },
+    {
+      "uri": "event://indu/outcome-committed-cadence-toolsQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-117",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-116",
+      "idempotency_key": "idem-s2-117",
+      "signature": "signed-by-org://indu/cadence-tools",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://indu/cadence-tools",
+      "detail": "job committed-cadence-toolsQ4 by org://indu/cadence-tools: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+      "state_update": [],
+      "job": "committed-cadence-toolsQ4",
+      "provider": "org://indu/cadence-tools",
+      "committed_deadline": "2026-09-15T00:00:00Z",
+      "actual_completed_at": "2026-09-17T00:00:00Z",
+      "on_time": false
+    },
+    {
+      "uri": "evidence://indu/committed-cadence-toolsQ4",
+      "kind": "ANCHORED",
+      "source": "signed committed-machinery parts delivery record + indu anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://indu/committed-cadence-toolsQ4",
+      "proposer": "agent://s5",
+      "statement": "org://indu/cadence-tools delivered the committed resource LATE"
+    },
+    {
+      "uri": "case://indu/c-on-time",
+      "subject": "committed machinery parts delivery below target on time",
+      "status": "CLOSED",
+      "owner": "person://indu/plant-mgr",
+      "actors": [
+        "org://indu/ferrousworks",
+        "person://indu/plant-mgr",
+        "agent://indu/line-ops"
+      ],
+      "relationships": [
+        "relationship://indu/ops-rel"
+      ],
+      "created_at": "2026-09-01T00:29:53Z",
+      "history": [
+        {
+          "status": "OPEN",
+          "at": "2026-09-01T00:29:53Z",
+          "event": null
+        },
+        {
+          "status": "TRIAGE",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://indu/s5-case-triage"
+        },
+        {
+          "status": "ASSIGNED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://indu/s5-case-assigned"
+        },
+        {
+          "status": "IN_PROGRESS",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://indu/s5-case-inprogress"
+        },
+        {
+          "status": "BLOCKED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://indu/s5-case-blocked"
+        },
+        {
+          "status": "RESOLVED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://indu/s5-case-resolved"
+        },
+        {
+          "status": "CLOSED",
+          "at": "2026-09-01T00:29:53Z",
+          "event": "event://indu/s5-case-closed"
+        }
+      ],
+      "suggestion": "ledger-projected on-time below target",
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "exception": "Committed machinery parts delivery on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+      "root_cause": "supplier failure \u2014 org://indu/cadence-tools missed its committed machinery parts delivery by 2 days; scoped Trust fell 0.90->0.51",
+      "root_cause_status": "SUPPORTED",
+      "recommended_action": "Re-allocate committed machinery parts to the verified on-time supplier (quadrant-works) and gate the laggard (cadence-tools)",
+      "metric": "metric://indu/m-on-time",
+      "verified_outcome": "forward on-time restored to 1.0; org://indu/quadrant-works delivered the rallied machinery parts delivery on time (evidence://indu/routed-quadrant-worksR); org://indu/quadrant-works Trust 0.79"
+    },
+    {
+      "uri": "decision://indu/s5-triage",
+      "by": "agent://indu/s5",
+      "authority": "authority://indu/for-ops",
+      "alternatives": [
+        "accept",
+        "dismiss as anomaly"
+      ],
+      "confidence": 0.85,
+      "expected_outcome": "accept as a real risk",
+      "actual_outcome": "accepted; root nominated",
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "task://indu/t-rebalance",
+      "assigned_to": "agent://indu/line-ops",
+      "created_by": "agent://indu/s5",
+      "objective": "re-balance machinery parts to the verified on-time supplier (quadrant-works) and gate the laggard (cadence-tools)",
+      "dependencies": [],
+      "authority": "authority://indu/for-ops",
+      "deadline": "2026-10-15T00:00:00Z",
+      "priority": 0.695,
+      "status": "ASSIGNED",
+      "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+      "why_here": "derived from the on-time exception (case OPEN)",
+      "importance": "restores production-on-time, protecting plant scoped Trust",
+      "evidence": [
+        "evidence://indu/committed-cadence-toolsQ3",
+        "evidence://indu/committed-quadrant-worksQ3",
+        "evidence://indu/committed-cadence-toolsQ4"
+      ],
+      "decision_required": "approve the re-allocation",
+      "priority_factors": {
+        "impact": 0.85,
+        "urgency": 0.9,
+        "confidence": 0.7,
+        "irreversibility": false,
+        "relationship_importance": 0.8,
+        "cost_of_delay": 0.75
+      },
+      "assigned_capacity": 1.0
+    },
+    {
+      "uri": "decision://indu/s5-assign",
+      "by": "person://indu/plant-mgr",
+      "authority": "authority://indu/for-ops",
+      "alternatives": [
+        "assign",
+        "defer"
+      ],
+      "confidence": 0.95,
+      "expected_outcome": "task in progress",
+      "detail": {
+        "task": "task://indu/t-rebalance",
+        "assigned_to": "agent://indu/line-ops",
+        "authority": "authority://indu/for-ops",
+        "priority": 0.695,
+        "capacity": 1.0
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "decision://indu/s5-match-recorded",
+      "by": "agent://s2",
+      "authority": "delegation://indu/s2-match",
+      "alternatives": [
+        "offer://indu/o-g",
+        "none"
+      ],
+      "confidence": 0.92,
+      "expected_outcome": "good partner ranked #1",
+      "actual_outcome": "offer://indu/o-g",
+      "detail": [
+        {
+          "offer": "offer://indu/o-g",
+          "provider": "org://indu/quadrant-works",
+          "fit": 1.0,
+          "trust": 0.695,
+          "score": 0.695
+        }
+      ],
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "escalation://indu/escalate-release",
+      "trigger": "external line release \u2014 irreversible and cost-unknowable once in production",
+      "severity": "WARN",
+      "recipient": "person://indu/plant-mgr",
+      "deadline": "2026-11-15T00:00:00Z",
+      "fallback": "agent://indu/s4",
+      "authority": "authority://indu/for-ops",
+      "acknowledgement": "approve then execute"
+    },
+    {
+      "uri": "decision://indu/owner-human",
+      "by": "person://indu/plant-mgr",
+      "authority": "authority://indu/for-ops",
+      "alternatives": [
+        "release_in_full",
+        "hold",
+        "release_partial_and_hold_if_shortfall",
+        "open_dispute"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "release to the verified partner",
+      "actual_outcome": "release_in_full (human approved)",
+      "detail": {
+        "task": "task://indu/t-rebalance",
+        "action": "release_committed_action",
+        "irreversible_failure": true,
+        "cost_failure_unknowable": true
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "commitment://indu/c-quadrant-works-followup",
+      "by": "agent://indu/s5",
+      "to": "org://indu/quadrant-works",
+      "obligation": "offer://indu/o-g",
+      "expectation": "expectation://indu/e-routed-quadrant-worksR",
+      "status": "AGREED",
+      "terms": {
+        "kind": "machinery parts delivery follow-up",
+        "signed": true
+      },
+      "agreed_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "expectation://indu/e-quadrant-worksR",
+      "actor": "person://indu/plant-mgr",
+      "subject": "machinery parts delivery",
+      "condition": "fully deliver the committed resource by its committed deadline",
+      "metric": "settled_value",
+      "threshold": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "asset://money/indu-escrow-quadrant-worksR",
+      "kind": "MONEY",
+      "title": "org://indu/quadrant-works",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://indu/ferrousworks for org://indu/quadrant-works (quadrant-worksR)"
+    },
+    {
+      "uri": "obligation://indu/s4-pay-quadrant-worksR",
+      "subject": "org://indu/ferrousworks",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://indu/quadrant-works",
+      "due_by": "2026-11-15T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-11-12T00:00:00Z"
+    },
+    {
+      "uri": "receipt://indu/s4-receipt-quadrant-worksR",
+      "kind": "SETTLEMENT",
+      "from": "org://indu/ferrousworks",
+      "to": "org://indu/quadrant-works",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-11-12T00:00:00Z"
+    },
+    {
+      "uri": "decision://indu/s4-recon-quadrant-worksR",
+      "by": "agent://s4",
+      "authority": "authority://indu/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://indu/ferrousworks",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "quadrant-worksR",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://indu/ferrousworks",
+        "provider": "org://indu/quadrant-works",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "event://indu/s4-exchange-quadrant-worksR",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-7015",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7014",
+      "idempotency_key": "idem-s4-7015",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange quadrant-worksR: 2000000.0 USD org://indu/ferrousworks->org://indu/quadrant-works (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://indu/ferrousworks",
+      "provider": "org://indu/quadrant-works",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "exchange_of": "commitment://indu/c-quadrant-worksR"
+    },
+    {
+      "uri": "event://indu/s4-outcome-quadrant-worksR",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-7016",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7015",
+      "idempotency_key": "idem-s4-7016",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle quadrant-worksR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+      "state_update": [],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "score": 1.0
+    },
+    {
+      "uri": "event://indu/outcome-routed-quadrant-worksR",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-7017",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7016",
+      "idempotency_key": "idem-s2-7017",
+      "signature": "signed-by-org://indu/quadrant-works",
+      "occurred_at": "2026-09-01T00:29:53Z",
+      "actor": "org://indu/quadrant-works",
+      "detail": "job routed-quadrant-worksR by org://indu/quadrant-works: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+      "state_update": [],
+      "job": "routed-quadrant-worksR",
+      "provider": "org://indu/quadrant-works",
+      "committed_deadline": "2026-11-15T00:00:00Z",
+      "actual_completed_at": "2026-11-12T00:00:00Z",
+      "on_time": true
+    },
+    {
+      "uri": "evidence://indu/routed-quadrant-worksR",
+      "kind": "ANCHORED",
+      "source": "signed committed-machinery parts delivery record + indu anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "claim://indu/routed-quadrant-worksR",
+      "proposer": "agent://s5",
+      "statement": "org://indu/quadrant-works delivered the rallied committed machinery parts delivery on time"
+    },
+    {
+      "uri": "decision://indu/learning",
+      "by": "agent://indu/s5",
+      "authority": "authority://indu/for-operations",
+      "subject": "machinery parts delivery on-time management",
+      "expected": 0.95,
+      "actual": 1.0,
+      "variance": 0.05,
+      "why": "Routing parts via a supplier with verified on-time delivery (quadrant-works), while gating the laggard (cadence-tools), restored on-time delivery. Verified good lots compound scoped Trust.",
+      "change_future_policy": "ALLOCATE by fit AND scoped Trust; suppliers below the Trust floor need a gate before new lots.",
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "goal://indu/g-core",
+      "for": "org://indu/ferrousworks",
+      "statement": "Consistently deliver committed machinery parts on time so plants trust FerrousWorks enough to keep lines scheduled.",
+      "horizon": "quarter",
+      "owner": "person://indu/plant-mgr",
+      "metrics": [
+        "metric://indu/m-on-time",
+        "metric://indu/m-trust",
+        "metric://indu/m-settled-value"
+      ]
+    },
+    {
+      "uri": "metric://indu/m-on-time",
+      "name": "Committed-machinery parts delivery on-time rate",
+      "definition": "share of committed machinery parts delivery deliveries verified on time",
+      "unit": "fraction",
+      "formula": "on_time / (on_time + late) from ledger",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 0.95,
+      "threshold": 0.8,
+      "period": "quarter",
+      "source": "ledger committed-delivery records",
+      "owner": "person://indu/plant-mgr",
+      "actual": 0.5,
+      "forecast": 0.5,
+      "variance": -0.45,
+      "root_cause": "supplier failure \u2014 org://indu/cadence-tools missed its committed machinery parts delivery by 2 days; scoped Trust fell 0.90->0.51",
+      "root_cause_status": "SUPPORTED"
+    },
+    {
+      "uri": "metric://indu/m-trust",
+      "name": "Partner scoped-trust score",
+      "definition": "best scoped Trust on the partner network (per \u00a75)",
+      "unit": "score",
+      "formula": "T(subject->target, claim, context) per \u00a75",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 0.9,
+      "threshold": 0.6,
+      "period": "rolling",
+      "source": "S5 scoped Trust graph",
+      "owner": "person://indu/plant-mgr",
+      "actual": 0.79,
+      "forecast": 0.92,
+      "variance": -0.11,
+      "root_cause_status": "UNKNOWN"
+    },
+    {
+      "uri": "metric://indu/m-settled-value",
+      "name": "Settled committed value",
+      "definition": "value of EXCHANGE events settled this period",
+      "unit": "USD",
+      "formula": "sum(EXCHANGE.price) from ledger",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 7600000.0,
+      "threshold": 4180000.0000000005,
+      "period": "quarter",
+      "source": "ledger EXCHANGE events",
+      "owner": "person://indu/plant-mgr",
+      "actual": 7600000.0,
+      "forecast": 8740000.0,
+      "variance": 0.0,
+      "root_cause_status": "UNKNOWN"
+    },
+    {
+      "uri": "decision://indu/s5-metric-loop",
+      "by": "agent://indu/s5",
+      "authority": "authority://indu/for-operations",
+      "alternatives": [
+        "do nothing",
+        "rebalance provider allocation"
+      ],
+      "confidence": 0.85,
+      "expected_outcome": "metric://indu/m-on-time variance reduced toward target",
+      "detail": {
+        "goal": "goal://indu/g-core",
+        "metric": "metric://indu/m-on-time",
+        "actual": 0.5,
+        "variance": -0.45,
+        "action": "task://indu/t-rebalance",
+        "outcome": "event://indu/outcome-routed-quadrant-worksR"
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "decision://indu/s5-attention",
+      "by": "agent://indu/s5",
+      "authority": "authority://indu/for-ops",
+      "confidence": 0.9,
+      "expected_outcome": "top-of-attention ranked",
+      "actual_outcome": "attention prioritized by derived score",
+      "detail": {
+        "attention": [
+          {
+            "uri": "task://indu/t-rebalance",
+            "label": "re-balance committed work",
+            "priority": 0.695
+          },
+          {
+            "uri": "task://indu/t-followup",
+            "label": "rallied follow-on (good partner)",
+            "priority": 0.58
+          }
+        ]
+      },
+      "made_at": "2026-09-01T00:29:53Z"
+    },
+    {
+      "uri": "dependency://indu/d-rb-enables-fu",
+      "from": "task://indu/t-rebalance",
+      "to": "task://indu/t-followup",
+      "kind": "ENABLES"
+    },
+    {
+      "uri": "dependency://indu/d-fu-requires-pol",
+      "from": "task://indu/t-followup",
+      "to": "policy://indu/allocation",
+      "kind": "REQUIRES"
+    },
+    {
+      "uri": "dependency://indu/d-fu-blocks-case",
+      "from": "task://indu/t-followup",
+      "to": "case://indu/c-on-time",
+      "kind": "BLOCKS"
+    },
+    {
+      "uri": "dependency://indu/d-case-from-metric",
+      "from": "case://indu/c-on-time",
+      "to": "metric://indu/m-on-time",
+      "kind": "DERIVED_FROM"
+    },
+    {
+      "uri": "dependency://indu/d-metric-impacts-goal",
+      "from": "metric://indu/m-on-time",
+      "to": "goal://indu/g-core",
+      "kind": "IMPACTS"
+    },
+    {
+      "uri": "dependency://indu/d-rb-blocks-case",
+      "from": "task://indu/t-rebalance",
+      "to": "case://indu/c-on-time",
+      "kind": "BLOCKS"
+    }
+  ]
+}

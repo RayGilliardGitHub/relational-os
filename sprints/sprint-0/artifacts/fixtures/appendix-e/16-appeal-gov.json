@@ -1,0 +1,43 @@
+[
+  {
+    "uri": "person://e16/appellant",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e16/agency",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e16/appeal",
+    "participants": [
+      "person://e16/appellant",
+      "org://e16/agency"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "dispute://e16/d1",
+    "about": "decision://e16/denied",
+    "parties": [
+      "person://e16/appellant",
+      "org://e16/agency"
+    ],
+    "status": "OPEN"
+  },
+  {
+    "uri": "evidence://e16/e1",
+    "kind": "RECORD",
+    "source": "agency decision letter"
+  },
+  {
+    "uri": "decision://e16/denied",
+    "by": "org://e16/agency",
+    "authority": "authority://e16/adjudication",
+    "confidence": 0.9
+  },
+  {
+    "uri": "interaction://e16/appeal",
+    "of": "relationship://e16/appeal",
+    "kind": "DISPUTE"
+  }
+]

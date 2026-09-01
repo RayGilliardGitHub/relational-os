@@ -1,0 +1,246 @@
+[
+  {
+    "uri": "decision://auto/s2-match-baseline",
+    "by": "agent://s2",
+    "authority": "delegation://auto/s2-match",
+    "alternatives": [
+      "offer://auto/o-l",
+      "offer://auto/o-g",
+      "none"
+    ],
+    "confidence": 0.9,
+    "expected_outcome": "lag partner ranked #1 on existing Trust",
+    "actual_outcome": "offer://auto/o-l",
+    "detail": [
+      {
+        "offer": "offer://auto/o-l",
+        "provider": "org://auto/corvair-parts",
+        "fit": 1.0,
+        "trust": 0.9,
+        "score": 0.9
+      },
+      {
+        "offer": "offer://auto/o-g",
+        "provider": "org://auto/stellar-auto",
+        "fit": 1.0,
+        "trust": 0.6,
+        "score": 0.6
+      }
+    ],
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://auto/s4-recon-corvair-partsQ3",
+    "by": "agent://s4",
+    "authority": "authority://auto/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://auto/forge-auto",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "corvair-partsQ3",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://auto/forge-auto",
+      "provider": "org://auto/corvair-parts",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://auto/s4-recon-stellar-autoQ3",
+    "by": "agent://s4",
+    "authority": "authority://auto/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://auto/forge-auto",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "stellar-autoQ3",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://auto/forge-auto",
+      "provider": "org://auto/stellar-auto",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://auto/s4-recon-corvair-partsQ4",
+    "by": "agent://s4",
+    "authority": "authority://auto/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 1600000.0 USD from org://auto/forge-auto",
+    "actual_outcome": "matched exactly: settled 1600000.0 USD",
+    "detail": {
+      "slug": "corvair-partsQ4",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "matched": true,
+      "buyer": "org://auto/forge-auto",
+      "provider": "org://auto/corvair-parts",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://auto/s5-triage",
+    "by": "agent://auto/s5",
+    "authority": "authority://auto/for-ops",
+    "alternatives": [
+      "accept",
+      "dismiss as anomaly"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "accept as a real risk",
+    "actual_outcome": "accepted; root nominated",
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://auto/s5-assign",
+    "by": "person://auto/vpo",
+    "authority": "authority://auto/for-ops",
+    "alternatives": [
+      "assign",
+      "defer"
+    ],
+    "confidence": 0.95,
+    "expected_outcome": "task in progress",
+    "detail": {
+      "task": "task://auto/t-rebalance",
+      "assigned_to": "agent://auto/supply-ops",
+      "authority": "authority://auto/for-ops",
+      "priority": 0.695,
+      "capacity": 1.0
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://auto/s5-match-recorded",
+    "by": "agent://s2",
+    "authority": "delegation://auto/s2-match",
+    "alternatives": [
+      "offer://auto/o-g",
+      "none"
+    ],
+    "confidence": 0.92,
+    "expected_outcome": "good partner ranked #1",
+    "actual_outcome": "offer://auto/o-g",
+    "detail": [
+      {
+        "offer": "offer://auto/o-g",
+        "provider": "org://auto/stellar-auto",
+        "fit": 1.0,
+        "trust": 0.695,
+        "score": 0.695
+      }
+    ],
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://auto/owner-human",
+    "by": "person://auto/vpo",
+    "authority": "authority://auto/for-ops",
+    "alternatives": [
+      "release_in_full",
+      "hold",
+      "release_partial_and_hold_if_shortfall",
+      "open_dispute"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "release to the verified partner",
+    "actual_outcome": "release_in_full (human approved)",
+    "detail": {
+      "task": "task://auto/t-rebalance",
+      "action": "release_committed_action",
+      "irreversible_failure": true,
+      "cost_failure_unknowable": true
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://auto/s4-recon-stellar-autoR",
+    "by": "agent://s4",
+    "authority": "authority://auto/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://auto/forge-auto",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "stellar-autoR",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://auto/forge-auto",
+      "provider": "org://auto/stellar-auto",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://auto/learning",
+    "by": "agent://auto/s5",
+    "authority": "authority://auto/for-operations",
+    "subject": "OEM part-lot delivery on-time management",
+    "expected": 0.95,
+    "actual": 1.0,
+    "variance": 0.05,
+    "why": "Routing part lots via a vendor with verified on-time delivery (stellar-auto), while gating the laggard (corvair-parts), restored on-time supply. Verified good deliveries compound scoped Trust.",
+    "change_future_policy": "ALLOCATE by fit AND scoped Trust; vendors below the Trust floor need a gate before new lots.",
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://auto/s5-metric-loop",
+    "by": "agent://auto/s5",
+    "authority": "authority://auto/for-operations",
+    "alternatives": [
+      "do nothing",
+      "rebalance provider allocation"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "metric://auto/m-on-time variance reduced toward target",
+    "detail": {
+      "goal": "goal://auto/g-core",
+      "metric": "metric://auto/m-on-time",
+      "actual": 0.5,
+      "variance": -0.45,
+      "action": "task://auto/t-rebalance",
+      "outcome": "event://auto/outcome-routed-stellar-autoR"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://auto/s5-attention",
+    "by": "agent://auto/s5",
+    "authority": "authority://auto/for-ops",
+    "confidence": 0.9,
+    "expected_outcome": "top-of-attention ranked",
+    "actual_outcome": "attention prioritized by derived score",
+    "detail": {
+      "attention": [
+        {
+          "uri": "task://auto/t-rebalance",
+          "label": "re-balance committed work",
+          "priority": 0.695
+        },
+        {
+          "uri": "task://auto/t-followup",
+          "label": "rallied follow-on (good partner)",
+          "priority": 0.58
+        }
+      ]
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  }
+]

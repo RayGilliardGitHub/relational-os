@@ -1,0 +1,247 @@
+[
+  {
+    "uri": "org://media/hollowmedia",
+    "type": "ORG",
+    "identity": {
+      "attestations": [
+        "business-license"
+      ]
+    },
+    "brand": {
+      "tagline": "Campaigns that land on the date.",
+      "mission": "Deliver committed content-delivery campaigns reliably and on time so platforms and brands stay in the mix and audiences see the story on schedule.",
+      "vision": "A media marketplace where a campaign release date is a contract audiences can count on.",
+      "values": [
+        [
+          "The date is the story",
+          "A late campaign is a missed audience moment."
+        ],
+        [
+          "Creative rigour",
+          "Great work delivered on time, never rushed at the end."
+        ],
+        [
+          "Measured impact",
+          "We verify every run against the ledger; reach is a fact."
+        ],
+        [
+          "Platform partnership",
+          "We make our partners' schedules look good."
+        ],
+        [
+          "Audience respect",
+          "We deliver content audiences actually want, when they want it."
+        ]
+      ],
+      "about": "Hollow Media produces and delivers committed content-delivery campaigns \u2014 from concept through to an energized, measured launch on the agreed date. In a business where timing is the whole story, we back every campaign release with ledger-verified on-time evidence, so a 'drop' date is a real commitment, not a hopeful aspiration.",
+      "fast_facts": [
+        "Founded 2007, media & content production",
+        "400+ campaigns delivered",
+        "Multi-format distribution across platforms"
+      ],
+      "history": [
+        [
+          "2007",
+          "Founded producing branded content."
+        ],
+        [
+          "2014",
+          "Launched the content-delivery campaign business."
+        ],
+        [
+          "2022",
+          "Verifying every campaign release against the ledger."
+        ]
+      ],
+      "leadership": [
+        [
+          "Celine Wexler",
+          "Chief Executive",
+          "Producer-turned-executive who built Hollow on delivered dates."
+        ],
+        [
+          "Omar Delgado",
+          "Chief Media Officer",
+          "Owns the distribution network and campaign timing."
+        ]
+      ],
+      "products_services": [
+        "Content-delivery campaigns (concept to launch)",
+        "Multi-platform distribution",
+        "Campaign measurement and reporting"
+      ],
+      "testimonials": [
+        [
+          "Hollow delivered the campaign on the exact date we'd promised our brand. That never happens in media.",
+          "Brand marketing lead"
+        ]
+      ],
+      "trust": [
+        [
+          "99.3% committed campaign on-time rate (2025)",
+          "Hollow delivery ledger"
+        ],
+        [
+          "MARC (Media Rating Council) aligned measurement",
+          "independent audit"
+        ]
+      ],
+      "locations": "LA (HQ) \u00b7 production + distribution hubs across 3 regions",
+      "faq": [
+        [
+          "How can you commit a creative launch date?",
+          "We treat the release like a delivery: planned backwards from the date, verified at launch, and measured against the ledger."
+        ],
+        [
+          "Do you handle distribution yourselves?",
+          "Yes, multi-platform distribution is core and part of the on-time commitment."
+        ]
+      ],
+      "contact": "hello@hollowmedia.example \u00b7 +1-310-555-0188",
+      "careers": "Drop stories on time: production, distribution, data, and campaign leads.",
+      "investors": "Privately held. Campaign performance data shared with brands on request.",
+      "press": "press@hollowmedia.example \u2014 launches, shows, and reliability stories.",
+      "esg": "Sustainable production practices, audience-inclusive content, creator equity programs.",
+      "legal": [
+        "Privacy",
+        "Terms",
+        "California Rights",
+        "Do Not Sell or Share",
+        "Content Policy"
+      ],
+      "nav": [
+        "About",
+        "Work",
+        "Distribution",
+        "Press",
+        "Careers",
+        "Contact"
+      ],
+      "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+      "design": {
+        "palette": [
+          [
+            "Studio Black",
+            "#111214"
+          ],
+          [
+            "Hollow Cerise",
+            "#D41159"
+          ],
+          [
+            "Screen White",
+            "#F7F5F2"
+          ],
+          [
+            "Signal Teal",
+            "#0F7A72"
+          ]
+        ],
+        "typography": {
+          "heading": "Contemporary display serif (e.g. Playfair Display)",
+          "body": "Neutral sans (e.g. Inter)"
+        },
+        "logo": {
+          "wordmark": "hollow",
+          "character": "a hollow-circle/cutout mark",
+          "usage": "clear space fine; cerise-on-black primary, teal for data accents"
+        },
+        "imagery": "Cinematic stills, editing bays, campaign storyboards \u2014 dark, bold, precise",
+        "tone": "Confident, slightly provocative, disciplined about timing; the date is the point."
+      }
+    }
+  },
+  {
+    "uri": "org://media/cascade-vantage",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://media/lyra-ops",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://media/hollowpoint-digital",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://media/cmo",
+    "type": "PERSON"
+  },
+  {
+    "uri": "agent://media/campaign-ops",
+    "type": "AGENT"
+  },
+  {
+    "uri": "authority://media/for-ops",
+    "holder": "org://media/hollowmedia",
+    "grants": [
+      "triage_case",
+      "assign_case",
+      "close_case",
+      "approve_learning",
+      "rebalance_commitment",
+      "gate_partner",
+      "release_committed_action"
+    ],
+    "roles": [
+      "operator"
+    ]
+  },
+  {
+    "uri": "rule://media/ops-run",
+    "kind": "POLICY",
+    "text": "agent://media/campaign-ops may re-balance resource commitment and gate partner performance",
+    "grants": [
+      "rebalance_commitment",
+      "gate_partner"
+    ]
+  },
+  {
+    "uri": "rule://media/match-run",
+    "kind": "POLICY",
+    "text": "S2 may run Trust-weighted matching for the client",
+    "grants": [
+      "run_match"
+    ]
+  },
+  {
+    "uri": "delegation://media/ops",
+    "grantor": "org://media/hollowmedia",
+    "grantee": "agent://media/campaign-ops",
+    "scope": [
+      "rule://media/ops-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://media/s2-match",
+    "grantor": "org://media/hollowmedia",
+    "grantee": "agent://s2",
+    "scope": [
+      "rule://media/match-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "offer://media/o-g",
+    "provider": "org://media/lyra-ops",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "distribution",
+      "campaign"
+    ],
+    "fit_note": "media partner delivery line"
+  },
+  {
+    "uri": "offer://media/o-l",
+    "provider": "org://media/hollowpoint-digital",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "distribution",
+      "campaign"
+    ],
+    "fit_note": "media partner delivery line"
+  }
+]

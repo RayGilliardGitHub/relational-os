@@ -1,0 +1,46 @@
+[
+  {
+    "uri": "relationship://telco/ops-rel",
+    "participants": [
+      "org://telco/nimbuscom",
+      "org://telco/fairfield-metro"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://telco/nimbuscom": [
+        "provider"
+      ],
+      "org://telco/fairfield-metro": [
+        "client"
+      ]
+    },
+    "authority": [
+      "authority://telco/for-ops"
+    ],
+    "purpose": "telecom operating relationship"
+  },
+  {
+    "uri": "relationship://telco/partner-net",
+    "participants": [
+      "org://telco/nimbuscom",
+      "org://telco/meridian-tower",
+      "org://telco/nimbus-networks"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://telco/nimbuscom": [
+        "operator"
+      ],
+      "org://telco/meridian-tower": [
+        "partner"
+      ],
+      "org://telco/nimbus-networks": [
+        "partner"
+      ]
+    },
+    "authority": [
+      "authority://telco/for-ops"
+    ],
+    "purpose": "telecom partner network"
+  }
+]

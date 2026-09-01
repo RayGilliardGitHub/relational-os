@@ -1,0 +1,45 @@
+[
+  {
+    "uri": "person://e06/u",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e06/ui",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e06/benefit",
+    "participants": [
+      "person://e06/u",
+      "org://e06/ui"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "right://e06/claimbenefit",
+    "holder": "person://e06/u",
+    "type": "RECEIVE_PAYMENT"
+  },
+  {
+    "uri": "obligation://e06/seekwork",
+    "subject": "person://e06/u",
+    "source": "IMPOSED",
+    "content": "actively seek work"
+  },
+  {
+    "uri": "interaction://e06/order",
+    "of": "relationship://e06/benefit",
+    "kind": "EXCHANGE"
+  },
+  {
+    "uri": "event://e06/exchange",
+    "type": "EXCHANGE",
+    "event_id": "event-e06/exchange",
+    "correlation_id": "event-ce06/exchange",
+    "causation_id": "event-cae06/exchange",
+    "idempotency_key": "event-ie06/exchange",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "org://e06/ui"
+  }
+]

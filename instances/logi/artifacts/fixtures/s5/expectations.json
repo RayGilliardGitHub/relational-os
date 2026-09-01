@@ -1,0 +1,22 @@
+[
+  {
+    "uri": "expectation://logi/e-on-time",
+    "actor": "person://logi/cco",
+    "subject": "freight-dispatch settlement",
+    "condition": "fully deliver the committed freight-dispatch settlement by its committed deadline",
+    "metric": "on_time",
+    "threshold": 0.95,
+    "deadline": "2026-12-31T00:00:00Z",
+    "evidence_required": "CLEAR"
+  },
+  {
+    "uri": "expectation://logi/e-keystone-linesR",
+    "actor": "person://logi/cco",
+    "subject": "freight-dispatch settlement",
+    "condition": "fully deliver the committed resource by its committed deadline",
+    "metric": "settled_value",
+    "threshold": 2000000.0,
+    "deadline": "2026-11-15T00:00:00Z",
+    "evidence_required": "CLEAR"
+  }
+]

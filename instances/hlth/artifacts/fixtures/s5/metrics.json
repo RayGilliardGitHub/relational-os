@@ -1,0 +1,60 @@
+[
+  {
+    "uri": "metric://hlth/m-on-time",
+    "name": "Committed-pharmaceutical delivery on-time rate",
+    "definition": "share of committed pharmaceutical delivery deliveries verified on time",
+    "unit": "fraction",
+    "formula": "on_time / (on_time + late) from ledger",
+    "dimensions": [
+      "partner"
+    ],
+    "target": 0.95,
+    "threshold": 0.8,
+    "period": "quarter",
+    "source": "ledger committed-delivery records",
+    "owner": "person://hlth/oph",
+    "actual": 0.5,
+    "forecast": 0.5,
+    "variance": -0.45,
+    "root_cause": "supply failure \u2014 org://hlth/meridian-med missed its committed pharmaceutical delivery by 2 days; scoped Trust fell 0.90->0.51",
+    "root_cause_status": "SUPPORTED"
+  },
+  {
+    "uri": "metric://hlth/m-trust",
+    "name": "Partner scoped-trust score",
+    "definition": "best scoped Trust on the partner network (per \u00a75)",
+    "unit": "score",
+    "formula": "T(subject->target, claim, context) per \u00a75",
+    "dimensions": [
+      "partner"
+    ],
+    "target": 0.9,
+    "threshold": 0.6,
+    "period": "rolling",
+    "source": "S5 scoped Trust graph",
+    "owner": "person://hlth/oph",
+    "actual": 0.79,
+    "forecast": 0.92,
+    "variance": -0.11,
+    "root_cause_status": "UNKNOWN"
+  },
+  {
+    "uri": "metric://hlth/m-settled-value",
+    "name": "Settled committed value",
+    "definition": "value of EXCHANGE events settled this period",
+    "unit": "USD",
+    "formula": "sum(EXCHANGE.price) from ledger",
+    "dimensions": [
+      "partner"
+    ],
+    "target": 7600000.0,
+    "threshold": 4180000.0000000005,
+    "period": "quarter",
+    "source": "ledger EXCHANGE events",
+    "owner": "person://hlth/oph",
+    "actual": 7600000.0,
+    "forecast": 8740000.0,
+    "variance": 0.0,
+    "root_cause_status": "UNKNOWN"
+  }
+]

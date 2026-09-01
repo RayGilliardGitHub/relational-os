@@ -1,0 +1,1222 @@
+{
+  "uri": "db://ledger/quoteko-2026",
+  "head_hash": "2a62ef139b0632f13761026850281d41ccd8107941f4c7aa7803af11119c395e",
+  "entries": [
+    {
+      "uri": "event://qk/provision",
+      "type": "ACTION",
+      "event_id": "ev-qk-0",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-0",
+      "idempotency_key": "idem-qk-0",
+      "signature": "signed-by-agent://s1",
+      "occurred_at": "2026-09-01T10:00:00Z",
+      "actor": "agent://s1",
+      "detail": "provision Quoteko quote domain substrate and registry",
+      "state_update": [
+        {
+          "uri": "person://qk/customer",
+          "type": "PERSON"
+        },
+        {
+          "uri": "person://qk/approver",
+          "type": "PERSON",
+          "identity": {
+            "attestations": [
+              "employee"
+            ]
+          }
+        },
+        {
+          "uri": "org://quoteko",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://qk/norcrete",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://qk/solarworks",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://qk/generalco",
+          "type": "ORG"
+        },
+        {
+          "uri": "agent://s1",
+          "type": "AGENT"
+        },
+        {
+          "uri": "agent://s2",
+          "type": "AGENT"
+        },
+        {
+          "uri": "entity://qk/canon-customer",
+          "canonical": "person://qk/customer",
+          "aliases": [
+            "qk-customer-8832",
+            "C. Rivera"
+          ],
+          "kind": "PERSON"
+        },
+        {
+          "uri": "relationship://qk/cust-cxn",
+          "participants": [
+            "person://qk/customer",
+            "org://quoteko"
+          ],
+          "roles": {
+            "person://qk/customer": [
+              "customer"
+            ],
+            "org://quoteko": [
+              "service_provider"
+            ]
+          },
+          "context": {
+            "organization": "org://quoteko",
+            "relationship": "relationship://qk/cust-cxn",
+            "role": "customer",
+            "jurisdiction": "US-NM",
+            "time": "2026-09-01T10:00:00Z",
+            "purpose": "purpose://qk/quoting",
+            "rules": [
+              "rule://qk/tos"
+            ]
+          },
+          "purpose": "property-services quoting/triage",
+          "status": "ACTIVE",
+          "created_at": "2026-09-01T10:00:00Z",
+          "effective_from": "2026-09-01T10:00:00Z",
+          "authority": [
+            "authority://qk/for-matching"
+          ]
+        },
+        {
+          "uri": "consent://qk/match-data",
+          "granted_by": "person://qk/customer",
+          "granted_for": "match my quote request to vetted service offers",
+          "scope": [
+            "permission://qk/read-profile",
+            "permission://qk/present-offers"
+          ],
+          "duration": {
+            "effective": "2026-09-01T10:00:00Z",
+            "expires": "2027-09-01T00:00:00Z"
+          },
+          "revocable": true,
+          "status": "GRANTED"
+        },
+        {
+          "uri": "delegation://qk/s2-match",
+          "grantor": "org://quoteko",
+          "grantee": "agent://s2",
+          "scope": [
+            "rule://qk/s2-run-matching"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "authority://qk/for-matching",
+          "grants": [
+            "request_quote"
+          ],
+          "holder": "org://quoteko"
+        },
+        {
+          "uri": "evidence://qk/e-oidc",
+          "kind": "ANCHORED",
+          "source": "OIDC assertion + attestation",
+          "verity": {
+            "procedure": "oidc-verification",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-09-01T10:00:00Z"
+        },
+        {
+          "uri": "rule://qk/tos",
+          "kind": "POLICY",
+          "text": "vetted contractors; human-accept required for committed hire"
+        },
+        {
+          "uri": "rule://qk/s2-run-matching",
+          "kind": "POLICY",
+          "text": "S2 agent may run capability-bound matching under Quoteko",
+          "grants": [
+            "run_matching"
+          ]
+        },
+        {
+          "uri": "trust://qk/t-norcrete",
+          "subject": "org://quoteko",
+          "target": "org://qk/norcrete",
+          "claim": "roofing & repair reliability",
+          "context": "relationship://qk/cust-cxn",
+          "score": 0.92,
+          "updated_at": "2026-09-01T10:00:00Z"
+        },
+        {
+          "uri": "trust://qk/t-solarworks",
+          "subject": "org://quoteko",
+          "target": "org://qk/solarworks",
+          "claim": "roofing & repair reliability",
+          "context": "relationship://qk/cust-cxn",
+          "score": 0.61,
+          "updated_at": "2026-09-01T10:00:00Z"
+        },
+        {
+          "uri": "trust://qk/t-generalco",
+          "subject": "org://quoteko",
+          "target": "org://qk/generalco",
+          "claim": "roofing reliability",
+          "context": "relationship://qk/cust-cxn",
+          "score": 0.42,
+          "updated_at": "2026-09-01T10:00:00Z"
+        },
+        {
+          "uri": "offer://qk/o-norcrete",
+          "provider": "org://qk/norcrete",
+          "service": "flat-roof replacement & repair",
+          "capability_keys": [
+            "roofing",
+            "repair"
+          ],
+          "price": 12400,
+          "currency": "USD",
+          "terms": "fixed-price, 2yr warranty",
+          "status": "AVAILABLE"
+        },
+        {
+          "uri": "offer://qk/o-solarworks",
+          "provider": "org://qk/solarworks",
+          "service": "roof replacement + solar",
+          "capability_keys": [
+            "roofing",
+            "repair",
+            "solar"
+          ],
+          "price": 18900,
+          "currency": "USD",
+          "terms": "fixed-price, 5yr warranty",
+          "status": "AVAILABLE"
+        },
+        {
+          "uri": "offer://qk/o-generalco",
+          "provider": "org://qk/generalco",
+          "service": "roof patch",
+          "capability_keys": [
+            "roofing"
+          ],
+          "price": 9800,
+          "currency": "USD",
+          "terms": "time-and-materials",
+          "status": "AVAILABLE"
+        }
+      ],
+      "hash": "0b1649194573dd22bae33e47f88af9b74ce0af5f6617feb0d0eb38f07956a4f1"
+    },
+    {
+      "uri": "event://qk/request",
+      "type": "ACTION",
+      "event_id": "ev-qk-1",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-0",
+      "idempotency_key": "idem-qk-1",
+      "signature": "signed-by-person://qk/customer",
+      "occurred_at": "2026-09-01T10:01:00Z",
+      "actor": "person://qk/customer",
+      "detail": "customer submits urgent quote request",
+      "state_update": [
+        {
+          "uri": "interaction://qk/req-quote",
+          "of": "relationship://qk/cust-cxn",
+          "kind": "REQUEST",
+          "events": [
+            "event://qk/request"
+          ]
+        }
+      ],
+      "hash": "1af636a06fa54ebed7c57915e849d1c1522ae721f57dd0a401ec54e23618a948"
+    },
+    {
+      "uri": "event://qk/identity-resolved",
+      "type": "ACTION",
+      "event_id": "ev-qk-2",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-1",
+      "idempotency_key": "idem-qk-2",
+      "signature": "signed-by-agent://s1",
+      "occurred_at": "2026-09-01T10:02:00Z",
+      "actor": "agent://s1",
+      "detail": "resolve_identity -> person://qk/customer (canonical), authn score 0.8",
+      "state_update": [],
+      "hash": "7f903b390fb8d0fde7b9810138b85ce1bbe360f696c57b2b28f4769a36a34656"
+    },
+    {
+      "uri": "event://qk/role-resolved",
+      "type": "DECISION",
+      "event_id": "ev-qk-3",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-2",
+      "idempotency_key": "idem-qk-3",
+      "signature": "signed-by-agent://s1",
+      "occurred_at": "2026-09-01T10:03:00Z",
+      "actor": "agent://s1",
+      "detail": "resolve_role -> customer in relationship://qk/cust-cxn",
+      "state_update": [],
+      "hash": "b621dd5c8be555d6a1a7abb188917b35f76e277cd9712d18b637025fb459ea3d"
+    },
+    {
+      "uri": "event://qk/authorized",
+      "type": "DECISION",
+      "event_id": "ev-qk-4",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-3",
+      "idempotency_key": "idem-qk-4",
+      "signature": "signed-by-agent://s1",
+      "occurred_at": "2026-09-01T10:04:00Z",
+      "actor": "agent://s1",
+      "detail": "authorize request_quote -> request_quote ({'performer': 'person://qk/customer', 'source': 'authority://qk/for-matching', 'relationship': 'relationship://qk/cust-cxn', 'scope': ['request_quote'], 'issued_at': '2026-08-31T23:46:01Z', 'expires_at': '2026-09-01T00:46:01.868134Z'})",
+      "state_update": [],
+      "hash": "772ef154e79ce788f89213fa33425895d6baf5275053f8d986a3608a47625760"
+    },
+    {
+      "uri": "event://qk/intent",
+      "type": "DECISION",
+      "event_id": "ev-qk-5",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-4",
+      "idempotency_key": "idem-qk-5",
+      "signature": "signed-by-agent://s2",
+      "occurred_at": "2026-09-01T10:05:00Z",
+      "actor": "agent://s2",
+      "detail": "infer_intent -> roof replacement/repair urgency=high",
+      "state_update": [
+        {
+          "uri": "decision://qk/intent",
+          "by": "agent://s2",
+          "authority": "delegation://qk/s2-match",
+          "alternatives": [
+            "defer",
+            "request more detail"
+          ],
+          "confidence": 0.9,
+          "expected_outcome": "quote matched and verified",
+          "detail": {
+            "subject": "person://qk/customer",
+            "need": "roof replacement/repair",
+            "capability_keys": [
+              "repair",
+              "roofing"
+            ],
+            "urgency": "high",
+            "budget": 15000,
+            "inferred_by": "agent://s2"
+          },
+          "made_at": "2026-09-01T10:05:00Z"
+        }
+      ],
+      "hash": "fe84c45eb3ead6537e6040638945aaf7a6d891e11e3734a8a9ae76659224075c"
+    },
+    {
+      "uri": "event://qk/match-1",
+      "type": "DECISION",
+      "event_id": "ev-qk-6",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-5",
+      "idempotency_key": "idem-qk-6",
+      "signature": "signed-by-agent://s2",
+      "occurred_at": "2026-09-01T10:06:00Z",
+      "actor": "agent://s2",
+      "detail": "match #1: offer://qk/o-norcrete score=0.92 (fit 1.00 x trust 0.92)",
+      "state_update": [
+        {
+          "uri": "decision://qk/match-1",
+          "by": "agent://s2",
+          "authority": "delegation://qk/s2-match",
+          "alternatives": [
+            "do nothing"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "offer://qk/o-norcrete",
+          "detail": {
+            "offer": "offer://qk/o-norcrete",
+            "provider": "org://qk/norcrete",
+            "fit": 1.0,
+            "trust": 0.92,
+            "score": 0.92
+          },
+          "made_at": "2026-09-01T10:06:00Z"
+        }
+      ],
+      "hash": "3efa705e04a439b6f7880ff4da11050336404397572ef116c4cab52fc6f92a24"
+    },
+    {
+      "uri": "event://qk/match-2",
+      "type": "DECISION",
+      "event_id": "ev-qk-7",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-6",
+      "idempotency_key": "idem-qk-7",
+      "signature": "signed-by-agent://s2",
+      "occurred_at": "2026-09-01T10:07:00Z",
+      "actor": "agent://s2",
+      "detail": "match #2: offer://qk/o-solarworks score=0.61 (fit 1.00 x trust 0.61)",
+      "state_update": [
+        {
+          "uri": "decision://qk/match-2",
+          "by": "agent://s2",
+          "authority": "delegation://qk/s2-match",
+          "alternatives": [
+            "do nothing"
+          ],
+          "confidence": 0.85,
+          "expected_outcome": "offer://qk/o-solarworks",
+          "detail": {
+            "offer": "offer://qk/o-solarworks",
+            "provider": "org://qk/solarworks",
+            "fit": 1.0,
+            "trust": 0.61,
+            "score": 0.61
+          },
+          "made_at": "2026-09-01T10:07:00Z"
+        }
+      ],
+      "hash": "ef4c6d5cff50d03e7f9388cb420cae5dffd40dcd0f9ea4710cac09f67332b21e"
+    },
+    {
+      "uri": "event://qk/floor",
+      "type": "DECISION",
+      "event_id": "ev-qk-8",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-7",
+      "idempotency_key": "idem-qk-8",
+      "signature": "signed-by-agent://s2",
+      "occurred_at": "2026-09-01T10:08:00Z",
+      "actor": "agent://s2",
+      "detail": "reject offer://qk/o-generalco (trust 0.42 < floor 0.5)",
+      "state_update": [
+        {
+          "uri": "decision://qk/floor-generalco",
+          "by": "agent://s2",
+          "authority": "delegation://qk/s2-match",
+          "confidence": 0.99,
+          "detail": {
+            "offer": "offer://qk/o-generalco",
+            "rejected": "below trust floor"
+          },
+          "made_at": "2026-09-01T10:08:00Z"
+        }
+      ],
+      "hash": "56d60cca40d74a83429119cbc38d213d3776af1f2add8ce893cab0a929089756"
+    },
+    {
+      "uri": "event://qk/present",
+      "type": "ACTION",
+      "event_id": "ev-qk-9",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-8",
+      "idempotency_key": "idem-qk-9",
+      "signature": "signed-by-agent://s2",
+      "occurred_at": "2026-09-01T10:09:00Z",
+      "actor": "agent://s2",
+      "detail": "present ranked offers to customer for verification: offer://qk/o-norcrete, offer://qk/o-solarworks",
+      "state_update": [],
+      "hash": "87a9ceb3176b063976a787a523548b70c7bb8dacd6f1fc74ca8f32ec55ae0712"
+    },
+    {
+      "uri": "event://qk/human-accept",
+      "type": "DECISION",
+      "event_id": "ev-qk-10",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-9",
+      "idempotency_key": "idem-qk-10",
+      "signature": "signed-by-person://qk/customer",
+      "occurred_at": "2026-09-01T10:10:00Z",
+      "actor": "person://qk/customer",
+      "detail": "human verified & accepted offer://qk/o-norcrete -> engage",
+      "state_update": [
+        {
+          "uri": "decision://qk/human-accept",
+          "by": "person://qk/customer",
+          "authority": "authority://qk/for-matching",
+          "alternatives": [
+            "offer://qk/o-solarworks"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "hire org://qk/norcrete",
+          "actual_outcome": "accepted",
+          "made_at": "2026-09-01T10:10:00Z",
+          "evidence": [
+            "evidence://qk/e-oidc"
+          ]
+        }
+      ],
+      "hash": "1e33d6d13bfad947d078e2cadf65259b3e22c884b878baec41eb67116c484e00"
+    },
+    {
+      "uri": "event://qk/commit",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-qk-11",
+      "correlation_id": "corr-qk-quote-1",
+      "causation_id": "ev-qk-10",
+      "idempotency_key": "idem-qk-11",
+      "signature": "signed-by-agent://s2",
+      "occurred_at": "2026-09-01T10:11:00Z",
+      "actor": "agent://s2",
+      "detail": "commit matched offer offer://qk/o-norcrete as current state",
+      "state_update": [
+        {
+          "uri": "offer://qk/o-norcrete",
+          "provider": "org://qk/norcrete",
+          "service": "flat-roof replacement & repair",
+          "capability_keys": [
+            "roofing",
+            "repair"
+          ],
+          "price": 12400,
+          "currency": "USD",
+          "terms": "fixed-price, 2yr warranty",
+          "status": "COMMITTED",
+          "matched_by": "agent://s2",
+          "verified_by": "person://qk/customer",
+          "verified_at": "2026-09-01T10:11:00Z"
+        }
+      ],
+      "hash": "55392c957b18a69bda30108d14d4fc55fe25ab825fa153378292cc929c0628d9"
+    },
+    {
+      "uri": "event://qk/expect-on-time",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-900",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-899",
+      "idempotency_key": "idem-s2-900",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://s5",
+      "detail": "register expectation for on-time roofing completion",
+      "state_update": [
+        {
+          "uri": "expectation://qk/e-on-time",
+          "actor": "org://quoteko",
+          "subject": "contracted roofing job",
+          "condition": "complete by committed deadline",
+          "metric": "on_time",
+          "threshold": 0.8,
+          "deadline": "2026-09-20T00:00:00Z",
+          "evidence_required": "CLEAR"
+        }
+      ],
+      "hash": "ff28279edb93200efed428d759c7857d27c240a65a37b76acb627ba415c8978c"
+    },
+    {
+      "uri": "event://qk/outcome-norcrete",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-1000",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-999",
+      "idempotency_key": "idem-s2-1000",
+      "signature": "signed-by-org://qk/norcrete",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "org://qk/norcrete",
+      "detail": "job job-norcrete by org://qk/norcrete: actual 2026-09-22T00:00:00Z vs committed 2026-09-20T00:00:00Z -> LATE",
+      "state_update": [
+        {
+          "uri": "event://qk/outcome-norcrete",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-1000",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-999",
+          "idempotency_key": "idem-s2-1000",
+          "signature": "signed-by-org://qk/norcrete",
+          "occurred_at": "2026-08-31T23:46:01Z",
+          "actor": "org://qk/norcrete",
+          "detail": "job job-norcrete by org://qk/norcrete: actual 2026-09-22T00:00:00Z vs committed 2026-09-20T00:00:00Z -> LATE",
+          "state_update": [],
+          "job": "job-norcrete",
+          "provider": "org://qk/norcrete",
+          "committed_deadline": "2026-09-20T00:00:00Z",
+          "actual_completed_at": "2026-09-22T00:00:00Z",
+          "on_time": false
+        },
+        {
+          "uri": "evidence://qk/job-norcrete",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:01Z"
+        }
+      ],
+      "job": "job-norcrete",
+      "provider": "org://qk/norcrete",
+      "committed_deadline": "2026-09-20T00:00:00Z",
+      "actual_completed_at": "2026-09-22T00:00:00Z",
+      "on_time": false,
+      "hash": "cb150c7a1a8f8e3fdeb879cd7aefd50d4d5f3b66a877a3c883527453a88a7df6"
+    },
+    {
+      "uri": "event://qk/verify-job-norcrete",
+      "type": "DECISION",
+      "event_id": "ev-s2-1001",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-1000",
+      "idempotency_key": "idem-s2-1001",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://qk/norcrete completed job-norcrete by its committed deadline (on-time roofing completion)' -> degree 0.98 under procedure 'completion-anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://qk/job-norcrete",
+          "proposer": "agent://s5",
+          "statement": "org://qk/norcrete completed job-norcrete by its committed deadline (on-time roofing completion)"
+        },
+        {
+          "uri": "evidence://qk/job-norcrete",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:01Z"
+        }
+      ],
+      "hash": "f13bdf0120ce08020a99b438809c140f8e39c046f7574c232e6bb5f91b87eee8"
+    },
+    {
+      "uri": "event://qk/trust-update-norcrete",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-1002",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-1001",
+      "idempotency_key": "idem-s2-1002",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://s5",
+      "detail": "trust for org://qk/norcrete [roofing & repair reliability] 0.920 -> 0.528 (outcome=0, exp=0.8, ev=0.98, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://qk/t-norcrete",
+          "subject": "org://quoteko",
+          "target": "org://qk/norcrete",
+          "claim": "roofing & repair reliability",
+          "context": "relationship://qk/cust-cxn",
+          "score": 0.528,
+          "updated_at": "2026-08-31T23:46:01Z",
+          "expected": 0.8,
+          "outcome": 0.0,
+          "evidence": [
+            "evidence://qk/job-norcrete"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "bead1f44195f0606f9c3afd6f2331149e1d1b06d4c7bec40c3597cf398b30be7"
+    },
+    {
+      "uri": "event://qk/outcome-solarworks",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-1010",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-1009",
+      "idempotency_key": "idem-s2-1010",
+      "signature": "signed-by-org://qk/solarworks",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "org://qk/solarworks",
+      "detail": "job job-solarworks by org://qk/solarworks: actual 2026-09-24T00:00:00Z vs committed 2026-09-25T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://qk/outcome-solarworks",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-1010",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-1009",
+          "idempotency_key": "idem-s2-1010",
+          "signature": "signed-by-org://qk/solarworks",
+          "occurred_at": "2026-08-31T23:46:01Z",
+          "actor": "org://qk/solarworks",
+          "detail": "job job-solarworks by org://qk/solarworks: actual 2026-09-24T00:00:00Z vs committed 2026-09-25T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "job-solarworks",
+          "provider": "org://qk/solarworks",
+          "committed_deadline": "2026-09-25T00:00:00Z",
+          "actual_completed_at": "2026-09-24T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://qk/job-solarworks",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:01Z"
+        }
+      ],
+      "job": "job-solarworks",
+      "provider": "org://qk/solarworks",
+      "committed_deadline": "2026-09-25T00:00:00Z",
+      "actual_completed_at": "2026-09-24T00:00:00Z",
+      "on_time": true,
+      "hash": "3beba0f58ddfd159c190f9a1429778982eadcfb5e9007ee25a300877eec61cb7"
+    },
+    {
+      "uri": "event://qk/verify-job-solarworks",
+      "type": "DECISION",
+      "event_id": "ev-s2-1011",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-1010",
+      "idempotency_key": "idem-s2-1011",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://qk/solarworks completed job-solarworks by its committed deadline (on-time roofing completion)' -> degree 0.98 under procedure 'completion-anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://qk/job-solarworks",
+          "proposer": "agent://s5",
+          "statement": "org://qk/solarworks completed job-solarworks by its committed deadline (on-time roofing completion)"
+        },
+        {
+          "uri": "evidence://qk/job-solarworks",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:01Z"
+        }
+      ],
+      "hash": "f0538f6d7bff879cfccd74b24fb1a782b30eb90aa641ea0d3d41adbbb2465003"
+    },
+    {
+      "uri": "event://qk/trust-update-solarworks",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-1012",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-1011",
+      "idempotency_key": "idem-s2-1012",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://s5",
+      "detail": "trust for org://qk/solarworks [roofing & repair reliability] 0.610 -> 0.708 (outcome=1, exp=0.8, ev=0.98, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://qk/t-solarworks",
+          "subject": "org://quoteko",
+          "target": "org://qk/solarworks",
+          "claim": "roofing & repair reliability",
+          "context": "relationship://qk/cust-cxn",
+          "score": 0.708,
+          "updated_at": "2026-08-31T23:46:01Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://qk/job-solarworks"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "f7cb96b6018055c83cc9bba6bc542e7783098608ca2ab262c1f14afcb9811c98"
+    },
+    {
+      "uri": "event://qk/s3-provision",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s3-2000",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-1999",
+      "idempotency_key": "idem-s3-2000",
+      "signature": "signed-by-agent://s1",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://s1",
+      "detail": "provision S3 orchestrator + worker fleet with bounded delegations",
+      "state_update": [
+        {
+          "uri": "agent://s3",
+          "type": "AGENT"
+        },
+        {
+          "uri": "agent://w-local",
+          "type": "AGENT"
+        },
+        {
+          "uri": "agent://w-cloud",
+          "type": "AGENT"
+        },
+        {
+          "uri": "agent://w-frontier",
+          "type": "AGENT"
+        },
+        {
+          "uri": "delegation://qk/s3-execute",
+          "grantor": "org://quoteko",
+          "grantee": "agent://s3",
+          "scope": [
+            "rule://qk/s3-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://qk/w-local",
+          "grantor": "org://quoteko",
+          "grantee": "agent://w-local",
+          "scope": [
+            "rule://qk/w-local-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://qk/w-cloud",
+          "grantor": "org://quoteko",
+          "grantee": "agent://w-cloud",
+          "scope": [
+            "rule://qk/w-cloud-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "delegation://qk/w-frontier",
+          "grantor": "org://quoteko",
+          "grantee": "agent://w-frontier",
+          "scope": [
+            "rule://qk/w-frontier-run"
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "uri": "authority://qk/for-exec",
+          "grants": [
+            "release_final_payment",
+            "approve_final_payment"
+          ],
+          "holder": "org://quoteko"
+        },
+        {
+          "uri": "rule://qk/s3-run",
+          "kind": "POLICY",
+          "text": "S3 orchestrator may split + commit a matched job under Quoteko",
+          "grants": [
+            "orchestrate",
+            "split_work",
+            "commit_job"
+          ]
+        },
+        {
+          "uri": "rule://qk/w-local-run",
+          "kind": "POLICY",
+          "text": "local worker prepares work order + schedule (reversible)",
+          "grants": [
+            "prepare_work_order_and_schedule"
+          ]
+        },
+        {
+          "uri": "rule://qk/w-cloud-run",
+          "kind": "POLICY",
+          "text": "cloud worker dispatches + verifies materials (reversible)",
+          "grants": [
+            "dispatch_dispatcher_and_verify_materials"
+          ]
+        },
+        {
+          "uri": "rule://qk/w-frontier-run",
+          "kind": "POLICY",
+          "text": "frontier worker may release final payment ONLY after human acknowledgement",
+          "grants": [
+            "release_final_payment"
+          ]
+        }
+      ],
+      "hash": "ce34e6aa645af8f2d6f8e98a9daf685eebf23e346c00f4941a6aaba78e357a3b"
+    },
+    {
+      "uri": "event://qk/s3-human-accept",
+      "type": "DECISION",
+      "event_id": "ev-s3-2010",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2009",
+      "idempotency_key": "idem-s3-2010",
+      "signature": "signed-by-person://qk/customer",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "person://qk/customer",
+      "detail": "customer verified & accepted offer://qk/o-solarworks (2nd engagement) -> engage",
+      "state_update": [
+        {
+          "uri": "decision://qk/s3-human-accept",
+          "by": "person://qk/customer",
+          "authority": "authority://qk/for-exec",
+          "alternatives": [
+            "offer://qk/o-norcrete"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "engage org://qk/solarworks",
+          "actual_outcome": "accepted",
+          "made_at": "2026-08-31T23:46:01Z"
+        }
+      ],
+      "hash": "45d35604abd1a0b7e8c581219ba81051e25b6d83452519448682f377e0d472ec"
+    },
+    {
+      "uri": "event://qk/s3-commit-solarworks",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s3-2020",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2019",
+      "idempotency_key": "idem-s3-2020",
+      "signature": "signed-by-agent://s3",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://s3",
+      "detail": "commit matched offer offer://qk/o-solarworks -> commitment://qk/c-solarworks (AGREED)",
+      "state_update": [
+        {
+          "uri": "commitment://qk/c-solarworks",
+          "by": "agent://s3",
+          "to": "org://qk/solarworks",
+          "obligation": "offer://qk/o-solarworks",
+          "expectation": "expectation://qk/e-on-time",
+          "status": "AGREED",
+          "terms": {
+            "price": 18900,
+            "currency": "USD",
+            "warranty": "5yr",
+            "signed": true
+          },
+          "agreed_at": "2026-08-31T23:46:01Z"
+        }
+      ],
+      "hash": "9504e5fd175c7a3d0e284ee536faa97a0b25d9cdaa067799e69b975424674713"
+    },
+    {
+      "uri": "event://qk/s3-split-c-solarworks",
+      "type": "DECISION",
+      "event_id": "ev-s3-2030",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2029",
+      "idempotency_key": "idem-s3-2030",
+      "signature": "signed-by-agent://s3",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://s3",
+      "detail": "orchestrate org://qk/solarworks: 3 tasks across the routing seam (trust 0.708)",
+      "state_update": [
+        {
+          "uri": "decision://qk/s3-split-c-solarworks",
+          "by": "agent://s3",
+          "authority": "delegation://qk/s3-execute",
+          "alternatives": [
+            "execute serially",
+            "defer job",
+            "renegotiate terms"
+          ],
+          "confidence": 0.9,
+          "expected_outcome": "3 fleet tasks under the routing seam",
+          "actual_outcome": "plan sealed",
+          "detail": {
+            "commitment": "commitment://qk/c-solarworks",
+            "provider": "org://qk/solarworks",
+            "trust": 0.708,
+            "tasks": [
+              {
+                "task_id": "t1",
+                "action": "prepare_work_order_and_schedule",
+                "worker": "agent://w-local",
+                "seam_tier": "local",
+                "tier": "local",
+                "reversible": true,
+                "cost_knowable": true,
+                "authority": "delegation://qk/w-local",
+                "status": "PENDING"
+              },
+              {
+                "task_id": "t2",
+                "action": "dispatch_dispatcher_and_verify_materials",
+                "worker": "agent://w-cloud",
+                "seam_tier": "private-cloud",
+                "tier": "private-cloud",
+                "reversible": true,
+                "cost_knowable": true,
+                "authority": "delegation://qk/w-cloud",
+                "status": "PENDING"
+              },
+              {
+                "task_id": "t3",
+                "action": "release_final_payment",
+                "worker": "agent://w-frontier",
+                "seam_tier": "frontier",
+                "tier": "human",
+                "reversible": false,
+                "cost_knowable": false,
+                "authority": "delegation://qk/w-frontier",
+                "status": "ESCALATED"
+              }
+            ]
+          },
+          "made_at": "2026-08-31T23:46:01Z"
+        }
+      ],
+      "hash": "acf8fe7a201f0da570879d90a9f83506f06e1fce054ca293eb3c5e105f0dda11"
+    },
+    {
+      "uri": "event://qk/s3-step-t1",
+      "type": "ACTION",
+      "event_id": "ev-s3-2041",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2040",
+      "idempotency_key": "idem-s3-2041",
+      "signature": "signed-by-agent://w-local",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://w-local",
+      "detail": "agent://w-local [prepare_work_order_and_schedule @ local] executed (authorized via delegation://qk/w-local)",
+      "state_update": [],
+      "worker": "agent://w-local",
+      "action": "prepare_work_order_and_schedule",
+      "task_id": "t1",
+      "tier": "local",
+      "outcome": "done",
+      "hash": "5403deb0da451ef840c9372b34bccf770c77fbef991a3d01159fb04e219f814c"
+    },
+    {
+      "uri": "event://qk/s3-step-t2",
+      "type": "ACTION",
+      "event_id": "ev-s3-2042",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2041",
+      "idempotency_key": "idem-s3-2042",
+      "signature": "signed-by-agent://w-cloud",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://w-cloud",
+      "detail": "agent://w-cloud [dispatch_dispatcher_and_verify_materials @ private-cloud] executed (authorized via delegation://qk/w-cloud)",
+      "state_update": [],
+      "worker": "agent://w-cloud",
+      "action": "dispatch_dispatcher_and_verify_materials",
+      "task_id": "t2",
+      "tier": "private-cloud",
+      "outcome": "done",
+      "hash": "103db35bc3b6d2f21e8fc00d2fab1fbc95c3234ea4f32ef34595a8ae515876d1"
+    },
+    {
+      "uri": "event://qk/s3-escalate-t3",
+      "type": "DECISION",
+      "event_id": "ev-s3-2050",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2049",
+      "idempotency_key": "idem-s3-2050",
+      "signature": "signed-by-agent://s3",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://s3",
+      "detail": "release_final_payment is irreversible/unknowable-cost -> escalated to person://qk/approver; NOT auto-executed",
+      "state_update": [
+        {
+          "uri": "decision://qk/s3-esc-t3",
+          "by": "agent://s3",
+          "authority": "delegation://qk/w-frontier",
+          "alternatives": [
+            "auto-release (NOT permitted: irreversible/unknowable)",
+            "hold pending human acknowledgement"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "escalate release_final_payment to person://qk/approver",
+          "actual_outcome": "ESCALATED, NOT auto-executed",
+          "detail": {
+            "task": {
+              "task_id": "t3",
+              "action": "release_final_payment",
+              "worker": "agent://w-frontier",
+              "seam_tier": "frontier",
+              "tier": "human",
+              "reversible": false,
+              "cost_knowable": false,
+              "authority": "delegation://qk/w-frontier",
+              "status": "ESCALATED"
+            },
+            "commitment": "commitment://qk/c-solarworks",
+            "trigger": {
+              "irreversible_failure": true,
+              "cost_failure_unknowable": true
+            }
+          },
+          "made_at": "2026-08-31T23:46:01Z"
+        }
+      ],
+      "hash": "910e3f7880f98c667d18e900964105ac190093f721b483a53f91f7e22e02cf3f"
+    },
+    {
+      "uri": "event://qk/s3-human-t3",
+      "type": "DECISION",
+      "event_id": "ev-s3-2060",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2059",
+      "idempotency_key": "idem-s3-2060",
+      "signature": "signed-by-person://qk/approver",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "person://qk/approver",
+      "detail": "person://qk/approver signed acknowledgement -> enumerates alternatives and commits release_final_payment",
+      "state_update": [
+        {
+          "uri": "decision://qk/s3-human-t3",
+          "by": "person://qk/approver",
+          "authority": "authority://qk/for-exec",
+          "alternatives": [
+            "release_in_full",
+            "hold_pending_inspection",
+            "release_partial_and_hold_if_fault",
+            "open_dispute"
+          ],
+          "confidence": 1.0,
+          "expected_outcome": "release_final_payment",
+          "actual_outcome": "release_in_full (human approved)",
+          "evidence": [
+            "evidence://qk/e-oidc"
+          ],
+          "detail": {
+            "task": "t3",
+            "action": "release_final_payment",
+            "commitment": "commitment://qk/c-solarworks",
+            "trigger": {
+              "irreversible_failure": true,
+              "cost_failure_unknowable": true
+            }
+          },
+          "made_at": "2026-08-31T23:46:01Z"
+        }
+      ],
+      "hash": "6b30f612f926456ef5afbfd777fc05bfde3ba3a5dfaf38af752bd73d99a7b6e8"
+    },
+    {
+      "uri": "event://qk/s3-step-t3",
+      "type": "ACTION",
+      "event_id": "ev-s3-2070",
+      "correlation_id": "corr-qk-s3-1",
+      "causation_id": "ev-s3-2069",
+      "idempotency_key": "idem-s3-2070",
+      "signature": "signed-by-agent://w-frontier",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://w-frontier",
+      "detail": "agent://w-frontier [release_final_payment @ human] executed (authorized via delegation://qk/w-frontier)",
+      "state_update": [],
+      "worker": "agent://w-frontier",
+      "action": "release_final_payment",
+      "task_id": "t3",
+      "tier": "human",
+      "outcome": "done",
+      "hash": "222b78611321e96d04beca855316002a19cff2c6b4fec2ef8e2f88199256befb"
+    },
+    {
+      "uri": "event://qk/outcome-solarworks-s3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-3000",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-2999",
+      "idempotency_key": "idem-s2-3000",
+      "signature": "signed-by-org://qk/solarworks",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "org://qk/solarworks",
+      "detail": "job job-solarworks-s3 by org://qk/solarworks: actual 2026-09-29T00:00:00Z vs committed 2026-10-01T00:00:00Z -> on time",
+      "state_update": [
+        {
+          "uri": "event://qk/outcome-solarworks-s3",
+          "type": "OUTCOME",
+          "event_id": "ev-s2-3000",
+          "correlation_id": "corr-qk-trust-1",
+          "causation_id": "ev-s2-2999",
+          "idempotency_key": "idem-s2-3000",
+          "signature": "signed-by-org://qk/solarworks",
+          "occurred_at": "2026-08-31T23:46:01Z",
+          "actor": "org://qk/solarworks",
+          "detail": "job job-solarworks-s3 by org://qk/solarworks: actual 2026-09-29T00:00:00Z vs committed 2026-10-01T00:00:00Z -> on time",
+          "state_update": [],
+          "job": "job-solarworks-s3",
+          "provider": "org://qk/solarworks",
+          "committed_deadline": "2026-10-01T00:00:00Z",
+          "actual_completed_at": "2026-09-29T00:00:00Z",
+          "on_time": true
+        },
+        {
+          "uri": "evidence://qk/job-solarworks-s3",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:01Z"
+        }
+      ],
+      "job": "job-solarworks-s3",
+      "provider": "org://qk/solarworks",
+      "committed_deadline": "2026-10-01T00:00:00Z",
+      "actual_completed_at": "2026-09-29T00:00:00Z",
+      "on_time": true,
+      "hash": "a5a1e9d13df6f9165f9cb8b6620a46529790b6ee09e6f0eb2e2ce74e825e6d69"
+    },
+    {
+      "uri": "event://qk/verify-job-solarworks-s3",
+      "type": "DECISION",
+      "event_id": "ev-s2-3001",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-3000",
+      "idempotency_key": "idem-s2-3001",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://s5",
+      "detail": "verify 'org://qk/solarworks completed job-solarworks-s3 by its committed deadline' -> degree 0.98 under procedure 'completion-anchor-conformance'",
+      "state_update": [
+        {
+          "uri": "claim://qk/job-solarworks-s3",
+          "proposer": "agent://s5",
+          "statement": "org://qk/solarworks completed job-solarworks-s3 by its committed deadline"
+        },
+        {
+          "uri": "evidence://qk/job-solarworks-s3",
+          "kind": "ANCHORED",
+          "source": "signed provider job-completion record + S5 anchor",
+          "verity": {
+            "procedure": "completion-anchor-conformance",
+            "confidence": 0.98
+          },
+          "captured_at": "2026-08-31T23:46:01Z"
+        }
+      ],
+      "hash": "199432137ff3e79c9a4ec82098f0058df46cb1f034df0e7d628620b4bb262e21"
+    },
+    {
+      "uri": "event://qk/trust-update-solarworks",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-3002",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-3001",
+      "idempotency_key": "idem-s2-3002",
+      "signature": "signed-by-agent://s5",
+      "occurred_at": "2026-08-31T23:46:01Z",
+      "actor": "agent://s5",
+      "detail": "trust for org://qk/solarworks [roofing & repair reliability] 0.708 -> 0.806 (outcome=1, exp=0.8, ev=0.98, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://qk/t-solarworks",
+          "subject": "org://quoteko",
+          "target": "org://qk/solarworks",
+          "claim": "roofing & repair reliability",
+          "context": "relationship://qk/cust-cxn",
+          "score": 0.806,
+          "updated_at": "2026-08-31T23:46:01Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://qk/job-solarworks-s3"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "2a62ef139b0632f13761026850281d41ccd8107941f4c7aa7803af11119c395e"
+    }
+  ]
+}

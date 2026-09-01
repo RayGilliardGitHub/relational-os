@@ -1,0 +1,47 @@
+[
+  {
+    "uri": "agent://e20/a1",
+    "type": "AGENT"
+  },
+  {
+    "uri": "org://e20/company",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e20/r1",
+    "participants": [
+      "agent://e20/a1",
+      "org://e20/company"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://e20/d1",
+    "grantor": "org://e20/company",
+    "grantee": "agent://e20/a1",
+    "scope": [
+      "rule://e20/negotiation-terms"
+    ]
+  },
+  {
+    "uri": "interaction://e20/neg",
+    "of": "relationship://e20/r1",
+    "kind": "NEGOTIATION"
+  },
+  {
+    "uri": "commitment://e20/c1",
+    "by": "agent://e20/a1",
+    "to": "agreed contract terms"
+  },
+  {
+    "uri": "event://e20/outcome",
+    "type": "OUTCOME",
+    "event_id": "event-e20/outcome",
+    "correlation_id": "event-ce20/outcome",
+    "causation_id": "event-cae20/outcome",
+    "idempotency_key": "event-ie20/outcome",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "agent://e20/a1"
+  }
+]

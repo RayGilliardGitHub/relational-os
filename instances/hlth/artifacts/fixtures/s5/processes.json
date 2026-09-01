@@ -1,0 +1,29 @@
+[
+  {
+    "uri": "process://hlth/pr-core",
+    "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+    "steps": [
+      "triage",
+      "assign",
+      "execute",
+      "verify_outcome",
+      "learning"
+    ]
+  },
+  {
+    "uri": "process_instance://hlth/pi-core",
+    "process": "process://hlth/pr-core",
+    "status": "RUNNING",
+    "started_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "escalation://hlth/escalate-release",
+    "trigger": "external pharmaceutical release \u2014 irreversible and cost-unknowable once shipped",
+    "severity": "WARN",
+    "recipient": "person://hlth/oph",
+    "deadline": "2026-11-15T00:00:00Z",
+    "fallback": "agent://hlth/s4",
+    "authority": "authority://hlth/for-ops",
+    "acknowledgement": "approve then execute"
+  }
+]

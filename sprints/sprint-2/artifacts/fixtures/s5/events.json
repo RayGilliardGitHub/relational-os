@@ -1,0 +1,38 @@
+[
+  {
+    "uri": "event://qk/outcome-norcrete",
+    "type": "OUTCOME",
+    "event_id": "ev-s2-1000",
+    "correlation_id": "corr-qk-trust-1",
+    "causation_id": "ev-s2-999",
+    "idempotency_key": "idem-s2-1000",
+    "signature": "signed-by-org://qk/norcrete",
+    "occurred_at": "2026-08-31T23:46:01Z",
+    "actor": "org://qk/norcrete",
+    "detail": "job job-norcrete by org://qk/norcrete: actual 2026-09-22T00:00:00Z vs committed 2026-09-20T00:00:00Z -> LATE",
+    "state_update": [],
+    "job": "job-norcrete",
+    "provider": "org://qk/norcrete",
+    "committed_deadline": "2026-09-20T00:00:00Z",
+    "actual_completed_at": "2026-09-22T00:00:00Z",
+    "on_time": false
+  },
+  {
+    "uri": "event://qk/outcome-solarworks",
+    "type": "OUTCOME",
+    "event_id": "ev-s2-1010",
+    "correlation_id": "corr-qk-trust-1",
+    "causation_id": "ev-s2-1009",
+    "idempotency_key": "idem-s2-1010",
+    "signature": "signed-by-org://qk/solarworks",
+    "occurred_at": "2026-08-31T23:46:01Z",
+    "actor": "org://qk/solarworks",
+    "detail": "job job-solarworks by org://qk/solarworks: actual 2026-09-24T00:00:00Z vs committed 2026-09-25T00:00:00Z -> on time",
+    "state_update": [],
+    "job": "job-solarworks",
+    "provider": "org://qk/solarworks",
+    "committed_deadline": "2026-09-25T00:00:00Z",
+    "actual_completed_at": "2026-09-24T00:00:00Z",
+    "on_time": true
+  }
+]

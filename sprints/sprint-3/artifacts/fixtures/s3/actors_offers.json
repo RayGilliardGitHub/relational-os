@@ -1,0 +1,153 @@
+[
+  {
+    "uri": "person://qk/customer",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://qk/approver",
+    "type": "PERSON",
+    "identity": {
+      "attestations": [
+        "employee"
+      ]
+    }
+  },
+  {
+    "uri": "org://quoteko",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://qk/norcrete",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://qk/solarworks",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://qk/generalco",
+    "type": "ORG"
+  },
+  {
+    "uri": "agent://s1",
+    "type": "AGENT"
+  },
+  {
+    "uri": "agent://s2",
+    "type": "AGENT"
+  },
+  {
+    "uri": "entity://qk/canon-customer",
+    "canonical": "person://qk/customer",
+    "aliases": [
+      "qk-customer-8832",
+      "C. Rivera"
+    ],
+    "kind": "PERSON"
+  },
+  {
+    "uri": "rule://qk/tos",
+    "kind": "POLICY",
+    "text": "vetted contractors; human-accept required for committed hire"
+  },
+  {
+    "uri": "rule://qk/s2-run-matching",
+    "kind": "POLICY",
+    "text": "S2 agent may run capability-bound matching under Quoteko",
+    "grants": [
+      "run_matching"
+    ]
+  },
+  {
+    "uri": "offer://qk/o-norcrete",
+    "provider": "org://qk/norcrete",
+    "service": "flat-roof replacement & repair",
+    "capability_keys": [
+      "roofing",
+      "repair"
+    ],
+    "price": 12400,
+    "currency": "USD",
+    "terms": "fixed-price, 2yr warranty",
+    "status": "COMMITTED",
+    "matched_by": "agent://s2",
+    "verified_by": "person://qk/customer",
+    "verified_at": "2026-09-01T10:11:00Z"
+  },
+  {
+    "uri": "offer://qk/o-solarworks",
+    "provider": "org://qk/solarworks",
+    "service": "roof replacement + solar",
+    "capability_keys": [
+      "roofing",
+      "repair",
+      "solar"
+    ],
+    "price": 18900,
+    "currency": "USD",
+    "terms": "fixed-price, 5yr warranty",
+    "status": "AVAILABLE"
+  },
+  {
+    "uri": "offer://qk/o-generalco",
+    "provider": "org://qk/generalco",
+    "service": "roof patch",
+    "capability_keys": [
+      "roofing"
+    ],
+    "price": 9800,
+    "currency": "USD",
+    "terms": "time-and-materials",
+    "status": "AVAILABLE"
+  },
+  {
+    "uri": "agent://s3",
+    "type": "AGENT"
+  },
+  {
+    "uri": "agent://w-local",
+    "type": "AGENT"
+  },
+  {
+    "uri": "agent://w-cloud",
+    "type": "AGENT"
+  },
+  {
+    "uri": "agent://w-frontier",
+    "type": "AGENT"
+  },
+  {
+    "uri": "rule://qk/s3-run",
+    "kind": "POLICY",
+    "text": "S3 orchestrator may split + commit a matched job under Quoteko",
+    "grants": [
+      "orchestrate",
+      "split_work",
+      "commit_job"
+    ]
+  },
+  {
+    "uri": "rule://qk/w-local-run",
+    "kind": "POLICY",
+    "text": "local worker prepares work order + schedule (reversible)",
+    "grants": [
+      "prepare_work_order_and_schedule"
+    ]
+  },
+  {
+    "uri": "rule://qk/w-cloud-run",
+    "kind": "POLICY",
+    "text": "cloud worker dispatches + verifies materials (reversible)",
+    "grants": [
+      "dispatch_dispatcher_and_verify_materials"
+    ]
+  },
+  {
+    "uri": "rule://qk/w-frontier-run",
+    "kind": "POLICY",
+    "text": "frontier worker may release final payment ONLY after human acknowledgement",
+    "grants": [
+      "release_final_payment"
+    ]
+  }
+]

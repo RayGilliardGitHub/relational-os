@@ -1,0 +1,15 @@
+[
+  {
+    "uri": "policy://fin/funding-allocation",
+    "name": "funding allocation",
+    "condition": "a new committed funding tranche is to be allocated",
+    "decision": "select by fit x scoped settlement Trust; laggard needs a performance gate BEFORE a new commitment (learned 2026-09-01)",
+    "action": "allocate to the top-ranked fitted counterparty; gate laggard (kaplen); notify treasurer on divergence",
+    "scope": [
+      "expectation://fin/e-on-time-funding"
+    ],
+    "version": 3,
+    "policy_status": "EFFECTIVE",
+    "learning": "decision://fin/s5-learning-funding"
+  }
+]

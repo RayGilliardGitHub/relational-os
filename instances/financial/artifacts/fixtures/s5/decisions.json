@@ -1,0 +1,246 @@
+[
+  {
+    "uri": "decision://fin/s2-match-baseline",
+    "by": "agent://s2",
+    "authority": "delegation://fin/s2-match",
+    "alternatives": [
+      "offer://fin/o-kaplen",
+      "offer://fin/o-adamvale",
+      "no facility"
+    ],
+    "confidence": 0.9,
+    "expected_outcome": "kaplen ranked #1 on existing Trust",
+    "actual_outcome": "offer://fin/o-kaplen",
+    "detail": [
+      {
+        "offer": "offer://fin/o-kaplen",
+        "provider": "org://fin/kaplen",
+        "fit": 1.0,
+        "trust": 0.9,
+        "score": 0.9
+      },
+      {
+        "offer": "offer://fin/o-adamvale",
+        "provider": "org://fin/adamvale",
+        "fit": 1.0,
+        "trust": 0.6,
+        "score": 0.6
+      }
+    ],
+    "made_at": "2026-09-01T00:29:55Z"
+  },
+  {
+    "uri": "decision://qk/s4-recon-kaplen-q3",
+    "by": "agent://s4",
+    "authority": "authority://qk/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 1500000 USD from org://fin/northglen",
+    "actual_outcome": "matched exactly: settled 1500000 USD",
+    "detail": {
+      "slug": "kaplen-q3",
+      "expected": 1500000,
+      "actual": 1500000,
+      "matched": true,
+      "buyer": "org://fin/northglen",
+      "provider": "org://fin/kaplen",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:55Z"
+  },
+  {
+    "uri": "decision://qk/s4-recon-adamvale-q3",
+    "by": "agent://s4",
+    "authority": "authority://qk/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 1500000 USD from org://fin/northglen",
+    "actual_outcome": "matched exactly: settled 1500000 USD",
+    "detail": {
+      "slug": "adamvale-q3",
+      "expected": 1500000,
+      "actual": 1500000,
+      "matched": true,
+      "buyer": "org://fin/northglen",
+      "provider": "org://fin/adamvale",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:55Z"
+  },
+  {
+    "uri": "decision://qk/s4-recon-kaplen-q4",
+    "by": "agent://s4",
+    "authority": "authority://qk/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 1200000 USD from org://fin/northglen",
+    "actual_outcome": "matched exactly: settled 1200000 USD",
+    "detail": {
+      "slug": "kaplen-q4",
+      "expected": 1200000,
+      "actual": 1200000,
+      "matched": true,
+      "buyer": "org://fin/northglen",
+      "provider": "org://fin/kaplen",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:55Z"
+  },
+  {
+    "uri": "decision://fin/s5-triage",
+    "by": "agent://fin/s5",
+    "authority": "authority://fin/for-treasury",
+    "alternatives": [
+      "accept",
+      "dismiss as anomaly"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "accept as a real funding-risk",
+    "actual_outcome": "accepted; root (kaplen settlement failure) nominated",
+    "made_at": "2026-09-01T00:29:55Z"
+  },
+  {
+    "uri": "decision://fin/s5-assign",
+    "by": "person://fin/treasurer",
+    "authority": "authority://fin/for-treasury",
+    "alternatives": [
+      "assign",
+      "defer"
+    ],
+    "confidence": 0.95,
+    "expected_outcome": "task in progress",
+    "detail": {
+      "task": "task://fin/t-treasury-rebalance",
+      "assigned_to": "agent://fin/treasury-ops",
+      "authority": "authority://fin/for-treasury",
+      "priority": 0.695,
+      "capacity": 1.0
+    },
+    "made_at": "2026-09-01T00:29:55Z"
+  },
+  {
+    "uri": "decision://fin/s5-match-recorded",
+    "by": "agent://s2",
+    "authority": "delegation://fin/s2-match",
+    "alternatives": [
+      "offer://fin/o-adamvale",
+      "no facility"
+    ],
+    "confidence": 0.92,
+    "expected_outcome": "adamvale ranked #1",
+    "actual_outcome": "offer://fin/o-adamvale",
+    "detail": [
+      {
+        "offer": "offer://fin/o-adamvale",
+        "provider": "org://fin/adamvale",
+        "fit": 1.0,
+        "trust": 0.695,
+        "score": 0.695
+      }
+    ],
+    "made_at": "2026-09-01T00:29:55Z"
+  },
+  {
+    "uri": "decision://fin/treasurer-human",
+    "by": "person://fin/treasurer",
+    "authority": "authority://fin/for-treasury",
+    "alternatives": [
+      "release_in_full",
+      "hold_pending_portfolio_review",
+      "release_partial_and_hold_if_shortfall",
+      "open_dispute"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "release the committed tranche to adamvale",
+    "actual_outcome": "release_in_full (human approved)",
+    "detail": {
+      "task": "task://fin/t-treasury-rebalance",
+      "action": "release_funding_tranche",
+      "irreversible_failure": true,
+      "cost_failure_unknowable": true
+    },
+    "made_at": "2026-09-01T00:29:55Z"
+  },
+  {
+    "uri": "decision://qk/s4-recon-routed-adamvale",
+    "by": "agent://s4",
+    "authority": "authority://qk/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 1500000 USD from org://fin/northglen",
+    "actual_outcome": "matched exactly: settled 1500000 USD",
+    "detail": {
+      "slug": "routed-adamvale",
+      "expected": 1500000,
+      "actual": 1500000,
+      "matched": true,
+      "buyer": "org://fin/northglen",
+      "provider": "org://fin/adamvale",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:55Z"
+  },
+  {
+    "uri": "decision://fin/s5-learning-funding",
+    "by": "agent://fin/s5",
+    "authority": "authority://qk/for-operations",
+    "subject": "committed funding on-time management",
+    "expected": 0.95,
+    "actual": 1.0,
+    "variance": 0.05,
+    "why": "Concentrating committed funding with a counterparty that has verified on-time settlement (adamvale), while gating the laggard (kaplen) with a performance checkpoint, restored committed-funding on-time. Verified good settlements compound scoped settlement Trust and re-price routing.",
+    "change_future_policy": "ALLOCATE by fit AND scoped settlement Trust (not fit alone); counterparties below the Trust floor require a performance gate before a new commitment.",
+    "made_at": "2026-09-01T00:29:55Z"
+  },
+  {
+    "uri": "decision://fin/s5-metric-loop-on-time",
+    "by": "agent://fin/s5",
+    "authority": "authority://qk/for-operations",
+    "alternatives": [
+      "do nothing",
+      "rebalance provider allocation"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "metric://fin/m-on-time-settlement variance reduced toward target",
+    "detail": {
+      "goal": "goal://fin/g-stable-client-funding",
+      "metric": "metric://fin/m-on-time-settlement",
+      "actual": 0.5,
+      "variance": -0.45,
+      "action": "task://fin/t-treasury-rebalance",
+      "outcome": "event://fin/outcome-funding-routed-adamvale"
+    },
+    "made_at": "2026-09-01T00:29:55Z"
+  },
+  {
+    "uri": "decision://fin/s5-attention-ordered",
+    "by": "agent://fin/s5",
+    "authority": "authority://fin/for-treasury",
+    "confidence": 0.9,
+    "expected_outcome": "top-of-attention items ranked",
+    "actual_outcome": "attention prioritized by derived score",
+    "detail": {
+      "attention": [
+        {
+          "uri": "task://fin/t-treasury-rebalance",
+          "label": "re-balance funding allocation",
+          "priority": 0.695
+        },
+        {
+          "uri": "task://fin/t-followup-routed",
+          "label": "rallied follow-on committed funding (adamvale)",
+          "priority": 0.58
+        }
+      ]
+    },
+    "made_at": "2026-09-01T00:29:55Z"
+  }
+]

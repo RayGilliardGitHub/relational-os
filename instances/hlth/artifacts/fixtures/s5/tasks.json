@@ -1,0 +1,31 @@
+[
+  {
+    "uri": "task://hlth/t-rebalance",
+    "assigned_to": "agent://hlth/supply-ops",
+    "created_by": "agent://hlth/s5",
+    "objective": "re-balance committed pharmaceutical supply to the verified on-time distributor (cortica-supply) and gate the laggard (meridian-med)",
+    "dependencies": [],
+    "authority": "authority://hlth/for-ops",
+    "deadline": "2026-10-15T00:00:00Z",
+    "priority": 0.695,
+    "status": "ASSIGNED",
+    "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+    "why_here": "derived from the on-time exception (case OPEN)",
+    "importance": "restores on-time supply, protecting facility patient-trust scores",
+    "evidence": [
+      "evidence://hlth/committed-meridian-medQ3",
+      "evidence://hlth/committed-cortica-supplyQ3",
+      "evidence://hlth/committed-meridian-medQ4"
+    ],
+    "decision_required": "approve the re-allocation",
+    "priority_factors": {
+      "impact": 0.85,
+      "urgency": 0.9,
+      "confidence": 0.7,
+      "irreversibility": false,
+      "relationship_importance": 0.8,
+      "cost_of_delay": 0.75
+    },
+    "assigned_capacity": 1.0
+  }
+]

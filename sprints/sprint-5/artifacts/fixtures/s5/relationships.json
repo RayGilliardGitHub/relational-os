@@ -1,0 +1,90 @@
+[
+  {
+    "uri": "relationship://qk/cust-cxn",
+    "participants": [
+      "person://qk/customer",
+      "org://quoteko"
+    ],
+    "roles": {
+      "person://qk/customer": [
+        "customer",
+        "employee"
+      ],
+      "org://quoteko": [
+        "service_provider",
+        "employer"
+      ]
+    },
+    "context": {
+      "organization": "org://quoteko",
+      "relationship": "relationship://qk/cust-cxn",
+      "role": "customer",
+      "jurisdiction": "US-NM",
+      "time": "2026-09-01T10:00:00Z",
+      "purpose": "purpose://qk/quoting",
+      "rules": [
+        "rule://qk/tos"
+      ]
+    },
+    "purpose": "property-services quoting/triage",
+    "status": "ACTIVE",
+    "created_at": "2026-09-01T10:00:00Z",
+    "effective_from": "2026-09-01T10:00:00Z",
+    "authority": [
+      "authority://qk/for-matching"
+    ],
+    "authority_by_role": {
+      "customer": "authority://qk/for-matching",
+      "employee": "authority://qk/for-employment"
+    },
+    "consent": [
+      "consent://qk/match-data",
+      "consent://qk/employee-consent"
+    ]
+  },
+  {
+    "uri": "interaction://qk/req-quote",
+    "of": "relationship://qk/cust-cxn",
+    "kind": "REQUEST",
+    "events": [
+      "event://qk/request"
+    ]
+  },
+  {
+    "uri": "relationship://qk/charity-cxn",
+    "participants": [
+      "org://quoteko",
+      "org://qk/sunsetshelter"
+    ],
+    "roles": {
+      "org://quoteko": [
+        "donor"
+      ],
+      "org://qk/sunsetshelter": [
+        "beneficiary"
+      ]
+    },
+    "context": {
+      "organization": "org://qk/sunsetshelter",
+      "relationship": "relationship://qk/charity-cxn",
+      "role": "donor",
+      "jurisdiction": "US-NM",
+      "purpose": "purpose://qk/pv-shelter",
+      "time": "2026-09-01T00:29:54Z"
+    },
+    "purpose": "charitable solar installation at the shelter",
+    "authority": [
+      "authority://qk/for-charity"
+    ],
+    "consent": [
+      "consent://qk/charity-use"
+    ],
+    "authority_by_role": {
+      "donor": "authority://qk/for-charity",
+      "beneficiary": "authority://qk/for-charity"
+    },
+    "status": "ACTIVE",
+    "created_at": "2026-09-01T00:29:54Z",
+    "effective_from": "2026-09-01T00:29:54Z"
+  }
+]

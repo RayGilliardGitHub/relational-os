@@ -1,0 +1,42 @@
+[
+  {
+    "uri": "org://e14/boeing",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://e14/supplier",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e14/supply",
+    "participants": [
+      "org://e14/supplier",
+      "org://e14/boeing"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://e14/supplier": [
+        "supplier"
+      ],
+      "org://e14/boeing": [
+        "customer"
+      ]
+    }
+  },
+  {
+    "uri": "expectation://e14/ontime",
+    "actor": "org://e14/boeing",
+    "subject": "deliver on schedule",
+    "condition": "delivery within 7 days"
+  },
+  {
+    "uri": "commitment://e14/c1",
+    "by": "org://e14/supplier",
+    "to": "deliver parts per contract"
+  },
+  {
+    "uri": "interaction://e14/fulfil",
+    "of": "relationship://e14/supply",
+    "kind": "ACTION"
+  }
+]

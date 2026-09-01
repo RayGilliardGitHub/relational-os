@@ -1,0 +1,46 @@
+[
+  {
+    "uri": "relationship://hlth/ops-rel",
+    "participants": [
+      "org://hlth/lumenhealth",
+      "org://hlth/northgate-care"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://hlth/lumenhealth": [
+        "provider"
+      ],
+      "org://hlth/northgate-care": [
+        "client"
+      ]
+    },
+    "authority": [
+      "authority://hlth/for-ops"
+    ],
+    "purpose": "healthcare / pharma operating relationship"
+  },
+  {
+    "uri": "relationship://hlth/partner-net",
+    "participants": [
+      "org://hlth/lumenhealth",
+      "org://hlth/cortica-supply",
+      "org://hlth/meridian-med"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://hlth/lumenhealth": [
+        "operator"
+      ],
+      "org://hlth/cortica-supply": [
+        "partner"
+      ],
+      "org://hlth/meridian-med": [
+        "partner"
+      ]
+    },
+    "authority": [
+      "authority://hlth/for-ops"
+    ],
+    "purpose": "healthcare / pharma partner network"
+  }
+]

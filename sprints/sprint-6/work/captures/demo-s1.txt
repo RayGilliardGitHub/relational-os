@@ -1,0 +1,42 @@
+=== Sprint 1 — S1 substrate + S2 Intent/Matching (Quoteko) ===
+
+--- S1 substrate (thin) ---
+  resolve_identity('qk-customer-8832') -> person://qk/customer
+  authenticate -> verif_score 0.8
+  resolve_role  -> customer (relationship://qk/cust-cxn)
+  authorize('request_quote') -> Permission(request_quote, scoped@['request_quote'])
+
+--- S2 Intent / Matching (Trust-weighted, floor 0.5) ---
+  intent: roof replacement/repair | urgency=high | keys=['repair', 'roofing']
+    rank 0.92  offer://qk/o-norcrete  (fit 1.00 x trust 0.92)
+    rank 0.61  offer://qk/o-solarworks  (fit 1.00 x trust 0.61)
+  rejected (trust floor): offer://qk/o-generalco trust=0.42 < 0.5
+  human accepted: offer://qk/o-norcrete -> commit status COMMITTED
+
+--- Ledger / Graph wiring ---
+  ledger events: 12 | head_hash a1cfaf7c2503…
+  graph current-state objects: 28
+
+--- emit fixtures ---
+  wrote actors.json -> file:///home/rlg/relational-os/sprints/sprint-1/artifacts/fixtures/s1s2/actors.json
+  wrote relationship.json -> file:///home/rlg/relational-os/sprints/sprint-1/artifacts/fixtures/statemachines/relationship.json
+  wrote offers.json -> file:///home/rlg/relational-os/sprints/sprint-1/artifacts/fixtures/s1s2/offers.json
+  wrote decisions.json -> file:///home/rlg/relational-os/sprints/sprint-1/artifacts/fixtures/s1s2/decisions.json
+  wrote events.json -> file:///home/rlg/relational-os/sprints/sprint-1/artifacts/fixtures/s1s2/events.json
+  wrote ledger-quoteko.json -> file:///home/rlg/relational-os/sprints/sprint-1/artifacts/fixtures/ledger/ledger-quoteko.json
+  wrote current-state.json -> file:///home/rlg/relational-os/sprints/sprint-1/artifacts/graph/current-state.json
+
+  [check:s1]
+    [PASS] role resolved as customer  — got customer
+    [PASS] role is relationship-scoped (absent elsewhere)  — got None
+    [PASS] authz permitted within the relationship  — Permission(request_quote, scoped@['request_quote'])
+    [PASS] authz denied outside the relationship  — no such relationship relationship://qk/other
+    [PASS] delegation grants scoped capability  — Permission(run_matching, scoped@['run_matching'])
+    [PASS] revoked delegation -> denial (capability voided)  — delegation://qk/s2-match not active (REVOKED)
+
+  [check:roundtrip]
+    [PASS] ledger hash-chain + signatures intact  — ok
+    [PASS] graph state reconstructs to ledger events  — 28 graph objects rebuilt from 12 events
+    [PASS] ledger==history & graph==state (not conflated)  — history=True, state-objects=True
+
+RESULT: ALL PASS

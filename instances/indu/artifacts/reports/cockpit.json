@@ -1,0 +1,231 @@
+{
+  "cockpit": {
+    "company": "FerrousWorks (Industrial, fictional)",
+    "generated": "2026-09-01T00:29:53Z",
+    "health": [
+      {
+        "metric": "metric://indu/m-on-time",
+        "name": "Committed-machinery parts delivery on-time rate",
+        "unit": "fraction",
+        "target": 0.95,
+        "actual": 0.5,
+        "variance": -0.45,
+        "status": "CRITICAL",
+        "forecast": 0.5
+      },
+      {
+        "metric": "metric://indu/m-trust",
+        "name": "Partner scoped-trust score",
+        "unit": "score",
+        "target": 0.9,
+        "actual": 0.79,
+        "variance": -0.11,
+        "status": "CRITICAL",
+        "forecast": 0.92
+      },
+      {
+        "metric": "metric://indu/m-settled-value",
+        "name": "Settled committed value",
+        "unit": "USD",
+        "target": 7600000.0,
+        "actual": 7600000.0,
+        "variance": 0.0,
+        "status": "OK",
+        "forecast": 8740000.0
+      }
+    ],
+    "attention_line": "2 things requiring attention today",
+    "attention": [
+      {
+        "uri": "task://indu/t-rebalance",
+        "label": "re-balance committed work",
+        "priority": 0.695
+      },
+      {
+        "uri": "task://indu/t-followup",
+        "label": "rallied follow-on (good partner)",
+        "priority": 0.58
+      }
+    ],
+    "exception": {
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "on": 1,
+      "total": 3
+    },
+    "case": "case://indu/c-on-time",
+    "case_status": "CLOSED",
+    "recommendation": {
+      "summary": "task://indu/t-rebalance",
+      "authority_required": "authority://indu/for-ops",
+      "options": [
+        "re-balance machinery parts to the verified on-time supplier",
+        "gate the laggard (cadence-tools)",
+        "do nothing"
+      ],
+      "includes_do_nothing": true,
+      "tradeoff": "Routing via quadrant-works restores on-time (higher short-term concentration risk) but protects plant Trust; doing nothing keeps below target.",
+      "confidence": 0.85,
+      "expected_impact": "forward on-time returns to 1.0",
+      "decision": "decision://indu/s5-assign"
+    },
+    "verified_outcome": {
+      "exchange": "event://indu/s4-exchange-quadrant-worksR",
+      "outcome": "event://indu/s4-outcome-quadrant-worksR",
+      "evaluation": "met",
+      "evidence": "evidence://indu/routed-quadrant-worksR",
+      "after_trust": 0.79,
+      "forward_on_time": 1.0,
+      "cumulative_after": 0.5
+    },
+    "learning": "decision://indu/learning",
+    "ledger": 54,
+    "graph": 80
+  },
+  "brand": {
+    "tagline": "Parts that keep the line turning.",
+    "mission": "Deliver committed machinery parts reliably and on time so plants and workshops trust FerrousWorks enough to keep production lines scheduled without a backstop.",
+    "vision": "Industrial machinery where the part you ordered arrives exactly when the maintenance plan said \u2014 so uptime is planned, not hoped for.",
+    "values": [
+      [
+        "Uptime is the deliverable",
+        "A late part is a stopped line; we protect the schedule."
+      ],
+      [
+        "Machined right",
+        "On time never trades off tolerances or metallurgy."
+      ],
+      [
+        "Traceability",
+        "Every part lot is ledger-verified from material to machine."
+      ],
+      [
+        "Plant partnership",
+        "Planners lean on us to keep lines running."
+      ],
+      [
+        "Built to last",
+        "We make parts that outlast the maintenance cycle."
+      ]
+    ],
+    "about": "FerrousWorks is an industrial machinery-parts supplier. We take committed machinery parts deliveries and land them on the date the production plan needs them \u2014 machined, verified, traceable. In a plant where a missed part means a quiet line and idle labour, our on-time evidence is what lets planners schedule with confidence instead of contingency.",
+    "fast_facts": [
+      "Founded 1983, industrial machinery parts",
+      "5,000+ parts delivered annually",
+      "Serving plants, OEMs, and job shops"
+    ],
+    "history": [
+      [
+        "1983",
+        "Founded as a machine shop in the industrial Midwest."
+      ],
+      [
+        "1999",
+        "Scaled to committed machinery-parts supply."
+      ],
+      [
+        "2017",
+        "Digitised every lot to ledger-verified on-time evidence."
+      ]
+    ],
+    "leadership": [
+      [
+        "Ingrid Halvorsen",
+        "Chief Executive",
+        "Metallurgist and shop floor leader before taking the helm of FerrousWorks."
+      ],
+      [
+        "Carl Betancourt",
+        "Chief Operating Officer",
+        "Owns machining capacity and the on-time gate."
+      ]
+    ],
+    "products_services": [
+      "Machinery parts design and delivery",
+      "Precision machining and fabrication",
+      "Part-traceability and reliability reporting"
+    ],
+    "testimonials": [
+      [
+        "FerrousWorks is the one supplier our maintenance schedule doesn't hedge against.",
+        "Plant maintenance engineer"
+      ]
+    ],
+    "trust": [
+      [
+        "99.0% committed machinery-parts on-time rate (2025)",
+        "FerrousWorks delivery ledger"
+      ],
+      [
+        "ISO 9001 quality management certification",
+        "third-party audit"
+      ]
+    ],
+    "locations": "Cleveland, OH (HQ) \u00b7 machining plants serving the industrial Midwest and beyond",
+    "faq": [
+      [
+        "How is your on-time claim verified?",
+        "Each committed part lot anchors to a signed ledger event with a verified delivery time \u2014 traceable from material order to the plant."
+      ],
+      [
+        "Do you support emergency and planned maintenance parts?",
+        "Yes, both; every committed delivery, planned or rush, runs under the same on-time gate."
+      ]
+    ],
+    "contact": "orders@ferrousworks.example \u00b7 +1-216-555-0156",
+    "careers": "Keep the line turning: machining, metallurgy, supply, quality, planning.",
+    "investors": "Privately held. Plant reliability data shared on request.",
+    "press": "media@ferrousworks.example \u2014 capability and quality announcements.",
+    "esg": "Low-waste machining, material traceability for circularity, apprentice and upskilling programs.",
+    "legal": [
+      "Privacy",
+      "Terms",
+      "California Rights",
+      "Do Not Sell or Share"
+    ],
+    "nav": [
+      "About",
+      "Capabilities",
+      "Plants & Facilites",
+      "Quality",
+      "Careers",
+      "Investors",
+      "Press",
+      "Contact"
+    ],
+    "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+    "design": {
+      "palette": [
+        [
+          "Foundry Charcoal",
+          "#24262B"
+        ],
+        [
+          "Forge Orange",
+          "#D85C27"
+        ],
+        [
+          "Steel Grey",
+          "#9AA0A6"
+        ],
+        [
+          "Mill White",
+          "#F2F1EE"
+        ]
+      ],
+      "typography": {
+        "heading": "Sturdy industrial sans (e.g. Chivo)",
+        "body": "Workhorse sans (e.g. Source Sans 3)"
+      },
+      "logo": {
+        "wordmark": "FERROUSWORKS in hard caps",
+        "character": "a gear/ingot mark",
+        "usage": "clear space sturdy; forge orange as accent on charcoal"
+      },
+      "imagery": "Machining centre work, forged parts, shop floors at scale \u2014 heavy and precise",
+      "tone": "Built, straightforward, exact; about uptime and tolerances."
+    }
+  }
+}

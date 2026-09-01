@@ -1,0 +1,248 @@
+[
+  {
+    "uri": "org://hlth/lumenhealth",
+    "type": "ORG",
+    "identity": {
+      "attestations": [
+        "business-license"
+      ]
+    },
+    "brand": {
+      "tagline": "Supply that heals, on schedule.",
+      "mission": "Move committed pharmaceutical supply reliably and on time so care facilities always have the medicine they ordered, exactly when they ordered it.",
+      "vision": "A healthcare supply chain so dependable that a pharmacy's worry is one less thing in the operating room.",
+      "values": [
+        [
+          "Patients first",
+          "Every shipment carries a patient at the other end."
+        ],
+        [
+          "On-time is safety",
+          "A delayed essential medicine is a clinical risk, not an inventory hiccup."
+        ],
+        [
+          "Evidence-based",
+          "We verify every delivery against the ledger; nothing ships on trust alone."
+        ],
+        [
+          "Compassion",
+          "We treat supply failures as care failures, and fix the system, not the blame."
+        ],
+        [
+          "Accountability",
+          "If a delivery misses, we say so, we learn, and the policy changes."
+        ]
+      ],
+      "about": "Lumen Health is a healthcare and pharmaceutical supply operator. We run committed pharmaceutical distribution for care facilities \u2014 and we treat an on-time release the same way clinicians treat a vital sign: it is either within range, or it gets immediate, documented attention. By anchoring each committed delivery to ledger evidence, we give pharmacies and their patients the rarest thing in the supply chain \u2014 certainty.",
+      "fast_facts": [
+        "Founded 2009, pharmaceutical distribution",
+        "3,200+ care facilities served",
+        "Cold-chain and schedule-critical delivery practice"
+      ],
+      "history": [
+        [
+          "2009",
+          "Founded in Minneapolis to fix fragile pharma distribution."
+        ],
+        [
+          "2015",
+          "Launched the committed pharmaceutical-delivery line."
+        ],
+        [
+          "2022",
+          "Placed every committed delivery under ledger-verified on-time evidence."
+        ]
+      ],
+      "leadership": [
+        [
+          "Dana Okafor",
+          "Chief Operating Officer",
+          "Former hospital pharmacy director who joined Lumen to put reliability at the centre of supply."
+        ],
+        [
+          "Marco Beltran",
+          "VP, Distribution",
+          "Owns the distributor network and the on-time bar."
+        ]
+      ],
+      "products_services": [
+        "Committed pharmaceutical supply and distribution",
+        "Cold-chain logistics",
+        "Supply-reliability assurance for care facilities"
+      ],
+      "testimonials": [
+        [
+          "Since Lumen, 'reorder' is boring again. That is exactly what I want it to be.",
+          "Facility pharmacy director"
+        ]
+      ],
+      "trust": [
+        [
+          "99.4% committed pharmacy-delivery on-time rate (2025)",
+          "Lumen delivery ledger"
+        ],
+        [
+          "GDP (Good Distribution Practice) aligned cold-chain",
+          "third-party audit"
+        ]
+      ],
+      "locations": "Minneapolis, MN (HQ) \u00b7 regional depots across the Midwest",
+      "faq": [
+        [
+          "How do you prove a delivery was on time?",
+          "Each committed delivery anchors to a signed ledger event with a verified completion time \u2014 auditable end to end."
+        ],
+        [
+          "Do you handle temperature-sensitive product?",
+          "Yes, cold-chain is a first-class service with its own verification and reporting."
+        ]
+      ],
+      "contact": "supply@lumenhealth.example \u00b7 +1-612-555-0177",
+      "careers": "Help us make healthcare supply boring again: distribution leads, cold-chain specialists, supply ops.",
+      "investors": "Privately held. On-time and reliability reporting available on request.",
+      "press": "media@lumenhealth.example \u2014 spokespeople and reliability data.",
+      "esg": "Cold-chain energy efficiency, temperature-monitoring transparency, community medication-access grants.",
+      "legal": [
+        "Privacy",
+        "Terms",
+        "Health Privacy Notice",
+        "State Rights"
+      ],
+      "nav": [
+        "About",
+        "What We Do",
+        "Facilities",
+        "Careers",
+        "Investors",
+        "Press",
+        "Sustainability",
+        "Contact"
+      ],
+      "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Health-Privacy Preferences (links)",
+      "design": {
+        "palette": [
+          [
+            "Healing Teal",
+            "#0E8575"
+          ],
+          [
+            "Clinical White",
+            "#FDFDFD"
+          ],
+          [
+            "Patient Warmth",
+            "#F2C14E"
+          ],
+          [
+            "Trust Navy",
+            "#14324A"
+          ]
+        ],
+        "typography": {
+          "heading": "Clean serif (e.g. Lora)",
+          "body": "Open sans-serif (e.g. Source Sans 3)"
+        },
+        "logo": {
+          "wordmark": "Lumen Health in rounded friendly caps",
+          "character": "a pulse-line leaf mark",
+          "usage": "clear space around the leaf; calm tones only"
+        },
+        "imagery": "Human and calm: clinicians, care settings, organized supply \u2014 never sterile or alarming",
+        "tone": "Calm, caring, and rigorous; speaks in outcomes for patients."
+      }
+    }
+  },
+  {
+    "uri": "org://hlth/northgate-care",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://hlth/cortica-supply",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://hlth/meridian-med",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://hlth/oph",
+    "type": "PERSON"
+  },
+  {
+    "uri": "agent://hlth/supply-ops",
+    "type": "AGENT"
+  },
+  {
+    "uri": "authority://hlth/for-ops",
+    "holder": "org://hlth/lumenhealth",
+    "grants": [
+      "triage_case",
+      "assign_case",
+      "close_case",
+      "approve_learning",
+      "rebalance_commitment",
+      "gate_partner",
+      "release_committed_action"
+    ],
+    "roles": [
+      "operator"
+    ]
+  },
+  {
+    "uri": "rule://hlth/ops-run",
+    "kind": "POLICY",
+    "text": "agent://hlth/supply-ops may re-balance resource commitment and gate partner performance",
+    "grants": [
+      "rebalance_commitment",
+      "gate_partner"
+    ]
+  },
+  {
+    "uri": "rule://hlth/match-run",
+    "kind": "POLICY",
+    "text": "S2 may run Trust-weighted matching for the client",
+    "grants": [
+      "run_match"
+    ]
+  },
+  {
+    "uri": "delegation://hlth/ops",
+    "grantor": "org://hlth/lumenhealth",
+    "grantee": "agent://hlth/supply-ops",
+    "scope": [
+      "rule://hlth/ops-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "delegation://hlth/s2-match",
+    "grantor": "org://hlth/lumenhealth",
+    "grantee": "agent://s2",
+    "scope": [
+      "rule://hlth/match-run"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "offer://hlth/o-g",
+    "provider": "org://hlth/cortica-supply",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "supply",
+      "distribution"
+    ],
+    "fit_note": "healthcare / pharma partner delivery line"
+  },
+  {
+    "uri": "offer://hlth/o-l",
+    "provider": "org://hlth/meridian-med",
+    "price": 2000000.0,
+    "currency": "USD",
+    "capability_keys": [
+      "supply",
+      "distribution"
+    ],
+    "fit_note": "healthcare / pharma partner delivery line"
+  }
+]

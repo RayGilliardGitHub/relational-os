@@ -1,0 +1,38 @@
+[
+  {
+    "uri": "dependency://fin/d-rebalance-enables-followup",
+    "from": "task://fin/t-treasury-rebalance",
+    "to": "task://fin/t-followup-routed",
+    "kind": "ENABLES"
+  },
+  {
+    "uri": "dependency://fin/d-followup-requires-allocation",
+    "from": "task://fin/t-followup-routed",
+    "to": "policy://fin/funding-allocation",
+    "kind": "REQUIRES"
+  },
+  {
+    "uri": "dependency://fin/d-followup-blocks-case",
+    "from": "task://fin/t-followup-routed",
+    "to": "case://fin/c-on-time-funding",
+    "kind": "BLOCKS"
+  },
+  {
+    "uri": "dependency://fin/d-case-derived-from-metric",
+    "from": "case://fin/c-on-time-funding",
+    "to": "metric://fin/m-on-time-settlement",
+    "kind": "DERIVED_FROM"
+  },
+  {
+    "uri": "dependency://fin/d-metric-impacts-goal",
+    "from": "metric://fin/m-on-time-settlement",
+    "to": "goal://fin/g-stable-client-funding",
+    "kind": "IMPACTS"
+  },
+  {
+    "uri": "dependency://fin/d-rebalance-blocks-case",
+    "from": "task://fin/t-treasury-rebalance",
+    "to": "case://fin/c-on-time-funding",
+    "kind": "BLOCKS"
+  }
+]

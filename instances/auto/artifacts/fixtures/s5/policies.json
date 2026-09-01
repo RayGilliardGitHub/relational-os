@@ -1,0 +1,15 @@
+[
+  {
+    "uri": "policy://auto/allocation",
+    "name": "auto allocation",
+    "condition": "a new committed delivery is to be allocated",
+    "decision": "ALLOCATE by fit AND scoped Trust; vendors below the Trust floor need a gate before new lots. (learned 2026-09-01)",
+    "action": "allocate to the top-ranked fitted partner; gate laggard",
+    "scope": [
+      "expectation://auto/e-on-time"
+    ],
+    "version": 3,
+    "policy_status": "EFFECTIVE",
+    "learning": "decision://auto/learning"
+  }
+]

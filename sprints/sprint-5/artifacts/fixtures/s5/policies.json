@@ -1,0 +1,15 @@
+[
+  {
+    "uri": "policy://qk/provider-allocation",
+    "name": "provider allocation",
+    "condition": "a new contracted job is to be allocated",
+    "decision": "select by fit x scoped delivery Trust; laggard needs a performance gate BEFORE a new commitment (learned 2026-09-01)",
+    "action": "allocate to the top-ranked fitted provider; gate laggard (norcrete); notify approver on divergence",
+    "scope": [
+      "expectation://qk/e-on-time-delivery"
+    ],
+    "version": 3,
+    "policy_status": "EFFECTIVE",
+    "learning": "decision://qk/s5-learning-on-time"
+  }
+]

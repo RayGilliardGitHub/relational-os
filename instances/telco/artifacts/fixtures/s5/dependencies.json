@@ -1,0 +1,38 @@
+[
+  {
+    "uri": "dependency://telco/d-rb-enables-fu",
+    "from": "task://telco/t-rebalance",
+    "to": "task://telco/t-followup",
+    "kind": "ENABLES"
+  },
+  {
+    "uri": "dependency://telco/d-fu-requires-pol",
+    "from": "task://telco/t-followup",
+    "to": "policy://telco/allocation",
+    "kind": "REQUIRES"
+  },
+  {
+    "uri": "dependency://telco/d-fu-blocks-case",
+    "from": "task://telco/t-followup",
+    "to": "case://telco/c-on-time",
+    "kind": "BLOCKS"
+  },
+  {
+    "uri": "dependency://telco/d-case-from-metric",
+    "from": "case://telco/c-on-time",
+    "to": "metric://telco/m-on-time",
+    "kind": "DERIVED_FROM"
+  },
+  {
+    "uri": "dependency://telco/d-metric-impacts-goal",
+    "from": "metric://telco/m-on-time",
+    "to": "goal://telco/g-core",
+    "kind": "IMPACTS"
+  },
+  {
+    "uri": "dependency://telco/d-rb-blocks-case",
+    "from": "task://telco/t-rebalance",
+    "to": "case://telco/c-on-time",
+    "kind": "BLOCKS"
+  }
+]

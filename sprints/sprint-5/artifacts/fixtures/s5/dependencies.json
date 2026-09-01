@@ -1,0 +1,38 @@
+[
+  {
+    "uri": "dependency://qk/d-rebalance-enables-followup",
+    "from": "task://qk/t-provider-rebalance",
+    "to": "task://qk/t-followup-routed",
+    "kind": "ENABLES"
+  },
+  {
+    "uri": "dependency://qk/d-followup-requires-allocation",
+    "from": "task://qk/t-followup-routed",
+    "to": "policy://qk/provider-allocation",
+    "kind": "REQUIRES"
+  },
+  {
+    "uri": "dependency://qk/d-followup-blocks-case",
+    "from": "task://qk/t-followup-routed",
+    "to": "case://qk/c-on-time-delivery",
+    "kind": "BLOCKS"
+  },
+  {
+    "uri": "dependency://qk/d-case-derived-from-metric",
+    "from": "case://qk/c-on-time-delivery",
+    "to": "metric://qk/m-on-time",
+    "kind": "DERIVED_FROM"
+  },
+  {
+    "uri": "dependency://qk/d-metric-impacts-goal",
+    "from": "metric://qk/m-on-time",
+    "to": "goal://qk/g-customer-trust",
+    "kind": "IMPACTS"
+  },
+  {
+    "uri": "dependency://qk/d-rebalance-blocks-case",
+    "from": "task://qk/t-provider-rebalance",
+    "to": "case://qk/c-on-time-delivery",
+    "kind": "BLOCKS"
+  }
+]

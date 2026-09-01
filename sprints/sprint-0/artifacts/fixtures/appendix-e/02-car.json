@@ -1,0 +1,63 @@
+[
+  {
+    "uri": "person://e02/buyer",
+    "type": "PERSON"
+  },
+  {
+    "uri": "org://e02/dealer",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://e02/bank",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://e02/dmv",
+    "type": "ORG"
+  },
+  {
+    "uri": "relationship://e02/sale",
+    "participants": [
+      "person://e02/buyer",
+      "org://e02/dealer"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "relationship://e02/loan",
+    "participants": [
+      "person://e02/buyer",
+      "org://e02/bank"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "relationship://e02/reg",
+    "participants": [
+      "person://e02/buyer",
+      "org://e02/dmv"
+    ],
+    "status": "ACTIVE"
+  },
+  {
+    "uri": "interaction://e02/negotiation",
+    "of": "relationship://e02/sale",
+    "kind": "NEGOTIATION"
+  },
+  {
+    "uri": "interaction://e02/exchange",
+    "of": "relationship://e02/sale",
+    "kind": "EXCHANGE"
+  },
+  {
+    "uri": "event://e02/decision",
+    "type": "DECISION",
+    "event_id": "event-e02/decision",
+    "correlation_id": "event-ce02/decision",
+    "causation_id": "event-cae02/decision",
+    "idempotency_key": "event-ie02/decision",
+    "signature": "signed-by-s1",
+    "occurred_at": "2026-09-01T09:00:00Z",
+    "actor": "person://e02/buyer"
+  }
+]

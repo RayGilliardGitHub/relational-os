@@ -1,0 +1,1275 @@
+{
+  "kind": "GRAPH",
+  "objects": [
+    {
+      "uri": "org://fin/northglen",
+      "type": "ORG",
+      "identity": {
+        "attestations": [
+          "chartered-bank-license"
+        ]
+      },
+      "brand": {
+        "tagline": "Funding that lands on the date.",
+        "mission": "Commit and settle funding tranches reliably and on time so corporate clients can run their working-capital plans to a schedule they can trust.",
+        "vision": "A commercial lending market where a committed tranche settling on time is a durable promise, backed by ledger-verified evidence.",
+        "values": [
+          [
+            "Commitment is covenant",
+            "A committed funding tranche is a promise to a date."
+          ],
+          [
+            "Evidence-first",
+            "We verify every settlement against the ledger; on time is a fact, not a target."
+          ],
+          [
+            "Client partnership",
+            "Corporate clients plan working capital around our settlements."
+          ],
+          [
+            "Prudence",
+            "On time never trades away sound credit judgement."
+          ],
+          [
+            "Transparency",
+            "If a settlement will slip, clients hear it from us first."
+          ]
+        ],
+        "about": "Northglen Bank is a regional commercial bank. We commit and settle funding tranches for corporate clients, and we run that commitment to the ledger-verified on-time standard of the platform. For a treasurer planning working capital around a committed settlement date, our on-time record is the reliable foundation of the relationship.",
+        "fast_facts": [
+          "Founded 1987, regional commercial banking",
+          "Corporate lending across the region",
+          "Ledger-verified settlement operation"
+        ],
+        "history": [
+          [
+            "1987",
+            "Chartered as a regional commercial bank."
+          ],
+          [
+            "2005",
+            "Expanded into syndicated committed funding."
+          ],
+          [
+            "2023",
+            "Placed every committed settlement under ledger-verified on-time evidence."
+          ]
+        ],
+        "leadership": [
+          [
+            "Ruth Calloway",
+            "Chief Executive",
+            "Two decades in commercial lending; built Northglen on settlement integrity."
+          ],
+          [
+            "Victor Hughes",
+            "Chief Treasury Officer",
+            "Owns the funding and correspondent network."
+          ]
+        ],
+        "products_services": [
+          "Committed working-capital funding tranches",
+          "Syndicated committed funding",
+          "Treasury and settlement operations"
+        ],
+        "testimonials": [
+          [
+            "Northglen's committed settlements are the ones our treasury calendar is built around.",
+            "Corporate treasurer"
+          ]
+        ],
+        "trust": [
+          [
+            "98.6% committed settlement on-time rate (2025)",
+            "Northglen settlement ledger"
+          ],
+          [
+            "Chartered bank; prudential oversight",
+            "state regulator"
+          ]
+        ],
+        "locations": "Regional HQ + branches across the state",
+        "faq": [
+          [
+            "How do you prove a settlement was on time?",
+            "Every committed tranche settles to a signed ledger event with a verified timestamp \u2014 auditable, not asserted."
+          ],
+          [
+            "Do you commit syndicated funding?",
+            "Yes, both bilateral and syndicated committed tranches run under the same evidence standard."
+          ]
+        ],
+        "contact": "treasury@northglen.example \u00b7 +1-505-555-0199",
+        "careers": "Back corporate plans with reliable funding: treasury, credit, settlement operations.",
+        "investors": "Public charter with regulated reporting; settlement reliability shared with regulators.",
+        "press": "media@northglen.example \u2014 lending, treasury, and community programs.",
+        "esg": "Responsible lending, financial-inclusion programs, branch-efficiency investments.",
+        "legal": [
+          "Privacy",
+          "Terms",
+          "Financial Privacy Notice",
+          "State Rights"
+        ],
+        "nav": [
+          "About",
+          "Lending",
+          "Treasury",
+          "Careers",
+          "Investors",
+          "Press",
+          "Community",
+          "Contact"
+        ],
+        "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+        "design": {
+          "palette": [
+            [
+              "Ledger Navy",
+              "#14314E"
+            ],
+            [
+              "Settlement Blue",
+              "#1B6CA8"
+            ],
+            [
+              "Vault Grey",
+              "#8A929B"
+            ],
+            [
+              "Trust White",
+              "#FAFBFC"
+            ]
+          ],
+          "typography": {
+            "heading": "Trusted serif (e.g. Source Serif 4)",
+            "body": "Open sans (e.g. Inter)"
+          },
+          "logo": {
+            "wordmark": "NORTHGLEN",
+            "character": "a chevron/vault-mark",
+            "usage": "clear space generous; navy+white primary, blue accent"
+          },
+          "imagery": "Calm and solid: banking halls, treasury operations, measured growth \u2014 trustworthy",
+          "tone": "Steady, precise, reassuring; speaks in commitments and verified settlements."
+        }
+      }
+    },
+    {
+      "uri": "org://fin/zephyr",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://fin/adamvale",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://fin/kaplen",
+      "type": "ORG"
+    },
+    {
+      "uri": "person://fin/treasurer",
+      "type": "PERSON"
+    },
+    {
+      "uri": "agent://fin/treasury-ops",
+      "type": "AGENT"
+    },
+    {
+      "uri": "relationship://fin/loan-ops",
+      "participants": [
+        "org://fin/northglen",
+        "org://fin/zephyr"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://fin/northglen": [
+          "bank"
+        ],
+        "org://fin/zephyr": [
+          "borrower"
+        ]
+      },
+      "authority": [
+        "authority://fin/for-treasury"
+      ],
+      "purpose": "commercial working-capital lending"
+    },
+    {
+      "uri": "relationship://fin/funding-net",
+      "participants": [
+        "org://fin/northglen",
+        "org://fin/adamvale",
+        "org://fin/kaplen"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://fin/northglen": [
+          "treasury"
+        ],
+        "org://fin/adamvale": [
+          "correspondent"
+        ],
+        "org://fin/kaplen": [
+          "correspondent"
+        ]
+      },
+      "authority": [
+        "authority://fin/for-treasury"
+      ],
+      "purpose": "syndicated committed funding"
+    },
+    {
+      "uri": "authority://fin/for-treasury",
+      "holder": "org://fin/northglen",
+      "grants": [
+        "triage_case",
+        "assign_case",
+        "close_case",
+        "approve_learning",
+        "rebalance_funding_allocation",
+        "gate_funder_performance",
+        "release_funding_tranche"
+      ],
+      "roles": [
+        "treasury"
+      ]
+    },
+    {
+      "uri": "rule://fin/treasury-ops-run",
+      "kind": "POLICY",
+      "text": "treasury ops worker may re-balance funding allocation and gate funder performance",
+      "grants": [
+        "rebalance_funding_allocation",
+        "gate_funder_performance"
+      ]
+    },
+    {
+      "uri": "rule://fin/match-run",
+      "kind": "POLICY",
+      "text": "S2 may run Trust-weighted funding matching for the client",
+      "grants": [
+        "run_funding_match"
+      ]
+    },
+    {
+      "uri": "delegation://fin/treasury-ops",
+      "grantor": "org://fin/northglen",
+      "grantee": "agent://fin/treasury-ops",
+      "scope": [
+        "rule://fin/treasury-ops-run"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "uri": "delegation://fin/s2-match",
+      "grantor": "org://fin/northglen",
+      "grantee": "agent://s2",
+      "scope": [
+        "rule://fin/match-run"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "uri": "expectation://fin/e-on-time-funding",
+      "actor": "person://fin/treasurer",
+      "subject": "committed funding settlement",
+      "condition": "settle each committed funding tranche by its committed deadline",
+      "metric": "on_time",
+      "threshold": 0.95,
+      "deadline": "2026-12-31T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "policy://fin/funding-allocation",
+      "name": "funding allocation",
+      "condition": "a new committed funding tranche is to be allocated",
+      "decision": "select by fit x scoped settlement Trust; laggard needs a performance gate BEFORE a new commitment (learned 2026-09-01)",
+      "action": "allocate to the top-ranked fitted counterparty; gate laggard (kaplen); notify treasurer on divergence",
+      "scope": [
+        "expectation://fin/e-on-time-funding"
+      ],
+      "version": 3,
+      "policy_status": "EFFECTIVE",
+      "learning": "decision://fin/s5-learning-funding"
+    },
+    {
+      "uri": "process://fin/pr-funding",
+      "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+      "steps": [
+        "triage",
+        "assign",
+        "execute",
+        "verify_outcome",
+        "learning"
+      ]
+    },
+    {
+      "uri": "process_instance://fin/pi-funding",
+      "process": "process://fin/pr-funding",
+      "status": "RUNNING",
+      "started_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "trust://fin/t-adamvale",
+      "subject": "org://fin/northglen",
+      "target": "org://fin/adamvale",
+      "claim": "timely committed settlement",
+      "context": "relationship://fin/funding-net",
+      "score": 0.79,
+      "updated_at": "2026-09-01T00:29:55Z",
+      "expected": 0.8,
+      "outcome": 1.0,
+      "evidence": [
+        "evidence://qk/funding-routed-adamvale"
+      ],
+      "alpha": 0.5,
+      "recency": 1.0
+    },
+    {
+      "uri": "trust://fin/t-kaplen",
+      "subject": "org://fin/northglen",
+      "target": "org://fin/kaplen",
+      "claim": "timely committed settlement",
+      "context": "relationship://fin/funding-net",
+      "score": 0.14,
+      "updated_at": "2026-09-01T00:29:55Z",
+      "expected": 0.8,
+      "outcome": 0.0,
+      "evidence": [
+        "evidence://qk/funding-kaplen-q4"
+      ],
+      "alpha": 0.5,
+      "recency": 1.0
+    },
+    {
+      "uri": "offer://fin/o-adamvale",
+      "provider": "org://fin/adamvale",
+      "price": 1500000,
+      "currency": "USD",
+      "capability_keys": [
+        "syndication",
+        "funding"
+      ],
+      "fit_note": "correspondent syndicated funding line"
+    },
+    {
+      "uri": "offer://fin/o-kaplen",
+      "provider": "org://fin/kaplen",
+      "price": 1500000,
+      "currency": "USD",
+      "capability_keys": [
+        "syndication",
+        "funding"
+      ],
+      "fit_note": "correspondent syndicated funding line"
+    },
+    {
+      "uri": "decision://fin/s2-match-baseline",
+      "by": "agent://s2",
+      "authority": "delegation://fin/s2-match",
+      "alternatives": [
+        "offer://fin/o-kaplen",
+        "offer://fin/o-adamvale",
+        "no facility"
+      ],
+      "confidence": 0.9,
+      "expected_outcome": "kaplen ranked #1 on existing Trust",
+      "actual_outcome": "offer://fin/o-kaplen",
+      "detail": [
+        {
+          "offer": "offer://fin/o-kaplen",
+          "provider": "org://fin/kaplen",
+          "fit": 1.0,
+          "trust": 0.9,
+          "score": 0.9
+        },
+        {
+          "offer": "offer://fin/o-adamvale",
+          "provider": "org://fin/adamvale",
+          "fit": 1.0,
+          "trust": 0.6,
+          "score": 0.6
+        }
+      ],
+      "made_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "expectation://fin/e-kaplen-q3",
+      "actor": "person://fin/treasurer",
+      "subject": "syndicated committed funding",
+      "condition": "fully settle the committed funding tranche by its committed deadline",
+      "metric": "settled_value",
+      "threshold": 1500000,
+      "deadline": "2026-08-31T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "expectation://fin/e-adamvale-q3",
+      "actor": "person://fin/treasurer",
+      "subject": "syndicated committed funding",
+      "condition": "fully settle the committed funding tranche by its committed deadline",
+      "metric": "settled_value",
+      "threshold": 1500000,
+      "deadline": "2026-08-31T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "expectation://fin/e-kaplen-q4",
+      "actor": "person://fin/treasurer",
+      "subject": "syndicated committed funding",
+      "condition": "fully settle the committed funding tranche by its committed deadline",
+      "metric": "settled_value",
+      "threshold": 1200000,
+      "deadline": "2026-09-15T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "asset://money/qk-escrow-kaplen-q3",
+      "kind": "MONEY",
+      "title": "org://fin/kaplen",
+      "custody": "cleared",
+      "value": 1500000,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://fin/northglen for org://fin/kaplen (kaplen-q3)"
+    },
+    {
+      "uri": "obligation://qk/s4-pay-kaplen-q3",
+      "subject": "org://fin/northglen",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 1500000 USD for contracted work by org://fin/kaplen",
+      "due_by": "2026-08-31T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-09-02T00:00:00Z"
+    },
+    {
+      "uri": "receipt://qk/s4-receipt-kaplen-q3",
+      "kind": "SETTLEMENT",
+      "from": "org://fin/northglen",
+      "to": "org://fin/kaplen",
+      "amount": 1500000,
+      "currency": "USD",
+      "received_at": "2026-09-02T00:00:00Z"
+    },
+    {
+      "uri": "decision://qk/s4-recon-kaplen-q3",
+      "by": "agent://s4",
+      "authority": "authority://qk/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 1500000 USD from org://fin/northglen",
+      "actual_outcome": "matched exactly: settled 1500000 USD",
+      "detail": {
+        "slug": "kaplen-q3",
+        "expected": 1500000,
+        "actual": 1500000,
+        "matched": true,
+        "buyer": "org://fin/northglen",
+        "provider": "org://fin/kaplen",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "event://qk/s4-exchange-kaplen-q3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-106",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-105",
+      "idempotency_key": "idem-s4-106",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:55Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange kaplen-q3: 1500000 USD org://fin/northglen->org://fin/kaplen (value 1500000, cost 1500000)",
+      "state_update": [],
+      "value": 1500000,
+      "cost": 1500000,
+      "price": 1500000,
+      "currency": "USD",
+      "buyer": "org://fin/northglen",
+      "provider": "org://fin/kaplen",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "exchange_of": "commitment://fin/c-kaplen-q3"
+    },
+    {
+      "uri": "event://qk/s4-outcome-kaplen-q3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-107",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-106",
+      "idempotency_key": "idem-s4-107",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:55Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle kaplen-q3: settled 1500000 vs expected 1500000 by 2026-08-31T00:00:00Z -> partial",
+      "state_update": [],
+      "evaluation": "partial",
+      "expected": 1500000,
+      "actual": 1500000,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "score": 0.5
+    },
+    {
+      "uri": "event://fin/outcome-funding-kaplen-q3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-108",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-107",
+      "idempotency_key": "idem-s2-108",
+      "signature": "signed-by-org://fin/kaplen",
+      "occurred_at": "2026-09-01T00:29:55Z",
+      "actor": "org://fin/kaplen",
+      "detail": "job funding-kaplen-q3 by org://fin/kaplen: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+      "state_update": [],
+      "job": "funding-kaplen-q3",
+      "provider": "org://fin/kaplen",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-09-02T00:00:00Z",
+      "on_time": false
+    },
+    {
+      "uri": "evidence://qk/funding-kaplen-q3",
+      "kind": "ANCHORED",
+      "source": "signed committed-funding settlement record + treasury anchor",
+      "verity": {
+        "procedure": "settlement-anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "claim://qk/funding-kaplen-q3",
+      "proposer": "agent://s5",
+      "statement": "org://fin/kaplen settled the committed funding tranche LATE"
+    },
+    {
+      "uri": "asset://money/qk-escrow-adamvale-q3",
+      "kind": "MONEY",
+      "title": "org://fin/adamvale",
+      "custody": "cleared",
+      "value": 1500000,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://fin/northglen for org://fin/adamvale (adamvale-q3)"
+    },
+    {
+      "uri": "obligation://qk/s4-pay-adamvale-q3",
+      "subject": "org://fin/northglen",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 1500000 USD for contracted work by org://fin/adamvale",
+      "due_by": "2026-08-31T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-08-30T00:00:00Z"
+    },
+    {
+      "uri": "receipt://qk/s4-receipt-adamvale-q3",
+      "kind": "SETTLEMENT",
+      "from": "org://fin/northglen",
+      "to": "org://fin/adamvale",
+      "amount": 1500000,
+      "currency": "USD",
+      "received_at": "2026-08-30T00:00:00Z"
+    },
+    {
+      "uri": "decision://qk/s4-recon-adamvale-q3",
+      "by": "agent://s4",
+      "authority": "authority://qk/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 1500000 USD from org://fin/northglen",
+      "actual_outcome": "matched exactly: settled 1500000 USD",
+      "detail": {
+        "slug": "adamvale-q3",
+        "expected": 1500000,
+        "actual": 1500000,
+        "matched": true,
+        "buyer": "org://fin/northglen",
+        "provider": "org://fin/adamvale",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "event://qk/s4-exchange-adamvale-q3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-111",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-110",
+      "idempotency_key": "idem-s4-111",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:55Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange adamvale-q3: 1500000 USD org://fin/northglen->org://fin/adamvale (value 1500000, cost 1500000)",
+      "state_update": [],
+      "value": 1500000,
+      "cost": 1500000,
+      "price": 1500000,
+      "currency": "USD",
+      "buyer": "org://fin/northglen",
+      "provider": "org://fin/adamvale",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "exchange_of": "commitment://fin/c-adamvale-q3"
+    },
+    {
+      "uri": "event://qk/s4-outcome-adamvale-q3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-112",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-111",
+      "idempotency_key": "idem-s4-112",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:55Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle adamvale-q3: settled 1500000 vs expected 1500000 by 2026-08-31T00:00:00Z -> met",
+      "state_update": [],
+      "evaluation": "met",
+      "expected": 1500000,
+      "actual": 1500000,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "score": 1.0
+    },
+    {
+      "uri": "event://fin/outcome-funding-adamvale-q3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-113",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-112",
+      "idempotency_key": "idem-s2-113",
+      "signature": "signed-by-org://fin/adamvale",
+      "occurred_at": "2026-09-01T00:29:55Z",
+      "actor": "org://fin/adamvale",
+      "detail": "job funding-adamvale-q3 by org://fin/adamvale: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+      "state_update": [],
+      "job": "funding-adamvale-q3",
+      "provider": "org://fin/adamvale",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-08-30T00:00:00Z",
+      "on_time": true
+    },
+    {
+      "uri": "evidence://qk/funding-adamvale-q3",
+      "kind": "ANCHORED",
+      "source": "signed committed-funding settlement record + treasury anchor",
+      "verity": {
+        "procedure": "settlement-anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "claim://qk/funding-adamvale-q3",
+      "proposer": "agent://s5",
+      "statement": "org://fin/adamvale settled the committed funding tranche on time"
+    },
+    {
+      "uri": "asset://money/qk-escrow-kaplen-q4",
+      "kind": "MONEY",
+      "title": "org://fin/kaplen",
+      "custody": "cleared",
+      "value": 1200000,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://fin/northglen for org://fin/kaplen (kaplen-q4)"
+    },
+    {
+      "uri": "obligation://qk/s4-pay-kaplen-q4",
+      "subject": "org://fin/northglen",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 1200000 USD for contracted work by org://fin/kaplen",
+      "due_by": "2026-09-15T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-09-17T00:00:00Z"
+    },
+    {
+      "uri": "receipt://qk/s4-receipt-kaplen-q4",
+      "kind": "SETTLEMENT",
+      "from": "org://fin/northglen",
+      "to": "org://fin/kaplen",
+      "amount": 1200000,
+      "currency": "USD",
+      "received_at": "2026-09-17T00:00:00Z"
+    },
+    {
+      "uri": "decision://qk/s4-recon-kaplen-q4",
+      "by": "agent://s4",
+      "authority": "authority://qk/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 1200000 USD from org://fin/northglen",
+      "actual_outcome": "matched exactly: settled 1200000 USD",
+      "detail": {
+        "slug": "kaplen-q4",
+        "expected": 1200000,
+        "actual": 1200000,
+        "matched": true,
+        "buyer": "org://fin/northglen",
+        "provider": "org://fin/kaplen",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "event://qk/s4-exchange-kaplen-q4",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-116",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-115",
+      "idempotency_key": "idem-s4-116",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:55Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange kaplen-q4: 1200000 USD org://fin/northglen->org://fin/kaplen (value 1200000, cost 1200000)",
+      "state_update": [],
+      "value": 1200000,
+      "cost": 1200000,
+      "price": 1200000,
+      "currency": "USD",
+      "buyer": "org://fin/northglen",
+      "provider": "org://fin/kaplen",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "exchange_of": "commitment://fin/c-kaplen-q4"
+    },
+    {
+      "uri": "event://qk/s4-outcome-kaplen-q4",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-117",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-116",
+      "idempotency_key": "idem-s4-117",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:55Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle kaplen-q4: settled 1200000 vs expected 1200000 by 2026-09-15T00:00:00Z -> partial",
+      "state_update": [],
+      "evaluation": "partial",
+      "expected": 1200000,
+      "actual": 1200000,
+      "deadline": "2026-09-15T00:00:00Z",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "score": 0.5
+    },
+    {
+      "uri": "event://fin/outcome-funding-kaplen-q4",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-118",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-117",
+      "idempotency_key": "idem-s2-118",
+      "signature": "signed-by-org://fin/kaplen",
+      "occurred_at": "2026-09-01T00:29:55Z",
+      "actor": "org://fin/kaplen",
+      "detail": "job funding-kaplen-q4 by org://fin/kaplen: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+      "state_update": [],
+      "job": "funding-kaplen-q4",
+      "provider": "org://fin/kaplen",
+      "committed_deadline": "2026-09-15T00:00:00Z",
+      "actual_completed_at": "2026-09-17T00:00:00Z",
+      "on_time": false
+    },
+    {
+      "uri": "evidence://qk/funding-kaplen-q4",
+      "kind": "ANCHORED",
+      "source": "signed committed-funding settlement record + treasury anchor",
+      "verity": {
+        "procedure": "settlement-anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "claim://qk/funding-kaplen-q4",
+      "proposer": "agent://s5",
+      "statement": "org://fin/kaplen settled the committed funding tranche LATE"
+    },
+    {
+      "uri": "case://fin/c-on-time-funding",
+      "subject": "committed funding settlement below target on time",
+      "status": "CLOSED",
+      "owner": "person://fin/treasurer",
+      "actors": [
+        "org://fin/northglen",
+        "person://fin/treasurer",
+        "agent://fin/treasury-ops"
+      ],
+      "relationships": [
+        "relationship://fin/loan-ops"
+      ],
+      "created_at": "2026-09-01T00:29:55Z",
+      "history": [
+        {
+          "status": "OPEN",
+          "at": "2026-09-01T00:29:55Z",
+          "event": null
+        },
+        {
+          "status": "TRIAGE",
+          "at": "2026-09-01T00:29:55Z",
+          "event": "event://fin/s5-case-triage"
+        },
+        {
+          "status": "ASSIGNED",
+          "at": "2026-09-01T00:29:55Z",
+          "event": "event://fin/s5-case-assigned"
+        },
+        {
+          "status": "IN_PROGRESS",
+          "at": "2026-09-01T00:29:55Z",
+          "event": "event://fin/s5-case-inprogress"
+        },
+        {
+          "status": "BLOCKED",
+          "at": "2026-09-01T00:29:55Z",
+          "event": "event://fin/s5-case-blocked"
+        },
+        {
+          "status": "RESOLVED",
+          "at": "2026-09-01T00:29:55Z",
+          "event": "event://fin/s5-case-resolved"
+        },
+        {
+          "status": "CLOSED",
+          "at": "2026-09-01T00:29:55Z",
+          "event": "event://fin/s5-case-closed"
+        }
+      ],
+      "suggestion": "ledger-projected funding on-time rate below target",
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "exception": "Committed funding on-time 0.33 below target 0.95 (ledger: 1/3 committed settlements on time)",
+      "root_cause": "funding-ops failure \u2014 org://fin/kaplen missed its committed settlement deadline by 2 days; scoped settlement Trust fell 0.90->0.508",
+      "root_cause_status": "SUPPORTED",
+      "recommended_action": "Re-allocate committed funding to the verified on-time counterparty (org://fin/adamvale) and gate the laggard (org://fin/kaplen) with a performance checkpoint before any new commitment",
+      "metric": "metric://fin/m-on-time-settlement",
+      "verified_outcome": "forward-period committed-funding on-time restored to 1.0; org://fin/adamvale settled the rallied tranche on time (evidence://qk/funding-routed-adamvale); adamvale settlement Trust 0.79"
+    },
+    {
+      "uri": "decision://fin/s5-triage",
+      "by": "agent://fin/s5",
+      "authority": "authority://fin/for-treasury",
+      "alternatives": [
+        "accept",
+        "dismiss as anomaly"
+      ],
+      "confidence": 0.85,
+      "expected_outcome": "accept as a real funding-risk",
+      "actual_outcome": "accepted; root (kaplen settlement failure) nominated",
+      "made_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "task://fin/t-treasury-rebalance",
+      "assigned_to": "agent://fin/treasury-ops",
+      "created_by": "agent://fin/s5",
+      "objective": "re-balance funding allocation to the verified on-time counterparty (adamvale) and gate the laggard (kaplen)",
+      "dependencies": [],
+      "authority": "authority://fin/for-treasury",
+      "deadline": "2026-10-15T00:00:00Z",
+      "priority": 0.695,
+      "status": "ASSIGNED",
+      "expected_outcome": "next committed funding tranche routed to a verified on-time counterparty; policy updated",
+      "why_here": "derived from the funding on-time exception (case OPEN)",
+      "importance": "restores committed funding on-time, protecting the client's scoped Trust",
+      "evidence": [
+        "evidence://qk/funding-kaplen-q3",
+        "evidence://qk/funding-adamvale-q3"
+      ],
+      "decision_required": "approve the funding re-allocation",
+      "priority_factors": {
+        "impact": 0.85,
+        "urgency": 0.9,
+        "confidence": 0.7,
+        "irreversibility": false,
+        "relationship_importance": 0.8,
+        "cost_of_delay": 0.75
+      },
+      "assigned_capacity": 1.0
+    },
+    {
+      "uri": "decision://fin/s5-assign",
+      "by": "person://fin/treasurer",
+      "authority": "authority://fin/for-treasury",
+      "alternatives": [
+        "assign",
+        "defer"
+      ],
+      "confidence": 0.95,
+      "expected_outcome": "task in progress",
+      "detail": {
+        "task": "task://fin/t-treasury-rebalance",
+        "assigned_to": "agent://fin/treasury-ops",
+        "authority": "authority://fin/for-treasury",
+        "priority": 0.695,
+        "capacity": 1.0
+      },
+      "made_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "decision://fin/s5-match-recorded",
+      "by": "agent://s2",
+      "authority": "delegation://fin/s2-match",
+      "alternatives": [
+        "offer://fin/o-adamvale",
+        "no facility"
+      ],
+      "confidence": 0.92,
+      "expected_outcome": "adamvale ranked #1",
+      "actual_outcome": "offer://fin/o-adamvale",
+      "detail": [
+        {
+          "offer": "offer://fin/o-adamvale",
+          "provider": "org://fin/adamvale",
+          "fit": 1.0,
+          "trust": 0.695,
+          "score": 0.695
+        }
+      ],
+      "made_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "escalation://fin/escalate-tranche-release",
+      "trigger": "committed external funding disbursement \u2014 irreversible and cost-unknowable once released",
+      "severity": "WARN",
+      "recipient": "person://fin/treasurer",
+      "deadline": "2026-11-15T00:00:00Z",
+      "fallback": "agent://fin/s5",
+      "authority": "authority://fin/for-treasury",
+      "acknowledgement": "approve then execute"
+    },
+    {
+      "uri": "decision://fin/treasurer-human",
+      "by": "person://fin/treasurer",
+      "authority": "authority://fin/for-treasury",
+      "alternatives": [
+        "release_in_full",
+        "hold_pending_portfolio_review",
+        "release_partial_and_hold_if_shortfall",
+        "open_dispute"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "release the committed tranche to adamvale",
+      "actual_outcome": "release_in_full (human approved)",
+      "detail": {
+        "task": "task://fin/t-treasury-rebalance",
+        "action": "release_funding_tranche",
+        "irreversible_failure": true,
+        "cost_failure_unknowable": true
+      },
+      "made_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "commitment://fin/c-adamvale-followup",
+      "by": "agent://fin/s5",
+      "to": "org://fin/adamvale",
+      "obligation": "offer://fin/o-adamvale",
+      "expectation": "expectation://fin/e-routed-adamvale",
+      "status": "AGREED",
+      "terms": {
+        "kind": "committed funding follow-up",
+        "signed": true
+      },
+      "agreed_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "expectation://fin/e-routed-adamvale",
+      "actor": "person://fin/treasurer",
+      "subject": "committed funding follow-up",
+      "condition": "fully settle the committed funding tranche by its committed deadline",
+      "metric": "settled_value",
+      "threshold": 1500000,
+      "deadline": "2026-11-15T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "asset://money/qk-escrow-routed-adamvale",
+      "kind": "MONEY",
+      "title": "org://fin/adamvale",
+      "custody": "cleared",
+      "value": 1500000,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://fin/northglen for org://fin/adamvale (routed-adamvale)"
+    },
+    {
+      "uri": "obligation://qk/s4-pay-routed-adamvale",
+      "subject": "org://fin/northglen",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 1500000 USD for contracted work by org://fin/adamvale",
+      "due_by": "2026-11-15T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-11-12T00:00:00Z"
+    },
+    {
+      "uri": "receipt://qk/s4-receipt-routed-adamvale",
+      "kind": "SETTLEMENT",
+      "from": "org://fin/northglen",
+      "to": "org://fin/adamvale",
+      "amount": 1500000,
+      "currency": "USD",
+      "received_at": "2026-11-12T00:00:00Z"
+    },
+    {
+      "uri": "decision://qk/s4-recon-routed-adamvale",
+      "by": "agent://s4",
+      "authority": "authority://qk/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 1500000 USD from org://fin/northglen",
+      "actual_outcome": "matched exactly: settled 1500000 USD",
+      "detail": {
+        "slug": "routed-adamvale",
+        "expected": 1500000,
+        "actual": 1500000,
+        "matched": true,
+        "buyer": "org://fin/northglen",
+        "provider": "org://fin/adamvale",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "event://qk/s4-exchange-routed-adamvale",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-7013",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7012",
+      "idempotency_key": "idem-s4-7013",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:55Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange routed-adamvale: 1500000 USD org://fin/northglen->org://fin/adamvale (value 1500000, cost 1500000)",
+      "state_update": [],
+      "value": 1500000,
+      "cost": 1500000,
+      "price": 1500000,
+      "currency": "USD",
+      "buyer": "org://fin/northglen",
+      "provider": "org://fin/adamvale",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "exchange_of": "commitment://fin/c-routed-adamvale"
+    },
+    {
+      "uri": "event://qk/s4-outcome-routed-adamvale",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-7014",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7013",
+      "idempotency_key": "idem-s4-7014",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:29:55Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle routed-adamvale: settled 1500000 vs expected 1500000 by 2026-11-15T00:00:00Z -> met",
+      "state_update": [],
+      "evaluation": "met",
+      "expected": 1500000,
+      "actual": 1500000,
+      "deadline": "2026-11-15T00:00:00Z",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "score": 1.0
+    },
+    {
+      "uri": "event://fin/outcome-funding-routed-adamvale",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-7015",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7014",
+      "idempotency_key": "idem-s2-7015",
+      "signature": "signed-by-org://fin/adamvale",
+      "occurred_at": "2026-09-01T00:29:55Z",
+      "actor": "org://fin/adamvale",
+      "detail": "job funding-routed-adamvale by org://fin/adamvale: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+      "state_update": [],
+      "job": "funding-routed-adamvale",
+      "provider": "org://fin/adamvale",
+      "committed_deadline": "2026-11-15T00:00:00Z",
+      "actual_completed_at": "2026-11-12T00:00:00Z",
+      "on_time": true
+    },
+    {
+      "uri": "evidence://qk/funding-routed-adamvale",
+      "kind": "ANCHORED",
+      "source": "signed committed-funding settlement record + treasury anchor",
+      "verity": {
+        "procedure": "settlement-anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "claim://qk/funding-routed-adamvale",
+      "proposer": "agent://s5",
+      "statement": "adamvale settled the rallied committed funding tranche on time"
+    },
+    {
+      "uri": "decision://fin/s5-learning-funding",
+      "by": "agent://fin/s5",
+      "authority": "authority://qk/for-operations",
+      "subject": "committed funding on-time management",
+      "expected": 0.95,
+      "actual": 1.0,
+      "variance": 0.05,
+      "why": "Concentrating committed funding with a counterparty that has verified on-time settlement (adamvale), while gating the laggard (kaplen) with a performance checkpoint, restored committed-funding on-time. Verified good settlements compound scoped settlement Trust and re-price routing.",
+      "change_future_policy": "ALLOCATE by fit AND scoped settlement Trust (not fit alone); counterparties below the Trust floor require a performance gate before a new commitment.",
+      "made_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "goal://fin/g-stable-client-funding",
+      "for": "org://fin/northglen",
+      "statement": "Consistently settle committed funding tranches on time so the client trusts Northglen enough to deepen the relationship.",
+      "horizon": "quarter",
+      "owner": "person://fin/treasurer",
+      "metrics": [
+        "metric://fin/m-on-time-settlement",
+        "metric://fin/m-funder-trust",
+        "metric://fin/m-settled-value"
+      ]
+    },
+    {
+      "uri": "metric://fin/m-on-time-settlement",
+      "name": "Funding on-time settlement rate",
+      "definition": "share of committed funding tranches verified settled on time",
+      "unit": "fraction",
+      "formula": "on_time / (on_time + late) from ledger",
+      "dimensions": [
+        "counterparty"
+      ],
+      "target": 0.95,
+      "threshold": 0.8,
+      "period": "quarter",
+      "source": "ledger committed-settlement records",
+      "owner": "person://fin/treasurer",
+      "actual": 0.5,
+      "forecast": 0.5,
+      "variance": -0.45,
+      "root_cause": "funding-ops failure (kaplen missed committed deadline)",
+      "root_cause_status": "SUPPORTED"
+    },
+    {
+      "uri": "metric://fin/m-funder-trust",
+      "name": "Counterparty settlement-trust score",
+      "definition": "best scoped settlement Trust on the funding relationship",
+      "unit": "score",
+      "formula": "T(subject->target, claim, context) per \u00a75",
+      "dimensions": [
+        "counterparty"
+      ],
+      "target": 0.9,
+      "threshold": 0.6,
+      "period": "rolling",
+      "source": "S5 scoped Trust graph",
+      "owner": "person://fin/treasurer",
+      "actual": 0.79,
+      "forecast": 0.92,
+      "variance": -0.11,
+      "root_cause_status": "UNKNOWN"
+    },
+    {
+      "uri": "metric://fin/m-settled-value",
+      "name": "Settled committed value",
+      "definition": "value of EXCHANGE events settled this period",
+      "unit": "USD",
+      "formula": "sum(EXCHANGE.price) from ledger",
+      "dimensions": [
+        "counterparty"
+      ],
+      "target": 6000000.0,
+      "threshold": 3500000.0,
+      "period": "quarter",
+      "source": "ledger EXCHANGE events",
+      "owner": "person://fin/treasurer",
+      "actual": 5700000.0,
+      "forecast": 7000000.0,
+      "variance": -300000.0,
+      "root_cause_status": "UNKNOWN"
+    },
+    {
+      "uri": "decision://fin/s5-metric-loop-on-time",
+      "by": "agent://fin/s5",
+      "authority": "authority://qk/for-operations",
+      "alternatives": [
+        "do nothing",
+        "rebalance provider allocation"
+      ],
+      "confidence": 0.85,
+      "expected_outcome": "metric://fin/m-on-time-settlement variance reduced toward target",
+      "detail": {
+        "goal": "goal://fin/g-stable-client-funding",
+        "metric": "metric://fin/m-on-time-settlement",
+        "actual": 0.5,
+        "variance": -0.45,
+        "action": "task://fin/t-treasury-rebalance",
+        "outcome": "event://fin/outcome-funding-routed-adamvale"
+      },
+      "made_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "decision://fin/s5-attention-ordered",
+      "by": "agent://fin/s5",
+      "authority": "authority://fin/for-treasury",
+      "confidence": 0.9,
+      "expected_outcome": "top-of-attention items ranked",
+      "actual_outcome": "attention prioritized by derived score",
+      "detail": {
+        "attention": [
+          {
+            "uri": "task://fin/t-treasury-rebalance",
+            "label": "re-balance funding allocation",
+            "priority": 0.695
+          },
+          {
+            "uri": "task://fin/t-followup-routed",
+            "label": "rallied follow-on committed funding (adamvale)",
+            "priority": 0.58
+          }
+        ]
+      },
+      "made_at": "2026-09-01T00:29:55Z"
+    },
+    {
+      "uri": "dependency://fin/d-rebalance-enables-followup",
+      "from": "task://fin/t-treasury-rebalance",
+      "to": "task://fin/t-followup-routed",
+      "kind": "ENABLES"
+    },
+    {
+      "uri": "dependency://fin/d-followup-requires-allocation",
+      "from": "task://fin/t-followup-routed",
+      "to": "policy://fin/funding-allocation",
+      "kind": "REQUIRES"
+    },
+    {
+      "uri": "dependency://fin/d-followup-blocks-case",
+      "from": "task://fin/t-followup-routed",
+      "to": "case://fin/c-on-time-funding",
+      "kind": "BLOCKS"
+    },
+    {
+      "uri": "dependency://fin/d-case-derived-from-metric",
+      "from": "case://fin/c-on-time-funding",
+      "to": "metric://fin/m-on-time-settlement",
+      "kind": "DERIVED_FROM"
+    },
+    {
+      "uri": "dependency://fin/d-metric-impacts-goal",
+      "from": "metric://fin/m-on-time-settlement",
+      "to": "goal://fin/g-stable-client-funding",
+      "kind": "IMPACTS"
+    },
+    {
+      "uri": "dependency://fin/d-rebalance-blocks-case",
+      "from": "task://fin/t-treasury-rebalance",
+      "to": "case://fin/c-on-time-funding",
+      "kind": "BLOCKS"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+[
+  {
+    "uri": "decision://aero/s2-match-baseline",
+    "by": "agent://s2",
+    "authority": "delegation://aero/s2-match",
+    "alternatives": [
+      "offer://aero/o-l",
+      "offer://aero/o-g",
+      "none"
+    ],
+    "confidence": 0.9,
+    "expected_outcome": "lag partner ranked #1 on existing Trust",
+    "actual_outcome": "offer://aero/o-l",
+    "detail": [
+      {
+        "offer": "offer://aero/o-l",
+        "provider": "org://aero/vireo-airframe",
+        "fit": 1.0,
+        "trust": 0.9,
+        "score": 0.9
+      },
+      {
+        "offer": "offer://aero/o-g",
+        "provider": "org://aero/apex-aeronautics",
+        "fit": 1.0,
+        "trust": 0.6,
+        "score": 0.6
+      }
+    ],
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://aero/s4-recon-vireo-airframeQ3",
+    "by": "agent://s4",
+    "authority": "authority://aero/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://aero/valiant-aero",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "vireo-airframeQ3",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://aero/valiant-aero",
+      "provider": "org://aero/vireo-airframe",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://aero/s4-recon-apex-aeronauticsQ3",
+    "by": "agent://s4",
+    "authority": "authority://aero/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://aero/valiant-aero",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "apex-aeronauticsQ3",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://aero/valiant-aero",
+      "provider": "org://aero/apex-aeronautics",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://aero/s4-recon-vireo-airframeQ4",
+    "by": "agent://s4",
+    "authority": "authority://aero/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 1600000.0 USD from org://aero/valiant-aero",
+    "actual_outcome": "matched exactly: settled 1600000.0 USD",
+    "detail": {
+      "slug": "vireo-airframeQ4",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "matched": true,
+      "buyer": "org://aero/valiant-aero",
+      "provider": "org://aero/vireo-airframe",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://aero/s5-triage",
+    "by": "agent://aero/s5",
+    "authority": "authority://aero/for-ops",
+    "alternatives": [
+      "accept",
+      "dismiss as anomaly"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "accept as a real risk",
+    "actual_outcome": "accepted; root nominated",
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://aero/s5-assign",
+    "by": "person://aero/pgm",
+    "authority": "authority://aero/for-ops",
+    "alternatives": [
+      "assign",
+      "defer"
+    ],
+    "confidence": 0.95,
+    "expected_outcome": "task in progress",
+    "detail": {
+      "task": "task://aero/t-rebalance",
+      "assigned_to": "agent://aero/prog-ops",
+      "authority": "authority://aero/for-ops",
+      "priority": 0.695,
+      "capacity": 1.0
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://aero/s5-match-recorded",
+    "by": "agent://s2",
+    "authority": "delegation://aero/s2-match",
+    "alternatives": [
+      "offer://aero/o-g",
+      "none"
+    ],
+    "confidence": 0.92,
+    "expected_outcome": "good partner ranked #1",
+    "actual_outcome": "offer://aero/o-g",
+    "detail": [
+      {
+        "offer": "offer://aero/o-g",
+        "provider": "org://aero/apex-aeronautics",
+        "fit": 1.0,
+        "trust": 0.695,
+        "score": 0.695
+      }
+    ],
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://aero/owner-human",
+    "by": "person://aero/pgm",
+    "authority": "authority://aero/for-ops",
+    "alternatives": [
+      "release_in_full",
+      "hold",
+      "release_partial_and_hold_if_shortfall",
+      "open_dispute"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "release to the verified partner",
+    "actual_outcome": "release_in_full (human approved)",
+    "detail": {
+      "task": "task://aero/t-rebalance",
+      "action": "release_committed_action",
+      "irreversible_failure": true,
+      "cost_failure_unknowable": true
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://aero/s4-recon-apex-aeronauticsR",
+    "by": "agent://s4",
+    "authority": "authority://aero/for-settlement",
+    "alternatives": [
+      "reject"
+    ],
+    "confidence": 1.0,
+    "expected_outcome": "expected 2000000.0 USD from org://aero/valiant-aero",
+    "actual_outcome": "matched exactly: settled 2000000.0 USD",
+    "detail": {
+      "slug": "apex-aeronauticsR",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "matched": true,
+      "buyer": "org://aero/valiant-aero",
+      "provider": "org://aero/apex-aeronautics",
+      "reconciliation": "balanced"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://aero/learning",
+    "by": "agent://aero/s5",
+    "authority": "authority://aero/for-operations",
+    "subject": "airframe-subsystem delivery on-time management",
+    "expected": 0.95,
+    "actual": 1.0,
+    "variance": 0.05,
+    "why": "Routing subsystem work via an integrator with verified on-time delivery (apex-aeronautics), while gating the laggard (vireo-airframe), restored on-time delivery. Verified good deliveries compound scoped Trust.",
+    "change_future_policy": "ALLOCATE by fit AND scoped Trust; integrators below the Trust floor need a performance gate before new work.",
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://aero/s5-metric-loop",
+    "by": "agent://aero/s5",
+    "authority": "authority://aero/for-operations",
+    "alternatives": [
+      "do nothing",
+      "rebalance provider allocation"
+    ],
+    "confidence": 0.85,
+    "expected_outcome": "metric://aero/m-on-time variance reduced toward target",
+    "detail": {
+      "goal": "goal://aero/g-core",
+      "metric": "metric://aero/m-on-time",
+      "actual": 0.5,
+      "variance": -0.45,
+      "action": "task://aero/t-rebalance",
+      "outcome": "event://aero/outcome-routed-apex-aeronauticsR"
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  },
+  {
+    "uri": "decision://aero/s5-attention",
+    "by": "agent://aero/s5",
+    "authority": "authority://aero/for-ops",
+    "confidence": 0.9,
+    "expected_outcome": "top-of-attention ranked",
+    "actual_outcome": "attention prioritized by derived score",
+    "detail": {
+      "attention": [
+        {
+          "uri": "task://aero/t-rebalance",
+          "label": "re-balance committed work",
+          "priority": 0.695
+        },
+        {
+          "uri": "task://aero/t-followup",
+          "label": "rallied follow-on (good partner)",
+          "priority": 0.58
+        }
+      ]
+    },
+    "made_at": "2026-09-01T00:29:53Z"
+  }
+]

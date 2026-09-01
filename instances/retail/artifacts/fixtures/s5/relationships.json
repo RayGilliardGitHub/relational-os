@@ -1,0 +1,46 @@
+[
+  {
+    "uri": "relationship://retail/ops-rel",
+    "participants": [
+      "org://retail/hardvale",
+      "org://retail/southline"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://retail/hardvale": [
+        "provider"
+      ],
+      "org://retail/southline": [
+        "client"
+      ]
+    },
+    "authority": [
+      "authority://retail/for-ops"
+    ],
+    "purpose": "retail operating relationship"
+  },
+  {
+    "uri": "relationship://retail/partner-net",
+    "participants": [
+      "org://retail/hardvale",
+      "org://retail/atlas-freight",
+      "org://retail/corvus-logistics"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://retail/hardvale": [
+        "operator"
+      ],
+      "org://retail/atlas-freight": [
+        "partner"
+      ],
+      "org://retail/corvus-logistics": [
+        "partner"
+      ]
+    },
+    "authority": [
+      "authority://retail/for-ops"
+    ],
+    "purpose": "retail partner network"
+  }
+]
