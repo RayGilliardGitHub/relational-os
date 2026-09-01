@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_rule_library_demo.py — SPRINT 16: the named, cross-org RULE LIBRARY + a new inference primitive.
 
 Sprint 15 made the reconciliation rule BODY authorable as config text via the rule-authoring DSL

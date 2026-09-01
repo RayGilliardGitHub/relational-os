@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_cockpit_q7q8_demo.py — SPRINT 18: the §7L Q7/Q8 cockpit line, FIRST-CLASS in the engine.
 
 Sprints 16/17 rendered a §7L Q7/Q8 line (ACTIVE reconcile rule + its source + learned-or-not + the

@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_rule_authoring_demo.py — SPRINT 15: the declarative rule-AUTHORING layer.
 
 Sprint 14 made the reconciliation rule *selection* + *parameters* config through a registry of pure

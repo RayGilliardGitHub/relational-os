@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_reproducibility_demo.py — SPRINT 35: a pure, engine-free REPRODUCIBILITY-AUDIT.
 
 Sprints 31-34 built and audited a deterministic, recorded-data, two-path §7L decision framework

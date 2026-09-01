@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_reconcile_learning_demo.py — SPRINT 17: decision learning at the reconcile layer, honest
 + additive.
 

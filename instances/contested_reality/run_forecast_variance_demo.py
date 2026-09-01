@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_variance_demo.py — SPRINT 23: recorded-variance projected band for do-nothing pricing.
 
 Sprint 22 closed the crossing-direction seam but its own finding (sprint-22/notes/findings.md) disclosed

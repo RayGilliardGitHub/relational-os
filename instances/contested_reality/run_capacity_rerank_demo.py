@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_capacity_rerank_demo.py — SPRINT 32: the capacity-constrained RE-RANK of the §7L Q8
 recommendation for the machine, BY THE FROZEN `rank` UTILITY, as an EXPLICIT authorized POLICY step.
 

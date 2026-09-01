@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_recorded_surface_demo.py — SPRINT 31: inventory the ENTIRE recorded-data §7L decision surface as reason-not-choice, and name the ONE remaining out-of-scope seam.
 
 After six sprints (20-26 forecast series/variance/band · 27 emergency capacity_constraint · 28

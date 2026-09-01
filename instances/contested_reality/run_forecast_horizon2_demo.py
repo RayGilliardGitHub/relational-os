@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_horizon2_demo.py — SPRINT 26: Q3-attention horizon-wide suffix + Q9 capacity-planning.
 
 Sprint 25 disclosed its own next honest frontier (sprints/sprint-25/notes/findings.md, "Open

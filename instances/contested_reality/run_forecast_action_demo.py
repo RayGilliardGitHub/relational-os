@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_action_demo.py — SPRINT 21: recorded forecast → attention → expected-impact closure.
 
 Sprint 20 made the recorded Q6 forecast + Q9 capacity answered AS DATA (forecast_metric +

@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_corpus_consistency_demo.py — SPRINT 36: a pure, engine-free CORPUS-CONSISTENCY note.
 
 Sprint 35 was a REPRODUCIBILITY-AUDIT (`run_reproducibility_demo.py`): it verified the project's core claim

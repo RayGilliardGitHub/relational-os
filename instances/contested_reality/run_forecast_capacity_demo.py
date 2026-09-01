@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_capacity_demo.py — SPRINT 20: recorded-data Q6 forecast + Q9 capacity for §7L.
 
 Sprint 19 made `adjudication_engine.cockpit_s7l` render the full §7L Q1–Q10 cockpit, data-only, for

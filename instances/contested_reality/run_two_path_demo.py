@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_two_path_demo.py — SPRINT 33: consolidate the now-TWO-path decision surface (the reason-not-choice
 ADVISORY + the POLICY-authorized capacity-constrained RE-RANK) as ONE coherent, provably-composable
 recorded-data decision framework.

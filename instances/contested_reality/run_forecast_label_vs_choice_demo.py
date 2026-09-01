@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_label_vs_choice_demo.py — SPRINT 30: the sharpest label-vs-choice boundary.
 
 Sprint 29 proved the Q7/Q8 `capacity_constraint` marker can NAME a SPECIFIC option

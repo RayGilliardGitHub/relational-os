@@ -54,6 +54,19 @@ relational-os/
 The canonical spec lives here (`SPEC.md`). When a sprint changes it, optionally sync
 the `.md`/`.pdf` mirror into `/home/rlg/Documents/`.
 
+## System code vs demo/test runners (know which is which)
+The real system is a small, importable library; everything else in this repo is a demo or a
+test runner that drives it. **Do not confuse a runner with the system.**
+
+| Kind | Files | What it is |
+|---|---|---|
+| **SYSTEM (library)** | `ros/` (repo root) | The operating layer services: `substrate`, `s1`–`s5`, `bol`, `checks`. |
+| **SYSTEM (engine)** | `instances/contested_reality/{adjudication_engine,adjudication_configs,capacity_rerank,decision_learning,reconcile_learning,tradeoff_model}.py` · `instances/agent_demo/agent_adapter.py` | The adjudication/decision engine + the agent's Ollama client. |
+| **DEMO/TEST runners** | every `run_*.py` · `conformance_*.py` · `build_all*.py` · `tests/run_checks.py` · `scripts/verify.sh` | Drive the engine over orgs, assert, emit reports/artifacts, run the green gate. Marked with a `# === DEMO / TEST RUNNER …` header. Not part of the engine API. |
+
+Rule of thumb: if you only want the system, read `ros/` + the 7 engine files above. Everything
+named `run_*` or `conformance_*` is evidence/demo tooling.
+
 ## Documentation
 The finished S1→S5 system is documented in a verified manual package (Sprint 6). Primary
 copy at the repo root `docs/`; the identical Sprint-6 narrative copy stays at

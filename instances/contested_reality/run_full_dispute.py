@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_full_dispute.py — SPRINT 12: THE contested-reality lifecycle, end to end.
 
 The completeness review's decisive test: **"Does RelationalOS understand disagreement?"** — run, not

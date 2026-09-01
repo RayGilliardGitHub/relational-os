@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_rule_comparison_demo.py — SPRINT 14: the config-authorable reconciliation RULE layer.
 
 Sprint 13 proved adjudication is a *configurable* capability (one engine, any org), but its

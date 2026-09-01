@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_tradeoff_demo.py — SPRINT 11: the optimizer / business-model (what "better" means).
 
 Closes the last honest gap left by Sprints 9 and 10 (STRESS-TEST-SCENARIOS.md Scenario B #3 and

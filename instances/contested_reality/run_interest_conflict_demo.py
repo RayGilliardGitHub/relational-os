@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_interest_conflict_demo.py — CONFLICTING-INTEREST experiment (Sprint 10).
 
 The *next* extension of the contested-reality work: not a disputed FACT (Sprint 9 solved

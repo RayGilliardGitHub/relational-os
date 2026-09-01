@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/adjudication-deli-forecast-flat-2026",
-  "head_hash": "65ac3a828b592f97c42b14e611843da47a50878c4bc072865a0ab18a740f281b",
+  "head_hash": "1418b5983cd97d4720a1434c63a3e3404b23fd478ee5787cb60303ad5b93d423",
   "entries": [
     {
       "uri": "event://deli-forecast-flat/seed-trust",
@@ -10,7 +10,7 @@
       "causation_id": "ev-adj-deli-forecast-flat-seed-trust-prev",
       "idempotency_key": "idem-adj-deli-forecast-flat-seed-trust",
       "signature": "signed-by-person://deli-forecast-flat/registrar",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/registrar",
       "detail": "seed scoped trust before the episode",
       "state_update": [
@@ -24,7 +24,7 @@
           "evidence": []
         }
       ],
-      "hash": "d9f96f5cfd470866ba401a99dad9e808fd80bf9a7c6e6ae064828c70e5775056"
+      "hash": "43ced26ee5bf3d9057d1cbf16c3686b0d9a4fafd4fe42a0f2367922479cde59d"
     },
     {
       "uri": "event://deli-forecast-flat/provision",
@@ -34,7 +34,7 @@
       "causation_id": "ev-adj-prev-100",
       "idempotency_key": "idem-adj-provision-100",
       "signature": "signed-by-person://deli-forecast-flat/registrar",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/registrar",
       "detail": "provision actors, relationships, obligations, adjudicator+appeal authority, appeal right",
       "state_update": [
@@ -145,7 +145,7 @@
           "purpose": "right to appeal the determination"
         }
       ],
-      "hash": "21645e1c4f51248d84418c5f78e9d388860f50fbdfe8a085da33ad374439bd03"
+      "hash": "0b4e1b2c9cc72aa6417f26eb313f6636c753ad24db64b536b256e88f569d04bd"
     },
     {
       "uri": "event://deli-forecast-flat/claims",
@@ -155,7 +155,7 @@
       "causation_id": "ev-adj-prev-101",
       "idempotency_key": "idem-adj-claims-101",
       "signature": "signed-by-person://deli-forecast-flat/registrar",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/registrar",
       "detail": "record 3 conflicting claims",
       "state_update": [
@@ -188,7 +188,7 @@
           "epistemic_status": "claimed"
         }
       ],
-      "hash": "029d78e7e49aa11e4f02f35d62da92aaddff5f661f37119b1da42c9674ef80ab"
+      "hash": "b89eb5d30da31182af171916f56bc108069c424b3286b3c2ed0f1947da5012d4"
     },
     {
       "uri": "event://deli-forecast-flat/evidence",
@@ -198,7 +198,7 @@
       "causation_id": "ev-adj-prev-102",
       "idempotency_key": "idem-adj-evidence-102",
       "signature": "signed-by-person://deli-forecast-flat/registrar",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/registrar",
       "detail": "record conflicting evidence with provenance + reliability",
       "state_update": [
@@ -255,7 +255,7 @@
           "supports": "claim://deli-forecast-flat/shipped"
         }
       ],
-      "hash": "1caf0f16997bd64b69286d73c852c023fd925aeb5f3081e60dc9f4b0266d32d1"
+      "hash": "fa2f9fba95c49d12c92d33985fbe28ed89be24f7189c15791c54d3f06f06d569"
     },
     {
       "uri": "event://deli-forecast-flat/claim-advance",
@@ -265,7 +265,7 @@
       "causation_id": "ev-adj-prev-103",
       "idempotency_key": "idem-adj-claim-advance-103",
       "signature": "signed-by-person://deli-forecast-flat/registrar",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/registrar",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -280,7 +280,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "2bbf2b642b49d7c4e51b0cf3885c931cac034074e23360ac24d6d7171a44eddf"
+      "hash": "467234604a537f3c7eed51d670e051b133cbd485066b2dcf6c13a4649999515d"
     },
     {
       "uri": "event://deli-forecast-flat/claim-advance",
@@ -290,7 +290,7 @@
       "causation_id": "ev-adj-prev-104",
       "idempotency_key": "idem-adj-claim-advance-104",
       "signature": "signed-by-person://deli-forecast-flat/registrar",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/registrar",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -304,7 +304,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "55dc4aa256181fa0a8ad68703818a23d591fbe8c25e1a4891a06dc6e966886e2"
+      "hash": "a41adfb4e34a590214d68ccd84f457353eb4496ad3b7a04dcb726bba75ddc5d1"
     },
     {
       "uri": "event://deli-forecast-flat/claim-advance",
@@ -314,7 +314,7 @@
       "causation_id": "ev-adj-prev-105",
       "idempotency_key": "idem-adj-claim-advance-105",
       "signature": "signed-by-person://deli-forecast-flat/registrar",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/registrar",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -328,7 +328,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "7873d069bb0a228fce48f555309c7a1bb92c9044785120365cb5bf3176438589"
+      "hash": "388dddf229a9d3df62774bc428b3bd014ff51c47e679b5bb29cc0415f1ce52b0"
     },
     {
       "uri": "event://deli-forecast-flat/open-dispute",
@@ -338,7 +338,7 @@
       "causation_id": "ev-adj-prev-106",
       "idempotency_key": "idem-adj-open-dispute-106",
       "signature": "signed-by-person://deli-forecast-flat/registrar",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/registrar",
       "detail": "dispute OPEN with parties/about + additive lifecycle/epistemic + resolutions",
       "state_update": [
@@ -389,7 +389,7 @@
           }
         }
       ],
-      "hash": "56ac705ac3e8a5121dcdbc10d287de351ce05c03b183b0f8013662758105f7dc"
+      "hash": "f626c3bacac28eced85431ea1b94df10f66822896b48098fef113fa5856b2440"
     },
     {
       "uri": "event://deli-forecast-flat/lifecycle-advance",
@@ -399,7 +399,7 @@
       "causation_id": "ev-adj-prev-107",
       "idempotency_key": "idem-adj-lifecycle-advance-107",
       "signature": "signed-by-person://deli-forecast-flat/registrar",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/registrar",
       "detail": "conflicting evidence gathered -> EVIDENCE_COLLECTION -> CONTESTED",
       "state_update": [
@@ -496,7 +496,7 @@
           }
         }
       ],
-      "hash": "9fb275d9b261efac2271a5d94e485238060c14b17ba5c69ba5249b81d6c1f204"
+      "hash": "1dd349f2b74cad7e094294fb24b85bb9280b7d8879ba3cb7b3ce9146f6bc58b3"
     },
     {
       "uri": "event://deli-forecast-flat/agent-advisory",
@@ -506,7 +506,7 @@
       "causation_id": "ev-adj-prev-108",
       "idempotency_key": "idem-adj-agent-advisory-108",
       "signature": "signed-by-person://deli-forecast-flat/registrar",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/registrar",
       "detail": "AI/machine advisory on options (contained: informational only)",
       "state_update": [
@@ -577,10 +577,10 @@
             },
             "tradeoff": "trade-off[delivery; business-model {'evidence': 0.35, 'contractual': 0.3, 'relationship': 0.2, 'cost': 0.15}]\n  0.728  partial-settlement\n  0.665  conditional-resolution\n  0.620  accept-company-full-payment\n  0.435  request-more-evidence\n  0.400  unresolved\n  0.385  external-adjudication\n  0.380  escalate\n  0.285  accept-customer-refund FLOOR-GATED\n  => machine-eligible best (non-gated): partial-settlement (gated: ['accept-customer-refund'])"
           },
-          "made_at": "2026-09-01T05:45:50Z"
+          "made_at": "2026-09-01T05:56:02Z"
         }
       ],
-      "hash": "5b253a9eeb4bb776d5035a157157946dd3d3e74dc54cef1ee206c2c0f31fb286"
+      "hash": "246f05c4c9e44c49b46eb347bfd6242a3522f34104835675263d6bab3c5e5b74"
     },
     {
       "uri": "event://deli-forecast-flat/adjudicate",
@@ -590,7 +590,7 @@
       "causation_id": "ev-adj-prev-109",
       "idempotency_key": "idem-adj-adjudicate-109",
       "signature": "signed-by-person://deli-forecast-flat/adjudicator",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/adjudicator",
       "detail": "authorized human determination: partial-settlement (ranking in view)",
       "state_update": [
@@ -621,7 +621,7 @@
             "determination": "partial-settlement",
             "machine_eligible_best": "partial-settlement"
           },
-          "made_at": "2026-09-01T05:45:50Z"
+          "made_at": "2026-09-01T05:56:02Z"
         },
         {
           "uri": "dispute://deli-forecast-flat/delivery",
@@ -670,7 +670,7 @@
           }
         }
       ],
-      "hash": "3b4581c0f3338bdd7fea532217486459382ca5f2d792fecea2be8ad691797eeb"
+      "hash": "5c4c5c8088d94e2297c553c9c69e8a61977e0178a160281b6366328755a2533d"
     },
     {
       "uri": "event://deli-forecast-flat/resolution",
@@ -680,7 +680,7 @@
       "causation_id": "ev-adj-prev-110",
       "idempotency_key": "idem-adj-resolution-110",
       "signature": "signed-by-person://deli-forecast-flat/adjudicator",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/adjudicator",
       "detail": "resolution partial-settlement executed -> ACCEPTED -> EXECUTED",
       "state_update": [
@@ -824,7 +824,7 @@
           "resolution_outcome": "partial settlement on the contested delivery; SLA-breach credit applied; ledger noted; customer keeps the service"
         }
       ],
-      "hash": "a96e8a6373df678de13cf346857b1232c33fb00b1a28fb78e805e96256135e83"
+      "hash": "54493ce0318c5442d32f990c8cd995e780aa6d0799dd9f056d4fb8c91b3cff48"
     },
     {
       "uri": "event://deli-forecast-flat/verify",
@@ -834,7 +834,7 @@
       "causation_id": "ev-adj-prev-111",
       "idempotency_key": "idem-adj-verify-111",
       "signature": "signed-by-system://deli-forecast-flat/verify",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "system://deli-forecast-flat/verify",
       "detail": "outcome verification on completed execution -> VERIFIED -> CLOSED",
       "state_update": [
@@ -934,7 +934,7 @@
           "verified": true
         }
       ],
-      "hash": "b10829a88300f56b20d0d33bf661d0f71c3ccacae289581d35b3da64bb50a97c"
+      "hash": "a90cb1770ba0eca3f2f6df6e5e13b054270b1aeccb39a2ccfa0e2b32b50c2c1b"
     },
     {
       "uri": "event://deli-forecast-flat/learn",
@@ -944,7 +944,7 @@
       "causation_id": "ev-adj-prev-112",
       "idempotency_key": "idem-adj-learn-112",
       "signature": "signed-by-person://deli-forecast-flat/registrar",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/registrar",
       "detail": "organizational learning: recorded",
       "state_update": [
@@ -952,7 +952,7 @@
           "uri": "evidence://deli-forecast-flat/learning-note",
           "kind": "RECORD",
           "source": "post-resolution-postmortem",
-          "captured_at": "2026-09-01T05:45:50Z",
+          "captured_at": "2026-09-01T05:56:02Z",
           "verity": {
             "procedure": "postmortem",
             "confidence": 0.6
@@ -963,7 +963,7 @@
           "learning": "conflicting delivery timestamps reach a determination only via an authorized adjudicator + independent anchored verification, not the single-source verifier"
         }
       ],
-      "hash": "4a4f2775ca0750feb24688ce530a9a7463291f6c64a0cbb04261f3555c499998"
+      "hash": "d541780d9905fda2a9ddc42d95a837f9f3d4b7fafacf70f527feff01869b3a3f"
     },
     {
       "uri": "event://deli-forecast-flat/record-metric-series",
@@ -973,7 +973,7 @@
       "causation_id": "ev-adj-deli-forecast-flat-record-metric-series-prev",
       "idempotency_key": "idem-adj-deli-forecast-flat-record-metric-series",
       "signature": "signed-by-person://deli-forecast-flat/adjudicator",
-      "occurred_at": "2026-09-01T05:45:50Z",
+      "occurred_at": "2026-09-01T05:56:02Z",
       "actor": "person://deli-forecast-flat/adjudicator",
       "detail": "record a realized-vs-expected metric series additively on the org's ledger so the \u00a77L Q6 can project from recorded data",
       "state_update": [
@@ -1020,7 +1020,7 @@
           "owner": "person://deli-forecast-flat/adjudicator"
         }
       ],
-      "hash": "65ac3a828b592f97c42b14e611843da47a50878c4bc072865a0ab18a740f281b"
+      "hash": "1418b5983cd97d4720a1434c63a3e3404b23fd478ee5787cb60303ad5b93d423"
     }
   ]
 }

@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_horizon4_demo.py — SPRINT 28: capacity_constraint proven at its LIMIT.
 
 Sprint 27's own finding (sprints/sprint-27/notes/findings.md, "Open issues / next work")

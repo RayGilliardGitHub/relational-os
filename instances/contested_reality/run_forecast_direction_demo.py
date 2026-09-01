@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_direction_demo.py — SPRINT 22: directional forecast→attention→expected-impact.
 
 Sprint 21 closed the loop the forecast→attention→expected-impact seam (the recorded Q6 forecast now

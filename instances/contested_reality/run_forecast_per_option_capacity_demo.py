@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_per_option_capacity_demo.py — SPRINT 29: per-option capacity_infeasible.
 
 Sprint 28 proved the Q7/Q8 `capacity_constraint` marker at its LIMIT — at-capacity (`deli-atcap`)

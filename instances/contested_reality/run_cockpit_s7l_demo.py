@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_cockpit_s7l_demo.py — SPRINT 19: the FULL §7L Q1–Q10 morning cockpit, rendered BY the engine.
 
 Sprint 18 made the §7L Q7/Q8 line first-class in the engine (`adjudication_engine.cockpit_q7q8` /

@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_two_path_catalog_demo.py — SPRINT 34: a pure, engine-free CONSOLIDATION-AUDIT of the two-path
 decision surface over the ENTIRE ORG CATALOG every CR demo runner already exercises.
 

@@ -27,7 +27,7 @@
         "score": 0.6
       }
     ],
-    "made_at": "2026-09-01T05:45:53Z"
+    "made_at": "2026-09-01T05:56:05Z"
   },
   {
     "uri": "decision://tech/s4-recon-revan-digitalQ3",
@@ -48,7 +48,7 @@
       "provider": "org://tech/revan-digital",
       "reconciliation": "balanced"
     },
-    "made_at": "2026-09-01T05:45:53Z"
+    "made_at": "2026-09-01T05:56:05Z"
   },
   {
     "uri": "decision://tech/s4-recon-sentinel-labsQ3",
@@ -69,7 +69,7 @@
       "provider": "org://tech/sentinel-labs",
       "reconciliation": "balanced"
     },
-    "made_at": "2026-09-01T05:45:53Z"
+    "made_at": "2026-09-01T05:56:05Z"
   },
   {
     "uri": "decision://tech/s4-recon-revan-digitalQ4",
@@ -90,7 +90,7 @@
       "provider": "org://tech/revan-digital",
       "reconciliation": "balanced"
     },
-    "made_at": "2026-09-01T05:45:53Z"
+    "made_at": "2026-09-01T05:56:05Z"
   },
   {
     "uri": "decision://tech/s5-triage",
@@ -103,7 +103,7 @@
     "confidence": 0.85,
     "expected_outcome": "accept as a real risk",
     "actual_outcome": "accepted; root nominated",
-    "made_at": "2026-09-01T05:45:53Z"
+    "made_at": "2026-09-01T05:56:05Z"
   },
   {
     "uri": "decision://tech/s5-assign",
@@ -122,7 +122,7 @@
       "priority": 0.695,
       "capacity": 1.0
     },
-    "made_at": "2026-09-01T05:45:53Z"
+    "made_at": "2026-09-01T05:56:05Z"
   },
   {
     "uri": "decision://tech/s5-match-recorded",
@@ -144,7 +144,7 @@
         "score": 0.695
       }
     ],
-    "made_at": "2026-09-01T05:45:53Z"
+    "made_at": "2026-09-01T05:56:05Z"
   },
   {
     "uri": "decision://tech/owner-human",
@@ -165,7 +165,7 @@
       "irreversible_failure": true,
       "cost_failure_unknowable": true
     },
-    "made_at": "2026-09-01T05:45:53Z"
+    "made_at": "2026-09-01T05:56:05Z"
   },
   {
     "uri": "decision://tech/s4-recon-sentinel-labsR",
@@ -186,7 +186,7 @@
       "provider": "org://tech/sentinel-labs",
       "reconciliation": "balanced"
     },
-    "made_at": "2026-09-01T05:45:53Z"
+    "made_at": "2026-09-01T05:56:05Z"
   },
   {
     "uri": "decision://tech/learning",
@@ -198,7 +198,7 @@
     "variance": 0.05,
     "why": "Concentrating deployment work with an integrator that has verified on-time delivery (sentinel-labs), while gating the laggard (revan-digital), restored on-time upgrades. Verified good deployments compound scoped Trust and re-price routing.",
     "change_future_policy": "ALLOCATE by fit AND scoped Trust (not fit alone); partners below the Trust floor require a performance gate before a new commitment.",
-    "made_at": "2026-09-01T05:45:53Z"
+    "made_at": "2026-09-01T05:56:05Z"
   },
   {
     "uri": "decision://tech/s5-metric-loop",
@@ -218,7 +218,7 @@
       "action": "task://tech/t-rebalance",
       "outcome": "event://tech/outcome-routed-sentinel-labsR"
     },
-    "made_at": "2026-09-01T05:45:53Z"
+    "made_at": "2026-09-01T05:56:05Z"
   },
   {
     "uri": "decision://tech/s5-attention",
@@ -241,7 +241,7 @@
         }
       ]
     },
-    "made_at": "2026-09-01T05:45:53Z"
+    "made_at": "2026-09-01T05:56:05Z"
   },
   {
     "uri": "decision://tech/agent-recommend",
@@ -257,13 +257,13 @@
     "actual_outcome": "re-balance to partner_good",
     "detail": {
       "option": "re-balance to partner_good",
-      "rationale": "To leverage a higher trust score and potentially improve on-time delivery performance.",
+      "rationale": "To improve on-time delivery by leveraging a more reliable partnership, despite current trust levels.",
       "confidence": 0.85,
-      "risk": "Moderate risk of not addressing root cause but mitigates immediate partnership issues.",
+      "risk": "Moderate risk of underutilizing the laggard's potential capabilities.",
       "_model": "phi4-mini:3.8b-q8_0",
       "_fallback": false
     },
-    "made_at": "2026-09-01T05:45:55Z"
+    "made_at": "2026-09-01T05:56:10Z"
   },
   {
     "uri": "decision://tech/agent-verify",
@@ -280,10 +280,10 @@
       "on_time": true,
       "confidence": 0.95,
       "procedure": "anchored-timestamp",
-      "note": "The evidence provided is sufficient and consistent with the on-time delivery expectation.",
+      "note": "The evidence indicates a high confidence in the on-time delivery due to conformance with an anchored timestamp.",
       "_model": "phi4-mini:3.8b-q8_0",
       "_fallback": false
     },
-    "made_at": "2026-09-01T05:45:56Z"
+    "made_at": "2026-09-01T05:56:11Z"
   }
 ]

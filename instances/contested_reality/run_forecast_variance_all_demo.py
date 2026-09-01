@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_variance_all_demo.py — SPRINT 24: recorded whole-series band-variance SOURCE.
 
 Sprint 23 priced the Q8/trade-off do-nothing expected-impact as a projected BAND (worst ± the

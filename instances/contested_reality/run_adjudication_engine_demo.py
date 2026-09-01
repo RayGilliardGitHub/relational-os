@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_adjudication_engine_demo.py — SPRINT 13: the SAME configurable adjudication engine drives
 TWO different org scenarios (a freight/delivery $18k dispute AND a clinical coverage dispute),
 with NO code change between them — only config/data. Proves the Sprint-12 gap is closed:

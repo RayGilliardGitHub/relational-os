@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_horizon3_demo.py — SPRINT 27: recorded-capacity CONSTRAINT on the Q7/Q8 trade-off.
 
 Sprint 26 disclosed the next honest frontier (sprints/sprint-26/notes/findings.md, "Open issues /

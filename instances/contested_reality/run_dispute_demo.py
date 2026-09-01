@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_dispute_demo.py — CONTESTED-REALITY / DISPUTE-RESOLUTION experiment (Sprint 9).
 
 The smallest runnable demonstration that RelationalOS can reason about *contested human

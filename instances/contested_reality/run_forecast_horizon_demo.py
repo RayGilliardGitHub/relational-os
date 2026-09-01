@@ -1,3 +1,4 @@
+# === DEMO / TEST RUNNER - NOT part of the engine API ===
 """run_forecast_horizon_demo.py — SPRINT 25: horizon-wide do-nothing band + Q9 capacity-attention.
 
 Sprint 24 priced the Q8/trade-off do-nothing projected BAND around the SINGLE worst projected point,
