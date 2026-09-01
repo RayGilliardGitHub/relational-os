@@ -27,7 +27,7 @@
         "score": 0.6
       }
     ],
-    "made_at": "2026-09-01T05:08:35Z"
+    "made_at": "2026-09-01T05:31:12Z"
   },
   {
     "uri": "decision://retail/s4-recon-corvus-logisticsQ3",
@@ -48,7 +48,7 @@
       "provider": "org://retail/corvus-logistics",
       "reconciliation": "balanced"
     },
-    "made_at": "2026-09-01T05:08:35Z"
+    "made_at": "2026-09-01T05:31:12Z"
   },
   {
     "uri": "decision://retail/s4-recon-atlas-freightQ3",
@@ -69,7 +69,7 @@
       "provider": "org://retail/atlas-freight",
       "reconciliation": "balanced"
     },
-    "made_at": "2026-09-01T05:08:35Z"
+    "made_at": "2026-09-01T05:31:12Z"
   },
   {
     "uri": "decision://retail/s4-recon-corvus-logisticsQ4",
@@ -90,7 +90,7 @@
       "provider": "org://retail/corvus-logistics",
       "reconciliation": "balanced"
     },
-    "made_at": "2026-09-01T05:08:35Z"
+    "made_at": "2026-09-01T05:31:12Z"
   },
   {
     "uri": "decision://retail/s5-triage",
@@ -103,7 +103,7 @@
     "confidence": 0.85,
     "expected_outcome": "accept as a real risk",
     "actual_outcome": "accepted; root nominated",
-    "made_at": "2026-09-01T05:08:35Z"
+    "made_at": "2026-09-01T05:31:12Z"
   },
   {
     "uri": "decision://retail/s5-assign",
@@ -122,7 +122,7 @@
       "priority": 0.695,
       "capacity": 1.0
     },
-    "made_at": "2026-09-01T05:08:35Z"
+    "made_at": "2026-09-01T05:31:12Z"
   },
   {
     "uri": "decision://retail/s5-match-recorded",
@@ -144,7 +144,7 @@
         "score": 0.695
       }
     ],
-    "made_at": "2026-09-01T05:08:35Z"
+    "made_at": "2026-09-01T05:31:12Z"
   },
   {
     "uri": "decision://retail/owner-human",
@@ -165,7 +165,7 @@
       "irreversible_failure": true,
       "cost_failure_unknowable": true
     },
-    "made_at": "2026-09-01T05:08:35Z"
+    "made_at": "2026-09-01T05:31:12Z"
   },
   {
     "uri": "decision://retail/s4-recon-atlas-freightR",
@@ -186,7 +186,7 @@
       "provider": "org://retail/atlas-freight",
       "reconciliation": "balanced"
     },
-    "made_at": "2026-09-01T05:08:35Z"
+    "made_at": "2026-09-01T05:31:12Z"
   },
   {
     "uri": "decision://retail/learning",
@@ -198,7 +198,7 @@
     "variance": 0.05,
     "why": "Routing replenishment via a carrier with verified on-time delivery (atlas-freight), while gating the laggard (corvus-logistics), restored on-time replenishment. Verified good deliveries compound scoped Trust.",
     "change_future_policy": "ALLOCATE by fit AND scoped Trust; carriers below the Trust floor need a performance gate before new runs.",
-    "made_at": "2026-09-01T05:08:35Z"
+    "made_at": "2026-09-01T05:31:12Z"
   },
   {
     "uri": "decision://retail/s5-metric-loop",
@@ -218,7 +218,7 @@
       "action": "task://retail/t-rebalance",
       "outcome": "event://retail/outcome-routed-atlas-freightR"
     },
-    "made_at": "2026-09-01T05:08:35Z"
+    "made_at": "2026-09-01T05:31:12Z"
   },
   {
     "uri": "decision://retail/s5-attention",
@@ -241,6 +241,6 @@
         }
       ]
     },
-    "made_at": "2026-09-01T05:08:35Z"
+    "made_at": "2026-09-01T05:31:12Z"
   }
 ]

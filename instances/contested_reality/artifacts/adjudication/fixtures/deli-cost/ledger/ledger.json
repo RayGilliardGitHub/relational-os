@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/adjudication-deli-cost-2026",
-  "head_hash": "d0b44ddb7b304eb5771b5a5b6c2405a599575783a3e809ce5be5aed567323aad",
+  "head_hash": "c4bf87a23ddf1ad76b4fbbaecfffa0bfdff30838a1811f10113687ccfcde801e",
   "entries": [
     {
       "uri": "event://deli-cost/seed-trust",
@@ -10,7 +10,7 @@
       "causation_id": "ev-adj-deli-cost-seed-trust-prev",
       "idempotency_key": "idem-adj-deli-cost-seed-trust",
       "signature": "signed-by-person://deli-cost/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/registrar",
       "detail": "seed scoped trust before the episode",
       "state_update": [
@@ -24,7 +24,7 @@
           "evidence": []
         }
       ],
-      "hash": "2b0bf5193880e6b1ee25befc00430075f16993337380808c0ae6646780f2fc30"
+      "hash": "3270836f34fec72787d26c18cc3c39c91f91f43b776aa48024762420d2458f2a"
     },
     {
       "uri": "event://deli-cost/provision",
@@ -34,7 +34,7 @@
       "causation_id": "ev-adj-prev-100",
       "idempotency_key": "idem-adj-provision-100",
       "signature": "signed-by-person://deli-cost/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/registrar",
       "detail": "provision actors, relationships, obligations, adjudicator+appeal authority, appeal right",
       "state_update": [
@@ -145,7 +145,7 @@
           "purpose": "right to appeal the determination"
         }
       ],
-      "hash": "542b4c2655523476642085a696cc4dcd4529620b960b245e155badd5551f9150"
+      "hash": "71e2867b84c28d72382537e0cfb7f3ec14c048c0d98af980158723f89571ab80"
     },
     {
       "uri": "event://deli-cost/claims",
@@ -155,7 +155,7 @@
       "causation_id": "ev-adj-prev-101",
       "idempotency_key": "idem-adj-claims-101",
       "signature": "signed-by-person://deli-cost/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/registrar",
       "detail": "record 3 conflicting claims",
       "state_update": [
@@ -188,7 +188,7 @@
           "epistemic_status": "claimed"
         }
       ],
-      "hash": "9954f897736e53d8e75622bcba1c04094cb1f21fe4466d66be1101ee3c5f2806"
+      "hash": "9e7d3e938c4a44214be5696cda0275fe41a7bb884d5ad1f456a2ca283216c7ea"
     },
     {
       "uri": "event://deli-cost/evidence",
@@ -198,7 +198,7 @@
       "causation_id": "ev-adj-prev-102",
       "idempotency_key": "idem-adj-evidence-102",
       "signature": "signed-by-person://deli-cost/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/registrar",
       "detail": "record conflicting evidence with provenance + reliability",
       "state_update": [
@@ -255,7 +255,7 @@
           "supports": "claim://deli-cost/shipped"
         }
       ],
-      "hash": "1fe5d08529b20b53fe14b4b8cfd7a30b22f86d0599ae4dc689e8230409f6e4ac"
+      "hash": "8da6f2690f86092c1019e263fddc0a778e7799909488c3ba493e690bffd70f04"
     },
     {
       "uri": "event://deli-cost/claim-advance",
@@ -265,7 +265,7 @@
       "causation_id": "ev-adj-prev-103",
       "idempotency_key": "idem-adj-claim-advance-103",
       "signature": "signed-by-person://deli-cost/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/registrar",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -280,7 +280,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "b2ccb1db8d59a0914a7c2f4d0c86a5afc41c6db02766af314035b252e90591ce"
+      "hash": "86103c1451ea2839e71aa4c67befe958f53692df71ab51e6059275f46676a24b"
     },
     {
       "uri": "event://deli-cost/claim-advance",
@@ -290,7 +290,7 @@
       "causation_id": "ev-adj-prev-104",
       "idempotency_key": "idem-adj-claim-advance-104",
       "signature": "signed-by-person://deli-cost/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/registrar",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -304,7 +304,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "fcdc845e368c3c706496213763311a23767e5ec5931b18fd896ee08cebab1e25"
+      "hash": "069a98ffc8b12d72f63ff73e4fd755aa8155d06814780fad63a6d6b92a2f6dd0"
     },
     {
       "uri": "event://deli-cost/claim-advance",
@@ -314,7 +314,7 @@
       "causation_id": "ev-adj-prev-105",
       "idempotency_key": "idem-adj-claim-advance-105",
       "signature": "signed-by-person://deli-cost/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/registrar",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -328,7 +328,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "dfbf031664891a3d4cf5a857ff663f71a63713c016d23e3038ed0b8a678bf1bb"
+      "hash": "0b4dfb7fe983c8356fb733645888006174733092b022d112379d9604b011ba21"
     },
     {
       "uri": "event://deli-cost/open-dispute",
@@ -338,7 +338,7 @@
       "causation_id": "ev-adj-prev-106",
       "idempotency_key": "idem-adj-open-dispute-106",
       "signature": "signed-by-person://deli-cost/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/registrar",
       "detail": "dispute OPEN with parties/about + additive lifecycle/epistemic + resolutions",
       "state_update": [
@@ -389,7 +389,7 @@
           }
         }
       ],
-      "hash": "c28dbf078fec22cc5d698d4efa442272eec791687485283dd86c2dfd464d0e9d"
+      "hash": "4c99a6a4268e506e201f773624b4bc701d977e9b16504879e2c61e3c28f12bb8"
     },
     {
       "uri": "event://deli-cost/lifecycle-advance",
@@ -399,7 +399,7 @@
       "causation_id": "ev-adj-prev-107",
       "idempotency_key": "idem-adj-lifecycle-advance-107",
       "signature": "signed-by-person://deli-cost/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/registrar",
       "detail": "conflicting evidence gathered -> EVIDENCE_COLLECTION -> CONTESTED",
       "state_update": [
@@ -496,7 +496,7 @@
           }
         }
       ],
-      "hash": "50618921aaf96ae5a5bf22caf984087b0f610e824893a024a72cb8805d30086b"
+      "hash": "05951c965d5d644b01e93e0bfb9d4be09ad8fd05ddbfb030cad536fa98f7a879"
     },
     {
       "uri": "event://deli-cost/agent-advisory",
@@ -506,7 +506,7 @@
       "causation_id": "ev-adj-prev-108",
       "idempotency_key": "idem-adj-agent-advisory-108",
       "signature": "signed-by-person://deli-cost/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/registrar",
       "detail": "AI/machine advisory on options (contained: informational only)",
       "state_update": [
@@ -577,10 +577,10 @@
             },
             "tradeoff": "trade-off[delivery; business-model {'evidence': 0.35, 'contractual': 0.3, 'relationship': 0.2, 'cost': 0.15}]\n  0.728  partial-settlement\n  0.665  conditional-resolution\n  0.620  accept-company-full-payment\n  0.435  request-more-evidence\n  0.400  unresolved\n  0.385  external-adjudication\n  0.380  escalate\n  0.285  accept-customer-refund FLOOR-GATED\n  => machine-eligible best (non-gated): partial-settlement (gated: ['accept-customer-refund'])"
           },
-          "made_at": "2026-09-01T05:08:28Z"
+          "made_at": "2026-09-01T05:31:06Z"
         }
       ],
-      "hash": "a0b6492d31e73c9d90bfc9163f430579bdde48fce9507ce4c9cf4bb4733ff651"
+      "hash": "d62618347071cf9d9453f0c3aa33a128354f963d536a5d319fe65656e6bea620"
     },
     {
       "uri": "event://deli-cost/adjudicate",
@@ -590,7 +590,7 @@
       "causation_id": "ev-adj-prev-109",
       "idempotency_key": "idem-adj-adjudicate-109",
       "signature": "signed-by-person://deli-cost/adjudicator",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/adjudicator",
       "detail": "authorized human determination: partial-settlement (ranking in view)",
       "state_update": [
@@ -621,7 +621,7 @@
             "determination": "partial-settlement",
             "machine_eligible_best": "partial-settlement"
           },
-          "made_at": "2026-09-01T05:08:28Z"
+          "made_at": "2026-09-01T05:31:06Z"
         },
         {
           "uri": "dispute://deli-cost/delivery",
@@ -670,7 +670,7 @@
           }
         }
       ],
-      "hash": "931ed92b8647636a5fe5a6428a3e217b5e8b3710422e6e6f9b433b77b294dfa1"
+      "hash": "5c9d420b5a235b8fe426725b5351bf6253f61076d7b4ed98b484dc938b552baf"
     },
     {
       "uri": "event://deli-cost/resolution",
@@ -680,7 +680,7 @@
       "causation_id": "ev-adj-prev-110",
       "idempotency_key": "idem-adj-resolution-110",
       "signature": "signed-by-person://deli-cost/adjudicator",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/adjudicator",
       "detail": "resolution partial-settlement executed -> ACCEPTED -> EXECUTED",
       "state_update": [
@@ -824,7 +824,7 @@
           "resolution_outcome": "partial settlement on the contested delivery; SLA-breach credit applied; ledger noted; customer keeps the service"
         }
       ],
-      "hash": "37de911eb8c4450a12a0c2dfcda12b1ff64d02b56a438fd36eabb234aad60665"
+      "hash": "062b860a789e91ae1f79242d954921f660b258fadc92774f109a11542ac69045"
     },
     {
       "uri": "event://deli-cost/verify",
@@ -834,7 +834,7 @@
       "causation_id": "ev-adj-prev-111",
       "idempotency_key": "idem-adj-verify-111",
       "signature": "signed-by-system://deli-cost/verify",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "system://deli-cost/verify",
       "detail": "outcome verification on completed execution -> VERIFIED -> CLOSED",
       "state_update": [
@@ -934,7 +934,7 @@
           "verified": true
         }
       ],
-      "hash": "09f6b5fe2d64ca0d650ff2783cc6155bb7474f81a5f4e119e968f40bfd2ccb04"
+      "hash": "930d2b4841b191aef5df9631991db083bcef93016c525de46809e3c8122ec4a2"
     },
     {
       "uri": "event://deli-cost/learn",
@@ -944,7 +944,7 @@
       "causation_id": "ev-adj-prev-112",
       "idempotency_key": "idem-adj-learn-112",
       "signature": "signed-by-person://deli-cost/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/registrar",
       "detail": "organizational learning: recorded",
       "state_update": [
@@ -952,7 +952,7 @@
           "uri": "evidence://deli-cost/learning-note",
           "kind": "RECORD",
           "source": "post-resolution-postmortem",
-          "captured_at": "2026-09-01T05:08:28Z",
+          "captured_at": "2026-09-01T05:31:06Z",
           "verity": {
             "procedure": "postmortem",
             "confidence": 0.6
@@ -963,7 +963,7 @@
           "learning": "conflicting delivery timestamps reach a determination only via an authorized adjudicator + independent anchored verification, not the single-source verifier"
         }
       ],
-      "hash": "f026e4a7f584c86011ef9d0f0118fc8af1c30f96907078ef8dca937cda2d4c5d"
+      "hash": "1ead297ffa0e8916efe5c84caf4fee2aefc887d7d5bc54f21f0fd20bd8c2470b"
     },
     {
       "uri": "event://deli-cost/record-metric-series",
@@ -973,7 +973,7 @@
       "causation_id": "ev-adj-deli-cost-record-metric-series-prev",
       "idempotency_key": "idem-adj-deli-cost-record-metric-series",
       "signature": "signed-by-person://deli-cost/adjudicator",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:06Z",
       "actor": "person://deli-cost/adjudicator",
       "detail": "record a realized-vs-expected metric series additively on the org's ledger so the \u00a77L Q6 can project from recorded data",
       "state_update": [
@@ -1021,7 +1021,7 @@
           "owner": "person://deli-cost/adjudicator"
         }
       ],
-      "hash": "d0b44ddb7b304eb5771b5a5b6c2405a599575783a3e809ce5be5aed567323aad"
+      "hash": "c4bf87a23ddf1ad76b4fbbaecfffa0bfdff30838a1811f10113687ccfcde801e"
     }
   ]
 }

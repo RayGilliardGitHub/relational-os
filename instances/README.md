@@ -850,3 +850,57 @@ Full write-up: the Sprint-32 section in `contested_reality/docs/ENGINE-FORECAST-
 - Write-up: `contested_reality/docs/DECISION-FRAMEWORK-BOUNDARY.md` (cheat-sheet) + ENGINE-FORECAST-CAPACITY.md
   (§18) + the report `contested_reality/artifacts/adjudication/reports/two-path-catalog.md` +
   `sprints/sprint-34/summary.md`.
+
+### Sprint 35 — REPRODUCIBILITY-AUDIT: the "deterministic local Python, ~$0, real tool output" claim, VERIFIED on this host across the WHOLE corpus (a pure, engine-free audit; `adjudication_engine.py` AND `capacity_rerank.py` BYTE-IDENTICAL)
+- **Build** (`run_reproducibility_demo.py`, NEW survey/audit runner, exit 0 = ALL PASS; **engine `a60f8f7…` AND
+  `capacity_rerank.py` `f7c6a185…` BYTE-IDENTICAL**, recorded before AND after; schema `34264934…`, SPEC v0.22,
+  49 `$defs`, no new noun, 0 `emit_fixtures` calls). Emits
+  `contested_reality/artifacts/adjudication/reports/reproducibility.md`.
+- **(a) host/platform facts captured LIVE** (emitted to the report + shown): uname `Linux 7.0.0-30-generic
+  x86_64` (node `dad`), Python `CPython 3.12.3`, CPU `20`.
+- **(b) whole-catalog determinism re-verified on THIS host:** re-runs the Sprint-34 two-path survey over the
+  whole 22-org catalog (reusing the Sprint-34 builder + Sprint-33 `_surface`) and asserts EVERY org's
+  `two_path_surface` + PATH class EQUALS the Sprint-34 recorded result — taxonomy **{12,6,4}**, the 4 re-rank
+  replacements (`deli-recommend-infcap`→conditional-resolution, `inspect-recorded`→conditional-accept-with-
+  guarantee, `cove-recommend-infcap`→authorize-generic, `deli-all-infeasible`→unresolved), **22/22** advisory
+  Q8 == `cockpit_q7q8` (never shadowed), 18/18 non-firing orgs agree, floor integrity 22/22, two_path_surface
+  identical on re-run, and the Sprint-31 tally (11/11) + Sprint-32 re-rank (4/4) + Sprint-33 13-org taxonomy
+  {5,4,4} ALL reproduced from the SAME recorded data.
+- **(c) the Sprint-34 consolidated boundary doc (`DECISION-FRAMEWORK-BOUNDARY.md`) verified ACCURATE against
+  live code** — engine sha256 `a60f8f71`, `capacity_rerank.py` `f7c6a185`, schema `.yaml` `34264934`
+  (`.json` `7fc38c8c` — the documented hash is the `.yaml`), 49 `$defs`, SPEC v0.22, and the taxonomy numbers;
+  every concrete claim PASSED, so NO doc fix was needed (this is a doc audit, not a code change).
+- **Honest §16:** deterministic local reproducibility of the one-framework two-path decision surface across the
+  whole catalog is VERIFIED on this host (~$0, real output only); the still-not-derivable residual is
+  unchanged (probabilistic/stochastic forecast; a per-option requirement NOT unit-coupled to recorded capacity
+  / an option with no recorded requirement — never invented; any §6-human choice recorded data cannot machine-
+  decide). Full non-regression green (19 CR demos incl. the new one + 5 conformances + build_all +
+  conformance_all + S5 ref + agent), engine + `capacity_rerank.py` raw sha256 unchanged AFTER.
+- Write-up: `sprints/sprint-35/reproducibility.md` (host + determinism + build results) + `sprints/sprint-35/
+  summary.md` + `notes/findings.md` + the report `contested_reality/artifacts/adjudication/reports/
+  reproducibility.md`.
+
+### Sprint 36 — CORPUS-CONSISTENCY note: the Sprint-35 reproducibility FIGURE re-run from the current corpus + the two boundary docs cross-checked against each other and the live corpus (a pure, engine-free audit; `adjudication_engine.py` AND `capacity_rerank.py` BYTE-IDENTICAL)
+- **Build** (`run_corpus_consistency_demo.py`, NEW survey/audit runner, exit 0 = ALL PASS; **engine
+  `a60f8f7…` AND `capacity_rerank.py` `f7c6a185…` BYTE-IDENTICAL**, recorded before AND after; schema
+  `34264934…`, SPEC v0.22, 49 `$defs`, no new noun, 0 `emit_fixtures` calls, pure in-memory + read-only).
+  Emits `contested_reality/artifacts/adjudication/reports/corpus-consistency.md`.
+- **(a) Sprint-35 reproducibility figure re-run from the CURRENT corpus:** `run_corpus_consistency_demo.py`
+  reuses `run_reproducibility_demo` wholesale in a fresh run and asserts the recorded figure reproduces
+  byte-identical — whole 22-org two-path survey, taxonomy **{12,6,4}**, the 4 re-rank replacements
+  (conditional-resolution / conditional-accept-with-guarantee / authorize-generic / unresolved), **22/22**
+  advisory Q8 == `cockpit_q7q8`, floor integrity 22/22, determinism on re-run, and the Sprint-31 (11/11) +
+  Sprint-32 (4/4) + Sprint-33 ({5,4,4}) histories.
+- **(b) boundary docs mutually consistent + consistent with the live corpus:** parses each class org list
+  out of `DECISION-FRAMEWORK-BOUNDARY.md` §3 and verifies it EQUALS the live per-class set; verifies
+  `ENGINE-FORECAST-CAPACITY.md` §18/§17 states the same {12,6,4}=22 taxonomy, the 9-added split (7 no-capacity
+  + 2 best-runnable deli-atcap/deli-deficit), and the same hashes/invariants; the two docs agree with each
+  other and the live corpus — no drifted number, no stale org list, **no doc fix needed**.
+- **Honest §16:** deterministic local reproducibility of the one-framework two-path decision surface across
+  the whole catalog is RE-VERIFIED on this host from the current corpus; the still-not-derivable residual is
+  unchanged (probabilistic/stochastic forecast; a per-option requirement NOT unit-coupled to recorded capacity
+  / an option with no recorded requirement — never invented; any §6-human choice recorded data cannot
+  machine-decide). Full non-regression green (20 CR demos incl. the new one + 5 conformances + build_all +
+  conformance_all + S5 ref + agent), engine + `capacity_rerank.py` raw sha256 unchanged AFTER.
+- Write-up: `sprints/sprint-36/summary.md` + `notes/findings.md` + the report
+  `contested_reality/artifacts/adjudication/reports/corpus-consistency.md`.

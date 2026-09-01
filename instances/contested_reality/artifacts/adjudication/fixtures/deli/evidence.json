@@ -55,7 +55,7 @@
     "uri": "evidence://deli/learning-note",
     "kind": "RECORD",
     "source": "post-resolution-postmortem",
-    "captured_at": "2026-09-01T05:08:28Z",
+    "captured_at": "2026-09-01T05:31:05Z",
     "verity": {
       "procedure": "postmortem",
       "confidence": 0.6
@@ -64,31 +64,5 @@
     "about": "what was learned",
     "supports": null,
     "learning": "conflicting delivery timestamps reach a determination only via an authorized adjudicator + independent anchored verification, not the single-source verifier"
-  },
-  {
-    "uri": "evidence://deli/u-receipt",
-    "kind": "TESTIMONY",
-    "source": "customer-signed-receipt",
-    "captured_at": "2026-08-31T16:15:00-06:00",
-    "verity": {
-      "procedure": "signed-receipt",
-      "confidence": 0.7
-    },
-    "reliability": 0.6,
-    "about": "delivery receipt",
-    "supports": "claim://deli/u-late"
-  },
-  {
-    "uri": "evidence://deli/u-delivery-log",
-    "kind": "RECORD",
-    "source": "company-delivery-log",
-    "captured_at": "2026-08-31T16:05:00-06:00",
-    "verity": {
-      "procedure": "internal-log",
-      "confidence": 0.7
-    },
-    "reliability": 0.7,
-    "about": "delivery log",
-    "supports": "claim://deli/u-on-time"
   }
 ]

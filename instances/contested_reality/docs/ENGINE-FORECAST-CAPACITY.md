@@ -533,3 +533,31 @@ holds, `capacity_rerank.py` stays a pure untouched module, and the honest residu
 (probabilistic/stochastic forecast; a per-option requirement NOT unit-coupled to the recorded capacity / an
 option with no recorded requirement — never invented; any §6-human choice recorded data cannot machine-
 decide — the re-rank is POLICY-authorized, not objective best). No SPEC bump (v0.22).
+
+## 19. Update after Sprint 36 — CORPUS-CONSISTENCY note: the Sprint-35 reproducibility figure re-run + this §18 whole-catalog boundary cross-checked against the live corpus (engine AND `capacity_rerank.py` untouched)
+
+Sprint 36 is a pure, engine-free CORPUS-CONSISTENCY note, no new capability. A new survey/audit runner
+`run_corpus_consistency_demo.py` (exit 0 = ALL PASS; `adjudication_engine.py` hash `a60f8f7…` AND
+`capacity_rerank.py` sha256 `f7c6a185…` BYTE-IDENTICAL, recorded before AND after; schema `34264934…`,
+SPEC v0.22, 49 `$defs`, no new noun, 0 `emit_fixtures` calls):
+
+- **(a) re-runs the Sprint-35 reproducibility FIGURE in a FRESH run over the CURRENT corpus** (reusing
+  `run_reproducibility_demo`) and asserts it reproduces byte-identical: whole 22-org two-path survey,
+  taxonomy **{12,6,4}**, the 4 re-rank replacements, **22/22** advisory Q8 == `cockpit_q7q8`, floor integrity
+  22/22, determinism on re-run, and the Sprint-31 tally (11/11) + Sprint-32 re-rank (4/4) + Sprint-33 13-org
+  taxonomy ({5,4,4}) — all reproduced from the same recorded data.
+- **(b)** cross-checks this §18 whole-catalog boundary AND the Sprint-34 consolidated cheat-sheet
+  (`DECISION-FRAMEWORK-BOUNDARY.md` §3) against EACH OTHER and the LIVE corpus: the {12,6,4} taxonomy and the
+  "9 added = 7 no-capacity + 2 best-runnable (deli-atcap/deli-deficit)" story agree, the cited hashes/
+  versions (`a60f8f7…`/`f7c6a185…`/`34264934…`/49 `$defs`/SPEC v0.22) match live, and no drifted number or
+  stale org list was found — the two boundary docs are consistent with each other and with the live corpus
+  (**no doc fix needed**). Emits the additive report
+  `contested_reality/artifacts/adjudication/reports/corpus-consistency.md`.
+
+**§19 verdict — is the Sprint-35 reproducibility record reproducible as a figure, and are the boundary docs
+consistent with the corpus?** Yes. The Sprint-35 reproducibility FIGURE reproduces from the current corpus in
+a fresh run, and the two boundary/cheat-sheet docs (`DECISION-FRAMEWORK-BOUNDARY.md` + this §18) are mutually
+consistent and consistent with the live corpus. The still-not-derivable residual is UNCHANGED: a
+probabilistic/stochastic forecast; a per-option requirement NOT unit-coupled to recorded capacity / an option
+with no recorded requirement (never invented); and any §6-human choice that recorded data cannot machine-
+decide (the re-rank is POLICY-authorized, not objective best). No SPEC bump (v0.22).

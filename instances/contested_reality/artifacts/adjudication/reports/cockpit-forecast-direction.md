@@ -1,5 +1,5 @@
 # §7L directional forecast → attention → expected-impact — engine-native render (Sprint 22)
-generated 2026-09-01T05:08:28Z  |  `adjudication_engine.cockpit_s7l`/`render_cockpit_s7l`  |  recorded `metric://` series + recorded `direction` (default `higher-is-better`) + recorded threshold -> Q3 forecast attention + Q8 do-nothing expected-impact, BOTH directions  |  SPEC v0.22, 49 $defs, URI cap
+generated 2026-09-01T05:31:05Z  |  `adjudication_engine.cockpit_s7l`/`render_cockpit_s7l`  |  recorded `metric://` series + recorded `direction` (default `higher-is-better`) + recorded threshold -> Q3 forecast attention + Q8 do-nothing expected-impact, BOTH directions  |  SPEC v0.22, 49 $defs, URI cap
 
 The forecast→attention→expected-impact closure now serves BOTH directions as data: a recorded metric's `direction` (default `higher-is-better` for rate/quality = min below threshold; explicit `lower-is-better` for cost/latency/defect/risk = max above ceiling) decides which crossing flags a Q3 forecast attention item and how the Q8/trade-off prices the do-nothing baseline (below-target vs above-ceiling). An org without a recorded series keeps today's Q3/Q8/trade-off exactly.
 

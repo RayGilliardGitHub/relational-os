@@ -30,6 +30,23 @@ memory; it must rely only on these files. Follow this sequence in every sprint.
 7. **Hand off.** In your final message AND as a file, write the next sprint's
    self-contained prompt at `<next>/PROMPT.md`. It must reference only absolute
    paths and the current `SPEC.md` — a fresh session depends on nothing else.
+8. **Terminate when there is nothing new to do (mandatory check).** Before writing
+   the next prompt, ask: *would the next sprint add new capability, a new proof, or
+   a genuinely new audit surface — or would it only re-verify ground already proven
+   from the same recorded data?* If the next sprint would add nothing new — every
+   derivable seam is closed and what remains is the honest residual (a boundary the
+   project refuses to invent, or a §6-human choice no machine can make) plus ritual
+   re-audit over byte-identical inputs — then DO NOT write a next `PROMPT.md`.
+   Instead:
+   - Write `<current>/COMPLETE.md` stating that the chain is done, naming the
+     residual boundary, and noting the decisive prior sprint.
+   - Write NO `<next>/PROMPT.md`; do not manufacture a successor.
+   - State plainly in your final message: "nothing new left for a sprint; series
+     ends here."
+   This is not optional decoration: a fresh session asked to write Sprint N+1 must
+   first decide whether any real sprint would pay for itself, and must refuse to emit
+   one purely because the previous prompt said "write a next prompt." The prompt
+   chain is a means to the work, not an obligation to run forever.
 
 ## Non-negotiables
 - Read before write, plan before build.

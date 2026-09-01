@@ -89,3 +89,19 @@ POLICY-authorized, not a claim of objective best).
 
 No SPEC bump (v0.22); no new capability; engine `a60f8f7…` + `capacity_rerank.py` `f7c6a185…` byte-identical;
 no new noun; frozen 49 `$defs`; schema `34264934…`; `ros/` + schema + sector `configs.py` untouched.
+
+## Update after Sprint 36 — CORPUS-CONSISTENCY note (the Sprint-35 reproducibility figure re-run + the two boundary docs cross-checked; engine AND `capacity_rerank.py` untouched)
+
+Sprint 36 is a pure, engine-free CORPUS-CONSISTENCY note: no new capability. `run_corpus_consistency_demo.py`
+(exit 0 = ALL PASS; **engine `a60f8f7…` AND `capacity_rerank.py` `f7c6a185…` BYTE-IDENTICAL**, recorded before
+and after; schema `34264934…`, SPEC v0.22, 49 `$defs`, no new noun, 0 `emit_fixtures` calls):
+- **(a)** re-runs the Sprint-35 reproducibility FIGURE in a FRESH run over the current corpus (reusing
+  `run_reproducibility_demo`) and asserts it reproduces byte-identical — whole 22-org two-path survey,
+  taxonomy **{12,6,4}**, the 4 re-rank replacements, **22/22** advisory Q8 == `cockpit_q7q8`, floor integrity
+  22/22, determinism on re-run, and the Sprint-31 (11/11) + Sprint-32 (4/4) + Sprint-33 ({5,4,4}) histories.
+- **(b)** cross-checks THIS cheat-sheet's §3 taxonomy rows (12/6/4 + per-class org list) AND the
+  `ENGINE-FORECAST-CAPACITY.md` §18/§17 figures against EACH OTHER and the LIVE corpus — every counted org
+  matches the live per-class set, the cited hashes (`a60f8f7…`/`f7c6a185…`/`34264934…`/49 `$defs`/SPEC v0.22)
+  match live, and the "9 added = 7 no-capacity + 2 best-runnable (deli-atcap/deli-deficit)" story holds. No
+  drifted number, no stale org list — **no doc fix needed**. Report:
+  `contested_reality/artifacts/adjudication/reports/corpus-consistency.md`.

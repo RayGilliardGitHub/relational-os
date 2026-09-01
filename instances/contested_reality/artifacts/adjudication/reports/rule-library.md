@@ -1,5 +1,5 @@
 # Sprint 16 — the named, cross-org RULE LIBRARY + a NEW inference primitive (`bayesian-combine`)
-generated 2026-09-01T05:08:28Z  |  5 library-reuse org lifecycles  |  SPEC_VOCAB=['bayesian-combine', 'count', 'majority', 'max', 'mean', 'sum', 'weighted-mean']
+generated 2026-09-01T05:31:05Z  |  5 library-reuse org lifecycles  |  SPEC_VOCAB=['bayesian-combine', 'count', 'majority', 'max', 'mean', 'sum', 'weighted-mean']
 
 Named rule specs live ONCE in `adjudication_configs.RULE_LIBRARY` and are reused by reference (the same dict) by any org — a real library, not inspect-only. The NEW `bayesian-combine` primitive is authored once in the language and serves every org as data.
 

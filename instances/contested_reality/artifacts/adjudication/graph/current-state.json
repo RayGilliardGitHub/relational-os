@@ -2,12 +2,12 @@
   "kind": "GRAPH",
   "objects": [
     {
-      "uri": "trust://cove/claimant",
-      "subject": "person://cove/utilization",
-      "target": "person://cove/patient",
+      "uri": "trust://cove-recorded/claimant",
+      "subject": "person://cove-recorded/utilization",
+      "target": "person://cove-recorded/patient",
       "claim": "honest dispute participant",
       "score": 0.8,
-      "context": "relationship://cove/x",
+      "context": "relationship://cove-recorded/x",
       "evidence": []
     },
     {
@@ -35,11 +35,11 @@
       "type": "SYSTEM"
     },
     {
-      "uri": "relationship://cove/coverage-contract",
+      "uri": "relationship://cove-recorded/coverage-contract",
       "status": "ACTIVE",
       "participants": [
-        "org://cove/payer",
-        "person://cove/patient"
+        "org://cove-recorded/payer",
+        "person://cove-recorded/patient"
       ],
       "roles": {
         "org://cove/payer": [
@@ -52,11 +52,11 @@
       "purpose": "insurance coverage for the member"
     },
     {
-      "uri": "relationship://cove/clinical",
+      "uri": "relationship://cove-recorded/clinical",
       "status": "ACTIVE",
       "participants": [
-        "person://cove/physician",
-        "person://cove/patient"
+        "person://cove-recorded/physician",
+        "person://cove-recorded/patient"
       ],
       "roles": {
         "person://cove/physician": [
@@ -69,32 +69,47 @@
       "purpose": "clinical care relationship"
     },
     {
-      "uri": "obligation://cove/furnish-coverage",
-      "subject": "org://cove/payer",
+      "uri": "obligation://cove-recorded/furnish-coverage",
+      "subject": "org://cove-recorded/payer",
       "source": "VOLUNTARILY_UNDERTAKEN",
       "content": "furnish medically-necessary covered care promptly",
       "due_by": "2026-12-31T00:00:00-06:00"
     },
     {
-      "uri": "obligation://cove/standard-care",
-      "subject": "person://cove/physician",
+      "uri": "obligation://cove-recorded/standard-care",
+      "subject": "person://cove-recorded/physician",
       "source": "IMPOSED",
       "content": "recommend clinically-appropriate care",
       "due_by": "2026-12-31T00:00:00-06:00"
     },
     {
-      "uri": "authority://cove/adjudicate",
-      "holder": "person://cove/utilization",
+      "uri": "authority://cove-recorded/adjudicate",
+      "holder": "person://cove-recorded/utilization",
       "grants": [
         "adjudicate"
       ],
       "roles": [
         "adjudicator"
-      ]
+      ],
+      "capacity": {
+        "value": 30.0,
+        "unit": "units/day",
+        "load": 0.9,
+        "status": "recorded"
+      },
+      "capacity_requirements": {
+        "authorize-off-formulary": 30.0,
+        "deny-off-formulary": 30.0,
+        "step-therapy-first": 28.0,
+        "authorize-generic": 25.0,
+        "request-more-evidence": 10.0,
+        "escalate-to-medical-director": 15.0,
+        "external-peer-review": 20.0
+      }
     },
     {
-      "uri": "authority://cove/adjudicate-appeal",
-      "holder": "person://cove/meddir",
+      "uri": "authority://cove-recorded/adjudicate-appeal",
+      "holder": "person://cove-recorded/meddir",
       "grants": [
         "adjudicate_appeal"
       ],
@@ -103,36 +118,36 @@
       ]
     },
     {
-      "uri": "right://cove/patient-appeal",
-      "holder": "person://cove/patient",
+      "uri": "right://cove-recorded/patient-appeal",
+      "holder": "person://cove-recorded/patient",
       "type": "APPEAL",
       "subject": "DUPLICATE",
       "scope": [
-        "obligation://cove/furnish-coverage"
+        "obligation://cove-recorded/furnish-coverage"
       ],
       "purpose": "right to appeal the determination"
     },
     {
-      "uri": "claim://cove/medically-necessary",
-      "proposer": "person://cove/physician",
+      "uri": "claim://cove-recorded/medically-necessary",
+      "proposer": "person://cove-recorded/physician",
       "statement": "medication X is medically necessary for this member; a peer-reviewed study supports its use for the condition.",
       "evidence": [
-        "evidence://cove/clinical-study"
+        "evidence://cove-recorded/clinical-study"
       ],
       "epistemic_status": "disputed"
     },
     {
-      "uri": "claim://cove/off-formulary",
-      "proposer": "org://cove/payer",
+      "uri": "claim://cove-recorded/off-formulary",
+      "proposer": "org://cove-recorded/payer",
       "statement": "medication X is off-formulary; the formulary policy and comparative step-therapy evidence do not require it as first-line.",
       "evidence": [
-        "evidence://cove/formulary-policy",
-        "evidence://cove/step-therapy-studies"
+        "evidence://cove-recorded/formulary-policy",
+        "evidence://cove-recorded/step-therapy-studies"
       ],
       "epistemic_status": "disputed"
     },
     {
-      "uri": "evidence://cove/clinical-study",
+      "uri": "evidence://cove-recorded/clinical-study",
       "kind": "ANCHORED",
       "source": "peer-reviewed-trial",
       "captured_at": "2026-06-01T00:00:00-06:00",
@@ -142,10 +157,10 @@
       },
       "reliability": 0.88,
       "about": "clinical efficacy for the condition",
-      "supports": "claim://cove/medically-necessary"
+      "supports": "claim://cove-recorded/medically-necessary"
     },
     {
-      "uri": "evidence://cove/formulary-policy",
+      "uri": "evidence://cove-recorded/formulary-policy",
       "kind": "RECORD",
       "source": "coverage-policy-document",
       "captured_at": "2026-01-01T00:00:00-06:00",
@@ -155,10 +170,10 @@
       },
       "reliability": 1.0,
       "about": "coverage/formulary classification",
-      "supports": "claim://cove/off-formulary"
+      "supports": "claim://cove-recorded/off-formulary"
     },
     {
-      "uri": "evidence://cove/step-therapy-studies",
+      "uri": "evidence://cove-recorded/step-therapy-studies",
       "kind": "ANCHORED",
       "source": "comparative-effectiveness-db",
       "captured_at": "2026-05-01T00:00:00-06:00",
@@ -168,15 +183,15 @@
       },
       "reliability": 0.82,
       "about": "step-therapy comparator efficacy",
-      "supports": "claim://cove/off-formulary"
+      "supports": "claim://cove-recorded/off-formulary"
     },
     {
-      "uri": "dispute://cove/coverage",
-      "about": "obligation://cove/furnish-coverage",
+      "uri": "dispute://cove-recorded/coverage",
+      "about": "obligation://cove-recorded/furnish-coverage",
       "parties": [
-        "person://cove/patient",
-        "person://cove/physician",
-        "org://cove/payer"
+        "person://cove-recorded/patient",
+        "person://cove-recorded/physician",
+        "org://cove-recorded/payer"
       ],
       "status": "RESOLVED",
       "estimated_cost_usd": 42000,
@@ -209,24 +224,17 @@
         "detected": true,
         "uncertainty": false,
         "claim_support": {
-          "claim://cove/medically-necessary": 0.88,
-          "claim://cove/off-formulary": 1.0
+          "claim://cove-recorded/medically-necessary": 0.88,
+          "claim://cove-recorded/off-formulary": 1.0
         }
       },
       "resolution_outcome": "step-therapy-first: member begins on the covered step-therapy with a documented re-evaluation if response is inadequate; no off-formulary spend triggered immediately",
-      "verified": true,
-      "learned_weights": {
-        "medical_necessity": 0.3994312474928557,
-        "safety": 0.25036149523759177,
-        "policy": 0.19988432152397065,
-        "cost": 0.15032293574558198
-      },
-      "learning": "drug coverage disputes blend clinical-necessity evidence with policy; the measured path (step-therapy-first) preserves member safety + plan policy while avoiding both an irreversible off-formulary spend and a flat safety-risk denial"
+      "verified": true
     },
     {
-      "uri": "decision://cove/agent-advisory",
-      "by": "person://cove/utilization",
-      "authority": "authority://cove/adjudicate",
+      "uri": "decision://cove-recorded/agent-advisory",
+      "by": "person://cove-recorded/utilization",
+      "authority": "authority://cove-recorded/adjudicate",
       "alternatives": [
         "authorize-off-formulary",
         "deny-off-formulary",
@@ -290,12 +298,12 @@
         },
         "tradeoff": "trade-off[coverage; business-model {'medical_necessity': 0.4, 'safety': 0.25, 'policy': 0.2, 'cost': 0.15}]\n  0.777  step-therapy-first\n  0.740  authorize-generic\n  0.605  escalate-to-medical-director\n  0.560  external-peer-review\n  0.540  request-more-evidence\n  0.500  unresolved\n  0.480  authorize-off-formulary FLOOR-GATED\n  0.280  deny-off-formulary FLOOR-GATED\n  => machine-eligible best (non-gated): step-therapy-first (gated: ['authorize-off-formulary', 'deny-off-formulary'])"
       },
-      "made_at": "2026-09-01T05:08:28Z"
+      "made_at": "2026-09-01T05:31:06Z"
     },
     {
-      "uri": "decision://cove/determination",
-      "by": "person://cove/utilization",
-      "authority": "authority://cove/adjudicate",
+      "uri": "decision://cove-recorded/determination",
+      "by": "person://cove-recorded/utilization",
+      "authority": "authority://cove-recorded/adjudicate",
       "alternatives": [
         "authorize-off-formulary",
         "deny-off-formulary",
@@ -308,9 +316,9 @@
       ],
       "confidence": 0.8,
       "evidence": [
-        "evidence://cove/clinical-study",
-        "evidence://cove/formulary-policy",
-        "evidence://cove/step-therapy-studies"
+        "evidence://cove-recorded/clinical-study",
+        "evidence://cove-recorded/formulary-policy",
+        "evidence://cove-recorded/step-therapy-studies"
       ],
       "expected_outcome": "step-therapy-first",
       "actual_outcome": "step-therapy-first",
@@ -318,24 +326,13 @@
         "determination": "step-therapy-first",
         "machine_eligible_best": "step-therapy-first"
       },
-      "made_at": "2026-09-01T05:08:28Z",
-      "realized_cost_usd": 18000,
-      "outcome_value": 0.7,
-      "expected_utility": 0.7775,
-      "variance": 0.0775,
-      "learned_weights": {
-        "medical_necessity": 0.3994312474928557,
-        "safety": 0.25036149523759177,
-        "policy": 0.19988432152397065,
-        "cost": 0.15032293574558198
-      },
-      "_learned_from_weight_update": "chosen option (utility 0.777) realised 0.70 -> variance +0.078; weights cautiously re-weighted toward factors that distinguish well-performing options, clamp-bounded + renormalized"
+      "made_at": "2026-09-01T05:31:06Z"
     },
     {
-      "uri": "evidence://cove/learning-note",
+      "uri": "evidence://cove-recorded/learning-note",
       "kind": "RECORD",
       "source": "post-resolution-postmortem",
-      "captured_at": "2026-09-01T05:08:28Z",
+      "captured_at": "2026-09-01T05:31:06Z",
       "verity": {
         "procedure": "postmortem",
         "confidence": 0.6
@@ -346,112 +343,48 @@
       "learning": "drug coverage disputes blend clinical-necessity evidence with policy; the measured path (step-therapy-first) preserves member safety + plan policy while avoiding both an irreversible off-formulary spend and a flat safety-risk denial"
     },
     {
-      "uri": "claim://cove/u-necessary",
-      "proposer": "person://cove/physician",
-      "statement": "medication Y is medically necessary for the rare condition.",
-      "evidence": [
-        "evidence://cove/u-anecdotal"
-      ],
-      "epistemic_status": "disputed"
-    },
-    {
-      "uri": "claim://cove/u-unproven",
-      "proposer": "org://cove/payer",
-      "statement": "no comparative evidence supports medication Y's use.",
-      "evidence": [
-        "evidence://cove/u-no-data"
-      ],
-      "epistemic_status": "disputed"
-    },
-    {
-      "uri": "evidence://cove/u-anecdotal",
-      "kind": "TESTIMONY",
-      "source": "physician-case-report",
-      "captured_at": "2026-07-01T00:00:00-06:00",
-      "verity": {
-        "procedure": "case-report",
-        "confidence": 0.6
-      },
-      "reliability": 0.6,
-      "about": "clinical necessity of medication Y",
-      "supports": "claim://cove/u-necessary"
-    },
-    {
-      "uri": "evidence://cove/u-no-data",
-      "kind": "RECORD",
-      "source": "disease-registry",
-      "captured_at": "2026-07-01T00:00:00-06:00",
-      "verity": {
-        "procedure": "registry-review",
-        "confidence": 0.7
-      },
-      "reliability": 0.7,
-      "about": "absence of comparative evidence",
-      "supports": "claim://cove/u-unproven"
-    },
-    {
-      "uri": "dispute://cove/rare-condition",
-      "about": "obligation://cove/furnish-coverage",
-      "parties": [
-        "person://cove/patient",
-        "org://cove/payer"
-      ],
-      "status": "OPEN",
-      "estimated_cost_usd": 210000,
-      "interest_blocks": {
-        "patient": "access to a potentially life-saving drug",
-        "payer": "spend only on evidenced care"
-      },
-      "constraint_blocks": {
-        "irreversible": "dispensing is irreversible -> \u00a76 floor"
-      },
-      "lifecycle_state": "UNRESOLVED",
-      "epistemic_state": "INSUFFICIENT_EVIDENCE",
-      "determination": "UNRESOLVED",
-      "resolution_type": null,
-      "reopened": false,
-      "available_resolutions": [
-        "authorize-off-formulary",
-        "deny-off-formulary",
-        "step-therapy-first",
-        "authorize-generic",
-        "request-more-evidence",
-        "escalate-to-medical-director",
-        "unresolved",
-        "external-peer-review"
-      ],
-      "conflict": {
-        "detected": true,
-        "uncertainty": false,
-        "claim_support": {
-          "claim://cove/medically-necessary": 0.88,
-          "claim://cove/off-formulary": 1.0
+      "uri": "metric://cove-recorded/m-answer-latency",
+      "actual": 18.0,
+      "variance": 8,
+      "points": [
+        {
+          "period": 1,
+          "expected": 10,
+          "target": 16,
+          "actual": 12,
+          "variance": 2
+        },
+        {
+          "period": 2,
+          "expected": 10,
+          "target": 16,
+          "actual": 14,
+          "variance": 4
+        },
+        {
+          "period": 3,
+          "expected": 10,
+          "target": 16,
+          "actual": 16,
+          "variance": 6
+        },
+        {
+          "period": 4,
+          "expected": 10,
+          "target": 16,
+          "actual": 18,
+          "variance": 8
         }
-      }
-    },
-    {
-      "uri": "decision://cove/unresolved",
-      "by": "person://cove/utilization",
-      "authority": "authority://cove/adjudicate",
-      "alternatives": [
-        "authorize-off-formulary",
-        "deny-off-formulary",
-        "step-therapy-first",
-        "authorize-generic",
-        "request-more-evidence",
-        "escalate-to-medical-director",
-        "unresolved",
-        "external-peer-review"
       ],
-      "confidence": 0.6,
-      "expected_outcome": "resolve conflict",
-      "actual_outcome": "unresolved",
-      "detail": {
-        "determination": "UNRESOLVED",
-        "epistemic_state": "INSUFFICIENT_EVIDENCE",
-        "reason": "no admissible source reaches the configured sufficiency threshold; awarding either side is not justified by the basis"
-      },
-      "made_at": "2026-09-01T05:08:28Z"
+      "name": "mean answer latency",
+      "formula": "mean elapsed time to an answer from ledger",
+      "unit": "ms",
+      "target": 16,
+      "period": "quarter",
+      "source": "ledger answer completion records",
+      "direction": "lower-is-better",
+      "band_variance": "all",
+      "owner": "person://cove/utilization"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/adjudication-inspect-2026",
-  "head_hash": "a14f7a97c858d9784a64262137eebffc43ca9873d6fad5ae8a68b51a8372365b",
+  "head_hash": "4f08a565015620c993fa636f4a9a2a9972e26b809026bbff07584dfb75f637c6",
   "entries": [
     {
       "uri": "event://inspect-learn-a/seed-trust",
@@ -10,7 +10,7 @@
       "causation_id": "ev-adj-inspect-learn-a-seed-trust-prev",
       "idempotency_key": "idem-adj-inspect-learn-a-seed-trust",
       "signature": "signed-by-person://inspect/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/registrar",
       "detail": "seed scoped trust before the episode",
       "state_update": [
@@ -24,7 +24,7 @@
           "evidence": []
         }
       ],
-      "hash": "d8c75d56b4203ce168da00c041b981b629b6994931ea0ce8db7b327e5dc5f7a2"
+      "hash": "7bebf162a434368291da06c13fb45c89f6ad5d6bf2df9a4102a3bc032ae85fbb"
     },
     {
       "uri": "event://inspect-learn-a/provision",
@@ -34,7 +34,7 @@
       "causation_id": "ev-adj-prev-100",
       "idempotency_key": "idem-adj-provision-100",
       "signature": "signed-by-person://inspect/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/registrar",
       "detail": "provision actors, relationships, obligations, adjudicator+appeal authority, appeal right",
       "state_update": [
@@ -145,7 +145,7 @@
           "purpose": "right to appeal the determination"
         }
       ],
-      "hash": "8d56c0233fe0ce2eb90c2effdf7985db5233af1f1a8270e2f46f6c0358f32f3e"
+      "hash": "6117ee37dae3b794d3d275a2b963d0878a51900989627fcadf97bc1fb8c896a3"
     },
     {
       "uri": "event://inspect-learn-a/claims",
@@ -155,7 +155,7 @@
       "causation_id": "ev-adj-prev-101",
       "idempotency_key": "idem-adj-claims-101",
       "signature": "signed-by-person://inspect/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/registrar",
       "detail": "record 2 conflicting claims",
       "state_update": [
@@ -179,7 +179,7 @@
           "epistemic_status": "claimed"
         }
       ],
-      "hash": "3c2437712e16f0826a317c415e8eed9f391bf3cd1016c81a428dbf014d07af5a"
+      "hash": "4d5df97ba4d4c1f36c2ade677e37c9142408f0f7835b7e3fb93d48d18696ff0c"
     },
     {
       "uri": "event://inspect-learn-a/evidence",
@@ -189,7 +189,7 @@
       "causation_id": "ev-adj-prev-102",
       "idempotency_key": "idem-adj-evidence-102",
       "signature": "signed-by-person://inspect/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/registrar",
       "detail": "record conflicting evidence with provenance + reliability",
       "state_update": [
@@ -233,7 +233,7 @@
           "supports": "claim://inspect-la/failed"
         }
       ],
-      "hash": "f609f04838868c992383b2f4407ae51d45eec2c7a3d75a59931362836dafd4e0"
+      "hash": "df35b14ad11650d1398dd5fd3e0b2b88c90ce56a2ea816e5dd2d0f67c7ed2372"
     },
     {
       "uri": "event://inspect-learn-a/claim-advance",
@@ -243,7 +243,7 @@
       "causation_id": "ev-adj-prev-103",
       "idempotency_key": "idem-adj-claim-advance-103",
       "signature": "signed-by-person://inspect/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/registrar",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -258,7 +258,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "907632c36358d4f0d0aab3a89ae1979e14c9c065a293f1beb8d62dd99850ab48"
+      "hash": "d969fdc27f97ad61a04bc9aed0d8134ab4f9951f8057d93e0aa2b289f194bad7"
     },
     {
       "uri": "event://inspect-learn-a/claim-advance",
@@ -268,7 +268,7 @@
       "causation_id": "ev-adj-prev-104",
       "idempotency_key": "idem-adj-claim-advance-104",
       "signature": "signed-by-person://inspect/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/registrar",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -282,7 +282,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "236d6c8d1af962a9c4d2cf145b7c0c09da9f27c7a7de535ed40d78b27a0e5095"
+      "hash": "d6d95d790de843becb51e1980e1acd181193fdf43cfda64c0256af42943427e3"
     },
     {
       "uri": "event://inspect-learn-a/open-dispute",
@@ -292,7 +292,7 @@
       "causation_id": "ev-adj-prev-105",
       "idempotency_key": "idem-adj-open-dispute-105",
       "signature": "signed-by-person://inspect/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/registrar",
       "detail": "dispute OPEN with parties/about + additive lifecycle/epistemic + resolutions",
       "state_update": [
@@ -339,7 +339,7 @@
           }
         }
       ],
-      "hash": "8bd3c9c6e37af29276487d085f79197a829a631197f47e324f47aec745792aa9"
+      "hash": "65f453859773ad3e0515fba5060b6082f08963f9abbc87e15519185e88282d2d"
     },
     {
       "uri": "event://inspect-learn-a/lifecycle-advance",
@@ -349,7 +349,7 @@
       "causation_id": "ev-adj-prev-106",
       "idempotency_key": "idem-adj-lifecycle-advance-106",
       "signature": "signed-by-person://inspect/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/registrar",
       "detail": "conflicting evidence gathered -> EVIDENCE_COLLECTION -> CONTESTED",
       "state_update": [
@@ -438,7 +438,7 @@
           }
         }
       ],
-      "hash": "a3eb15a1f6afbb3ff4cb5178b8a1122f08df656e9649f2a4f2486c2f160a356f"
+      "hash": "5b139a87956712db3903269a679f0de36b46df090bcdb0cfb417593a5d0e1e0a"
     },
     {
       "uri": "event://inspect-learn-a/agent-advisory",
@@ -448,7 +448,7 @@
       "causation_id": "ev-adj-prev-107",
       "idempotency_key": "idem-adj-agent-advisory-107",
       "signature": "signed-by-person://inspect/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/registrar",
       "detail": "AI/machine advisory on options (contained: informational only)",
       "state_update": [
@@ -513,10 +513,10 @@
             },
             "tradeoff": "trade-off[inspection; business-model {'evidence_compliance': 0.35, 'cost': 0.25, 'relationship': 0.2, 'schedule': 0.2}]\n  0.645  rework-partial-credit\n  0.610  conditional-accept-with-guarantee\n  0.515  accept-batch FLOOR-GATED\n  0.500  unresolved\n  0.465  request-more-evidence\n  0.410  escalate\n  0.070  reject-batch-return FLOOR-GATED\n  => machine-eligible best (non-gated): rework-partial-credit (gated: ['accept-batch', 'reject-batch-return'])"
           },
-          "made_at": "2026-09-01T05:08:28Z"
+          "made_at": "2026-09-01T05:31:05Z"
         }
       ],
-      "hash": "ac7fcf94270188a3423da73d22220ca87813ec60429fbec39f7d73258f346744"
+      "hash": "6830983c657ebed702ab01a3430c682564bb8f22664787f9c2b2af8dd9ba29c5"
     },
     {
       "uri": "event://inspect-learn-a/adjudicate",
@@ -526,7 +526,7 @@
       "causation_id": "ev-adj-prev-108",
       "idempotency_key": "idem-adj-adjudicate-108",
       "signature": "signed-by-person://inspect/adjudicator",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/adjudicator",
       "detail": "authorized human determination: rework-partial-credit (ranking in view)",
       "state_update": [
@@ -555,7 +555,7 @@
             "determination": "rework-partial-credit",
             "machine_eligible_best": "rework-partial-credit"
           },
-          "made_at": "2026-09-01T05:08:28Z"
+          "made_at": "2026-09-01T05:31:05Z"
         },
         {
           "uri": "dispute://inspect-la/batch-alpha",
@@ -600,7 +600,7 @@
           }
         }
       ],
-      "hash": "036f203cb6f73eb78997a566f50f46c0c5813507f73be0f1cffa50e4ad0ccf16"
+      "hash": "1b80e2b4c72f1f757fa3fee95276a1c2ee2cf44bad1bee2508dd4b4bc161f495"
     },
     {
       "uri": "event://inspect-learn-a/resolution",
@@ -610,7 +610,7 @@
       "causation_id": "ev-adj-prev-109",
       "idempotency_key": "idem-adj-resolution-109",
       "signature": "signed-by-person://inspect/adjudicator",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/adjudicator",
       "detail": "resolution rework-partial-credit executed -> ACCEPTED -> EXECUTED",
       "state_update": [
@@ -742,7 +742,7 @@
           "resolution_outcome": "batch alpha accepted with a documented partial rework; the determination held at a realized value of 0.90 (a 10% rework), which is BELOW the reconcile threshold it was driven under."
         }
       ],
-      "hash": "8bb9f0c6c4ee38e43c71911f423d33280d0a084b4549f85dcf0ae4aa61d58081"
+      "hash": "3bafefa592626f58dcecdb8b2b20ff63711318484777026545baa90fffd6a083"
     },
     {
       "uri": "event://inspect-learn-a/verify",
@@ -752,7 +752,7 @@
       "causation_id": "ev-adj-prev-110",
       "idempotency_key": "idem-adj-verify-110",
       "signature": "signed-by-system://inspect/verify",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "system://inspect/verify",
       "detail": "outcome verification on completed execution -> VERIFIED -> CLOSED",
       "state_update": [
@@ -844,7 +844,7 @@
           "verified": true
         }
       ],
-      "hash": "1aeb354c3ab06aa08595609dfb7ea143a75130c38ec6a5d86995d09da2b53f20"
+      "hash": "a2e3f418f8b499558ae34404d4a35dddff59a55c55ad204b8529e2b8c976fe1b"
     },
     {
       "uri": "event://inspect-learn-a/learn",
@@ -854,7 +854,7 @@
       "causation_id": "ev-adj-prev-111",
       "idempotency_key": "idem-adj-learn-111",
       "signature": "signed-by-person://inspect/registrar",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/registrar",
       "detail": "organizational learning: recorded",
       "state_update": [
@@ -862,7 +862,7 @@
           "uri": "evidence://inspect-learn-a/learning-note",
           "kind": "RECORD",
           "source": "post-resolution-postmortem",
-          "captured_at": "2026-09-01T05:08:28Z",
+          "captured_at": "2026-09-01T05:31:05Z",
           "verity": {
             "procedure": "postmortem",
             "confidence": 0.6
@@ -873,7 +873,7 @@
           "learning": "reliability alone is ambiguous here (fails only if the reconciliation rule admits the resident testimony vs demands anchored-only vs recency-decays the old audit); the adjudicator must state which rule the determination is reached under"
         }
       ],
-      "hash": "e7fdb54696d8a79202f70fe6a8b011fb0f071fca930cad3dfb261f1abaa1dbd4"
+      "hash": "146bdc3a8301cd166bc15e8c0a009afd3f0b1740e53a4476fa0141e40098d797"
     },
     {
       "uri": "event://inspect-learn-a/realized-outcome",
@@ -883,7 +883,7 @@
       "causation_id": "ev-adj-inspect-learn-a-realized-outcome-prev",
       "idempotency_key": "idem-adj-inspect-learn-a-realized-outcome",
       "signature": "signed-by-person://inspect/adjudicator",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/adjudicator",
       "detail": "realized outcome of the adjudication recorded for reconcile-rule learning",
       "state_update": [
@@ -937,7 +937,7 @@
           "uri": "evidence://inspect-learn-a/realized-outcome-note",
           "kind": "RECORD",
           "source": "verified-outcome-capture",
-          "captured_at": "2026-09-01T05:08:28Z",
+          "captured_at": "2026-09-01T05:31:05Z",
           "verity": {
             "procedure": "outcome-capture",
             "confidence": 0.7
@@ -948,7 +948,7 @@
           "learning": "realized outcome captured additively for the reconcile-rule learning step"
         }
       ],
-      "hash": "cfe96c597cd7154bdce1f6654a4fcc0689456ff22580a0a64627178f99f572e5"
+      "hash": "5addb640eb4639d27add06d52bc96de7f705082b80c751997be321c07f68d1a0"
     },
     {
       "uri": "event://inspect-learn-a/reconcile-learning",
@@ -958,7 +958,7 @@
       "causation_id": "ev-adj-inspect-learn-a-reconcile-learning-prev",
       "idempotency_key": "idem-adj-inspect-learn-a-reconcile-learning",
       "signature": "signed-by-person://inspect/adjudicator",
-      "occurred_at": "2026-09-01T05:08:28Z",
+      "occurred_at": "2026-09-01T05:31:05Z",
       "actor": "person://inspect/adjudicator",
       "detail": "decision learning at the reconciliation layer: a NEW rule:// + decision:// appended to the immutable ledger (history not rewritten)",
       "state_update": [
@@ -1017,10 +1017,10 @@
             "why": "reconcile threshold recalibrated lowered (relaxed: the bar demanded more than realized determinations held): prior 0.950 -> 0.910 from a realized outcome value 0.900 (variance signal -0.040, learning_rate 0.8), clamp-bounded to [0.55, 0.95]",
             "contained": "Trust (S5 only) and determination_policy (the \u00a76 human's call) are untouched; history is never rewritten (this is an append)."
           },
-          "made_at": "2026-09-01T05:08:28Z"
+          "made_at": "2026-09-01T05:31:05Z"
         }
       ],
-      "hash": "a14f7a97c858d9784a64262137eebffc43ca9873d6fad5ae8a68b51a8372365b"
+      "hash": "4f08a565015620c993fa636f4a9a2a9972e26b809026bbff07584dfb75f637c6"
     }
   ]
 }

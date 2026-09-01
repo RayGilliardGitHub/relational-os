@@ -1,0 +1,15 @@
+# §7L TWO-PATH DECISION SURFACE — CORPUS-CONSISTENCY note (Sprint 36)
+generated 2026-09-01T05:31:06Z  |  `run_corpus_consistency_demo.py`  |  engine-free audit: `adjudication_engine.py` (hash a60f8f7…) + `capacity_rerank.py` (sha256 f7c6a185…) BYTE-IDENTICAL; schema 34264934…, 49 $defs, SPEC v0.22, no new noun.
+
+## (a) Sprint-35 reproducibility figure re-run from the CURRENT corpus: reproduces (ALL PASS)
+The Sprint-35 reproducibility FIGURE was re-run in a fresh run over the current corpus and reproduces byte-identical: taxonomy **12 ADVISORY-no-capacity / 6 ADVISORY-best-runnable / 4 RE-RANK = 22 orgs**, 22/22 advisory Q8 == `cockpit_q7q8` (never shadowed), the 4 re-rank replacements {'deli-recommend-infcap': 'conditional-resolution', 'inspect-recorded': 'conditional-accept-with-guarantee', 'cove-recommend-infcap': 'authorize-generic', 'deli-all-infeasible': 'unresolved'}, floor integrity 22/22, two_path_surface deterministic on re-run, and the Sprint-31 tally (11/11) + Sprint-32 re-rank (4/4) + Sprint-33 13-org taxonomy ({5,4,4}) all reproduce from the SAME recorded data. Engine hash a60f8f71 / capacity_rerank.py f7c6a185 unchanged (see reproducibility.md alongside).
+
+## (b) boundary docs mutually consistent + consistent with the live corpus
+- `DECISION-FRAMEWORK-BOUNDARY.md` §3 taxonomy rows (12/6/4) parsed and each == the LIVE per-class org set; the 4 re-rank replacement orgs + options cited match the live/re-recorded Sprint-32 results; cites a60f8f7… / f7c6a185… / 34264934… / 49 `$defs` / SPEC v0.22 — all match live.
+- `ENGINE-FORECAST-CAPACITY.md` §18 states the {12,6,4}=22 taxonomy, the 9-added split (7 no-capacity + 2 best-runnable deli-atcap/deli-deficit), the same hashes + invariants — all match live; §17's Sprint-33 13-org {5,4,4} orgs are the live subset.
+- The two docs AGREE on the taxonomy, the 9-added characterization, the hashes, and the 'no new noun / 49 `$defs` / SPEC v0.22' invariant. No drifted number, no stale org list: the doc-named orgs are exactly the live 22-org catalog. **No doc fix needed.**
+
+## Honest §16 verdict
+Deterministic local reproducibility of the one-framework two-path decision surface across the WHOLE catalog is RE-VERIFIED on this host from the current corpus, and the two boundary docs are mutually consistent and consistent with the live corpus (an audit of the Sprint-35 figure + the docs, NOT a new capability). The still-not-derivable residual is unchanged: a probabilistic/stochastic forecast (the recorded band is a spread, never a CI — nothing invents a distribution); a per-option requirement NOT unit-coupled to the recorded capacity / an option with no recorded requirement (never invented); and any §6-human choice that recorded data cannot machine-decide (the re-rank is POLICY-authorized, not a claim of objective best). No SPEC bump (v0.22).
+
+_CORPUS-CONSISTENCY note; engine `a60f8f7…` + `capacity_rerank.py` `f7c6a185…` BYTE-IDENTICAL; frozen ontology, schema 34264934…, SPEC v0.22, 49 $defs, URI cap, no new noun._
