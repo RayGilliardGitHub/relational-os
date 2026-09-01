@@ -21,6 +21,18 @@ generalizing: the on-time-exception loop is the product, and any sector is a con
   longer CWD-bound). Python layout: `pyproject.toml` declares the `ros` package.
 - Everything in this `instances/` dir is unchanged + `__file__`-anchored and runs from repo root.
 
+## Why `financial/` has its own code but the 12 sector dirs don't
+- The **12 uniform sector families** (`aero`…`telco`, incl. `finb`) are **config-only**: the only thing that
+  differs between them is a `configs.py` entry, so the real code lives ONCE at `instances/` top level
+  (`sector_scene.py` builder + `configs.py` configs + `build_all.py`). `build_all.py` writes **only produced
+  artifacts** (fixtures/graph/reports) into each `instances/<label>/` dir — hence 0 `.py` there.
+- **`financial/` is the legacy v1 instance** hand-written BEFORE the framework existed, so it carries its own
+  builders: `fin_demo.py` (builds Northglen Bank), `run_fin.py` (PASS/FAIL checks + emit), `run_fin_conformance.py`,
+  `bi_snapshot.py`, and a `README.md`. It is intentionally kept as the v1.
+- `finb` (the **uniform Financial**, Sprint 7) is its framework replacement — built via `configs.py`, so it is
+  config-only (no `.py`) and does not reproduce the v1's `qk` label baggage.
+- `agent_demo/` and `contested_reality/` have `.py` because they are engine/experiment labs, not sector consumers.
+
 ## The instances
 
 | Sector family (Appendix B) | Label | Company (fictional) | Outcome class | Status |
