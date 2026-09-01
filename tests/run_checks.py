@@ -123,6 +123,12 @@ def main() -> int:
     _run(["python3", "run_agent_demo.py"], cwd=AGENT, name="agent demo")
     _run(["python3", "conformance_agent.py"], cwd=AGENT, venv=True, name="agent conformance")
 
+    print("\n-- financial legacy instance (not part of a numbered gate; added post-reorg) --")
+    _run(["python3", "fin_demo.py"], cwd=ROOT / "instances/financial", name="fin_demo")
+    _run(["python3", "run_fin.py"], cwd=ROOT / "instances/financial", name="run_fin")
+    _run(["python3", "run_fin_conformance.py"], cwd=ROOT / "instances/financial", venv=True,
+         name="run_fin_conformance")
+
     print(f"\n{_TOTAL} checks; RESULT:", "ALL PASS" if _OK else "FAILURES PRESENT")
     return 0 if _OK else 1
 

@@ -57,8 +57,23 @@ The repo is not a standard Python project and has (verified just now):
 - H. Update `instances/README.md` + this plan's doc pointers to the canonical `ros/` + `docs/` + `tests/` + `scripts/`.
 - I. Commit on main; push to origin only after gate green.
 
+## Second pass (Raymond: "do you need to go thru the instances dir and update them to reference the new structure?") — YES
+The instance runners still resolved `ros` from `sprints/sprint-5/artifacts` (workable but not the canonical
+home). Updated **all 33 instance files** to point at the repo ROOT (canonical `ros/`):
+- 29 CR/agent runners: `ROS = INSTANCES.parents[0]` (was `… / "sprints/sprint-5/artifacts"`).
+- `sector_scene.py`, `build_all.py`, `run_fin.py`: sys.path to repo root.
+- `fin_demo.py`: FIXED an off-by-one the first pass introduced (`parents[1]`→`parents[2]` = repo root) —
+  it had broken `import ros`; not caught because financial v1 is not in the original gate. Root cause caught
+  because Raymond asked. Financial files (`fin_demo`, `run_fin`, `run_fin_conformance`) are now IN the gate.
+- **Deliberate exception:** `capacity_rerank.py` is a FROZEN INVARIANT module (sha256 `f7c6a185…` is a
+  recorded sacred byte-identity); it is NOT a runner, and it KEEPS its `S5 = …/sprints/sprint-5/artifacts`
+  path (that ros is byte-identical to the canonical root `ros/`, so content is unchanged). Do not edit it.
+- Re-ran the full gate AFTER: **41 checks, RESULT: ALL PASS** (the first re-run caught a transient from the
+  capacity_rerank edit; reverted it and the gate is green). No code references to `sprints/sprint-5/artifacts`
+  remain in `instances/` except capacity_rerank's frozen line.
+
 ## Not in scope (honest boundary)
 - No `src/`-layout, no artifact-hiding (Raymond chose "tidy + standard roots").
-- No mass-rewrite of every CR runner's `sys.path` to root `ros/` — they are already `__file__`-anchored,
-  location-independent, and resolve the IDENTICAL sprint-5 canonical `ros/`; the reorg adds the canonical root
-  `ros/` and wires the canonical gate (`scripts/`, `tests/`) to it without risking the deterministic corpus.
+- No `src/` layout / `package` subdir — canonical code home is the ROOT `ros/` + ROOT `instances/`.
+- `sprints/sprint-N/artifacts/ros` copies remain as unpromoted narrative snapshots; only sprint-5's is the
+  origin of the canonical root `ros/`. `capacity_rerank.py` keeps its sprint-5 S5 path (frozen invariant).

@@ -307,7 +307,7 @@
       "uri": "process_instance://hlth/pi-core",
       "process": "process://hlth/pr-core",
       "status": "RUNNING",
-      "started_at": "2026-09-01T05:39:56Z"
+      "started_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "trust://hlth/t-cortica-supply",
@@ -316,7 +316,7 @@
       "claim": "pharmaceutical delivery reliability",
       "context": "relationship://hlth/partner-net",
       "score": 0.79,
-      "updated_at": "2026-09-01T05:39:56Z",
+      "updated_at": "2026-09-01T05:45:49Z",
       "expected": 0.8,
       "outcome": 1.0,
       "evidence": [
@@ -332,7 +332,7 @@
       "claim": "pharmaceutical delivery reliability",
       "context": "relationship://hlth/partner-net",
       "score": 0.14,
-      "updated_at": "2026-09-01T05:39:56Z",
+      "updated_at": "2026-09-01T05:45:49Z",
       "expected": 0.8,
       "outcome": 0.0,
       "evidence": [
@@ -391,7 +391,7 @@
           "score": 0.6
         }
       ],
-      "made_at": "2026-09-01T05:39:56Z"
+      "made_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "asset://money/hlth-escrow-meridian-medQ3",
@@ -440,7 +440,7 @@
         "provider": "org://hlth/meridian-med",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T05:39:56Z"
+      "made_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "event://hlth/s4-exchange-meridian-medQ3",
@@ -450,7 +450,7 @@
       "causation_id": "ev-s4-104",
       "idempotency_key": "idem-s4-105",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "settle exchange meridian-medQ3: 2000000.0 USD org://hlth/lumenhealth->org://hlth/meridian-med (value 2000000.0, cost 2000000.0)",
       "state_update": [],
@@ -471,7 +471,7 @@
       "causation_id": "ev-s4-105",
       "idempotency_key": "idem-s4-106",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "evaluate settle meridian-medQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
       "state_update": [],
@@ -490,7 +490,7 @@
       "causation_id": "ev-s2-106",
       "idempotency_key": "idem-s2-107",
       "signature": "signed-by-org://hlth/meridian-med",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "org://hlth/meridian-med",
       "detail": "job committed-meridian-medQ3 by org://hlth/meridian-med: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
       "state_update": [],
@@ -508,7 +508,7 @@
         "procedure": "anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T05:39:56Z"
+      "captured_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "claim://hlth/committed-meridian-medQ3",
@@ -562,7 +562,7 @@
         "provider": "org://hlth/cortica-supply",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T05:39:56Z"
+      "made_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "event://hlth/s4-exchange-cortica-supplyQ3",
@@ -572,7 +572,7 @@
       "causation_id": "ev-s4-109",
       "idempotency_key": "idem-s4-110",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "settle exchange cortica-supplyQ3: 2000000.0 USD org://hlth/lumenhealth->org://hlth/cortica-supply (value 2000000.0, cost 2000000.0)",
       "state_update": [],
@@ -593,7 +593,7 @@
       "causation_id": "ev-s4-110",
       "idempotency_key": "idem-s4-111",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "evaluate settle cortica-supplyQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
       "state_update": [],
@@ -612,7 +612,7 @@
       "causation_id": "ev-s2-111",
       "idempotency_key": "idem-s2-112",
       "signature": "signed-by-org://hlth/cortica-supply",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "org://hlth/cortica-supply",
       "detail": "job committed-cortica-supplyQ3 by org://hlth/cortica-supply: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
       "state_update": [],
@@ -630,7 +630,7 @@
         "procedure": "anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T05:39:56Z"
+      "captured_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "claim://hlth/committed-cortica-supplyQ3",
@@ -684,7 +684,7 @@
         "provider": "org://hlth/meridian-med",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T05:39:56Z"
+      "made_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "event://hlth/s4-exchange-meridian-medQ4",
@@ -694,7 +694,7 @@
       "causation_id": "ev-s4-114",
       "idempotency_key": "idem-s4-115",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "settle exchange meridian-medQ4: 1600000.0 USD org://hlth/lumenhealth->org://hlth/meridian-med (value 1600000.0, cost 1600000.0)",
       "state_update": [],
@@ -715,7 +715,7 @@
       "causation_id": "ev-s4-115",
       "idempotency_key": "idem-s4-116",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "evaluate settle meridian-medQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
       "state_update": [],
@@ -734,7 +734,7 @@
       "causation_id": "ev-s2-116",
       "idempotency_key": "idem-s2-117",
       "signature": "signed-by-org://hlth/meridian-med",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "org://hlth/meridian-med",
       "detail": "job committed-meridian-medQ4 by org://hlth/meridian-med: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
       "state_update": [],
@@ -752,7 +752,7 @@
         "procedure": "anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T05:39:56Z"
+      "captured_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "claim://hlth/committed-meridian-medQ4",
@@ -772,41 +772,41 @@
       "relationships": [
         "relationship://hlth/ops-rel"
       ],
-      "created_at": "2026-09-01T05:39:56Z",
+      "created_at": "2026-09-01T05:45:49Z",
       "history": [
         {
           "status": "OPEN",
-          "at": "2026-09-01T05:39:56Z",
+          "at": "2026-09-01T05:45:49Z",
           "event": null
         },
         {
           "status": "TRIAGE",
-          "at": "2026-09-01T05:39:56Z",
+          "at": "2026-09-01T05:45:49Z",
           "event": "event://hlth/s5-case-triage"
         },
         {
           "status": "ASSIGNED",
-          "at": "2026-09-01T05:39:56Z",
+          "at": "2026-09-01T05:45:49Z",
           "event": "event://hlth/s5-case-assigned"
         },
         {
           "status": "IN_PROGRESS",
-          "at": "2026-09-01T05:39:56Z",
+          "at": "2026-09-01T05:45:49Z",
           "event": "event://hlth/s5-case-inprogress"
         },
         {
           "status": "BLOCKED",
-          "at": "2026-09-01T05:39:56Z",
+          "at": "2026-09-01T05:45:49Z",
           "event": "event://hlth/s5-case-blocked"
         },
         {
           "status": "RESOLVED",
-          "at": "2026-09-01T05:39:56Z",
+          "at": "2026-09-01T05:45:49Z",
           "event": "event://hlth/s5-case-resolved"
         },
         {
           "status": "CLOSED",
-          "at": "2026-09-01T05:39:56Z",
+          "at": "2026-09-01T05:45:49Z",
           "event": "event://hlth/s5-case-closed"
         }
       ],
@@ -833,7 +833,7 @@
       "confidence": 0.85,
       "expected_outcome": "accept as a real risk",
       "actual_outcome": "accepted; root nominated",
-      "made_at": "2026-09-01T05:39:56Z"
+      "made_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "task://hlth/t-rebalance",
@@ -881,7 +881,7 @@
         "priority": 0.695,
         "capacity": 1.0
       },
-      "made_at": "2026-09-01T05:39:56Z"
+      "made_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "decision://hlth/s5-match-recorded",
@@ -903,7 +903,7 @@
           "score": 0.695
         }
       ],
-      "made_at": "2026-09-01T05:39:56Z"
+      "made_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "escalation://hlth/escalate-release",
@@ -934,7 +934,7 @@
         "irreversible_failure": true,
         "cost_failure_unknowable": true
       },
-      "made_at": "2026-09-01T05:39:56Z"
+      "made_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "commitment://hlth/c-cortica-supply-followup",
@@ -947,7 +947,7 @@
         "kind": "pharmaceutical delivery follow-up",
         "signed": true
       },
-      "agreed_at": "2026-09-01T05:39:56Z"
+      "agreed_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "expectation://hlth/e-cortica-supplyR",
@@ -1006,7 +1006,7 @@
         "provider": "org://hlth/cortica-supply",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T05:39:56Z"
+      "made_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "event://hlth/s4-exchange-cortica-supplyR",
@@ -1016,7 +1016,7 @@
       "causation_id": "ev-s4-7014",
       "idempotency_key": "idem-s4-7015",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "settle exchange cortica-supplyR: 2000000.0 USD org://hlth/lumenhealth->org://hlth/cortica-supply (value 2000000.0, cost 2000000.0)",
       "state_update": [],
@@ -1037,7 +1037,7 @@
       "causation_id": "ev-s4-7015",
       "idempotency_key": "idem-s4-7016",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "evaluate settle cortica-supplyR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
       "state_update": [],
@@ -1056,7 +1056,7 @@
       "causation_id": "ev-s2-7016",
       "idempotency_key": "idem-s2-7017",
       "signature": "signed-by-org://hlth/cortica-supply",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "org://hlth/cortica-supply",
       "detail": "job routed-cortica-supplyR by org://hlth/cortica-supply: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
       "state_update": [],
@@ -1074,7 +1074,7 @@
         "procedure": "anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T05:39:56Z"
+      "captured_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "claim://hlth/routed-cortica-supplyR",
@@ -1091,7 +1091,7 @@
       "variance": 0.05,
       "why": "Concentrating supply with a distributor that has verified on-time delivery (cortica-supply), while gating the laggard (meridian-med), restored on-time pharmaceutical delivery. Verified good deliveries compound scoped Trust.",
       "change_future_policy": "ALLOCATE by fit AND scoped Trust (not fit alone); distributors below the Trust floor require a performance checkpoint before a new order.",
-      "made_at": "2026-09-01T05:39:56Z"
+      "made_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "goal://hlth/g-core",
@@ -1181,7 +1181,7 @@
         "action": "task://hlth/t-rebalance",
         "outcome": "event://hlth/outcome-routed-cortica-supplyR"
       },
-      "made_at": "2026-09-01T05:39:56Z"
+      "made_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "decision://hlth/s5-attention",
@@ -1204,7 +1204,7 @@
           }
         ]
       },
-      "made_at": "2026-09-01T05:39:56Z"
+      "made_at": "2026-09-01T05:45:49Z"
     },
     {
       "uri": "dependency://hlth/d-rb-enables-fu",

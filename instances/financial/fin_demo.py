@@ -19,7 +19,8 @@ values (Exception/Priority/Recommendation/capacity) are additive envelope fields
 is a decision:// + a policy:// change. The reference S4/S5 services emit 'qk' in some URI
 labels (a build artifact, harmless: conformance governs by scheme) — disclosed in README.
 
-This module reuses the UNMODIFIED ros package from sprint-5/artifacts via sys.path.
+This module reuses the UNMODIFIED canonical ros package (now at the repo ROOT, promoted by the
+reorg from its origin sprints/sprint-5/artifacts/ros) via sys.path.
 """
 from __future__ import annotations
 from pathlib import Path
@@ -27,7 +28,7 @@ import json
 import sys
 
 HERE = Path(__file__).resolve().parent
-ROS = Path(__file__).resolve().parents[1] / "sprints/sprint-5/artifacts"
+ROS = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROS))
 
 from ros.substrate import Substrate, now_iso            # noqa: E402

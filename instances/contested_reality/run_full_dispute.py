@@ -31,7 +31,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 INSTANCES = HERE.parent
-ROS = INSTANCES.parents[0] / "sprints/sprint-5/artifacts"
+ROS = INSTANCES.parents[0]
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(INSTANCES))
 sys.path.insert(0, str(INSTANCES / "agent_demo"))   # sibling subpackage self-anchor

@@ -13,7 +13,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-sys.path.insert(0, str(HERE.parents[0] / "sprints/sprint-5/artifacts"))
+sys.path.insert(0, str(HERE.parents[0]))
 
 import sector_scene as ss            # noqa: E402
 import configs                       # noqa: E402

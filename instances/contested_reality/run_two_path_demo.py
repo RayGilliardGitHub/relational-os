@@ -38,7 +38,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 INSTANCES = HERE.parent
-ROS = INSTANCES.parents[0] / "sprints/sprint-5/artifacts"
+ROS = INSTANCES.parents[0]
 for _p in (str(HERE), str(INSTANCES), str(ROS)):
     if _p not in sys.path:
         sys.path.insert(0, _p)

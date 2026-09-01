@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/retail-2026",
-  "head_hash": "c8700552fe073f99430b0d0f1a265703c617545126590bd704cfaf2077707b10",
+  "head_hash": "bc09251c7c7d09807fee6608a96d9b57e6a6eab783eebd1790cc873d8a46799b",
   "entries": [
     {
       "uri": "event://retail/s5-state-2",
@@ -10,7 +10,7 @@
       "causation_id": "ev-s5-1",
       "idempotency_key": "idem-s5-2",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "provision Retail base (actors, relationships, authority + operator + policy + expectation)",
       "state_update": [
@@ -319,10 +319,10 @@
           "uri": "process_instance://retail/pi-core",
           "process": "process://retail/pr-core",
           "status": "RUNNING",
-          "started_at": "2026-09-01T05:39:56Z"
+          "started_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "984a3833c63f4e165b37cb7bce3a9592d55efdab049c8a429c18e3a94d838421"
+      "hash": "424a3492c94d1d0b59c410d9c3da340ddcb48237d1b614f86a988ce6a9ec7cb6"
     },
     {
       "uri": "event://retail/s5-state-100",
@@ -332,7 +332,7 @@
       "causation_id": "ev-s5-99",
       "idempotency_key": "idem-s5-100",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "seed scoped Trust org://retail/atlas-freight = 0.6",
       "state_update": [
@@ -345,7 +345,7 @@
           "score": 0.6
         }
       ],
-      "hash": "92a7d0882c727d901c4c523054b974e129feb9afff1ba49b38b80e9e4fdfd4f8"
+      "hash": "6fdf50a271b6c271f4c0a7ba6c3a2b1df447cf45d2ff7596480cdfa2e0482f79"
     },
     {
       "uri": "event://retail/s5-state-101",
@@ -355,7 +355,7 @@
       "causation_id": "ev-s5-100",
       "idempotency_key": "idem-s5-101",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "seed scoped Trust org://retail/corvus-logistics = 0.9",
       "state_update": [
@@ -368,7 +368,7 @@
           "score": 0.9
         }
       ],
-      "hash": "71d7e79b838b00ec9a4b467531fc635dd19e1a0b47027b11864a51a4a1970929"
+      "hash": "1bf5f6ccc95624284941505dbb7197b4b8b96623b74fba4dfd50c5492504fb32"
     },
     {
       "uri": "event://retail/s5-state-102",
@@ -378,7 +378,7 @@
       "causation_id": "ev-s5-101",
       "idempotency_key": "idem-s5-102",
       "signature": "signed-by-agent://retail/s2",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s2",
       "detail": "register resource-commitment offer from org://retail/atlas-freight",
       "state_update": [
@@ -394,7 +394,7 @@
           "fit_note": "retail partner delivery line"
         }
       ],
-      "hash": "2c235a72284ef64e52c8605c4c9455a3e06475ed8196674b42398e10b7bacda5"
+      "hash": "79872a3dd080ea1a82184070a329da77b9835d09a2a0b74d253f075faeb33393"
     },
     {
       "uri": "event://retail/s5-state-103",
@@ -404,7 +404,7 @@
       "causation_id": "ev-s5-102",
       "idempotency_key": "idem-s5-103",
       "signature": "signed-by-agent://retail/s2",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s2",
       "detail": "register resource-commitment offer from org://retail/corvus-logistics",
       "state_update": [
@@ -420,7 +420,7 @@
           "fit_note": "retail partner delivery line"
         }
       ],
-      "hash": "f614deda952cf74a50abc92d777881db76dfb4a36e5a4398b086f85850404b7b"
+      "hash": "c4c51210b8654add8764c75161048c304e94df1bd94d56ab6afbf23d76670597"
     },
     {
       "uri": "event://retail/s5-state-104",
@@ -430,7 +430,7 @@
       "causation_id": "ev-s5-103",
       "idempotency_key": "idem-s5-104",
       "signature": "signed-by-agent://retail/s2",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s2",
       "detail": "initial match ranked offer://retail/o-l (score 0.900) \u2014 base ranking",
       "state_update": [
@@ -462,10 +462,10 @@
               "score": 0.6
             }
           ],
-          "made_at": "2026-09-01T05:39:56Z"
+          "made_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "577f44862ff7728a5aad8e467e654417ba4a6fd98ec87d2a5e537326ee61f085"
+      "hash": "d0524e655ead609294cc77d925ebc704ccc151817e2dd719de46b2db51def5ee"
     },
     {
       "uri": "event://retail/s4-exchange-corvus-logisticsQ3",
@@ -475,7 +475,7 @@
       "causation_id": "ev-s4-104",
       "idempotency_key": "idem-s4-105",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "settle exchange corvus-logisticsQ3: 2000000.0 USD org://retail/hardvale->org://retail/corvus-logistics (value 2000000.0, cost 2000000.0)",
       "state_update": [
@@ -526,7 +526,7 @@
             "provider": "org://retail/corvus-logistics",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T05:39:56Z"
+          "made_at": "2026-09-01T05:45:49Z"
         },
         {
           "uri": "event://retail/s4-exchange-corvus-logisticsQ3",
@@ -536,7 +536,7 @@
           "causation_id": "ev-s4-104",
           "idempotency_key": "idem-s4-105",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T05:39:56Z",
+          "occurred_at": "2026-09-01T05:45:49Z",
           "actor": "agent://s4",
           "detail": "settle exchange corvus-logisticsQ3: 2000000.0 USD org://retail/hardvale->org://retail/corvus-logistics (value 2000000.0, cost 2000000.0)",
           "state_update": [],
@@ -558,7 +558,7 @@
       "provider": "org://retail/corvus-logistics",
       "settled_at": "2026-09-02T00:00:00Z",
       "exchange_of": "commitment://retail/c-corvus-logisticsQ3",
-      "hash": "8d95c1842460088573ca764905ffd0a9c8de6f73075ebf8d35d76532c65f1f5c"
+      "hash": "870f9fae37257b550acedbc56797fb0d4d9c954c518fc98d4e0fc71513bf9844"
     },
     {
       "uri": "event://retail/s4-outcome-corvus-logisticsQ3",
@@ -568,7 +568,7 @@
       "causation_id": "ev-s4-105",
       "idempotency_key": "idem-s4-106",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "evaluate settle corvus-logisticsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
       "state_update": [
@@ -580,7 +580,7 @@
           "causation_id": "ev-s4-105",
           "idempotency_key": "idem-s4-106",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T05:39:56Z",
+          "occurred_at": "2026-09-01T05:45:49Z",
           "actor": "agent://s4",
           "detail": "evaluate settle corvus-logisticsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
           "state_update": [],
@@ -598,7 +598,7 @@
       "deadline": "2026-08-31T00:00:00Z",
       "settled_at": "2026-09-02T00:00:00Z",
       "score": 0.5,
-      "hash": "603ebb9f4e5b0849a5f9df497ba1bbbaeefe269ce9bb94c8bc95201300b34985"
+      "hash": "2033d8228442ca29dcc0467b28263f2c7c2dd0112a31a14cee8a4f3754a84090"
     },
     {
       "uri": "event://retail/outcome-committed-corvus-logisticsQ3",
@@ -608,7 +608,7 @@
       "causation_id": "ev-s2-106",
       "idempotency_key": "idem-s2-107",
       "signature": "signed-by-org://retail/corvus-logistics",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "org://retail/corvus-logistics",
       "detail": "job committed-corvus-logisticsQ3 by org://retail/corvus-logistics: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
       "state_update": [
@@ -620,7 +620,7 @@
           "causation_id": "ev-s2-106",
           "idempotency_key": "idem-s2-107",
           "signature": "signed-by-org://retail/corvus-logistics",
-          "occurred_at": "2026-09-01T05:39:56Z",
+          "occurred_at": "2026-09-01T05:45:49Z",
           "actor": "org://retail/corvus-logistics",
           "detail": "job committed-corvus-logisticsQ3 by org://retail/corvus-logistics: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
           "state_update": [],
@@ -638,7 +638,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T05:39:56Z"
+          "captured_at": "2026-09-01T05:45:49Z"
         }
       ],
       "job": "committed-corvus-logisticsQ3",
@@ -646,7 +646,7 @@
       "committed_deadline": "2026-08-31T00:00:00Z",
       "actual_completed_at": "2026-09-02T00:00:00Z",
       "on_time": false,
-      "hash": "4e224755379542a414f7350c192424b370a08af521a4c6b6efdf246736863d3b"
+      "hash": "f3b89bec39f9695df6b9518eb4b070e3997fb6a9c00833962e20df05e4bef4b3"
     },
     {
       "uri": "event://retail/verify-committed-corvus-logisticsQ3",
@@ -656,7 +656,7 @@
       "causation_id": "ev-s2-107",
       "idempotency_key": "idem-s2-108",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s5",
       "detail": "verify 'org://retail/corvus-logistics delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -673,10 +673,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T05:39:56Z"
+          "captured_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "021e54abbc248a7877f785f47ff0d7edf74e7ea30e6bc4552bce10b426b999c6"
+      "hash": "3a834db5cc785f2248603ecd8e3babd644981b469e5cc9c71561f389d1a18bce"
     },
     {
       "uri": "event://retail/trust-update-corvus-logistics",
@@ -686,7 +686,7 @@
       "causation_id": "ev-s2-108",
       "idempotency_key": "idem-s2-109",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "trust for org://retail/corvus-logistics [store replenishment delivery reliability] 0.900 -> 0.520 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -697,7 +697,7 @@
           "claim": "store replenishment delivery reliability",
           "context": "relationship://retail/partner-net",
           "score": 0.52,
-          "updated_at": "2026-09-01T05:39:56Z",
+          "updated_at": "2026-09-01T05:45:49Z",
           "expected": 0.8,
           "outcome": 0.0,
           "evidence": [
@@ -707,7 +707,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "e30694fe5aeb13f3b846f649507adca38440b481a27458e936d84508745bc187"
+      "hash": "c582650c3af967e8aeefdb150c53d67e175c1b630e995b3db4fd6929fe1f6811"
     },
     {
       "uri": "event://retail/s4-exchange-atlas-freightQ3",
@@ -717,7 +717,7 @@
       "causation_id": "ev-s4-109",
       "idempotency_key": "idem-s4-110",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "settle exchange atlas-freightQ3: 2000000.0 USD org://retail/hardvale->org://retail/atlas-freight (value 2000000.0, cost 2000000.0)",
       "state_update": [
@@ -768,7 +768,7 @@
             "provider": "org://retail/atlas-freight",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T05:39:56Z"
+          "made_at": "2026-09-01T05:45:49Z"
         },
         {
           "uri": "event://retail/s4-exchange-atlas-freightQ3",
@@ -778,7 +778,7 @@
           "causation_id": "ev-s4-109",
           "idempotency_key": "idem-s4-110",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T05:39:56Z",
+          "occurred_at": "2026-09-01T05:45:49Z",
           "actor": "agent://s4",
           "detail": "settle exchange atlas-freightQ3: 2000000.0 USD org://retail/hardvale->org://retail/atlas-freight (value 2000000.0, cost 2000000.0)",
           "state_update": [],
@@ -800,7 +800,7 @@
       "provider": "org://retail/atlas-freight",
       "settled_at": "2026-08-30T00:00:00Z",
       "exchange_of": "commitment://retail/c-atlas-freightQ3",
-      "hash": "a980f4512686c2c77c3264d5013695b949081bc49fb813af8d739497e7fe0ac5"
+      "hash": "c3c43e838aaf2f059c9ca81f220acd7122c366a94cbe3d18edf71581e2ea8b99"
     },
     {
       "uri": "event://retail/s4-outcome-atlas-freightQ3",
@@ -810,7 +810,7 @@
       "causation_id": "ev-s4-110",
       "idempotency_key": "idem-s4-111",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "evaluate settle atlas-freightQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
       "state_update": [
@@ -822,7 +822,7 @@
           "causation_id": "ev-s4-110",
           "idempotency_key": "idem-s4-111",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T05:39:56Z",
+          "occurred_at": "2026-09-01T05:45:49Z",
           "actor": "agent://s4",
           "detail": "evaluate settle atlas-freightQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
           "state_update": [],
@@ -840,7 +840,7 @@
       "deadline": "2026-08-31T00:00:00Z",
       "settled_at": "2026-08-30T00:00:00Z",
       "score": 1.0,
-      "hash": "8b883fe4218a3cf51ab1a1dc5630f52471cc99ffbb756b2d6ccdf645f2a0d8bb"
+      "hash": "8750dd65a392c97a7bf77fd75a6ad3b653fe8090e58a3bffb88018c1920c79e6"
     },
     {
       "uri": "event://retail/outcome-committed-atlas-freightQ3",
@@ -850,7 +850,7 @@
       "causation_id": "ev-s2-111",
       "idempotency_key": "idem-s2-112",
       "signature": "signed-by-org://retail/atlas-freight",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "org://retail/atlas-freight",
       "detail": "job committed-atlas-freightQ3 by org://retail/atlas-freight: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
       "state_update": [
@@ -862,7 +862,7 @@
           "causation_id": "ev-s2-111",
           "idempotency_key": "idem-s2-112",
           "signature": "signed-by-org://retail/atlas-freight",
-          "occurred_at": "2026-09-01T05:39:56Z",
+          "occurred_at": "2026-09-01T05:45:49Z",
           "actor": "org://retail/atlas-freight",
           "detail": "job committed-atlas-freightQ3 by org://retail/atlas-freight: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
           "state_update": [],
@@ -880,7 +880,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T05:39:56Z"
+          "captured_at": "2026-09-01T05:45:49Z"
         }
       ],
       "job": "committed-atlas-freightQ3",
@@ -888,7 +888,7 @@
       "committed_deadline": "2026-08-31T00:00:00Z",
       "actual_completed_at": "2026-08-30T00:00:00Z",
       "on_time": true,
-      "hash": "7a43811e86935716f220b5831046cefa0c7154bd21c46f006dbb7f5cb5aaa47f"
+      "hash": "a58f773c7927e532fcd750f23cca957d955f5a49f405740269fdcffd18d607ea"
     },
     {
       "uri": "event://retail/verify-committed-atlas-freightQ3",
@@ -898,7 +898,7 @@
       "causation_id": "ev-s2-112",
       "idempotency_key": "idem-s2-113",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s5",
       "detail": "verify 'org://retail/atlas-freight delivered the committed resource on time' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -915,10 +915,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T05:39:56Z"
+          "captured_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "6014f1942bb06f628327060a0df8e24d7291c9eeeccb3f3bd01f43cc79aa3207"
+      "hash": "9b884133fbd9b3f54730ed4e189930b2d42422815c1532bef85cb32782f6d4e4"
     },
     {
       "uri": "event://retail/trust-update-atlas-freight",
@@ -928,7 +928,7 @@
       "causation_id": "ev-s2-113",
       "idempotency_key": "idem-s2-114",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "trust for org://retail/atlas-freight [store replenishment delivery reliability] 0.600 -> 0.695 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -939,7 +939,7 @@
           "claim": "store replenishment delivery reliability",
           "context": "relationship://retail/partner-net",
           "score": 0.695,
-          "updated_at": "2026-09-01T05:39:56Z",
+          "updated_at": "2026-09-01T05:45:49Z",
           "expected": 0.8,
           "outcome": 1.0,
           "evidence": [
@@ -949,7 +949,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "0518697ec4beb66b1bf9f6b6502495f9758c95221797ae0014832c9cc8a1a186"
+      "hash": "b4c9f0183181a96e744cf6b5525626ec287ee5c1d3530ea2b1f0d44cb65fe5bc"
     },
     {
       "uri": "event://retail/s4-exchange-corvus-logisticsQ4",
@@ -959,7 +959,7 @@
       "causation_id": "ev-s4-114",
       "idempotency_key": "idem-s4-115",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "settle exchange corvus-logisticsQ4: 1600000.0 USD org://retail/hardvale->org://retail/corvus-logistics (value 1600000.0, cost 1600000.0)",
       "state_update": [
@@ -1010,7 +1010,7 @@
             "provider": "org://retail/corvus-logistics",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T05:39:56Z"
+          "made_at": "2026-09-01T05:45:49Z"
         },
         {
           "uri": "event://retail/s4-exchange-corvus-logisticsQ4",
@@ -1020,7 +1020,7 @@
           "causation_id": "ev-s4-114",
           "idempotency_key": "idem-s4-115",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T05:39:56Z",
+          "occurred_at": "2026-09-01T05:45:49Z",
           "actor": "agent://s4",
           "detail": "settle exchange corvus-logisticsQ4: 1600000.0 USD org://retail/hardvale->org://retail/corvus-logistics (value 1600000.0, cost 1600000.0)",
           "state_update": [],
@@ -1042,7 +1042,7 @@
       "provider": "org://retail/corvus-logistics",
       "settled_at": "2026-09-17T00:00:00Z",
       "exchange_of": "commitment://retail/c-corvus-logisticsQ4",
-      "hash": "0d7e97348875b4d83f7ed3a4be27237ca925714bb8e0ccbed218ff99f2991a85"
+      "hash": "09cf62fce29faa67d5cca584099c8c11dea5d3a0b9213b53285e7be64df490f2"
     },
     {
       "uri": "event://retail/s4-outcome-corvus-logisticsQ4",
@@ -1052,7 +1052,7 @@
       "causation_id": "ev-s4-115",
       "idempotency_key": "idem-s4-116",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "evaluate settle corvus-logisticsQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
       "state_update": [
@@ -1064,7 +1064,7 @@
           "causation_id": "ev-s4-115",
           "idempotency_key": "idem-s4-116",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T05:39:56Z",
+          "occurred_at": "2026-09-01T05:45:49Z",
           "actor": "agent://s4",
           "detail": "evaluate settle corvus-logisticsQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
           "state_update": [],
@@ -1082,7 +1082,7 @@
       "deadline": "2026-09-15T00:00:00Z",
       "settled_at": "2026-09-17T00:00:00Z",
       "score": 0.5,
-      "hash": "1e4496e97920611590c3816676ac0fce67097e0d02094d89ac27d1e70c38959f"
+      "hash": "dc9e9adb407365e6b62c77120c3d305f37e06359751af6a471e9936c03d6583d"
     },
     {
       "uri": "event://retail/outcome-committed-corvus-logisticsQ4",
@@ -1092,7 +1092,7 @@
       "causation_id": "ev-s2-116",
       "idempotency_key": "idem-s2-117",
       "signature": "signed-by-org://retail/corvus-logistics",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "org://retail/corvus-logistics",
       "detail": "job committed-corvus-logisticsQ4 by org://retail/corvus-logistics: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
       "state_update": [
@@ -1104,7 +1104,7 @@
           "causation_id": "ev-s2-116",
           "idempotency_key": "idem-s2-117",
           "signature": "signed-by-org://retail/corvus-logistics",
-          "occurred_at": "2026-09-01T05:39:56Z",
+          "occurred_at": "2026-09-01T05:45:49Z",
           "actor": "org://retail/corvus-logistics",
           "detail": "job committed-corvus-logisticsQ4 by org://retail/corvus-logistics: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
           "state_update": [],
@@ -1122,7 +1122,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T05:39:56Z"
+          "captured_at": "2026-09-01T05:45:49Z"
         }
       ],
       "job": "committed-corvus-logisticsQ4",
@@ -1130,7 +1130,7 @@
       "committed_deadline": "2026-09-15T00:00:00Z",
       "actual_completed_at": "2026-09-17T00:00:00Z",
       "on_time": false,
-      "hash": "5f91f07a6cbb0f9769df62bf133430d2f8964b6439ce1f906f93a9893157a9df"
+      "hash": "8ab0836e7322c24936767d87592ee7cf00c250a6e774c0be5b8eafa2e1cdb05e"
     },
     {
       "uri": "event://retail/verify-committed-corvus-logisticsQ4",
@@ -1140,7 +1140,7 @@
       "causation_id": "ev-s2-117",
       "idempotency_key": "idem-s2-118",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s5",
       "detail": "verify 'org://retail/corvus-logistics delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -1157,10 +1157,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T05:39:56Z"
+          "captured_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "ce75e61ce099093ffab5ce8d8c52fe2365390362c501f00e86e0a5b029cf7bac"
+      "hash": "d33287b145b7ae4ca71390559c2c52fa86660925f3cab1960a2854aa8dc7227a"
     },
     {
       "uri": "event://retail/trust-update-corvus-logistics",
@@ -1170,7 +1170,7 @@
       "causation_id": "ev-s2-118",
       "idempotency_key": "idem-s2-119",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "trust for org://retail/corvus-logistics [store replenishment delivery reliability] 0.520 -> 0.140 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -1181,7 +1181,7 @@
           "claim": "store replenishment delivery reliability",
           "context": "relationship://retail/partner-net",
           "score": 0.14,
-          "updated_at": "2026-09-01T05:39:56Z",
+          "updated_at": "2026-09-01T05:45:49Z",
           "expected": 0.8,
           "outcome": 0.0,
           "evidence": [
@@ -1191,7 +1191,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "a048c4601153e510171f97e8b9518001173bf9f8ce06fb22de1ac934c2ab5117"
+      "hash": "b0239ff4fc536b50050eb817b49d6a38d21cf3e27bd7ba9b3c68b01daa2be228"
     },
     {
       "uri": "event://retail/s5-state-7000",
@@ -1201,7 +1201,7 @@
       "causation_id": "ev-s5-6999",
       "idempotency_key": "idem-s5-7000",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "open case case://retail/c-on-time (committed store replenishment delivery below target on time)",
       "state_update": [
@@ -1218,18 +1218,18 @@
           "relationships": [
             "relationship://retail/ops-rel"
           ],
-          "created_at": "2026-09-01T05:39:56Z",
+          "created_at": "2026-09-01T05:45:49Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": null
             }
           ],
           "suggestion": "ledger-projected on-time below target"
         }
       ],
-      "hash": "7d34402244cdd6c40f98a5f552e7434c001b6b22fffed0ab601ef3aaa53a520e"
+      "hash": "531645d484eb4c980c9afe460e495944d791cd03c0ab30a983303d119d947aa9"
     },
     {
       "uri": "event://retail/s5-state-7001",
@@ -1239,7 +1239,7 @@
       "causation_id": "ev-s5-7000",
       "idempotency_key": "idem-s5-7001",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "record exception heartbeat on the case",
       "state_update": [
@@ -1256,11 +1256,11 @@
           "relationships": [
             "relationship://retail/ops-rel"
           ],
-          "created_at": "2026-09-01T05:39:56Z",
+          "created_at": "2026-09-01T05:45:49Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": null
             }
           ],
@@ -1276,7 +1276,7 @@
           "metric": "metric://retail/m-on-time"
         }
       ],
-      "hash": "b0770611ab944088191eb946b50280e45311a3dabb05811da12f76967231aa06"
+      "hash": "600ad19677e264c3ceecc136604583195fd1d7869f1b95e03c0920fcdb4a3d40"
     },
     {
       "uri": "event://retail/s5-state-7002",
@@ -1286,7 +1286,7 @@
       "causation_id": "ev-s5-7001",
       "idempotency_key": "idem-s5-7002",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "case triage: exception assessed, root nominated",
       "state_update": [
@@ -1301,10 +1301,10 @@
           "confidence": 0.85,
           "expected_outcome": "accept as a real risk",
           "actual_outcome": "accepted; root nominated",
-          "made_at": "2026-09-01T05:39:56Z"
+          "made_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "7f14108a2680961bbe7298e95b14f10745dc7f65f86cbc04a79b99d82f2509cc"
+      "hash": "968a61d69113b48bb2f971e30813de3cfd9ad9a704968273d480388ef71b2aac"
     },
     {
       "uri": "event://retail/s5-case-triage",
@@ -1314,7 +1314,7 @@
       "causation_id": "ev-s5-7002",
       "idempotency_key": "idem-s5-7003",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "case triaged",
       "state_update": [
@@ -1331,16 +1331,16 @@
           "relationships": [
             "relationship://retail/ops-rel"
           ],
-          "created_at": "2026-09-01T05:39:56Z",
+          "created_at": "2026-09-01T05:45:49Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-triage"
             }
           ],
@@ -1356,7 +1356,7 @@
           "metric": "metric://retail/m-on-time"
         }
       ],
-      "hash": "27c79a79d5760b6b0a5146c180cb9fec0b0b843c1567f1784c3332b58d9769e5"
+      "hash": "9060769f2c2166eb0a9ad51ec5cc9cc6309d7259d2187c9fe76c284e10e89587"
     },
     {
       "uri": "event://retail/s5-state-7004",
@@ -1366,7 +1366,7 @@
       "causation_id": "ev-s5-7003",
       "idempotency_key": "idem-s5-7004",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "case assigned; task becomes assigned authorized work (#8)",
       "state_update": [
@@ -1416,10 +1416,10 @@
             "priority": 0.695,
             "capacity": 1.0
           },
-          "made_at": "2026-09-01T05:39:56Z"
+          "made_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "9f5edd8b62b0fc8777ac2c530a775d36cc0328e259f474b954cd5ee0f5558e63"
+      "hash": "b55ea3668a0a624d6ebcc115909bb15c37855078033a92ef959728fd38b824f5"
     },
     {
       "uri": "event://retail/s5-case-assigned",
@@ -1429,7 +1429,7 @@
       "causation_id": "ev-s5-7004",
       "idempotency_key": "idem-s5-7005",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "case assigned",
       "state_update": [
@@ -1446,21 +1446,21 @@
           "relationships": [
             "relationship://retail/ops-rel"
           ],
-          "created_at": "2026-09-01T05:39:56Z",
+          "created_at": "2026-09-01T05:45:49Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-assigned"
             }
           ],
@@ -1476,7 +1476,7 @@
           "metric": "metric://retail/m-on-time"
         }
       ],
-      "hash": "3c761286fa8958538e083c221765f316b6dc700812c25b4d60513c5ec9bed88a"
+      "hash": "c9121b7ffae63f27c79fd260ddebfdf3c40794ae9a8e46ed3a02378ce47d99da"
     },
     {
       "uri": "event://retail/s5-case-inprogress",
@@ -1486,7 +1486,7 @@
       "causation_id": "ev-s5-7005",
       "idempotency_key": "idem-s5-7006",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "task execution began",
       "state_update": [
@@ -1503,26 +1503,26 @@
           "relationships": [
             "relationship://retail/ops-rel"
           ],
-          "created_at": "2026-09-01T05:39:56Z",
+          "created_at": "2026-09-01T05:45:49Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-inprogress"
             }
           ],
@@ -1538,7 +1538,7 @@
           "metric": "metric://retail/m-on-time"
         }
       ],
-      "hash": "a6fe0febb6ebfc3b9ed3852eaef0cbd559f4fdf3e82da600da4d4a7c4183ae9d"
+      "hash": "b5172f5cd44a3b0393abbc4bd17ef7598f040d5b1e7312d2eb203853d9dfcab5"
     },
     {
       "uri": "event://retail/s5-state-7007",
@@ -1548,7 +1548,7 @@
       "causation_id": "ev-s5-7006",
       "idempotency_key": "idem-s5-7007",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "policy updated: allocate by fit AND scoped Trust",
       "state_update": [
@@ -1565,7 +1565,7 @@
           "policy_status": "REVISED"
         }
       ],
-      "hash": "7f411265fc5684f62f35eec1fe4bde35e8b1b3af7a628bfe5a231d3c146322cc"
+      "hash": "443cbc31e44c1abc7613b89942252aa84215722dd259c4b8486809b232525c37"
     },
     {
       "uri": "event://retail/s5-state-7008",
@@ -1575,7 +1575,7 @@
       "causation_id": "ev-s5-7007",
       "idempotency_key": "idem-s5-7008",
       "signature": "signed-by-agent://retail/s2",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s2",
       "detail": "task effect: next committed work ranked offer://retail/o-g (score 0.695)",
       "state_update": [
@@ -1599,10 +1599,10 @@
               "score": 0.695
             }
           ],
-          "made_at": "2026-09-01T05:39:56Z"
+          "made_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "c6fdb1b6ba84356ddf17467e979fec50f0e5e2ca3d2782465d29ef10773fbcef"
+      "hash": "21411a7eb176a3817ff3c273a7ce7727a07f2193e2b5c5d38b97096b5c600bda"
     },
     {
       "uri": "event://retail/s5-escalate",
@@ -1612,7 +1612,7 @@
       "causation_id": "ev-s5-7008",
       "idempotency_key": "idem-s5-7009",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "escalation: the committed action is irreversible and cost-unknowable once done (\u00a76 floor)",
       "state_update": [
@@ -1627,7 +1627,7 @@
           "acknowledgement": "approve then execute"
         }
       ],
-      "hash": "42f437c06b5a4309cd30d0f3a4e20eff5c06b1347c093cf0d7412ece99f3da35"
+      "hash": "8f218684419a4c574259210885afa5d03d49ab2bd47e5828f4212dc4b6074c11"
     },
     {
       "uri": "event://retail/owner-human",
@@ -1637,7 +1637,7 @@
       "causation_id": "ev-retail-7009",
       "idempotency_key": "idem-retail-7010",
       "signature": "signed-by-person://retail/cfo",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "person://retail/cfo",
       "detail": "person://retail/cfo signed approval to release the committed action (\u00a76 floor)",
       "state_update": [
@@ -1660,10 +1660,10 @@
             "irreversible_failure": true,
             "cost_failure_unknowable": true
           },
-          "made_at": "2026-09-01T05:39:56Z"
+          "made_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "f09883c0705c216f9bca2898bdc44563dbf48e075ec2a0f23edd00bb7357ba8d"
+      "hash": "37527fa9a702d21eb80b0b1a53909e012fd8a72d4b8b9fde41fae63926b1d617"
     },
     {
       "uri": "event://retail/action-release",
@@ -1673,7 +1673,7 @@
       "causation_id": "ev-retail-7010",
       "idempotency_key": "idem-retail-7011",
       "signature": "signed-by-person://retail/cfo",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/inbound-ops",
       "detail": "rebalance_commitment executed after human approval",
       "worker": "agent://retail/inbound-ops",
@@ -1682,7 +1682,7 @@
       "tier": "human",
       "outcome": "done",
       "state_update": [],
-      "hash": "9d883272f7e72fa32b7616cbdb331138c0ce89d6e002dd5027d431478eec71dd"
+      "hash": "8cee13bb48e2ee723b922f679b4a7a1f8b9e73dd8f797efd3ec1c9d5b57b5c8f"
     },
     {
       "uri": "event://retail/s5-case-blocked",
@@ -1692,7 +1692,7 @@
       "causation_id": "ev-s5-7011",
       "idempotency_key": "idem-s5-7012",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "case blocked pending the rallied committed delivery's verification",
       "state_update": [
@@ -1709,31 +1709,31 @@
           "relationships": [
             "relationship://retail/ops-rel"
           ],
-          "created_at": "2026-09-01T05:39:56Z",
+          "created_at": "2026-09-01T05:45:49Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-inprogress"
             },
             {
               "status": "BLOCKED",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-blocked"
             }
           ],
@@ -1749,7 +1749,7 @@
           "metric": "metric://retail/m-on-time"
         }
       ],
-      "hash": "1a3d5c655d4d1c05b0562eac4fa4316401e9c7752669424ca91e8195fc56dd6f"
+      "hash": "1235ffc10af454e36b1c24ff2c5a9724ddc7bfebcbe092a98550f28195e57dd5"
     },
     {
       "uri": "event://retail/s5-state-7013",
@@ -1759,7 +1759,7 @@
       "causation_id": "ev-s5-7012",
       "idempotency_key": "idem-s5-7013",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "rallied committed work allocated to org://retail/atlas-freight (the fix)",
       "state_update": [
@@ -1774,10 +1774,10 @@
             "kind": "store replenishment delivery follow-up",
             "signed": true
           },
-          "agreed_at": "2026-09-01T05:39:56Z"
+          "agreed_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "700c5554d2c14eed99ed31b20f51d5af74cc577331c477204f92674bcb5fddf8"
+      "hash": "fba55a9082d0885920f8390c0ec97c06789d2389bcebe580186ae2d768031cea"
     },
     {
       "uri": "event://retail/s5-state-7014",
@@ -1787,7 +1787,7 @@
       "causation_id": "ev-s5-7013",
       "idempotency_key": "idem-s5-7014",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "register follow-on expectation",
       "state_update": [
@@ -1802,7 +1802,7 @@
           "evidence_required": "CLEAR"
         }
       ],
-      "hash": "ca7c5c2046dcd39449c877e0824566c7265c4307f7de671b8036529a9524490a"
+      "hash": "9d51e76cc73febd98a39caf1edec532432dee28f229372d392c2045bc285a569"
     },
     {
       "uri": "event://retail/s4-exchange-atlas-freightR",
@@ -1812,7 +1812,7 @@
       "causation_id": "ev-s4-7014",
       "idempotency_key": "idem-s4-7015",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "settle exchange atlas-freightR: 2000000.0 USD org://retail/hardvale->org://retail/atlas-freight (value 2000000.0, cost 2000000.0)",
       "state_update": [
@@ -1863,7 +1863,7 @@
             "provider": "org://retail/atlas-freight",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T05:39:56Z"
+          "made_at": "2026-09-01T05:45:49Z"
         },
         {
           "uri": "event://retail/s4-exchange-atlas-freightR",
@@ -1873,7 +1873,7 @@
           "causation_id": "ev-s4-7014",
           "idempotency_key": "idem-s4-7015",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T05:39:56Z",
+          "occurred_at": "2026-09-01T05:45:49Z",
           "actor": "agent://s4",
           "detail": "settle exchange atlas-freightR: 2000000.0 USD org://retail/hardvale->org://retail/atlas-freight (value 2000000.0, cost 2000000.0)",
           "state_update": [],
@@ -1895,7 +1895,7 @@
       "provider": "org://retail/atlas-freight",
       "settled_at": "2026-11-12T00:00:00Z",
       "exchange_of": "commitment://retail/c-atlas-freightR",
-      "hash": "cd17fccc5c08398d9e340ac7ee0c0fffc829f42fe3f051f3cd68422f975a2a98"
+      "hash": "310d96ec89c69748f737d6a5fddaaecea89668130220c0bddc45a523e0d0bbd6"
     },
     {
       "uri": "event://retail/s4-outcome-atlas-freightR",
@@ -1905,7 +1905,7 @@
       "causation_id": "ev-s4-7015",
       "idempotency_key": "idem-s4-7016",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s4",
       "detail": "evaluate settle atlas-freightR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
       "state_update": [
@@ -1917,7 +1917,7 @@
           "causation_id": "ev-s4-7015",
           "idempotency_key": "idem-s4-7016",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T05:39:56Z",
+          "occurred_at": "2026-09-01T05:45:49Z",
           "actor": "agent://s4",
           "detail": "evaluate settle atlas-freightR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
           "state_update": [],
@@ -1935,7 +1935,7 @@
       "deadline": "2026-11-15T00:00:00Z",
       "settled_at": "2026-11-12T00:00:00Z",
       "score": 1.0,
-      "hash": "b2f77f1b66a4503f8574755b783bde79828e8af00b10fbbb37ca3de8d222b229"
+      "hash": "4c30284d5aeecf5e2f99103ef2643e11ac9c557f3fccbda86824c37961ad8ad4"
     },
     {
       "uri": "event://retail/outcome-routed-atlas-freightR",
@@ -1945,7 +1945,7 @@
       "causation_id": "ev-s2-7016",
       "idempotency_key": "idem-s2-7017",
       "signature": "signed-by-org://retail/atlas-freight",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "org://retail/atlas-freight",
       "detail": "job routed-atlas-freightR by org://retail/atlas-freight: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
       "state_update": [
@@ -1957,7 +1957,7 @@
           "causation_id": "ev-s2-7016",
           "idempotency_key": "idem-s2-7017",
           "signature": "signed-by-org://retail/atlas-freight",
-          "occurred_at": "2026-09-01T05:39:56Z",
+          "occurred_at": "2026-09-01T05:45:49Z",
           "actor": "org://retail/atlas-freight",
           "detail": "job routed-atlas-freightR by org://retail/atlas-freight: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
           "state_update": [],
@@ -1975,7 +1975,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T05:39:56Z"
+          "captured_at": "2026-09-01T05:45:49Z"
         }
       ],
       "job": "routed-atlas-freightR",
@@ -1983,7 +1983,7 @@
       "committed_deadline": "2026-11-15T00:00:00Z",
       "actual_completed_at": "2026-11-12T00:00:00Z",
       "on_time": true,
-      "hash": "b6c161336312c3b8222301fc7139a372526e4a67bfcab60b530fb57a7d1d76da"
+      "hash": "d87185a291b8ba421b2d8af641c48b718f65689f73457864a42a5fc9ad68de6f"
     },
     {
       "uri": "event://retail/verify-routed-atlas-freightR",
@@ -1993,7 +1993,7 @@
       "causation_id": "ev-s2-7017",
       "idempotency_key": "idem-s2-7018",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://s5",
       "detail": "verify 'org://retail/atlas-freight delivered the rallied committed store replenishment delivery on time' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -2010,10 +2010,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T05:39:56Z"
+          "captured_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "f7ae866c31e42e00b0c951fe0b559e479fd2a1e7aa17999e2c762ccf625e1333"
+      "hash": "f947f71c962213db0068d3a25e2fdc5782f8af9ec1bd45bc1e405479bbaf8c06"
     },
     {
       "uri": "event://retail/trust-update-atlas-freight",
@@ -2023,7 +2023,7 @@
       "causation_id": "ev-s2-7018",
       "idempotency_key": "idem-s2-7019",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "trust for org://retail/atlas-freight [store replenishment delivery reliability] 0.695 -> 0.790 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -2034,7 +2034,7 @@
           "claim": "store replenishment delivery reliability",
           "context": "relationship://retail/partner-net",
           "score": 0.79,
-          "updated_at": "2026-09-01T05:39:56Z",
+          "updated_at": "2026-09-01T05:45:49Z",
           "expected": 0.8,
           "outcome": 1.0,
           "evidence": [
@@ -2044,7 +2044,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "9d1263af89f08bb8f5ae04dd5b2107744e3a5cf00d790ecb281a2ca3b954770e"
+      "hash": "07ff502229ca4d7e625b0acd6d4d6a2ccdc5bf89330ff0868955a154a30378d3"
     },
     {
       "uri": "event://retail/s5-case-resolved",
@@ -2054,7 +2054,7 @@
       "causation_id": "ev-s5-7019",
       "idempotency_key": "idem-s5-7020",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "exception resolved: rallied committed work verified on time; forward on-time = 1.0; cumulative 2/4",
       "state_update": [
@@ -2071,36 +2071,36 @@
           "relationships": [
             "relationship://retail/ops-rel"
           ],
-          "created_at": "2026-09-01T05:39:56Z",
+          "created_at": "2026-09-01T05:45:49Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-inprogress"
             },
             {
               "status": "BLOCKED",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-blocked"
             },
             {
               "status": "RESOLVED",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-resolved"
             }
           ],
@@ -2117,7 +2117,7 @@
           "verified_outcome": "forward on-time restored to 1.0; org://retail/atlas-freight delivered the rallied store replenishment delivery on time (evidence://retail/routed-atlas-freightR); org://retail/atlas-freight Trust 0.79"
         }
       ],
-      "hash": "da2e99e24c0e744120eda66adfa161138be5bc242776fc92e3ad098b42d163ff"
+      "hash": "6783db1926acd00b7e1bd9e9faa7fd390993b1aac91ac23833a0556937dd7afd"
     },
     {
       "uri": "event://retail/s5-state-7021",
@@ -2127,7 +2127,7 @@
       "causation_id": "ev-s5-7020",
       "idempotency_key": "idem-s5-7021",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "learning entry decision://retail/learning: Routing replenishment via a carrier with verified on-time delivery (atlas-freight), while gating the laggard (corvus-logistics), restored on-time replenishment. Verified good deliveries compound scoped Trust.",
       "state_update": [
@@ -2141,10 +2141,10 @@
           "variance": 0.05,
           "why": "Routing replenishment via a carrier with verified on-time delivery (atlas-freight), while gating the laggard (corvus-logistics), restored on-time replenishment. Verified good deliveries compound scoped Trust.",
           "change_future_policy": "ALLOCATE by fit AND scoped Trust; carriers below the Trust floor need a performance gate before new runs.",
-          "made_at": "2026-09-01T05:39:56Z"
+          "made_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "13cf394178c068e2312f8cdf2a2e95b60d4e9ac745560b33f622507e5e896908"
+      "hash": "6808c19e083ba807afc43174f8332cfc236399b9a562b9f4b0d5c501362be367"
     },
     {
       "uri": "event://retail/s5-state-7022",
@@ -2154,7 +2154,7 @@
       "causation_id": "ev-s5-7021",
       "idempotency_key": "idem-s5-7022",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "close case; learning recorded; future policy updated",
       "state_update": [
@@ -2172,7 +2172,7 @@
           "learning": "decision://retail/learning"
         }
       ],
-      "hash": "73ece803799c73b2a127b08e38c0ba1362e89dbd08ed5f2a2f3b20cabf338d94"
+      "hash": "3a730776d18b38f5bd07d9ef43af28b6bf43e6ae1ed57d39139b41efc1a7fb42"
     },
     {
       "uri": "event://retail/s5-case-closed",
@@ -2182,7 +2182,7 @@
       "causation_id": "ev-s5-7021",
       "idempotency_key": "idem-s5-7022",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "case closed",
       "state_update": [
@@ -2199,41 +2199,41 @@
           "relationships": [
             "relationship://retail/ops-rel"
           ],
-          "created_at": "2026-09-01T05:39:56Z",
+          "created_at": "2026-09-01T05:45:49Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-inprogress"
             },
             {
               "status": "BLOCKED",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-blocked"
             },
             {
               "status": "RESOLVED",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-resolved"
             },
             {
               "status": "CLOSED",
-              "at": "2026-09-01T05:39:56Z",
+              "at": "2026-09-01T05:45:49Z",
               "event": "event://retail/s5-case-closed"
             }
           ],
@@ -2250,7 +2250,7 @@
           "verified_outcome": "forward on-time restored to 1.0; org://retail/atlas-freight delivered the rallied store replenishment delivery on time (evidence://retail/routed-atlas-freightR); org://retail/atlas-freight Trust 0.79"
         }
       ],
-      "hash": "b6785deb42943da21aba99516aef6898249d9a7df41dd72bd136cab378a9ded0"
+      "hash": "71df2581c03d3cd0e8f31487f5f9f70da093438c69a76256a8f279256e4187d8"
     },
     {
       "uri": "event://retail/s5-state-7023",
@@ -2260,7 +2260,7 @@
       "causation_id": "ev-s5-7022",
       "idempotency_key": "idem-s5-7023",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "register goal + ledger-projected metrics",
       "state_update": [
@@ -2335,7 +2335,7 @@
           "root_cause_status": "UNKNOWN"
         }
       ],
-      "hash": "98bd797793beaf84ed7850124277ba1a2b671d77f4964515875d87c6b2687ef7"
+      "hash": "5db8ec80689f2092484621b8455183ea4286e533d8ed219ba9bcb74546ff749e"
     },
     {
       "uri": "event://retail/s5-state-7024",
@@ -2345,7 +2345,7 @@
       "causation_id": "ev-s5-7023",
       "idempotency_key": "idem-s5-7024",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "goal->metric->variance->decision->action->outcome",
       "state_update": [
@@ -2367,10 +2367,10 @@
             "action": "task://retail/t-rebalance",
             "outcome": "event://retail/outcome-routed-atlas-freightR"
           },
-          "made_at": "2026-09-01T05:39:56Z"
+          "made_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "bebee245a947cd9b8a8dba788b08ee0bb6a78f77e224f07cea4801213c393ace"
+      "hash": "546a8bc95dd883ca6eb59408ac537baec591b0d901bd9ee398c81d0c9b7ad20f"
     },
     {
       "uri": "event://retail/s5-state-7025",
@@ -2380,7 +2380,7 @@
       "causation_id": "ev-s5-7024",
       "idempotency_key": "idem-s5-7025",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "priority-ordered attention list",
       "state_update": [
@@ -2405,10 +2405,10 @@
               }
             ]
           },
-          "made_at": "2026-09-01T05:39:56Z"
+          "made_at": "2026-09-01T05:45:49Z"
         }
       ],
-      "hash": "6647fc1ea9a68a5ce4545f202d7b6b4e46d2a25d2b650f0094ff94862a4dcdab"
+      "hash": "da7fd784a350fc31c1e35f66c5542e22bf52ca01c5337e37c1e55ca1ba34e814"
     },
     {
       "uri": "event://retail/s5-state-7026",
@@ -2418,7 +2418,7 @@
       "causation_id": "ev-s5-7025",
       "idempotency_key": "idem-s5-7026",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "dependency dependency://retail/d-rb-enables-fu: task://retail/t-rebalance ENABLES task://retail/t-followup",
       "state_update": [
@@ -2429,7 +2429,7 @@
           "kind": "ENABLES"
         }
       ],
-      "hash": "a7b6c986b2898c351d03af6e4850ef8fca1c8f1375290f3caead5306750f4575"
+      "hash": "47e243a34d5448efc08d81c44b27ecb8198da0b278f93719f29c34d24a17a3ea"
     },
     {
       "uri": "event://retail/s5-state-7027",
@@ -2439,7 +2439,7 @@
       "causation_id": "ev-s5-7026",
       "idempotency_key": "idem-s5-7027",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "dependency dependency://retail/d-fu-requires-pol: task://retail/t-followup REQUIRES policy://retail/allocation",
       "state_update": [
@@ -2450,7 +2450,7 @@
           "kind": "REQUIRES"
         }
       ],
-      "hash": "246f5834889018d83ea350393397d8622a06fe2f786d3bb7ac313a06c396bcd6"
+      "hash": "7daeb2a9bb7ad6f6c3552fecb3c7e5c659ae9ba77a3221012f9537138cf5d896"
     },
     {
       "uri": "event://retail/s5-state-7028",
@@ -2460,7 +2460,7 @@
       "causation_id": "ev-s5-7027",
       "idempotency_key": "idem-s5-7028",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "dependency dependency://retail/d-fu-blocks-case: task://retail/t-followup BLOCKS case://retail/c-on-time",
       "state_update": [
@@ -2471,7 +2471,7 @@
           "kind": "BLOCKS"
         }
       ],
-      "hash": "db2ccb5afd54b5ce1420506f8898c0fccc4772622841d658bacb618a086b660d"
+      "hash": "29fd008ea132c3f4cf9d40d952aa27693813a6fb4e7f19a99a1dda024c2c8949"
     },
     {
       "uri": "event://retail/s5-state-7029",
@@ -2481,7 +2481,7 @@
       "causation_id": "ev-s5-7028",
       "idempotency_key": "idem-s5-7029",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "dependency dependency://retail/d-case-from-metric: case://retail/c-on-time DERIVED_FROM metric://retail/m-on-time",
       "state_update": [
@@ -2492,7 +2492,7 @@
           "kind": "DERIVED_FROM"
         }
       ],
-      "hash": "1ebe40aa34c95b728b390a6f6630bc932e84319dcc84569b14d9aca5833ff796"
+      "hash": "9e4ef74920ecddf78375ce911b3da08b1e4ecd77e9f6c433bdf2ffaa9e5e733b"
     },
     {
       "uri": "event://retail/s5-state-7030",
@@ -2502,7 +2502,7 @@
       "causation_id": "ev-s5-7029",
       "idempotency_key": "idem-s5-7030",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "dependency dependency://retail/d-metric-impacts-goal: metric://retail/m-on-time IMPACTS goal://retail/g-core",
       "state_update": [
@@ -2513,7 +2513,7 @@
           "kind": "IMPACTS"
         }
       ],
-      "hash": "815b5cdf79444a84faa29635b2950489b11b7b4e045972a91f67baba077e5475"
+      "hash": "3d1836ca89f290ab3b8bd6bb9301821aaa39ce99ee7cdf62f4c7ba4c0fb0ea4c"
     },
     {
       "uri": "event://retail/s5-state-7031",
@@ -2523,7 +2523,7 @@
       "causation_id": "ev-s5-7030",
       "idempotency_key": "idem-s5-7031",
       "signature": "signed-by-agent://retail/s5",
-      "occurred_at": "2026-09-01T05:39:56Z",
+      "occurred_at": "2026-09-01T05:45:49Z",
       "actor": "agent://retail/s5",
       "detail": "dependency dependency://retail/d-rb-blocks-case: task://retail/t-rebalance BLOCKS case://retail/c-on-time",
       "state_update": [
@@ -2534,7 +2534,7 @@
           "kind": "BLOCKS"
         }
       ],
-      "hash": "c8700552fe073f99430b0d0f1a265703c617545126590bd704cfaf2077707b10"
+      "hash": "bc09251c7c7d09807fee6608a96d9b57e6a6eab783eebd1790cc873d8a46799b"
     }
   ]
 }

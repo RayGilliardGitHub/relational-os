@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/adjudication-cove-2026",
-  "head_hash": "845fb005700598efcc94e58075b465c9147d8613efc62d409a2c23f1ea81cc86",
+  "head_hash": "ff64c0ef3e7cf54a3c7a6b55f0120af7793221bd6f6fc0c864f8e03f6612244b",
   "entries": [
     {
       "uri": "event://cove/seed-trust",
@@ -10,7 +10,7 @@
       "causation_id": "ev-adj-cove-seed-trust-prev",
       "idempotency_key": "idem-adj-cove-seed-trust",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "seed scoped trust before the episode",
       "state_update": [
@@ -24,7 +24,7 @@
           "evidence": []
         }
       ],
-      "hash": "fe38da60ddb9a56bed47d12857c6bbe0b5cd5e1ebecab49acb2f3c06c91fc076"
+      "hash": "89ae67fdd2c5bf5898063855f291b772304f2a30a75254301f913601793be0d6"
     },
     {
       "uri": "event://cove/provision",
@@ -34,7 +34,7 @@
       "causation_id": "ev-adj-prev-100",
       "idempotency_key": "idem-adj-provision-100",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "provision actors, relationships, obligations, adjudicator+appeal authority, appeal right",
       "state_update": [
@@ -141,7 +141,7 @@
           "purpose": "right to appeal the determination"
         }
       ],
-      "hash": "143c4047b2f8bea8a09e98892fd4531bad24d1b657a9a61f1eb2f63c96928d20"
+      "hash": "df7a2170e114e6fc080a257ab1c5b4c03e3f9e6dc3553cd148935a5d80b13551"
     },
     {
       "uri": "event://cove/claims",
@@ -151,7 +151,7 @@
       "causation_id": "ev-adj-prev-101",
       "idempotency_key": "idem-adj-claims-101",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "record 2 conflicting claims",
       "state_update": [
@@ -175,7 +175,7 @@
           "epistemic_status": "claimed"
         }
       ],
-      "hash": "05b3c6a22b807cb7bcc30733b52d457e685b990dfe2777bd4f37c9ca199be4c5"
+      "hash": "bf2fd1025c74e6ee4fed21fff3d7a4c886b734eb783ed6aeacf9bde2b61edf6e"
     },
     {
       "uri": "event://cove/evidence",
@@ -185,7 +185,7 @@
       "causation_id": "ev-adj-prev-102",
       "idempotency_key": "idem-adj-evidence-102",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "record conflicting evidence with provenance + reliability",
       "state_update": [
@@ -229,7 +229,7 @@
           "supports": "claim://cove/off-formulary"
         }
       ],
-      "hash": "9cff9a548e78fc1808f3c07e9d3f62abc4c518da8aa4a8609db63485738b0573"
+      "hash": "8dac70f9d177c482ff5bc7f46ff10c397589289b864832558a4d999d298c281e"
     },
     {
       "uri": "event://cove/claim-advance",
@@ -239,7 +239,7 @@
       "causation_id": "ev-adj-prev-103",
       "idempotency_key": "idem-adj-claim-advance-103",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -253,7 +253,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "c359016890fb798426bfdc7ac00ce63cb5a6d0e36ce6ecb216282851a550f31f"
+      "hash": "14b6d54f62ee700aeee130a9b084c1a31d8e06d8dfdc5a7dcef3b486757d53f9"
     },
     {
       "uri": "event://cove/claim-advance",
@@ -263,7 +263,7 @@
       "causation_id": "ev-adj-prev-104",
       "idempotency_key": "idem-adj-claim-advance-104",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -278,7 +278,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "f7c6a98727ae23c95574be6c1093ef82f73799bbd7bb348acf968cde1f7860f2"
+      "hash": "db140390f81924cb4e37edbd561a7f9ada7ea9c8f3dc279cf690dea962f83b08"
     },
     {
       "uri": "event://cove/open-dispute",
@@ -288,7 +288,7 @@
       "causation_id": "ev-adj-prev-105",
       "idempotency_key": "idem-adj-open-dispute-105",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "dispute OPEN with parties/about + additive lifecycle/epistemic + resolutions",
       "state_update": [
@@ -337,7 +337,7 @@
           }
         }
       ],
-      "hash": "3412580122170ae22fdc105f42b224ce5bb04944d2a9a7c15e5724346ada4744"
+      "hash": "467b3ac7be19332b5213277b59ce74523a89c6421f4924943ef5e6cb77b827eb"
     },
     {
       "uri": "event://cove/lifecycle-advance",
@@ -347,7 +347,7 @@
       "causation_id": "ev-adj-prev-106",
       "idempotency_key": "idem-adj-lifecycle-advance-106",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "conflicting evidence gathered -> EVIDENCE_COLLECTION -> CONTESTED",
       "state_update": [
@@ -440,7 +440,7 @@
           }
         }
       ],
-      "hash": "f22629429512957d29f9345de2ad7d9497268778ec72bea6c87edc7c44f8fe5a"
+      "hash": "e3bc99590d207cfc8443b630767b89733fb01bc1bd5a7bccccce1daa033c6e6c"
     },
     {
       "uri": "event://cove/agent-advisory",
@@ -450,7 +450,7 @@
       "causation_id": "ev-adj-prev-107",
       "idempotency_key": "idem-adj-agent-advisory-107",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "AI/machine advisory on options (contained: informational only)",
       "state_update": [
@@ -521,10 +521,10 @@
             },
             "tradeoff": "trade-off[coverage; business-model {'medical_necessity': 0.4, 'safety': 0.25, 'policy': 0.2, 'cost': 0.15}]\n  0.777  step-therapy-first\n  0.740  authorize-generic\n  0.605  escalate-to-medical-director\n  0.560  external-peer-review\n  0.540  request-more-evidence\n  0.500  unresolved\n  0.480  authorize-off-formulary FLOOR-GATED\n  0.280  deny-off-formulary FLOOR-GATED\n  => machine-eligible best (non-gated): step-therapy-first (gated: ['authorize-off-formulary', 'deny-off-formulary'])"
           },
-          "made_at": "2026-09-01T05:39:57Z"
+          "made_at": "2026-09-01T05:45:50Z"
         }
       ],
-      "hash": "4d71e5b7f0e50dfe948d0eb901051e7a3f10f5c2edd996166eefa6b2db98d468"
+      "hash": "9fb7f5da6c3bb45c4f1816e8838e84aa4412e25a9a4fd8a88dfc34594170d001"
     },
     {
       "uri": "event://cove/adjudicate",
@@ -534,7 +534,7 @@
       "causation_id": "ev-adj-prev-108",
       "idempotency_key": "idem-adj-adjudicate-108",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "authorized human determination: step-therapy-first (ranking in view)",
       "state_update": [
@@ -564,7 +564,7 @@
             "determination": "step-therapy-first",
             "machine_eligible_best": "step-therapy-first"
           },
-          "made_at": "2026-09-01T05:39:57Z"
+          "made_at": "2026-09-01T05:45:50Z"
         },
         {
           "uri": "dispute://cove/coverage",
@@ -611,7 +611,7 @@
           }
         }
       ],
-      "hash": "9ab4b47e1687d814bfdd41c434d752b2f0d8bd80530b05b6a9e8e4a89bf4c7ca"
+      "hash": "690e2e080f8cc64c7ef874e34b76d79c3207ec0bff69368db897a10cecf98842"
     },
     {
       "uri": "event://cove/resolution",
@@ -621,7 +621,7 @@
       "causation_id": "ev-adj-prev-109",
       "idempotency_key": "idem-adj-resolution-109",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "resolution step-therapy-first executed -> ACCEPTED -> EXECUTED",
       "state_update": [
@@ -759,7 +759,7 @@
           "resolution_outcome": "step-therapy-first: member begins on the covered step-therapy with a documented re-evaluation if response is inadequate; no off-formulary spend triggered immediately"
         }
       ],
-      "hash": "21ffe609a78551b9cf48d74b73f89b4863ffbff1d617043497db1687dcb9116e"
+      "hash": "0c7ed2dea8182bd815aa4f17f23e8b82c821d8b04b9c9f970c4ffe5948a50c91"
     },
     {
       "uri": "event://cove/verify",
@@ -769,7 +769,7 @@
       "causation_id": "ev-adj-prev-110",
       "idempotency_key": "idem-adj-verify-110",
       "signature": "signed-by-system://cove/verify",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "system://cove/verify",
       "detail": "outcome verification on completed execution -> VERIFIED -> CLOSED",
       "state_update": [
@@ -865,7 +865,7 @@
           "verified": true
         }
       ],
-      "hash": "f00fcb71dba124375b4593fd28c818c6c68e9d161e03f14d3a4c601d8e55eddd"
+      "hash": "194fe42cf236723dc76967eb0ca20e89d188bf64d961d023cbc84389d04f7428"
     },
     {
       "uri": "event://cove/learn",
@@ -875,7 +875,7 @@
       "causation_id": "ev-adj-prev-111",
       "idempotency_key": "idem-adj-learn-111",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "organizational learning: recorded",
       "state_update": [
@@ -883,7 +883,7 @@
           "uri": "evidence://cove/learning-note",
           "kind": "RECORD",
           "source": "post-resolution-postmortem",
-          "captured_at": "2026-09-01T05:39:57Z",
+          "captured_at": "2026-09-01T05:45:50Z",
           "verity": {
             "procedure": "postmortem",
             "confidence": 0.6
@@ -894,7 +894,7 @@
           "learning": "drug coverage disputes blend clinical-necessity evidence with policy; the measured path (step-therapy-first) preserves member safety + plan policy while avoiding both an irreversible off-formulary spend and a flat safety-risk denial"
         }
       ],
-      "hash": "237e0729611cc7ff61c2a8b6704580976a4b6fca66b131ec762890e4bbe58b12"
+      "hash": "43fdf384909f6e56613375fc6c8efee082405723ea9fbb68020c8233343f7ec8"
     },
     {
       "uri": "event://cove/provision",
@@ -904,7 +904,7 @@
       "causation_id": "ev-adj-prev-100",
       "idempotency_key": "idem-adj-provision-100",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "provision actors, relationships, obligations, adjudicator+appeal authority, appeal right",
       "state_update": [
@@ -1011,7 +1011,7 @@
           "purpose": "right to appeal the determination"
         }
       ],
-      "hash": "21462700208b1fb00a1f81b25c2b93b2c764d93dbc535dc42971c0aab8fb3454"
+      "hash": "4efaaf1dff1675d696682f5ebf05158289c91712b52a34c7d157d7f2c88772b9"
     },
     {
       "uri": "event://cove/claims",
@@ -1021,7 +1021,7 @@
       "causation_id": "ev-adj-prev-101",
       "idempotency_key": "idem-adj-claims-101",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "record 2 conflicting claims",
       "state_update": [
@@ -1044,7 +1044,7 @@
           "epistemic_status": "claimed"
         }
       ],
-      "hash": "f3982f101dc6e0c5ac8216419e17702ac9839b1cb16c0d7aa4bdb83f607cb5f4"
+      "hash": "2db4ad7ef743e6b0c314c37ad34ecaddea72fea1cf3f562c33b61aa53f9a64c0"
     },
     {
       "uri": "event://cove/evidence",
@@ -1054,7 +1054,7 @@
       "causation_id": "ev-adj-prev-102",
       "idempotency_key": "idem-adj-evidence-102",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "record conflicting evidence with provenance + reliability",
       "state_update": [
@@ -1085,7 +1085,7 @@
           "supports": "claim://cove/u-unproven"
         }
       ],
-      "hash": "40c437351ed755bcf4bc912736813e24cfc078b73e97ee9940e2f6ec87a6aabc"
+      "hash": "9de403ef8c07217aa9c65a24375b1721a20e90e22cf1293d10d556c4d4fbd592"
     },
     {
       "uri": "event://cove/claim-advance",
@@ -1095,7 +1095,7 @@
       "causation_id": "ev-adj-prev-103",
       "idempotency_key": "idem-adj-claim-advance-103",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -1109,7 +1109,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "207050cff8928b65a8124c5f6cb222fc5479806ff99adb4266c120da446268b8"
+      "hash": "9fed9d49f9d0ccd24fa1b1c175e3bb7c67b7b72615f21d24f651c00b6597a4ee"
     },
     {
       "uri": "event://cove/claim-advance",
@@ -1119,7 +1119,7 @@
       "causation_id": "ev-adj-prev-104",
       "idempotency_key": "idem-adj-claim-advance-104",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "evidence attaches -> claim disputed",
       "state_update": [
@@ -1133,7 +1133,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "84eca47f33c6f8c0134365d00c0c1bb0715f802a63921454ba20146b932a5044"
+      "hash": "97edfa1e01090dde867026a8a55acdd62b8f8960e120877585b5f04ed5cf4949"
     },
     {
       "uri": "event://cove/open-dispute",
@@ -1143,7 +1143,7 @@
       "causation_id": "ev-adj-prev-105",
       "idempotency_key": "idem-adj-open-dispute-105",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "dispute OPEN with parties/about + additive lifecycle/epistemic + resolutions",
       "state_update": [
@@ -1188,7 +1188,7 @@
           }
         }
       ],
-      "hash": "9dfd068a39a7c54981f392de1b57785e7a33e9b5d2611e20e56fa1aeb8b5edf4"
+      "hash": "fa34fac1f2a9468a322a883b8df56fdd0a307ced2b6e8255acddb9c22bc9b9be"
     },
     {
       "uri": "event://cove/lifecycle-advance",
@@ -1198,7 +1198,7 @@
       "causation_id": "ev-adj-prev-106",
       "idempotency_key": "idem-adj-lifecycle-advance-106",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "conflicting evidence gathered -> EVIDENCE_COLLECTION -> CONTESTED",
       "state_update": [
@@ -1283,7 +1283,7 @@
           }
         }
       ],
-      "hash": "74b881c08688258d00af5bb54975a65291ba9da9a1a3f8996e35c7525c3fe853"
+      "hash": "121d1053ddfbffe31b364a80ebccc88d62645af474f5d453e7ef5ea12eb0a3d0"
     },
     {
       "uri": "event://cove/agent-advisory",
@@ -1293,7 +1293,7 @@
       "causation_id": "ev-adj-prev-107",
       "idempotency_key": "idem-adj-agent-advisory-107",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "AI/machine advisory on options (contained: informational only)",
       "state_update": [
@@ -1364,10 +1364,10 @@
             },
             "tradeoff": "trade-off[coverage; business-model {'medical_necessity': 0.4, 'safety': 0.25, 'policy': 0.2, 'cost': 0.15}]\n  0.777  step-therapy-first\n  0.740  authorize-generic\n  0.605  escalate-to-medical-director\n  0.560  external-peer-review\n  0.540  request-more-evidence\n  0.500  unresolved\n  0.480  authorize-off-formulary FLOOR-GATED\n  0.280  deny-off-formulary FLOOR-GATED\n  => machine-eligible best (non-gated): step-therapy-first (gated: ['authorize-off-formulary', 'deny-off-formulary'])"
           },
-          "made_at": "2026-09-01T05:39:57Z"
+          "made_at": "2026-09-01T05:45:50Z"
         }
       ],
-      "hash": "207ba1dee5364695e5205605367f6a4f40db7e0b47d4a740db131163631f1417"
+      "hash": "3bf35a3bb8607c21b08cc75d9959b2b7322a11342756781ac5d60042988f421d"
     },
     {
       "uri": "event://cove/adjudicate-unresolved",
@@ -1377,7 +1377,7 @@
       "causation_id": "ev-adj-prev-108",
       "idempotency_key": "idem-adj-adjudicate-unresolved-108",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "adjudicator determines UNRESOLVED (insufficient admissible basis); case stays OPEN; Trust untouched",
       "state_update": [
@@ -1403,7 +1403,7 @@
             "epistemic_state": "INSUFFICIENT_EVIDENCE",
             "reason": "no admissible source reaches the configured sufficiency threshold; awarding either side is not justified by the basis"
           },
-          "made_at": "2026-09-01T05:39:57Z"
+          "made_at": "2026-09-01T05:45:50Z"
         },
         {
           "uri": "dispute://cove/rare-condition",
@@ -1446,7 +1446,7 @@
           }
         }
       ],
-      "hash": "aac798758e68e367b9544cbcc2f29d7f8c3b200a2b8b291a3efdd31efa5de916"
+      "hash": "3972ba47a571ef646432a339e7d918ae6ce67d373031afe75ccaf570b215057c"
     },
     {
       "uri": "event://cove/decision-learning",
@@ -1456,7 +1456,7 @@
       "causation_id": "ev-adj-cove-decision-learning-prev",
       "idempotency_key": "idem-adj-cove-decision-learning",
       "signature": "signed-by-person://cove/utilization",
-      "occurred_at": "2026-09-01T05:39:57Z",
+      "occurred_at": "2026-09-01T05:45:50Z",
       "actor": "person://cove/utilization",
       "detail": "organizational learning: realized-cost / expected-vs-actual weight update",
       "state_update": [
@@ -1486,7 +1486,7 @@
             "determination": "step-therapy-first",
             "machine_eligible_best": "step-therapy-first"
           },
-          "made_at": "2026-09-01T05:39:57Z",
+          "made_at": "2026-09-01T05:45:50Z",
           "realized_cost_usd": 18000,
           "outcome_value": 0.7,
           "expected_utility": 0.7775,
@@ -1553,7 +1553,7 @@
           "learning": "drug coverage disputes blend clinical-necessity evidence with policy; the measured path (step-therapy-first) preserves member safety + plan policy while avoiding both an irreversible off-formulary spend and a flat safety-risk denial"
         }
       ],
-      "hash": "845fb005700598efcc94e58075b465c9147d8613efc62d409a2c23f1ea81cc86"
+      "hash": "ff64c0ef3e7cf54a3c7a6b55f0120af7793221bd6f6fc0c864f8e03f6612244b"
     }
   ]
 }

@@ -1,5 +1,5 @@
 # §7L Q7/Q8 cockpit — engine-native render (Sprint 18)
-generated 2026-09-01T05:39:57Z  |  active rule + source + learned-or-not + why reported BY `adjudication_engine.cockpit_q7q8`/`render_cockpit_q7q8`  |  SPEC v0.22, 49 $defs, URI cap
+generated 2026-09-01T05:45:50Z  |  active rule + source + learned-or-not + why reported BY `adjudication_engine.cockpit_q7q8`/`render_cockpit_q7q8`  |  SPEC v0.22, 49 $defs, URI cap
 
 The Sprint-16/17 runner-report lines are now a first-class, data-only engine render: for ANY generically-driven org the engine reads the ACTIVE reconcile rule, its source, whether a learning step changed it this run, and the evidence-gated why — from the org's own config + ledger, with no per-org engine Python.
 

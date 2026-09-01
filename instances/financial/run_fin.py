@@ -14,6 +14,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
+sys.path.insert(0, str(HERE.parents[1]))
 
 import fin_demo as fd                       # noqa: E402
 from ros.s1 import S1Service, Permission, Denial   # noqa: E402

@@ -1,22 +1,22 @@
 {
   "recommend": {
     "option": "re-balance to partner_good",
-    "rationale": "To improve on-time delivery performance by leveraging a more reliable partnership.",
+    "rationale": "To leverage a higher trust score and potentially improve on-time delivery performance.",
     "confidence": 0.85,
-    "risk": "Moderate risk of destabilizing current operations during transition",
+    "risk": "Moderate risk of not addressing root cause but mitigates immediate partnership issues.",
     "_model": "phi4-mini:3.8b-q8_0",
     "_fallback": false
   },
-  "recommend_raw": "```json\n{\"option\": \"re-balance to partner_good\", \"rationale\": \"To improve on-time delivery performance by leveraging a more reliable partnership.\", \"confidence\": 0.85, \"risk\": \"Moderate risk of destabilizing current operations during transition\"}\n```",
+  "recommend_raw": "```json\n{\"option\": \"re-balance to partner_good\", \"rationale\": \"To leverage a higher trust score and potentially improve on-time delivery performance.\", \"confidence\": 0.85, \"risk\": \"Moderate risk of not addressing root cause but mitigates immediate partnership issues.\"}\n```",
   "verify": {
     "on_time": true,
     "confidence": 0.95,
     "procedure": "anchored-timestamp",
-    "note": "...",
+    "note": "The evidence provided is sufficient and consistent with the on-time delivery expectation.",
     "_model": "phi4-mini:3.8b-q8_0",
     "_fallback": false
   },
-  "verify_raw": "{\"on_time\": true, \"confidence\": 0.95, \"procedure\": \"anchored-timestamp\", \"note\": \"...\"}\n\nNote that the note field is left empty as per your instructions not to include any additional text beyond what was specified in the JSON object itself. The confidence level reflects high certainty based on provided verity and captured_at timestamp indicating a recent delivery time frame, assuming 'on_time' refers to timely deliveries within expected parameters for this context.\n\n",
+  "verify_raw": "{\"on_time\": true, \"confidence\": 0.95, \"procedure\": \"anchored-timestamp\", \"note\": \"The evidence provided is sufficient and consistent with the on-time delivery expectation.\"}",
   "evidence_context": "COMPANY: VantageCloud (Technology sector, fictional)\nOUTCOME CLASS: committed platform-upgrade deployment\nLEDGER-BASED ON-TIME: 2/4 = 0.500  (target 0.95; variance -0.617)\nSCOPED TRUST good partner: 0.79  laggard: 0.14\nEXCEPTION: CRITICAL; root status UNKNOWN\nALLOWED OPTIONS: [re-balance to partner_good] [gate the laggard] [do nothing]",
   "checks": [
     [

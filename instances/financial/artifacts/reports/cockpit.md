@@ -1,5 +1,5 @@
 # Northglen Bank — Funding that lands on the date.
-generated 2026-09-01T00:29:55Z  |  ledger events 55  graph objects 83
+generated 2026-09-01T05:45:56Z  |  ledger events 55  graph objects 83
 
 ## Business health (ledger-projected metrics)
 | metric | unit | target | actual | variance | status |

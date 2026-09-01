@@ -47,7 +47,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 INSTANCES = HERE.parent
-ROS = INSTANCES.parents[0] / "sprints/sprint-5/artifacts"
+ROS = INSTANCES.parents[0]
 SPRINT0 = INSTANCES.parents[1] / "sprints/sprint-0/artifacts"
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(INSTANCES))

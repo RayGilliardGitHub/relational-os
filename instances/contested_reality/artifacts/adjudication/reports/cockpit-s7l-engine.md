@@ -1,5 +1,5 @@
 # §7L Q1–Q10 morning cockpit — engine-native render (Sprint 19)
-generated 2026-09-01T05:39:57Z  |  all ten questions reported BY `adjudication_engine.cockpit_s7l`/`render_cockpit_s7l`  |  SPEC v0.22, 49 $defs, URI cap
+generated 2026-09-01T05:45:50Z  |  all ten questions reported BY `adjudication_engine.cockpit_s7l`/`render_cockpit_s7l`  |  SPEC v0.22, 49 $defs, URI cap
 
 The complete §7L morning test is now a data-only engine render: for ANY generically-driven org the engine answers Q1–Q10 from the org's own graph/ledger/config (Q7/Q8 delegate to the Sprint-18 line by construction). Q6 is honest — it never fabricates a forecast (no recorded realized-vs-expected series -> "cannot forecast from recorded data").
 
