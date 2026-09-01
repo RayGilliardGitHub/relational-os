@@ -1,0 +1,97 @@
+[
+  {
+    "uri": "org://inspect/buyer",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://inspect/company",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://inspect/supplier",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://inspect/registrar",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://inspect/adjudicator",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://inspect/appeal",
+    "type": "PERSON"
+  },
+  {
+    "uri": "system://inspect/verify",
+    "type": "SYSTEM"
+  },
+  {
+    "uri": "obligation://inspect/inspect-due",
+    "subject": "org://inspect/company",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "declare pass/fail on the batch by the acceptance deadline",
+    "due_by": "2026-10-15T00:00:00-06:00"
+  },
+  {
+    "uri": "obligation://inspect/accept-due",
+    "subject": "org://inspect/buyer",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "accept a conforming batch and pay upon acceptance",
+    "due_by": "2026-11-30T00:00:00-06:00"
+  },
+  {
+    "uri": "authority://inspect/adjudicate",
+    "holder": "person://inspect/adjudicator",
+    "grants": [
+      "adjudicate"
+    ],
+    "roles": [
+      "adjudicator"
+    ]
+  },
+  {
+    "uri": "authority://inspect/adjudicate-appeal",
+    "holder": "person://inspect/appeal",
+    "grants": [
+      "adjudicate_appeal"
+    ],
+    "roles": [
+      "appeal-adjudicator"
+    ]
+  },
+  {
+    "uri": "right://inspect/buyer-appeal",
+    "holder": "org://inspect/buyer",
+    "type": "APPEAL",
+    "subject": "DUPLICATE",
+    "scope": [
+      "obligation://inspect/inspect-due"
+    ],
+    "purpose": "right to appeal the determination"
+  },
+  {
+    "uri": "rule://inspect-learn-b/reconcile-rule",
+    "kind": "PROCEDURE",
+    "text": "evidence-reconciliation threshold procedure for org inspect-learn-b: supported claims reach DETERMINED at support >= threshold `0.910` (aggregate `max` over `reliability`), support_floor 0.55; recalibrated from a realized outcome.",
+    "applies_to": "obligation://inspect-learn-b/inspect-due",
+    "learned_param": "threshold",
+    "learned_threshold": 0.91,
+    "prior_threshold": 0.95,
+    "learned_from": "decision://inspect-learn-b/reconcile-learning",
+    "calibrated_from": {
+      "realized_value": 0.9,
+      "variance_delta": -0.04
+    },
+    "bound": [
+      0.55,
+      0.95
+    ],
+    "why": "reconcile threshold recalibrated lowered (relaxed: the bar demanded more than realized determinations held): prior 0.950 -> 0.910 from a realized outcome value 0.900 (variance signal -0.040, learning_rate 0.8), clamp-bounded to [0.55, 0.95]",
+    "prior_reconcile": {
+      "threshold": 0.91,
+      "support_floor": 0.55
+    }
+  }
+]

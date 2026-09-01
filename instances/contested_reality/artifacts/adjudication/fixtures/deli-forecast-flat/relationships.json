@@ -1,0 +1,36 @@
+[
+  {
+    "uri": "relationship://deli-forecast-flat/customer-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://deli-forecast-flat/customer",
+      "org://deli-forecast-flat/company"
+    ],
+    "roles": {
+      "org://deli/customer": [
+        "buyer"
+      ],
+      "org://deli/company": [
+        "provider"
+      ]
+    },
+    "purpose": "contracted service delivery with a deadline"
+  },
+  {
+    "uri": "relationship://deli-forecast-flat/supplier-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://deli-forecast-flat/supplier",
+      "org://deli-forecast-flat/company"
+    ],
+    "roles": {
+      "org://deli/supplier": [
+        "shipper"
+      ],
+      "org://deli/company": [
+        "customer"
+      ]
+    },
+    "purpose": "supplier shipping for the delivery"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "uri": "evidence://inspect-lb/beta-machine-pass",
+    "kind": "ANCHORED",
+    "source": "automated-inspection-livestate",
+    "captured_at": "2026-09-02T10:00:00-06:00",
+    "verity": {
+      "procedure": "machine-inspection-log",
+      "confidence": 0.84
+    },
+    "reliability": 0.93,
+    "about": "automated pass signal for batch beta",
+    "supports": "claim://inspect-lb/passed"
+  },
+  {
+    "uri": "evidence://inspect-lb/beta-resident-note",
+    "kind": "TESTIMONY",
+    "source": "resident-inspector-testimony",
+    "captured_at": "2026-09-03T14:00:00-06:00",
+    "verity": {
+      "procedure": "signed-inspection-note",
+      "confidence": 0.88
+    },
+    "reliability": 0.88,
+    "about": "resident inspector's defect finding",
+    "supports": "claim://inspect-lb/failed"
+  },
+  {
+    "uri": "evidence://inspect-learn-b/learning-note",
+    "kind": "RECORD",
+    "source": "post-resolution-postmortem",
+    "captured_at": "2026-09-01T03:13:36Z",
+    "verity": {
+      "procedure": "postmortem",
+      "confidence": 0.6
+    },
+    "reliability": 0.6,
+    "about": "what was learned",
+    "supports": null,
+    "learning": "reliability alone is ambiguous here (fails only if the reconciliation rule admits the resident testimony vs demands anchored-only vs recency-decays the old audit); the adjudicator must state which rule the determination is reached under"
+  }
+]

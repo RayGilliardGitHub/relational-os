@@ -1,0 +1,46 @@
+[
+  {
+    "uri": "dispute://inspect-lb/batch-beta",
+    "about": "obligation://inspect/inspect-due",
+    "parties": [
+      "org://inspect/buyer",
+      "org://inspect/company",
+      "org://inspect/supplier"
+    ],
+    "status": "RESOLVED",
+    "fin_impact_usd": 54000,
+    "deadline_ref": "QC acceptance decision within 10 business days",
+    "interest_blocks": {
+      "buyer": "take only a conforming batch; avoid a defective line",
+      "company": "protect its inspection reputation; bill only for passed work",
+      "supplier": "not blamed for a batch the inspection cleared"
+    },
+    "constraint_blocks": {
+      "irreversible": "rejecting/returning the whole batch is irreversible/unknown-cost -> \u00a76 floor; accepting an unproven defective line is an unknown-cost roll-out risk -> \u00a76 floor"
+    },
+    "lifecycle_state": "CLOSED",
+    "epistemic_state": "RESOLVED_DETERMINED",
+    "determination": "rework-partial-credit",
+    "resolution_type": "rework-partial-credit",
+    "reopened": false,
+    "available_resolutions": [
+      "accept-batch",
+      "reject-batch-return",
+      "rework-partial-credit",
+      "conditional-accept-with-guarantee",
+      "request-more-evidence",
+      "escalate",
+      "unresolved"
+    ],
+    "conflict": {
+      "detected": true,
+      "uncertainty": false,
+      "claim_support": {
+        "claim://inspect-lb/passed": 0.93,
+        "claim://inspect-lb/failed": 0.88
+      }
+    },
+    "resolution_outcome": "batch beta accepted (winning claim support 0.93) \u2014 resolvable ONLY under a reconcile threshold that the learning episode's realized outcome recalibrated below 0.95.",
+    "verified": true
+  }
+]

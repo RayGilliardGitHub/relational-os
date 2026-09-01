@@ -115,3 +115,44 @@ property of every DSL, not a hidden engine change.
 `run_rule_authoring_demo.py`, `run_rule_comparison_demo.py`, `run_adjudication_engine_demo.py`, and
 `conformance_adjudication.py` over 13 labels, plus the full non-regression suite — all ALL PASS;
 SPEC v0.22, 49 `$defs`, `ros/` untouched, only catalog URI schemes in the new fixtures.)*
+
+---
+
+## Sprint 17 appendix — learning feeds the library (the learned rule is a library entry)
+Sprint 17 (see `RECONCILE-LEARNING.md`) adds the missing loop: **the reconciliation RULE's parameter
+can now be learned from realized outcomes**, and the learned artifact is a **new named `RULE_LIBRARY`
+entry** — so the library is not just hand-authored; it grows from recorded experience.
+
+- **What is learned:** one reconcile parameter (the `threshold`) via a deterministic, clamp-bounded,
+  evidence-gated update `learn_threshold(prior, realized, lr, [lo, hi])` from a RECORDED, realized
+  outcome (the §7K.1 Decision→Expected→Actual→Variance→WHY→change-future-policy loop). It learns the
+  RULE, not the answer to any case.
+- **Learning→library flow:** episode A (`inspect-learn-a`) realizes an outcome value 0.90 under a
+  0.95 threshold → learns 0.91 → a NEW library spec `calibrated-threshold-091` (aggregate `max` +
+  additive `learned_threshold`/`calibrated_from`/`bound`/`why`) is added to `ac.RULE_LIBRARY` and
+  recorded as an append-only signed `rule://` (kind=PROCEDURE) + `decision://` (with `rules_applied`).
+- **Reuse:** `inspect-learn-b` (a SECOND, distinct dispute) and `deli-learn` (a genuinely different
+  org) both reuse the SAME `RULE_LIBRARY["calibrated-threshold-091"]` dict by `is`-identity — the
+  learned rule is a reusable, library-shared named spec, not a one-case patch.
+- **Containment (so the library can't be moved toward self-serving goalposts):** Trust is never
+  touched (S5 only), `determination_policy` is never edited (the §6 human's call), the ledger is
+  append-only (prior events byte-identical), and every learned update is rebound from an explicit
+  `[lo, hi]` + explicit prior — never the wall-clock, never unbounded.
+- **Honest verdict:** this is **calibrated re-authoring** (a bounded update of a rule parameter from
+  outcomes), not autonomous learning — a real and additive extension of the library authoring story
+  established here. `run_reconcile_learning_demo.py` → ALL PASS;
+  `conformance_adjudication.py` → **16 labels** C1–C5 ALL PASS (49 `$defs`).
+
+## Sprint 18 appendix — the Q7/Q8 line is now a first-class ENGINE render (the library's operating surface)
+Sprint 18 makes the §7L Q7/Q8 cockpit line a **generic engine render**: `adjudication_engine`
+`cockpit_q7q8(cfg, sub, *, library=None)` / `render_cockpit_q7q8(...)` reports the ACTIVE reconcile
+rule, its source class (registry / **rule-library** / learned / rule-spec-authored), learned-or-not
+this run, and the evidence-gated why — data-only, from the org's own config + ledger. For a
+`RULE_LIBRARY` spec the source reports **rule-library** (matched by `is`-identity/name against the
+library you pass in); for a learned library entry it reports **learned** (and learned-this-run=True
+only when that org's ledger actually recorded its reconcile-learning decision this run). The
+Sprint-16 `cockpit-q7-rule-library.md` line is now a *view* over that engine render, not the only
+place the rule-as-operating-reality (Q7 options + Q8 recommendation with authority) is surfaced.
+`run_cockpit_q7q8_demo.py` proves a 4-org / 3-source-class agreement with the Sprint-16/17 report
+lines. **§16 verdict: first-class engine render.** Full write-up:
+`docs/ENGINE-Q7Q8-COCKPIT.md`.

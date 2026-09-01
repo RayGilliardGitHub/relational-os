@@ -257,3 +257,150 @@ reusable, cross-org library.
 Full write-up: `contested_reality/docs/USER-AUTHORABLE-RULE-LIBRARY.md` (updated frontier + §16
 verdict: A — Yes for the shipped vocabulary *including* the Bayesian-likelihood family; the precise
 remaining dependence is an op the vocabulary still cannot name, added once as interpreter code).
+
+### Sprint 17 — decision learning at the reconciliation layer (honest + additive)
+- **Reconcile-rule learning** (`contested_reality/reconcile_learning.py`, additive): the
+  `threshold` is recalibrated deterministically from a RECORDED, realized outcome —
+  `learn_threshold(prior, realized, lr, [lo,hi])`, clamp-bounded, evidence-gated (`eps`), never the
+  wall-clock. It learns the RULE's parameter, not the answer to any case (§7K.1 Decision→Expected→
+  Actual→Variance→WHY→change-future-policy at the reconcile boundary).
+- **Learning feeds the RULE LIBRARY:** a NEW named spec (`calibrated-threshold-091`) is added to
+  `ac.RULE_LIBRARY` and recorded as an append-only signed `rule://` (kind=PROCEDURE) +
+  `decision://` (with `rules_applied`) — history not rewritten.
+- **Cross-dispute flip + cross-org reuse:** `inspect-learn-a`'s realized outcome (0.90 < 0.95)
+  recalibrates the threshold to 0.91; `inspect-learn-b` (a DISTINCT predicate set) is driven once
+  under the learned rule and DETERMINES a 0.93-support claim the old 0.95 would wrongly leave
+  UNRESOLVED; `deli-learn` (freight) reuses the SAME learned dict by `is`-identity → a library, not a
+  one-case patch.
+- **§7L Q7/Q8 cockpit line:** `cockpit-q7-q8-reconcile-learning.md` names each org's ACTIVE rule,
+  its source (registry / rule-library / learned-this-run), and whether learning changed it + why.
+- **Containment proven (real assertions):** Trust stays 0.80 (S5 only), `determination_policy` never
+  edited (the §6 human's call), ledger append-only (prior events byte-identical), rebound from
+  explicit `[0.55,0.95]`.
+- **Runner / conformance:** `run_reconcile_learning_demo.py` → ALL PASS;
+  `conformance_adjudication.py` now validates **16 labels** C1–C5 ALL PASS, 49 `$defs`; full
+  non-regression green; SPEC v0.22 + `ros/` untouched; only catalog URI schemes (incl. the frozen
+  `rule://` Rule $def), no new noun.
+- **Honest §16 verdict: calibrated re-authoring, not autonomous learning.**
+
+Full write-up: `contested_reality/docs/RECONCILE-LEARNING.md`.
+
+### Sprint 18 — the §7L Q7/Q8 cockpit line, first-class in the ENGINE (data-only)
+- **Engine-native Q7/Q8 render** (`contested_reality/adjudication_engine.py`, additive):
+  `cockpit_q7q8(cfg, sub, *, library=None)` returns the ORG's ACTIVE reconcile rule + its SOURCE class
+  (registry / rule-library / learned / rule-spec-authored) + learned-or-not-this-run + the
+  evidence-gated WHY; `render_cockpit_q7q8(...)` renders that as a plain-text §7L Q7/Q8 line (Q7 =
+  options incl. do-nothing baseline + machine-eligible best; Q8 = recommendation with authority +
+  authorized determination). Reads the org's OWN config + ledger — data-only, no per-org engine Python.
+- **Any org renders it:** a registry rule (`deli`→best-reliability-threshold), a hand-authored
+  `RULE_LIBRARY` spec (`inspect-corroboration`→independent-corroboration), and a LEARNED library entry
+  added this run (`inspect-learn-b`→calibrated-threshold-091, learned-this-run=True when that org's
+  ledger carries its reconcile-learning decision) plus the cross-org reuse case (`deli-learn`→learned,
+  learned-this-run=False).
+- **Proven generic + correct:** `run_cockpit_q7q8_demo.py` drives 4 orgs across 3 source classes,
+  asserts source classification + determinism + both Q7 and Q8 present, and AGREES with the Sprint-16
+  (`cockpit-q7-rule-library.md`) and Sprint-17 (`cockpit-q7-q8-reconcile-learning.md`) lines.
+- **Runner / conformance:** `run_cockpit_q7q8_demo.py` → ALL PASS; conformance_adjudication
+  (16 labels) C1–C5 ALL PASS; full non-regression green; deli/cove byte-identical up to the clock;
+  SPEC v0.22, 49 `$defs`, `ros/` untouched, no new noun.
+- **Honest §16 verdict: FIRST-CLASS engine render, not a runner-side artifact** — the Q7/Q8 line now
+  lives in the generic engine itself and every org renders it identically; the Sprint-16/17 cockpit
+  report files are a view over that engine render, not the only place the line exists.
+
+Full write-up: `contested_reality/docs/ENGINE-Q7Q8-COCKPIT.md`.
+
+### Sprint 19 — the FULL §7L Q1–Q10 morning cockpit, first-class in the ENGINE (data-only)
+- **Engine-native full §7L render** (`contested_reality/adjudication_engine.py`, additive):
+  `cockpit_s7l(cfg, sub, *, library=None)` answers **all ten** §7L morning questions for ANY
+  configured org, data-only — Q1 state/events, Q2 change, Q3 attention, Q4 exceptions, Q5 root-cause
+  WITH epistemic status, Q6 forecast-if-nothing-changes, Q7 options+trade-off, Q8 recommendation with
+  authority, Q9 ownership/capability/authority, Q10 verified outcome + learning. All read off the
+  org's OWN graph/ledger/config; `render_cockpit_s7l(...)` renders it as plain text.
+- **Strict superset of Sprint-18:** Q7/Q8 delegate to `cockpit_q7q8` by construction (same dict
+  blocks), and the Q7/Q8 + active-rule/source/learned/why line is equal on every org.
+- **Honest Q6:** a forecast is only produced when a recorded realized-vs-expected series exists;
+  otherwise it plainly says "cannot forecast from recorded data". Q5 epistemic status and Q10
+  verified/learning are read from the org's real graph/ledger (no authored literals).
+- **Proven generic + correct:** `run_cockpit_s7l_demo.py` drives 4 orgs / 3 rule sources and asserts
+  all ten Q present (with evidence), Q7/Q8 == Sprint-18 line, determinism, agreement with the
+  Sprint-16/17/18 runner lines, real-graph Q5/Q10, and no-fabrication Q6.
+- **Runner / conformance:** exit 0 = ALL PASS; conformance_adjudication (16 labels) C1–C5 green; full
+  non-regression green; deli/cove byte-identical up to the clock; SPEC v0.22, 49 `$defs`, `ros/`
+  untouched, no new noun.
+- **Honest §16 verdict: the §7L gate is met at the engine-render level** — #8 (Q8) is the
+  machine-eligible best (§6-floor-gated, with the authority it requires) and the determination is the
+  §6 human's call that closes in a verified, learned outcome (Q10); the engine reports the recorded
+  state and never overrules the human; Q6 honestly cannot forecast where no series is recorded.
+
+Full write-up: `contested_reality/docs/ENGINE-S7L-COCKPIT.md` (+ Sprint-19 appendix in
+`docs/ENGINE-Q7Q8-COCKPIT.md`).
+
+### Sprint 20 — recorded-data Q6 forecast + Q9 capacity for the §7L morning cockpit
+- **Closes the two honest seams Sprint 19 disclosed** (`notes/findings.md`, "Residual seams"): an org
+  that RECORDS the missing data on its own graph/ledger now answers **Q6 ("what if we do nothing?")**
+  with a deterministic forecast and **Q9 ("who does it, authority/capacity?")** with a capacity
+  number, AS DATA where the data exists — with the honest no-data fallback unchanged.
+- **Additive, generic engine additions** (`contested_reality/adjudication_engine.py`, only):
+  `forecast_metric(cfg, sub, metric_uri, *, horizon)` computes a **deterministic projection** purely
+  from a recorded `metric://` realized-vs-expected series (last recorded `actual` + mean of recorded
+  consecutive deltas, forward periods, labelled a projection; never the wall-clock); `record_metric_series`
+  + `record_capacity` are REPLAYABLE recorders that append the data to the org's own immutable ledger
+  (one signed event, merge-not-replace); `cockpit_s7l`'s `.q6`/`.q9` + `render_cockpit_s7l` consume the
+  recorded data when present. 49 `$defs`/URI cap/SPEC v0.22 intact; `metric://` is a first-class catalog
+  noun and `capacity` an additive envelope field (**no `capacity://` noun**); `ros/` untouched.
+- **Proven on ≥2 orgs:** `run_forecast_capacity_demo.py` (exit 0 = ALL PASS) drives a NEW org
+  `deli-forecast` (records a `metric://deli-forecast/m-on-time` series + a `capacity` field on its
+  `authority://`) and the existing `deli` (no data). The recorded org forecasts Q6 (`[0.84, 0.82, 0.8]`
+  from last 0.86, mean delta −0.02) + reports capacity `1.0 obligations`; `deli` keeps the honest
+  fallback. Asserts full §7L on both, determinism, agreement with the recorded graph, no wall-clock,
+  and that the deli-forecast fixtures pass the Sprint-0 C1–C5 conformance.
+- **§16 verdict:** Q6/Q9 are now data-grounded wherever an org records the data; a no-data org honestly
+  says it cannot forecast / reports no capacity rather than inventing one. Q7/Q8 stay the Sprint-18 line
+  (delegated); #8 remains §6-floor-gated; the determination is the §6 human's call; S5 alone moves Trust.
+- **Non-regression:** all curated runners (incl. the new one) + conformance_adjudication (16 labels)
+  C1–C5 ALL PASS; sector `build_all` + `conformance_all`, S5 reference + conformance, agent demo +
+  conformance ALL PASS; deli/cove byte-identical up to the clock; schema hash `7fc38c8c…`, 49 `$defs`,
+  SPEC v0.22, `ros/` untouched, no new noun.
+
+Full write-up: `contested_reality/docs/ENGINE-FORECAST-CAPACITY.md` (+ additive Sprint-20 note in
+`docs/ENGINE-S7L-COCKPIT.md`).
+
+### Sprint 21 — the RECORDED forecast now DRIVES Q3 attention + the Q8 do-nothing expected-impact
+- **Closes the honest frontier Sprint 20 disclosed (`notes/findings.md`, "Residual seams"):** the Q6
+  projection was computed + rendered but not CONNECTED to the org's decision surface. Sprint 21 makes
+  the recorded forecast drive **§7L Q3** and **Q8** — `Q6 → Q3 → Q8` now close as DATA where the data
+  exists, with the honest no-data fallback unchanged.
+- **Threshold rule (deterministic, recorded-data only):** from a recorded `metric://`
+  realized-vs-expected series + `forecast_metric`, the threshold is the recorded `forecast_threshold`
+  additive field → else the metric's own `target` → else the last recorded `actual`. When
+  `min(projection) < threshold` (the higher-is-better "do nothing and it gets worse" condition),
+  `cockpit_s7l.q3` gains a **forecast-driven attention item** `{"tag": "forecast", …}`; `q8` + the
+  trade-off carry a **projected-cost do-nothing expected-impact** (`do_nothing_expected_impact` with
+  `on_target` bool) from that same projection. The **Q8 recommendation is UNCHANGED** — the forecast
+  prices attention + do-nothing, never overrules the §6-floor-gated machine-eligible best.
+- **Additive, generic engine additions** (`contested_reality/adjudication_engine.py`, only): a `_num`
+  helper + `_forecast_closure(cfg, sub)` (append), `.q3` forecast-attention append, `.q6` now reuses
+  the closure (Q3/Q6/Q8 agree by construction), additive `q7`/`q8` enrichment + `render_cockpit_s7l`
+  Q3-tag + Q8 do-nothing lines. Frozen functions (`reconcile`/`run_scenario`/`_derive`/`SPEC_VOCAB`/
+  `_aggregate`/`rank`/`machine_eligible_best`/`render_tradeoff`/`cockpit_q7q8`) untouched;
+  `forecast_threshold` an additive field (**no new noun**); 49 `$defs`/URI cap/SPEC v0.22 intact.
+- **Proven on ≥3 orgs:** `run_forecast_action_demo.py` (exit 0 = ALL PASS) drives a **deteriorating**
+  `deli-forecast` (projection [0.84,0.82,0.8] crosses target 0.95 → Q3 forecast item + forecast-driven
+  do-nothing cost on_target=False), an **on-target** `deli-forecast-flat` (flat [0.96,0.96,0.96] →
+  NO forecast attention, do-nothing priced on_target=True), and the **no-data** `deli` (unchanged
+  fallback). Asserts full §7L on each, determinism, agreement of Q8 with `forecast_metric` + a
+  hand-computed projection, no §6 overrule (Q8 recommendation unchanged), no wall-clock.
+- **§16 verdict:** for an org that records a series, the loop **Q6→Q3→Q8 is now closed as data** — the
+  projection itself becomes prioritized attention and the do-nothing baseline is priced; a no-data org
+  keeps today's cockpit exactly. What is still not derivable: an org that has not recorded a series
+  cannot be forced to forecast/price do-nothing (correct), and a richer adaptive forecast model remains
+  out of scope of the deterministic, ~$0 stance.
+- **Non-regression:** all C-R runners (incl. the new one) + `run_cockpit_s7l_demo` +
+  `run_forecast_capacity_demo` ALL PASS; conformance_adjudication (16 labels) C1–C5 ALL PASS; new
+  recorded-org fixtures (`deli-forecast`, `deli-forecast-flat`) pass the Sprint-0 C1–C5 (26 instances
+  each); sector `build_all` + `conformance_all`, S5 reference + conformance, agent demo +
+  conformance ALL PASS; deli/cove fixtures carry **no** closure keys (byte-identical up to the clock);
+  schema hash `7fc38c8c…`, 49 `$defs`, SPEC v0.22, `ros/` untouched, no new noun.
+
+Full write-up: `contested_reality/docs/ENGINE-FORECAST-ACTION.md` (+ additive Sprint-21 note in
+`docs/ENGINE-FORECAST-CAPACITY.md`).

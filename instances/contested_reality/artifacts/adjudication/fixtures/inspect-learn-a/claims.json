@@ -1,0 +1,21 @@
+[
+  {
+    "uri": "claim://inspect-la/passed",
+    "proposer": "org://inspect/company",
+    "statement": "batch alpha passed QC inspection; the automated machine pass signal and an independent auditor's sign-off both support acceptance.",
+    "evidence": [
+      "evidence://inspect-la/machine-pass",
+      "evidence://inspect-la/audit-signoff"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://inspect-la/failed",
+    "proposer": "org://inspect/buyer",
+    "statement": "batch alpha failed inspection; a resident inspector's signed note records a defect.",
+    "evidence": [
+      "evidence://inspect-la/resident-note"
+    ],
+    "epistemic_status": "disputed"
+  }
+]

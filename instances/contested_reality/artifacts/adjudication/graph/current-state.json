@@ -2,93 +2,93 @@
   "kind": "GRAPH",
   "objects": [
     {
-      "uri": "trust://inspect-max098/claimant",
-      "subject": "person://inspect/registrar",
-      "target": "org://inspect/buyer",
+      "uri": "trust://deli-forecast-flat/claimant",
+      "subject": "person://deli-forecast-flat/registrar",
+      "target": "org://deli-forecast-flat/customer",
       "claim": "honest dispute participant",
       "score": 0.8,
-      "context": "relationship://inspect-max098/x",
+      "context": "relationship://deli-forecast-flat/x",
       "evidence": []
     },
     {
-      "uri": "org://inspect/buyer",
+      "uri": "org://deli/customer",
       "type": "ORG"
     },
     {
-      "uri": "org://inspect/company",
+      "uri": "org://deli/company",
       "type": "ORG"
     },
     {
-      "uri": "org://inspect/supplier",
+      "uri": "org://deli/supplier",
       "type": "ORG"
     },
     {
-      "uri": "person://inspect/registrar",
+      "uri": "person://deli/registrar",
       "type": "PERSON"
     },
     {
-      "uri": "person://inspect/adjudicator",
+      "uri": "person://deli/adjudicator",
       "type": "PERSON"
     },
     {
-      "uri": "person://inspect/appeal",
+      "uri": "person://deli/appeal",
       "type": "PERSON"
     },
     {
-      "uri": "system://inspect/verify",
+      "uri": "system://deli/verify",
       "type": "SYSTEM"
     },
     {
-      "uri": "relationship://inspect/qc-contract",
+      "uri": "relationship://deli-forecast-flat/customer-contract",
       "status": "ACTIVE",
       "participants": [
-        "org://inspect/buyer",
-        "org://inspect/company"
+        "org://deli-forecast-flat/customer",
+        "org://deli-forecast-flat/company"
       ],
       "roles": {
-        "org://inspect/buyer": [
-          "client"
+        "org://deli/customer": [
+          "buyer"
         ],
-        "org://inspect/company": [
-          "inspector"
+        "org://deli/company": [
+          "provider"
         ]
       },
-      "purpose": "independent batch inspection + acceptance decision"
+      "purpose": "contracted service delivery with a deadline"
     },
     {
-      "uri": "relationship://inspect/supply-contract",
+      "uri": "relationship://deli-forecast-flat/supplier-contract",
       "status": "ACTIVE",
       "participants": [
-        "org://inspect/supplier",
-        "org://inspect/buyer"
+        "org://deli-forecast-flat/supplier",
+        "org://deli-forecast-flat/company"
       ],
       "roles": {
-        "org://inspect/supplier": [
-          "supplier"
+        "org://deli/supplier": [
+          "shipper"
         ],
-        "org://inspect/buyer": [
-          "receiver"
+        "org://deli/company": [
+          "customer"
         ]
       },
-      "purpose": "goods supply subject to QC acceptance"
+      "purpose": "supplier shipping for the delivery"
     },
     {
-      "uri": "obligation://inspect/inspect-due",
-      "subject": "org://inspect/company",
+      "uri": "obligation://deli-forecast-flat/deliver-due",
+      "subject": "org://deli-forecast-flat/company",
       "source": "VOLUNTARILY_UNDERTAKEN",
-      "content": "declare pass/fail on the batch by the acceptance deadline",
-      "due_by": "2026-10-15T00:00:00-06:00"
+      "content": "deliver the contracted service by the deadline",
+      "due_by": "2026-08-31T16:00:00-06:00"
     },
     {
-      "uri": "obligation://inspect/accept-due",
-      "subject": "org://inspect/buyer",
+      "uri": "obligation://deli-forecast-flat/pay-due",
+      "subject": "org://deli-forecast-flat/customer",
       "source": "VOLUNTARILY_UNDERTAKEN",
-      "content": "accept a conforming batch and pay upon acceptance",
-      "due_by": "2026-11-30T00:00:00-06:00"
+      "content": "pay the $18,000 invoice on confirmed delivery",
+      "due_by": "2026-09-30T00:00:00-06:00"
     },
     {
-      "uri": "authority://inspect/adjudicate",
-      "holder": "person://inspect/adjudicator",
+      "uri": "authority://deli-forecast-flat/adjudicate",
+      "holder": "person://deli-forecast-flat/adjudicator",
       "grants": [
         "adjudicate"
       ],
@@ -97,8 +97,8 @@
       ]
     },
     {
-      "uri": "authority://inspect/adjudicate-appeal",
-      "holder": "person://inspect/appeal",
+      "uri": "authority://deli-forecast-flat/adjudicate-appeal",
+      "holder": "person://deli-forecast-flat/appeal",
       "grants": [
         "adjudicate_appeal"
       ],
@@ -107,200 +107,296 @@
       ]
     },
     {
-      "uri": "right://inspect/buyer-appeal",
-      "holder": "org://inspect/buyer",
+      "uri": "right://deli-forecast-flat/cust-appeal",
+      "holder": "org://deli-forecast-flat/customer",
       "type": "APPEAL",
       "subject": "DUPLICATE",
       "scope": [
-        "obligation://inspect/inspect-due"
+        "obligation://deli-forecast-flat/deliver-due"
       ],
       "purpose": "right to appeal the determination"
     },
     {
-      "uri": "claim://inspect/passed",
-      "proposer": "org://inspect/company",
-      "statement": "the batch passed QC inspection; an automated machine pass signal and an independent process audit support acceptance.",
+      "uri": "claim://deli-forecast-flat/late",
+      "proposer": "org://deli-forecast-flat/customer",
+      "statement": "the contracted service was NOT delivered on time; signed receipt 16:15 past the 16:00 deadline \u2014 we should not pay for the late delivery.",
       "evidence": [
-        "evidence://inspect/proof-system",
-        "evidence://inspect/proof-audit"
+        "evidence://deli-forecast-flat/arrival-receipt",
+        "evidence://deli-forecast-flat/gps-arrival"
       ],
       "epistemic_status": "disputed"
     },
     {
-      "uri": "claim://inspect/failed",
-      "proposer": "org://inspect/buyer",
-      "statement": "the batch failed inspection; a resident inspector's signed finding records a defect, and accepting on stale audit records would be unsafe.",
+      "uri": "claim://deli-forecast-flat/delivered",
+      "proposer": "org://deli-forecast-flat/company",
+      "statement": "the contracted service WAS delivered and is payable; an independent anchored verification confirms delivery liveness.",
       "evidence": [
-        "evidence://inspect/fail-inspector"
+        "evidence://deli-forecast-flat/third-party-verification"
       ],
       "epistemic_status": "disputed"
     },
     {
-      "uri": "evidence://inspect/proof-system",
+      "uri": "claim://deli-forecast-flat/shipped",
+      "proposer": "org://deli-forecast-flat/supplier",
+      "statement": "we shipped the consignment on time.",
+      "evidence": [
+        "evidence://deli-forecast-flat/supplier-shipping"
+      ],
+      "epistemic_status": "disputed"
+    },
+    {
+      "uri": "evidence://deli-forecast-flat/gps-arrival",
       "kind": "ANCHORED",
-      "source": "automated-inspection-livestate",
-      "captured_at": "2026-08-29T10:00:00-06:00",
+      "source": "fleet-GPS-livestate",
+      "captured_at": "2026-08-31T16:12:00-06:00",
       "verity": {
-        "procedure": "machine-inspection-log",
-        "confidence": 0.84
+        "procedure": "gps-timestamp",
+        "confidence": 0.85
       },
-      "reliability": 0.84,
-      "about": "automated pass signal",
-      "supports": "claim://inspect/passed"
+      "reliability": 0.85,
+      "about": "arrival gate event",
+      "supports": "claim://deli-forecast-flat/late"
     },
     {
-      "uri": "evidence://inspect/proof-audit",
-      "kind": "RECORD",
-      "source": "annual-auditor-sign-off",
-      "captured_at": "2026-07-10T09:00:00-06:00",
-      "verity": {
-        "procedure": "independent-audit",
-        "confidence": 0.97
-      },
-      "reliability": 0.97,
-      "about": "auditor sign-off on the inspection process",
-      "supports": "claim://inspect/passed"
-    },
-    {
-      "uri": "evidence://inspect/fail-inspector",
+      "uri": "evidence://deli-forecast-flat/arrival-receipt",
       "kind": "TESTIMONY",
-      "source": "resident-inspector-testimony",
-      "captured_at": "2026-08-30T14:00:00-06:00",
+      "source": "customer-signed-receipt",
+      "captured_at": "2026-08-31T16:15:00-06:00",
       "verity": {
-        "procedure": "signed-inspection-note",
+        "procedure": "signed-receipt",
         "confidence": 0.9
       },
       "reliability": 0.9,
-      "about": "resident inspector's defect finding",
-      "supports": "claim://inspect/failed"
+      "about": "delivery receipt",
+      "supports": "claim://deli-forecast-flat/late"
     },
     {
-      "uri": "dispute://inspect/inspection",
-      "about": "obligation://inspect/inspect-due",
+      "uri": "evidence://deli-forecast-flat/third-party-verification",
+      "kind": "ANCHORED",
+      "source": "independent-audit-service",
+      "captured_at": "2026-08-31T17:05:00-06:00",
+      "verity": {
+        "procedure": "anchored-liveness",
+        "confidence": 0.97
+      },
+      "reliability": 0.97,
+      "about": "delivery liveness verification",
+      "supports": "claim://deli-forecast-flat/delivered"
+    },
+    {
+      "uri": "evidence://deli-forecast-flat/supplier-shipping",
+      "kind": "RECORD",
+      "source": "supplier-shipping-system",
+      "captured_at": "2026-08-31T15:58:00-06:00",
+      "verity": {
+        "procedure": "shipping-log",
+        "confidence": 0.92
+      },
+      "reliability": 0.92,
+      "about": "ship-out time",
+      "supports": "claim://deli-forecast-flat/shipped"
+    },
+    {
+      "uri": "dispute://deli-forecast-flat/delivery",
+      "about": "obligation://deli-forecast-flat/deliver-due",
       "parties": [
-        "org://inspect/buyer",
-        "org://inspect/company",
-        "org://inspect/supplier"
+        "org://deli-forecast-flat/customer",
+        "org://deli-forecast-flat/company",
+        "org://deli-forecast-flat/supplier"
       ],
-      "status": "OPEN",
-      "fin_impact_usd": 54000,
-      "deadline_ref": "QC acceptance decision within 10 business days",
+      "status": "RESOLVED",
+      "fin_impact_usd": 18000,
+      "deadline_ref": "resolution expected within 7 business days",
       "interest_blocks": {
-        "buyer": "take only a conforming batch; avoid a defective line",
-        "company": "protect its inspection reputation; bill only for passed work",
-        "supplier": "not blamed for a batch the inspection cleared"
+        "customer": "pay only for delivered service",
+        "company": "collect valid invoice; protect reputation",
+        "supplier": "established on-time shipment, not blamed"
       },
       "constraint_blocks": {
-        "irreversible": "rejecting/returning the whole batch is irreversible/unknown-cost -> \u00a76 floor; accepting an unproven defective line is an unknown-cost roll-out risk -> \u00a76 floor"
+        "sla_grace_minutes": 15,
+        "refund_auto_cap_usd": 5000,
+        "irreversible": "a full refund/admission is irreversible/unknown-cost -> \u00a76 human floor"
       },
-      "lifecycle_state": "UNRESOLVED",
-      "epistemic_state": "INSUFFICIENT_EVIDENCE",
-      "determination": "UNRESOLVED",
-      "resolution_type": null,
+      "lifecycle_state": "CLOSED",
+      "epistemic_state": "RESOLVED_DETERMINED",
+      "determination": "partial-settlement",
+      "resolution_type": "partial-settlement",
       "reopened": false,
       "available_resolutions": [
-        "accept-batch",
-        "reject-batch-return",
-        "rework-partial-credit",
-        "conditional-accept-with-guarantee",
+        "accept-customer-refund",
+        "accept-company-full-payment",
+        "partial-settlement",
+        "conditional-resolution",
         "request-more-evidence",
         "escalate",
-        "unresolved"
+        "unresolved",
+        "external-adjudication"
       ],
       "conflict": {
         "detected": true,
-        "uncertainty": true,
+        "uncertainty": false,
         "claim_support": {
-          "claim://inspect/passed": 0.97,
-          "claim://inspect/failed": 0.9
+          "claim://deli-forecast-flat/late": 0.9,
+          "claim://deli-forecast-flat/delivered": 0.97,
+          "claim://deli-forecast-flat/shipped": 0.92
         }
-      }
+      },
+      "resolution_outcome": "partial settlement on the contested delivery; SLA-breach credit applied; ledger noted; customer keeps the service",
+      "verified": true
     },
     {
-      "uri": "decision://inspect-max098/agent-advisory",
-      "by": "person://inspect/registrar",
-      "authority": "authority://inspect/adjudicate",
+      "uri": "decision://deli-forecast-flat/agent-advisory",
+      "by": "person://deli-forecast-flat/registrar",
+      "authority": "authority://deli-forecast-flat/adjudicate",
       "alternatives": [
-        "accept-batch",
-        "reject-batch-return",
-        "rework-partial-credit",
-        "conditional-accept-with-guarantee",
+        "accept-customer-refund",
+        "accept-company-full-payment",
+        "partial-settlement",
+        "conditional-resolution",
         "request-more-evidence",
         "escalate",
-        "unresolved"
+        "unresolved",
+        "external-adjudication"
       ],
       "confidence": 0.7,
       "expected_outcome": "inform determination",
-      "actual_outcome": "rework-partial-credit",
+      "actual_outcome": "partial-settlement",
       "detail": {
         "ranking": [
           {
-            "option": "rework-partial-credit",
-            "utility": 0.645,
+            "option": "partial-settlement",
+            "utility": 0.7275,
             "floor_gated": false
           },
           {
-            "option": "conditional-accept-with-guarantee",
-            "utility": 0.61,
+            "option": "conditional-resolution",
+            "utility": 0.665,
             "floor_gated": false
           },
           {
-            "option": "accept-batch",
-            "utility": 0.515,
-            "floor_gated": true
-          },
-          {
-            "option": "unresolved",
-            "utility": 0.5,
+            "option": "accept-company-full-payment",
+            "utility": 0.62,
             "floor_gated": false
           },
           {
             "option": "request-more-evidence",
-            "utility": 0.465,
+            "utility": 0.435,
+            "floor_gated": false
+          },
+          {
+            "option": "unresolved",
+            "utility": 0.4,
+            "floor_gated": false
+          },
+          {
+            "option": "external-adjudication",
+            "utility": 0.385,
             "floor_gated": false
           },
           {
             "option": "escalate",
-            "utility": 0.41,
+            "utility": 0.38,
             "floor_gated": false
           },
           {
-            "option": "reject-batch-return",
-            "utility": 0.07,
+            "option": "accept-customer-refund",
+            "utility": 0.285,
             "floor_gated": true
           }
         ],
         "machine_eligible_best": {
-          "option": "rework-partial-credit",
-          "utility": 0.645,
+          "option": "partial-settlement",
+          "utility": 0.7275,
           "floor_gated": false
         },
-        "tradeoff": "trade-off[inspection; business-model {'evidence_compliance': 0.35, 'cost': 0.25, 'relationship': 0.2, 'schedule': 0.2}]\n  0.645  rework-partial-credit\n  0.610  conditional-accept-with-guarantee\n  0.515  accept-batch FLOOR-GATED\n  0.500  unresolved\n  0.465  request-more-evidence\n  0.410  escalate\n  0.070  reject-batch-return FLOOR-GATED\n  => machine-eligible best (non-gated): rework-partial-credit (gated: ['accept-batch', 'reject-batch-return'])"
+        "tradeoff": "trade-off[delivery; business-model {'evidence': 0.35, 'contractual': 0.3, 'relationship': 0.2, 'cost': 0.15}]\n  0.728  partial-settlement\n  0.665  conditional-resolution\n  0.620  accept-company-full-payment\n  0.435  request-more-evidence\n  0.400  unresolved\n  0.385  external-adjudication\n  0.380  escalate\n  0.285  accept-customer-refund FLOOR-GATED\n  => machine-eligible best (non-gated): partial-settlement (gated: ['accept-customer-refund'])"
       },
-      "made_at": "2026-09-01T02:20:32Z"
+      "made_at": "2026-09-01T03:13:36Z"
     },
     {
-      "uri": "decision://inspect-max098/unresolved",
-      "by": "person://inspect/adjudicator",
-      "authority": "authority://inspect/adjudicate",
+      "uri": "decision://deli-forecast-flat/determination",
+      "by": "person://deli-forecast-flat/adjudicator",
+      "authority": "authority://deli-forecast-flat/adjudicate",
       "alternatives": [
-        "accept-batch",
-        "reject-batch-return",
-        "rework-partial-credit",
-        "conditional-accept-with-guarantee",
+        "accept-customer-refund",
+        "accept-company-full-payment",
+        "partial-settlement",
+        "conditional-resolution",
         "request-more-evidence",
         "escalate",
-        "unresolved"
+        "unresolved",
+        "external-adjudication"
       ],
-      "confidence": 0.6,
-      "expected_outcome": "resolve conflict",
-      "actual_outcome": "unresolved",
+      "confidence": 0.8,
+      "evidence": [
+        "evidence://deli-forecast-flat/gps-arrival",
+        "evidence://deli-forecast-flat/arrival-receipt",
+        "evidence://deli-forecast-flat/third-party-verification",
+        "evidence://deli-forecast-flat/supplier-shipping"
+      ],
+      "expected_outcome": "partial-settlement",
+      "actual_outcome": "partial-settlement",
       "detail": {
-        "determination": "UNRESOLVED",
-        "epistemic_state": "INSUFFICIENT_EVIDENCE",
-        "reason": "no admissible source reaches the configured sufficiency threshold; awarding either side is not justified by the basis"
+        "determination": "partial-settlement",
+        "machine_eligible_best": "partial-settlement"
       },
-      "made_at": "2026-09-01T02:20:32Z"
+      "made_at": "2026-09-01T03:13:36Z"
+    },
+    {
+      "uri": "evidence://deli-forecast-flat/learning-note",
+      "kind": "RECORD",
+      "source": "post-resolution-postmortem",
+      "captured_at": "2026-09-01T03:13:36Z",
+      "verity": {
+        "procedure": "postmortem",
+        "confidence": 0.6
+      },
+      "reliability": 0.6,
+      "about": "what was learned",
+      "supports": null,
+      "learning": "conflicting delivery timestamps reach a determination only via an authorized adjudicator + independent anchored verification, not the single-source verifier"
+    },
+    {
+      "uri": "metric://deli-forecast-flat/m-on-time",
+      "actual": 0.96,
+      "variance": 0.01,
+      "points": [
+        {
+          "period": 1,
+          "expected": 0.95,
+          "target": 0.95,
+          "actual": 0.96,
+          "variance": 0.01
+        },
+        {
+          "period": 2,
+          "expected": 0.95,
+          "target": 0.95,
+          "actual": 0.97,
+          "variance": 0.02
+        },
+        {
+          "period": 3,
+          "expected": 0.95,
+          "target": 0.95,
+          "actual": 0.96,
+          "variance": 0.01
+        },
+        {
+          "period": 4,
+          "expected": 0.95,
+          "target": 0.95,
+          "actual": 0.96,
+          "variance": 0.01
+        }
+      ],
+      "name": "resolution on-time rate",
+      "formula": "on-time resolutions / total resolutions from ledger",
+      "unit": "fraction",
+      "target": 0.95,
+      "period": "quarter",
+      "source": "ledger resolution completion records",
+      "owner": "person://deli-forecast-flat/adjudicator"
     }
   ]
 }

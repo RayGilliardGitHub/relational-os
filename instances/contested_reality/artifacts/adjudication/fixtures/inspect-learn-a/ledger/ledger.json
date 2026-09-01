@@ -1,0 +1,1026 @@
+{
+  "uri": "db://ledger/adjudication-inspect-2026",
+  "head_hash": "7c12c55ba098d1e9bd1bf2157f5de2dd54a699cc9cc97c6e1bda3b94277cbe34",
+  "entries": [
+    {
+      "uri": "event://inspect-learn-a/seed-trust",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-inspect-learn-a-seed-trust",
+      "correlation_id": "corr-adj-inspect-learn-a-seed-trust",
+      "causation_id": "ev-adj-inspect-learn-a-seed-trust-prev",
+      "idempotency_key": "idem-adj-inspect-learn-a-seed-trust",
+      "signature": "signed-by-person://inspect/registrar",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/registrar",
+      "detail": "seed scoped trust before the episode",
+      "state_update": [
+        {
+          "uri": "trust://inspect-learn-a/claimant",
+          "subject": "person://inspect/registrar",
+          "target": "org://inspect/buyer",
+          "claim": "honest dispute participant",
+          "score": 0.8,
+          "context": "relationship://inspect-learn-a/x",
+          "evidence": []
+        }
+      ],
+      "hash": "a6c0e08b1e6117974e592db6d0b5ffc43d73d0277d9289a3d565b76461d745db"
+    },
+    {
+      "uri": "event://inspect-learn-a/provision",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-provision-100",
+      "correlation_id": "corr-adj-provision",
+      "causation_id": "ev-adj-prev-100",
+      "idempotency_key": "idem-adj-provision-100",
+      "signature": "signed-by-person://inspect/registrar",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/registrar",
+      "detail": "provision actors, relationships, obligations, adjudicator+appeal authority, appeal right",
+      "state_update": [
+        {
+          "uri": "org://inspect/buyer",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://inspect/company",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://inspect/supplier",
+          "type": "ORG"
+        },
+        {
+          "uri": "person://inspect/registrar",
+          "type": "PERSON"
+        },
+        {
+          "uri": "person://inspect/adjudicator",
+          "type": "PERSON"
+        },
+        {
+          "uri": "person://inspect/appeal",
+          "type": "PERSON"
+        },
+        {
+          "uri": "system://inspect/verify",
+          "type": "SYSTEM"
+        },
+        {
+          "uri": "relationship://inspect/qc-contract",
+          "status": "ACTIVE",
+          "participants": [
+            "org://inspect/buyer",
+            "org://inspect/company"
+          ],
+          "roles": {
+            "org://inspect/buyer": [
+              "client"
+            ],
+            "org://inspect/company": [
+              "inspector"
+            ]
+          },
+          "purpose": "independent batch inspection + acceptance decision"
+        },
+        {
+          "uri": "relationship://inspect/supply-contract",
+          "status": "ACTIVE",
+          "participants": [
+            "org://inspect/supplier",
+            "org://inspect/buyer"
+          ],
+          "roles": {
+            "org://inspect/supplier": [
+              "supplier"
+            ],
+            "org://inspect/buyer": [
+              "receiver"
+            ]
+          },
+          "purpose": "goods supply subject to QC acceptance"
+        },
+        {
+          "uri": "obligation://inspect/inspect-due",
+          "subject": "org://inspect/company",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "declare pass/fail on the batch by the acceptance deadline",
+          "due_by": "2026-10-15T00:00:00-06:00"
+        },
+        {
+          "uri": "obligation://inspect/accept-due",
+          "subject": "org://inspect/buyer",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "accept a conforming batch and pay upon acceptance",
+          "due_by": "2026-11-30T00:00:00-06:00"
+        },
+        {
+          "uri": "authority://inspect/adjudicate",
+          "holder": "person://inspect/adjudicator",
+          "grants": [
+            "adjudicate"
+          ],
+          "roles": [
+            "adjudicator"
+          ]
+        },
+        {
+          "uri": "authority://inspect/adjudicate-appeal",
+          "holder": "person://inspect/appeal",
+          "grants": [
+            "adjudicate_appeal"
+          ],
+          "roles": [
+            "appeal-adjudicator"
+          ]
+        },
+        {
+          "uri": "right://inspect/buyer-appeal",
+          "holder": "org://inspect/buyer",
+          "type": "APPEAL",
+          "subject": "DUPLICATE",
+          "scope": [
+            "obligation://inspect/inspect-due"
+          ],
+          "purpose": "right to appeal the determination"
+        }
+      ],
+      "hash": "e6b8a5f760c8c557c31d4fca6f075782110747f245b0036ae4d1fc2a48c9f068"
+    },
+    {
+      "uri": "event://inspect-learn-a/claims",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-claims-101",
+      "correlation_id": "corr-adj-claims",
+      "causation_id": "ev-adj-prev-101",
+      "idempotency_key": "idem-adj-claims-101",
+      "signature": "signed-by-person://inspect/registrar",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/registrar",
+      "detail": "record 2 conflicting claims",
+      "state_update": [
+        {
+          "uri": "claim://inspect-la/passed",
+          "proposer": "org://inspect/company",
+          "statement": "batch alpha passed QC inspection; the automated machine pass signal and an independent auditor's sign-off both support acceptance.",
+          "evidence": [
+            "evidence://inspect-la/machine-pass",
+            "evidence://inspect-la/audit-signoff"
+          ],
+          "epistemic_status": "claimed"
+        },
+        {
+          "uri": "claim://inspect-la/failed",
+          "proposer": "org://inspect/buyer",
+          "statement": "batch alpha failed inspection; a resident inspector's signed note records a defect.",
+          "evidence": [
+            "evidence://inspect-la/resident-note"
+          ],
+          "epistemic_status": "claimed"
+        }
+      ],
+      "hash": "c5ef57094a0b1e3291afa324fcb01c34f263933b84d656ef14ab1a84de4ec21d"
+    },
+    {
+      "uri": "event://inspect-learn-a/evidence",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-evidence-102",
+      "correlation_id": "corr-adj-evidence",
+      "causation_id": "ev-adj-prev-102",
+      "idempotency_key": "idem-adj-evidence-102",
+      "signature": "signed-by-person://inspect/registrar",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/registrar",
+      "detail": "record conflicting evidence with provenance + reliability",
+      "state_update": [
+        {
+          "uri": "evidence://inspect-la/machine-pass",
+          "kind": "ANCHORED",
+          "source": "automated-inspection-livestate",
+          "captured_at": "2026-08-29T10:00:00-06:00",
+          "verity": {
+            "procedure": "machine-inspection-log",
+            "confidence": 0.85
+          },
+          "reliability": 0.92,
+          "about": "automated pass signal for batch alpha",
+          "supports": "claim://inspect-la/passed"
+        },
+        {
+          "uri": "evidence://inspect-la/audit-signoff",
+          "kind": "RECORD",
+          "source": "annual-auditor-sign-off",
+          "captured_at": "2026-07-10T09:00:00-06:00",
+          "verity": {
+            "procedure": "independent-audit",
+            "confidence": 0.95
+          },
+          "reliability": 0.97,
+          "about": "auditor sign-off on batch alpha",
+          "supports": "claim://inspect-la/passed"
+        },
+        {
+          "uri": "evidence://inspect-la/resident-note",
+          "kind": "TESTIMONY",
+          "source": "resident-inspector-testimony",
+          "captured_at": "2026-08-30T14:00:00-06:00",
+          "verity": {
+            "procedure": "signed-inspection-note",
+            "confidence": 0.9
+          },
+          "reliability": 0.9,
+          "about": "resident inspector's defect finding",
+          "supports": "claim://inspect-la/failed"
+        }
+      ],
+      "hash": "aadb34ebfa61714e0e8d98a766252568df5cade505670dcc2189640ff7a69556"
+    },
+    {
+      "uri": "event://inspect-learn-a/claim-advance",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-claim-advance-103",
+      "correlation_id": "corr-adj-claim-advance",
+      "causation_id": "ev-adj-prev-103",
+      "idempotency_key": "idem-adj-claim-advance-103",
+      "signature": "signed-by-person://inspect/registrar",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/registrar",
+      "detail": "evidence attaches -> claim disputed",
+      "state_update": [
+        {
+          "uri": "claim://inspect-la/passed",
+          "proposer": "org://inspect/company",
+          "statement": "batch alpha passed QC inspection; the automated machine pass signal and an independent auditor's sign-off both support acceptance.",
+          "evidence": [
+            "evidence://inspect-la/machine-pass",
+            "evidence://inspect-la/audit-signoff"
+          ],
+          "epistemic_status": "disputed"
+        }
+      ],
+      "hash": "50f0311fb8554246c9677976bf1fc625adba11580855862327af452ab6bc7d01"
+    },
+    {
+      "uri": "event://inspect-learn-a/claim-advance",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-claim-advance-104",
+      "correlation_id": "corr-adj-claim-advance",
+      "causation_id": "ev-adj-prev-104",
+      "idempotency_key": "idem-adj-claim-advance-104",
+      "signature": "signed-by-person://inspect/registrar",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/registrar",
+      "detail": "evidence attaches -> claim disputed",
+      "state_update": [
+        {
+          "uri": "claim://inspect-la/failed",
+          "proposer": "org://inspect/buyer",
+          "statement": "batch alpha failed inspection; a resident inspector's signed note records a defect.",
+          "evidence": [
+            "evidence://inspect-la/resident-note"
+          ],
+          "epistemic_status": "disputed"
+        }
+      ],
+      "hash": "d0a663f376e041b9f13ee6419c7a238c3bb9a2e4fad535fb38b5fe4d3a684de9"
+    },
+    {
+      "uri": "event://inspect-learn-a/open-dispute",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-open-dispute-105",
+      "correlation_id": "corr-adj-open-dispute",
+      "causation_id": "ev-adj-prev-105",
+      "idempotency_key": "idem-adj-open-dispute-105",
+      "signature": "signed-by-person://inspect/registrar",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/registrar",
+      "detail": "dispute OPEN with parties/about + additive lifecycle/epistemic + resolutions",
+      "state_update": [
+        {
+          "uri": "dispute://inspect-la/batch-alpha",
+          "about": "obligation://inspect/inspect-due",
+          "parties": [
+            "org://inspect/buyer",
+            "org://inspect/company",
+            "org://inspect/supplier"
+          ],
+          "status": "OPEN",
+          "fin_impact_usd": 54000,
+          "deadline_ref": "QC acceptance decision within 10 business days",
+          "interest_blocks": {
+            "buyer": "take only a conforming batch; avoid a defective line",
+            "company": "protect its inspection reputation; bill only for passed work",
+            "supplier": "not blamed for a batch the inspection cleared"
+          },
+          "constraint_blocks": {
+            "irreversible": "rejecting/returning the whole batch is irreversible/unknown-cost -> \u00a76 floor; accepting an unproven defective line is an unknown-cost roll-out risk -> \u00a76 floor"
+          },
+          "lifecycle_state": "OPEN",
+          "epistemic_state": "UNDETERMINED",
+          "determination": null,
+          "resolution_type": null,
+          "reopened": false,
+          "available_resolutions": [
+            "accept-batch",
+            "reject-batch-return",
+            "rework-partial-credit",
+            "conditional-accept-with-guarantee",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://inspect-la/passed": 0.97,
+              "claim://inspect-la/failed": 0.9
+            }
+          }
+        }
+      ],
+      "hash": "5d9df9d9a2c7a017ded168e2c678c4e85702a7cba4d2f05ffda5ecc85459f5a1"
+    },
+    {
+      "uri": "event://inspect-learn-a/lifecycle-advance",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-lifecycle-advance-106",
+      "correlation_id": "corr-adj-lifecycle-advance",
+      "causation_id": "ev-adj-prev-106",
+      "idempotency_key": "idem-adj-lifecycle-advance-106",
+      "signature": "signed-by-person://inspect/registrar",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/registrar",
+      "detail": "conflicting evidence gathered -> EVIDENCE_COLLECTION -> CONTESTED",
+      "state_update": [
+        {
+          "uri": "dispute://inspect-la/batch-alpha",
+          "about": "obligation://inspect/inspect-due",
+          "parties": [
+            "org://inspect/buyer",
+            "org://inspect/company",
+            "org://inspect/supplier"
+          ],
+          "status": "OPEN",
+          "fin_impact_usd": 54000,
+          "deadline_ref": "QC acceptance decision within 10 business days",
+          "interest_blocks": {
+            "buyer": "take only a conforming batch; avoid a defective line",
+            "company": "protect its inspection reputation; bill only for passed work",
+            "supplier": "not blamed for a batch the inspection cleared"
+          },
+          "constraint_blocks": {
+            "irreversible": "rejecting/returning the whole batch is irreversible/unknown-cost -> \u00a76 floor; accepting an unproven defective line is an unknown-cost roll-out risk -> \u00a76 floor"
+          },
+          "lifecycle_state": "EVIDENCE_COLLECTION",
+          "epistemic_state": "UNDETERMINED",
+          "determination": null,
+          "resolution_type": null,
+          "reopened": false,
+          "available_resolutions": [
+            "accept-batch",
+            "reject-batch-return",
+            "rework-partial-credit",
+            "conditional-accept-with-guarantee",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://inspect-la/passed": 0.97,
+              "claim://inspect-la/failed": 0.9
+            }
+          }
+        },
+        {
+          "uri": "dispute://inspect-la/batch-alpha",
+          "about": "obligation://inspect/inspect-due",
+          "parties": [
+            "org://inspect/buyer",
+            "org://inspect/company",
+            "org://inspect/supplier"
+          ],
+          "status": "OPEN",
+          "fin_impact_usd": 54000,
+          "deadline_ref": "QC acceptance decision within 10 business days",
+          "interest_blocks": {
+            "buyer": "take only a conforming batch; avoid a defective line",
+            "company": "protect its inspection reputation; bill only for passed work",
+            "supplier": "not blamed for a batch the inspection cleared"
+          },
+          "constraint_blocks": {
+            "irreversible": "rejecting/returning the whole batch is irreversible/unknown-cost -> \u00a76 floor; accepting an unproven defective line is an unknown-cost roll-out risk -> \u00a76 floor"
+          },
+          "lifecycle_state": "CONTESTED",
+          "epistemic_state": "UNDETERMINED",
+          "determination": null,
+          "resolution_type": null,
+          "reopened": false,
+          "available_resolutions": [
+            "accept-batch",
+            "reject-batch-return",
+            "rework-partial-credit",
+            "conditional-accept-with-guarantee",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://inspect-la/passed": 0.97,
+              "claim://inspect-la/failed": 0.9
+            }
+          }
+        }
+      ],
+      "hash": "1d5b7d7414f6b4ae2f26145e5a6404f18f4a3a1717f4843b12605399cbba462c"
+    },
+    {
+      "uri": "event://inspect-learn-a/agent-advisory",
+      "type": "DECISION",
+      "event_id": "ev-adj-agent-advisory-107",
+      "correlation_id": "corr-adj-agent-advisory",
+      "causation_id": "ev-adj-prev-107",
+      "idempotency_key": "idem-adj-agent-advisory-107",
+      "signature": "signed-by-person://inspect/registrar",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/registrar",
+      "detail": "AI/machine advisory on options (contained: informational only)",
+      "state_update": [
+        {
+          "uri": "decision://inspect-learn-a/agent-advisory",
+          "by": "person://inspect/registrar",
+          "authority": "authority://inspect/adjudicate",
+          "alternatives": [
+            "accept-batch",
+            "reject-batch-return",
+            "rework-partial-credit",
+            "conditional-accept-with-guarantee",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ],
+          "confidence": 0.7,
+          "expected_outcome": "inform determination",
+          "actual_outcome": "rework-partial-credit",
+          "detail": {
+            "ranking": [
+              {
+                "option": "rework-partial-credit",
+                "utility": 0.645,
+                "floor_gated": false
+              },
+              {
+                "option": "conditional-accept-with-guarantee",
+                "utility": 0.61,
+                "floor_gated": false
+              },
+              {
+                "option": "accept-batch",
+                "utility": 0.515,
+                "floor_gated": true
+              },
+              {
+                "option": "unresolved",
+                "utility": 0.5,
+                "floor_gated": false
+              },
+              {
+                "option": "request-more-evidence",
+                "utility": 0.465,
+                "floor_gated": false
+              },
+              {
+                "option": "escalate",
+                "utility": 0.41,
+                "floor_gated": false
+              },
+              {
+                "option": "reject-batch-return",
+                "utility": 0.07,
+                "floor_gated": true
+              }
+            ],
+            "machine_eligible_best": {
+              "option": "rework-partial-credit",
+              "utility": 0.645,
+              "floor_gated": false
+            },
+            "tradeoff": "trade-off[inspection; business-model {'evidence_compliance': 0.35, 'cost': 0.25, 'relationship': 0.2, 'schedule': 0.2}]\n  0.645  rework-partial-credit\n  0.610  conditional-accept-with-guarantee\n  0.515  accept-batch FLOOR-GATED\n  0.500  unresolved\n  0.465  request-more-evidence\n  0.410  escalate\n  0.070  reject-batch-return FLOOR-GATED\n  => machine-eligible best (non-gated): rework-partial-credit (gated: ['accept-batch', 'reject-batch-return'])"
+          },
+          "made_at": "2026-09-01T03:13:36Z"
+        }
+      ],
+      "hash": "948522baa80541a143b13dbaa471628fde1219ea70c7a59a98363ee811e5036a"
+    },
+    {
+      "uri": "event://inspect-learn-a/adjudicate",
+      "type": "DECISION",
+      "event_id": "ev-adj-adjudicate-108",
+      "correlation_id": "corr-adj-adjudicate",
+      "causation_id": "ev-adj-prev-108",
+      "idempotency_key": "idem-adj-adjudicate-108",
+      "signature": "signed-by-person://inspect/adjudicator",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/adjudicator",
+      "detail": "authorized human determination: rework-partial-credit (ranking in view)",
+      "state_update": [
+        {
+          "uri": "decision://inspect-learn-a/determination",
+          "by": "person://inspect/adjudicator",
+          "authority": "authority://inspect/adjudicate",
+          "alternatives": [
+            "accept-batch",
+            "reject-batch-return",
+            "rework-partial-credit",
+            "conditional-accept-with-guarantee",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ],
+          "confidence": 0.8,
+          "evidence": [
+            "evidence://inspect-la/machine-pass",
+            "evidence://inspect-la/audit-signoff",
+            "evidence://inspect-la/resident-note"
+          ],
+          "expected_outcome": "rework-partial-credit",
+          "actual_outcome": "rework-partial-credit",
+          "detail": {
+            "determination": "rework-partial-credit",
+            "machine_eligible_best": "rework-partial-credit"
+          },
+          "made_at": "2026-09-01T03:13:36Z"
+        },
+        {
+          "uri": "dispute://inspect-la/batch-alpha",
+          "about": "obligation://inspect/inspect-due",
+          "parties": [
+            "org://inspect/buyer",
+            "org://inspect/company",
+            "org://inspect/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "fin_impact_usd": 54000,
+          "deadline_ref": "QC acceptance decision within 10 business days",
+          "interest_blocks": {
+            "buyer": "take only a conforming batch; avoid a defective line",
+            "company": "protect its inspection reputation; bill only for passed work",
+            "supplier": "not blamed for a batch the inspection cleared"
+          },
+          "constraint_blocks": {
+            "irreversible": "rejecting/returning the whole batch is irreversible/unknown-cost -> \u00a76 floor; accepting an unproven defective line is an unknown-cost roll-out risk -> \u00a76 floor"
+          },
+          "lifecycle_state": "ADJUDICATION",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "rework-partial-credit",
+          "resolution_type": "rework-partial-credit",
+          "reopened": false,
+          "available_resolutions": [
+            "accept-batch",
+            "reject-batch-return",
+            "rework-partial-credit",
+            "conditional-accept-with-guarantee",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://inspect-la/passed": 0.97,
+              "claim://inspect-la/failed": 0.9
+            }
+          }
+        }
+      ],
+      "hash": "832849648108760eb9326379cbc76c2369d492e1424f1645161e0923b1e7a6cd"
+    },
+    {
+      "uri": "event://inspect-learn-a/resolution",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-resolution-109",
+      "correlation_id": "corr-adj-resolution",
+      "causation_id": "ev-adj-prev-109",
+      "idempotency_key": "idem-adj-resolution-109",
+      "signature": "signed-by-person://inspect/adjudicator",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/adjudicator",
+      "detail": "resolution rework-partial-credit executed -> ACCEPTED -> EXECUTED",
+      "state_update": [
+        {
+          "uri": "dispute://inspect-la/batch-alpha",
+          "about": "obligation://inspect/inspect-due",
+          "parties": [
+            "org://inspect/buyer",
+            "org://inspect/company",
+            "org://inspect/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "fin_impact_usd": 54000,
+          "deadline_ref": "QC acceptance decision within 10 business days",
+          "interest_blocks": {
+            "buyer": "take only a conforming batch; avoid a defective line",
+            "company": "protect its inspection reputation; bill only for passed work",
+            "supplier": "not blamed for a batch the inspection cleared"
+          },
+          "constraint_blocks": {
+            "irreversible": "rejecting/returning the whole batch is irreversible/unknown-cost -> \u00a76 floor; accepting an unproven defective line is an unknown-cost roll-out risk -> \u00a76 floor"
+          },
+          "lifecycle_state": "RESOLUTION",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "rework-partial-credit",
+          "resolution_type": "rework-partial-credit",
+          "reopened": false,
+          "available_resolutions": [
+            "accept-batch",
+            "reject-batch-return",
+            "rework-partial-credit",
+            "conditional-accept-with-guarantee",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://inspect-la/passed": 0.97,
+              "claim://inspect-la/failed": 0.9
+            }
+          }
+        },
+        {
+          "uri": "dispute://inspect-la/batch-alpha",
+          "about": "obligation://inspect/inspect-due",
+          "parties": [
+            "org://inspect/buyer",
+            "org://inspect/company",
+            "org://inspect/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "fin_impact_usd": 54000,
+          "deadline_ref": "QC acceptance decision within 10 business days",
+          "interest_blocks": {
+            "buyer": "take only a conforming batch; avoid a defective line",
+            "company": "protect its inspection reputation; bill only for passed work",
+            "supplier": "not blamed for a batch the inspection cleared"
+          },
+          "constraint_blocks": {
+            "irreversible": "rejecting/returning the whole batch is irreversible/unknown-cost -> \u00a76 floor; accepting an unproven defective line is an unknown-cost roll-out risk -> \u00a76 floor"
+          },
+          "lifecycle_state": "ACCEPTED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "rework-partial-credit",
+          "resolution_type": "rework-partial-credit",
+          "reopened": false,
+          "available_resolutions": [
+            "accept-batch",
+            "reject-batch-return",
+            "rework-partial-credit",
+            "conditional-accept-with-guarantee",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://inspect-la/passed": 0.97,
+              "claim://inspect-la/failed": 0.9
+            }
+          }
+        },
+        {
+          "uri": "dispute://inspect-la/batch-alpha",
+          "about": "obligation://inspect/inspect-due",
+          "parties": [
+            "org://inspect/buyer",
+            "org://inspect/company",
+            "org://inspect/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "fin_impact_usd": 54000,
+          "deadline_ref": "QC acceptance decision within 10 business days",
+          "interest_blocks": {
+            "buyer": "take only a conforming batch; avoid a defective line",
+            "company": "protect its inspection reputation; bill only for passed work",
+            "supplier": "not blamed for a batch the inspection cleared"
+          },
+          "constraint_blocks": {
+            "irreversible": "rejecting/returning the whole batch is irreversible/unknown-cost -> \u00a76 floor; accepting an unproven defective line is an unknown-cost roll-out risk -> \u00a76 floor"
+          },
+          "lifecycle_state": "EXECUTED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "rework-partial-credit",
+          "resolution_type": "rework-partial-credit",
+          "reopened": false,
+          "available_resolutions": [
+            "accept-batch",
+            "reject-batch-return",
+            "rework-partial-credit",
+            "conditional-accept-with-guarantee",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://inspect-la/passed": 0.97,
+              "claim://inspect-la/failed": 0.9
+            }
+          },
+          "resolution_outcome": "batch alpha accepted with a documented partial rework; the determination held at a realized value of 0.90 (a 10% rework), which is BELOW the reconcile threshold it was driven under."
+        }
+      ],
+      "hash": "2ce0d33b0ae0e121b9fe939c633f0a6e8ba2eeda6fbcea09ba8f303d7877fb5a"
+    },
+    {
+      "uri": "event://inspect-learn-a/verify",
+      "type": "DECISION",
+      "event_id": "ev-adj-verify-110",
+      "correlation_id": "corr-adj-verify",
+      "causation_id": "ev-adj-prev-110",
+      "idempotency_key": "idem-adj-verify-110",
+      "signature": "signed-by-system://inspect/verify",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "system://inspect/verify",
+      "detail": "outcome verification on completed execution -> VERIFIED -> CLOSED",
+      "state_update": [
+        {
+          "uri": "dispute://inspect-la/batch-alpha",
+          "about": "obligation://inspect/inspect-due",
+          "parties": [
+            "org://inspect/buyer",
+            "org://inspect/company",
+            "org://inspect/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "fin_impact_usd": 54000,
+          "deadline_ref": "QC acceptance decision within 10 business days",
+          "interest_blocks": {
+            "buyer": "take only a conforming batch; avoid a defective line",
+            "company": "protect its inspection reputation; bill only for passed work",
+            "supplier": "not blamed for a batch the inspection cleared"
+          },
+          "constraint_blocks": {
+            "irreversible": "rejecting/returning the whole batch is irreversible/unknown-cost -> \u00a76 floor; accepting an unproven defective line is an unknown-cost roll-out risk -> \u00a76 floor"
+          },
+          "lifecycle_state": "VERIFIED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "rework-partial-credit",
+          "resolution_type": "rework-partial-credit",
+          "reopened": false,
+          "available_resolutions": [
+            "accept-batch",
+            "reject-batch-return",
+            "rework-partial-credit",
+            "conditional-accept-with-guarantee",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://inspect-la/passed": 0.97,
+              "claim://inspect-la/failed": 0.9
+            }
+          },
+          "resolution_outcome": "batch alpha accepted with a documented partial rework; the determination held at a realized value of 0.90 (a 10% rework), which is BELOW the reconcile threshold it was driven under."
+        },
+        {
+          "uri": "dispute://inspect-la/batch-alpha",
+          "about": "obligation://inspect/inspect-due",
+          "parties": [
+            "org://inspect/buyer",
+            "org://inspect/company",
+            "org://inspect/supplier"
+          ],
+          "status": "RESOLVED",
+          "fin_impact_usd": 54000,
+          "deadline_ref": "QC acceptance decision within 10 business days",
+          "interest_blocks": {
+            "buyer": "take only a conforming batch; avoid a defective line",
+            "company": "protect its inspection reputation; bill only for passed work",
+            "supplier": "not blamed for a batch the inspection cleared"
+          },
+          "constraint_blocks": {
+            "irreversible": "rejecting/returning the whole batch is irreversible/unknown-cost -> \u00a76 floor; accepting an unproven defective line is an unknown-cost roll-out risk -> \u00a76 floor"
+          },
+          "lifecycle_state": "CLOSED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "rework-partial-credit",
+          "resolution_type": "rework-partial-credit",
+          "reopened": false,
+          "available_resolutions": [
+            "accept-batch",
+            "reject-batch-return",
+            "rework-partial-credit",
+            "conditional-accept-with-guarantee",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://inspect-la/passed": 0.97,
+              "claim://inspect-la/failed": 0.9
+            }
+          },
+          "resolution_outcome": "batch alpha accepted with a documented partial rework; the determination held at a realized value of 0.90 (a 10% rework), which is BELOW the reconcile threshold it was driven under.",
+          "verified": true
+        }
+      ],
+      "hash": "c7ad9ee44c4f08a7dcb841f23022032c6099e9dce92988c39d98b23c40e819be"
+    },
+    {
+      "uri": "event://inspect-learn-a/learn",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-learn-111",
+      "correlation_id": "corr-adj-learn",
+      "causation_id": "ev-adj-prev-111",
+      "idempotency_key": "idem-adj-learn-111",
+      "signature": "signed-by-person://inspect/registrar",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/registrar",
+      "detail": "organizational learning: recorded",
+      "state_update": [
+        {
+          "uri": "evidence://inspect-learn-a/learning-note",
+          "kind": "RECORD",
+          "source": "post-resolution-postmortem",
+          "captured_at": "2026-09-01T03:13:36Z",
+          "verity": {
+            "procedure": "postmortem",
+            "confidence": 0.6
+          },
+          "reliability": 0.6,
+          "about": "what was learned",
+          "supports": null,
+          "learning": "reliability alone is ambiguous here (fails only if the reconciliation rule admits the resident testimony vs demands anchored-only vs recency-decays the old audit); the adjudicator must state which rule the determination is reached under"
+        }
+      ],
+      "hash": "de3f32fac7c414fb7156b661457def169ce1e7f4ef474afaa3287dbd4b3fd3ef"
+    },
+    {
+      "uri": "event://inspect-learn-a/realized-outcome",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-inspect-learn-a-realized-outcome",
+      "correlation_id": "corr-adj-inspect-learn-a-realized-outcome",
+      "causation_id": "ev-adj-inspect-learn-a-realized-outcome-prev",
+      "idempotency_key": "idem-adj-inspect-learn-a-realized-outcome",
+      "signature": "signed-by-person://inspect/adjudicator",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/adjudicator",
+      "detail": "realized outcome of the adjudication recorded for reconcile-rule learning",
+      "state_update": [
+        {
+          "uri": "dispute://inspect-la/batch-alpha",
+          "about": "obligation://inspect/inspect-due",
+          "parties": [
+            "org://inspect/buyer",
+            "org://inspect/company",
+            "org://inspect/supplier"
+          ],
+          "status": "RESOLVED",
+          "fin_impact_usd": 54000,
+          "deadline_ref": "QC acceptance decision within 10 business days",
+          "interest_blocks": {
+            "buyer": "take only a conforming batch; avoid a defective line",
+            "company": "protect its inspection reputation; bill only for passed work",
+            "supplier": "not blamed for a batch the inspection cleared"
+          },
+          "constraint_blocks": {
+            "irreversible": "rejecting/returning the whole batch is irreversible/unknown-cost -> \u00a76 floor; accepting an unproven defective line is an unknown-cost roll-out risk -> \u00a76 floor"
+          },
+          "lifecycle_state": "CLOSED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "rework-partial-credit",
+          "resolution_type": "rework-partial-credit",
+          "reopened": false,
+          "available_resolutions": [
+            "accept-batch",
+            "reject-batch-return",
+            "rework-partial-credit",
+            "conditional-accept-with-guarantee",
+            "request-more-evidence",
+            "escalate",
+            "unresolved"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://inspect-la/passed": 0.97,
+              "claim://inspect-la/failed": 0.9
+            }
+          },
+          "resolution_outcome": "batch alpha accepted with a documented partial rework; the determination held at a realized value of 0.90 (a 10% rework), which is BELOW the reconcile threshold it was driven under.",
+          "verified": true,
+          "realized_value": 0.9,
+          "realized_why": "post-execution verified outcome value (0..1) of the adopted determination"
+        },
+        {
+          "uri": "evidence://inspect-learn-a/realized-outcome-note",
+          "kind": "RECORD",
+          "source": "verified-outcome-capture",
+          "captured_at": "2026-09-01T03:13:36Z",
+          "verity": {
+            "procedure": "outcome-capture",
+            "confidence": 0.7
+          },
+          "reliability": 0.7,
+          "about": "realized outcome value as recorded",
+          "supports": null,
+          "learning": "realized outcome captured additively for the reconcile-rule learning step"
+        }
+      ],
+      "hash": "4ce8d1752e59ba6e1ef822d802eb1d7d278896a935225385991c56fa715e8224"
+    },
+    {
+      "uri": "event://inspect-learn-a/reconcile-learning",
+      "type": "DECISION",
+      "event_id": "ev-adj-inspect-learn-a-reconcile-learning",
+      "correlation_id": "corr-adj-inspect-learn-a-reconcile-learning",
+      "causation_id": "ev-adj-inspect-learn-a-reconcile-learning-prev",
+      "idempotency_key": "idem-adj-inspect-learn-a-reconcile-learning",
+      "signature": "signed-by-person://inspect/adjudicator",
+      "occurred_at": "2026-09-01T03:13:36Z",
+      "actor": "person://inspect/adjudicator",
+      "detail": "decision learning at the reconciliation layer: a NEW rule:// + decision:// appended to the immutable ledger (history not rewritten)",
+      "state_update": [
+        {
+          "uri": "rule://inspect-learn-a/reconcile-rule",
+          "kind": "PROCEDURE",
+          "text": "evidence-reconciliation threshold procedure for org inspect-learn-a: supported claims reach DETERMINED at support >= threshold `0.910` (aggregate `max` over `reliability`), support_floor 0.55; recalibrated from a realized outcome.",
+          "applies_to": "obligation://inspect-learn-a/inspect-due",
+          "learned_param": "threshold",
+          "learned_threshold": 0.91,
+          "prior_threshold": 0.95,
+          "learned_from": "decision://inspect-learn-a/reconcile-learning",
+          "calibrated_from": {
+            "realized_value": 0.9,
+            "variance_delta": -0.04
+          },
+          "bound": [
+            0.55,
+            0.95
+          ],
+          "why": "reconcile threshold recalibrated lowered (relaxed: the bar demanded more than realized determinations held): prior 0.950 -> 0.910 from a realized outcome value 0.900 (variance signal -0.040, learning_rate 0.8), clamp-bounded to [0.55, 0.95]",
+          "prior_reconcile": {
+            "rule": "best-reliability-threshold",
+            "threshold": 0.95,
+            "support_floor": 0.55
+          }
+        },
+        {
+          "uri": "decision://inspect-learn-a/reconcile-learning",
+          "by": "person://inspect/adjudicator",
+          "authority": "authority://inspect/adjudicate",
+          "alternatives": [
+            "adopt-learned-rule",
+            "keep-prior-rule",
+            "reject-learning"
+          ],
+          "rules_applied": [
+            "rule://inspect-learn-a/reconcile-rule"
+          ],
+          "confidence": 0.8,
+          "expected_outcome": "change future reconcile-determination policy",
+          "actual_outcome": "rule recorded for reuse; determination for the current dispute is UNCHANGED and remains the \u00a76 human's call",
+          "evidence": [
+            "evidence://inspect-learn-a/realized-outcome-note"
+          ],
+          "detail": {
+            "learning": "the reconcile threshold is recalibrated toward the realized outcome",
+            "prior_threshold": 0.95,
+            "learned_threshold": 0.91,
+            "realized_value": 0.9,
+            "delta": -0.04,
+            "bound": [
+              0.55,
+              0.95
+            ],
+            "why": "reconcile threshold recalibrated lowered (relaxed: the bar demanded more than realized determinations held): prior 0.950 -> 0.910 from a realized outcome value 0.900 (variance signal -0.040, learning_rate 0.8), clamp-bounded to [0.55, 0.95]",
+            "contained": "Trust (S5 only) and determination_policy (the \u00a76 human's call) are untouched; history is never rewritten (this is an append)."
+          },
+          "made_at": "2026-09-01T03:13:36Z"
+        }
+      ],
+      "hash": "7c12c55ba098d1e9bd1bf2157f5de2dd54a699cc9cc97c6e1bda3b94277cbe34"
+    }
+  ]
+}

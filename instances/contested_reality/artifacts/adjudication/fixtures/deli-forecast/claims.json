@@ -1,0 +1,30 @@
+[
+  {
+    "uri": "claim://deli-forecast/late",
+    "proposer": "org://deli-forecast/customer",
+    "statement": "the contracted service was NOT delivered on time; signed receipt 16:15 past the 16:00 deadline \u2014 we should not pay for the late delivery.",
+    "evidence": [
+      "evidence://deli-forecast/arrival-receipt",
+      "evidence://deli-forecast/gps-arrival"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli-forecast/delivered",
+    "proposer": "org://deli-forecast/company",
+    "statement": "the contracted service WAS delivered and is payable; an independent anchored verification confirms delivery liveness.",
+    "evidence": [
+      "evidence://deli-forecast/third-party-verification"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli-forecast/shipped",
+    "proposer": "org://deli-forecast/supplier",
+    "statement": "we shipped the consignment on time.",
+    "evidence": [
+      "evidence://deli-forecast/supplier-shipping"
+    ],
+    "epistemic_status": "disputed"
+  }
+]

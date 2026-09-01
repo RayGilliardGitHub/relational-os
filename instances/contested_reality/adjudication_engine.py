@@ -634,3 +634,677 @@ def emit_fixtures(sub: Substrate, outdir: Path, cfg: dict) -> None:
         {"uri": rel["uri"], "states": ["PROPOSED", "ACTIVE"]}, indent=2))
     gd = ART / "graph"; gd.mkdir(parents=True, exist_ok=True)
     (gd / "current-state.json").write_text(json.dumps(sub.graph.to_dict(), indent=2))
+
+
+# ----------------------------------------------------------------------------------------------
+# SPRINT 18 — the §7L Q7/Q8 cockpit line, FIRST-CLASS in the engine. The ACTIVE reconcile rule +
+# its source + learned-or-not this run + the evidence-gated why are rendered BY THE ENGINE for ANY
+# generically-driven org (registry rule, hand-authored RULE_LIBRARY spec, or a learned library entry
+# added this run). It is data-only (reads `cfg` + the org's own ledger/graph; `library`, when given,
+# is a plain dict of named rule specs) so no per-org engine Python is needed. Only additive.
+# The Q7 (options incl. do-nothing baseline + trade-off) and Q8 (recommendation w/ authority +
+# determination) line is the §7L surface the runner-report cluster (Sprints 16/17) rendered per-org;
+# this is the same line as a generic engine render, a superset built on the shared surface
+# (`rank`/`machine_eligible_best`/`render_tradeoff`).
+# ----------------------------------------------------------------------------------------------
+def _cockpit_active_rule(cfg: dict, library: dict | None = None) -> dict:
+    """Data-only classification of the ACTIVE reconcile rule + its source class.
+
+    Source classes: `registry` (an engine RULES function named in `reconcile`), `learned` (a
+    rule_spec carrying the Sprint-17 additive learned fields — a learned library entry), `rule-library`
+    (a rule_spec that matches a provided library entry by `is`-identity or by `name`), and
+    `rule-spec-authored` (any other declarative spec). `registry-unknown` guards a registry name the
+    engine does not know (loud but non-fatal to the cockpit). Never hotter than the config data.
+    """
+    rc = cfg["reconcile"]
+    if "rule" in rc:
+        name = rc["rule"]
+        source = "registry" if rc["rule"] in RULES else "registry-unknown"
+        return {"active_rule": name, "source": source}
+    spec = rc["rule_spec"]
+    name = spec.get("name") or "anonymous-rule-spec"
+    if ("learned_param" in spec) or ("learned_threshold" in spec):
+        return {"active_rule": name, "source": "learned"}
+    if library is not None:
+        for entry in library.values():
+            if entry is spec or (isinstance(entry, dict) and entry.get("name") == name):
+                return {"active_rule": name, "source": "rule-library"}
+    return {"active_rule": name, "source": "rule-spec-authored"}
+
+
+def cockpit_q7q8(cfg: dict, sub, *, library: dict | None = None) -> dict:
+    """Structured §7L Q7/Q8 cockpit report for a configured org, generic + data-only.
+
+    Returns the ACTIVE reconcile rule, its SOURCE class, whether a learning step CHANGED it this run,
+    and the evidence-gated WHY — read from the org's OWN ledger (`decision://<label>/reconcile-learning`
+    recorded this run), not from any runner side-table — plus the §7L Q7 options/trade-off and the Q8
+    recommendation (with the authority it requires) and the authorized determination.
+    Deterministic: depends only on `cfg` + the `sub` graph + the optional data `library`.
+    """
+    L = cfg["label"]
+    rule = _cockpit_active_rule(cfg, library)
+    active_rule, source = rule["active_rule"], rule["source"]
+    # learned-this-run + the evidence-gated why, read from the org's own ledger.
+    lrn = sub.graph.get(f"decision://{L}/reconcile-learning") or {}
+    learned_this_run = source == "learned" and bool(lrn)
+    if learned_this_run:
+        why = ((lrn.get("detail") or {}).get("why")
+               or (cfg["reconcile"]["rule_spec"].get("why") or "unchanged"))
+    else:
+        why = "unchanged"
+    # §7L Q7 (options incl. do-nothing/UNRESOLVED baseline) + Q8 (recommendation + determination).
+    ranked = rank(cfg)
+    best = machine_eligible_best(ranked)
+    dispute_uri = (cfg.get("dispute") or {}).get("uri") or f"dispute://{L}/main"
+    determination = (sub.graph.get(dispute_uri) or {}).get("determination") or "UNRESOLVED"
+    baseline = next((o for o in cfg["options"]
+                     if "unres" in o.lower() or o == "do-nothing"), cfg["options"][0])
+    return {
+        "label": L,
+        "dispute_uri": dispute_uri,
+        "active_rule": active_rule,
+        "source": source,
+        "learned_this_run": learned_this_run,
+        "why": why,
+        "determination": determination,
+        "q7": {"options": list(cfg["options"]), "baseline": baseline,
+               "machine_eligible_best": best["option"],
+               "tradeoff": render_tradeoff(cfg, ranked)},
+        "q8": {"recommendation": best["option"],
+               "authority": cfg["authority"]["dispute"],
+               "determination": determination,
+               "floor_gated": [r["option"] for r in ranked if r["floor_gated"]]},
+    }
+
+
+def render_cockpit_q7q8(cfg: dict, sub, *, library: dict | None = None) -> str:
+    """Render the engine-native §7L Q7/Q8 cockpit line as plain text for one org.
+
+    Carries BOTH §7L questions: Q7 (what are our options? — the resolution set incl. the
+    do-nothing/UNRESOLVED baseline + machine-eligible best) and Q8 (what should we do? — the
+    recommendation with the authority it requires, and the authorized determination), plus the ACTIVE
+    rule + source + learned-or-not + why. Identical inputs -> identical output (deterministic).
+    """
+    c = cockpit_q7q8(cfg, sub, library=library)
+    ln = "True" if c["learned_this_run"] else "False"
+    return "\n".join([
+        f"# §7L Q7/Q8 cockpit (engine-native) — org {c['label']}",
+        f"Q7 options: {', '.join(c['q7']['options'])}  |  baseline: {c['q7']['baseline']}  |  "
+        f"machine-eligible best: {c['q7']['machine_eligible_best']}",
+        f"Q8 recommendation: {c['q8']['recommendation']} (authority {c['q8']['authority']}; "
+        f"floor-gated: {c['q8']['floor_gated']})  ->  determination: {c['determination']}",
+        f"ACTIVE reconcile rule: {c['active_rule']}  |  source: {c['source']}  |  "
+        f"learned-this-run: {ln}",
+        f"why: {c['why']}",
+    ])
+
+
+# ----------------------------------------------------------------------------------------------
+# SPRINT 19 — the FULL §7L Q1–Q10 morning cockpit, rendered BY the engine for ANY configured org.
+# `cockpit_s7l(cfg, sub, *, library=None)` returns a structured dict of all TEN §7L questions
+# (Q1 state/events, Q2 change, Q3 attention, Q4 exceptions, Q5 root-cause WITH epistemic status,
+# Q6 forecast-if-nothing-changes, Q7 options+trade-off, Q8 recommendation w/ authority,
+# Q9 ownership/capability/authority, Q10 verified outcome + learning), each answered with the
+# recorded-data evidence the org's OWN graph/ledger/config carry. `render_cockpit_s7l(...)` is the
+# plain-text §7L Q1–Q10 cockpit. It is a STRICT SUPERSET of the Sprint-18 `cockpit_q7q8` line:
+# Q7 and Q8 are delegated to that function by construction (same dict blocks), so the engine's
+# Q7/Q8 line is byte-identical whichever function drives it. No per-org Python; additive; frozen
+# 49 `$defs`/URI cap; SPEC v0.22. Deterministic (identical inputs -> identical dict + render).
+# Q6 NEVER fabricates: a forecast is only produced when a recorded realized-vs-expected SERIES
+# exists on the org's graph; otherwise it plainly says "cannot forecast from recorded data".
+# ----------------------------------------------------------------------------------------------
+def _ledger_dispute_walk(sub, dispute_uri: str) -> list[str]:
+    """The recorded lifecycle_state walk on `dispute_uri`, from the append-only ledger, in order.
+    Collects every `lifecycle_state` value observed on the dispute across state_update objects."""
+    walk: list[str] = []
+    seen: set[str] = set()
+    for e in getattr(sub.ledger, "entries", []) or []:
+        for o in (e.get("state_update") or []):
+            if o.get("uri") != dispute_uri:
+                continue
+            ls = o.get("lifecycle_state")
+            if ls and ls not in seen:
+                seen.add(ls)
+                walk.append(ls)
+    return walk
+
+
+def _recorded_forecast_series(sub) -> list[dict]:
+    """A recorded realized-vs-expected time series on the org's graph, if any. Returns [] when
+    none exists (the honest no-forecast case). We look for any graph object carrying a list of
+    per-period realized/expected points (e.g. a `metric://` with a `points`/`series` list). Never
+    the wall-clock, never an invented number."""
+    series = []
+    for o in (sub.graph.to_dict() or {}).get("objects", []):
+        for key in ("points", "series", "realized_series"):
+            pts = o.get(key)
+            if isinstance(pts, list) and pts and all(isinstance(p, dict) for p in pts):
+                series.append({"uri": o.get("uri"), "key": key, "points": pts})
+                break
+    return series
+
+
+def _graph_objects(sub) -> list[dict]:
+    d = sub.graph.to_dict() or {}
+    objs = d.get("objects")
+    if isinstance(objs, list):
+        return objs
+    # fallback: a uri-value map
+    out = []
+    for u, o in d.items():
+        if isinstance(o, dict) and "uri" in o:
+            out.append(o)
+    return out
+
+
+def cockpit_s7l(cfg: dict, sub, *, library: dict | None = None) -> dict:
+    """The complete §7L Q1–Q10 morning cockpit for ANY configured org, data-only.
+
+    All ten questions are answered from the org's own graph/ledger/config — no per-org engine
+    Python. Q7/Q8 ARE the Sprint-18 `cockpit_q7q8` blocks (strict superset by construction).
+    Deterministic: depends only on `cfg` + the `sub` graph/ledger + the optional data `library`.
+    """
+    L = cfg["label"]
+    # ---- Sprint-18 surface: ACTIVE rule + source + learned-or-not + why, and Q7/Q8 -------------
+    base = cockpit_q7q8(cfg, sub, library=library)
+    du = base["dispute_uri"]
+    d = sub.graph.get(du) or {}
+    rec = reconcile(sub, cfg)                    # per-claim support + conflict/uncertainty verdicts
+    graph_objs = {o.get("uri"): o for o in _graph_objects(sub) if o.get("uri")}
+
+    # ---- which claims/evidence to report (the recorded-dispute predicates) ----------------------
+    claims_src = cfg["claims"]
+    claims = []
+    for c in claims_src:
+        go = sub.graph.get(c["uri"]) or c
+        claims.append({
+            "uri": c["uri"], "proposer": c.get("proposer"),
+            "statement": go.get("statement") or c.get("statement"),
+            "epistemic_status": go.get("epistemic_status") or "claimed",
+            "support": rec["claim_support"].get(c["uri"]),
+        })
+    evidences = [sub.graph.get(ev["uri"]) or ev for ev in
+                 (cfg["unresolvable"]["evidence"].values()
+                  if d.get("epistemic_state") == "INSUFFICIENT_EVIDENCE" and d.get("lifecycle_state") == "UNRESOLVED"
+                  else cfg["evidence"].values())]
+
+    # ---- decisions + recorded learning on this org's ledger ------------------------------------
+    lrn_note = graph_objs.get(f"evidence://{L}/learning-note") or {}
+    lrn_dec = graph_objs.get(f"decision://{L}/reconcile-learning") or {}
+    learn_entries = []
+    if lrn_note.get("learning"):
+        learn_entries.append({"uri": lrn_note["uri"], "learning": lrn_note["learning"]})
+    if lrn_dec.get("detail") or lrn_dec.get("uri"):
+        dt = lrn_dec.get("detail") or {}
+        learn_entries.append({"uri": lrn_dec.get("uri"),
+                              "learning": dt.get("learning") or dt.get("why") or "reconcile-rule recorded",
+                              "learned_threshold": dt.get("learned_threshold")})
+
+    # ---- Q1 state/events over the period --------------------------------------------------------
+    entries = getattr(sub.ledger, "entries", []) or []
+    events = [{"uri": e.get("uri"), "type": e.get("type"), "actor": e.get("actor"),
+               "detail": e.get("detail")} for e in entries if str(e.get("uri", "")).startswith("event://")]
+    q1 = {
+        "event_count": len(events),
+        "events": [ev["uri"] for ev in events],
+        "lifecycle_walk": _ledger_dispute_walk(sub, du),
+        "status": d.get("status"), "lifecycle_state": d.get("lifecycle_state"),
+        "epistemic_state": d.get("epistemic_state"),
+        "evidence": "state/events read off the org's append-only ledger + current dispute state",
+    }
+
+    # ---- Q2 change/delta over the period --------------------------------------------------------
+    q2 = {
+        "recorded_deltas": {
+            "dispute_open": bool(events),                       # events recorded this period
+            "claims_recorded": len(claims),
+            "evidence_recorded": len(evidences),
+            "lifecycle_from_to": ([q1["lifecycle_walk"][0]] if q1["lifecycle_walk"] else ["(none)"])
+                                 + (["->"] if len(q1["lifecycle_walk"]) > 1 else [])
+                                 + ([q1["lifecycle_walk"][-1]] if len(q1["lifecycle_walk"]) > 1 else []),
+            "epistemic_from_to": "UNDETERMINED -> %s" % d.get("epistemic_state")
+                                 if d.get("epistemic_state") else None,
+            "determination": d.get("determination") or "UNRESOLVED",
+            "claim_epistemic_deltas": {c["uri"]: c["epistemic_status"] for c in claims},
+        },
+        "significance": ("determined" if d.get("determination") and d.get("determination") != "UNRESOLVED"
+                         else "still-undetermined"),
+        "evidence": "delta + significance reconstructed from the recorded life cycle + claim epistemic_status",
+    }
+
+    # ---- Q3 prioritized attention (the §7J.5/attention analogue) ---------------------------------
+    # Sprint 21: a recorded forecast whose horizon projection crosses a recorded threshold is
+    # ITSELF attention ("do nothing and it gets worse"), attached as a forecast-driven item.
+    fca = _forecast_closure(cfg, sub)
+    attention = []
+    if d.get("status") in ("OPEN", "RESOLVED") and d.get("determination") == "UNRESOLVED":
+        attention.append({"item": du, "why": "dispute OPEN / UNRESOLVED (no determination yet)"})
+    for c in claims:
+        if rec.get("determined") and c["uri"] in rec["determined"]:
+            continue
+        if c["epistemic_status"] in ("claimed", "disputed", "unresolved"):
+            attention.append({"item": c["uri"], "why": "claim %s (not DETERMINED)" % c["epistemic_status"]})
+    if fca.get("attention_item"):
+        attention.append(fca["attention_item"])
+    q3_evidence = ("attention = recorded OPEN/UNRESOLVED dispute + non-DETERMINED claims (§7J.5 analogue)"
+                   if not fca.get("attention_item") else
+                   "attention = recorded OPEN/UNRESOLVED dispute + non-DETERMINED claims "
+                   "+ a forecast-driven item when the recorded series' projection crosses a "
+                   "recorded threshold (§7J.5 analogue)")
+    q3 = {"prioritized": attention, "count": len(attention), "evidence": q3_evidence}
+
+    # ---- Q4 exceptions ---------------------------------------------------------------------------
+    exceptions = []
+    if d.get("status") == "OPEN" or d.get("lifecycle_state") == "UNRESOLVED":
+        exceptions.append({"uri": du, "exception": "OPEN/UNRESOLVED",
+                           "epistemic_state": d.get("epistemic_state")})
+    if rec.get("uncertainty"):
+        exceptions.append({"uri": du, "exception": "uncertainty",
+                           "claim_support": {k: v for k, v in rec["claim_support"].items() if v is not None}})
+    q4 = {"exceptions": exceptions, "conflict": rec.get("conflict"), "uncertainty": rec.get("uncertainty"),
+          "evidence": "exceptions = recorded OPEN/UNRESOLVED disputes + reconcile conflict/uncertainty (§7J.2 analogue)"}
+
+    # ---- Q5 root-cause WITH epistemic status -----------------------------------------------------
+    root = []
+    for c in claims:
+        if c["uri"] in (rec.get("determined") or []):
+            root.append({**c, "role": "support-carrying (DETERMINED under the active rule)"})
+        elif c["epistemic_status"] in ("disputed", "claimed", "unresolved"):
+            root.append({**c, "role": "contested (not determined)"})
+    q5 = {
+        "root_cause": root,
+        "reconcile": {"determined": rec.get("determined"), "disputed": rec.get("disputed"),
+                      "conflict": rec.get("conflict"), "uncertainty": rec.get("uncertainty"),
+                      "claim_support": rec["claim_support"]},
+        "active_rule": base["active_rule"], "rule_source": base["source"],
+        "evidence": "root-cause = recorded claim epistemic_status + per-claim support from the configured reconcile rule (§7K.2)",
+    }
+
+    # ---- Q6 forecast "if nothing changes" (honest; a projection only when a series is recorded) -----
+    # Reuses the same `fca` closure that drove Q3's attention + Q8's do-nothing pricing, so the three
+    # questions agree by construction (identical projection, threshold, crossing).
+    q6 = fca["q6"]
+
+    # ---- Q7/Q8 delegate to the Sprint-18 line (strict superset by construction) ------------------
+    q7 = base["q7"]; q8 = base["q8"]
+    # Sprint 21 (additive): where a recorded series exists, price the do-nothing baseline of the
+    # trade-off from the SAME deterministic projection that drove Q3 attention + Q6 (Q6→Q3→Q8
+    # connected as data). Purely additive fields on the Sprint-18 dicts; the no-data fallback is
+    # untouched (absent). The Q8 recommendation is UNCHANGED — the forecast never overrules the
+    # §6-floor-gated machine-eligible best, it only prices attention + do-nothing.
+    if fca.get("available"):
+        q7["tradeoff_do_nothing_impact"] = fca["do_nothing"]["summary"]
+        q8["forecast"] = fca["forecast"]
+        q8["do_nothing_expected_impact"] = fca["do_nothing"]
+
+    # ---- Q9 ownership / capability / authority ----------------------------------------------------
+    ob_uri = cfg.get("dispute_about") or (cfg.get("dispute") or {}).get("about")
+    ob = sub.graph.get(ob_uri) or {}
+    ob_subjects = ob.get("subject") if isinstance(ob.get("subject"), list) else [ob.get("subject")]
+    auth_obj = sub.graph.get(cfg["authority"].get("dispute")) or {}
+    recorded_cap = auth_obj.get("capacity") or {}
+    if isinstance(recorded_cap, dict) and "value" in recorded_cap:
+        q9_capacity = {k: recorded_cap[k] for k in ("value", "unit", "load") if k in recorded_cap}
+        q9_capacity["status"] = recorded_cap.get("status", "recorded")
+        capability_txt = ("determination authority held by the §6 human adjudicator; obligated party = "
+                          "dispute subject; recorded capacity %s %s (load %s)"
+                          % (q9_capacity["value"], q9_capacity.get("unit", ""),
+                             q9_capacity.get("load", "—")))
+        capacity_recorded = True
+    else:
+        q9_capacity = None
+        capability_txt = ("determination authority held by the §6 human adjudicator; obligated party = "
+                          "dispute subject")
+        capacity_recorded = False
+    ownership = {
+        "determination_authority": cfg["authority"].get("dispute"),
+        "adjudicator": cfg["authority"].get("adjudicator_person"),
+        "adjudicator_role_present": bool(graph_objs.get(cfg["authority"].get("adjudicator_person"))),
+        "obligated_party": ob_subjects,
+        "obligation": ob_uri,
+        "appeal_authority": cfg["authority"].get("appeal"),
+        "actors": sorted(cfg["actors"].keys()),
+        "capacity_recorded": capacity_recorded,
+        "capacity": q9_capacity,
+        "capability": capability_txt,
+        "evidence": ("ownership/authority read from cfg.authority + the recorded obligation the dispute is "
+                     "about (§7K.1/§7J.9); capacity read from the recorded additive field on the authority "
+                     "object when present"),
+    }
+    q9 = ownership
+
+    # ---- Q10 verified outcome + organizational learning -------------------------------------------
+    q10 = {
+        "verified": bool(d.get("verified")),
+        "lifecycle_state": d.get("lifecycle_state"),
+        "status": d.get("status"),
+        "determination": d.get("determination"),
+        "resolution_outcome": d.get("resolution_outcome") or cfg.get("resolution_outcome"),
+        "learning_entries": learn_entries,
+        "evidence": "verified + outcome + learning read from the recorded dispute state + evidence://<label>/learning-note and decision://<label>/reconcile-learning on the org's ledger",
+    }
+
+    return {
+        "label": L, "dispute_uri": du,
+        # Sprint-18 surface reused verbatim (strict superset):
+        "active_rule": base["active_rule"], "source": base["source"],
+        "learned_this_run": base["learned_this_run"], "why": base["why"],
+        "determination": base["determination"],
+        "q1": q1, "q2": q2, "q3": q3, "q4": q4, "q5": q5, "q6": q6,
+        "q7": q7, "q8": q8, "q9": q9, "q10": q10,
+    }
+
+
+def render_cockpit_s7l(cfg: dict, sub, *, library: dict | None = None) -> str:
+    """The complete §7L Q1–Q10 morning cockpit for one org, plain text, data-only. Identical
+    inputs -> identical output (deterministic). Q7/Q8 lines are the Sprint-18 engine lines."""
+    c = cockpit_s7l(cfg, sub, library=library)
+    L = c["label"]
+    q1 = c["q1"]; q2 = c["q2"]; q3 = c["q3"]; q4 = c["q4"]; q5 = c["q5"]
+    q6 = c["q6"]; q7 = c["q7"]; q8 = c["q8"]; q9 = c["q9"]; q10 = c["q10"]
+    ln = "True" if c["learned_this_run"] else "False"
+    lines = [f"# §7L Q1–Q10 cockpit (engine-native) — org {L}"]
+    lines.append(f"ACTIVE reconcile rule: {c['active_rule']}  |  source: {c['source']}  |  "
+                 f"learned-this-run: {ln}  |  why: {c['why']}")
+    lines.append("Q1. what happened?  state/events: %d recorded events; dispute lifecycle "
+                 "%s; status=%s lifecycle=%s epistemic=%s"
+                 % (q1["event_count"], ("->".join(q1["lifecycle_walk"]) if q1["lifecycle_walk"] else "(none)"),
+                    q1["status"], q1["lifecycle_state"], q1["epistemic_state"]))
+    frm = q2["recorded_deltas"]["lifecycle_from_to"]
+    lines.append("Q2. what changed?  life cycle %s; epistemic %s; determination=%s; "
+                 "claim epistemic=%s; significance=%s"
+                 % (" ".join(frm), q2["recorded_deltas"]["epistemic_from_to"],
+                    q2["recorded_deltas"]["determination"],
+                    {k.split("/")[-1]: v for k, v in q2["recorded_deltas"]["claim_epistemic_deltas"].items()},
+                    q2["significance"]))
+    lines.append("Q3. what matters?  prioritized attention (%d): %s"
+                 % (q3["count"], "; ".join(
+                     (i["item"] + " [" + i.get("tag", "state") + "] — " + i["why"])
+                     if i.get("tag") else i["item"] + " — " + i["why"]
+                     for i in q3["prioritized"]) or "nothing flagged"))
+    lines.append("Q4. what is going wrong?  exceptions (%d): %s  |  reconcile conflict=%s uncertainty=%s"
+                 % (len(q4["exceptions"]),
+                    "; ".join(x["uri"] + " (" + x["exception"] + ")" for x in q4["exceptions"]) or "none",
+                    q4["conflict"], q4["uncertainty"]))
+    rc_desc = "; ".join("%s support=%s %s" % (r["uri"].split("/")[-1], r.get("support"), r["role"])
+                        for r in q5["root_cause"]) or "(none)"
+    lines.append("Q5. why is it going wrong?  root-cause [epistemic status]: %s  |  under rule %s (%s)"
+                 % (rc_desc, q5["active_rule"], q5["rule_source"]))
+    if q6["forecast_available"]:
+        proj = "; ".join("period %s -> %s" % (p["period"], p["projected"]) for p in q6["projections"])
+        lines.append("Q6. what if we do nothing?  project (holding the recorded trend) from last actual "
+                     "%s + mean delta %s: %s  |  recorded variance %s" %
+                     (q6["last_actual"], q6["mean_delta"], proj, q6.get("recorded_variance")))
+    else:
+        lines.append("Q6. what if we do nothing?  %s" % q6["forecast"])
+    lines.append("Q7. what are our options?  %s  |  baseline %s  |  machine-eligible best: %s"
+                 % (", ".join(q7["options"]), q7["baseline"], q7["machine_eligible_best"]))
+    lines.append("Q8. what should we do?  recommendation %s (authority %s; floor-gated %s)  ->  "
+                 "determination %s"
+                 % (q8["recommendation"], q8["authority"], q8["floor_gated"], c["determination"]))
+    if q8.get("do_nothing_expected_impact"):
+        dn = q8["do_nothing_expected_impact"]
+        lines.append("    trade-off / do-nothing expected-impact: %s (baseline %s, priced=%s, "
+                     "on-target=%s)"
+                     % (dn["summary"], dn.get("baseline"), dn.get("priced"), dn.get("on_target")))
+    lines.append("Q9. who does it, authority/capacity?  adjudicator %s (authority %s), obligated "
+                 "party %s, appeal %s, actors %s%s"
+                 % (q9["adjudicator"], q9["determination_authority"],
+                    ", ".join(o or "?" for o in (q9["obligated_party"] or [])),
+                    q9["appeal_authority"], len(q9["actors"]),
+                    (", capacity %s %s (load %s)" % (q9["capacity"]["value"], q9["capacity"].get("unit", ""),
+                                                     q9["capacity"].get("load", "—")))
+                    if q9.get("capacity_recorded") and q9.get("capacity") else ""))
+    lrn = "; ".join("%s[%s]" % (e["uri"], e["learning"][:60] + ("…" if len(e["learning"]) > 60 else ""))
+                    for e in q10["learning_entries"]) or "(none recorded)"
+    lines.append("Q10. did it work, what did we learn?  verified=%s status=%s determination=%s; "
+                 "outcome=%s; learning: %s"
+                 % (q10["verified"], q10["status"], q10["determination"],
+                    q10["resolution_outcome"] or "(none recruited)", lrn))
+    return "\n".join(lines)
+
+# ----------------------------------------------------------------------------------------------
+# SPRINT 21 — forecast → attention → expected-impact closure (additive). Sprint 20 made the
+# recorded Q6 forecast + Q9 capacity answered AS DATA via `forecast_metric` and a recorded
+# `metric://` realized-vs-expected series + an additive `capacity` field, but disclosed the next
+# honest frontier: the Q6 projection is COMPUTED and RENDERED but not CONNECTED to the org's
+# decision surface. Sprint 21 closes a bounded slice — the recorded forecast DRIVES the §7L Q3
+# attention and the Q8 expected-impact / trade-off do-nothing baseline, deterministically and
+# data-only: when the recorded series' horizon projection crosses a recorded threshold the cockpit
+# adds a **forecast-driven attention item** (tagged `forecast`: "do nothing and it gets worse" is
+# itself attention, §7J.5), and ".q8"/the trade-off carry the projected cost of doing nothing from
+# that same deterministic projection. No-data orgs keep today's Q3/Q8/trade-off exactly. ADDITIVE:
+# the frozen `cockpit_q7q8`/`render_tradeoff`/`rank`/`machine_eligible_best` are untouched; the
+# closure enriches the `base`-returned q7/q8 dicts in place (additive fields) and extends `cockpit_
+# s7l`'s `.q3` + `render_cockpit_s7l`. The Q8 recommendation stays the §6-floor-gated machine-
+# eligible best — the forecast never overrules the §6 pick, it only prices attention + do-nothing.
+# 49 `$defs`/URI cap/SPEC v0.22; never the wall-clock, never an invented number.
+# ----------------------------------------------------------------------------------------------
+def _num(x):
+    """Numeric coercion helper (float/None). Used for the recorded forecast threshold."""
+    try:
+        if x is None:
+            return None
+        return round(float(x), 4)
+    except (TypeError, ValueError):
+        return None
+
+
+def _forecast_closure(cfg: dict, sub) -> dict:
+    """Deterministic forecast→attention→expected-impact data for `cockpit_s7l`, derived ONLY from
+    the recorded `metric://` realized-vs-expected series (Sprint 20 `forecast_metric`).
+
+    Returns (never the wall-clock, never an invented number):
+      available        bool  — a recorded series exists
+      series_uri       str|None, threshold, threshold_source ('forecast_threshold'/'target'/...
+                           'last-actual'), projections, worst, worst_period, crossing
+      attention_item   the Q3 forecast-tagged item to append (or None)
+      q6               the exact Q6 cockpit dict (so Q3/Q6/Q8 agree by construction)
+      do_nothing       the Q8/trade-off do-nothing expected-impact block (or None)
+    Crossing rule: `min(projection) < threshold` for a higher-is-better rate metric. Threshold in
+    recorded order: explicit `forecast_threshold` additive field -> the metric's own `target` ->
+    the last recorded `actual` (so a targetless declining series still flags)."""
+    fap_uri, fap_metric = _recorded_metric_with_series(sub)
+    if not fap_uri:
+        q6 = {"forecast_available": False,
+              "forecast": "cannot forecast from recorded data (no recorded realized-vs-expected series)",
+              "evidence": "no realized-vs-expected series on the org's graph; a single realized value "
+                          "is not a forecast series"}
+        return {"available": False, "series_uri": None, "q6": q6,
+                "attention_item": None, "do_nothing": None}
+    fc = forecast_metric(cfg, sub, fap_uri, horizon=3)
+    # ---- recorded threshold, in order: forecast_threshold -> target -> last actual --------------
+    thr = _num(fap_metric.get("forecast_threshold"))
+    thr_src = "forecast_threshold"
+    if thr is None:
+        thr = _num(fap_metric.get("target"))
+        thr_src = "target"
+    if thr is None:
+        thr = fc["last_actual"]
+        thr_src = "last-actual"
+    projs = [p["projected"] for p in fc["projections"]]
+    worst = min(projs) if projs else None
+    worst_period = (next(p["period"] for p in fc["projections"] if p["projected"] == worst)
+                    if worst is not None else None)
+    crossing = worst is not None and thr is not None and worst < thr
+    q6 = {"forecast_available": True,
+          "forecast": "deterministic projection from the recorded realized-vs-expected series",
+          "metric": fap_uri,
+          "last_actual": fc["last_actual"], "mean_delta": fc["mean_delta"],
+          "horizon": fc["horizon"], "projections": fc["projections"],
+          "recorded_variance": fc["recorded_variance"],
+          "evidence": "recorded realized-vs-expected series on the org's graph (metric://); "
+                      "projection = last recorded actual + mean of recorded deltas, forward "
+                      "periods, labelled a projection; never the wall-clock"}
+    attention_item = None
+    if crossing:
+        attention_item = {"item": fap_uri,
+                          "why": ("forecast: projected to fall below {} ({}) — worst {} at period {}"
+                                  .format(thr if thr is not None else "?", thr_src,
+                                          worst, worst_period)),
+                          "tag": "forecast"}
+    baseline = next((o for o in cfg.get("options", [])
+                     if "unres" in o.lower() or o == "do-nothing"), None)
+    if crossing:
+        gap = round(float(thr) - float(worst), 4)
+        summary = ("forecast-driven do-nothing cost: {} projects to worst {} (period {}) below "
+                   "recorded {} {} by {} — doing nothing lets the recorded trend deteriorate"
+                   .format(fap_uri, worst, worst_period, thr_src, thr, gap))
+        on_target = False
+    else:
+        summary = ("on-target: {} projection stays at/above recorded {} {} (worst {}) — "
+                   "no forecast-driven cost to doing nothing"
+                   .format(fap_uri, thr_src, thr, worst))
+        on_target = True
+    do_nothing = {"baseline": baseline, "priced": True, "on_target": on_target,
+                  "summary": summary, "metric": fap_uri}
+    return {"available": True, "series_uri": fap_uri, "threshold": thr,
+            "threshold_source": thr_src, "projections": fc["projections"], "worst": worst,
+            "worst_period": worst_period, "crossing": crossing,
+            "attention_item": attention_item, "q6": q6, "do_nothing": do_nothing,
+            "forecast": {"projections": fc["projections"], "threshold": thr,
+                         "source": thr_src, "worst": worst, "crossing": crossing}}
+
+
+def _forecast_closure_marker(cfg: dict, sub) -> dict:
+    """Alias for parity/legibility; keeps the closure call site readable and identical-inputs-
+    identical-outputs deterministic. Simply delegates to `_forecast_closure`."""
+    return _forecast_closure(cfg, sub)
+
+
+# ----------------------------------------------------------------------------------------------
+# SPRINT 20 — recorded-data Q6 forecast + Q9 capacity for the §7L morning cockpit (additive).
+# Sprint 19's honest limit (see its findings "Residual seams"): Q6 cannot forecast on the
+# adjudication orgs because none records a realized-vs-expected series, and Q9 "capability" was
+# the holder-of-authority assignment, not a capacity number. Sprint 20 closes a bounded slice of
+# both by making the org RECORD the missing data additively on its own graph/ledger — a `metric://`
+# realized-vs-expected series and an additive `capacity` field on the authority:// object the Q9
+# question reads — so `cockpit_s7l`'s q6 can PROJECT deterministically from the recorded series and
+# its q9 can report the recorded capacity number, WHERE the data exists, with the honest no-data
+# fallback unchanged. Generic + data-only: one identical engine path for any configured org.
+# Additive only; the frozen `reconcile`/`run_scenario`/`_derive`/`SPEC_VOCAB`/`_aggregate`/
+# `rank`/`machine_eligible_best`/`render_tradeoff`/`cockpit_q7q8`/`cockpit_s7l`/`render_cockpit_s7l`
+# are untouched; 49 `$defs`/URI cap/SPEC v0.22. Never the wall-clock, never an invented number.
+# ----------------------------------------------------------------------------------------------
+def _recorded_metric_with_series(sub) -> tuple:
+    """(metric_uri, metric_obj) for the first `metric://` object on the org's graph carrying a
+    non-empty realized-vs-expected `points`/`series`/`realized_series` list of dicts; else (None, {}).
+    Deterministic (first in graph order). Never the wall-clock."""
+    for o in _graph_objects(sub):
+        uri = o.get("uri", "")
+        if not isinstance(uri, str) or not uri.startswith("metric://"):
+            continue
+        for key in ("points", "series", "realized_series"):
+            pts = o.get(key)
+            if isinstance(pts, list) and pts and all(isinstance(p, dict) for p in pts):
+                return uri, o
+    return None, {}
+
+
+def forecast_metric(cfg: dict, sub, metric_uri: str, *, horizon: int = 3) -> dict:
+    """Deterministic projection for Q6 from a RECORDED realized-vs-expected series only.
+
+    Reads the `metric://` object's `points` list (per-period dicts each carrying `actual`, and
+    optionally `target`/`expected`/`variance`), and projects forward purely from the recorded
+    values: projected(f) = last recorded actual + mean(recorded consecutive deltas) * f, for
+    f in 1..horizon. The projected value is LABELLED a projection (never expanded to an outcome),
+    and the last RECORDED variance is shown alongside. DETERMINISTIC: a pure function of the
+    recorded points + the explicit `horizon` — never the wall-clock, never an invented number.
+    When no such series exists the return says so plainly (`available: False`)."""
+
+    def _num(x):
+        try:
+            return round(float(x), 4)
+        except (TypeError, ValueError):
+            return None
+
+    if not isinstance(horizon, int) or horizon < 1:
+        raise ValueError("forecast_metric requires an integer horizon >= 1")
+    m = sub.graph.get(metric_uri) or {}
+    pts = next((m[k] for k in ("points", "series", "realized_series")
+                if isinstance(m.get(k), list) and m[k] and all(isinstance(p, dict) for p in m[k])), None)
+    if not pts:
+        return {"available": False, "metric": metric_uri,
+                "forecast": "cannot project — no recorded realized-vs-expected series on %s" % metric_uri}
+    actuals = []
+    for p in pts:
+        a = _num(p.get("actual"))
+        if a is None:
+            return {"available": False, "metric": metric_uri,
+                    "forecast": ("cannot project — recorded series on %s has a non-numeric actual"
+                                 % metric_uri)}
+        actuals.append(a)
+    last_actual = actuals[-1]
+    # mean of consecutive recorded deltas (direction of travel); 0 when the series has one point
+    deltas = [actuals[i] - actuals[i - 1] for i in range(1, len(actuals))]
+    mean_delta = round(sum(deltas) / len(deltas), 4) if deltas else 0.0
+    projections = [{"period": f, "projected": round(last_actual + mean_delta * f, 4)}
+                   for f in range(1, horizon + 1)]
+    last_pt = pts[-1]
+    return {
+        "available": True,
+        "metric": metric_uri,
+        "unit": m.get("unit"),
+        "target": _num(m.get("target")),
+        "last_actual": last_actual,
+        "mean_delta": mean_delta,
+        "horizon": horizon,
+        "projections": projections,
+        "recorded_variance": _num(last_pt.get("variance")),
+        "expected_last": _num(last_pt.get("expected")),
+        "note": "deterministic projection from the recorded series only (holds the recorded trend); "
+                "a projection, not an outcome; never the wall-clock",
+    }
+
+
+def record_metric_series(sub, label: str, metric_uri: str, *, points: list, fields: dict,
+                         signer: str) -> str:
+    """REPLAYABLE recorder: append the org's own realized-vs-expected `metric://` series to its
+    immutable ledger, additively (no new noun, no schema edit). `points` is the ordered per-period
+    list ({period,target,expected,actual,variance,...}); `fields` carries the Metric-required
+    `name`/`formula` + unit/target/period/source/owner/etc. The metric object's `actual`/`variance`
+    are set to the LAST recorded point so the §7L Q9/BI read sees a single current value too.
+    C2-safe keys only (no temporal suffix). Returns the signed event uri."""
+    assert metric_uri.startswith("metric://"), "metric_uri must be a metric:// URI"
+    assert isinstance(points, list) and points, "points must be a non-empty list"
+    for p in points:
+        assert isinstance(p, dict) and "actual" in p, "each point needs an `actual`"
+    assert "name" in fields and "formula" in fields, "fields needs the Metric-required name + formula"
+    last = points[-1]
+    metric_obj = {"uri": metric_uri, "actual": round(float(last["actual"]), 4),
+                  "variance": last.get("variance"), "points": list(points),
+                  **{k: fields[k] for k in fields if k not in ("actual", "variance", "points")}}
+    ev_uri = f"event://{label}/record-metric-series"
+    sub.record({
+        "uri": ev_uri, "type": "STATE_CHANGE",
+        "event_id": f"ev-adj-{label}-record-metric-series",
+        "correlation_id": f"corr-adj-{label}-record-metric-series",
+        "causation_id": f"ev-adj-{label}-record-metric-series-prev",
+        "idempotency_key": f"idem-adj-{label}-record-metric-series",
+        "signature": f"signed-by-{signer}", "occurred_at": now_iso(), "actor": signer,
+        "detail": "record a realized-vs-expected metric series additively on the org's ledger so the "
+                  "§7L Q6 can project from recorded data",
+        "state_update": [metric_obj]}, signer)
+    return ev_uri
+
+
+def record_capacity(sub, authority_uri: str, *, value, unit: str, signer: str,
+                    load=None) -> str:
+    """REPLAYABLE recorder: append an additive `capacity` field ({value,unit,load,status}) on the
+    `authority://` object the §7L Q9 reads, MERGE-not-replace (the authority's required fields ride
+    along via `{**graph.get(uri), ...}` → preserve-unknown). Returns the signed event uri."""
+    assert authority_uri.startswith("authority://"), "capacity is recorded on an authority:// object"
+    obj = {**sub.graph.get(authority_uri),
+           "capacity": {"value": value, "unit": unit, "load": load, "status": "recorded"}}
+    label = authority_uri.split("/")[-2]
+    ev_uri = f"event://{label}/record-capacity"
+    sub.record({
+        "uri": ev_uri, "type": "STATE_CHANGE",
+        "event_id": f"ev-adj-{label}-record-capacity",
+        "correlation_id": f"corr-adj-{label}-record-capacity",
+        "causation_id": f"ev-adj-{label}-record-capacity-prev",
+        "idempotency_key": f"idem-adj-{label}-record-capacity",
+        "signature": f"signed-by-{signer}", "occurred_at": now_iso(), "actor": signer,
+        "detail": "record the authority's additive capacity field so the §7L Q9 can report it as data",
+        "state_update": [obj]}, signer)
+    return ev_uri

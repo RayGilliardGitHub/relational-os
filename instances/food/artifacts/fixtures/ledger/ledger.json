@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/food-2026",
-  "head_hash": "a43c119f5a89bb354a0bfa6895b80ac0d9464e558f7bb0f809159b76d8f28acf",
+  "head_hash": "60a2b16d8228c7bbde1456425111a13c25cca409f83126cf39918a9f5f09dae6",
   "entries": [
     {
       "uri": "event://food/s5-state-2",
@@ -10,7 +10,7 @@
       "causation_id": "ev-s5-1",
       "idempotency_key": "idem-s5-2",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "provision Food / Bev / Consumer base (actors, relationships, authority + operator + policy + expectation)",
       "state_update": [
@@ -317,10 +317,10 @@
           "uri": "process_instance://food/pi-core",
           "process": "process://food/pr-core",
           "status": "RUNNING",
-          "started_at": "2026-09-01T02:18:51Z"
+          "started_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "ed977025386dd2f792d08d3e1615ea56f9e8871d10edfed81ce81793c630e45d"
+      "hash": "7054cb49e9964c9d7cbb1fc3d41b94fe73d65959c54b8feeb21ce42ec40268f3"
     },
     {
       "uri": "event://food/s5-state-100",
@@ -330,7 +330,7 @@
       "causation_id": "ev-s5-99",
       "idempotency_key": "idem-s5-100",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "seed scoped Trust org://food/crestline = 0.6",
       "state_update": [
@@ -343,7 +343,7 @@
           "score": 0.6
         }
       ],
-      "hash": "08acf5f94963697c24b4f426a543ae88b8237118de8ec2d298c6a8335a7009e7"
+      "hash": "f8e0f37f24ab3cdd877ae70a35ddc214db852266d05566d1302e1810a4e72c89"
     },
     {
       "uri": "event://food/s5-state-101",
@@ -353,7 +353,7 @@
       "causation_id": "ev-s5-100",
       "idempotency_key": "idem-s5-101",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "seed scoped Trust org://food/harlow = 0.9",
       "state_update": [
@@ -366,7 +366,7 @@
           "score": 0.9
         }
       ],
-      "hash": "3b1fe366ed06114a5c116db8fb83bc2f3a371e8fd116a9bef908c2f84f12d478"
+      "hash": "3e6fce04e5b103a2b8d1a12d457d787dcfc627340a3c2585813d3f44c6614409"
     },
     {
       "uri": "event://food/s5-state-102",
@@ -376,7 +376,7 @@
       "causation_id": "ev-s5-101",
       "idempotency_key": "idem-s5-102",
       "signature": "signed-by-agent://food/s2",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s2",
       "detail": "register resource-commitment offer from org://food/crestline",
       "state_update": [
@@ -392,7 +392,7 @@
           "fit_note": "food / bev / consumer partner delivery line"
         }
       ],
-      "hash": "f4eff6a481ceab12e4514fa51fb5f818688989fbac52ac370a01b43d78fbf15e"
+      "hash": "a0041f111a792c787e2e63036f3987561c95f0290a7856e7f5660115f01aaf8b"
     },
     {
       "uri": "event://food/s5-state-103",
@@ -402,7 +402,7 @@
       "causation_id": "ev-s5-102",
       "idempotency_key": "idem-s5-103",
       "signature": "signed-by-agent://food/s2",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s2",
       "detail": "register resource-commitment offer from org://food/harlow",
       "state_update": [
@@ -418,7 +418,7 @@
           "fit_note": "food / bev / consumer partner delivery line"
         }
       ],
-      "hash": "350e25b8dde69076934919786129b22b160b875b6a37d9ddd46c5c45e5143b19"
+      "hash": "1aadc98267b8643999a7711f5a1b2103b5ce4cc97baddb96a42d538c85804627"
     },
     {
       "uri": "event://food/s5-state-104",
@@ -428,7 +428,7 @@
       "causation_id": "ev-s5-103",
       "idempotency_key": "idem-s5-104",
       "signature": "signed-by-agent://food/s2",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s2",
       "detail": "initial match ranked offer://food/o-l (score 0.900) \u2014 base ranking",
       "state_update": [
@@ -460,10 +460,10 @@
               "score": 0.6
             }
           ],
-          "made_at": "2026-09-01T02:18:51Z"
+          "made_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "286d466b4766fa4bc41d049f7c066cc0373a0a33a97587d81fea8bed2a718e74"
+      "hash": "d713b55b865bbdf087515e0fcb04e26a0830bdc8810786a240ec1ab7494dfd8c"
     },
     {
       "uri": "event://food/s4-exchange-harlowQ3",
@@ -473,7 +473,7 @@
       "causation_id": "ev-s4-104",
       "idempotency_key": "idem-s4-105",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://s4",
       "detail": "settle exchange harlowQ3: 2000000.0 USD org://food/maplehurst->org://food/harlow (value 2000000.0, cost 2000000.0)",
       "state_update": [
@@ -524,7 +524,7 @@
             "provider": "org://food/harlow",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T02:18:51Z"
+          "made_at": "2026-09-01T03:13:38Z"
         },
         {
           "uri": "event://food/s4-exchange-harlowQ3",
@@ -534,7 +534,7 @@
           "causation_id": "ev-s4-104",
           "idempotency_key": "idem-s4-105",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T02:18:51Z",
+          "occurred_at": "2026-09-01T03:13:38Z",
           "actor": "agent://s4",
           "detail": "settle exchange harlowQ3: 2000000.0 USD org://food/maplehurst->org://food/harlow (value 2000000.0, cost 2000000.0)",
           "state_update": [],
@@ -556,7 +556,7 @@
       "provider": "org://food/harlow",
       "settled_at": "2026-09-02T00:00:00Z",
       "exchange_of": "commitment://food/c-harlowQ3",
-      "hash": "aab9aeea28b9e0ef8544bad49bc3fa240d78d59df166fe88b42805010c2aebfb"
+      "hash": "e13a6078ec77e38216eeab03cb1341805f3b5826c2f69c43a92ac80024a6a1ef"
     },
     {
       "uri": "event://food/s4-outcome-harlowQ3",
@@ -566,7 +566,7 @@
       "causation_id": "ev-s4-105",
       "idempotency_key": "idem-s4-106",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://s4",
       "detail": "evaluate settle harlowQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
       "state_update": [
@@ -578,7 +578,7 @@
           "causation_id": "ev-s4-105",
           "idempotency_key": "idem-s4-106",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T02:18:51Z",
+          "occurred_at": "2026-09-01T03:13:38Z",
           "actor": "agent://s4",
           "detail": "evaluate settle harlowQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
           "state_update": [],
@@ -596,7 +596,7 @@
       "deadline": "2026-08-31T00:00:00Z",
       "settled_at": "2026-09-02T00:00:00Z",
       "score": 0.5,
-      "hash": "f26638530fe6ef87162ae53b802a174e3509ac51dea8c9ab4aee53882fef10b7"
+      "hash": "6e0a2ee434b9307ac763ec22311675dfe1d0a8a53d535e03785d789ab680ee15"
     },
     {
       "uri": "event://food/outcome-committed-harlowQ3",
@@ -606,7 +606,7 @@
       "causation_id": "ev-s2-106",
       "idempotency_key": "idem-s2-107",
       "signature": "signed-by-org://food/harlow",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "org://food/harlow",
       "detail": "job committed-harlowQ3 by org://food/harlow: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
       "state_update": [
@@ -618,7 +618,7 @@
           "causation_id": "ev-s2-106",
           "idempotency_key": "idem-s2-107",
           "signature": "signed-by-org://food/harlow",
-          "occurred_at": "2026-09-01T02:18:51Z",
+          "occurred_at": "2026-09-01T03:13:38Z",
           "actor": "org://food/harlow",
           "detail": "job committed-harlowQ3 by org://food/harlow: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
           "state_update": [],
@@ -636,7 +636,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T02:18:51Z"
+          "captured_at": "2026-09-01T03:13:38Z"
         }
       ],
       "job": "committed-harlowQ3",
@@ -644,7 +644,7 @@
       "committed_deadline": "2026-08-31T00:00:00Z",
       "actual_completed_at": "2026-09-02T00:00:00Z",
       "on_time": false,
-      "hash": "5fd4ae6ea63981ffb7501a6fbc44a28ec07112af0d0f69c30fb66879f7541409"
+      "hash": "39c7f6c095583f85c787e746499c9ef10fb47f2b01d93057ee0a4c6be2957435"
     },
     {
       "uri": "event://food/verify-committed-harlowQ3",
@@ -654,7 +654,7 @@
       "causation_id": "ev-s2-107",
       "idempotency_key": "idem-s2-108",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://s5",
       "detail": "verify 'org://food/harlow delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -671,10 +671,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T02:18:51Z"
+          "captured_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "2b07e4e83a0d83fab62dbd9988b2e0e358a5120eecbb3e1040e60462758a2f09"
+      "hash": "6d9251e3ee777bab0c46a0d7ab90750e1bd1a012cfda48cd69691f09f3243a79"
     },
     {
       "uri": "event://food/trust-update-harlow",
@@ -684,7 +684,7 @@
       "causation_id": "ev-s2-108",
       "idempotency_key": "idem-s2-109",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "trust for org://food/harlow [retail restock shipment reliability] 0.900 -> 0.520 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -695,7 +695,7 @@
           "claim": "retail restock shipment reliability",
           "context": "relationship://food/partner-net",
           "score": 0.52,
-          "updated_at": "2026-09-01T02:18:51Z",
+          "updated_at": "2026-09-01T03:13:38Z",
           "expected": 0.8,
           "outcome": 0.0,
           "evidence": [
@@ -705,7 +705,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "d2a65898aa0041d59b4c214b33057e24076ad84ac204e1e86dbac9fa8291f628"
+      "hash": "b3fec7ac2606f4c0d74e38f35d8a3a85d79c628da7c73db6e24b9e00d1a14298"
     },
     {
       "uri": "event://food/s4-exchange-crestlineQ3",
@@ -715,7 +715,7 @@
       "causation_id": "ev-s4-109",
       "idempotency_key": "idem-s4-110",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://s4",
       "detail": "settle exchange crestlineQ3: 2000000.0 USD org://food/maplehurst->org://food/crestline (value 2000000.0, cost 2000000.0)",
       "state_update": [
@@ -766,7 +766,7 @@
             "provider": "org://food/crestline",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T02:18:51Z"
+          "made_at": "2026-09-01T03:13:38Z"
         },
         {
           "uri": "event://food/s4-exchange-crestlineQ3",
@@ -776,7 +776,7 @@
           "causation_id": "ev-s4-109",
           "idempotency_key": "idem-s4-110",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T02:18:51Z",
+          "occurred_at": "2026-09-01T03:13:38Z",
           "actor": "agent://s4",
           "detail": "settle exchange crestlineQ3: 2000000.0 USD org://food/maplehurst->org://food/crestline (value 2000000.0, cost 2000000.0)",
           "state_update": [],
@@ -798,7 +798,7 @@
       "provider": "org://food/crestline",
       "settled_at": "2026-08-30T00:00:00Z",
       "exchange_of": "commitment://food/c-crestlineQ3",
-      "hash": "d6d6453ad1c19236152217d6cc4a57f9899e8d6ec3c42790f55886f6926aecb4"
+      "hash": "1031c55c8a1d026cf287d96386a6ea1048d073c0348c862cd15be1da6f2fcea7"
     },
     {
       "uri": "event://food/s4-outcome-crestlineQ3",
@@ -808,7 +808,7 @@
       "causation_id": "ev-s4-110",
       "idempotency_key": "idem-s4-111",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://s4",
       "detail": "evaluate settle crestlineQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
       "state_update": [
@@ -820,7 +820,7 @@
           "causation_id": "ev-s4-110",
           "idempotency_key": "idem-s4-111",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T02:18:51Z",
+          "occurred_at": "2026-09-01T03:13:38Z",
           "actor": "agent://s4",
           "detail": "evaluate settle crestlineQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
           "state_update": [],
@@ -838,7 +838,7 @@
       "deadline": "2026-08-31T00:00:00Z",
       "settled_at": "2026-08-30T00:00:00Z",
       "score": 1.0,
-      "hash": "9a687278e1a3cacb6698b308bbc1e01cc742b1247ee3a0818cb3780a28943a8c"
+      "hash": "d3d7d7507f91732b34d37871cd9a0bee865709bc3eaaf35b2b96e42b55cbaa58"
     },
     {
       "uri": "event://food/outcome-committed-crestlineQ3",
@@ -848,7 +848,7 @@
       "causation_id": "ev-s2-111",
       "idempotency_key": "idem-s2-112",
       "signature": "signed-by-org://food/crestline",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "org://food/crestline",
       "detail": "job committed-crestlineQ3 by org://food/crestline: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
       "state_update": [
@@ -860,7 +860,7 @@
           "causation_id": "ev-s2-111",
           "idempotency_key": "idem-s2-112",
           "signature": "signed-by-org://food/crestline",
-          "occurred_at": "2026-09-01T02:18:51Z",
+          "occurred_at": "2026-09-01T03:13:38Z",
           "actor": "org://food/crestline",
           "detail": "job committed-crestlineQ3 by org://food/crestline: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
           "state_update": [],
@@ -878,7 +878,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T02:18:51Z"
+          "captured_at": "2026-09-01T03:13:38Z"
         }
       ],
       "job": "committed-crestlineQ3",
@@ -886,7 +886,7 @@
       "committed_deadline": "2026-08-31T00:00:00Z",
       "actual_completed_at": "2026-08-30T00:00:00Z",
       "on_time": true,
-      "hash": "192086118f8091f16a63515c7830f13f0cbd7354e3d5dc88f1bf693d035eb50f"
+      "hash": "fbd1dade1f813b7c11d4289d9fbae77249429c07314ae81b76ae48eea4efa28c"
     },
     {
       "uri": "event://food/verify-committed-crestlineQ3",
@@ -896,7 +896,7 @@
       "causation_id": "ev-s2-112",
       "idempotency_key": "idem-s2-113",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://s5",
       "detail": "verify 'org://food/crestline delivered the committed resource on time' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -913,10 +913,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T02:18:51Z"
+          "captured_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "305a8408383ab0a1e9fdf23e29242a6d0ba45ab3bf51f6d91f0516e311027d1b"
+      "hash": "16ee80ad0945d9d2d8cd079edeab0f238556cba327c387200122c7cde358c751"
     },
     {
       "uri": "event://food/trust-update-crestline",
@@ -926,7 +926,7 @@
       "causation_id": "ev-s2-113",
       "idempotency_key": "idem-s2-114",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "trust for org://food/crestline [retail restock shipment reliability] 0.600 -> 0.695 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -937,7 +937,7 @@
           "claim": "retail restock shipment reliability",
           "context": "relationship://food/partner-net",
           "score": 0.695,
-          "updated_at": "2026-09-01T02:18:51Z",
+          "updated_at": "2026-09-01T03:13:38Z",
           "expected": 0.8,
           "outcome": 1.0,
           "evidence": [
@@ -947,7 +947,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "ff06d08a1714341ebd15605cad3f6d746510420ff06f27c76a79dfa05188b3d9"
+      "hash": "c07c6d03700d1a33fbdb93132300d4452b4cc899d1420c07ee37e37deed1fa6f"
     },
     {
       "uri": "event://food/s4-exchange-harlowQ4",
@@ -957,7 +957,7 @@
       "causation_id": "ev-s4-114",
       "idempotency_key": "idem-s4-115",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://s4",
       "detail": "settle exchange harlowQ4: 1600000.0 USD org://food/maplehurst->org://food/harlow (value 1600000.0, cost 1600000.0)",
       "state_update": [
@@ -1008,7 +1008,7 @@
             "provider": "org://food/harlow",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T02:18:51Z"
+          "made_at": "2026-09-01T03:13:38Z"
         },
         {
           "uri": "event://food/s4-exchange-harlowQ4",
@@ -1018,7 +1018,7 @@
           "causation_id": "ev-s4-114",
           "idempotency_key": "idem-s4-115",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T02:18:51Z",
+          "occurred_at": "2026-09-01T03:13:38Z",
           "actor": "agent://s4",
           "detail": "settle exchange harlowQ4: 1600000.0 USD org://food/maplehurst->org://food/harlow (value 1600000.0, cost 1600000.0)",
           "state_update": [],
@@ -1040,7 +1040,7 @@
       "provider": "org://food/harlow",
       "settled_at": "2026-09-17T00:00:00Z",
       "exchange_of": "commitment://food/c-harlowQ4",
-      "hash": "91313dc20e0bc5979143a336768d3cb7121b0603d2ad98ad7d307b8804810227"
+      "hash": "1b9534c7bc92b8ab5687469f662e364dba36d3ce5be2af28f658c35a3396d27b"
     },
     {
       "uri": "event://food/s4-outcome-harlowQ4",
@@ -1050,7 +1050,7 @@
       "causation_id": "ev-s4-115",
       "idempotency_key": "idem-s4-116",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://s4",
       "detail": "evaluate settle harlowQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
       "state_update": [
@@ -1062,7 +1062,7 @@
           "causation_id": "ev-s4-115",
           "idempotency_key": "idem-s4-116",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T02:18:51Z",
+          "occurred_at": "2026-09-01T03:13:38Z",
           "actor": "agent://s4",
           "detail": "evaluate settle harlowQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
           "state_update": [],
@@ -1080,7 +1080,7 @@
       "deadline": "2026-09-15T00:00:00Z",
       "settled_at": "2026-09-17T00:00:00Z",
       "score": 0.5,
-      "hash": "1c47a00fbea5bcff609fe23e304d5fa098de48e32851ed43dcc65037730f1e2a"
+      "hash": "72fd87c9cb9d68f98b4e1013a913d0ab23f598e2d692c2dee8c53677a230841e"
     },
     {
       "uri": "event://food/outcome-committed-harlowQ4",
@@ -1090,7 +1090,7 @@
       "causation_id": "ev-s2-116",
       "idempotency_key": "idem-s2-117",
       "signature": "signed-by-org://food/harlow",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "org://food/harlow",
       "detail": "job committed-harlowQ4 by org://food/harlow: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
       "state_update": [
@@ -1102,7 +1102,7 @@
           "causation_id": "ev-s2-116",
           "idempotency_key": "idem-s2-117",
           "signature": "signed-by-org://food/harlow",
-          "occurred_at": "2026-09-01T02:18:51Z",
+          "occurred_at": "2026-09-01T03:13:38Z",
           "actor": "org://food/harlow",
           "detail": "job committed-harlowQ4 by org://food/harlow: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
           "state_update": [],
@@ -1120,7 +1120,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T02:18:51Z"
+          "captured_at": "2026-09-01T03:13:38Z"
         }
       ],
       "job": "committed-harlowQ4",
@@ -1128,7 +1128,7 @@
       "committed_deadline": "2026-09-15T00:00:00Z",
       "actual_completed_at": "2026-09-17T00:00:00Z",
       "on_time": false,
-      "hash": "45a75b9082ca636019b959b0df7c95dcf102b6143a95d408af33eb6ed315680b"
+      "hash": "3e3bf0a8df934fd44f0dfdd1d5e44b5355c564645ab5ce29174aac4c42f6e32a"
     },
     {
       "uri": "event://food/verify-committed-harlowQ4",
@@ -1138,7 +1138,7 @@
       "causation_id": "ev-s2-117",
       "idempotency_key": "idem-s2-118",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://s5",
       "detail": "verify 'org://food/harlow delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -1155,10 +1155,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T02:18:51Z"
+          "captured_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "e79e6bbd2e6c2166ed66ccbcef4680a7d0e8e26a965cfe7d66832eaf17be9c0f"
+      "hash": "68b98713935ddc795c914cfb68e61a03e386665d25d97d440153c7fe7da7e31d"
     },
     {
       "uri": "event://food/trust-update-harlow",
@@ -1168,7 +1168,7 @@
       "causation_id": "ev-s2-118",
       "idempotency_key": "idem-s2-119",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "trust for org://food/harlow [retail restock shipment reliability] 0.520 -> 0.140 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -1179,7 +1179,7 @@
           "claim": "retail restock shipment reliability",
           "context": "relationship://food/partner-net",
           "score": 0.14,
-          "updated_at": "2026-09-01T02:18:51Z",
+          "updated_at": "2026-09-01T03:13:38Z",
           "expected": 0.8,
           "outcome": 0.0,
           "evidence": [
@@ -1189,7 +1189,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "4aa4965c87764cd516aebd63c2c5bfa4eea77db811ad880a900dba520ae542b2"
+      "hash": "8fa95c619a4ab5874125e5a68389dd22ff24777768a698f01993a58eebf53e93"
     },
     {
       "uri": "event://food/s5-state-7000",
@@ -1199,7 +1199,7 @@
       "causation_id": "ev-s5-6999",
       "idempotency_key": "idem-s5-7000",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "open case case://food/c-on-time (committed retail restock shipment below target on time)",
       "state_update": [
@@ -1216,18 +1216,18 @@
           "relationships": [
             "relationship://food/ops-rel"
           ],
-          "created_at": "2026-09-01T02:18:51Z",
+          "created_at": "2026-09-01T03:13:38Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": null
             }
           ],
           "suggestion": "ledger-projected on-time below target"
         }
       ],
-      "hash": "48e0047002beec302c5000c85fa356da5d7e521e0c9afeed3434b9cfc856ea0c"
+      "hash": "e8e55226f26667d2290090f3c1132339c8ca3fa998147945cf627add9a452beb"
     },
     {
       "uri": "event://food/s5-state-7001",
@@ -1237,7 +1237,7 @@
       "causation_id": "ev-s5-7000",
       "idempotency_key": "idem-s5-7001",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "record exception heartbeat on the case",
       "state_update": [
@@ -1254,11 +1254,11 @@
           "relationships": [
             "relationship://food/ops-rel"
           ],
-          "created_at": "2026-09-01T02:18:51Z",
+          "created_at": "2026-09-01T03:13:38Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": null
             }
           ],
@@ -1274,7 +1274,7 @@
           "metric": "metric://food/m-on-time"
         }
       ],
-      "hash": "e39905ebc98f32fb7b2125dc819a70e54a60e84f2d5486f0bf875945453fcc9e"
+      "hash": "ed9a2e700add9cd49331bcb466f51e0fa2bce27ff3208c4325c10f2cd60aa0d7"
     },
     {
       "uri": "event://food/s5-state-7002",
@@ -1284,7 +1284,7 @@
       "causation_id": "ev-s5-7001",
       "idempotency_key": "idem-s5-7002",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "case triage: exception assessed, root nominated",
       "state_update": [
@@ -1299,10 +1299,10 @@
           "confidence": 0.85,
           "expected_outcome": "accept as a real risk",
           "actual_outcome": "accepted; root nominated",
-          "made_at": "2026-09-01T02:18:51Z"
+          "made_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "d9d482756c8865cc5c506f800de208b85f2c420836dd97cf4c9814483f18929a"
+      "hash": "1425331d65fbd787db2920e2b506240a603279cebbba98524c7e995f9fb4c9be"
     },
     {
       "uri": "event://food/s5-case-triage",
@@ -1312,7 +1312,7 @@
       "causation_id": "ev-s5-7002",
       "idempotency_key": "idem-s5-7003",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "case triaged",
       "state_update": [
@@ -1329,16 +1329,16 @@
           "relationships": [
             "relationship://food/ops-rel"
           ],
-          "created_at": "2026-09-01T02:18:51Z",
+          "created_at": "2026-09-01T03:13:38Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-triage"
             }
           ],
@@ -1354,7 +1354,7 @@
           "metric": "metric://food/m-on-time"
         }
       ],
-      "hash": "4b2d51ee47a099b3b245a21aa2277aaa0b07235c5569bb6050809004cc95f3fb"
+      "hash": "fefd3070b873983cd74365c2afb7b7191966e24b473b386244fa2dbc86eb6622"
     },
     {
       "uri": "event://food/s5-state-7004",
@@ -1364,7 +1364,7 @@
       "causation_id": "ev-s5-7003",
       "idempotency_key": "idem-s5-7004",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "case assigned; task becomes assigned authorized work (#8)",
       "state_update": [
@@ -1414,10 +1414,10 @@
             "priority": 0.695,
             "capacity": 1.0
           },
-          "made_at": "2026-09-01T02:18:51Z"
+          "made_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "a500fd250fb0dae674be916c79db892c6f6e37d6cb8a9f43ace177dafa76221d"
+      "hash": "b9f9fa73647724b10033492fff9b9bc857596aadde82c940635cee1b60c8a9d0"
     },
     {
       "uri": "event://food/s5-case-assigned",
@@ -1427,7 +1427,7 @@
       "causation_id": "ev-s5-7004",
       "idempotency_key": "idem-s5-7005",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "case assigned",
       "state_update": [
@@ -1444,21 +1444,21 @@
           "relationships": [
             "relationship://food/ops-rel"
           ],
-          "created_at": "2026-09-01T02:18:51Z",
+          "created_at": "2026-09-01T03:13:38Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-assigned"
             }
           ],
@@ -1474,7 +1474,7 @@
           "metric": "metric://food/m-on-time"
         }
       ],
-      "hash": "f28ebd64196860b8f46bc7ed1b59af7d1d7c6b91c494552f18b28d84cb7c01b9"
+      "hash": "d72a738d3848a8835c1935de5e3bf6019ecdf5a5fa2c5a64aaac3ad5361853f0"
     },
     {
       "uri": "event://food/s5-case-inprogress",
@@ -1484,7 +1484,7 @@
       "causation_id": "ev-s5-7005",
       "idempotency_key": "idem-s5-7006",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "task execution began",
       "state_update": [
@@ -1501,26 +1501,26 @@
           "relationships": [
             "relationship://food/ops-rel"
           ],
-          "created_at": "2026-09-01T02:18:51Z",
+          "created_at": "2026-09-01T03:13:38Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-inprogress"
             }
           ],
@@ -1536,7 +1536,7 @@
           "metric": "metric://food/m-on-time"
         }
       ],
-      "hash": "606fb9c0c23c5ead006fb50af097a03192764bdadd3ec7aec7aeeb04f9152b36"
+      "hash": "aef43ea5392cbf6c556b4716b6d2301fdc59766a5d71dc9511c6e025d14f9f69"
     },
     {
       "uri": "event://food/s5-state-7007",
@@ -1546,7 +1546,7 @@
       "causation_id": "ev-s5-7006",
       "idempotency_key": "idem-s5-7007",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "policy updated: allocate by fit AND scoped Trust",
       "state_update": [
@@ -1563,7 +1563,7 @@
           "policy_status": "REVISED"
         }
       ],
-      "hash": "457b1e192885878745411bc89c02c3fc4858fd80bdcaded9ac0de1dd96717163"
+      "hash": "716718638b1ea72b1b477b7a9c15e9056f63355158ec516b8c9f5c5848602a60"
     },
     {
       "uri": "event://food/s5-state-7008",
@@ -1573,7 +1573,7 @@
       "causation_id": "ev-s5-7007",
       "idempotency_key": "idem-s5-7008",
       "signature": "signed-by-agent://food/s2",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s2",
       "detail": "task effect: next committed work ranked offer://food/o-g (score 0.695)",
       "state_update": [
@@ -1597,10 +1597,10 @@
               "score": 0.695
             }
           ],
-          "made_at": "2026-09-01T02:18:51Z"
+          "made_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "6c793b8c7c44557de8b9b6d4a53248e19718097f25d89fa6a1e36b968c1fd5e8"
+      "hash": "fbc3bcb1acdb43d0e4ea10180195c35f8c6663b105e0ae845f55531744f6e90f"
     },
     {
       "uri": "event://food/s5-escalate",
@@ -1610,7 +1610,7 @@
       "causation_id": "ev-s5-7008",
       "idempotency_key": "idem-s5-7009",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "escalation: the committed action is irreversible and cost-unknowable once done (\u00a76 floor)",
       "state_update": [
@@ -1625,7 +1625,7 @@
           "acknowledgement": "approve then execute"
         }
       ],
-      "hash": "973f98b685ec462471fa294d5fc48f1597f80b95fed12278a86816db42913764"
+      "hash": "a40da3f917f8c7c012d46eedcbfcfdf2883a23f7d0f4586e34b81acddf6b07c5"
     },
     {
       "uri": "event://food/owner-human",
@@ -1635,7 +1635,7 @@
       "causation_id": "ev-food-7009",
       "idempotency_key": "idem-food-7010",
       "signature": "signed-by-person://food/cso",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "person://food/cso",
       "detail": "person://food/cso signed approval to release the committed action (\u00a76 floor)",
       "state_update": [
@@ -1658,10 +1658,10 @@
             "irreversible_failure": true,
             "cost_failure_unknowable": true
           },
-          "made_at": "2026-09-01T02:18:51Z"
+          "made_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "2f09419a399dbc608022a465162dd4ce088fccebabd0623adecde6079ca47914"
+      "hash": "8e531076225b48ef6c91b9f37c92bd23d8058212265236524b953677cf61ed55"
     },
     {
       "uri": "event://food/action-release",
@@ -1671,7 +1671,7 @@
       "causation_id": "ev-food-7010",
       "idempotency_key": "idem-food-7011",
       "signature": "signed-by-person://food/cso",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/restock-ops",
       "detail": "rebalance_commitment executed after human approval",
       "worker": "agent://food/restock-ops",
@@ -1680,7 +1680,7 @@
       "tier": "human",
       "outcome": "done",
       "state_update": [],
-      "hash": "0553aea949aadbd4dcf0156957d5aea50c52d72b46f1861d202de207e9896cae"
+      "hash": "04938d1b2a800a71d45be3821b39fdd1cb7a343229f88aec2c097030b7a0a48d"
     },
     {
       "uri": "event://food/s5-case-blocked",
@@ -1690,7 +1690,7 @@
       "causation_id": "ev-s5-7011",
       "idempotency_key": "idem-s5-7012",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "case blocked pending the rallied committed delivery's verification",
       "state_update": [
@@ -1707,31 +1707,31 @@
           "relationships": [
             "relationship://food/ops-rel"
           ],
-          "created_at": "2026-09-01T02:18:51Z",
+          "created_at": "2026-09-01T03:13:38Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-inprogress"
             },
             {
               "status": "BLOCKED",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-blocked"
             }
           ],
@@ -1747,7 +1747,7 @@
           "metric": "metric://food/m-on-time"
         }
       ],
-      "hash": "847df9a7819743c04e1d7a07d3636cf995fffd6aefca1530d385aab1ac74b776"
+      "hash": "ead9e7e3c4f93916d05a1ca6dcc3c6e2598d922370cf4d1df546fb448cef837f"
     },
     {
       "uri": "event://food/s5-state-7013",
@@ -1757,7 +1757,7 @@
       "causation_id": "ev-s5-7012",
       "idempotency_key": "idem-s5-7013",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "rallied committed work allocated to org://food/crestline (the fix)",
       "state_update": [
@@ -1772,10 +1772,10 @@
             "kind": "retail restock shipment follow-up",
             "signed": true
           },
-          "agreed_at": "2026-09-01T02:18:51Z"
+          "agreed_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "dbe923fe344a0cfa12b83bd6a9263eb26bc96a4b756e9c11f44a842ee4687632"
+      "hash": "41906b8cb7d3765a7a2b7070bcccab787c15816363c2335ee862d244b36d5348"
     },
     {
       "uri": "event://food/s5-state-7014",
@@ -1785,7 +1785,7 @@
       "causation_id": "ev-s5-7013",
       "idempotency_key": "idem-s5-7014",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "register follow-on expectation",
       "state_update": [
@@ -1800,7 +1800,7 @@
           "evidence_required": "CLEAR"
         }
       ],
-      "hash": "9b03399d844c3cf364fea2b1e148c402c35d2a1d2c9f217963b76e835a597dc7"
+      "hash": "ea817e62b341c8003f63d3885faccaf7bbb3c9cbffe0f42c44cf887e2a9c09e1"
     },
     {
       "uri": "event://food/s4-exchange-crestlineR",
@@ -1810,7 +1810,7 @@
       "causation_id": "ev-s4-7014",
       "idempotency_key": "idem-s4-7015",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://s4",
       "detail": "settle exchange crestlineR: 2000000.0 USD org://food/maplehurst->org://food/crestline (value 2000000.0, cost 2000000.0)",
       "state_update": [
@@ -1861,7 +1861,7 @@
             "provider": "org://food/crestline",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T02:18:51Z"
+          "made_at": "2026-09-01T03:13:38Z"
         },
         {
           "uri": "event://food/s4-exchange-crestlineR",
@@ -1871,7 +1871,7 @@
           "causation_id": "ev-s4-7014",
           "idempotency_key": "idem-s4-7015",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T02:18:51Z",
+          "occurred_at": "2026-09-01T03:13:38Z",
           "actor": "agent://s4",
           "detail": "settle exchange crestlineR: 2000000.0 USD org://food/maplehurst->org://food/crestline (value 2000000.0, cost 2000000.0)",
           "state_update": [],
@@ -1893,7 +1893,7 @@
       "provider": "org://food/crestline",
       "settled_at": "2026-11-12T00:00:00Z",
       "exchange_of": "commitment://food/c-crestlineR",
-      "hash": "f24469a29d6b14078447abda920e299abff97e0eca53e3cabf455b9fc5c00d11"
+      "hash": "9f529b47734147e3f716929fa7948ac7b52d049ba51fddc65d333dc0446d5024"
     },
     {
       "uri": "event://food/s4-outcome-crestlineR",
@@ -1903,7 +1903,7 @@
       "causation_id": "ev-s4-7015",
       "idempotency_key": "idem-s4-7016",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://s4",
       "detail": "evaluate settle crestlineR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
       "state_update": [
@@ -1915,7 +1915,7 @@
           "causation_id": "ev-s4-7015",
           "idempotency_key": "idem-s4-7016",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T02:18:51Z",
+          "occurred_at": "2026-09-01T03:13:38Z",
           "actor": "agent://s4",
           "detail": "evaluate settle crestlineR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
           "state_update": [],
@@ -1933,7 +1933,7 @@
       "deadline": "2026-11-15T00:00:00Z",
       "settled_at": "2026-11-12T00:00:00Z",
       "score": 1.0,
-      "hash": "6028b306ea3e2d7803ef025f90e5ec400c3f20f683cea790e23d0e46f654a324"
+      "hash": "4affd32266cc21d8549a7da9b7ccb780741956a8c21bf070f10f2e640feed52d"
     },
     {
       "uri": "event://food/outcome-routed-crestlineR",
@@ -1943,7 +1943,7 @@
       "causation_id": "ev-s2-7016",
       "idempotency_key": "idem-s2-7017",
       "signature": "signed-by-org://food/crestline",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "org://food/crestline",
       "detail": "job routed-crestlineR by org://food/crestline: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
       "state_update": [
@@ -1955,7 +1955,7 @@
           "causation_id": "ev-s2-7016",
           "idempotency_key": "idem-s2-7017",
           "signature": "signed-by-org://food/crestline",
-          "occurred_at": "2026-09-01T02:18:51Z",
+          "occurred_at": "2026-09-01T03:13:38Z",
           "actor": "org://food/crestline",
           "detail": "job routed-crestlineR by org://food/crestline: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
           "state_update": [],
@@ -1973,7 +1973,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T02:18:51Z"
+          "captured_at": "2026-09-01T03:13:38Z"
         }
       ],
       "job": "routed-crestlineR",
@@ -1981,7 +1981,7 @@
       "committed_deadline": "2026-11-15T00:00:00Z",
       "actual_completed_at": "2026-11-12T00:00:00Z",
       "on_time": true,
-      "hash": "11d9918d6198f34adaaf1f5fa1be00619dadf8f956c0484bc51fd10d70b3b545"
+      "hash": "659f7710a0b4832492d21f59f1d81381f7ea308fef800c4dc63df1200bcd8f3e"
     },
     {
       "uri": "event://food/verify-routed-crestlineR",
@@ -1991,7 +1991,7 @@
       "causation_id": "ev-s2-7017",
       "idempotency_key": "idem-s2-7018",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://s5",
       "detail": "verify 'org://food/crestline delivered the rallied committed retail restock shipment on time' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -2008,10 +2008,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T02:18:51Z"
+          "captured_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "7d875719f4b290869dac856d992709eeea2688b343acf5666a3735947344a802"
+      "hash": "0ab63e1ddbaafe8f193c3f3b2435cdafa162faae05ecac8732603f102e2cd5a6"
     },
     {
       "uri": "event://food/trust-update-crestline",
@@ -2021,7 +2021,7 @@
       "causation_id": "ev-s2-7018",
       "idempotency_key": "idem-s2-7019",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "trust for org://food/crestline [retail restock shipment reliability] 0.695 -> 0.790 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -2032,7 +2032,7 @@
           "claim": "retail restock shipment reliability",
           "context": "relationship://food/partner-net",
           "score": 0.79,
-          "updated_at": "2026-09-01T02:18:51Z",
+          "updated_at": "2026-09-01T03:13:38Z",
           "expected": 0.8,
           "outcome": 1.0,
           "evidence": [
@@ -2042,7 +2042,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "2a34a4516e4853e49429c9c151609fe71e26ae5ae78c209bb3d4c385ecfef5e5"
+      "hash": "dfb6ae5a0e741f698e021ff5826ad2b90c79b9b2f8d4a08ce6e493aa87332f87"
     },
     {
       "uri": "event://food/s5-case-resolved",
@@ -2052,7 +2052,7 @@
       "causation_id": "ev-s5-7019",
       "idempotency_key": "idem-s5-7020",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "exception resolved: rallied committed work verified on time; forward on-time = 1.0; cumulative 2/4",
       "state_update": [
@@ -2069,36 +2069,36 @@
           "relationships": [
             "relationship://food/ops-rel"
           ],
-          "created_at": "2026-09-01T02:18:51Z",
+          "created_at": "2026-09-01T03:13:38Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-inprogress"
             },
             {
               "status": "BLOCKED",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-blocked"
             },
             {
               "status": "RESOLVED",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-resolved"
             }
           ],
@@ -2115,7 +2115,7 @@
           "verified_outcome": "forward on-time restored to 1.0; org://food/crestline delivered the rallied retail restock shipment on time (evidence://food/routed-crestlineR); org://food/crestline Trust 0.79"
         }
       ],
-      "hash": "0ec03bc41e44fcecd079ea831fd365acb1525eca386deac8bcc2094bd7747326"
+      "hash": "1320cc66e205dd7ff832d08bf98a23c814e90d52d268a9cebb90a1b00904d38f"
     },
     {
       "uri": "event://food/s5-state-7021",
@@ -2125,7 +2125,7 @@
       "causation_id": "ev-s5-7020",
       "idempotency_key": "idem-s5-7021",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "learning entry decision://food/learning: Concentrating restock volume with a distributor that has verified on-time delivery (crestline), while gating the laggard (harlow), restored on-time shipment. Verified good shipments compound scoped Trust.",
       "state_update": [
@@ -2139,10 +2139,10 @@
           "variance": 0.05,
           "why": "Concentrating restock volume with a distributor that has verified on-time delivery (crestline), while gating the laggard (harlow), restored on-time shipment. Verified good shipments compound scoped Trust.",
           "change_future_policy": "ALLOCATE by fit AND scoped Trust; distributors below the Trust floor need a performance gate before new orders.",
-          "made_at": "2026-09-01T02:18:51Z"
+          "made_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "fd73b99af1b54c99a9969552e3be341d4a057019d88334c6c0a9bf1ce7464983"
+      "hash": "d15180b5221071bbda4b5b0639658a03aae96aca330606c7966ce9015cd91d88"
     },
     {
       "uri": "event://food/s5-state-7022",
@@ -2152,7 +2152,7 @@
       "causation_id": "ev-s5-7021",
       "idempotency_key": "idem-s5-7022",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "close case; learning recorded; future policy updated",
       "state_update": [
@@ -2170,7 +2170,7 @@
           "learning": "decision://food/learning"
         }
       ],
-      "hash": "a9db6940a19da0eb5d548e934c6e17aad35295874e97cf6f78eaec19073a0106"
+      "hash": "46102abe0346fb0e012ea881e305fff9dd9088cc87b914e6838a4c19f9f0ca50"
     },
     {
       "uri": "event://food/s5-case-closed",
@@ -2180,7 +2180,7 @@
       "causation_id": "ev-s5-7021",
       "idempotency_key": "idem-s5-7022",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "case closed",
       "state_update": [
@@ -2197,41 +2197,41 @@
           "relationships": [
             "relationship://food/ops-rel"
           ],
-          "created_at": "2026-09-01T02:18:51Z",
+          "created_at": "2026-09-01T03:13:38Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-inprogress"
             },
             {
               "status": "BLOCKED",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-blocked"
             },
             {
               "status": "RESOLVED",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-resolved"
             },
             {
               "status": "CLOSED",
-              "at": "2026-09-01T02:18:51Z",
+              "at": "2026-09-01T03:13:38Z",
               "event": "event://food/s5-case-closed"
             }
           ],
@@ -2248,7 +2248,7 @@
           "verified_outcome": "forward on-time restored to 1.0; org://food/crestline delivered the rallied retail restock shipment on time (evidence://food/routed-crestlineR); org://food/crestline Trust 0.79"
         }
       ],
-      "hash": "79779fe107cb60e8fedb21207a84a307173c080bc0c133878a31865aaf7dc348"
+      "hash": "87c194a94168fac0c3440cba0ffe9fa9023a98f58cb29e6a06b6544b8ef0589d"
     },
     {
       "uri": "event://food/s5-state-7023",
@@ -2258,7 +2258,7 @@
       "causation_id": "ev-s5-7022",
       "idempotency_key": "idem-s5-7023",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "register goal + ledger-projected metrics",
       "state_update": [
@@ -2333,7 +2333,7 @@
           "root_cause_status": "UNKNOWN"
         }
       ],
-      "hash": "d4d655d282dec7cd8d26a96cd9349a635d9ab8f55db9b31ee80d4f38c1702ecb"
+      "hash": "d35184e7a2f456ea8f57ca7dc694f7b8e64649a11774a14ebd1dbdba29f11beb"
     },
     {
       "uri": "event://food/s5-state-7024",
@@ -2343,7 +2343,7 @@
       "causation_id": "ev-s5-7023",
       "idempotency_key": "idem-s5-7024",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "goal->metric->variance->decision->action->outcome",
       "state_update": [
@@ -2365,10 +2365,10 @@
             "action": "task://food/t-rebalance",
             "outcome": "event://food/outcome-routed-crestlineR"
           },
-          "made_at": "2026-09-01T02:18:51Z"
+          "made_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "e4244572b526a212010da1f4d611a0e478146b7ab55a2625302ba1bc42c927d2"
+      "hash": "26a65b8e240b729b12a96015934227382b1151be5eebaa02ee4aa359539133d8"
     },
     {
       "uri": "event://food/s5-state-7025",
@@ -2378,7 +2378,7 @@
       "causation_id": "ev-s5-7024",
       "idempotency_key": "idem-s5-7025",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "priority-ordered attention list",
       "state_update": [
@@ -2403,10 +2403,10 @@
               }
             ]
           },
-          "made_at": "2026-09-01T02:18:51Z"
+          "made_at": "2026-09-01T03:13:38Z"
         }
       ],
-      "hash": "ba6bea5c38209e21d9d5e235445dc683a568169deeabca21b53bc39a47f3cdc9"
+      "hash": "20669e09ea5eedf4219b195aa3cf02cf8f25a6fa93c77424f174e16a90856c1e"
     },
     {
       "uri": "event://food/s5-state-7026",
@@ -2416,7 +2416,7 @@
       "causation_id": "ev-s5-7025",
       "idempotency_key": "idem-s5-7026",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "dependency dependency://food/d-rb-enables-fu: task://food/t-rebalance ENABLES task://food/t-followup",
       "state_update": [
@@ -2427,7 +2427,7 @@
           "kind": "ENABLES"
         }
       ],
-      "hash": "0341c648f512d474dbc3bb6da8bbe82791e0033348fd09d50c9b648fa74a5955"
+      "hash": "02eabe83f57291182d9904f05e8bad7ac62fa0230ec3afd8b63664fee03182c2"
     },
     {
       "uri": "event://food/s5-state-7027",
@@ -2437,7 +2437,7 @@
       "causation_id": "ev-s5-7026",
       "idempotency_key": "idem-s5-7027",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "dependency dependency://food/d-fu-requires-pol: task://food/t-followup REQUIRES policy://food/allocation",
       "state_update": [
@@ -2448,7 +2448,7 @@
           "kind": "REQUIRES"
         }
       ],
-      "hash": "1b2dff1f13c4eebd0dcdb0b4e506798dbaf4f8c357c58b282b8db3a9f0d08ae8"
+      "hash": "879604f1f0ec322068e54127e4a6daa98e78ac4230d2b03b3d689d256ce1289e"
     },
     {
       "uri": "event://food/s5-state-7028",
@@ -2458,7 +2458,7 @@
       "causation_id": "ev-s5-7027",
       "idempotency_key": "idem-s5-7028",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "dependency dependency://food/d-fu-blocks-case: task://food/t-followup BLOCKS case://food/c-on-time",
       "state_update": [
@@ -2469,7 +2469,7 @@
           "kind": "BLOCKS"
         }
       ],
-      "hash": "cf0b0a9a5a5c2fda5c179435727d924fd534181379b0c299a238f8fccc4364af"
+      "hash": "bfe6ad330f8962c136082e6a050d60b316db149625cfbd1a21cb3510b1afaf23"
     },
     {
       "uri": "event://food/s5-state-7029",
@@ -2479,7 +2479,7 @@
       "causation_id": "ev-s5-7028",
       "idempotency_key": "idem-s5-7029",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "dependency dependency://food/d-case-from-metric: case://food/c-on-time DERIVED_FROM metric://food/m-on-time",
       "state_update": [
@@ -2490,7 +2490,7 @@
           "kind": "DERIVED_FROM"
         }
       ],
-      "hash": "43f43548dc9eecbb338abd787a97fccbe8b8462e0198478604c672e5fb1f888d"
+      "hash": "bf77e2a2f934937cc113a7b400b4bbc7bafc02054505b32337032605889431c9"
     },
     {
       "uri": "event://food/s5-state-7030",
@@ -2500,7 +2500,7 @@
       "causation_id": "ev-s5-7029",
       "idempotency_key": "idem-s5-7030",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "dependency dependency://food/d-metric-impacts-goal: metric://food/m-on-time IMPACTS goal://food/g-core",
       "state_update": [
@@ -2511,7 +2511,7 @@
           "kind": "IMPACTS"
         }
       ],
-      "hash": "503ac1127649068d07a04ca5caf506400c44558b1e6e26bda4573cd913a089f0"
+      "hash": "28ca126f351e71427afbbd3cdef30d61a5f91f8f310008fc602a5a615102edd3"
     },
     {
       "uri": "event://food/s5-state-7031",
@@ -2521,7 +2521,7 @@
       "causation_id": "ev-s5-7030",
       "idempotency_key": "idem-s5-7031",
       "signature": "signed-by-agent://food/s5",
-      "occurred_at": "2026-09-01T02:18:51Z",
+      "occurred_at": "2026-09-01T03:13:38Z",
       "actor": "agent://food/s5",
       "detail": "dependency dependency://food/d-rb-blocks-case: task://food/t-rebalance BLOCKS case://food/c-on-time",
       "state_update": [
@@ -2532,7 +2532,7 @@
           "kind": "BLOCKS"
         }
       ],
-      "hash": "a43c119f5a89bb354a0bfa6895b80ac0d9464e558f7bb0f809159b76d8f28acf"
+      "hash": "60a2b16d8228c7bbde1456425111a13c25cca409f83126cf39918a9f5f09dae6"
     }
   ]
 }

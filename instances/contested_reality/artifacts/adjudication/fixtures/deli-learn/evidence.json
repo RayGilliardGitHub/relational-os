@@ -1,0 +1,68 @@
+[
+  {
+    "uri": "evidence://deli/gps-arrival",
+    "kind": "ANCHORED",
+    "source": "fleet-GPS-livestate",
+    "captured_at": "2026-08-31T16:12:00-06:00",
+    "verity": {
+      "procedure": "gps-timestamp",
+      "confidence": 0.85
+    },
+    "reliability": 0.85,
+    "about": "arrival gate event",
+    "supports": "claim://deli/late"
+  },
+  {
+    "uri": "evidence://deli/arrival-receipt",
+    "kind": "TESTIMONY",
+    "source": "customer-signed-receipt",
+    "captured_at": "2026-08-31T16:15:00-06:00",
+    "verity": {
+      "procedure": "signed-receipt",
+      "confidence": 0.9
+    },
+    "reliability": 0.9,
+    "about": "delivery receipt",
+    "supports": "claim://deli/late"
+  },
+  {
+    "uri": "evidence://deli/third-party-verification",
+    "kind": "ANCHORED",
+    "source": "independent-audit-service",
+    "captured_at": "2026-08-31T17:05:00-06:00",
+    "verity": {
+      "procedure": "anchored-liveness",
+      "confidence": 0.97
+    },
+    "reliability": 0.97,
+    "about": "delivery liveness verification",
+    "supports": "claim://deli/delivered"
+  },
+  {
+    "uri": "evidence://deli/supplier-shipping",
+    "kind": "RECORD",
+    "source": "supplier-shipping-system",
+    "captured_at": "2026-08-31T15:58:00-06:00",
+    "verity": {
+      "procedure": "shipping-log",
+      "confidence": 0.92
+    },
+    "reliability": 0.92,
+    "about": "ship-out time",
+    "supports": "claim://deli/shipped"
+  },
+  {
+    "uri": "evidence://deli-learn/learning-note",
+    "kind": "RECORD",
+    "source": "post-resolution-postmortem",
+    "captured_at": "2026-09-01T03:13:36Z",
+    "verity": {
+      "procedure": "postmortem",
+      "confidence": 0.6
+    },
+    "reliability": 0.6,
+    "about": "what was learned",
+    "supports": null,
+    "learning": "conflicting delivery timestamps reach a determination only via an authorized adjudicator + independent anchored verification, not the single-source verifier"
+  }
+]

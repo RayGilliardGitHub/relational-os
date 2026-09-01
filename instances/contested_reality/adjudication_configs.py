@@ -545,3 +545,130 @@ LIBRARY_REUSE = [DELI_MAJORITY, INSPECT_CORROBORATION, COVE_CORROBORATION]
 
 
 SCENARIOS = [DELI, COVE]
+
+
+# ==============================================================================================
+# F. SPRINT 17 — distinct batch disputes on the SAME goods-QC org, for the reconcile-LEARNING
+# step. Two genuinely DIFFERENT predicate sets (batch alpha = the LEARNING episode whose realized
+# outcome recalibrates the reconcile threshold; batch beta = the SECOND, future dispute re-driven
+# under the learned rule). Same org economics/options/weights/authority as INSPECT; only the
+# dispute + claims + evidence + label differ (the generic engine, data-only). Also the cross-org
+# reuse target (`deli-learn`).
+# ==============================================================================================
+def inspect_batch(label: str, dispute_uri: str, claims, evidence, resolution_outcome) -> dict:
+    """Clone INSPECT under a new label + a DIFFERENT dispute/claims/evidence (a distinct batch:
+    a genuinely different predicate set, NOT a re-run of the same case). Everything else — actors,
+    relationships, obligations, economics, options, weights, factor_scores, floor_gated, authority,
+    the default reconcile — is reused from INSPECT unchanged."""
+    v = dict(INSPECT); v["label"] = label
+    for k in ("actors", "relationships", "obligations", "factor_scores", "options", "floor_gated",
+              "weights"):
+        v[k] = INSPECT[k]
+    v["dispute"] = dict(INSPECT["dispute"]); v["dispute"]["uri"] = dispute_uri
+    v["dispute_about"] = INSPECT["dispute_about"]; v["appeal_right"] = INSPECT["appeal_right"]
+    v["claims"] = list(claims); v["evidence"] = dict(evidence)
+    v["resolution_outcome"] = resolution_outcome
+    # a thin-evidence sub-dispute for the `unresolved` variant (never driven here; structurally
+    # valid so the field exists — built fresh, never mutates any shared config).
+    base_name = dispute_uri.rsplit("/")[-1]
+    u_claims = []
+    for c in list(claims):
+        uc = dict(c); uc["uri"] = "claim://%s/u-%s" % (label, c["uri"].rsplit("/")[-1])
+        uc["evidence"] = ["evidence://%s/u-%s" % (label, e.rsplit("/")[-1]) for e in c["evidence"]]
+        u_claims.append(uc)
+    u_ev = {e["uri"].rsplit("/")[-1]: dict(e) for e in evidence.values()}
+    for k, e in u_ev.items():
+        e["uri"] = "evidence://%s/u-%s" % (label, e["uri"].rsplit("/")[-1])
+        e["supports"] = "claim://%s/u-%s" % (label, e["supports"].rsplit("/")[-1])
+    v["unresolvable"] = {"claims": u_claims, "evidence": u_ev,
+                         "dispute": {"uri": "dispute://%s/u-%s" % (label, base_name),
+                                     "about": dispute_uri.rsplit("/", 1)[0] + "/" + base_name,
+                                     "parties": list(INSPECT["dispute"]["parties"]),
+                                     "status": "OPEN",
+                                     "constraint_blocks": dict(INSPECT["dispute"].get("constraint_blocks", {}))}}
+    return v
+
+
+CONF_LABEL_A = "inspect-learn-a"
+CONF_LABEL_B = "inspect-learn-b"
+
+INSPECT_BATCH_A = inspect_batch(
+    CONF_LABEL_A,
+    "dispute://inspect-la/batch-alpha",
+    [
+        {"uri": "claim://inspect-la/passed", "proposer": "org://inspect/company",
+         "statement": "batch alpha passed QC inspection; the automated machine pass signal and an "
+                      "independent auditor's sign-off both support acceptance.",
+         "evidence": ["evidence://inspect-la/machine-pass", "evidence://inspect-la/audit-signoff"]},
+        {"uri": "claim://inspect-la/failed", "proposer": "org://inspect/buyer",
+         "statement": "batch alpha failed inspection; a resident inspector's signed note records a "
+                      "defect.",
+         "evidence": ["evidence://inspect-la/resident-note"]},
+    ],
+    {
+        "machine-pass": {"uri": "evidence://inspect-la/machine-pass", "kind": "ANCHORED",
+                         "source": "automated-inspection-livestate",
+                         "captured_at": "2026-08-29T10:00:00-06:00",
+                         "verity": {"procedure": "machine-inspection-log", "confidence": 0.85},
+                         "reliability": 0.92, "about": "automated pass signal for batch alpha",
+                         "supports": "claim://inspect-la/passed"},
+        "audit-signoff": {"uri": "evidence://inspect-la/audit-signoff", "kind": "RECORD",
+                          "source": "annual-auditor-sign-off",
+                          "captured_at": "2026-07-10T09:00:00-06:00",
+                          "verity": {"procedure": "independent-audit", "confidence": 0.95},
+                          "reliability": 0.97, "about": "auditor sign-off on batch alpha",
+                          "supports": "claim://inspect-la/passed"},
+        "resident-note": {"uri": "evidence://inspect-la/resident-note", "kind": "TESTIMONY",
+                          "source": "resident-inspector-testimony",
+                          "captured_at": "2026-08-30T14:00:00-06:00",
+                          "verity": {"procedure": "signed-inspection-note", "confidence": 0.90},
+                          "reliability": 0.90, "about": "resident inspector's defect finding",
+                          "supports": "claim://inspect-la/failed"},
+    },
+    "batch alpha accepted with a documented partial rework; the determination held at a realized "
+    "value of 0.90 (a 10% rework), which is BELOW the reconcile threshold it was driven under.",
+)
+
+INSPECT_BATCH_B = inspect_batch(
+    CONF_LABEL_B,
+    "dispute://inspect-lb/batch-beta",
+    [
+        {"uri": "claim://inspect-lb/passed", "proposer": "org://inspect/company",
+         "statement": "batch beta passed QC inspection; the automated machine pass signal supports "
+                      "acceptance.",
+         "evidence": ["evidence://inspect-lb/beta-machine-pass"]},
+        {"uri": "claim://inspect-lb/failed", "proposer": "org://inspect/buyer",
+         "statement": "batch beta failed inspection; a resident inspector's note records a defect.",
+         "evidence": ["evidence://inspect-lb/beta-resident-note"]},
+    ],
+    {
+        "beta-machine-pass": {"uri": "evidence://inspect-lb/beta-machine-pass", "kind": "ANCHORED",
+                              "source": "automated-inspection-livestate",
+                              "captured_at": "2026-09-02T10:00:00-06:00",
+                              "verity": {"procedure": "machine-inspection-log", "confidence": 0.84},
+                              "reliability": 0.93, "about": "automated pass signal for batch beta",
+                              "supports": "claim://inspect-lb/passed"},
+        "beta-resident-note": {"uri": "evidence://inspect-lb/beta-resident-note", "kind": "TESTIMONY",
+                               "source": "resident-inspector-testimony",
+                               "captured_at": "2026-09-03T14:00:00-06:00",
+                               "verity": {"procedure": "signed-inspection-note", "confidence": 0.88},
+                               "reliability": 0.88, "about": "resident inspector's defect finding",
+                               "supports": "claim://inspect-lb/failed"},
+    },
+    "batch beta accepted (winning claim support 0.93) — resolvable ONLY under a reconcile "
+    "threshold that the learning episode's realized outcome recalibrated below 0.95.",
+)
+
+INSPECT_BATCHES = [INSPECT_BATCH_A, INSPECT_BATCH_B]
+
+# The deterministic, clamp-bounded hyper-parameters of the reconcile-learning step (data, not code).
+LEARN_HYPER = {"learning_rate": 0.8, "threshold_lo": 0.55, "threshold_hi": 0.95, "eps": 1e-6,
+               "realized_value_a": 0.90, "initial_threshold": 0.95}
+
+# Both batch episodes are driven under the INITIAL reconcile threshold (0.95) — the rule whose
+# parameter the learning step recalibrates from episode A's realized outcome. Episode B's lifecycle
+# is then re-driven (in the runner) under the LEARNED threshold; the config baseline here is the
+# honest 0.95 so the old-rule-vs-learned flip is shown on the SAME evidence.
+INITIAL_RECONCILE = {"rule": "best-reliability-threshold", "threshold": 0.95, "support_floor": 0.55}
+INSPECT_BATCH_A["reconcile"] = dict(INITIAL_RECONCILE)
+INSPECT_BATCH_B["reconcile"] = dict(INITIAL_RECONCILE)

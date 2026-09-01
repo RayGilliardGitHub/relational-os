@@ -66,7 +66,7 @@
       },
       "tradeoff": "trade-off[delivery; business-model {'evidence': 0.35, 'contractual': 0.3, 'relationship': 0.2, 'cost': 0.15}]\n  0.728  partial-settlement\n  0.665  conditional-resolution\n  0.620  accept-company-full-payment\n  0.435  request-more-evidence\n  0.400  unresolved\n  0.385  external-adjudication\n  0.380  escalate\n  0.285  accept-customer-refund FLOOR-GATED\n  => machine-eligible best (non-gated): partial-settlement (gated: ['accept-customer-refund'])"
     },
-    "made_at": "2026-09-01T02:11:11Z"
+    "made_at": "2026-09-01T03:13:36Z"
   },
   {
     "uri": "decision://deli/determination",
@@ -95,41 +95,6 @@
       "determination": "partial-settlement",
       "machine_eligible_best": "partial-settlement"
     },
-    "made_at": "2026-09-01T02:11:11Z",
-    "realized_cost_usd": 6000,
-    "outcome_value": 0.55,
-    "expected_utility": 0.7275,
-    "variance": 0.1775,
-    "learned_weights": {
-      "evidence": 0.34697916041540683,
-      "contractual": 0.3004697869878391,
-      "relationship": 0.20242541189070418,
-      "cost": 0.15012564070605
-    },
-    "_learned_from_weight_update": "chosen option (utility 0.728) realised 0.55 -> variance +0.177; weights cautiously re-weighted toward factors that distinguish well-performing options, clamp-bounded + renormalized"
-  },
-  {
-    "uri": "decision://deli/unresolved",
-    "by": "person://deli/adjudicator",
-    "authority": "authority://deli/adjudicate",
-    "alternatives": [
-      "accept-customer-refund",
-      "accept-company-full-payment",
-      "partial-settlement",
-      "conditional-resolution",
-      "request-more-evidence",
-      "escalate",
-      "unresolved",
-      "external-adjudication"
-    ],
-    "confidence": 0.6,
-    "expected_outcome": "resolve conflict",
-    "actual_outcome": "unresolved",
-    "detail": {
-      "determination": "UNRESOLVED",
-      "epistemic_state": "INSUFFICIENT_EVIDENCE",
-      "reason": "no admissible source reaches the configured sufficiency threshold; awarding either side is not justified by the basis"
-    },
-    "made_at": "2026-09-01T02:11:11Z"
+    "made_at": "2026-09-01T03:13:36Z"
   }
 ]

@@ -23,7 +23,10 @@ labels = ("deli", "cove", "inspect-best", "inspect-anchor", "inspect-rec",
           "inspect-anchor-spec", "inspect-rec-spec", "inspect-majority",
           # Sprint 16: rule-library reuse + the new bayesian-combine primitive fixtures
           "inspect-majority-lib", "deli-majority", "inspect-corroboration",
-          "cove-corroboration", "inspect-max098")
+          "cove-corroboration", "inspect-max098",
+          # Sprint 17: decision learning at the reconcile layer — the learning episode (A), the
+          # second/future dispute driven under the learned rule (B), and the cross-org reuse.
+          "inspect-learn-a", "inspect-learn-b", "deli-learn")
 for label in labels:
     fx = HERE / "artifacts/adjudication/fixtures" / label
     if not (fx / "ledger").exists():

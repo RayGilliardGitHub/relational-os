@@ -1,0 +1,20 @@
+[
+  {
+    "uri": "claim://inspect-lb/passed",
+    "proposer": "org://inspect/company",
+    "statement": "batch beta passed QC inspection; the automated machine pass signal supports acceptance.",
+    "evidence": [
+      "evidence://inspect-lb/beta-machine-pass"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://inspect-lb/failed",
+    "proposer": "org://inspect/buyer",
+    "statement": "batch beta failed inspection; a resident inspector's note records a defect.",
+    "evidence": [
+      "evidence://inspect-lb/beta-resident-note"
+    ],
+    "epistemic_status": "disputed"
+  }
+]

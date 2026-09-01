@@ -1,0 +1,30 @@
+{
+  "deli": {
+    "active_rule": "best-reliability-threshold",
+    "source": "registry",
+    "learned_this_run": false,
+    "why": "unchanged",
+    "determination": "partial-settlement"
+  },
+  "inspect-corroboration": {
+    "active_rule": "independent-corroboration",
+    "source": "rule-library",
+    "learned_this_run": false,
+    "why": "unchanged",
+    "determination": "rework-partial-credit"
+  },
+  "inspect-learn-b": {
+    "active_rule": "calibrated-threshold-091",
+    "source": "learned",
+    "learned_this_run": true,
+    "why": "reconcile threshold recalibrated lowered (relaxed: the bar demanded more than realized determinations held): prior 0.950 -> 0.910 from a realized outcome value 0.900 (variance signal -0.040, learning_rate 0.8), clamp-bounded to [0.55, 0.95]",
+    "determination": "rework-partial-credit"
+  },
+  "deli-learn": {
+    "active_rule": "calibrated-threshold-091",
+    "source": "learned",
+    "learned_this_run": false,
+    "why": "unchanged",
+    "determination": "partial-settlement"
+  }
+}

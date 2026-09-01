@@ -1,0 +1,69 @@
+[
+  {
+    "uri": "evidence://inspect-la/machine-pass",
+    "kind": "ANCHORED",
+    "source": "automated-inspection-livestate",
+    "captured_at": "2026-08-29T10:00:00-06:00",
+    "verity": {
+      "procedure": "machine-inspection-log",
+      "confidence": 0.85
+    },
+    "reliability": 0.92,
+    "about": "automated pass signal for batch alpha",
+    "supports": "claim://inspect-la/passed"
+  },
+  {
+    "uri": "evidence://inspect-la/audit-signoff",
+    "kind": "RECORD",
+    "source": "annual-auditor-sign-off",
+    "captured_at": "2026-07-10T09:00:00-06:00",
+    "verity": {
+      "procedure": "independent-audit",
+      "confidence": 0.95
+    },
+    "reliability": 0.97,
+    "about": "auditor sign-off on batch alpha",
+    "supports": "claim://inspect-la/passed"
+  },
+  {
+    "uri": "evidence://inspect-la/resident-note",
+    "kind": "TESTIMONY",
+    "source": "resident-inspector-testimony",
+    "captured_at": "2026-08-30T14:00:00-06:00",
+    "verity": {
+      "procedure": "signed-inspection-note",
+      "confidence": 0.9
+    },
+    "reliability": 0.9,
+    "about": "resident inspector's defect finding",
+    "supports": "claim://inspect-la/failed"
+  },
+  {
+    "uri": "evidence://inspect-learn-a/learning-note",
+    "kind": "RECORD",
+    "source": "post-resolution-postmortem",
+    "captured_at": "2026-09-01T03:13:36Z",
+    "verity": {
+      "procedure": "postmortem",
+      "confidence": 0.6
+    },
+    "reliability": 0.6,
+    "about": "what was learned",
+    "supports": null,
+    "learning": "reliability alone is ambiguous here (fails only if the reconciliation rule admits the resident testimony vs demands anchored-only vs recency-decays the old audit); the adjudicator must state which rule the determination is reached under"
+  },
+  {
+    "uri": "evidence://inspect-learn-a/realized-outcome-note",
+    "kind": "RECORD",
+    "source": "verified-outcome-capture",
+    "captured_at": "2026-09-01T03:13:36Z",
+    "verity": {
+      "procedure": "outcome-capture",
+      "confidence": 0.7
+    },
+    "reliability": 0.7,
+    "about": "realized outcome value as recorded",
+    "supports": null,
+    "learning": "realized outcome captured additively for the reconcile-rule learning step"
+  }
+]

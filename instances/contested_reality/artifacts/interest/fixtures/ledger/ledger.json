@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/interest-conflict-2026",
-  "head_hash": "cec5c73df74038b049f04268aafc2fa8e8bfe93dda03c3ba851a0ad92e45e726",
+  "head_hash": "5185278622f1fbc3778a6a82c435576bb47ccff96174e7d2b8f6c02644e26b38",
   "entries": [
     {
       "uri": "event://ic/provision",
@@ -10,7 +10,7 @@
       "causation_id": "ev-ic-prev-1",
       "idempotency_key": "idem-ic-provision-1",
       "signature": "signed-by-org://ic/company",
-      "occurred_at": "2026-09-01T02:18:40Z",
+      "occurred_at": "2026-09-01T03:13:33Z",
       "actor": "org://ic/company",
       "detail": "provision actors, employment + contract + staffing-authority relationships, employee APPEAL right, adjudicator + appeal authority",
       "state_update": [
@@ -150,7 +150,7 @@
           ]
         }
       ],
-      "hash": "a20a58c1c97afe1619932c41fa3d05ad350fd22faf8f2dff6cc3cab12a5bc288"
+      "hash": "c11f7211fa29068745298655b51d7ad4f6bc09c2a538041e4f0b1ca6cbd48f06"
     },
     {
       "uri": "event://ic/constraints",
@@ -160,7 +160,7 @@
       "causation_id": "ev-ic-prev-2",
       "idempotency_key": "idem-ic-constraints-2",
       "signature": "signed-by-org://ic/company",
-      "occurred_at": "2026-09-01T02:18:40Z",
+      "occurred_at": "2026-09-01T03:13:33Z",
       "actor": "org://ic/company",
       "detail": "company conditional remote-work policy + customer 30-minute SLA expectation",
       "state_update": [
@@ -184,7 +184,7 @@
           "evidence_required": "SOME"
         }
       ],
-      "hash": "645b56301155fe49d192e9c8af31c93639aa97673d096ca65e7069347d214107"
+      "hash": "3d1d8b8e7f4e55382fa99dd2d4f36c793a79e80bbaf1e0155b72e1e4e6baa96d"
     },
     {
       "uri": "event://ic/open-case",
@@ -194,7 +194,7 @@
       "causation_id": "ev-ic-prev-3",
       "idempotency_key": "idem-ic-open-case-3",
       "signature": "signed-by-person://ic/manager",
-      "occurred_at": "2026-09-01T02:18:40Z",
+      "occurred_at": "2026-09-01T03:13:33Z",
       "actor": "person://ic/manager",
       "detail": "conflicting interests -> case OPEN with conflict + uncertainty recorded",
       "state_update": [
@@ -243,7 +243,7 @@
           }
         }
       ],
-      "hash": "28c5fdba5f18b189b956b90e9a764ceb990f568657f6ebfcf1e024db24b9a17b"
+      "hash": "2f04b4d7082ad988bc9499572d148607e08e5ece4ef0231c5f5c7ec3f4d3e7cc"
     },
     {
       "uri": "event://ic/adjudicate",
@@ -253,7 +253,7 @@
       "causation_id": "ev-ic-prev-4",
       "idempotency_key": "idem-ic-adjudicate-4",
       "signature": "signed-by-person://ic/manager",
-      "occurred_at": "2026-09-01T02:18:40Z",
+      "occurred_at": "2026-09-01T03:13:33Z",
       "actor": "person://ic/manager",
       "detail": "human adjudicator determination: remote-with-coverage-plan",
       "state_update": [
@@ -283,7 +283,7 @@
             ],
             "reason": "employee's remote interest is legitimate and within policy; manager's SLA interest is binding; a CONDITIONAL plan meets both: remote Mon/Wed/Fri, on-site Tue/Thu keeps staffing at the 3-agent floor so the 30-min SLA holds, and 2 of 12 unused-leave days are consumed"
           },
-          "made_at": "2026-09-01T02:18:40Z"
+          "made_at": "2026-09-01T03:13:33Z"
         },
         {
           "uri": "case://ic/remote-conflict",
@@ -339,7 +339,7 @@
           }
         }
       ],
-      "hash": "78b32ecf97945cd27cff66a43795f00452e8b6815bb40e7edc9f8897e6717b88"
+      "hash": "1c8789217d93ca4b536d25928beeaaef06d79c7375dbc137418c8b911d1e9b62"
     },
     {
       "uri": "event://ic/appeal",
@@ -349,7 +349,7 @@
       "causation_id": "ev-ic-prev-5",
       "idempotency_key": "idem-ic-appeal-5",
       "signature": "signed-by-person://ic/employee",
-      "occurred_at": "2026-09-01T02:18:40Z",
+      "occurred_at": "2026-09-01T03:13:33Z",
       "actor": "person://ic/employee",
       "detail": "employee appeals the determination (Right type=APPEAL)",
       "state_update": [
@@ -430,7 +430,7 @@
           "exercised_at_ref": "event://ic/appeal"
         }
       ],
-      "hash": "75ab6ad0674aaf80391e65adcbb0182ecba9f9fec2a7e36e655a7714d1df5a60"
+      "hash": "842a40d841000fdf701e90a919e86210618a79a821acad2f307afa9d49ff1d44"
     },
     {
       "uri": "event://ic/appeal-resolved",
@@ -440,7 +440,7 @@
       "causation_id": "ev-ic-prev-6",
       "idempotency_key": "idem-ic-appeal-resolved-6",
       "signature": "signed-by-person://ic/director",
-      "occurred_at": "2026-09-01T02:18:40Z",
+      "occurred_at": "2026-09-01T03:13:33Z",
       "actor": "person://ic/director",
       "detail": "director re-adjudicates the appeal (higher authority)",
       "state_update": [
@@ -460,7 +460,7 @@
             "ruling": "affirmed-coverage-condition",
             "granted": "employee remote 4 days/wk; 3 of 12 leave days explicit"
           },
-          "made_at": "2026-09-01T02:18:40Z"
+          "made_at": "2026-09-01T03:13:33Z"
         },
         {
           "uri": "case://ic/remote-conflict",
@@ -529,7 +529,7 @@
           "final_arrangement": "remote 4 days/wk + 3 leave days; on-site 1 day meets SLA floor"
         }
       ],
-      "hash": "2b9114175b4f3b8fcc14063b2ca1a05641f5eea796514379bf3b7ff8e821d470"
+      "hash": "586e15f5b49c20952e719c15355d4619f1833b9306c1a57295770ea1e1599824"
     },
     {
       "uri": "event://ic/open-uncertain",
@@ -539,7 +539,7 @@
       "causation_id": "ev-ic-prev-7",
       "idempotency_key": "idem-ic-open-uncertain-7",
       "signature": "signed-by-person://ic/manager",
-      "occurred_at": "2026-09-01T02:18:40Z",
+      "occurred_at": "2026-09-01T03:13:33Z",
       "actor": "person://ic/manager",
       "detail": "insufficient staffing/coverage data -> case OPEN",
       "state_update": [
@@ -570,7 +570,7 @@
           }
         }
       ],
-      "hash": "e14498f6c65f1ba66a4f71b47c90b72b54dc46bba87ee011108f534c81fa4921"
+      "hash": "f1be985f7c13c3bf4b41b396cbb3d2a00cf3d273c792b104837bec778ebd53c9"
     },
     {
       "uri": "event://ic/adjudicate-uncertain",
@@ -580,7 +580,7 @@
       "causation_id": "ev-ic-prev-8",
       "idempotency_key": "idem-ic-adjudicate-uncertain-8",
       "signature": "signed-by-person://ic/manager",
-      "occurred_at": "2026-09-01T02:18:40Z",
+      "occurred_at": "2026-09-01T03:13:33Z",
       "actor": "person://ic/manager",
       "detail": "human adjudicator determination: UNRESOLVED",
       "state_update": [
@@ -603,7 +603,7 @@
             "epistemic_state": "INSUFFICIENT_EVIDENCE",
             "reason": "coverage on proposed remote days is unverified with no independent source; no arrangement is justified by the admissible basis"
           },
-          "made_at": "2026-09-01T02:18:40Z"
+          "made_at": "2026-09-01T03:13:33Z"
         },
         {
           "uri": "case://ic/remote-uncertain",
@@ -636,7 +636,7 @@
           "determined_by": "person://ic/manager"
         }
       ],
-      "hash": "cec5c73df74038b049f04268aafc2fa8e8bfe93dda03c3ba851a0ad92e45e726"
+      "hash": "5185278622f1fbc3778a6a82c435576bb47ccff96174e7d2b8f6c02644e26b38"
     }
   ]
 }
