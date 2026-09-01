@@ -1,0 +1,36 @@
+[
+  {
+    "uri": "relationship://deli-flat2/customer-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://deli-flat2/customer",
+      "org://deli-flat2/company"
+    ],
+    "roles": {
+      "org://deli/customer": [
+        "buyer"
+      ],
+      "org://deli/company": [
+        "provider"
+      ]
+    },
+    "purpose": "contracted service delivery with a deadline"
+  },
+  {
+    "uri": "relationship://deli-flat2/supplier-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://deli-flat2/supplier",
+      "org://deli-flat2/company"
+    ],
+    "roles": {
+      "org://deli/supplier": [
+        "shipper"
+      ],
+      "org://deli/company": [
+        "customer"
+      ]
+    },
+    "purpose": "supplier shipping for the delivery"
+  }
+]

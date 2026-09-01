@@ -1,0 +1,80 @@
+[
+  {
+    "uri": "org://deli/customer",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://deli/company",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://deli/supplier",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://deli/registrar",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://deli/adjudicator",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://deli/appeal",
+    "type": "PERSON"
+  },
+  {
+    "uri": "system://deli/verify",
+    "type": "SYSTEM"
+  },
+  {
+    "uri": "obligation://deli-atcap/deliver-due",
+    "subject": "org://deli-atcap/company",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "deliver the contracted service by the deadline",
+    "due_by": "2026-08-31T16:00:00-06:00"
+  },
+  {
+    "uri": "obligation://deli-atcap/pay-due",
+    "subject": "org://deli-atcap/customer",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "pay the $18,000 invoice on confirmed delivery",
+    "due_by": "2026-09-30T00:00:00-06:00"
+  },
+  {
+    "uri": "authority://deli-atcap/adjudicate",
+    "holder": "person://deli-atcap/adjudicator",
+    "grants": [
+      "adjudicate"
+    ],
+    "roles": [
+      "adjudicator"
+    ],
+    "capacity": {
+      "value": 500.0,
+      "unit": "resolutions/day",
+      "load": 1.25,
+      "status": "recorded"
+    }
+  },
+  {
+    "uri": "authority://deli-atcap/adjudicate-appeal",
+    "holder": "person://deli-atcap/appeal",
+    "grants": [
+      "adjudicate_appeal"
+    ],
+    "roles": [
+      "appeal-adjudicator"
+    ]
+  },
+  {
+    "uri": "right://deli-atcap/cust-appeal",
+    "holder": "org://deli-atcap/customer",
+    "type": "APPEAL",
+    "subject": "DUPLICATE",
+    "scope": [
+      "obligation://deli-atcap/deliver-due"
+    ],
+    "purpose": "right to appeal the determination"
+  }
+]

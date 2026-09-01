@@ -308,7 +308,7 @@
       "uri": "process_instance://aero/pi-core",
       "process": "process://aero/pr-core",
       "status": "RUNNING",
-      "started_at": "2026-09-01T03:13:38Z"
+      "started_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "trust://aero/t-apex-aeronautics",
@@ -317,7 +317,7 @@
       "claim": "airframe-subsystem delivery reliability",
       "context": "relationship://aero/partner-net",
       "score": 0.79,
-      "updated_at": "2026-09-01T03:13:38Z",
+      "updated_at": "2026-09-01T05:08:35Z",
       "expected": 0.8,
       "outcome": 1.0,
       "evidence": [
@@ -333,7 +333,7 @@
       "claim": "airframe-subsystem delivery reliability",
       "context": "relationship://aero/partner-net",
       "score": 0.14,
-      "updated_at": "2026-09-01T03:13:38Z",
+      "updated_at": "2026-09-01T05:08:35Z",
       "expected": 0.8,
       "outcome": 0.0,
       "evidence": [
@@ -392,7 +392,7 @@
           "score": 0.6
         }
       ],
-      "made_at": "2026-09-01T03:13:38Z"
+      "made_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "asset://money/aero-escrow-vireo-airframeQ3",
@@ -441,7 +441,7 @@
         "provider": "org://aero/vireo-airframe",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T03:13:38Z"
+      "made_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "event://aero/s4-exchange-vireo-airframeQ3",
@@ -451,7 +451,7 @@
       "causation_id": "ev-s4-104",
       "idempotency_key": "idem-s4-105",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "settle exchange vireo-airframeQ3: 2000000.0 USD org://aero/valiant-aero->org://aero/vireo-airframe (value 2000000.0, cost 2000000.0)",
       "state_update": [],
@@ -472,7 +472,7 @@
       "causation_id": "ev-s4-105",
       "idempotency_key": "idem-s4-106",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "evaluate settle vireo-airframeQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
       "state_update": [],
@@ -491,7 +491,7 @@
       "causation_id": "ev-s2-106",
       "idempotency_key": "idem-s2-107",
       "signature": "signed-by-org://aero/vireo-airframe",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "org://aero/vireo-airframe",
       "detail": "job committed-vireo-airframeQ3 by org://aero/vireo-airframe: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
       "state_update": [],
@@ -509,7 +509,7 @@
         "procedure": "anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T03:13:38Z"
+      "captured_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "claim://aero/committed-vireo-airframeQ3",
@@ -563,7 +563,7 @@
         "provider": "org://aero/apex-aeronautics",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T03:13:38Z"
+      "made_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "event://aero/s4-exchange-apex-aeronauticsQ3",
@@ -573,7 +573,7 @@
       "causation_id": "ev-s4-109",
       "idempotency_key": "idem-s4-110",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "settle exchange apex-aeronauticsQ3: 2000000.0 USD org://aero/valiant-aero->org://aero/apex-aeronautics (value 2000000.0, cost 2000000.0)",
       "state_update": [],
@@ -594,7 +594,7 @@
       "causation_id": "ev-s4-110",
       "idempotency_key": "idem-s4-111",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "evaluate settle apex-aeronauticsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
       "state_update": [],
@@ -613,7 +613,7 @@
       "causation_id": "ev-s2-111",
       "idempotency_key": "idem-s2-112",
       "signature": "signed-by-org://aero/apex-aeronautics",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "org://aero/apex-aeronautics",
       "detail": "job committed-apex-aeronauticsQ3 by org://aero/apex-aeronautics: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
       "state_update": [],
@@ -631,7 +631,7 @@
         "procedure": "anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T03:13:38Z"
+      "captured_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "claim://aero/committed-apex-aeronauticsQ3",
@@ -685,7 +685,7 @@
         "provider": "org://aero/vireo-airframe",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T03:13:38Z"
+      "made_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "event://aero/s4-exchange-vireo-airframeQ4",
@@ -695,7 +695,7 @@
       "causation_id": "ev-s4-114",
       "idempotency_key": "idem-s4-115",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "settle exchange vireo-airframeQ4: 1600000.0 USD org://aero/valiant-aero->org://aero/vireo-airframe (value 1600000.0, cost 1600000.0)",
       "state_update": [],
@@ -716,7 +716,7 @@
       "causation_id": "ev-s4-115",
       "idempotency_key": "idem-s4-116",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "evaluate settle vireo-airframeQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
       "state_update": [],
@@ -735,7 +735,7 @@
       "causation_id": "ev-s2-116",
       "idempotency_key": "idem-s2-117",
       "signature": "signed-by-org://aero/vireo-airframe",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "org://aero/vireo-airframe",
       "detail": "job committed-vireo-airframeQ4 by org://aero/vireo-airframe: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
       "state_update": [],
@@ -753,7 +753,7 @@
         "procedure": "anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T03:13:38Z"
+      "captured_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "claim://aero/committed-vireo-airframeQ4",
@@ -773,41 +773,41 @@
       "relationships": [
         "relationship://aero/ops-rel"
       ],
-      "created_at": "2026-09-01T03:13:38Z",
+      "created_at": "2026-09-01T05:08:35Z",
       "history": [
         {
           "status": "OPEN",
-          "at": "2026-09-01T03:13:38Z",
+          "at": "2026-09-01T05:08:35Z",
           "event": null
         },
         {
           "status": "TRIAGE",
-          "at": "2026-09-01T03:13:38Z",
+          "at": "2026-09-01T05:08:35Z",
           "event": "event://aero/s5-case-triage"
         },
         {
           "status": "ASSIGNED",
-          "at": "2026-09-01T03:13:38Z",
+          "at": "2026-09-01T05:08:35Z",
           "event": "event://aero/s5-case-assigned"
         },
         {
           "status": "IN_PROGRESS",
-          "at": "2026-09-01T03:13:38Z",
+          "at": "2026-09-01T05:08:35Z",
           "event": "event://aero/s5-case-inprogress"
         },
         {
           "status": "BLOCKED",
-          "at": "2026-09-01T03:13:38Z",
+          "at": "2026-09-01T05:08:35Z",
           "event": "event://aero/s5-case-blocked"
         },
         {
           "status": "RESOLVED",
-          "at": "2026-09-01T03:13:38Z",
+          "at": "2026-09-01T05:08:35Z",
           "event": "event://aero/s5-case-resolved"
         },
         {
           "status": "CLOSED",
-          "at": "2026-09-01T03:13:38Z",
+          "at": "2026-09-01T05:08:35Z",
           "event": "event://aero/s5-case-closed"
         }
       ],
@@ -834,7 +834,7 @@
       "confidence": 0.85,
       "expected_outcome": "accept as a real risk",
       "actual_outcome": "accepted; root nominated",
-      "made_at": "2026-09-01T03:13:38Z"
+      "made_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "task://aero/t-rebalance",
@@ -882,7 +882,7 @@
         "priority": 0.695,
         "capacity": 1.0
       },
-      "made_at": "2026-09-01T03:13:38Z"
+      "made_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "decision://aero/s5-match-recorded",
@@ -904,7 +904,7 @@
           "score": 0.695
         }
       ],
-      "made_at": "2026-09-01T03:13:38Z"
+      "made_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "escalation://aero/escalate-release",
@@ -935,7 +935,7 @@
         "irreversible_failure": true,
         "cost_failure_unknowable": true
       },
-      "made_at": "2026-09-01T03:13:38Z"
+      "made_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "commitment://aero/c-apex-aeronautics-followup",
@@ -948,7 +948,7 @@
         "kind": "airframe-subsystem delivery follow-up",
         "signed": true
       },
-      "agreed_at": "2026-09-01T03:13:38Z"
+      "agreed_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "expectation://aero/e-apex-aeronauticsR",
@@ -1007,7 +1007,7 @@
         "provider": "org://aero/apex-aeronautics",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T03:13:38Z"
+      "made_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "event://aero/s4-exchange-apex-aeronauticsR",
@@ -1017,7 +1017,7 @@
       "causation_id": "ev-s4-7014",
       "idempotency_key": "idem-s4-7015",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "settle exchange apex-aeronauticsR: 2000000.0 USD org://aero/valiant-aero->org://aero/apex-aeronautics (value 2000000.0, cost 2000000.0)",
       "state_update": [],
@@ -1038,7 +1038,7 @@
       "causation_id": "ev-s4-7015",
       "idempotency_key": "idem-s4-7016",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "evaluate settle apex-aeronauticsR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
       "state_update": [],
@@ -1057,7 +1057,7 @@
       "causation_id": "ev-s2-7016",
       "idempotency_key": "idem-s2-7017",
       "signature": "signed-by-org://aero/apex-aeronautics",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "org://aero/apex-aeronautics",
       "detail": "job routed-apex-aeronauticsR by org://aero/apex-aeronautics: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
       "state_update": [],
@@ -1075,7 +1075,7 @@
         "procedure": "anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T03:13:38Z"
+      "captured_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "claim://aero/routed-apex-aeronauticsR",
@@ -1092,7 +1092,7 @@
       "variance": 0.05,
       "why": "Routing subsystem work via an integrator with verified on-time delivery (apex-aeronautics), while gating the laggard (vireo-airframe), restored on-time delivery. Verified good deliveries compound scoped Trust.",
       "change_future_policy": "ALLOCATE by fit AND scoped Trust; integrators below the Trust floor need a performance gate before new work.",
-      "made_at": "2026-09-01T03:13:38Z"
+      "made_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "goal://aero/g-core",
@@ -1182,7 +1182,7 @@
         "action": "task://aero/t-rebalance",
         "outcome": "event://aero/outcome-routed-apex-aeronauticsR"
       },
-      "made_at": "2026-09-01T03:13:38Z"
+      "made_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "decision://aero/s5-attention",
@@ -1205,7 +1205,7 @@
           }
         ]
       },
-      "made_at": "2026-09-01T03:13:38Z"
+      "made_at": "2026-09-01T05:08:35Z"
     },
     {
       "uri": "dependency://aero/d-rb-enables-fu",

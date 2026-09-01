@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/full-dispute-2026",
-  "head_hash": "b8d317896f088d6ea0650d94ebbc04a178f960f7e4f17be1c5528938fd7b3972",
+  "head_hash": "7b6da29658a84f6f6ff612d4aa83a00c8be945b354f73971e982ace090a507f3",
   "entries": [
     {
       "uri": "event://lf/provision",
@@ -10,7 +10,7 @@
       "causation_id": "ev-lf-prev-1",
       "idempotency_key": "idem-lf-provision-1",
       "signature": "signed-by-org://lf/company",
-      "occurred_at": "2026-09-01T03:13:35Z",
+      "occurred_at": "2026-09-01T03:58:58Z",
       "actor": "org://lf/company",
       "detail": "provision actors, customer/supplier/employment contracts, delivery + payment obligations, adjudicator + appeal authority, customer appeal right, legal-threat actor",
       "state_update": [
@@ -157,7 +157,7 @@
           ]
         }
       ],
-      "hash": "57569561f6b660118c703ef7c4fd6e15d61118bbbda094b7d7a2bb56418b1739"
+      "hash": "ee48d72970f306ca77a6eb8f76892f4a31b680975a4c6c49594259ea1d3a8cb9"
     },
     {
       "uri": "event://lf/claims",
@@ -167,7 +167,7 @@
       "causation_id": "ev-lf-prev-2",
       "idempotency_key": "idem-lf-claims-2",
       "signature": "signed-by-person://lf/csr",
-      "occurred_at": "2026-09-01T03:13:35Z",
+      "occurred_at": "2026-09-01T03:58:58Z",
       "actor": "person://lf/csr",
       "detail": "record three contradictory claims (customer / company / supplier)",
       "state_update": [
@@ -201,7 +201,7 @@
           "epistemic_status": "claimed"
         }
       ],
-      "hash": "c030218c1184c8718a4e336d25e468ac3f7d74f818f2b821b8bb902849863268"
+      "hash": "29bdd96839ae6ca5839c36bea71cae83435cc9d788fe0fc7bbc8ae644d3048f2"
     },
     {
       "uri": "event://lf/evidence",
@@ -211,7 +211,7 @@
       "causation_id": "ev-lf-prev-3",
       "idempotency_key": "idem-lf-evidence-3",
       "signature": "signed-by-person://lf/csr",
-      "occurred_at": "2026-09-01T03:13:35Z",
+      "occurred_at": "2026-09-01T03:58:58Z",
       "actor": "person://lf/csr",
       "detail": "record conflicting evidence (GPS 16:12 / contract 16:00 / customer receipt 16:15 / supplier 15:58) with provenance + reliability + timestamps",
       "state_update": [
@@ -294,7 +294,7 @@
           "supports": "claim://lf/delivered"
         }
       ],
-      "hash": "49222c4dad8c1e734c1e34511f08c472466a51a29461b59d2d7c08c18739b142"
+      "hash": "5c07ebc39c3ff9216888fe5a2cf4d0bcbe398630a242e767ba5dd58d11f02ffa"
     },
     {
       "uri": "event://lf/dispute-claims",
@@ -304,7 +304,7 @@
       "causation_id": "ev-lf-prev-4",
       "idempotency_key": "idem-lf-dispute-claims-4",
       "signature": "signed-by-person://lf/csr",
-      "occurred_at": "2026-09-01T03:13:35Z",
+      "occurred_at": "2026-09-01T03:58:58Z",
       "actor": "person://lf/csr",
       "detail": "contradictory evidence attaches -> claim disputed",
       "state_update": [
@@ -319,7 +319,7 @@
           "classification": "honest-error-or-valid"
         }
       ],
-      "hash": "9655dc3c20e972f4482f25d29b5709bfda8282d2c03e408d6bffd51ff1bb765c"
+      "hash": "157e45726ce95aa7debfa7c88ac649abf7d16bb533ff429fe0d078f2ff87d02d"
     },
     {
       "uri": "event://lf/dispute-claims",
@@ -329,7 +329,7 @@
       "causation_id": "ev-lf-prev-4",
       "idempotency_key": "idem-lf-dispute-claims-4",
       "signature": "signed-by-person://lf/csr",
-      "occurred_at": "2026-09-01T03:13:35Z",
+      "occurred_at": "2026-09-01T03:58:58Z",
       "actor": "person://lf/csr",
       "detail": "contradictory evidence attaches -> claim disputed",
       "state_update": [
@@ -344,7 +344,7 @@
           "classification": "honest-error-or-valid"
         }
       ],
-      "hash": "6ff178c821640f43f58c2bd4137410cca6b04e74df8d62a34857f5e31a4b6aab"
+      "hash": "03321de7da8152d4adadc74ca9c1a794bbac2311abc6b44205eea44f8a81a872"
     },
     {
       "uri": "event://lf/dispute-claims",
@@ -354,7 +354,7 @@
       "causation_id": "ev-lf-prev-4",
       "idempotency_key": "idem-lf-dispute-claims-4",
       "signature": "signed-by-person://lf/csr",
-      "occurred_at": "2026-09-01T03:13:35Z",
+      "occurred_at": "2026-09-01T03:58:58Z",
       "actor": "person://lf/csr",
       "detail": "contradictory evidence attaches -> claim disputed",
       "state_update": [
@@ -368,7 +368,7 @@
           "epistemic_status": "disputed"
         }
       ],
-      "hash": "2c025310d4b0bc15aff9a32243bede4e9ab85bf43ab50cbc06656f78b491c4a7"
+      "hash": "1eca3154bdbebb1a38d5d67a967253894d4646dfb74e027c6e51348395183357"
     },
     {
       "uri": "event://lf/open-dispute",
@@ -378,7 +378,7 @@
       "causation_id": "ev-lf-prev-5",
       "idempotency_key": "idem-lf-open-dispute-5",
       "signature": "signed-by-person://lf/csr",
-      "occurred_at": "2026-09-01T03:13:35Z",
+      "occurred_at": "2026-09-01T03:58:58Z",
       "actor": "person://lf/csr",
       "detail": "dispute OPEN with parties/about + additive lifecycle/epistemic state + interests/constraints",
       "state_update": [
@@ -428,7 +428,7 @@
           }
         }
       ],
-      "hash": "63869fe6c0bf60236b118722e5c267e60cdf1a1451b6554e23c7174992f89de7"
+      "hash": "0c91a5740d4995fde1f307de90da0ed24f6d56a07055531a76d27dd06133c84f"
     },
     {
       "uri": "event://lf/lifecycle-advance",
@@ -438,7 +438,7 @@
       "causation_id": "ev-lf-prev-6",
       "idempotency_key": "idem-lf-lifecycle-advance-6",
       "signature": "signed-by-person://lf/manager",
-      "occurred_at": "2026-09-01T03:13:35Z",
+      "occurred_at": "2026-09-01T03:58:58Z",
       "actor": "person://lf/manager",
       "detail": "conflicting evidence gathered -> EVIDENCE_COLLECTION -> CONTESTED",
       "state_update": [
@@ -533,7 +533,7 @@
           }
         }
       ],
-      "hash": "a8d1a63873a25940dbaa19d38e26b1be75c4b06d323f587f6b0afc9f1ec3ebcf"
+      "hash": "edcd4c60c287503c7becf203d3171828459327aad065ed97c8c14768bb966eb1"
     },
     {
       "uri": "event://lf/agent-advisory",
@@ -543,7 +543,7 @@
       "causation_id": "ev-lf-prev-7",
       "idempotency_key": "idem-lf-agent-advisory-7",
       "signature": "signed-by-person://lf/csr",
-      "occurred_at": "2026-09-01T03:13:36Z",
+      "occurred_at": "2026-09-01T03:58:59Z",
       "actor": "person://lf/csr",
       "detail": "AI advisory on resolution options (machine trade-off + real model; contained)",
       "state_update": [
@@ -587,10 +587,10 @@
             "_model_pick": "partial-settlement",
             "_model": "phi4-mini:3.8b-q8_0"
           },
-          "made_at": "2026-09-01T03:13:36Z"
+          "made_at": "2026-09-01T03:58:59Z"
         }
       ],
-      "hash": "6a33cff36f3515f70fe38d8f04e8c255a920f1630a0c1eb5504a85325fc74624"
+      "hash": "564faaf6c88f4d488868bc042962598efd5f5cf46f8d81255c74d51cef5a87b7"
     },
     {
       "uri": "event://lf/adjudicate",
@@ -600,7 +600,7 @@
       "causation_id": "ev-lf-prev-8",
       "idempotency_key": "idem-lf-adjudicate-8",
       "signature": "signed-by-person://lf/manager",
-      "occurred_at": "2026-09-01T03:13:36Z",
+      "occurred_at": "2026-09-01T03:58:59Z",
       "actor": "person://lf/manager",
       "detail": "human adjudicator determination: conditional-resolution",
       "state_update": [
@@ -634,7 +634,7 @@
             "machine_pick": "partial-settlement",
             "model_pick": "partial-settlement"
           },
-          "made_at": "2026-09-01T03:13:36Z"
+          "made_at": "2026-09-01T03:58:59Z"
         },
         {
           "uri": "dispute://lf/delivery",
@@ -683,7 +683,7 @@
           "resolution": "independent anchored verification (degree 0.97) confirms delivery liveness; customer receipt is authentic but sign-on at 16:15 reflects admin, not the 16:00 deadline breach; arrival (16:12) sits within the 15-min SLA grace -> service delivered as contracted; no refund; SLA cadence note filed"
         }
       ],
-      "hash": "cccecc5c00b84b947236d52d57fe6d0501d11030d26440f73eca8e79a77370c1"
+      "hash": "e503f9eaa962e178155e67fe98563eaf44817ffca0ed18f66d0d8a7cf458879d"
     },
     {
       "uri": "event://lf/resolution-executed",
@@ -693,7 +693,7 @@
       "causation_id": "ev-lf-prev-9",
       "idempotency_key": "idem-lf-resolution-executed-9",
       "signature": "signed-by-person://lf/manager",
-      "occurred_at": "2026-09-01T03:13:36Z",
+      "occurred_at": "2026-09-01T03:58:59Z",
       "actor": "person://lf/manager",
       "detail": "conditional resolution accepted + executed (no cash transfer; SLA note) -> ACCEPTED->EXECUTED",
       "state_update": [
@@ -837,7 +837,7 @@
           "resolution_outcome": "no refund issued; SLA cadence note filed"
         }
       ],
-      "hash": "892c7b36d2ce5912f92690dbfeb2d095229ab17deb97e6befa9b65c62688fa13"
+      "hash": "75575ab18566ad787fb99e864656c8ea3e457fce8ace742be46fdcff1a3ccccd"
     },
     {
       "uri": "event://lf/verify-outcome",
@@ -847,7 +847,7 @@
       "causation_id": "ev-lf-prev-10",
       "idempotency_key": "idem-lf-verify-outcome-10",
       "signature": "signed-by-system://lf/audit-anchor",
-      "occurred_at": "2026-09-01T03:13:36Z",
+      "occurred_at": "2026-09-01T03:58:59Z",
       "actor": "system://lf/audit-anchor",
       "detail": "outcome verification: delivery liveness confirmed by independent anchor; case VERIFIED->CLOSED",
       "state_update": [
@@ -947,7 +947,7 @@
           "verified": true
         }
       ],
-      "hash": "ffcf9f478bb615c8f6585dbb602ed92a1116e27290af30f562ef7f788251f279"
+      "hash": "22445c7b8e18c6eb29439818375d95e4f04fd85aa5abb4d0c0395299b986967c"
     },
     {
       "uri": "event://lf/learn",
@@ -957,7 +957,7 @@
       "causation_id": "ev-lf-prev-11",
       "idempotency_key": "idem-lf-learn-11",
       "signature": "signed-by-org://lf/company",
-      "occurred_at": "2026-09-01T03:13:36Z",
+      "occurred_at": "2026-09-01T03:58:59Z",
       "actor": "org://lf/company",
       "detail": "organizational learning: dispute required human adjudication because conflicting sources blocked the single-source verifier; SLA-grace interpretation now documented",
       "state_update": [
@@ -965,7 +965,7 @@
           "uri": "evidence://lf/learning-note",
           "kind": "RECORD",
           "source": "post-resolution-postmortem",
-          "captured_at": "2026-09-01T03:13:36Z",
+          "captured_at": "2026-09-01T03:58:59Z",
           "verity": {
             "procedure": "postmortem",
             "confidence": 0.6
@@ -976,7 +976,7 @@
           "learning": "conflicting timestamps must reach a determination via an authorised adjudicator + anchored third-party verification, not the single-source verifier"
         }
       ],
-      "hash": "ecb75b85ee14ba02cb3e19dc14b05774f1940bb4d7af2e38a07beed9b15cd089"
+      "hash": "1ca2ad52443f45a489cb86504abe7a2439092581091ad512e45f40d91b542713"
     },
     {
       "uri": "event://lf/appeal",
@@ -986,7 +986,7 @@
       "causation_id": "ev-lf-prev-12",
       "idempotency_key": "idem-lf-appeal-12",
       "signature": "signed-by-org://lf/customer",
-      "occurred_at": "2026-09-01T03:13:36Z",
+      "occurred_at": "2026-09-01T03:58:59Z",
       "actor": "org://lf/customer",
       "detail": "customer appeals the determination (native Right type=APPEAL)",
       "state_update": [
@@ -1041,7 +1041,7 @@
           "appeal_under": "right://lf/cust-appeal"
         }
       ],
-      "hash": "e724f6dbc150602d32c82d1316d845725c19af70e5c18d2b4afd26ca1edf6888"
+      "hash": "dc2aa14201206f1dc17456a9fbd20218e02fb6fda00ebea362fecce4cf6e6597"
     },
     {
       "uri": "event://lf/reopen",
@@ -1051,7 +1051,7 @@
       "causation_id": "ev-lf-prev-13",
       "idempotency_key": "idem-lf-reopen-13",
       "signature": "signed-by-person://lf/director",
-      "occurred_at": "2026-09-01T03:13:36Z",
+      "occurred_at": "2026-09-01T03:58:59Z",
       "actor": "person://lf/director",
       "detail": "new evidence: the verification clock read 9 minutes fast -> actual arrival 16:21, OUTSIDE the 15-min grace -> prior determination shown wrong -> REOPENED",
       "state_update": [
@@ -1108,7 +1108,7 @@
           "supersedes": "decision://lf/delivery-determination"
         }
       ],
-      "hash": "5339f24cf3bb887ae3a9c29ab430bbd128de843445c67eb1e6086d31178dfaf3"
+      "hash": "d625abf596f5d07d8e3a3e5ca4a756c0b095e1e94a2f443b958f45b462dc3093"
     },
     {
       "uri": "event://lf/new-evidence",
@@ -1118,7 +1118,7 @@
       "causation_id": "ev-lf-prev-14",
       "idempotency_key": "idem-lf-new-evidence-14",
       "signature": "signed-by-person://lf/director",
-      "occurred_at": "2026-09-01T03:13:36Z",
+      "occurred_at": "2026-09-01T03:58:59Z",
       "actor": "person://lf/director",
       "detail": "audit finding: anchored verification used a clock 9 minutes fast",
       "state_update": [
@@ -1126,7 +1126,7 @@
           "uri": "evidence://lf/clock-mis-set",
           "kind": "ANCHORED",
           "source": "internal-clock-audit",
-          "captured_at": "2026-09-01T03:13:36Z",
+          "captured_at": "2026-09-01T03:58:59Z",
           "verity": {
             "procedure": "clock-drift-audit",
             "confidence": 0.9
@@ -1138,7 +1138,7 @@
           "reliability_note": "honest source error, not deception"
         }
       ],
-      "hash": "4a6db88bf8ac28cb1cd8548522fc20b63b8d222f0fd5b2c76004351e44970289"
+      "hash": "0fe5b07ee897482429581da5a5c39e0cc47eec76272725674e56d4dff3b75ead"
     },
     {
       "uri": "event://lf/reassess",
@@ -1148,7 +1148,7 @@
       "causation_id": "ev-lf-prev-15",
       "idempotency_key": "idem-lf-reassess-15",
       "signature": "signed-by-person://lf/director",
-      "occurred_at": "2026-09-01T03:13:36Z",
+      "occurred_at": "2026-09-01T03:58:59Z",
       "actor": "person://lf/director",
       "detail": "director reassesses on the new evidence -> partial settlement (SLA breach)",
       "state_update": [
@@ -1176,7 +1176,7 @@
             "granted": "$6,000 settlement credit to customer for SLA breach; balance due",
             "supersedes": "decision://lf/delivery-determination"
           },
-          "made_at": "2026-09-01T03:13:36Z"
+          "made_at": "2026-09-01T03:58:59Z"
         },
         {
           "uri": "dispute://lf/delivery",
@@ -1231,7 +1231,7 @@
           "supersedes": "decision://lf/delivery-determination"
         }
       ],
-      "hash": "5561520e0ac6f9fcf1852b16c6fb5e268f776e81f87761ff98e42b0cb120d258"
+      "hash": "e66b8fc0d3f713d1319508b9e9b86bc0fabfb42291ac038e3ccce32332920e6d"
     },
     {
       "uri": "event://lf/trust-safety",
@@ -1241,7 +1241,7 @@
       "causation_id": "ev-lf-prev-16",
       "idempotency_key": "idem-lf-trust-safety-16",
       "signature": "signed-by-org://lf/company",
-      "occurred_at": "2026-09-01T03:13:36Z",
+      "occurred_at": "2026-09-01T03:58:59Z",
       "actor": "org://lf/company",
       "detail": "Trust safety: the dispute (incl. overturned claim) did NOT change Trust \u2014 error kept distinct from deception; only an adequately-evidenced determination could move Trust",
       "state_update": [
@@ -1252,7 +1252,7 @@
           "claim": "honest dispute participant",
           "context": "relationship://lf/customer-contract",
           "score": 0.78,
-          "updated_at": "2026-09-01T03:13:36Z",
+          "updated_at": "2026-09-01T03:58:59Z",
           "evidence": [
             "evidence://lf/arrival-receipt"
           ],
@@ -1260,7 +1260,7 @@
           "reason": "honest error, not deception"
         }
       ],
-      "hash": "1fa959acd0c9847872eff298e6425bd0c7d215d2d1180acd6544225f74795bf6"
+      "hash": "742b0f767d8d2a1822f3fc56a10a084674bf877890c2f4cbc9dab826d29859bb"
     },
     {
       "uri": "event://lf/open-unresolvable",
@@ -1270,7 +1270,7 @@
       "causation_id": "ev-lf-prev-17",
       "idempotency_key": "idem-lf-open-unresolvable-17",
       "signature": "signed-by-person://lf/csr",
-      "occurred_at": "2026-09-01T03:13:36Z",
+      "occurred_at": "2026-09-01T03:58:59Z",
       "actor": "person://lf/csr",
       "detail": "dispute where deciding is unjustifiable (no admissible basis)",
       "state_update": [
@@ -1302,7 +1302,7 @@
           ]
         }
       ],
-      "hash": "c84f97dd67865bf5f6e7af42cab231fe8d7fb1cf39c1e6e00023b7d7fbc33652"
+      "hash": "feeecbbb9c4bfc939520c198a70f9af459909a2b97351a90b579279c6f9e247f"
     },
     {
       "uri": "event://lf/adjudicate-unresolved",
@@ -1312,7 +1312,7 @@
       "causation_id": "ev-lf-prev-18",
       "idempotency_key": "idem-lf-adjudicate-unresolved-18",
       "signature": "signed-by-person://lf/manager",
-      "occurred_at": "2026-09-01T03:13:36Z",
+      "occurred_at": "2026-09-01T03:58:59Z",
       "actor": "person://lf/manager",
       "detail": "adjudicator determines UNRESOLVED (insufficient admissible basis); case stays OPEN; Trust untouched",
       "state_update": [
@@ -1335,7 +1335,7 @@
             "epistemic_state": "INSUFFICIENT_EVIDENCE",
             "reason": "no admissible source verifies delivery liveness; awarding either side is not justified by the basis"
           },
-          "made_at": "2026-09-01T03:13:36Z"
+          "made_at": "2026-09-01T03:58:59Z"
         },
         {
           "uri": "dispute://lf/threshold-dispute",
@@ -1365,7 +1365,7 @@
           ]
         }
       ],
-      "hash": "b8d317896f088d6ea0650d94ebbc04a178f960f7e4f17be1c5528938fd7b3972"
+      "hash": "7b6da29658a84f6f6ff612d4aa83a00c8be945b354f73971e982ace090a507f3"
     }
   ]
 }

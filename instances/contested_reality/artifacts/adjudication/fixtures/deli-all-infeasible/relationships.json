@@ -1,0 +1,36 @@
+[
+  {
+    "uri": "relationship://deli-all-infeasible/customer-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://deli-all-infeasible/customer",
+      "org://deli-all-infeasible/company"
+    ],
+    "roles": {
+      "org://deli/customer": [
+        "buyer"
+      ],
+      "org://deli/company": [
+        "provider"
+      ]
+    },
+    "purpose": "contracted service delivery with a deadline"
+  },
+  {
+    "uri": "relationship://deli-all-infeasible/supplier-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://deli-all-infeasible/supplier",
+      "org://deli-all-infeasible/company"
+    ],
+    "roles": {
+      "org://deli/supplier": [
+        "shipper"
+      ],
+      "org://deli/company": [
+        "customer"
+      ]
+    },
+    "purpose": "supplier shipping for the delivery"
+  }
+]

@@ -1,0 +1,89 @@
+[
+  {
+    "uri": "org://deli/customer",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://deli/company",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://deli/supplier",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://deli/registrar",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://deli/adjudicator",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://deli/appeal",
+    "type": "PERSON"
+  },
+  {
+    "uri": "system://deli/verify",
+    "type": "SYSTEM"
+  },
+  {
+    "uri": "obligation://deli-recommend-infcap/deliver-due",
+    "subject": "org://deli-recommend-infcap/company",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "deliver the contracted service by the deadline",
+    "due_by": "2026-08-31T16:00:00-06:00"
+  },
+  {
+    "uri": "obligation://deli-recommend-infcap/pay-due",
+    "subject": "org://deli-recommend-infcap/customer",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "pay the $18,000 invoice on confirmed delivery",
+    "due_by": "2026-09-30T00:00:00-06:00"
+  },
+  {
+    "uri": "authority://deli-recommend-infcap/adjudicate",
+    "holder": "person://deli-recommend-infcap/adjudicator",
+    "grants": [
+      "adjudicate"
+    ],
+    "roles": [
+      "adjudicator"
+    ],
+    "capacity": {
+      "value": 500.0,
+      "unit": "resolutions/day",
+      "load": 1.3,
+      "status": "recorded"
+    },
+    "capacity_requirements": {
+      "partial-settlement": 499.0,
+      "conditional-resolution": 200.0,
+      "accept-customer-refund": 200.0,
+      "accept-company-full-payment": 200.0,
+      "external-adjudication": 100.0,
+      "request-more-evidence": 50.0,
+      "escalate": 80.0
+    }
+  },
+  {
+    "uri": "authority://deli-recommend-infcap/adjudicate-appeal",
+    "holder": "person://deli-recommend-infcap/appeal",
+    "grants": [
+      "adjudicate_appeal"
+    ],
+    "roles": [
+      "appeal-adjudicator"
+    ]
+  },
+  {
+    "uri": "right://deli-recommend-infcap/cust-appeal",
+    "holder": "org://deli-recommend-infcap/customer",
+    "type": "APPEAL",
+    "subject": "DUPLICATE",
+    "scope": [
+      "obligation://deli-recommend-infcap/deliver-due"
+    ],
+    "purpose": "right to appeal the determination"
+  }
+]

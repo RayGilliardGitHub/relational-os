@@ -1,0 +1,36 @@
+[
+  {
+    "uri": "relationship://cove-recommend-infcap/coverage-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://cove-recommend-infcap/payer",
+      "person://cove-recommend-infcap/patient"
+    ],
+    "roles": {
+      "org://cove/payer": [
+        "insurer"
+      ],
+      "person://cove/patient": [
+        "member"
+      ]
+    },
+    "purpose": "insurance coverage for the member"
+  },
+  {
+    "uri": "relationship://cove-recommend-infcap/clinical",
+    "status": "ACTIVE",
+    "participants": [
+      "person://cove-recommend-infcap/physician",
+      "person://cove-recommend-infcap/patient"
+    ],
+    "roles": {
+      "person://cove/physician": [
+        "provider"
+      ],
+      "person://cove/patient": [
+        "patient"
+      ]
+    },
+    "purpose": "clinical care relationship"
+  }
+]

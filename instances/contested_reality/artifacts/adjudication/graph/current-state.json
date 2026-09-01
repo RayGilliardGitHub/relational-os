@@ -2,93 +2,89 @@
   "kind": "GRAPH",
   "objects": [
     {
-      "uri": "trust://deli-forecast-flat/claimant",
-      "subject": "person://deli-forecast-flat/registrar",
-      "target": "org://deli-forecast-flat/customer",
+      "uri": "trust://cove/claimant",
+      "subject": "person://cove/utilization",
+      "target": "person://cove/patient",
       "claim": "honest dispute participant",
       "score": 0.8,
-      "context": "relationship://deli-forecast-flat/x",
+      "context": "relationship://cove/x",
       "evidence": []
     },
     {
-      "uri": "org://deli/customer",
+      "uri": "org://cove/payer",
       "type": "ORG"
     },
     {
-      "uri": "org://deli/company",
-      "type": "ORG"
-    },
-    {
-      "uri": "org://deli/supplier",
-      "type": "ORG"
-    },
-    {
-      "uri": "person://deli/registrar",
+      "uri": "person://cove/patient",
       "type": "PERSON"
     },
     {
-      "uri": "person://deli/adjudicator",
+      "uri": "person://cove/physician",
       "type": "PERSON"
     },
     {
-      "uri": "person://deli/appeal",
+      "uri": "person://cove/utilization",
       "type": "PERSON"
     },
     {
-      "uri": "system://deli/verify",
+      "uri": "person://cove/meddir",
+      "type": "PERSON"
+    },
+    {
+      "uri": "system://cove/verify",
       "type": "SYSTEM"
     },
     {
-      "uri": "relationship://deli-forecast-flat/customer-contract",
+      "uri": "relationship://cove/coverage-contract",
       "status": "ACTIVE",
       "participants": [
-        "org://deli-forecast-flat/customer",
-        "org://deli-forecast-flat/company"
+        "org://cove/payer",
+        "person://cove/patient"
       ],
       "roles": {
-        "org://deli/customer": [
-          "buyer"
+        "org://cove/payer": [
+          "insurer"
         ],
-        "org://deli/company": [
+        "person://cove/patient": [
+          "member"
+        ]
+      },
+      "purpose": "insurance coverage for the member"
+    },
+    {
+      "uri": "relationship://cove/clinical",
+      "status": "ACTIVE",
+      "participants": [
+        "person://cove/physician",
+        "person://cove/patient"
+      ],
+      "roles": {
+        "person://cove/physician": [
           "provider"
-        ]
-      },
-      "purpose": "contracted service delivery with a deadline"
-    },
-    {
-      "uri": "relationship://deli-forecast-flat/supplier-contract",
-      "status": "ACTIVE",
-      "participants": [
-        "org://deli-forecast-flat/supplier",
-        "org://deli-forecast-flat/company"
-      ],
-      "roles": {
-        "org://deli/supplier": [
-          "shipper"
         ],
-        "org://deli/company": [
-          "customer"
+        "person://cove/patient": [
+          "patient"
         ]
       },
-      "purpose": "supplier shipping for the delivery"
+      "purpose": "clinical care relationship"
     },
     {
-      "uri": "obligation://deli-forecast-flat/deliver-due",
-      "subject": "org://deli-forecast-flat/company",
+      "uri": "obligation://cove/furnish-coverage",
+      "subject": "org://cove/payer",
       "source": "VOLUNTARILY_UNDERTAKEN",
-      "content": "deliver the contracted service by the deadline",
-      "due_by": "2026-08-31T16:00:00-06:00"
+      "content": "furnish medically-necessary covered care promptly",
+      "due_by": "2026-12-31T00:00:00-06:00"
     },
     {
-      "uri": "obligation://deli-forecast-flat/pay-due",
-      "subject": "org://deli-forecast-flat/customer",
-      "source": "VOLUNTARILY_UNDERTAKEN",
-      "content": "pay the $18,000 invoice on confirmed delivery",
-      "due_by": "2026-09-30T00:00:00-06:00"
+      "uri": "obligation://cove/standard-care",
+      "subject": "person://cove/physician",
+      "source": "IMPOSED",
+      "content": "recommend clinically-appropriate care",
+      "due_by": "2026-12-31T00:00:00-06:00"
     },
     {
-      "uri": "authority://deli-forecast-flat/adjudicate",
-      "holder": "person://deli-forecast-flat/adjudicator",
+      "uri": "authority://cove/adjudicate",
+      "holder": "person://cove/utilization",
       "grants": [
         "adjudicate"
       ],
@@ -97,8 +93,8 @@
       ]
     },
     {
-      "uri": "authority://deli-forecast-flat/adjudicate-appeal",
-      "holder": "person://deli-forecast-flat/appeal",
+      "uri": "authority://cove/adjudicate-appeal",
+      "holder": "person://cove/meddir",
       "grants": [
         "adjudicate_appeal"
       ],
@@ -107,246 +103,239 @@
       ]
     },
     {
-      "uri": "right://deli-forecast-flat/cust-appeal",
-      "holder": "org://deli-forecast-flat/customer",
+      "uri": "right://cove/patient-appeal",
+      "holder": "person://cove/patient",
       "type": "APPEAL",
       "subject": "DUPLICATE",
       "scope": [
-        "obligation://deli-forecast-flat/deliver-due"
+        "obligation://cove/furnish-coverage"
       ],
       "purpose": "right to appeal the determination"
     },
     {
-      "uri": "claim://deli-forecast-flat/late",
-      "proposer": "org://deli-forecast-flat/customer",
-      "statement": "the contracted service was NOT delivered on time; signed receipt 16:15 past the 16:00 deadline \u2014 we should not pay for the late delivery.",
+      "uri": "claim://cove/medically-necessary",
+      "proposer": "person://cove/physician",
+      "statement": "medication X is medically necessary for this member; a peer-reviewed study supports its use for the condition.",
       "evidence": [
-        "evidence://deli-forecast-flat/arrival-receipt",
-        "evidence://deli-forecast-flat/gps-arrival"
+        "evidence://cove/clinical-study"
       ],
       "epistemic_status": "disputed"
     },
     {
-      "uri": "claim://deli-forecast-flat/delivered",
-      "proposer": "org://deli-forecast-flat/company",
-      "statement": "the contracted service WAS delivered and is payable; an independent anchored verification confirms delivery liveness.",
+      "uri": "claim://cove/off-formulary",
+      "proposer": "org://cove/payer",
+      "statement": "medication X is off-formulary; the formulary policy and comparative step-therapy evidence do not require it as first-line.",
       "evidence": [
-        "evidence://deli-forecast-flat/third-party-verification"
+        "evidence://cove/formulary-policy",
+        "evidence://cove/step-therapy-studies"
       ],
       "epistemic_status": "disputed"
     },
     {
-      "uri": "claim://deli-forecast-flat/shipped",
-      "proposer": "org://deli-forecast-flat/supplier",
-      "statement": "we shipped the consignment on time.",
-      "evidence": [
-        "evidence://deli-forecast-flat/supplier-shipping"
-      ],
-      "epistemic_status": "disputed"
-    },
-    {
-      "uri": "evidence://deli-forecast-flat/gps-arrival",
+      "uri": "evidence://cove/clinical-study",
       "kind": "ANCHORED",
-      "source": "fleet-GPS-livestate",
-      "captured_at": "2026-08-31T16:12:00-06:00",
+      "source": "peer-reviewed-trial",
+      "captured_at": "2026-06-01T00:00:00-06:00",
       "verity": {
-        "procedure": "gps-timestamp",
-        "confidence": 0.85
-      },
-      "reliability": 0.85,
-      "about": "arrival gate event",
-      "supports": "claim://deli-forecast-flat/late"
-    },
-    {
-      "uri": "evidence://deli-forecast-flat/arrival-receipt",
-      "kind": "TESTIMONY",
-      "source": "customer-signed-receipt",
-      "captured_at": "2026-08-31T16:15:00-06:00",
-      "verity": {
-        "procedure": "signed-receipt",
+        "procedure": "external-trials-database",
         "confidence": 0.9
       },
-      "reliability": 0.9,
-      "about": "delivery receipt",
-      "supports": "claim://deli-forecast-flat/late"
+      "reliability": 0.88,
+      "about": "clinical efficacy for the condition",
+      "supports": "claim://cove/medically-necessary"
     },
     {
-      "uri": "evidence://deli-forecast-flat/third-party-verification",
-      "kind": "ANCHORED",
-      "source": "independent-audit-service",
-      "captured_at": "2026-08-31T17:05:00-06:00",
-      "verity": {
-        "procedure": "anchored-liveness",
-        "confidence": 0.97
-      },
-      "reliability": 0.97,
-      "about": "delivery liveness verification",
-      "supports": "claim://deli-forecast-flat/delivered"
-    },
-    {
-      "uri": "evidence://deli-forecast-flat/supplier-shipping",
+      "uri": "evidence://cove/formulary-policy",
       "kind": "RECORD",
-      "source": "supplier-shipping-system",
-      "captured_at": "2026-08-31T15:58:00-06:00",
+      "source": "coverage-policy-document",
+      "captured_at": "2026-01-01T00:00:00-06:00",
       "verity": {
-        "procedure": "shipping-log",
-        "confidence": 0.92
+        "procedure": "policy-version",
+        "confidence": 1.0
       },
-      "reliability": 0.92,
-      "about": "ship-out time",
-      "supports": "claim://deli-forecast-flat/shipped"
+      "reliability": 1.0,
+      "about": "coverage/formulary classification",
+      "supports": "claim://cove/off-formulary"
     },
     {
-      "uri": "dispute://deli-forecast-flat/delivery",
-      "about": "obligation://deli-forecast-flat/deliver-due",
+      "uri": "evidence://cove/step-therapy-studies",
+      "kind": "ANCHORED",
+      "source": "comparative-effectiveness-db",
+      "captured_at": "2026-05-01T00:00:00-06:00",
+      "verity": {
+        "procedure": "meta-analysis",
+        "confidence": 0.8
+      },
+      "reliability": 0.82,
+      "about": "step-therapy comparator efficacy",
+      "supports": "claim://cove/off-formulary"
+    },
+    {
+      "uri": "dispute://cove/coverage",
+      "about": "obligation://cove/furnish-coverage",
       "parties": [
-        "org://deli-forecast-flat/customer",
-        "org://deli-forecast-flat/company",
-        "org://deli-forecast-flat/supplier"
+        "person://cove/patient",
+        "person://cove/physician",
+        "org://cove/payer"
       ],
       "status": "RESOLVED",
-      "fin_impact_usd": 18000,
-      "deadline_ref": "resolution expected within 7 business days",
+      "estimated_cost_usd": 42000,
+      "deadline_ref": "utilization review decision within 72 hours (urgent)",
       "interest_blocks": {
-        "customer": "pay only for delivered service",
-        "company": "collect valid invoice; protect reputation",
-        "supplier": "established on-time shipment, not blamed"
+        "patient": "access to the treatment the physician deems necessary",
+        "provider": "deliver clinically-appropriate care",
+        "payer": "pay only for covered/evidence-based care"
       },
       "constraint_blocks": {
-        "sla_grace_minutes": 15,
-        "refund_auto_cap_usd": 5000,
-        "irreversible": "a full refund/admission is irreversible/unknown-cost -> \u00a76 human floor"
+        "formulary": "off-formulary requires prior authorization",
+        "irreversible": "a dispensed drug is irreversible/unknown-cost to the member; a flat denial is a patient-safety unknown-cost -> \u00a76 human floor on both extremes"
       },
       "lifecycle_state": "CLOSED",
       "epistemic_state": "RESOLVED_DETERMINED",
-      "determination": "partial-settlement",
-      "resolution_type": "partial-settlement",
+      "determination": "step-therapy-first",
+      "resolution_type": "step-therapy-first",
       "reopened": false,
       "available_resolutions": [
-        "accept-customer-refund",
-        "accept-company-full-payment",
-        "partial-settlement",
-        "conditional-resolution",
+        "authorize-off-formulary",
+        "deny-off-formulary",
+        "step-therapy-first",
+        "authorize-generic",
         "request-more-evidence",
-        "escalate",
+        "escalate-to-medical-director",
         "unresolved",
-        "external-adjudication"
+        "external-peer-review"
       ],
       "conflict": {
         "detected": true,
         "uncertainty": false,
         "claim_support": {
-          "claim://deli-forecast-flat/late": 0.9,
-          "claim://deli-forecast-flat/delivered": 0.97,
-          "claim://deli-forecast-flat/shipped": 0.92
+          "claim://cove/medically-necessary": 0.88,
+          "claim://cove/off-formulary": 1.0
         }
       },
-      "resolution_outcome": "partial settlement on the contested delivery; SLA-breach credit applied; ledger noted; customer keeps the service",
-      "verified": true
+      "resolution_outcome": "step-therapy-first: member begins on the covered step-therapy with a documented re-evaluation if response is inadequate; no off-formulary spend triggered immediately",
+      "verified": true,
+      "learned_weights": {
+        "medical_necessity": 0.3994312474928557,
+        "safety": 0.25036149523759177,
+        "policy": 0.19988432152397065,
+        "cost": 0.15032293574558198
+      },
+      "learning": "drug coverage disputes blend clinical-necessity evidence with policy; the measured path (step-therapy-first) preserves member safety + plan policy while avoiding both an irreversible off-formulary spend and a flat safety-risk denial"
     },
     {
-      "uri": "decision://deli-forecast-flat/agent-advisory",
-      "by": "person://deli-forecast-flat/registrar",
-      "authority": "authority://deli-forecast-flat/adjudicate",
+      "uri": "decision://cove/agent-advisory",
+      "by": "person://cove/utilization",
+      "authority": "authority://cove/adjudicate",
       "alternatives": [
-        "accept-customer-refund",
-        "accept-company-full-payment",
-        "partial-settlement",
-        "conditional-resolution",
+        "authorize-off-formulary",
+        "deny-off-formulary",
+        "step-therapy-first",
+        "authorize-generic",
         "request-more-evidence",
-        "escalate",
+        "escalate-to-medical-director",
         "unresolved",
-        "external-adjudication"
+        "external-peer-review"
       ],
       "confidence": 0.7,
       "expected_outcome": "inform determination",
-      "actual_outcome": "partial-settlement",
+      "actual_outcome": "step-therapy-first",
       "detail": {
         "ranking": [
           {
-            "option": "partial-settlement",
-            "utility": 0.7275,
+            "option": "step-therapy-first",
+            "utility": 0.7775,
             "floor_gated": false
           },
           {
-            "option": "conditional-resolution",
-            "utility": 0.665,
+            "option": "authorize-generic",
+            "utility": 0.74,
             "floor_gated": false
           },
           {
-            "option": "accept-company-full-payment",
-            "utility": 0.62,
+            "option": "escalate-to-medical-director",
+            "utility": 0.605,
+            "floor_gated": false
+          },
+          {
+            "option": "external-peer-review",
+            "utility": 0.56,
             "floor_gated": false
           },
           {
             "option": "request-more-evidence",
-            "utility": 0.435,
+            "utility": 0.54,
             "floor_gated": false
           },
           {
             "option": "unresolved",
-            "utility": 0.4,
+            "utility": 0.5,
             "floor_gated": false
           },
           {
-            "option": "external-adjudication",
-            "utility": 0.385,
-            "floor_gated": false
+            "option": "authorize-off-formulary",
+            "utility": 0.48,
+            "floor_gated": true
           },
           {
-            "option": "escalate",
-            "utility": 0.38,
-            "floor_gated": false
-          },
-          {
-            "option": "accept-customer-refund",
-            "utility": 0.285,
+            "option": "deny-off-formulary",
+            "utility": 0.28,
             "floor_gated": true
           }
         ],
         "machine_eligible_best": {
-          "option": "partial-settlement",
-          "utility": 0.7275,
+          "option": "step-therapy-first",
+          "utility": 0.7775,
           "floor_gated": false
         },
-        "tradeoff": "trade-off[delivery; business-model {'evidence': 0.35, 'contractual': 0.3, 'relationship': 0.2, 'cost': 0.15}]\n  0.728  partial-settlement\n  0.665  conditional-resolution\n  0.620  accept-company-full-payment\n  0.435  request-more-evidence\n  0.400  unresolved\n  0.385  external-adjudication\n  0.380  escalate\n  0.285  accept-customer-refund FLOOR-GATED\n  => machine-eligible best (non-gated): partial-settlement (gated: ['accept-customer-refund'])"
+        "tradeoff": "trade-off[coverage; business-model {'medical_necessity': 0.4, 'safety': 0.25, 'policy': 0.2, 'cost': 0.15}]\n  0.777  step-therapy-first\n  0.740  authorize-generic\n  0.605  escalate-to-medical-director\n  0.560  external-peer-review\n  0.540  request-more-evidence\n  0.500  unresolved\n  0.480  authorize-off-formulary FLOOR-GATED\n  0.280  deny-off-formulary FLOOR-GATED\n  => machine-eligible best (non-gated): step-therapy-first (gated: ['authorize-off-formulary', 'deny-off-formulary'])"
       },
-      "made_at": "2026-09-01T03:13:36Z"
+      "made_at": "2026-09-01T05:08:28Z"
     },
     {
-      "uri": "decision://deli-forecast-flat/determination",
-      "by": "person://deli-forecast-flat/adjudicator",
-      "authority": "authority://deli-forecast-flat/adjudicate",
+      "uri": "decision://cove/determination",
+      "by": "person://cove/utilization",
+      "authority": "authority://cove/adjudicate",
       "alternatives": [
-        "accept-customer-refund",
-        "accept-company-full-payment",
-        "partial-settlement",
-        "conditional-resolution",
+        "authorize-off-formulary",
+        "deny-off-formulary",
+        "step-therapy-first",
+        "authorize-generic",
         "request-more-evidence",
-        "escalate",
+        "escalate-to-medical-director",
         "unresolved",
-        "external-adjudication"
+        "external-peer-review"
       ],
       "confidence": 0.8,
       "evidence": [
-        "evidence://deli-forecast-flat/gps-arrival",
-        "evidence://deli-forecast-flat/arrival-receipt",
-        "evidence://deli-forecast-flat/third-party-verification",
-        "evidence://deli-forecast-flat/supplier-shipping"
+        "evidence://cove/clinical-study",
+        "evidence://cove/formulary-policy",
+        "evidence://cove/step-therapy-studies"
       ],
-      "expected_outcome": "partial-settlement",
-      "actual_outcome": "partial-settlement",
+      "expected_outcome": "step-therapy-first",
+      "actual_outcome": "step-therapy-first",
       "detail": {
-        "determination": "partial-settlement",
-        "machine_eligible_best": "partial-settlement"
+        "determination": "step-therapy-first",
+        "machine_eligible_best": "step-therapy-first"
       },
-      "made_at": "2026-09-01T03:13:36Z"
+      "made_at": "2026-09-01T05:08:28Z",
+      "realized_cost_usd": 18000,
+      "outcome_value": 0.7,
+      "expected_utility": 0.7775,
+      "variance": 0.0775,
+      "learned_weights": {
+        "medical_necessity": 0.3994312474928557,
+        "safety": 0.25036149523759177,
+        "policy": 0.19988432152397065,
+        "cost": 0.15032293574558198
+      },
+      "_learned_from_weight_update": "chosen option (utility 0.777) realised 0.70 -> variance +0.078; weights cautiously re-weighted toward factors that distinguish well-performing options, clamp-bounded + renormalized"
     },
     {
-      "uri": "evidence://deli-forecast-flat/learning-note",
+      "uri": "evidence://cove/learning-note",
       "kind": "RECORD",
       "source": "post-resolution-postmortem",
-      "captured_at": "2026-09-01T03:13:36Z",
+      "captured_at": "2026-09-01T05:08:28Z",
       "verity": {
         "procedure": "postmortem",
         "confidence": 0.6
@@ -354,49 +343,115 @@
       "reliability": 0.6,
       "about": "what was learned",
       "supports": null,
-      "learning": "conflicting delivery timestamps reach a determination only via an authorized adjudicator + independent anchored verification, not the single-source verifier"
+      "learning": "drug coverage disputes blend clinical-necessity evidence with policy; the measured path (step-therapy-first) preserves member safety + plan policy while avoiding both an irreversible off-formulary spend and a flat safety-risk denial"
     },
     {
-      "uri": "metric://deli-forecast-flat/m-on-time",
-      "actual": 0.96,
-      "variance": 0.01,
-      "points": [
-        {
-          "period": 1,
-          "expected": 0.95,
-          "target": 0.95,
-          "actual": 0.96,
-          "variance": 0.01
-        },
-        {
-          "period": 2,
-          "expected": 0.95,
-          "target": 0.95,
-          "actual": 0.97,
-          "variance": 0.02
-        },
-        {
-          "period": 3,
-          "expected": 0.95,
-          "target": 0.95,
-          "actual": 0.96,
-          "variance": 0.01
-        },
-        {
-          "period": 4,
-          "expected": 0.95,
-          "target": 0.95,
-          "actual": 0.96,
-          "variance": 0.01
-        }
+      "uri": "claim://cove/u-necessary",
+      "proposer": "person://cove/physician",
+      "statement": "medication Y is medically necessary for the rare condition.",
+      "evidence": [
+        "evidence://cove/u-anecdotal"
       ],
-      "name": "resolution on-time rate",
-      "formula": "on-time resolutions / total resolutions from ledger",
-      "unit": "fraction",
-      "target": 0.95,
-      "period": "quarter",
-      "source": "ledger resolution completion records",
-      "owner": "person://deli-forecast-flat/adjudicator"
+      "epistemic_status": "disputed"
+    },
+    {
+      "uri": "claim://cove/u-unproven",
+      "proposer": "org://cove/payer",
+      "statement": "no comparative evidence supports medication Y's use.",
+      "evidence": [
+        "evidence://cove/u-no-data"
+      ],
+      "epistemic_status": "disputed"
+    },
+    {
+      "uri": "evidence://cove/u-anecdotal",
+      "kind": "TESTIMONY",
+      "source": "physician-case-report",
+      "captured_at": "2026-07-01T00:00:00-06:00",
+      "verity": {
+        "procedure": "case-report",
+        "confidence": 0.6
+      },
+      "reliability": 0.6,
+      "about": "clinical necessity of medication Y",
+      "supports": "claim://cove/u-necessary"
+    },
+    {
+      "uri": "evidence://cove/u-no-data",
+      "kind": "RECORD",
+      "source": "disease-registry",
+      "captured_at": "2026-07-01T00:00:00-06:00",
+      "verity": {
+        "procedure": "registry-review",
+        "confidence": 0.7
+      },
+      "reliability": 0.7,
+      "about": "absence of comparative evidence",
+      "supports": "claim://cove/u-unproven"
+    },
+    {
+      "uri": "dispute://cove/rare-condition",
+      "about": "obligation://cove/furnish-coverage",
+      "parties": [
+        "person://cove/patient",
+        "org://cove/payer"
+      ],
+      "status": "OPEN",
+      "estimated_cost_usd": 210000,
+      "interest_blocks": {
+        "patient": "access to a potentially life-saving drug",
+        "payer": "spend only on evidenced care"
+      },
+      "constraint_blocks": {
+        "irreversible": "dispensing is irreversible -> \u00a76 floor"
+      },
+      "lifecycle_state": "UNRESOLVED",
+      "epistemic_state": "INSUFFICIENT_EVIDENCE",
+      "determination": "UNRESOLVED",
+      "resolution_type": null,
+      "reopened": false,
+      "available_resolutions": [
+        "authorize-off-formulary",
+        "deny-off-formulary",
+        "step-therapy-first",
+        "authorize-generic",
+        "request-more-evidence",
+        "escalate-to-medical-director",
+        "unresolved",
+        "external-peer-review"
+      ],
+      "conflict": {
+        "detected": true,
+        "uncertainty": false,
+        "claim_support": {
+          "claim://cove/medically-necessary": 0.88,
+          "claim://cove/off-formulary": 1.0
+        }
+      }
+    },
+    {
+      "uri": "decision://cove/unresolved",
+      "by": "person://cove/utilization",
+      "authority": "authority://cove/adjudicate",
+      "alternatives": [
+        "authorize-off-formulary",
+        "deny-off-formulary",
+        "step-therapy-first",
+        "authorize-generic",
+        "request-more-evidence",
+        "escalate-to-medical-director",
+        "unresolved",
+        "external-peer-review"
+      ],
+      "confidence": 0.6,
+      "expected_outcome": "resolve conflict",
+      "actual_outcome": "unresolved",
+      "detail": {
+        "determination": "UNRESOLVED",
+        "epistemic_state": "INSUFFICIENT_EVIDENCE",
+        "reason": "no admissible source reaches the configured sufficiency threshold; awarding either side is not justified by the basis"
+      },
+      "made_at": "2026-09-01T05:08:28Z"
     }
   ]
 }

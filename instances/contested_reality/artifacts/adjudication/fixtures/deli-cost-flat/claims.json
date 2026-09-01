@@ -1,0 +1,30 @@
+[
+  {
+    "uri": "claim://deli-cost-flat/late",
+    "proposer": "org://deli-cost-flat/customer",
+    "statement": "the contracted service was NOT delivered on time; signed receipt 16:15 past the 16:00 deadline \u2014 we should not pay for the late delivery.",
+    "evidence": [
+      "evidence://deli-cost-flat/arrival-receipt",
+      "evidence://deli-cost-flat/gps-arrival"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli-cost-flat/delivered",
+    "proposer": "org://deli-cost-flat/company",
+    "statement": "the contracted service WAS delivered and is payable; an independent anchored verification confirms delivery liveness.",
+    "evidence": [
+      "evidence://deli-cost-flat/third-party-verification"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli-cost-flat/shipped",
+    "proposer": "org://deli-cost-flat/supplier",
+    "statement": "we shipped the consignment on time.",
+    "evidence": [
+      "evidence://deli-cost-flat/supplier-shipping"
+    ],
+    "epistemic_status": "disputed"
+  }
+]

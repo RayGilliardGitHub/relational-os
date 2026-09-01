@@ -973,6 +973,130 @@ def cockpit_s7l(cfg: dict, sub, *, library: dict | None = None) -> dict:
     }
     q9 = ownership
 
+    # Sprint 25 (additive): Q9 CAPACITY-ATTENTION from the recorded horizon-wide band. When the
+    # recorded-variance band exists (a band_horizon rides the closure) AND the recorded threshold is
+    # numeric, add an additive `band_capacity_attention` flag: whether the record-wide HORIZON range
+    # (the whole-horizon worst case, band_horizon low..high) signals the recorded threshold — a
+    # data-only capacity-attention flag/reason, NEVER an invented capacity number (the recorded
+    # `capacity` may be referenced in `why` but is never mutated/invented when absent). No-band /
+    # no-data orgs carry NO key -> byte-identical.
+    bh = fca.get("band_horizon") if (fca.get("available") and fca.get("band_horizon") is not None) else None
+    if bh is not None and fca.get("threshold") is not None:
+        _dir = fca.get("direction", "higher-is-better")
+        _thr = fca["threshold"]; _ts = fca.get("threshold_source", "threshold")
+        _lo, _hi = bh["low"], bh["high"]
+        if _dir == "lower-is-better":
+            _hz_cross = _hi is not None and _hi > _thr        # high above ceiling -> attention
+            _side = "highest side %s above %s %s" % (_hi, _ts, _thr)
+        else:
+            _hz_cross = _lo is not None and _lo < _thr        # low below target -> attention
+            _side = "lowest side %s below %s %s" % (_lo, _ts, _thr)
+        _capref = ""
+        if capacity_recorded and q9_capacity:
+            _capref = (", recorded capacity %s %s (load %s)"
+                       % (q9_capacity.get("value"), q9_capacity.get("unit", ""),
+                          q9_capacity.get("load", "—")))
+        _why = ("horizon-wide recorded band %s…%s across %d projection periods — %s — %s the "
+                "recorded %s threshold%s"
+                % (_lo, _hi, len(fca.get("band_periods") or []), _side,
+                   "signals" if _hz_cross else "stays safe of", _dir.split("-")[0], _capref))
+        q9["band_capacity_attention"] = {
+            "flag": bool(_hz_cross), "why": _why,
+            "low": _lo, "high": _hi, "crosses": bool(_hz_cross)}
+
+    # Sprint 26 (additive): Q9 CAPACITY-PLANNING attention — a data-only flag/reason emitted ONLY
+    # where the org RECORDS a numeric `capacity` on its authority object AND a band + numeric
+    # threshold exist. ONE deterministic rule from recorded numbers only:
+    #   at-capacity when the recorded load >= 1.0; deficit when the horizon band's worst-side
+    #   magnitude (low for higher-is-better, high for lower-is-better) reaches/exceeds the recorded
+    #   capacity VALUE; otherwise headroom. `why` states the recorded capacity value/unit/load and the
+    #   horizon-wide band, and labels headroom / at-capacity / deficit as a derived REASON — NEVER a
+    #   fabricated capacity number, NEVER a directive. Orgs that record NO capacity carry NO key
+    #   (byte-identical superset of Sprint 25); `band_capacity_attention` is untouched.
+    if (capacity_recorded and q9_capacity is not None
+            and bh is not None and fca.get("threshold") is not None):
+        # Sprint 27: the reason/flag now come from the SHARED `_capacity_reason` helper (the same
+        # sole deterministic rule), so the Q9 `capacity_planning_attention` label and the new
+        # Q7/Q8 `capacity_constraint.reason` AGREE BY CONSTRUCTION — one rule, recorded numbers
+        # only (output byte-identical to Sprint 26).
+        _label, _flag = _capacity_reason(
+            q9_capacity, bh, fca.get("direction", "higher-is-better"))
+        _cap_txt = "%s %s (load %s)" % (q9_capacity.get("value"), q9_capacity.get("unit", ""),
+                                        q9_capacity.get("load", "—"))
+        _why = ("capacity-planning: recorded capacity %s vs the horizon-wide recorded band "
+                "%s…%s across %d projection periods — derived %s from recorded numbers only "
+                "(not a directive, no invented capacity)"
+                % (_cap_txt, bh["low"], bh["high"], len(fca.get("band_periods") or []), _label))
+        q9["capacity_planning_attention"] = {"flag": _flag, "why": _why}
+
+    # Sprint 27 (additive): make the recorded capacity a data-only CONSTRAINT on the §7L Q7/Q8
+    # trade-off. ONLY where the org records a numeric capacity AND a band + numeric threshold exist
+    # (the same condition that emits Q9 `capacity_planning_attention`), add a parallel additive
+    # `capacity_constraint` block on BOTH `q7` (the trade-off) and `q8` (the recommendation) that:
+    #   - names the recorded capacity value/unit/load and the horizon-wide recorded band;
+    #   - derives ONE reason label from recorded numbers only via the SHARED `_capacity_reason`
+    #     rule -> `reason` always equals the Q9 `capacity_planning_attention` label BY CONSTRUCTION
+    #     (headroom / at-capacity / deficit);
+    #   - in `options_flagged`, marks any capacity-consuming (non-baseline) option `capacity_risk`
+    #     ONLY when the reason is not headroom; NEVER `capacity_infeasible` (no per-option capacity
+    #     requirement is ever recorded, so infeasibility is never derivable) and NEVER the baseline
+    #     (do-nothing/UNRESOLVED consumes no capacity). In headroom, no option is flagged.
+    # It NEVER removes an option, NEVER changes the frozen `rank`/`machine_eligible_best`, NEVER
+    # overrules the §6 human, and NEVER invents a capacity figure or a per-option requirement —
+    # a label/default, recorded-data only. A genuinely capacity-constrained optimization that
+    # re-ranks the recommendation stays explicitly out of scope (deterministic advisory stance).
+    # C2-safe (no `at|time|deadline|expires|expiry|effective|due|since` suffix on any key).
+    if (capacity_recorded and q9_capacity is not None
+            and bh is not None and fca.get("threshold") is not None):
+        _cclabel, _ccflag = _capacity_reason(
+            q9_capacity, bh, fca.get("direction", "higher-is-better"))
+        _reqs = auth_obj.get("capacity_requirements") if isinstance(auth_obj, dict) else None
+        _cc_base = q7.get("baseline")
+        if isinstance(_reqs, dict) and _reqs:
+            # Sprint 29 (additive): a RECORDED per-option requirement exists -> label a SPECIFIC
+            # option `capacity_infeasible` (its requirement > available capacity, available = the
+            # recorded capacity VALUE − the recorded load, same unit) vs `capacity_risk` otherwise.
+            # The per-option rule is exercised ONLY here (a no-requirements org keeps today's block
+            # byte-identical); the baseline is never flagged; `reason`/`flag` still come from the
+            # org-level `_capacity_reason` rule unchanged.
+            _cc_flags = _per_option_capacity_flags(
+                q9_capacity, _reqs, cfg.get("options", []), _cc_base,
+                non_headroom=(_cclabel != "headroom"))
+        else:
+            _cc_flags = {}
+            if _cclabel != "headroom":
+                for _o in cfg.get("options", []):
+                    if _o != _cc_base:
+                        _cc_flags[_o] = "capacity_risk"
+        _cc_cap_txt = "%s %s (load %s)" % (q9_capacity.get("value"),
+                                           q9_capacity.get("unit", ""),
+                                           q9_capacity.get("load", "—"))
+        _cc = {
+            "recorded_capacity": _cc_cap_txt,
+            "horizon_band": {"low": bh["low"], "high": bh["high"]},
+            "reason": _cclabel,
+            "flag": _ccflag,
+            "options_flagged": _cc_flags,
+            "note": ("derived capacity-constraint reason from recorded numbers only — never an "
+                     "invented figure, never a directive, never an option removal; the Q8 "
+                     "recommendation is UNCHANGED (the §6 human always rules)"),
+        }
+        if isinstance(_reqs, dict) and _reqs:
+            # Sprint 29 (additive): name the RECORDED per-option requirements + the derived available
+            # capacity on the block so every capacity_infeasible/capacity_risk label traces to a
+            # recorded number (available = recorded capacity VALUE − recorded load, same unit). Field
+            # keys C2-safe (no temporal suffix). A no-requirements org carries NONE of these.
+            _cc["per_option_requirements"] = dict(_reqs)
+            _avail = None
+            _v_n = _num(q9_capacity.get("value")) if isinstance(q9_capacity, dict) else None
+            _l_n = _num(q9_capacity.get("load")) if isinstance(q9_capacity, dict) else None
+            if _v_n is not None and _l_n is not None:
+                _avail = round(_v_n - _l_n, 4)
+            if _avail is not None:
+                _cc["available_capacity"] = _avail
+        q7["capacity_constraint"] = dict(_cc)
+        q8["capacity_constraint"] = dict(_cc)
+
     # ---- Q10 verified outcome + organizational learning -------------------------------------------
     q10 = {
         "verified": bool(d.get("verified")),
@@ -1044,9 +1168,15 @@ def render_cockpit_s7l(cfg: dict, sub, *, library: dict | None = None) -> str:
                  % (q8["recommendation"], q8["authority"], q8["floor_gated"], c["determination"]))
     if q8.get("do_nothing_expected_impact"):
         dn = q8["do_nothing_expected_impact"]
+        band_txt = ""
+        if dn.get("band"):
+            _b = dn["band"]
+            band_txt = (" |  recorded band %s…%s (± σ %s, crosses=%s)"
+                        % (_b["low"], _b["high"], _b["sigma"], _b["crosses"]))
         lines.append("    trade-off / do-nothing expected-impact: %s (baseline %s, priced=%s, "
-                     "on-target=%s)"
-                     % (dn["summary"], dn.get("baseline"), dn.get("priced"), dn.get("on_target")))
+                     "on-target=%s)%s"
+                     % (dn["summary"], dn.get("baseline"), dn.get("priced"),
+                        dn.get("on_target"), band_txt))
     lines.append("Q9. who does it, authority/capacity?  adjudicator %s (authority %s), obligated "
                  "party %s, appeal %s, actors %s%s"
                  % (q9["adjudicator"], q9["determination_authority"],
@@ -1090,6 +1220,75 @@ def _num(x):
         return None
 
 
+# Sprint 26 (additive): the horizon-wide recorded-band phrase, SHARED so the Q3 forecast-driven
+# attention `why` and the Q8/do-nothing summary name the SAME record-wide worst case VERBATIM by
+# construction. `{lo}`/`{hi}`/`{n}` are the band_horizon min-low/max-high and the count of
+# projection periods (pure recorded data). Appended AFTER the Sprint-23/24 single-worst band phrase
+# (+ any Sprint-24 band_source phrase) so the old string stays a strict prefix. C2-safe (no
+# `at|time|deadline|expires|expiry|effective|due|since` suffix on any generated key).
+_HORIZON_BAND_PHRASE = (" — horizon-wide recorded band {lo}…{hi} across {n} projection periods "
+                        "(band_periods/band_horizon, same recorded σ)")
+
+
+# Sprint 27 (additive): the shared deterministic CAPACITY-REASON rule. Extracted from the Sprint-26
+# Q9 `capacity_planning_attention` rule so the Q9 capacity reason and the new Q7/Q8
+# `capacity_constraint` reason AGREE BY CONSTRUCTION (one helper, one rule). Inputs are recorded
+# numbers only: the recorded authority `capacity` {value, unit, load}, the closure's record-wide
+# horizon band (`band_horizon` {low, high}), and the recorded metric `direction`. Returns
+# (label, flag):
+#   headroom      default — recorded load < 1.0 AND the horizon band's worst-side magnitude is
+#                 below/at the recorded capacity value, OR the comparison is not derivable (no
+#                 numeric load / capacity / worst-side).
+#   at-capacity   recorded load >= 1.0.
+#   deficit       the horizon band's worst-side magnitude (band_horizon low for higher-is-better,
+#                 high for lower-is-better) reaches/exceeds the recorded capacity VALUE.
+# The worst-side magnitude and the capacity VALUE may be in different units; the rule STATES the
+# recorded numbers and LABELS the effect as a derived reason — never an invented figure, never a
+# directive. C2-safe (returned keys carry no temporal suffix; the helper itself returns labels).
+def _capacity_reason(capacity_obj: dict, band_horizon: dict,
+                     direction: str = "higher-is-better"):
+    cap_n = _num(capacity_obj.get("value")) if isinstance(capacity_obj, dict) else None
+    load_n = _num(capacity_obj.get("load")) if isinstance(capacity_obj, dict) else None
+    wsm = (band_horizon.get("high") if direction == "lower-is-better"
+           else band_horizon.get("low"))
+    at_cap = load_n is not None and load_n >= 1.0
+    deficit = cap_n is not None and wsm is not None and wsm >= cap_n
+    if deficit:
+        return "deficit", True
+    if at_cap:
+        return "at-capacity", True
+    return "headroom", False
+
+
+def _per_option_capacity_flags(capacity_obj: dict, requirements: dict, options: list,
+                               baseline: str, non_headroom: bool) -> dict:
+    """Sprint 29 (additive): the per-option capacity LABEL from ONE recorded rule. AVAILABLE
+    capacity = recorded authority `capacity.value` − recorded `capacity.load` (both recorded, the
+    SAME unit by construction — the authority holds the capacity AND the per-option requirements).
+    An option whose RECORDED requirement > available is `capacity_infeasible`; otherwise it is
+    `capacity_risk` only when `non_headroom` (a consumer/at-or-under-available option at/over
+    capacity is risky). The baseline (do-nothing/UNRESOLVED) is NEVER flagged (consumes none). The
+    engine never invents a requirement — an option not present in the recorded `requirements` dict is
+    simply not flagged for infeasibility (it stays `capacity_risk` when non_headroom, byte-compatible
+    with Sprint 28). Pure + deterministic; never the wall-clock. C2-safe (returned keys are option
+    names; `available_capacity` has no temporal suffix)."""
+    value_n = _num(capacity_obj.get("value")) if isinstance(capacity_obj, dict) else None
+    load_n = _num(capacity_obj.get("load")) if isinstance(capacity_obj, dict) else None
+    available = None
+    if value_n is not None and load_n is not None:
+        available = round(value_n - load_n, 4)
+    flags: dict[str, str] = {}
+    for opt in options:
+        if opt == baseline:
+            continue                       # do-nothing/UNRESOLVED consumes no capacity (never flagged)
+        req = _num(requirements.get(opt)) if isinstance(requirements, dict) else None
+        if req is not None and available is not None and req > available:
+            flags[opt] = "capacity_infeasible"
+        elif non_headroom:
+            flags[opt] = "capacity_risk"
+    return flags
+
+
 def _forecast_closure(cfg: dict, sub) -> dict:
     """Deterministic forecast→attention→expected-impact data for `cockpit_s7l`, derived ONLY from
     the recorded `metric://` realized-vs-expected series (Sprint 20 `forecast_metric`).
@@ -1101,7 +1300,29 @@ def _forecast_closure(cfg: dict, sub) -> dict:
       attention_item   the Q3 forecast-tagged item to append (or None)
       q6               the exact Q6 cockpit dict (so Q3/Q6/Q8 agree by construction)
       do_nothing       the Q8/trade-off do-nothing expected-impact block (or None)
-    Crossing rule: `min(projection) < threshold` for a higher-is-better rate metric. Threshold in
+    Sprint 23 (additive): when the last recorded point carries a numeric `variance`, the closure also
+    carries `recorded_variance` + `band` (worst ± sigma -> low/high, `crosses` = worst side crosses
+    the threshold) + the recorded `expected_last` anchor, on the closure, `q8["forecast"]`, and the
+    do-nothing block, and the summary/attention-why name the band. A recorded-data spread, NOT a
+    confidence interval. No variance -> band absent -> output byte-identical to Sprint 22.
+    Sprint 24 (additive): the band's VARIANCE SOURCE is a RECORDED, additive `band_variance` field on
+    the metric:// object. Absent / "last" / unknown -> the last recorded point's variance (EXACTLY
+    Sprint 23). "all" / "minmax" -> the recorded WHOLE-SERIES choice: the largest recorded |variance|
+    across the recorded points -> sigma may WIDEN (or narrow) vs the last point, still ONLY recorded
+    point values. When a whole-series choice is active the band carries `source`, the closure /
+    q8["forecast"] / do-nothing carry `band_variance`, and the summary/why name the source. Default
+    orgs keep the Sprint-23 band (no source key) byte-identical.
+    Sprint 25 (additive): the SAME recorded sigma is applied to EVERY projection period -> the closure,
+    q8["forecast"], and do-nothing also carry `band_periods` ({period, low, high} per projected value)
+    + `band_horizon` ({low: min period low, high: max period high} — the record-wide horizon-wide
+    worst-case), and the do-nothing summary appends an additive phrase naming that range (appended
+    AFTER the Sprint-23/24 single-worst band phrase, keeping it a strict prefix). This makes the
+    horizon-wide worst case explicit AS DATA; it still never invents a sigma (every bound is projected
+    value ± the recorded sigma). No-band orgs carry none of these keys (byte-identical).
+    Crossing rule: the direction is a RECORDED, additive `direction` field on the `metric://` object
+    (`"higher-is-better"` is the default, keeping the Sprint-21 rate/quality case byte-identical;
+    an org may record `"lower-is-better"` for a cost/latency/defect/risk case). higher-is-better:
+    `min(projection) < threshold`; lower-is-better: `max(projection) > threshold`. Threshold in
     recorded order: explicit `forecast_threshold` additive field -> the metric's own `target` ->
     the last recorded `actual` (so a targetless declining series still flags)."""
     fap_uri, fap_metric = _recorded_metric_with_series(sub)
@@ -1123,13 +1344,87 @@ def _forecast_closure(cfg: dict, sub) -> dict:
         thr = fc["last_actual"]
         thr_src = "last-actual"
     projs = [p["projected"] for p in fc["projections"]]
-    worst = min(projs) if projs else None
+    # ---- recorded direction (Sprint 22): additive `direction` on the metric object --------------
+    # higher-is-better (default) = rate/quality: lower is worse; lower-is-better = cost/latency/
+    # defect/risk: higher is worse. Normalized defensively; an unrecorded/unknown value defaults to
+    # higher-is-better so the Sprint-21 behavior is byte-identical.
+    direction = str(fap_metric.get("direction") or "higher-is-better").strip().lower()
+    if direction != "lower-is-better":
+        direction = "higher-is-better"
+    if direction == "lower-is-better":
+        worst = max(projs) if projs else None
+    else:
+        worst = min(projs) if projs else None
     worst_period = (next(p["period"] for p in fc["projections"] if p["projected"] == worst)
                     if worst is not None else None)
-    crossing = worst is not None and thr is not None and worst < thr
+    if direction == "lower-is-better":
+        crossing = worst is not None and thr is not None and worst > thr
+    else:
+        crossing = worst is not None and thr is not None and worst < thr
+    # ---- Sprint 23 (additive): the recorded-variance projected band ------------------------------
+    # The do-nothing expected-impact is priced as a BAND (worst ± the RECORDED variance) instead of a
+    # single point, derived ONLY from recorded data. The recorded variance used is the last recorded
+    # point's `variance` (`forecast_metric.recorded_variance`), taken as a MAGNITUDE (sigma). When the
+    # last point carries NO variance (or no recordable numeric variance) the band is ABSENT and the
+    # output keeps the Sprint-22 single-point behavior BYTE-IDENTICAL. `crosses` is whether the WORST
+    # side of the band crosses the threshold in the metric's direction (higher-is-better: low <
+    # threshold; lower-is-better: high > threshold). This is a recorded-data spread, NOT a confidence
+    # interval and never a wall-clock/probabilistic claim.
+    rv = _num(fc.get("recorded_variance"))
+    band = None
+    # Sprint 24 (additive): the band's VARIANCE SOURCE is a RECORDED, additive `band_variance`
+    # parameter on the metric:// object. Absent / "last"/unknown -> the LAST recorded point's
+    # variance (EXACTLY Sprint 23, byte-identical). "all"/"minmax" -> the recorded WHOLE-SERIES
+    # choice: the largest recorded |variance| across the recorded points (the recorded worst-case
+    # spread), still only recorded point values — never invented. Every possible sigma is a
+    # recorded point variance magnitude.
+    bv = str(fap_metric.get("band_variance") or "").strip().lower()
+    if bv in ("all", "minmax"):
+        band_source = bv
+        _bv_pts = next((fap_metric[k] for k in ("points", "series", "realized_series")
+                        if isinstance(fap_metric.get(k), list) and fap_metric[k]), [])
+        _mags = [abs(v) for _p in _bv_pts if isinstance(_p, dict)
+                 for v in [_num(_p.get("variance"))] if v is not None]
+        src_variance = _num(max(_mags)) if _mags else rv   # recorded max |variance| (fallback: last)
+    else:
+        band_source = None                                 # no `source` key (Sprint-23 byte-identical)
+        src_variance = rv
+    if src_variance is not None:
+        sigma = round(abs(src_variance), 4)
+        low = round((worst - sigma), 4) if worst is not None else None
+        high = round((worst + sigma), 4) if worst is not None else None
+        if direction == "lower-is-better":
+            band_crosses = (low is not None and high is not None and thr is not None
+                            and high > thr)
+        else:
+            band_crosses = (low is not None and high is not None and thr is not None
+                            and low < thr)
+        band = {"worst": worst, "sigma": sigma, "low": low, "high": high,
+                "crosses": bool(band_crosses)}
+        if band_source is not None:
+            band["source"] = band_source    # additive: name the recorded whole-series source when used
+        # Sprint 25 (additive): the SAME recorded sigma applied to EVERY projection period -> a
+        # per-period band + the record-wide (horizon-wide) worst-case range. Still derived ONLY from
+        # recorded series/projection values + the recorded sigma (one recorded point |variance|
+        # magnitude, never invented). `band_horizon` is the whole-horizon worst case: min of the
+        # period lows and max of the period highs — it can WIDEN beyond the single-worst point's band
+        # when an EARLIER projection period's value at its own ± sigma exceeds the worst point's band
+        # (e.g. a declining rate's earlier periods sit higher), yet every bound is a pure function of
+        # the recorded points + the recorded threshold + the recorded sigma.
+        band_periods = [
+            {"period": p["period"],
+             "low": round(float(p["projected"]) - sigma, 4),
+             "high": round(float(p["projected"]) + sigma, 4)}
+            for p in fc["projections"]]
+        band_horizon = {"low": min(bp["low"] for bp in band_periods),
+                        "high": max(bp["high"] for bp in band_periods)}
+    else:
+        band_periods = None
+        band_horizon = None
     q6 = {"forecast_available": True,
           "forecast": "deterministic projection from the recorded realized-vs-expected series",
           "metric": fap_uri,
+          "direction": direction,
           "last_actual": fc["last_actual"], "mean_delta": fc["mean_delta"],
           "horizon": fc["horizon"], "projections": fc["projections"],
           "recorded_variance": fc["recorded_variance"],
@@ -1137,33 +1432,127 @@ def _forecast_closure(cfg: dict, sub) -> dict:
                       "projection = last recorded actual + mean of recorded deltas, forward "
                       "periods, labelled a projection; never the wall-clock"}
     attention_item = None
-    if crossing:
+    if crossing and direction == "lower-is-better":
+        attention_item = {"item": fap_uri,
+                          "why": ("forecast: projected to rise above {} ({}) — worst {} at period {}"
+                                  .format(thr if thr is not None else "?", thr_src,
+                                          worst, worst_period)),
+                          "tag": "forecast"}
+    elif crossing:
         attention_item = {"item": fap_uri,
                           "why": ("forecast: projected to fall below {} ({}) — worst {} at period {}"
                                   .format(thr if thr is not None else "?", thr_src,
                                           worst, worst_period)),
                           "tag": "forecast"}
+    # Sprint 23 (additive): when a recorded-variance band exists, the attention `why` names the band
+    # so "the projected spread itself crosses" is surfaced, not just the single worst point.
+    if band is not None and attention_item is not None:
+        _side = ("{} above {} {}"
+                 .format(band["high"], thr_src, thr) if direction == "lower-is-better"
+                 else "{} below {} {}".format(band["low"], thr_src, thr))
+        attention_item["why"] += (" — recorded band {low}…{high} (± σ {sigma}); worst side {side}"
+                                  .format(low=band["low"], high=band["high"],
+                                          sigma=band["sigma"], side=_side))
+        if band_source is not None:
+            attention_item["why"] += (" — band σ from the recorded whole-series max |variance| "
+                                      "(band_variance {})".format(band_source))
+        # Sprint 26 (additive): name the horizon-wide range on the Q3 attention `why` too — the SAME
+        # recorded σ applied to EVERY projection period, so the record-wide worst case (band_horizon
+        # min-low/max-high) is visible at the FIRST attention line, exactly as Q6/Q8/do-nothing carry
+        # it. Appended AFTER the Sprint-23/24 single-worst band phrase (+ the Sprint-24 source phrase)
+        # so the old string stays a strict prefix; shares the do-nothing summary's constant so
+        # Q3/Q8/do-nothing agree verbatim by construction. band_horizon is set whenever `band` is, but
+        # guard anyway. No-band / no-data orgs never reach here (no suffix, unchanged).
+        if band_horizon is not None:
+            attention_item["why"] += _HORIZON_BAND_PHRASE.format(
+                lo=band_horizon["low"], hi=band_horizon["high"], n=len(band_periods))
     baseline = next((o for o in cfg.get("options", [])
                      if "unres" in o.lower() or o == "do-nothing"), None)
-    if crossing:
+    if crossing and direction == "lower-is-better":
+        gap = round(float(worst) - float(thr), 4)
+        summary = ("forecast-driven do-nothing cost: {} projects to worst {} (period {}) above "
+                   "recorded {} {} by {} — doing nothing lets the recorded trend deteriorate"
+                   .format(fap_uri, worst, worst_period, thr_src, thr, gap))
+        on_target = False
+    elif crossing:
         gap = round(float(thr) - float(worst), 4)
         summary = ("forecast-driven do-nothing cost: {} projects to worst {} (period {}) below "
                    "recorded {} {} by {} — doing nothing lets the recorded trend deteriorate"
                    .format(fap_uri, worst, worst_period, thr_src, thr, gap))
         on_target = False
+    elif direction == "lower-is-better":
+        summary = ("on-target: {} projection stays at/below recorded {} {} (worst {}) — "
+                   "no forecast-driven cost to doing nothing"
+                   .format(fap_uri, thr_src, thr, worst))
+        on_target = True
     else:
         summary = ("on-target: {} projection stays at/above recorded {} {} (worst {}) — "
                    "no forecast-driven cost to doing nothing"
                    .format(fap_uri, thr_src, thr, worst))
         on_target = True
+    # Sprint 23 (additive): append the recorded band to the do-nothing summary when present, so the
+    # expected-impact is priced as the recorded spread (not a single point), still from recorded data.
+    if band is not None:
+        if band["crosses"]:
+            _side = ("{} above {} {}"
+                     .format(band["high"], thr_src, thr) if direction == "lower-is-better"
+                     else "{} below {} {}".format(band["low"], thr_src, thr))
+            summary += (" — recorded band {low}…{high} (± σ {sigma}); worst side {side} — the whole "
+                        "recorded spread is priced as bad"
+                        .format(low=band["low"], high=band["high"],
+                                sigma=band["sigma"], side=_side))
+        else:
+            summary += (" — recorded band {low}…{high} (± σ {sigma}); worst side stays safe of the "
+                        "threshold — the spread confirms on-target"
+                        .format(low=band["low"], high=band["high"], sigma=band["sigma"]))
+        if band_source is not None:
+            summary += (" — band σ from the recorded whole-series max |variance| (band_variance {})"
+                        .format(band_source))
+        # Sprint 25 (additive): name the horizon-wide range too — the SAME sigma applied to EVERY
+        # projection period, so the whole-horizon worst case (record-wide low..high) is explicit,
+        # still only from recorded values + the recorded sigma. Appended AFTER the Sprint-23/24
+        # single-worst band phrase -> the old string stays a strict prefix. Sprint 26: the phrase is
+        # the SHARED `_HORIZON_BAND_PHRASE` constant so the Q3 attention `why` and this summary name
+        # the SAME horizon-wide recorded band verbatim (output byte-identical to Sprint 25).
+        summary += _HORIZON_BAND_PHRASE.format(
+            lo=band_horizon["low"], hi=band_horizon["high"], n=len(band_periods))
     do_nothing = {"baseline": baseline, "priced": True, "on_target": on_target,
-                  "summary": summary, "metric": fap_uri}
-    return {"available": True, "series_uri": fap_uri, "threshold": thr,
-            "threshold_source": thr_src, "projections": fc["projections"], "worst": worst,
-            "worst_period": worst_period, "crossing": crossing,
-            "attention_item": attention_item, "q6": q6, "do_nothing": do_nothing,
-            "forecast": {"projections": fc["projections"], "threshold": thr,
-                         "source": thr_src, "worst": worst, "crossing": crossing}}
+                  "summary": summary, "metric": fap_uri, "direction": direction}
+    res = {"available": True, "series_uri": fap_uri, "threshold": thr,
+           "threshold_source": thr_src, "projections": fc["projections"], "worst": worst,
+           "worst_period": worst_period, "crossing": crossing, "direction": direction,
+           "attention_item": attention_item, "q6": q6, "do_nothing": do_nothing,
+           "forecast": {"projections": fc["projections"], "threshold": thr,
+                        "source": thr_src, "worst": worst, "crossing": crossing,
+                        "direction": direction}}
+    # Sprint 23 (additive): ride the recorded variance / band / expected anchor on the closure, the
+    # q8 `forecast` block, and the do-nothing expected-impact — ONLY when a band exists, so the
+    # no-variance single-point output stays byte-identical.
+    if band is not None:
+        res["recorded_variance"] = rv
+        res["expected_last"] = fc.get("expected_last")
+        res["band"] = band
+        res["band_periods"] = band_periods
+        res["band_horizon"] = band_horizon
+        res["forecast"]["recorded_variance"] = rv
+        res["forecast"]["expected_last"] = fc.get("expected_last")
+        res["forecast"]["band"] = band
+        res["forecast"]["band_periods"] = band_periods
+        res["forecast"]["band_horizon"] = band_horizon
+        do_nothing["variance"] = rv
+        do_nothing["expected_last"] = fc.get("expected_last")
+        do_nothing["band"] = band
+        do_nothing["band_periods"] = band_periods
+        do_nothing["band_horizon"] = band_horizon
+    # Sprint 24 (additive): ride the recorded whole-series band_variance SOURCE on the closure, the
+    # q8 `forecast` block, and the do-nothing expected-impact too — ONLY when a whole-series choice
+    # is active (default orgs carry no such key -> byte-identical to Sprint 23). The band dict's own
+    # `source` (when set) already names the recorded source; this rides the same fact one level up.
+    if band_source is not None:
+        res["band_variance"] = band_source
+        res["forecast"]["band_variance"] = band_source
+        do_nothing["band_variance"] = band_source
+    return res
 
 
 def _forecast_closure_marker(cfg: dict, sub) -> dict:
@@ -1306,5 +1695,37 @@ def record_capacity(sub, authority_uri: str, *, value, unit: str, signer: str,
         "idempotency_key": f"idem-adj-{label}-record-capacity",
         "signature": f"signed-by-{signer}", "occurred_at": now_iso(), "actor": signer,
         "detail": "record the authority's additive capacity field so the §7L Q9 can report it as data",
+        "state_update": [obj]}, signer)
+    return ev_uri
+
+
+def record_capacity_requirements(sub, authority_uri: str, *, requirements: dict, signer: str) -> str:
+    """REPLAYABLE recorder (Sprint 29): append an additive `capacity_requirements` map on the
+    SAME `authority://` object that already carries the additive `capacity` field. `requirements`
+    is {option_name: recorded_nonneg_amount} in the SAME recorded unit as the authority `capacity`
+    (unit-coupled BY CONSTRUCTION: the authority holds both the {value, unit, load} capacity and the
+    per-option requirements, so `available = capacity.value - capacity.load` and every per-option
+    label derive from the same recorded unit). MERGE-not-replace (preserve-unknown rides the existing
+    fields along). C2-safe: key `capacity_requirements` carries no temporal suffix. Returns the
+    signed event uri."""
+    assert authority_uri.startswith("authority://"), "per-option capacity is recorded on an authority:// object"
+    assert isinstance(requirements, dict) and requirements, "capacity_requirements must be a non-empty dict"
+    for _k, _v in requirements.items():
+        assert isinstance(_v, (int, float)) and _v >= 0.0, \
+            f"capacity requirement for {_k!r} must be a non-negative number (got {_v!r})"
+    obj = {**sub.graph.get(authority_uri),
+           "capacity_requirements": dict(requirements)}
+    label = authority_uri.split("/")[-2]
+    ev_uri = f"event://{label}/record-capacity-requirements"
+    sub.record({
+        "uri": ev_uri, "type": "STATE_CHANGE",
+        "event_id": f"ev-adj-{label}-record-capacity-requirements",
+        "correlation_id": f"corr-adj-{label}-record-capacity-requirements",
+        "causation_id": f"ev-adj-{label}-record-capacity-requirements-prev",
+        "idempotency_key": f"idem-adj-{label}-record-capacity-requirements",
+        "signature": f"signed-by-{signer}", "occurred_at": now_iso(), "actor": signer,
+        "detail": "record the authority's additive per-option capacity requirements so the Q7/Q8 "
+                  "capacity_constraint can label a specific option capacity_infeasible vs capacity_risk "
+                  "from recorded numbers only",
         "state_update": [obj]}, signer)
     return ev_uri

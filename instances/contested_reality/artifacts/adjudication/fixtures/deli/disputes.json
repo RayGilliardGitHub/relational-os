@@ -45,6 +45,54 @@
       }
     },
     "resolution_outcome": "partial settlement on the contested delivery; SLA-breach credit applied; ledger noted; customer keeps the service",
-    "verified": true
+    "verified": true,
+    "learned_weights": {
+      "evidence": 0.34697916041540683,
+      "contractual": 0.3004697869878391,
+      "relationship": 0.20242541189070418,
+      "cost": 0.15012564070605
+    },
+    "learning": "conflicting delivery timestamps reach a determination only via an authorized adjudicator + independent anchored verification, not the single-source verifier"
+  },
+  {
+    "uri": "dispute://deli/threshold-dispute",
+    "about": "obligation://deli/deliver-due",
+    "parties": [
+      "org://deli/customer",
+      "org://deli/company"
+    ],
+    "status": "OPEN",
+    "fin_impact_usd": 18000,
+    "interest_blocks": {
+      "customer": "pay only for delivered service",
+      "company": "seeks payment for claimed delivery"
+    },
+    "constraint_blocks": {
+      "irreversible": "any award is disputed -> \u00a76 human floor"
+    },
+    "lifecycle_state": "UNRESOLVED",
+    "epistemic_state": "INSUFFICIENT_EVIDENCE",
+    "determination": "UNRESOLVED",
+    "resolution_type": null,
+    "reopened": false,
+    "available_resolutions": [
+      "accept-customer-refund",
+      "accept-company-full-payment",
+      "partial-settlement",
+      "conditional-resolution",
+      "request-more-evidence",
+      "escalate",
+      "unresolved",
+      "external-adjudication"
+    ],
+    "conflict": {
+      "detected": true,
+      "uncertainty": false,
+      "claim_support": {
+        "claim://deli/late": 0.9,
+        "claim://deli/delivered": 0.97,
+        "claim://deli/shipped": 0.92
+      }
+    }
   }
 ]

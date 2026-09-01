@@ -1,5 +1,5 @@
 # FerrousWorks — Parts that keep the line turning.
-generated 2026-09-01T03:13:38Z  |  ledger events 54  graph objects 80
+generated 2026-09-01T05:08:35Z  |  ledger events 54  graph objects 80
 
 ## Business health (ledger-projected metrics)
 | metric | unit | target | actual | variance | status |

@@ -26,5 +26,23 @@
       "evidence://deli/supplier-shipping"
     ],
     "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli/u-late",
+    "proposer": "org://deli/customer",
+    "statement": "service was delivered late (receipt 16:15).",
+    "evidence": [
+      "evidence://deli/u-receipt"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli/u-on-time",
+    "proposer": "org://deli/company",
+    "statement": "service was delivered on time (internal delivery log).",
+    "evidence": [
+      "evidence://deli/u-delivery-log"
+    ],
+    "epistemic_status": "disputed"
   }
 ]

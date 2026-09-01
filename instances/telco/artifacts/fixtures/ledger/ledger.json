@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/telco-2026",
-  "head_hash": "a4a49681db2490fd40683adb8098a4f12922fad2faf97b1725866c7516e19270",
+  "head_hash": "f7343572b9b5076bca1b606c1c0eadf6e378ccc2b9d9129ad7c29e0a72f20c25",
   "entries": [
     {
       "uri": "event://telco/s5-state-2",
@@ -10,7 +10,7 @@
       "causation_id": "ev-s5-1",
       "idempotency_key": "idem-s5-2",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "provision Telecom base (actors, relationships, authority + operator + policy + expectation)",
       "state_update": [
@@ -319,10 +319,10 @@
           "uri": "process_instance://telco/pi-core",
           "process": "process://telco/pr-core",
           "status": "RUNNING",
-          "started_at": "2026-09-01T03:13:38Z"
+          "started_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "256b20abe50bff1571c1032adb006476a8b00797ae8e99e2fd95b675e6be0326"
+      "hash": "30051bcfd38b8fd7046b55a94611237d34bd38d4acfea675302f5cea310090a2"
     },
     {
       "uri": "event://telco/s5-state-100",
@@ -332,7 +332,7 @@
       "causation_id": "ev-s5-99",
       "idempotency_key": "idem-s5-100",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "seed scoped Trust org://telco/meridian-tower = 0.6",
       "state_update": [
@@ -345,7 +345,7 @@
           "score": 0.6
         }
       ],
-      "hash": "d82d16db23b01255db1247594b022a63735626aa9782851f8a2621202e742d67"
+      "hash": "dcff5e45eb8ffdb30496b0ad7456ea9f4cce65a0e5a8d0133c033c3f1133ac12"
     },
     {
       "uri": "event://telco/s5-state-101",
@@ -355,7 +355,7 @@
       "causation_id": "ev-s5-100",
       "idempotency_key": "idem-s5-101",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "seed scoped Trust org://telco/nimbus-networks = 0.9",
       "state_update": [
@@ -368,7 +368,7 @@
           "score": 0.9
         }
       ],
-      "hash": "960a7933d32d304b5fdf7b4613b3b682bace25f978693cbae4ab63b4c39c7016"
+      "hash": "87f13a10dd3271236746976a9f614154c7748f3fb33017594fd7f6814495a536"
     },
     {
       "uri": "event://telco/s5-state-102",
@@ -378,7 +378,7 @@
       "causation_id": "ev-s5-101",
       "idempotency_key": "idem-s5-102",
       "signature": "signed-by-agent://telco/s2",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s2",
       "detail": "register resource-commitment offer from org://telco/meridian-tower",
       "state_update": [
@@ -394,7 +394,7 @@
           "fit_note": "telecom partner delivery line"
         }
       ],
-      "hash": "34cb4ebafdc1dae38d2a98a571809147ad39c9a3998373b6ba1b284dc81a29b6"
+      "hash": "f5005f288839779a258f6d8380f0530464d02e8af0a4a0db2e7057e564490045"
     },
     {
       "uri": "event://telco/s5-state-103",
@@ -404,7 +404,7 @@
       "causation_id": "ev-s5-102",
       "idempotency_key": "idem-s5-103",
       "signature": "signed-by-agent://telco/s2",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s2",
       "detail": "register resource-commitment offer from org://telco/nimbus-networks",
       "state_update": [
@@ -420,7 +420,7 @@
           "fit_note": "telecom partner delivery line"
         }
       ],
-      "hash": "71c8cbedd9e990ca2c2289f37959a17e6bffe703fdcb13d934c29bd258b670a6"
+      "hash": "552aacbbd3495fd1a5cb4dcc306b1e43a6150b1811b43258ebad5e6426187d29"
     },
     {
       "uri": "event://telco/s5-state-104",
@@ -430,7 +430,7 @@
       "causation_id": "ev-s5-103",
       "idempotency_key": "idem-s5-104",
       "signature": "signed-by-agent://telco/s2",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s2",
       "detail": "initial match ranked offer://telco/o-l (score 0.900) \u2014 base ranking",
       "state_update": [
@@ -462,10 +462,10 @@
               "score": 0.6
             }
           ],
-          "made_at": "2026-09-01T03:13:38Z"
+          "made_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "fa89595191cd9ec60c2fb8755450ada350a2c6bdc01ee47eeaffb33ab22f63f0"
+      "hash": "e9e173f96903d8003071f50bae05c9ef6bf08cb092a9e0230cbc741bba5e49f2"
     },
     {
       "uri": "event://telco/s4-exchange-nimbus-networksQ3",
@@ -475,7 +475,7 @@
       "causation_id": "ev-s4-104",
       "idempotency_key": "idem-s4-105",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "settle exchange nimbus-networksQ3: 2000000.0 USD org://telco/nimbuscom->org://telco/nimbus-networks (value 2000000.0, cost 2000000.0)",
       "state_update": [
@@ -526,7 +526,7 @@
             "provider": "org://telco/nimbus-networks",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T03:13:38Z"
+          "made_at": "2026-09-01T05:08:35Z"
         },
         {
           "uri": "event://telco/s4-exchange-nimbus-networksQ3",
@@ -536,7 +536,7 @@
           "causation_id": "ev-s4-104",
           "idempotency_key": "idem-s4-105",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T03:13:38Z",
+          "occurred_at": "2026-09-01T05:08:35Z",
           "actor": "agent://s4",
           "detail": "settle exchange nimbus-networksQ3: 2000000.0 USD org://telco/nimbuscom->org://telco/nimbus-networks (value 2000000.0, cost 2000000.0)",
           "state_update": [],
@@ -558,7 +558,7 @@
       "provider": "org://telco/nimbus-networks",
       "settled_at": "2026-09-02T00:00:00Z",
       "exchange_of": "commitment://telco/c-nimbus-networksQ3",
-      "hash": "6fcf5abad9b51f1011d6fa29cc38a3761cdbcfc9119213c50551b35354625562"
+      "hash": "fe76ed5d660e15c0219e301e5e16ffb9ed4aafb11c81d0d1fa4ab00ab6018747"
     },
     {
       "uri": "event://telco/s4-outcome-nimbus-networksQ3",
@@ -568,7 +568,7 @@
       "causation_id": "ev-s4-105",
       "idempotency_key": "idem-s4-106",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "evaluate settle nimbus-networksQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
       "state_update": [
@@ -580,7 +580,7 @@
           "causation_id": "ev-s4-105",
           "idempotency_key": "idem-s4-106",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T03:13:38Z",
+          "occurred_at": "2026-09-01T05:08:35Z",
           "actor": "agent://s4",
           "detail": "evaluate settle nimbus-networksQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
           "state_update": [],
@@ -598,7 +598,7 @@
       "deadline": "2026-08-31T00:00:00Z",
       "settled_at": "2026-09-02T00:00:00Z",
       "score": 0.5,
-      "hash": "c684add922b74358ed991052971cae08f01cf240e5f12cc0266016d4081e19b5"
+      "hash": "bfddb74880bfb765d437869a5c337cd013c84a1555fb0b56101202096fb90e42"
     },
     {
       "uri": "event://telco/outcome-committed-nimbus-networksQ3",
@@ -608,7 +608,7 @@
       "causation_id": "ev-s2-106",
       "idempotency_key": "idem-s2-107",
       "signature": "signed-by-org://telco/nimbus-networks",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "org://telco/nimbus-networks",
       "detail": "job committed-nimbus-networksQ3 by org://telco/nimbus-networks: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
       "state_update": [
@@ -620,7 +620,7 @@
           "causation_id": "ev-s2-106",
           "idempotency_key": "idem-s2-107",
           "signature": "signed-by-org://telco/nimbus-networks",
-          "occurred_at": "2026-09-01T03:13:38Z",
+          "occurred_at": "2026-09-01T05:08:35Z",
           "actor": "org://telco/nimbus-networks",
           "detail": "job committed-nimbus-networksQ3 by org://telco/nimbus-networks: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
           "state_update": [],
@@ -638,7 +638,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T03:13:38Z"
+          "captured_at": "2026-09-01T05:08:35Z"
         }
       ],
       "job": "committed-nimbus-networksQ3",
@@ -646,7 +646,7 @@
       "committed_deadline": "2026-08-31T00:00:00Z",
       "actual_completed_at": "2026-09-02T00:00:00Z",
       "on_time": false,
-      "hash": "4bfb6539fdbeda28d7e4df6f131c2fe86bd16ca9881ea2bb4feb8214519b10d4"
+      "hash": "d8a1b490a4f876de54ba5bfb0b827b19da886feedd993a5b09db44dc5fba7b56"
     },
     {
       "uri": "event://telco/verify-committed-nimbus-networksQ3",
@@ -656,7 +656,7 @@
       "causation_id": "ev-s2-107",
       "idempotency_key": "idem-s2-108",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s5",
       "detail": "verify 'org://telco/nimbus-networks delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -673,10 +673,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T03:13:38Z"
+          "captured_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "6cb0df68169fbfce7c8cd56726cf1249dbf72a08abb82e9a480bd9e61a2a64c2"
+      "hash": "6f70b01269f8c28ae5db9c1aabcfc3c42576666e4cb8553a505963e556bf485c"
     },
     {
       "uri": "event://telco/trust-update-nimbus-networks",
@@ -686,7 +686,7 @@
       "causation_id": "ev-s2-108",
       "idempotency_key": "idem-s2-109",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "trust for org://telco/nimbus-networks [cell-site buildout reliability] 0.900 -> 0.520 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -697,7 +697,7 @@
           "claim": "cell-site buildout reliability",
           "context": "relationship://telco/partner-net",
           "score": 0.52,
-          "updated_at": "2026-09-01T03:13:38Z",
+          "updated_at": "2026-09-01T05:08:35Z",
           "expected": 0.8,
           "outcome": 0.0,
           "evidence": [
@@ -707,7 +707,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "cfda8e4acbc10a3665195c8d8669bfb3c053464e56a5e6c24a7f266b17360aa2"
+      "hash": "4aa89762043bccb24935278780b928d2190e3e6e491fadd951c9a1fe3e491bdb"
     },
     {
       "uri": "event://telco/s4-exchange-meridian-towerQ3",
@@ -717,7 +717,7 @@
       "causation_id": "ev-s4-109",
       "idempotency_key": "idem-s4-110",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "settle exchange meridian-towerQ3: 2000000.0 USD org://telco/nimbuscom->org://telco/meridian-tower (value 2000000.0, cost 2000000.0)",
       "state_update": [
@@ -768,7 +768,7 @@
             "provider": "org://telco/meridian-tower",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T03:13:38Z"
+          "made_at": "2026-09-01T05:08:35Z"
         },
         {
           "uri": "event://telco/s4-exchange-meridian-towerQ3",
@@ -778,7 +778,7 @@
           "causation_id": "ev-s4-109",
           "idempotency_key": "idem-s4-110",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T03:13:38Z",
+          "occurred_at": "2026-09-01T05:08:35Z",
           "actor": "agent://s4",
           "detail": "settle exchange meridian-towerQ3: 2000000.0 USD org://telco/nimbuscom->org://telco/meridian-tower (value 2000000.0, cost 2000000.0)",
           "state_update": [],
@@ -800,7 +800,7 @@
       "provider": "org://telco/meridian-tower",
       "settled_at": "2026-08-30T00:00:00Z",
       "exchange_of": "commitment://telco/c-meridian-towerQ3",
-      "hash": "2369fa8c4a057c102038d9d4ebda8a29733d80a5bd94bd60f9e4d10e8e81c9ac"
+      "hash": "573941c7f69c5eb2e81c2da7289a24ab3adffe1f78d317071fc4545f8211c016"
     },
     {
       "uri": "event://telco/s4-outcome-meridian-towerQ3",
@@ -810,7 +810,7 @@
       "causation_id": "ev-s4-110",
       "idempotency_key": "idem-s4-111",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "evaluate settle meridian-towerQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
       "state_update": [
@@ -822,7 +822,7 @@
           "causation_id": "ev-s4-110",
           "idempotency_key": "idem-s4-111",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T03:13:38Z",
+          "occurred_at": "2026-09-01T05:08:35Z",
           "actor": "agent://s4",
           "detail": "evaluate settle meridian-towerQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
           "state_update": [],
@@ -840,7 +840,7 @@
       "deadline": "2026-08-31T00:00:00Z",
       "settled_at": "2026-08-30T00:00:00Z",
       "score": 1.0,
-      "hash": "6f8f9f9f35a75697dca7cfec19a2c60b2a65231af3ccc61173f0045541b4aebc"
+      "hash": "68635a5248c2b854748424d099c26cb9364afe9eb4a0f8783c0555ddff07ae57"
     },
     {
       "uri": "event://telco/outcome-committed-meridian-towerQ3",
@@ -850,7 +850,7 @@
       "causation_id": "ev-s2-111",
       "idempotency_key": "idem-s2-112",
       "signature": "signed-by-org://telco/meridian-tower",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "org://telco/meridian-tower",
       "detail": "job committed-meridian-towerQ3 by org://telco/meridian-tower: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
       "state_update": [
@@ -862,7 +862,7 @@
           "causation_id": "ev-s2-111",
           "idempotency_key": "idem-s2-112",
           "signature": "signed-by-org://telco/meridian-tower",
-          "occurred_at": "2026-09-01T03:13:38Z",
+          "occurred_at": "2026-09-01T05:08:35Z",
           "actor": "org://telco/meridian-tower",
           "detail": "job committed-meridian-towerQ3 by org://telco/meridian-tower: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
           "state_update": [],
@@ -880,7 +880,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T03:13:38Z"
+          "captured_at": "2026-09-01T05:08:35Z"
         }
       ],
       "job": "committed-meridian-towerQ3",
@@ -888,7 +888,7 @@
       "committed_deadline": "2026-08-31T00:00:00Z",
       "actual_completed_at": "2026-08-30T00:00:00Z",
       "on_time": true,
-      "hash": "9d23d1b757af33080c3c9ead2551020803e510d77d2807421d2f0b142cee2610"
+      "hash": "bdf051488927e7429d9166c0aa19a017050c661379f11568cd1fe37619a49e2b"
     },
     {
       "uri": "event://telco/verify-committed-meridian-towerQ3",
@@ -898,7 +898,7 @@
       "causation_id": "ev-s2-112",
       "idempotency_key": "idem-s2-113",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s5",
       "detail": "verify 'org://telco/meridian-tower delivered the committed resource on time' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -915,10 +915,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T03:13:38Z"
+          "captured_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "813027fabccde50be06606604070c6a38b03d0e9b2867c909b991aa8ed6e97f3"
+      "hash": "c77c44dae243c5c652a72e5dac7730bc9cde5e2a20413151c1974e6d3ef5cd43"
     },
     {
       "uri": "event://telco/trust-update-meridian-tower",
@@ -928,7 +928,7 @@
       "causation_id": "ev-s2-113",
       "idempotency_key": "idem-s2-114",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "trust for org://telco/meridian-tower [cell-site buildout reliability] 0.600 -> 0.695 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -939,7 +939,7 @@
           "claim": "cell-site buildout reliability",
           "context": "relationship://telco/partner-net",
           "score": 0.695,
-          "updated_at": "2026-09-01T03:13:38Z",
+          "updated_at": "2026-09-01T05:08:35Z",
           "expected": 0.8,
           "outcome": 1.0,
           "evidence": [
@@ -949,7 +949,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "398faeb871aa4ceafaf3785997a80eb6e0b2dd0a45bb600f9cd9ccc504456953"
+      "hash": "8ce98b9e17d1a83de93f4a4339a3c4892d7c66ef09af34d0f4eb36e063214963"
     },
     {
       "uri": "event://telco/s4-exchange-nimbus-networksQ4",
@@ -959,7 +959,7 @@
       "causation_id": "ev-s4-114",
       "idempotency_key": "idem-s4-115",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "settle exchange nimbus-networksQ4: 1600000.0 USD org://telco/nimbuscom->org://telco/nimbus-networks (value 1600000.0, cost 1600000.0)",
       "state_update": [
@@ -1010,7 +1010,7 @@
             "provider": "org://telco/nimbus-networks",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T03:13:38Z"
+          "made_at": "2026-09-01T05:08:35Z"
         },
         {
           "uri": "event://telco/s4-exchange-nimbus-networksQ4",
@@ -1020,7 +1020,7 @@
           "causation_id": "ev-s4-114",
           "idempotency_key": "idem-s4-115",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T03:13:38Z",
+          "occurred_at": "2026-09-01T05:08:35Z",
           "actor": "agent://s4",
           "detail": "settle exchange nimbus-networksQ4: 1600000.0 USD org://telco/nimbuscom->org://telco/nimbus-networks (value 1600000.0, cost 1600000.0)",
           "state_update": [],
@@ -1042,7 +1042,7 @@
       "provider": "org://telco/nimbus-networks",
       "settled_at": "2026-09-17T00:00:00Z",
       "exchange_of": "commitment://telco/c-nimbus-networksQ4",
-      "hash": "0f6e140fa871c4912dd03027dcca75e4c9eb69faa6bf1cb2889064ba31a472bf"
+      "hash": "b7a0b442538213873ed60dbb5676ac9054a29c2cea9e6dd7c1c2080ca542eb3c"
     },
     {
       "uri": "event://telco/s4-outcome-nimbus-networksQ4",
@@ -1052,7 +1052,7 @@
       "causation_id": "ev-s4-115",
       "idempotency_key": "idem-s4-116",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "evaluate settle nimbus-networksQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
       "state_update": [
@@ -1064,7 +1064,7 @@
           "causation_id": "ev-s4-115",
           "idempotency_key": "idem-s4-116",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T03:13:38Z",
+          "occurred_at": "2026-09-01T05:08:35Z",
           "actor": "agent://s4",
           "detail": "evaluate settle nimbus-networksQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
           "state_update": [],
@@ -1082,7 +1082,7 @@
       "deadline": "2026-09-15T00:00:00Z",
       "settled_at": "2026-09-17T00:00:00Z",
       "score": 0.5,
-      "hash": "e125b873cc82a4154bba17e4ae0ff59699a45f910a022458924f63d8f171d463"
+      "hash": "942cc9e478e88282af8f98b2d5d4af3977ef7695283f5eb0369d0fdce7edd8a0"
     },
     {
       "uri": "event://telco/outcome-committed-nimbus-networksQ4",
@@ -1092,7 +1092,7 @@
       "causation_id": "ev-s2-116",
       "idempotency_key": "idem-s2-117",
       "signature": "signed-by-org://telco/nimbus-networks",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "org://telco/nimbus-networks",
       "detail": "job committed-nimbus-networksQ4 by org://telco/nimbus-networks: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
       "state_update": [
@@ -1104,7 +1104,7 @@
           "causation_id": "ev-s2-116",
           "idempotency_key": "idem-s2-117",
           "signature": "signed-by-org://telco/nimbus-networks",
-          "occurred_at": "2026-09-01T03:13:38Z",
+          "occurred_at": "2026-09-01T05:08:35Z",
           "actor": "org://telco/nimbus-networks",
           "detail": "job committed-nimbus-networksQ4 by org://telco/nimbus-networks: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
           "state_update": [],
@@ -1122,7 +1122,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T03:13:38Z"
+          "captured_at": "2026-09-01T05:08:35Z"
         }
       ],
       "job": "committed-nimbus-networksQ4",
@@ -1130,7 +1130,7 @@
       "committed_deadline": "2026-09-15T00:00:00Z",
       "actual_completed_at": "2026-09-17T00:00:00Z",
       "on_time": false,
-      "hash": "ca88353e094b72f5225e0ce2213798de7856ea7e8d016710547a34bce31d8887"
+      "hash": "e55a55c4222fc0d3efa4186e92bc9463d799a486a029d66d5ec475db398e5999"
     },
     {
       "uri": "event://telco/verify-committed-nimbus-networksQ4",
@@ -1140,7 +1140,7 @@
       "causation_id": "ev-s2-117",
       "idempotency_key": "idem-s2-118",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s5",
       "detail": "verify 'org://telco/nimbus-networks delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -1157,10 +1157,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T03:13:38Z"
+          "captured_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "3a5e33b8f660675971984da938669c14135c2d8c1e69063036484314faf63dd5"
+      "hash": "bb6cfbb3e3fc950dee7f34fe7489dabfbaf2696e44db24afca6483622634e19a"
     },
     {
       "uri": "event://telco/trust-update-nimbus-networks",
@@ -1170,7 +1170,7 @@
       "causation_id": "ev-s2-118",
       "idempotency_key": "idem-s2-119",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "trust for org://telco/nimbus-networks [cell-site buildout reliability] 0.520 -> 0.140 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -1181,7 +1181,7 @@
           "claim": "cell-site buildout reliability",
           "context": "relationship://telco/partner-net",
           "score": 0.14,
-          "updated_at": "2026-09-01T03:13:38Z",
+          "updated_at": "2026-09-01T05:08:35Z",
           "expected": 0.8,
           "outcome": 0.0,
           "evidence": [
@@ -1191,7 +1191,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "6a0088a9978559944207df098ae93d5af38679b832115f86c66a4bb1741b2c0b"
+      "hash": "2e826393566fefb4e6ea5f7f76136c135c5f770aa0baac44b0f285e935e6a685"
     },
     {
       "uri": "event://telco/s5-state-7000",
@@ -1201,7 +1201,7 @@
       "causation_id": "ev-s5-6999",
       "idempotency_key": "idem-s5-7000",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "open case case://telco/c-on-time (committed cell-site buildout below target on time)",
       "state_update": [
@@ -1218,18 +1218,18 @@
           "relationships": [
             "relationship://telco/ops-rel"
           ],
-          "created_at": "2026-09-01T03:13:38Z",
+          "created_at": "2026-09-01T05:08:35Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": null
             }
           ],
           "suggestion": "ledger-projected on-time below target"
         }
       ],
-      "hash": "37def48dfd5724cd9314bfcf9a8bcadc0ac7b0113c909d3642a75b665b40f084"
+      "hash": "4f2d3f367ed5746b976bdc613b23482489b8f1fe0ca021a5b012284915306bdd"
     },
     {
       "uri": "event://telco/s5-state-7001",
@@ -1239,7 +1239,7 @@
       "causation_id": "ev-s5-7000",
       "idempotency_key": "idem-s5-7001",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "record exception heartbeat on the case",
       "state_update": [
@@ -1256,11 +1256,11 @@
           "relationships": [
             "relationship://telco/ops-rel"
           ],
-          "created_at": "2026-09-01T03:13:38Z",
+          "created_at": "2026-09-01T05:08:35Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": null
             }
           ],
@@ -1276,7 +1276,7 @@
           "metric": "metric://telco/m-on-time"
         }
       ],
-      "hash": "c01e9edef62b9de30b05f499872252e44c5f79bd03ae21780a14104087e829cf"
+      "hash": "60867d5caf6c3bf0d1a82f12ad0621505189a1f7fc288da52f9fe8ce294bfb9b"
     },
     {
       "uri": "event://telco/s5-state-7002",
@@ -1286,7 +1286,7 @@
       "causation_id": "ev-s5-7001",
       "idempotency_key": "idem-s5-7002",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "case triage: exception assessed, root nominated",
       "state_update": [
@@ -1301,10 +1301,10 @@
           "confidence": 0.85,
           "expected_outcome": "accept as a real risk",
           "actual_outcome": "accepted; root nominated",
-          "made_at": "2026-09-01T03:13:38Z"
+          "made_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "4cb56176a416bb89f780c247b394aee80af9b541f087706ade3ae4a57243a0f9"
+      "hash": "02a1dcd7f21f2b5411cac2b37402b726696ab6024b28a6df0821784fd4091fbe"
     },
     {
       "uri": "event://telco/s5-case-triage",
@@ -1314,7 +1314,7 @@
       "causation_id": "ev-s5-7002",
       "idempotency_key": "idem-s5-7003",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "case triaged",
       "state_update": [
@@ -1331,16 +1331,16 @@
           "relationships": [
             "relationship://telco/ops-rel"
           ],
-          "created_at": "2026-09-01T03:13:38Z",
+          "created_at": "2026-09-01T05:08:35Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-triage"
             }
           ],
@@ -1356,7 +1356,7 @@
           "metric": "metric://telco/m-on-time"
         }
       ],
-      "hash": "f584ad298c3e3981d5bfeb07ddfdde2085f64870a0980f5cbe3e0ca4e91f3c48"
+      "hash": "4606f34a8668ac3ad0055e1b1a17ec27a454cf83584f05006fc35682f04f26e6"
     },
     {
       "uri": "event://telco/s5-state-7004",
@@ -1366,7 +1366,7 @@
       "causation_id": "ev-s5-7003",
       "idempotency_key": "idem-s5-7004",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "case assigned; task becomes assigned authorized work (#8)",
       "state_update": [
@@ -1416,10 +1416,10 @@
             "priority": 0.695,
             "capacity": 1.0
           },
-          "made_at": "2026-09-01T03:13:38Z"
+          "made_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "f99ccf1776db1568b151ddd5dfa5a0688ffddbc703ad6ff5653056cff7c2c06c"
+      "hash": "081c9483a7ac6c94063f21daef31aa2140765d36bc28e8ab067fc76abe22da5f"
     },
     {
       "uri": "event://telco/s5-case-assigned",
@@ -1429,7 +1429,7 @@
       "causation_id": "ev-s5-7004",
       "idempotency_key": "idem-s5-7005",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "case assigned",
       "state_update": [
@@ -1446,21 +1446,21 @@
           "relationships": [
             "relationship://telco/ops-rel"
           ],
-          "created_at": "2026-09-01T03:13:38Z",
+          "created_at": "2026-09-01T05:08:35Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-assigned"
             }
           ],
@@ -1476,7 +1476,7 @@
           "metric": "metric://telco/m-on-time"
         }
       ],
-      "hash": "f2e0b86fac33a3f0c2b62e290ebc13654330c808b7bc6b318b9cb912c29840d7"
+      "hash": "ee4bfd8f9cb4e21ad47f08142e3869758c0208d4180b901334e72385fd2e6521"
     },
     {
       "uri": "event://telco/s5-case-inprogress",
@@ -1486,7 +1486,7 @@
       "causation_id": "ev-s5-7005",
       "idempotency_key": "idem-s5-7006",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "task execution began",
       "state_update": [
@@ -1503,26 +1503,26 @@
           "relationships": [
             "relationship://telco/ops-rel"
           ],
-          "created_at": "2026-09-01T03:13:38Z",
+          "created_at": "2026-09-01T05:08:35Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-inprogress"
             }
           ],
@@ -1538,7 +1538,7 @@
           "metric": "metric://telco/m-on-time"
         }
       ],
-      "hash": "0ed10a338de1b0daaf0531644986b286d1321483b6075cc5fe8b9cdadb040edc"
+      "hash": "fb320f3b9a120f1efde5bfac8f302a111d1fa423e950dd828ea5d7e8dee09ceb"
     },
     {
       "uri": "event://telco/s5-state-7007",
@@ -1548,7 +1548,7 @@
       "causation_id": "ev-s5-7006",
       "idempotency_key": "idem-s5-7007",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "policy updated: allocate by fit AND scoped Trust",
       "state_update": [
@@ -1565,7 +1565,7 @@
           "policy_status": "REVISED"
         }
       ],
-      "hash": "a894fdd4fb64c512d0740a44cffbb03daa6b77334833d1d5aa8b8ff99dfb5957"
+      "hash": "98b3f0aa5dcb347d1a221948f67a09a02ade12fd2061d417b0e02ce1d7e7e728"
     },
     {
       "uri": "event://telco/s5-state-7008",
@@ -1575,7 +1575,7 @@
       "causation_id": "ev-s5-7007",
       "idempotency_key": "idem-s5-7008",
       "signature": "signed-by-agent://telco/s2",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s2",
       "detail": "task effect: next committed work ranked offer://telco/o-g (score 0.695)",
       "state_update": [
@@ -1599,10 +1599,10 @@
               "score": 0.695
             }
           ],
-          "made_at": "2026-09-01T03:13:38Z"
+          "made_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "8aa1e70e2a58fefa4955a201fcc5f48f76cc4f55bf691d5a1d79ef406a18e581"
+      "hash": "1586a07b26edc16f91f898f304470615fca038cd27a7804bf7591394c5ada91c"
     },
     {
       "uri": "event://telco/s5-escalate",
@@ -1612,7 +1612,7 @@
       "causation_id": "ev-s5-7008",
       "idempotency_key": "idem-s5-7009",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "escalation: the committed action is irreversible and cost-unknowable once done (\u00a76 floor)",
       "state_update": [
@@ -1627,7 +1627,7 @@
           "acknowledgement": "approve then execute"
         }
       ],
-      "hash": "084406c9b229153df690fe062a7edf9c7d016de3859a0c18064bb5ccadbc9b82"
+      "hash": "86433e41d0ed83fe3525d66589476f3faf7fbbcc8af6674ee9d2fb4bdec20082"
     },
     {
       "uri": "event://telco/owner-human",
@@ -1637,7 +1637,7 @@
       "causation_id": "ev-telco-7009",
       "idempotency_key": "idem-telco-7010",
       "signature": "signed-by-person://telco/cno",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "person://telco/cno",
       "detail": "person://telco/cno signed approval to release the committed action (\u00a76 floor)",
       "state_update": [
@@ -1660,10 +1660,10 @@
             "irreversible_failure": true,
             "cost_failure_unknowable": true
           },
-          "made_at": "2026-09-01T03:13:38Z"
+          "made_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "57b6f76eedc107a48f834a020ac8c25c2906bb1474f96f15c0447b057abb8076"
+      "hash": "6896e8ad1d59ff7b4a6de53cf558a3b08d20fd2d2ca9e15a109995792fa0d8e3"
     },
     {
       "uri": "event://telco/action-release",
@@ -1673,7 +1673,7 @@
       "causation_id": "ev-telco-7010",
       "idempotency_key": "idem-telco-7011",
       "signature": "signed-by-person://telco/cno",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/build-ops",
       "detail": "rebalance_commitment executed after human approval",
       "worker": "agent://telco/build-ops",
@@ -1682,7 +1682,7 @@
       "tier": "human",
       "outcome": "done",
       "state_update": [],
-      "hash": "7dd2396f93c7a712da25888c35b1830b9827fc2e626d87e32c528b8cc5870153"
+      "hash": "bc96bd5d727f561e7609b4bfc6fed068045dad795e4dcbd0522b8b44328f60ef"
     },
     {
       "uri": "event://telco/s5-case-blocked",
@@ -1692,7 +1692,7 @@
       "causation_id": "ev-s5-7011",
       "idempotency_key": "idem-s5-7012",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "case blocked pending the rallied committed delivery's verification",
       "state_update": [
@@ -1709,31 +1709,31 @@
           "relationships": [
             "relationship://telco/ops-rel"
           ],
-          "created_at": "2026-09-01T03:13:38Z",
+          "created_at": "2026-09-01T05:08:35Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-inprogress"
             },
             {
               "status": "BLOCKED",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-blocked"
             }
           ],
@@ -1749,7 +1749,7 @@
           "metric": "metric://telco/m-on-time"
         }
       ],
-      "hash": "4f953d4436b1ae4b26a34d68e75a3e419fe389bcec43c76fe8acf8dec71040eb"
+      "hash": "fb568260ff0ad3d2205c57c4eade24420c587ffbe7d6869c62a3886c27710d32"
     },
     {
       "uri": "event://telco/s5-state-7013",
@@ -1759,7 +1759,7 @@
       "causation_id": "ev-s5-7012",
       "idempotency_key": "idem-s5-7013",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "rallied committed work allocated to org://telco/meridian-tower (the fix)",
       "state_update": [
@@ -1774,10 +1774,10 @@
             "kind": "cell-site buildout follow-up",
             "signed": true
           },
-          "agreed_at": "2026-09-01T03:13:38Z"
+          "agreed_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "be817fae5f56e7ef314ed298af56b016fb3be96af35501cda65436dfb1e88757"
+      "hash": "31e7ebef29535af43a6b1c16088ed20f807f1e660522c61ce35527b248853184"
     },
     {
       "uri": "event://telco/s5-state-7014",
@@ -1787,7 +1787,7 @@
       "causation_id": "ev-s5-7013",
       "idempotency_key": "idem-s5-7014",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "register follow-on expectation",
       "state_update": [
@@ -1802,7 +1802,7 @@
           "evidence_required": "CLEAR"
         }
       ],
-      "hash": "1c52a5156f4fd41d7c14d8504035d0d6e9fc2b9be742e655f84b55e0dfcd70ac"
+      "hash": "30e2ec2d2534b614059f7fbb93fe771f8e3f91e2d169963ebcb5a82de1b2cef7"
     },
     {
       "uri": "event://telco/s4-exchange-meridian-towerR",
@@ -1812,7 +1812,7 @@
       "causation_id": "ev-s4-7014",
       "idempotency_key": "idem-s4-7015",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "settle exchange meridian-towerR: 2000000.0 USD org://telco/nimbuscom->org://telco/meridian-tower (value 2000000.0, cost 2000000.0)",
       "state_update": [
@@ -1863,7 +1863,7 @@
             "provider": "org://telco/meridian-tower",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T03:13:38Z"
+          "made_at": "2026-09-01T05:08:35Z"
         },
         {
           "uri": "event://telco/s4-exchange-meridian-towerR",
@@ -1873,7 +1873,7 @@
           "causation_id": "ev-s4-7014",
           "idempotency_key": "idem-s4-7015",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T03:13:38Z",
+          "occurred_at": "2026-09-01T05:08:35Z",
           "actor": "agent://s4",
           "detail": "settle exchange meridian-towerR: 2000000.0 USD org://telco/nimbuscom->org://telco/meridian-tower (value 2000000.0, cost 2000000.0)",
           "state_update": [],
@@ -1895,7 +1895,7 @@
       "provider": "org://telco/meridian-tower",
       "settled_at": "2026-11-12T00:00:00Z",
       "exchange_of": "commitment://telco/c-meridian-towerR",
-      "hash": "77056a2f1f1892ebb63e186fe70ab09e6b492530a91ba94fd7c37644c4c85b4e"
+      "hash": "2d7c3fddc8a26b2fb50a935f962e01492b5887edb145c365cb948b19fe2b74f5"
     },
     {
       "uri": "event://telco/s4-outcome-meridian-towerR",
@@ -1905,7 +1905,7 @@
       "causation_id": "ev-s4-7015",
       "idempotency_key": "idem-s4-7016",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s4",
       "detail": "evaluate settle meridian-towerR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
       "state_update": [
@@ -1917,7 +1917,7 @@
           "causation_id": "ev-s4-7015",
           "idempotency_key": "idem-s4-7016",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T03:13:38Z",
+          "occurred_at": "2026-09-01T05:08:35Z",
           "actor": "agent://s4",
           "detail": "evaluate settle meridian-towerR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
           "state_update": [],
@@ -1935,7 +1935,7 @@
       "deadline": "2026-11-15T00:00:00Z",
       "settled_at": "2026-11-12T00:00:00Z",
       "score": 1.0,
-      "hash": "3a33c6e71a5521a98008657b474f6bb8b469ef2a80895c29c83ad5e3b313e7aa"
+      "hash": "170251825de1a07093006f60c02bea343e255e2f4459a3746a4d3942b31f2cd4"
     },
     {
       "uri": "event://telco/outcome-routed-meridian-towerR",
@@ -1945,7 +1945,7 @@
       "causation_id": "ev-s2-7016",
       "idempotency_key": "idem-s2-7017",
       "signature": "signed-by-org://telco/meridian-tower",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "org://telco/meridian-tower",
       "detail": "job routed-meridian-towerR by org://telco/meridian-tower: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
       "state_update": [
@@ -1957,7 +1957,7 @@
           "causation_id": "ev-s2-7016",
           "idempotency_key": "idem-s2-7017",
           "signature": "signed-by-org://telco/meridian-tower",
-          "occurred_at": "2026-09-01T03:13:38Z",
+          "occurred_at": "2026-09-01T05:08:35Z",
           "actor": "org://telco/meridian-tower",
           "detail": "job routed-meridian-towerR by org://telco/meridian-tower: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
           "state_update": [],
@@ -1975,7 +1975,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T03:13:38Z"
+          "captured_at": "2026-09-01T05:08:35Z"
         }
       ],
       "job": "routed-meridian-towerR",
@@ -1983,7 +1983,7 @@
       "committed_deadline": "2026-11-15T00:00:00Z",
       "actual_completed_at": "2026-11-12T00:00:00Z",
       "on_time": true,
-      "hash": "b7c23ce5ece681c023dcaed4dee0711adc15234f0ae780e656d8505890e80365"
+      "hash": "dee075358e244102e273ee552ba2e6b3f4ff06786dca1520dde24d29b8fd0490"
     },
     {
       "uri": "event://telco/verify-routed-meridian-towerR",
@@ -1993,7 +1993,7 @@
       "causation_id": "ev-s2-7017",
       "idempotency_key": "idem-s2-7018",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://s5",
       "detail": "verify 'org://telco/meridian-tower delivered the rallied committed cell-site buildout on time' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -2010,10 +2010,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T03:13:38Z"
+          "captured_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "deb444ba2f5359b150fee579d04233160bcfcd3dda2499add0769a04900531d4"
+      "hash": "090fc07219208719c592888bdfabbb98c42aedc61f644818c05d2e7e8cc94a0a"
     },
     {
       "uri": "event://telco/trust-update-meridian-tower",
@@ -2023,7 +2023,7 @@
       "causation_id": "ev-s2-7018",
       "idempotency_key": "idem-s2-7019",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "trust for org://telco/meridian-tower [cell-site buildout reliability] 0.695 -> 0.790 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -2034,7 +2034,7 @@
           "claim": "cell-site buildout reliability",
           "context": "relationship://telco/partner-net",
           "score": 0.79,
-          "updated_at": "2026-09-01T03:13:38Z",
+          "updated_at": "2026-09-01T05:08:35Z",
           "expected": 0.8,
           "outcome": 1.0,
           "evidence": [
@@ -2044,7 +2044,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "b98182c09852bbfee4c63eb5e28900996c02ea5696fc9e75e1b7aa80b8c077fd"
+      "hash": "72566901a7dc52327462c6c2fe910e8050d1e4cb6b4885f9bdb586e6a6776372"
     },
     {
       "uri": "event://telco/s5-case-resolved",
@@ -2054,7 +2054,7 @@
       "causation_id": "ev-s5-7019",
       "idempotency_key": "idem-s5-7020",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "exception resolved: rallied committed work verified on time; forward on-time = 1.0; cumulative 2/4",
       "state_update": [
@@ -2071,36 +2071,36 @@
           "relationships": [
             "relationship://telco/ops-rel"
           ],
-          "created_at": "2026-09-01T03:13:38Z",
+          "created_at": "2026-09-01T05:08:35Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-inprogress"
             },
             {
               "status": "BLOCKED",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-blocked"
             },
             {
               "status": "RESOLVED",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-resolved"
             }
           ],
@@ -2117,7 +2117,7 @@
           "verified_outcome": "forward on-time restored to 1.0; org://telco/meridian-tower delivered the rallied cell-site buildout on time (evidence://telco/routed-meridian-towerR); org://telco/meridian-tower Trust 0.79"
         }
       ],
-      "hash": "9082777ad8b1b5de8fa61bc7ff07aa8d113c95999b84322000ed0228569fdbcc"
+      "hash": "65d7b7d9a13c809a592ade3eabd5de7b74bc9bdb6a27fc302ddc2392da2a796f"
     },
     {
       "uri": "event://telco/s5-state-7021",
@@ -2127,7 +2127,7 @@
       "causation_id": "ev-s5-7020",
       "idempotency_key": "idem-s5-7021",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "learning entry decision://telco/learning: Routing buildout via a contractor with verified on-time delivery (meridian-tower), while gating the laggard (nimbus-networks), restored on-time buildout. Verified good handovers compound scoped Trust.",
       "state_update": [
@@ -2141,10 +2141,10 @@
           "variance": 0.05,
           "why": "Routing buildout via a contractor with verified on-time delivery (meridian-tower), while gating the laggard (nimbus-networks), restored on-time buildout. Verified good handovers compound scoped Trust.",
           "change_future_policy": "ALLOCATE by fit AND scoped Trust; contractors below the Trust floor need a gate before new buildouts.",
-          "made_at": "2026-09-01T03:13:38Z"
+          "made_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "66af5fad68f40e38786102625564b844c3d51efeb1ffdc9475f223029775ed2b"
+      "hash": "f2827c7a9fc606d122742c9049b586b0d45b01d403c2679469540fb831759c3e"
     },
     {
       "uri": "event://telco/s5-state-7022",
@@ -2154,7 +2154,7 @@
       "causation_id": "ev-s5-7021",
       "idempotency_key": "idem-s5-7022",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "close case; learning recorded; future policy updated",
       "state_update": [
@@ -2172,7 +2172,7 @@
           "learning": "decision://telco/learning"
         }
       ],
-      "hash": "9190a4bd411e707ec1825c70cfa29b57d341ad3f30085880277e86a1072f281b"
+      "hash": "399c4ab1668db4b752dbfc9b484a4e64af93217e44fca4362be7e63ca6158050"
     },
     {
       "uri": "event://telco/s5-case-closed",
@@ -2182,7 +2182,7 @@
       "causation_id": "ev-s5-7021",
       "idempotency_key": "idem-s5-7022",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "case closed",
       "state_update": [
@@ -2199,41 +2199,41 @@
           "relationships": [
             "relationship://telco/ops-rel"
           ],
-          "created_at": "2026-09-01T03:13:38Z",
+          "created_at": "2026-09-01T05:08:35Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-inprogress"
             },
             {
               "status": "BLOCKED",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-blocked"
             },
             {
               "status": "RESOLVED",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-resolved"
             },
             {
               "status": "CLOSED",
-              "at": "2026-09-01T03:13:38Z",
+              "at": "2026-09-01T05:08:35Z",
               "event": "event://telco/s5-case-closed"
             }
           ],
@@ -2250,7 +2250,7 @@
           "verified_outcome": "forward on-time restored to 1.0; org://telco/meridian-tower delivered the rallied cell-site buildout on time (evidence://telco/routed-meridian-towerR); org://telco/meridian-tower Trust 0.79"
         }
       ],
-      "hash": "91d6eb3d28e355058ce9851f5d4d6921bc06954bdb3095194dc21a505c2c9f0d"
+      "hash": "0ed8d9e135fa1138e03023c5ac83ac3e9ab243aeac3fa351ffc7266689a7f946"
     },
     {
       "uri": "event://telco/s5-state-7023",
@@ -2260,7 +2260,7 @@
       "causation_id": "ev-s5-7022",
       "idempotency_key": "idem-s5-7023",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "register goal + ledger-projected metrics",
       "state_update": [
@@ -2335,7 +2335,7 @@
           "root_cause_status": "UNKNOWN"
         }
       ],
-      "hash": "1531d2c66ad57c7da2190da9ce03debe76bcb7b878ed3ebe230f145ace82d830"
+      "hash": "7341716a5057802f5109dff62121ee1a58d756ffd19bbc4bf3858ce479ac9e3b"
     },
     {
       "uri": "event://telco/s5-state-7024",
@@ -2345,7 +2345,7 @@
       "causation_id": "ev-s5-7023",
       "idempotency_key": "idem-s5-7024",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "goal->metric->variance->decision->action->outcome",
       "state_update": [
@@ -2367,10 +2367,10 @@
             "action": "task://telco/t-rebalance",
             "outcome": "event://telco/outcome-routed-meridian-towerR"
           },
-          "made_at": "2026-09-01T03:13:38Z"
+          "made_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "2c1c4cbcaf207987e3431a81081806334a889ee176e99a0d4200e21ae24986c7"
+      "hash": "3eb5fe24266d07aa2ac92db98321b252bcd01f03daaafc45b279fd87daa02fc3"
     },
     {
       "uri": "event://telco/s5-state-7025",
@@ -2380,7 +2380,7 @@
       "causation_id": "ev-s5-7024",
       "idempotency_key": "idem-s5-7025",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "priority-ordered attention list",
       "state_update": [
@@ -2405,10 +2405,10 @@
               }
             ]
           },
-          "made_at": "2026-09-01T03:13:38Z"
+          "made_at": "2026-09-01T05:08:35Z"
         }
       ],
-      "hash": "fbda784e76f7c9de7a44cffe23f6cd76a411042f9e859ce3fc52c0f426d5f8cb"
+      "hash": "ed49a964dcd79302c2e873608f5b3a5f0cfe1c863075a4f10d732c9c4a784b36"
     },
     {
       "uri": "event://telco/s5-state-7026",
@@ -2418,7 +2418,7 @@
       "causation_id": "ev-s5-7025",
       "idempotency_key": "idem-s5-7026",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "dependency dependency://telco/d-rb-enables-fu: task://telco/t-rebalance ENABLES task://telco/t-followup",
       "state_update": [
@@ -2429,7 +2429,7 @@
           "kind": "ENABLES"
         }
       ],
-      "hash": "80ecdda603664cdcd2ca4f1bd8f58beeac8da7f2014e9b87b1404f20ee22bf74"
+      "hash": "43ba4cda0ecdf88e805abe030768d6b728d3e0385884cedae4e94d7009f674d5"
     },
     {
       "uri": "event://telco/s5-state-7027",
@@ -2439,7 +2439,7 @@
       "causation_id": "ev-s5-7026",
       "idempotency_key": "idem-s5-7027",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "dependency dependency://telco/d-fu-requires-pol: task://telco/t-followup REQUIRES policy://telco/allocation",
       "state_update": [
@@ -2450,7 +2450,7 @@
           "kind": "REQUIRES"
         }
       ],
-      "hash": "98da4066e6cf9f29d83282bd186cffc5d4fe50ac01a8aa12d18cbc39b003d45a"
+      "hash": "21d610b7c4b6f7ab220dd2cb1fba76e79a16409e7a8bbe7cdd2b4b2aabac30e9"
     },
     {
       "uri": "event://telco/s5-state-7028",
@@ -2460,7 +2460,7 @@
       "causation_id": "ev-s5-7027",
       "idempotency_key": "idem-s5-7028",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "dependency dependency://telco/d-fu-blocks-case: task://telco/t-followup BLOCKS case://telco/c-on-time",
       "state_update": [
@@ -2471,7 +2471,7 @@
           "kind": "BLOCKS"
         }
       ],
-      "hash": "e72e4a6f3f866950a4cf66bc563797df4a19549cf973188abf2c07bfa956cdbc"
+      "hash": "5ca18ae41845b4c5c175e0167ae805ba67f63ea234a021e0340c1d7f98b56a19"
     },
     {
       "uri": "event://telco/s5-state-7029",
@@ -2481,7 +2481,7 @@
       "causation_id": "ev-s5-7028",
       "idempotency_key": "idem-s5-7029",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "dependency dependency://telco/d-case-from-metric: case://telco/c-on-time DERIVED_FROM metric://telco/m-on-time",
       "state_update": [
@@ -2492,7 +2492,7 @@
           "kind": "DERIVED_FROM"
         }
       ],
-      "hash": "085b39405f6472b6e1092913e4a80713df75ed9595993a50f803666c17e017d4"
+      "hash": "cd51aac12d797b19ba9fb46d0fb69279d7bd579fdc84c7c8e1a9158c3111bdc1"
     },
     {
       "uri": "event://telco/s5-state-7030",
@@ -2502,7 +2502,7 @@
       "causation_id": "ev-s5-7029",
       "idempotency_key": "idem-s5-7030",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "dependency dependency://telco/d-metric-impacts-goal: metric://telco/m-on-time IMPACTS goal://telco/g-core",
       "state_update": [
@@ -2513,7 +2513,7 @@
           "kind": "IMPACTS"
         }
       ],
-      "hash": "dae6d53605cf693803c5aec56df55d58abf74f01a295b6c1bd422422cdab9d84"
+      "hash": "e1f50229ca4fe2e5f7aeb1dba99f68c2b54068ea2a6d04ef3a5f3d4fbeb3c34d"
     },
     {
       "uri": "event://telco/s5-state-7031",
@@ -2523,7 +2523,7 @@
       "causation_id": "ev-s5-7030",
       "idempotency_key": "idem-s5-7031",
       "signature": "signed-by-agent://telco/s5",
-      "occurred_at": "2026-09-01T03:13:38Z",
+      "occurred_at": "2026-09-01T05:08:35Z",
       "actor": "agent://telco/s5",
       "detail": "dependency dependency://telco/d-rb-blocks-case: task://telco/t-rebalance BLOCKS case://telco/c-on-time",
       "state_update": [
@@ -2534,7 +2534,7 @@
           "kind": "BLOCKS"
         }
       ],
-      "hash": "a4a49681db2490fd40683adb8098a4f12922fad2faf97b1725866c7516e19270"
+      "hash": "f7343572b9b5076bca1b606c1c0eadf6e378ccc2b9d9129ad7c29e0a72f20c25"
     }
   ]
 }

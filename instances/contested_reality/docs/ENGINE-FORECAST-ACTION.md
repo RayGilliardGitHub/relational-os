@@ -158,3 +158,47 @@ no-data case.
 *(Evidence: all assertions are real exit-0 output from `run_forecast_action_demo.py` + the Sprint-0
 conformance over the new orgs' fixtures + the full non-regression + conformance suite; SPEC v0.22,
 49 `$defs`, `ros/` + schema untouched, no new noun.)*
+
+---
+
+### Sprint 22 addendum — the crossing test now honors a recorded `direction`
+
+Sprint 21's crossing test was hardcoded to the **higher-is-better / rate** case (`min(projection) <
+threshold`). **Sprint 22** (`docs/ENGINE-FORECAST-DIRECTION.md`) makes the crossing **direction a
+recorded, additive `direction` field** on the `metric://` object (default `"higher-is-better"`,
+byte-identical to this sprint; explicit `"lower-is-better"` for a cost/latency/defect/risk metric),
+so the SAME closure flags forecast-driven Q3 attention + prices the Q8/trade-off do-nothing baseline
+for **both** orientations: higher-is-better `min < threshold` (falling below target) and lower-is-better
+`max > threshold` (rising above ceiling). The threshold resolution is unchanged
+(`forecast_threshold` → `target` → last `actual`); the do-nothing summary is worded per direction
+("below recorded … by" vs "above recorded … by"). No §6 overrule; no new noun; 49 `$defs`; SPEC v0.22.
+Proof: `run_forecast_direction_demo.py` (exit 0 = ALL PASS) drives the two Sprint-21 higher-is-better
+orgs (asserted byte-identical), the new rising-cost `deli-cost` + below-ceiling `deli-cost-flat`
+(lower-is-better), and the no-data `deli`.
+---
+
+## Update after Sprint 23 — the do-nothing expected-impact is now priced as a recorded-variance band
+
+Sprint 23 extends this action closure additively: when the recorded `metric://` series last point
+carries a numeric `variance`, the do-nothing expected-impact is priced as a projected BAND
+(worst ± the recorded variance, low … high) on the closure, `q8["forecast"]`, and
+`do_nothing_expected_impact`, and the do-nothing summary + Q3 attention why name the band. A
+recorded-data spread, NOT a confidence interval; a no-variance series or no-data org keeps the
+unchanged single-point/fallback output byte-identical. See ENGINE-FORECAST-VARIANCE.md (Sprint 23).
+
+## Update after Sprint 26 — the Q3 attention `why` now names the recorded horizon-wide range
+
+Sprint 26 extends the Q3 side of this closure additively: when a recorded-variance band exists AND
+the forecast-driven attention item was created, the attention `why` **appends the same record-wide
+`band_horizon` range that Q6/Q8/do-nothing already carry** (e.g. ` — horizon-wide recorded band
+0.71…0.93 across 3 projection periods (band_periods/band_horizon, same recorded σ)`). The suffix is
+shared via the `_HORIZON_BAND_PHRASE` constant that the do-nothing summary also uses, so the human's
+FIRST attention line (Q3) and the Q8/do-nothing pricing name the record-wide worst case **verbatim by
+construction**. It is appended AFTER the Sprint-23/24 single-worst band phrase (+ any Sprint-24
+`band_variance` source phrase), so the old `why` stays a STRICT PREFIX (the same prefix-preservation
+rule the do-nothing summary already used). A no-band / no-variance / no-data org gets NO suffix
+(unchanged, byte-identical). Still recorded-data only: every bound is a projected value ± the recorded
+σ; no new model, no probabilistic forecast. See ENGINE-FORECAST-VARIANCE.md (Sprint 23/24) and
+ENGINE-FORECAST-CAPACITY.md (Sprint 25/26) for the band source + Q9 capacity-planning addenda.
+Proof: `run_forecast_horizon2_demo.py` (exit 0 = ALL PASS) — among other assertions, `deli-forecast`'s
+Q3 `why` equals the exact pre-Sprint-26 string + the shared suffix (strict-prefix byte-identity).

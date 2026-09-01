@@ -1,0 +1,89 @@
+[
+  {
+    "uri": "org://deli/customer",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://deli/company",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://deli/supplier",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://deli/registrar",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://deli/adjudicator",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://deli/appeal",
+    "type": "PERSON"
+  },
+  {
+    "uri": "system://deli/verify",
+    "type": "SYSTEM"
+  },
+  {
+    "uri": "obligation://deli-all-infeasible/deliver-due",
+    "subject": "org://deli-all-infeasible/company",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "deliver the contracted service by the deadline",
+    "due_by": "2026-08-31T16:00:00-06:00"
+  },
+  {
+    "uri": "obligation://deli-all-infeasible/pay-due",
+    "subject": "org://deli-all-infeasible/customer",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "pay the $18,000 invoice on confirmed delivery",
+    "due_by": "2026-09-30T00:00:00-06:00"
+  },
+  {
+    "uri": "authority://deli-all-infeasible/adjudicate",
+    "holder": "person://deli-all-infeasible/adjudicator",
+    "grants": [
+      "adjudicate"
+    ],
+    "roles": [
+      "adjudicator"
+    ],
+    "capacity": {
+      "value": 500.0,
+      "unit": "units/day",
+      "load": 1.0,
+      "status": "recorded"
+    },
+    "capacity_requirements": {
+      "accept-customer-refund": 500.0,
+      "accept-company-full-payment": 500.0,
+      "partial-settlement": 500.0,
+      "conditional-resolution": 500.0,
+      "request-more-evidence": 500.0,
+      "escalate": 500.0,
+      "external-adjudication": 500.0
+    }
+  },
+  {
+    "uri": "authority://deli-all-infeasible/adjudicate-appeal",
+    "holder": "person://deli-all-infeasible/appeal",
+    "grants": [
+      "adjudicate_appeal"
+    ],
+    "roles": [
+      "appeal-adjudicator"
+    ]
+  },
+  {
+    "uri": "right://deli-all-infeasible/cust-appeal",
+    "holder": "org://deli-all-infeasible/customer",
+    "type": "APPEAL",
+    "subject": "DUPLICATE",
+    "scope": [
+      "obligation://deli-all-infeasible/deliver-due"
+    ],
+    "purpose": "right to appeal the determination"
+  }
+]

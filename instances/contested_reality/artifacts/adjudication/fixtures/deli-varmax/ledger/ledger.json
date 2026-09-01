@@ -1,0 +1,1027 @@
+{
+  "uri": "db://ledger/adjudication-deli-varmax-2026",
+  "head_hash": "fd45893c8a7ce86b1072795cb45dfbaaf0f8f97de9af61c851555f6cbf26537c",
+  "entries": [
+    {
+      "uri": "event://deli-varmax/seed-trust",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-deli-varmax-seed-trust",
+      "correlation_id": "corr-adj-deli-varmax-seed-trust",
+      "causation_id": "ev-adj-deli-varmax-seed-trust-prev",
+      "idempotency_key": "idem-adj-deli-varmax-seed-trust",
+      "signature": "signed-by-person://deli-varmax/registrar",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/registrar",
+      "detail": "seed scoped trust before the episode",
+      "state_update": [
+        {
+          "uri": "trust://deli-varmax/claimant",
+          "subject": "person://deli-varmax/registrar",
+          "target": "org://deli-varmax/customer",
+          "claim": "honest dispute participant",
+          "score": 0.8,
+          "context": "relationship://deli-varmax/x",
+          "evidence": []
+        }
+      ],
+      "hash": "44c61c2be33db89ddbad0de718e1c5a682aab89a75d7dc6feaeae7a654d99d4c"
+    },
+    {
+      "uri": "event://deli-varmax/provision",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-provision-100",
+      "correlation_id": "corr-adj-provision",
+      "causation_id": "ev-adj-prev-100",
+      "idempotency_key": "idem-adj-provision-100",
+      "signature": "signed-by-person://deli-varmax/registrar",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/registrar",
+      "detail": "provision actors, relationships, obligations, adjudicator+appeal authority, appeal right",
+      "state_update": [
+        {
+          "uri": "org://deli/customer",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://deli/company",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://deli/supplier",
+          "type": "ORG"
+        },
+        {
+          "uri": "person://deli/registrar",
+          "type": "PERSON"
+        },
+        {
+          "uri": "person://deli/adjudicator",
+          "type": "PERSON"
+        },
+        {
+          "uri": "person://deli/appeal",
+          "type": "PERSON"
+        },
+        {
+          "uri": "system://deli/verify",
+          "type": "SYSTEM"
+        },
+        {
+          "uri": "relationship://deli-varmax/customer-contract",
+          "status": "ACTIVE",
+          "participants": [
+            "org://deli-varmax/customer",
+            "org://deli-varmax/company"
+          ],
+          "roles": {
+            "org://deli/customer": [
+              "buyer"
+            ],
+            "org://deli/company": [
+              "provider"
+            ]
+          },
+          "purpose": "contracted service delivery with a deadline"
+        },
+        {
+          "uri": "relationship://deli-varmax/supplier-contract",
+          "status": "ACTIVE",
+          "participants": [
+            "org://deli-varmax/supplier",
+            "org://deli-varmax/company"
+          ],
+          "roles": {
+            "org://deli/supplier": [
+              "shipper"
+            ],
+            "org://deli/company": [
+              "customer"
+            ]
+          },
+          "purpose": "supplier shipping for the delivery"
+        },
+        {
+          "uri": "obligation://deli-varmax/deliver-due",
+          "subject": "org://deli-varmax/company",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "deliver the contracted service by the deadline",
+          "due_by": "2026-08-31T16:00:00-06:00"
+        },
+        {
+          "uri": "obligation://deli-varmax/pay-due",
+          "subject": "org://deli-varmax/customer",
+          "source": "VOLUNTARILY_UNDERTAKEN",
+          "content": "pay the $18,000 invoice on confirmed delivery",
+          "due_by": "2026-09-30T00:00:00-06:00"
+        },
+        {
+          "uri": "authority://deli-varmax/adjudicate",
+          "holder": "person://deli-varmax/adjudicator",
+          "grants": [
+            "adjudicate"
+          ],
+          "roles": [
+            "adjudicator"
+          ]
+        },
+        {
+          "uri": "authority://deli-varmax/adjudicate-appeal",
+          "holder": "person://deli-varmax/appeal",
+          "grants": [
+            "adjudicate_appeal"
+          ],
+          "roles": [
+            "appeal-adjudicator"
+          ]
+        },
+        {
+          "uri": "right://deli-varmax/cust-appeal",
+          "holder": "org://deli-varmax/customer",
+          "type": "APPEAL",
+          "subject": "DUPLICATE",
+          "scope": [
+            "obligation://deli-varmax/deliver-due"
+          ],
+          "purpose": "right to appeal the determination"
+        }
+      ],
+      "hash": "621d4954bf8cf1d706c238cfbd866d41523fcd15e0db96c2be67db78803a6e0f"
+    },
+    {
+      "uri": "event://deli-varmax/claims",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-claims-101",
+      "correlation_id": "corr-adj-claims",
+      "causation_id": "ev-adj-prev-101",
+      "idempotency_key": "idem-adj-claims-101",
+      "signature": "signed-by-person://deli-varmax/registrar",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/registrar",
+      "detail": "record 3 conflicting claims",
+      "state_update": [
+        {
+          "uri": "claim://deli-varmax/late",
+          "proposer": "org://deli-varmax/customer",
+          "statement": "the contracted service was NOT delivered on time; signed receipt 16:15 past the 16:00 deadline \u2014 we should not pay for the late delivery.",
+          "evidence": [
+            "evidence://deli-varmax/arrival-receipt",
+            "evidence://deli-varmax/gps-arrival"
+          ],
+          "epistemic_status": "claimed"
+        },
+        {
+          "uri": "claim://deli-varmax/delivered",
+          "proposer": "org://deli-varmax/company",
+          "statement": "the contracted service WAS delivered and is payable; an independent anchored verification confirms delivery liveness.",
+          "evidence": [
+            "evidence://deli-varmax/third-party-verification"
+          ],
+          "epistemic_status": "claimed"
+        },
+        {
+          "uri": "claim://deli-varmax/shipped",
+          "proposer": "org://deli-varmax/supplier",
+          "statement": "we shipped the consignment on time.",
+          "evidence": [
+            "evidence://deli-varmax/supplier-shipping"
+          ],
+          "epistemic_status": "claimed"
+        }
+      ],
+      "hash": "ba32dcca09bf2d5ec7a9d2b194cf61ee5c2df3ee4f608d03134f6a1e68fedc87"
+    },
+    {
+      "uri": "event://deli-varmax/evidence",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-evidence-102",
+      "correlation_id": "corr-adj-evidence",
+      "causation_id": "ev-adj-prev-102",
+      "idempotency_key": "idem-adj-evidence-102",
+      "signature": "signed-by-person://deli-varmax/registrar",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/registrar",
+      "detail": "record conflicting evidence with provenance + reliability",
+      "state_update": [
+        {
+          "uri": "evidence://deli-varmax/gps-arrival",
+          "kind": "ANCHORED",
+          "source": "fleet-GPS-livestate",
+          "captured_at": "2026-08-31T16:12:00-06:00",
+          "verity": {
+            "procedure": "gps-timestamp",
+            "confidence": 0.85
+          },
+          "reliability": 0.85,
+          "about": "arrival gate event",
+          "supports": "claim://deli-varmax/late"
+        },
+        {
+          "uri": "evidence://deli-varmax/arrival-receipt",
+          "kind": "TESTIMONY",
+          "source": "customer-signed-receipt",
+          "captured_at": "2026-08-31T16:15:00-06:00",
+          "verity": {
+            "procedure": "signed-receipt",
+            "confidence": 0.9
+          },
+          "reliability": 0.9,
+          "about": "delivery receipt",
+          "supports": "claim://deli-varmax/late"
+        },
+        {
+          "uri": "evidence://deli-varmax/third-party-verification",
+          "kind": "ANCHORED",
+          "source": "independent-audit-service",
+          "captured_at": "2026-08-31T17:05:00-06:00",
+          "verity": {
+            "procedure": "anchored-liveness",
+            "confidence": 0.97
+          },
+          "reliability": 0.97,
+          "about": "delivery liveness verification",
+          "supports": "claim://deli-varmax/delivered"
+        },
+        {
+          "uri": "evidence://deli-varmax/supplier-shipping",
+          "kind": "RECORD",
+          "source": "supplier-shipping-system",
+          "captured_at": "2026-08-31T15:58:00-06:00",
+          "verity": {
+            "procedure": "shipping-log",
+            "confidence": 0.92
+          },
+          "reliability": 0.92,
+          "about": "ship-out time",
+          "supports": "claim://deli-varmax/shipped"
+        }
+      ],
+      "hash": "1bb666d640b37e8d5fc72ff6439717888008c4cfe748e349bba4873d4f6c1acf"
+    },
+    {
+      "uri": "event://deli-varmax/claim-advance",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-claim-advance-103",
+      "correlation_id": "corr-adj-claim-advance",
+      "causation_id": "ev-adj-prev-103",
+      "idempotency_key": "idem-adj-claim-advance-103",
+      "signature": "signed-by-person://deli-varmax/registrar",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/registrar",
+      "detail": "evidence attaches -> claim disputed",
+      "state_update": [
+        {
+          "uri": "claim://deli-varmax/late",
+          "proposer": "org://deli-varmax/customer",
+          "statement": "the contracted service was NOT delivered on time; signed receipt 16:15 past the 16:00 deadline \u2014 we should not pay for the late delivery.",
+          "evidence": [
+            "evidence://deli-varmax/arrival-receipt",
+            "evidence://deli-varmax/gps-arrival"
+          ],
+          "epistemic_status": "disputed"
+        }
+      ],
+      "hash": "ee7e0b30f74e07313a7bf030ed931bc5be337b1ca51dc9e9b36d1a67a962b8bd"
+    },
+    {
+      "uri": "event://deli-varmax/claim-advance",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-claim-advance-104",
+      "correlation_id": "corr-adj-claim-advance",
+      "causation_id": "ev-adj-prev-104",
+      "idempotency_key": "idem-adj-claim-advance-104",
+      "signature": "signed-by-person://deli-varmax/registrar",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/registrar",
+      "detail": "evidence attaches -> claim disputed",
+      "state_update": [
+        {
+          "uri": "claim://deli-varmax/delivered",
+          "proposer": "org://deli-varmax/company",
+          "statement": "the contracted service WAS delivered and is payable; an independent anchored verification confirms delivery liveness.",
+          "evidence": [
+            "evidence://deli-varmax/third-party-verification"
+          ],
+          "epistemic_status": "disputed"
+        }
+      ],
+      "hash": "3fa364c8f7cb32d5be2d3e4234c25b7cb9fb49913cf2d42c226199609583cdb4"
+    },
+    {
+      "uri": "event://deli-varmax/claim-advance",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-claim-advance-105",
+      "correlation_id": "corr-adj-claim-advance",
+      "causation_id": "ev-adj-prev-105",
+      "idempotency_key": "idem-adj-claim-advance-105",
+      "signature": "signed-by-person://deli-varmax/registrar",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/registrar",
+      "detail": "evidence attaches -> claim disputed",
+      "state_update": [
+        {
+          "uri": "claim://deli-varmax/shipped",
+          "proposer": "org://deli-varmax/supplier",
+          "statement": "we shipped the consignment on time.",
+          "evidence": [
+            "evidence://deli-varmax/supplier-shipping"
+          ],
+          "epistemic_status": "disputed"
+        }
+      ],
+      "hash": "c2d5ab17ab55ab5503528f36ab29cccaa0bf81071f4d893e5750407e3afa4a9d"
+    },
+    {
+      "uri": "event://deli-varmax/open-dispute",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-open-dispute-106",
+      "correlation_id": "corr-adj-open-dispute",
+      "causation_id": "ev-adj-prev-106",
+      "idempotency_key": "idem-adj-open-dispute-106",
+      "signature": "signed-by-person://deli-varmax/registrar",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/registrar",
+      "detail": "dispute OPEN with parties/about + additive lifecycle/epistemic + resolutions",
+      "state_update": [
+        {
+          "uri": "dispute://deli-varmax/delivery",
+          "about": "obligation://deli-varmax/deliver-due",
+          "parties": [
+            "org://deli-varmax/customer",
+            "org://deli-varmax/company",
+            "org://deli-varmax/supplier"
+          ],
+          "status": "OPEN",
+          "fin_impact_usd": 18000,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service",
+            "company": "collect valid invoice; protect reputation",
+            "supplier": "established on-time shipment, not blamed"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a full refund/admission is irreversible/unknown-cost -> \u00a76 human floor"
+          },
+          "lifecycle_state": "OPEN",
+          "epistemic_state": "UNDETERMINED",
+          "determination": null,
+          "resolution_type": null,
+          "reopened": false,
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://deli-varmax/late": 0.9,
+              "claim://deli-varmax/delivered": 0.97,
+              "claim://deli-varmax/shipped": 0.92
+            }
+          }
+        }
+      ],
+      "hash": "dc1f89e71e177210561587a184f29648306a8a266e0ab514ccc59e8f24432ca0"
+    },
+    {
+      "uri": "event://deli-varmax/lifecycle-advance",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-lifecycle-advance-107",
+      "correlation_id": "corr-adj-lifecycle-advance",
+      "causation_id": "ev-adj-prev-107",
+      "idempotency_key": "idem-adj-lifecycle-advance-107",
+      "signature": "signed-by-person://deli-varmax/registrar",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/registrar",
+      "detail": "conflicting evidence gathered -> EVIDENCE_COLLECTION -> CONTESTED",
+      "state_update": [
+        {
+          "uri": "dispute://deli-varmax/delivery",
+          "about": "obligation://deli-varmax/deliver-due",
+          "parties": [
+            "org://deli-varmax/customer",
+            "org://deli-varmax/company",
+            "org://deli-varmax/supplier"
+          ],
+          "status": "OPEN",
+          "fin_impact_usd": 18000,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service",
+            "company": "collect valid invoice; protect reputation",
+            "supplier": "established on-time shipment, not blamed"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a full refund/admission is irreversible/unknown-cost -> \u00a76 human floor"
+          },
+          "lifecycle_state": "EVIDENCE_COLLECTION",
+          "epistemic_state": "UNDETERMINED",
+          "determination": null,
+          "resolution_type": null,
+          "reopened": false,
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://deli-varmax/late": 0.9,
+              "claim://deli-varmax/delivered": 0.97,
+              "claim://deli-varmax/shipped": 0.92
+            }
+          }
+        },
+        {
+          "uri": "dispute://deli-varmax/delivery",
+          "about": "obligation://deli-varmax/deliver-due",
+          "parties": [
+            "org://deli-varmax/customer",
+            "org://deli-varmax/company",
+            "org://deli-varmax/supplier"
+          ],
+          "status": "OPEN",
+          "fin_impact_usd": 18000,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service",
+            "company": "collect valid invoice; protect reputation",
+            "supplier": "established on-time shipment, not blamed"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a full refund/admission is irreversible/unknown-cost -> \u00a76 human floor"
+          },
+          "lifecycle_state": "CONTESTED",
+          "epistemic_state": "UNDETERMINED",
+          "determination": null,
+          "resolution_type": null,
+          "reopened": false,
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://deli-varmax/late": 0.9,
+              "claim://deli-varmax/delivered": 0.97,
+              "claim://deli-varmax/shipped": 0.92
+            }
+          }
+        }
+      ],
+      "hash": "38a6c82450d656ea3c4762fc81b1781dcf5e5217cf3ffccf96287ed6293b2ad1"
+    },
+    {
+      "uri": "event://deli-varmax/agent-advisory",
+      "type": "DECISION",
+      "event_id": "ev-adj-agent-advisory-108",
+      "correlation_id": "corr-adj-agent-advisory",
+      "causation_id": "ev-adj-prev-108",
+      "idempotency_key": "idem-adj-agent-advisory-108",
+      "signature": "signed-by-person://deli-varmax/registrar",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/registrar",
+      "detail": "AI/machine advisory on options (contained: informational only)",
+      "state_update": [
+        {
+          "uri": "decision://deli-varmax/agent-advisory",
+          "by": "person://deli-varmax/registrar",
+          "authority": "authority://deli-varmax/adjudicate",
+          "alternatives": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "confidence": 0.7,
+          "expected_outcome": "inform determination",
+          "actual_outcome": "partial-settlement",
+          "detail": {
+            "ranking": [
+              {
+                "option": "partial-settlement",
+                "utility": 0.7275,
+                "floor_gated": false
+              },
+              {
+                "option": "conditional-resolution",
+                "utility": 0.665,
+                "floor_gated": false
+              },
+              {
+                "option": "accept-company-full-payment",
+                "utility": 0.62,
+                "floor_gated": false
+              },
+              {
+                "option": "request-more-evidence",
+                "utility": 0.435,
+                "floor_gated": false
+              },
+              {
+                "option": "unresolved",
+                "utility": 0.4,
+                "floor_gated": false
+              },
+              {
+                "option": "external-adjudication",
+                "utility": 0.385,
+                "floor_gated": false
+              },
+              {
+                "option": "escalate",
+                "utility": 0.38,
+                "floor_gated": false
+              },
+              {
+                "option": "accept-customer-refund",
+                "utility": 0.285,
+                "floor_gated": true
+              }
+            ],
+            "machine_eligible_best": {
+              "option": "partial-settlement",
+              "utility": 0.7275,
+              "floor_gated": false
+            },
+            "tradeoff": "trade-off[delivery; business-model {'evidence': 0.35, 'contractual': 0.3, 'relationship': 0.2, 'cost': 0.15}]\n  0.728  partial-settlement\n  0.665  conditional-resolution\n  0.620  accept-company-full-payment\n  0.435  request-more-evidence\n  0.400  unresolved\n  0.385  external-adjudication\n  0.380  escalate\n  0.285  accept-customer-refund FLOOR-GATED\n  => machine-eligible best (non-gated): partial-settlement (gated: ['accept-customer-refund'])"
+          },
+          "made_at": "2026-09-01T05:08:28Z"
+        }
+      ],
+      "hash": "6a889ba5d1413504aef8752ea84ae9dbeb4b3ac063468408c18bbf0f6c69d3ee"
+    },
+    {
+      "uri": "event://deli-varmax/adjudicate",
+      "type": "DECISION",
+      "event_id": "ev-adj-adjudicate-109",
+      "correlation_id": "corr-adj-adjudicate",
+      "causation_id": "ev-adj-prev-109",
+      "idempotency_key": "idem-adj-adjudicate-109",
+      "signature": "signed-by-person://deli-varmax/adjudicator",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/adjudicator",
+      "detail": "authorized human determination: partial-settlement (ranking in view)",
+      "state_update": [
+        {
+          "uri": "decision://deli-varmax/determination",
+          "by": "person://deli-varmax/adjudicator",
+          "authority": "authority://deli-varmax/adjudicate",
+          "alternatives": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "confidence": 0.8,
+          "evidence": [
+            "evidence://deli-varmax/gps-arrival",
+            "evidence://deli-varmax/arrival-receipt",
+            "evidence://deli-varmax/third-party-verification",
+            "evidence://deli-varmax/supplier-shipping"
+          ],
+          "expected_outcome": "partial-settlement",
+          "actual_outcome": "partial-settlement",
+          "detail": {
+            "determination": "partial-settlement",
+            "machine_eligible_best": "partial-settlement"
+          },
+          "made_at": "2026-09-01T05:08:28Z"
+        },
+        {
+          "uri": "dispute://deli-varmax/delivery",
+          "about": "obligation://deli-varmax/deliver-due",
+          "parties": [
+            "org://deli-varmax/customer",
+            "org://deli-varmax/company",
+            "org://deli-varmax/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "fin_impact_usd": 18000,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service",
+            "company": "collect valid invoice; protect reputation",
+            "supplier": "established on-time shipment, not blamed"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a full refund/admission is irreversible/unknown-cost -> \u00a76 human floor"
+          },
+          "lifecycle_state": "ADJUDICATION",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "partial-settlement",
+          "resolution_type": "partial-settlement",
+          "reopened": false,
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://deli-varmax/late": 0.9,
+              "claim://deli-varmax/delivered": 0.97,
+              "claim://deli-varmax/shipped": 0.92
+            }
+          }
+        }
+      ],
+      "hash": "b85bfd711b4862101a5297f3d1e288b60ca468b22083422bfb5927f1582f3b5a"
+    },
+    {
+      "uri": "event://deli-varmax/resolution",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-resolution-110",
+      "correlation_id": "corr-adj-resolution",
+      "causation_id": "ev-adj-prev-110",
+      "idempotency_key": "idem-adj-resolution-110",
+      "signature": "signed-by-person://deli-varmax/adjudicator",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/adjudicator",
+      "detail": "resolution partial-settlement executed -> ACCEPTED -> EXECUTED",
+      "state_update": [
+        {
+          "uri": "dispute://deli-varmax/delivery",
+          "about": "obligation://deli-varmax/deliver-due",
+          "parties": [
+            "org://deli-varmax/customer",
+            "org://deli-varmax/company",
+            "org://deli-varmax/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "fin_impact_usd": 18000,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service",
+            "company": "collect valid invoice; protect reputation",
+            "supplier": "established on-time shipment, not blamed"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a full refund/admission is irreversible/unknown-cost -> \u00a76 human floor"
+          },
+          "lifecycle_state": "RESOLUTION",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "partial-settlement",
+          "resolution_type": "partial-settlement",
+          "reopened": false,
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://deli-varmax/late": 0.9,
+              "claim://deli-varmax/delivered": 0.97,
+              "claim://deli-varmax/shipped": 0.92
+            }
+          }
+        },
+        {
+          "uri": "dispute://deli-varmax/delivery",
+          "about": "obligation://deli-varmax/deliver-due",
+          "parties": [
+            "org://deli-varmax/customer",
+            "org://deli-varmax/company",
+            "org://deli-varmax/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "fin_impact_usd": 18000,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service",
+            "company": "collect valid invoice; protect reputation",
+            "supplier": "established on-time shipment, not blamed"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a full refund/admission is irreversible/unknown-cost -> \u00a76 human floor"
+          },
+          "lifecycle_state": "ACCEPTED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "partial-settlement",
+          "resolution_type": "partial-settlement",
+          "reopened": false,
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://deli-varmax/late": 0.9,
+              "claim://deli-varmax/delivered": 0.97,
+              "claim://deli-varmax/shipped": 0.92
+            }
+          }
+        },
+        {
+          "uri": "dispute://deli-varmax/delivery",
+          "about": "obligation://deli-varmax/deliver-due",
+          "parties": [
+            "org://deli-varmax/customer",
+            "org://deli-varmax/company",
+            "org://deli-varmax/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "fin_impact_usd": 18000,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service",
+            "company": "collect valid invoice; protect reputation",
+            "supplier": "established on-time shipment, not blamed"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a full refund/admission is irreversible/unknown-cost -> \u00a76 human floor"
+          },
+          "lifecycle_state": "EXECUTED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "partial-settlement",
+          "resolution_type": "partial-settlement",
+          "reopened": false,
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://deli-varmax/late": 0.9,
+              "claim://deli-varmax/delivered": 0.97,
+              "claim://deli-varmax/shipped": 0.92
+            }
+          },
+          "resolution_outcome": "partial settlement on the contested delivery; SLA-breach credit applied; ledger noted; customer keeps the service"
+        }
+      ],
+      "hash": "78ad2f5ac6e6438e635fcd35f842b20779c58ec12b722e524bbc78b3082ad9b1"
+    },
+    {
+      "uri": "event://deli-varmax/verify",
+      "type": "DECISION",
+      "event_id": "ev-adj-verify-111",
+      "correlation_id": "corr-adj-verify",
+      "causation_id": "ev-adj-prev-111",
+      "idempotency_key": "idem-adj-verify-111",
+      "signature": "signed-by-system://deli-varmax/verify",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "system://deli-varmax/verify",
+      "detail": "outcome verification on completed execution -> VERIFIED -> CLOSED",
+      "state_update": [
+        {
+          "uri": "dispute://deli-varmax/delivery",
+          "about": "obligation://deli-varmax/deliver-due",
+          "parties": [
+            "org://deli-varmax/customer",
+            "org://deli-varmax/company",
+            "org://deli-varmax/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "fin_impact_usd": 18000,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service",
+            "company": "collect valid invoice; protect reputation",
+            "supplier": "established on-time shipment, not blamed"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a full refund/admission is irreversible/unknown-cost -> \u00a76 human floor"
+          },
+          "lifecycle_state": "VERIFIED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "partial-settlement",
+          "resolution_type": "partial-settlement",
+          "reopened": false,
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://deli-varmax/late": 0.9,
+              "claim://deli-varmax/delivered": 0.97,
+              "claim://deli-varmax/shipped": 0.92
+            }
+          },
+          "resolution_outcome": "partial settlement on the contested delivery; SLA-breach credit applied; ledger noted; customer keeps the service"
+        },
+        {
+          "uri": "dispute://deli-varmax/delivery",
+          "about": "obligation://deli-varmax/deliver-due",
+          "parties": [
+            "org://deli-varmax/customer",
+            "org://deli-varmax/company",
+            "org://deli-varmax/supplier"
+          ],
+          "status": "RESOLVED",
+          "fin_impact_usd": 18000,
+          "deadline_ref": "resolution expected within 7 business days",
+          "interest_blocks": {
+            "customer": "pay only for delivered service",
+            "company": "collect valid invoice; protect reputation",
+            "supplier": "established on-time shipment, not blamed"
+          },
+          "constraint_blocks": {
+            "sla_grace_minutes": 15,
+            "refund_auto_cap_usd": 5000,
+            "irreversible": "a full refund/admission is irreversible/unknown-cost -> \u00a76 human floor"
+          },
+          "lifecycle_state": "CLOSED",
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "determination": "partial-settlement",
+          "resolution_type": "partial-settlement",
+          "reopened": false,
+          "available_resolutions": [
+            "accept-customer-refund",
+            "accept-company-full-payment",
+            "partial-settlement",
+            "conditional-resolution",
+            "request-more-evidence",
+            "escalate",
+            "unresolved",
+            "external-adjudication"
+          ],
+          "conflict": {
+            "detected": true,
+            "uncertainty": false,
+            "claim_support": {
+              "claim://deli-varmax/late": 0.9,
+              "claim://deli-varmax/delivered": 0.97,
+              "claim://deli-varmax/shipped": 0.92
+            }
+          },
+          "resolution_outcome": "partial settlement on the contested delivery; SLA-breach credit applied; ledger noted; customer keeps the service",
+          "verified": true
+        }
+      ],
+      "hash": "f14707e76ad2bc8733401b81be3af27665c3ef36dbcaa484af4486fe4da1bbd9"
+    },
+    {
+      "uri": "event://deli-varmax/learn",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-learn-112",
+      "correlation_id": "corr-adj-learn",
+      "causation_id": "ev-adj-prev-112",
+      "idempotency_key": "idem-adj-learn-112",
+      "signature": "signed-by-person://deli-varmax/registrar",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/registrar",
+      "detail": "organizational learning: recorded",
+      "state_update": [
+        {
+          "uri": "evidence://deli-varmax/learning-note",
+          "kind": "RECORD",
+          "source": "post-resolution-postmortem",
+          "captured_at": "2026-09-01T05:08:28Z",
+          "verity": {
+            "procedure": "postmortem",
+            "confidence": 0.6
+          },
+          "reliability": 0.6,
+          "about": "what was learned",
+          "supports": null,
+          "learning": "conflicting delivery timestamps reach a determination only via an authorized adjudicator + independent anchored verification, not the single-source verifier"
+        }
+      ],
+      "hash": "660fb1422df10e20c4c6e07b3befc4e193260975a604a6e9f1cb82aacb65ef24"
+    },
+    {
+      "uri": "event://deli-varmax/record-metric-series",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-adj-deli-varmax-record-metric-series",
+      "correlation_id": "corr-adj-deli-varmax-record-metric-series",
+      "causation_id": "ev-adj-deli-varmax-record-metric-series-prev",
+      "idempotency_key": "idem-adj-deli-varmax-record-metric-series",
+      "signature": "signed-by-person://deli-varmax/adjudicator",
+      "occurred_at": "2026-09-01T05:08:28Z",
+      "actor": "person://deli-varmax/adjudicator",
+      "detail": "record a realized-vs-expected metric series additively on the org's ledger so the \u00a77L Q6 can project from recorded data",
+      "state_update": [
+        {
+          "uri": "metric://deli-varmax/m-on-time",
+          "actual": 0.86,
+          "variance": -0.03,
+          "points": [
+            {
+              "period": 1,
+              "expected": 0.95,
+              "target": 0.95,
+              "actual": 0.92,
+              "variance": -0.18
+            },
+            {
+              "period": 2,
+              "expected": 0.95,
+              "target": 0.95,
+              "actual": 0.9,
+              "variance": -0.09
+            },
+            {
+              "period": 3,
+              "expected": 0.95,
+              "target": 0.95,
+              "actual": 0.87,
+              "variance": -0.06
+            },
+            {
+              "period": 4,
+              "expected": 0.95,
+              "target": 0.95,
+              "actual": 0.86,
+              "variance": -0.03
+            }
+          ],
+          "name": "resolution on-time rate",
+          "formula": "on-time/total from ledger",
+          "unit": "fraction",
+          "target": 0.95,
+          "period": "quarter",
+          "source": "ledger resolution completion records",
+          "owner": "person://deli-varmax/adjudicator",
+          "band_variance": "all"
+        }
+      ],
+      "hash": "fd45893c8a7ce86b1072795cb45dfbaaf0f8f97de9af61c851555f6cbf26537c"
+    }
+  ]
+}

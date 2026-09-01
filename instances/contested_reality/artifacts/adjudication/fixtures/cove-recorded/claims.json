@@ -1,0 +1,21 @@
+[
+  {
+    "uri": "claim://cove-recorded/medically-necessary",
+    "proposer": "person://cove-recorded/physician",
+    "statement": "medication X is medically necessary for this member; a peer-reviewed study supports its use for the condition.",
+    "evidence": [
+      "evidence://cove-recorded/clinical-study"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://cove-recorded/off-formulary",
+    "proposer": "org://cove-recorded/payer",
+    "statement": "medication X is off-formulary; the formulary policy and comparative step-therapy evidence do not require it as first-line.",
+    "evidence": [
+      "evidence://cove-recorded/formulary-policy",
+      "evidence://cove-recorded/step-therapy-studies"
+    ],
+    "epistemic_status": "disputed"
+  }
+]

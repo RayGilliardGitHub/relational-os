@@ -1,0 +1,36 @@
+[
+  {
+    "uri": "relationship://cove-recorded/coverage-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://cove-recorded/payer",
+      "person://cove-recorded/patient"
+    ],
+    "roles": {
+      "org://cove/payer": [
+        "insurer"
+      ],
+      "person://cove/patient": [
+        "member"
+      ]
+    },
+    "purpose": "insurance coverage for the member"
+  },
+  {
+    "uri": "relationship://cove-recorded/clinical",
+    "status": "ACTIVE",
+    "participants": [
+      "person://cove-recorded/physician",
+      "person://cove-recorded/patient"
+    ],
+    "roles": {
+      "person://cove/physician": [
+        "provider"
+      ],
+      "person://cove/patient": [
+        "patient"
+      ]
+    },
+    "purpose": "clinical care relationship"
+  }
+]

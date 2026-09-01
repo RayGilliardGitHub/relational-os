@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/dispute-2026",
-  "head_hash": "ba412f843005b55fe8f1347674e7b2843b0f6232e86d4ca5f07bbbde9e51e8f7",
+  "head_hash": "2a4b21805cb60ced97d769d640d444b8e553b5c8d7edc993333ce12a442c9560",
   "entries": [
     {
       "uri": "event://dispute/provision",
@@ -10,7 +10,7 @@
       "causation_id": "ev-dispute-prev-1",
       "idempotency_key": "idem-dispute-provision-1",
       "signature": "signed-by-person://dispute/manager",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "person://dispute/manager",
       "detail": "provision dispute actors + delivery relationship + adjudicator authority",
       "state_update": [
@@ -58,7 +58,7 @@
           ]
         }
       ],
-      "hash": "23757a83fb60acbeb682b3abe47664c4e1e6984f7c5ebb6a8c579d21728ad131"
+      "hash": "421623fe2c90f687e73e60a6b758e4d158bf521e7c8944281c7f52025d5fd472"
     },
     {
       "uri": "event://dispute/fact-commit",
@@ -68,11 +68,11 @@
       "causation_id": "ev-dispute-prev-2",
       "idempotency_key": "idem-dispute-fact-commit-2",
       "signature": "signed-by-org://dispute/supplier",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "org://dispute/supplier",
       "detail": "FACT: committed delivery due 04:00",
       "state_update": [],
-      "hash": "78253981cc1a7a660423734251474f8123a9ef1c3483fbf4da7084604b8a6665"
+      "hash": "d9e09a4f4c27cb89aa03e47a34b1fc2f714c40c3a1b2acc5bec1fcbb2164c8a3"
     },
     {
       "uri": "event://dispute/claims",
@@ -82,7 +82,7 @@
       "causation_id": "ev-dispute-prev-3",
       "idempotency_key": "idem-dispute-claims-3",
       "signature": "signed-by-person://dispute/manager",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "person://dispute/manager",
       "detail": "two mutually-exclusive claims lodged",
       "state_update": [
@@ -131,7 +131,7 @@
           }
         }
       ],
-      "hash": "b802135e157cfe6036d2e7eebcdb36bd489dd45746ea7a1f720bea5c4d1b7a64"
+      "hash": "0d2399e132c373b11d5338b7e50fa36883b2301d04a9b56cee2148ecc9b00f6e"
     },
     {
       "uri": "event://dispute/open",
@@ -141,7 +141,7 @@
       "causation_id": "ev-dispute-prev-4",
       "idempotency_key": "idem-dispute-open-4",
       "signature": "signed-by-person://dispute/manager",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "person://dispute/manager",
       "detail": "conflicting claims -> dispute OPEN, epistemic_state UNDETERMINED",
       "state_update": [
@@ -170,7 +170,7 @@
           }
         }
       ],
-      "hash": "1b224debb1e5527353e22a0c497141ffd2aafc8bf63633c905d3533a32ef98c2"
+      "hash": "a94d32e4d26b186d3929c0bd0c5e6d3db5941f42f0ca47dfa11ae725203d8f92"
     },
     {
       "uri": "event://dispute/adjudicate",
@@ -180,7 +180,7 @@
       "causation_id": "ev-dispute-prev-5",
       "idempotency_key": "idem-dispute-adjudicate-5",
       "signature": "signed-by-person://dispute/manager",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "person://dispute/manager",
       "detail": "human adjudicator determination: UNRESOLVED",
       "state_update": [
@@ -204,7 +204,7 @@
             "accepted_claim": null,
             "reason": "both claims carry only moderate, mutually-conflicting evidence (0.62 vs 0.58); no independent decisive source; adequate evidence to determine is absent"
           },
-          "made_at": "2026-09-01T03:13:33Z"
+          "made_at": "2026-09-01T03:58:56Z"
         },
         {
           "uri": "dispute://dispute/d-delivery",
@@ -234,7 +234,7 @@
           "determined_by": "person://dispute/manager"
         }
       ],
-      "hash": "3f21899a4fad7543c9bdf120ae4bf2b70e37a2a4370d63c97400d8fd861c5c49"
+      "hash": "79eaec77aae01aa55c91df5aab32cf8ae4a6d79d5e181f26cec81ee687d73393"
     },
     {
       "uri": "event://dispute/clear-open",
@@ -244,7 +244,7 @@
       "causation_id": "ev-dispute-prev-6",
       "idempotency_key": "idem-dispute-clear-open-6",
       "signature": "signed-by-person://dispute/manager",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "person://dispute/manager",
       "detail": "well-evidenced dispute open",
       "state_update": [
@@ -282,7 +282,7 @@
           }
         }
       ],
-      "hash": "f1b188b6ef273de109e32eefb837806f7180e33aaf5a8dbe5b3e0106539e41a0"
+      "hash": "b8ba277463f97604924458bf74253481a940caeb455596d31a88409882f7f577"
     },
     {
       "uri": "event://dispute/clear-adjud",
@@ -292,7 +292,7 @@
       "causation_id": "ev-dispute-prev-7",
       "idempotency_key": "idem-dispute-clear-adjud-7",
       "signature": "signed-by-person://dispute/manager",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "person://dispute/manager",
       "detail": "well-evidenced determination: side-with-supplier",
       "state_update": [
@@ -321,7 +321,7 @@
           "determined_by": "person://dispute/manager"
         }
       ],
-      "hash": "309ec35ce819d98ee43be561f9b1755cabd46fe8b6c62933fb472c3dffa7ef41"
+      "hash": "e2eaa946347b8ebbae7a0c4ba0c4d4d269a771f46659029fbb9d6eb3d8e00a7b"
     },
     {
       "uri": "event://dispute/trust-update-supplier",
@@ -331,7 +331,7 @@
       "causation_id": "ev-s2-7",
       "idempotency_key": "idem-s2-8",
       "signature": "signed-by-person://dispute/manager",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "person://dispute/manager",
       "detail": "trust for org://dispute/supplier [timely committed delivery] 0.500 -> 0.597 (outcome=1, exp=0.8, ev=0.97, alpha=0.5)",
       "state_update": [
@@ -342,7 +342,7 @@
           "claim": "timely committed delivery",
           "context": "relationship://dispute/delivery",
           "score": 0.597,
-          "updated_at": "2026-09-01T03:13:33Z",
+          "updated_at": "2026-09-01T03:58:56Z",
           "expected": 0.8,
           "outcome": 1.0,
           "evidence": [
@@ -352,7 +352,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "ba412f843005b55fe8f1347674e7b2843b0f6232e86d4ca5f07bbbde9e51e8f7"
+      "hash": "2a4b21805cb60ced97d769d640d444b8e553b5c8d7edc993333ce12a442c9560"
     }
   ]
 }

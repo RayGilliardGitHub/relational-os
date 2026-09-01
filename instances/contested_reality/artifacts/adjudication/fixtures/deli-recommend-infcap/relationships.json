@@ -1,0 +1,36 @@
+[
+  {
+    "uri": "relationship://deli-recommend-infcap/customer-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://deli-recommend-infcap/customer",
+      "org://deli-recommend-infcap/company"
+    ],
+    "roles": {
+      "org://deli/customer": [
+        "buyer"
+      ],
+      "org://deli/company": [
+        "provider"
+      ]
+    },
+    "purpose": "contracted service delivery with a deadline"
+  },
+  {
+    "uri": "relationship://deli-recommend-infcap/supplier-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://deli-recommend-infcap/supplier",
+      "org://deli-recommend-infcap/company"
+    ],
+    "roles": {
+      "org://deli/supplier": [
+        "shipper"
+      ],
+      "org://deli/company": [
+        "customer"
+      ]
+    },
+    "purpose": "supplier shipping for the delivery"
+  }
+]

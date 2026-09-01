@@ -1,0 +1,50 @@
+[
+  {
+    "uri": "dispute://deli-infcap/delivery",
+    "about": "obligation://deli-infcap/deliver-due",
+    "parties": [
+      "org://deli-infcap/customer",
+      "org://deli-infcap/company",
+      "org://deli-infcap/supplier"
+    ],
+    "status": "RESOLVED",
+    "fin_impact_usd": 18000,
+    "deadline_ref": "resolution expected within 7 business days",
+    "interest_blocks": {
+      "customer": "pay only for delivered service",
+      "company": "collect valid invoice; protect reputation",
+      "supplier": "established on-time shipment, not blamed"
+    },
+    "constraint_blocks": {
+      "sla_grace_minutes": 15,
+      "refund_auto_cap_usd": 5000,
+      "irreversible": "a full refund/admission is irreversible/unknown-cost -> \u00a76 human floor"
+    },
+    "lifecycle_state": "CLOSED",
+    "epistemic_state": "RESOLVED_DETERMINED",
+    "determination": "partial-settlement",
+    "resolution_type": "partial-settlement",
+    "reopened": false,
+    "available_resolutions": [
+      "accept-customer-refund",
+      "accept-company-full-payment",
+      "partial-settlement",
+      "conditional-resolution",
+      "request-more-evidence",
+      "escalate",
+      "unresolved",
+      "external-adjudication"
+    ],
+    "conflict": {
+      "detected": true,
+      "uncertainty": false,
+      "claim_support": {
+        "claim://deli-infcap/late": 0.9,
+        "claim://deli-infcap/delivered": 0.97,
+        "claim://deli-infcap/shipped": 0.92
+      }
+    },
+    "resolution_outcome": "partial settlement on the contested delivery; SLA-breach credit applied; ledger noted; customer keeps the service",
+    "verified": true
+  }
+]

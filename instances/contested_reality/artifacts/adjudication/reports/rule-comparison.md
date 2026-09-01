@@ -1,5 +1,5 @@
 # Sprint 14 — config-authorable reconciliation rule layer: rule → verdict
-generated 2026-09-01T03:13:33Z  |  one org (`inspect`), three configured rules, SAME engine, only `reconcile` differs
+generated 2026-09-01T03:58:59Z  |  one org (`inspect`), three configured rules, SAME engine, only `reconcile` differs
 
 A claim that is DISPUTED/determined/UNDETERMINED depends on which rule the org configured:
 

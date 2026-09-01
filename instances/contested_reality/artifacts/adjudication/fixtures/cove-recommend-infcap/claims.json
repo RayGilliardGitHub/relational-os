@@ -1,0 +1,21 @@
+[
+  {
+    "uri": "claim://cove-recommend-infcap/medically-necessary",
+    "proposer": "person://cove-recommend-infcap/physician",
+    "statement": "medication X is medically necessary for this member; a peer-reviewed study supports its use for the condition.",
+    "evidence": [
+      "evidence://cove-recommend-infcap/clinical-study"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://cove-recommend-infcap/off-formulary",
+    "proposer": "org://cove-recommend-infcap/payer",
+    "statement": "medication X is off-formulary; the formulary policy and comparative step-therapy evidence do not require it as first-line.",
+    "evidence": [
+      "evidence://cove-recommend-infcap/formulary-policy",
+      "evidence://cove-recommend-infcap/step-therapy-studies"
+    ],
+    "epistemic_status": "disputed"
+  }
+]

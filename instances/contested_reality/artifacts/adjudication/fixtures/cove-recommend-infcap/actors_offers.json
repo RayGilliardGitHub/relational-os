@@ -1,0 +1,85 @@
+[
+  {
+    "uri": "org://cove/payer",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://cove/patient",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://cove/physician",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://cove/utilization",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://cove/meddir",
+    "type": "PERSON"
+  },
+  {
+    "uri": "system://cove/verify",
+    "type": "SYSTEM"
+  },
+  {
+    "uri": "obligation://cove-recommend-infcap/furnish-coverage",
+    "subject": "org://cove-recommend-infcap/payer",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "furnish medically-necessary covered care promptly",
+    "due_by": "2026-12-31T00:00:00-06:00"
+  },
+  {
+    "uri": "obligation://cove-recommend-infcap/standard-care",
+    "subject": "person://cove-recommend-infcap/physician",
+    "source": "IMPOSED",
+    "content": "recommend clinically-appropriate care",
+    "due_by": "2026-12-31T00:00:00-06:00"
+  },
+  {
+    "uri": "authority://cove-recommend-infcap/adjudicate",
+    "holder": "person://cove-recommend-infcap/utilization",
+    "grants": [
+      "adjudicate"
+    ],
+    "roles": [
+      "adjudicator"
+    ],
+    "capacity": {
+      "value": 30.0,
+      "unit": "units/day",
+      "load": 0.9,
+      "status": "recorded"
+    },
+    "capacity_requirements": {
+      "authorize-off-formulary": 30.0,
+      "deny-off-formulary": 30.0,
+      "step-therapy-first": 30.0,
+      "authorize-generic": 25.0,
+      "request-more-evidence": 10.0,
+      "escalate-to-medical-director": 15.0,
+      "external-peer-review": 20.0
+    }
+  },
+  {
+    "uri": "authority://cove-recommend-infcap/adjudicate-appeal",
+    "holder": "person://cove-recommend-infcap/meddir",
+    "grants": [
+      "adjudicate_appeal"
+    ],
+    "roles": [
+      "appeal-adjudicator"
+    ]
+  },
+  {
+    "uri": "right://cove-recommend-infcap/patient-appeal",
+    "holder": "person://cove-recommend-infcap/patient",
+    "type": "APPEAL",
+    "subject": "DUPLICATE",
+    "scope": [
+      "obligation://cove-recommend-infcap/furnish-coverage"
+    ],
+    "purpose": "right to appeal the determination"
+  }
+]

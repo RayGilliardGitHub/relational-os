@@ -1,0 +1,36 @@
+[
+  {
+    "uri": "relationship://deli-deficit/customer-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://deli-deficit/customer",
+      "org://deli-deficit/company"
+    ],
+    "roles": {
+      "org://deli/customer": [
+        "buyer"
+      ],
+      "org://deli/company": [
+        "provider"
+      ]
+    },
+    "purpose": "contracted service delivery with a deadline"
+  },
+  {
+    "uri": "relationship://deli-deficit/supplier-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://deli-deficit/supplier",
+      "org://deli-deficit/company"
+    ],
+    "roles": {
+      "org://deli/supplier": [
+        "shipper"
+      ],
+      "org://deli/company": [
+        "customer"
+      ]
+    },
+    "purpose": "supplier shipping for the delivery"
+  }
+]

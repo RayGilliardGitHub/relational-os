@@ -1,0 +1,88 @@
+[
+  {
+    "uri": "org://inspect/buyer",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://inspect/company",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://inspect/supplier",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://inspect/registrar",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://inspect/adjudicator",
+    "type": "PERSON"
+  },
+  {
+    "uri": "person://inspect/appeal",
+    "type": "PERSON"
+  },
+  {
+    "uri": "system://inspect/verify",
+    "type": "SYSTEM"
+  },
+  {
+    "uri": "obligation://inspect-recorded/inspect-due",
+    "subject": "org://inspect-recorded/company",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "declare pass/fail on the batch by the acceptance deadline",
+    "due_by": "2026-10-15T00:00:00-06:00"
+  },
+  {
+    "uri": "obligation://inspect-recorded/accept-due",
+    "subject": "org://inspect-recorded/buyer",
+    "source": "VOLUNTARILY_UNDERTAKEN",
+    "content": "accept a conforming batch and pay upon acceptance",
+    "due_by": "2026-11-30T00:00:00-06:00"
+  },
+  {
+    "uri": "authority://inspect-recorded/adjudicate",
+    "holder": "person://inspect-recorded/adjudicator",
+    "grants": [
+      "adjudicate"
+    ],
+    "roles": [
+      "adjudicator"
+    ],
+    "capacity": {
+      "value": 500.0,
+      "unit": "units/day",
+      "load": 1.3,
+      "status": "recorded"
+    },
+    "capacity_requirements": {
+      "accept-batch": 510.0,
+      "reject-batch-return": 500.0,
+      "rework-partial-credit": 499.0,
+      "conditional-accept-with-guarantee": 200.0,
+      "request-more-evidence": 100.0,
+      "escalate": 150.0
+    }
+  },
+  {
+    "uri": "authority://inspect-recorded/adjudicate-appeal",
+    "holder": "person://inspect-recorded/appeal",
+    "grants": [
+      "adjudicate_appeal"
+    ],
+    "roles": [
+      "appeal-adjudicator"
+    ]
+  },
+  {
+    "uri": "right://inspect-recorded/buyer-appeal",
+    "holder": "org://inspect-recorded/buyer",
+    "type": "APPEAL",
+    "subject": "DUPLICATE",
+    "scope": [
+      "obligation://inspect-recorded/inspect-due"
+    ],
+    "purpose": "right to appeal the determination"
+  }
+]

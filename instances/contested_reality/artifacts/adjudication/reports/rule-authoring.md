@@ -1,5 +1,5 @@
 # Sprint 15 — user-authorable RULE-authoring DSL: rules as CONFIG TEXT
-generated 2026-09-01T03:13:33Z  |  one org (`inspect`), registry rules vs spec-authored rules, SAME engine
+generated 2026-09-01T03:58:59Z  |  one org (`inspect`), registry rules vs spec-authored rules, SAME engine
 
 A rule declared as `cfg['reconcile']['rule_spec']` (config text) compiles to the same pure support function a registry rule runs; a NEW rule enters the system as data alone.
 

@@ -165,4 +165,194 @@ closes a bounded slice of both, additively** (full write-up: `docs/ENGINE-FORECA
   recorded capacity, never a fabricated number; a no-data org plainly says it cannot forecast / has no
   recorded capacity. Q7/Q8 stay the Sprint-18 line; #8 stays §6-floor-gated; the determination stays the
   §6 human's call; S5 alone moves Trust. Additive; 49 `$defs` / SPEC v0.22; `metric://` a first-class noun,
+## 9. Update after Sprint 27 — Q7/Q8 carry a recorded-capacity CONSTRAINT (a label, never an overrule)
+
+Sprint 26's finding that the Q9 capacity REASON did not reach the trade-off is closed additively in
+`cockpit_s7l`: where the org records a numeric `capacity` AND a band + numeric threshold exist, **both
+`q7` and `q8` carry an additive `capacity_constraint` block** (a PARALLEL block — the frozen
+`rank`-owned `options`/`tradeoff` and the Sprint-18 `cockpit_q7q8` bytes are untouched):
+
+- `recorded_capacity` (value/unit/load AS RECORDED), `horizon_band` ({low,high} = the closure's
+  `band_horizon`), `reason`, `flag`, `options_flagged`, `note`.
+- `reason` is ONE deterministic label from recorded numbers only via the shared `_capacity_reason`
+  helper (headroom / at-capacity when recorded load >= 1.0 / deficit when the horizon band's worst-side
+  magnitude reaches/exceeds the recorded capacity value) — so Q8's `reason` always equals the Q9
+  `capacity_planning_attention` label BY CONSTRUCTION. In headroom no option is flagged; at
+  at-capacity/deficit the capacity-consuming (non-baseline) options are marked `capacity_risk` — never
+  `capacity_infeasible` (no per-option requirement is ever recorded).
+- It NEVER removes an option, NEVER changes `machine_eligible_best`/the Q8 recommendation, NEVER
+  overrules the §6 human. A no-capacity / no-band / no-data org carries NO `capacity_constraint` key
+  (byte-identical superset of Sprint 26). For every org Q7 `options` + Q8
+  `recommendation`/`machine_eligible_best` are asserted EQUAL to `cockpit_q7q8`
+  (`run_forecast_horizon3_demo.py`, exit 0 = ALL PASS: e.g. `deli-varmax-cap` carrying
+  `{reason: "headroom", options_flagged: {}}` — the recorded capacity 500.0 ≫ horizon 0.62…1.02, load
+  0.72) while the no-capacity orgs are unchanged. Additive; no new noun; 49 `$defs` / SPEC v0.22.
   `capacity` an additive field (no `capacity://`); `ros/` untouched.
+
+## 10. Update after Sprint 28 — the capacity marker is PROVEN AT ITS LIMIT (at-capacity / deficit)
+
+Sprint 27 proved `capacity_constraint` end-to-end only in **headroom**; its at-capacity / deficit
+branches were helper-only. **Sprint 28 (recorded data + a runner, NO engine change)** drives the
+non-headroom branches AS DATA on a real §7L Q1–Q10 cockpit, so the whole `capacity_constraint` block
+is now demonstrated at every derived reason:
+
+- **`deli-atcap`** (NEW): recorded load **1.25** (>= 1.0) with capacity 500.0 resolutions/day, same
+  horizon band as `deli-varmax` `{0.62, 1.02}` → `reason: "at-capacity"`, `flag: True`.
+- **`deli-deficit`** (NEW): **lower-is-better** latency series (horizon `{12.0, 32.0}`, sigma 8) +
+  recorded capacity VALUE **30.0** (load 0.9) → horizon worst-side high **32.0 >= 30.0** →
+  `reason: "deficit"`, `flag: True`.
+
+At BOTH, `options_flagged` marks EVERY capacity-consuming NON-baseline option `capacity_risk` and NEVER
+the baseline (`unresolved`); the reason equals the org's Q9 `capacity_planning_attention` **BY
+CONSTRUCTION**. **The marker is a LABEL at its limit:** the Q7 `options` (count + uris) +
+`machine_eligible_best` + Q8 `recommendation`/`floor_gated` EXACTLY equal `cockpit_q7q8` for EVERY org
+(incl. the at-capacity/deficit ones) — the Q8 `partial-settlement` recommendation provably unchanged.
+The Sprint-27 headroom + all no-capacity/no-band/no-data orgs are byte-identical. Proof: the §9
+`run_forecast_horizon3_demo.py` plus the new `run_forecast_horizon4_demo.py` (exit 0 = ALL PASS, ≥7
+orgs). SPEC v0.22, 49 `$defs`, `ros/` untouched, no new noun.
+
+## 11. Update after Sprint 29 — the Q7/Q8 `capacity_constraint` can now label a SPECIFIC option `capacity_infeasible` (from a RECORDED per-option requirement)
+
+Sprint 28's honest frontier (`sprints/sprint-28/notes/findings.md`, "Open issues / next work"):
+`capacity_infeasible` was **structurally unreachable** because no per-option capacity requirement was
+ever recorded — the engine could flag a whole `capacity_risk` set but never name the particular option
+the recorded capacity cannot run. **Sprint 29 makes the recorded capacity PER-OPTION** so the marker
+labels a specific option:
+
+- A new REPLAYABLE recorder `record_capacity_requirements(sub, authority_uri, requirements, signer)`
+  records an additive `capacity_requirements` map on the SAME `authority://` object as the additive
+  `capacity` — so `available = capacity.value − capacity.load` is unit-coupled by construction.
+- In `cockpit_s7l`'s Q7/Q8 `capacity_constraint` block, when requirements are recorded, the additive
+  `_per_option_capacity_flags` rule labels each option: `capacity_infeasible` iff its RECORDED
+  requirement > available; otherwise `capacity_risk` (non-headroom). The block also surfaces the
+  recorded `per_option_requirements` map + `available_capacity`. A no-requirements org keeps the
+  Sprint-28 block byte-identical (no per-option keys). `reason`/`flag` still come from the org-level
+  `_capacity_reason`; the baseline is never flagged; frozen functions untouched.
+
+Real proof (`run_forecast_per_option_capacity_demo.py`, exit 0 = 88 PASS): the five Sprint-28 orgs are
+byte-identical; two NEW orgs RECORD per-option requirements:
+- `deli-infcap` (at-capacity, cap 500.0 res/day load 1.3 → available 498.7): heavy options record
+  499.0 (> 498.7) → `capacity_infeasible`; lighter options ≤ available → `capacity_risk`.
+- `deli-deficit-inf` (deficit, cap 30.0 load 0.9 → available 29.1): heavy options record 30.0 (> 29.1)
+  → `capacity_infeasible`; lighter → `capacity_risk`.
+
+On both, `options_flagged` = 3 `capacity_infeasible` + 4 `capacity_risk` (baseline never flagged),
+every label traces to a recorded requirement vs available, and the Q7 options + Q8 recommendation are
+still EXACTLY the frozen `cockpit_q7q8` output (`partial-settlement`) even though SOME option is
+infeasible — the marker is still a LABEL, never a re-rank, never a removal, never an overrule of the
+the §6 human. Both new orgs' fixtures pass Sprint-0 C1–C5; full non-regression green; SPEC v0.22, 49
+`$defs`, `ros/` untouched.
+
+## 12. Update after Sprint 30 — the marker is a REASON, never a CHOICE: the RECOMMENDED option itself made `capacity_infeasible`
+
+Sprint 29's honest boundary (see `sprints/sprint-29/notes/findings.md`): the per-option marker can NAME
+a specific infeasible option, but it **never CHOOSES a different option for the machine — the §6 human
+always does.** Sprint 30 drives the SHARPEST version of that boundary, with NO engine change: a new org
+`deli-recommend-infcap` (`run_forecast_label_vs_choice_demo.py`, exit 0 = ALL PASS) RECORDS a per-option
+requirement that makes the machine-eligible best / Q8 recommendation ITSELF (`partial-settlement`)
+`capacity_infeasible`:
+
+- recorded capacity 500.0 res/day, load 1.3 → available **498.7** (at-capacity, `reason` unchanged);
+- `partial-settlement` RECORDS **499.0** (> 498.7) → **`capacity_infeasible` ON THE RECOMMENDED OPTION**;
+- the other 6 non-baseline options → `capacity_risk`; the `unresolved` baseline (no recorded requirement)
+  → never flagged.
+
+The Q8 recommendation **provably STAYS `partial-settlement`** (and machine-eligible best the same),
+exactly `cockpit_q7q8` — no re-rank, no removal, no §6 overrule. The `capacity_constraint.note` names
+the UNCHANGED Q8 + the §6 human. This is the sharpest demonstration that the marker is a REASON never a
+CHOICE: it says "the recorded capacity says the recommended option can't run," and the human (not the
+machine) must choose the replacement. The seven Sprint-29 orgs stay byte-identical (a no-requirements org
+keeps today's block exactly); full non-regression green; SPEC v0.22, 49 `$defs`, `ros/` and the frozen
+49-`$defs`/URI cap unchanged; `adjudication_engine.py` untouched (pure recorded data + a runner).
+
+## 13. Update after Sprint 31 — the whole §7L decision surface is inventoried as reason-not-choice (positive consolidation, NO engine change)
+
+Sprint 31 (`run_recorded_surface_demo.py`, new, exit 0 = ALL PASS) is the OPPOSITE of another capability
+sprint: it makes the label-vs-choice boundary the ORGANIZING truth of a full INVENTORY of the recorded-data
+decision surface. `adjudication_engine.py` is byte-identical (hash `a60f8f7…` unchanged) — a survey runner
++ recorded data only, exactly as Sprint 30. It drives 11 orgs (the eight Sprint-30 orgs byte-identical,
+plus `inspect-recorded`, `cove-recorded`, and `inspect-nodata` — all new labels, no fixture overwrite) and
+emits a structured `recorded_surface` per org:
+
+- **present_recorded** = {metric_series, point_variance, band_variance, capacity, capacity_requirements,
+  floor_gated, weights, reconcile_rule} — which RECORDED descriptors the org actually carries;
+- **derived_reasons** = {Q3_forecast, Q6_projection, Q7Q8_capacity_constraint, Q9_capacity,
+  Q8_do_nothing_impact} — the actual derived REASON each produced, or None;
+- **derivable_universe** = the sorted set of every derived reason;
+- **not_derivable** = the named optimization seam + any descriptor the org does NOT record.
+
+It asserts per org: (a) every derived label traces to a recorded descriptor (Q3/Q6/Q8-forecast →
+metric_series; Q7Q8/Q9-capacity → capacity; the no-data org derives NOTHING — the engine never invents a
+reason the org did not record), and (b) the **reason-not-choice proof, totalled**: Q7 `options` +
+`machine_eligible_best` + Q8 `recommendation` + `floor_gated` EXACTLY equal `cockpit_q7q8` for ALL 11 orgs —
+print "11/11 orgs the marker never re-ranks; INCLUDES the Sprint-30 org `deli-recommend-infcap` where the
+RECOMMENDED option is `capacity_infeasible`". This is positive consolidation: after six sprints the WHOLE
+§7L decision surface is provably recorded-data + a REASON, and no recorded data ever re-ranks the Q8
+recommendation (it provably stays the frozen `rank` output on every org). The §16 verdict is honest: the
+surface is now fully inventoried as reason-not-choice; the ONE remaining out-of-scope step is a
+capacity-constrained OPTIMIZATION that re-ranks for the machine (a policy / user decision, deliberately NOT
+built; its seam = recorded per-option `capacity_requirements` + a deterministic next-best-non-infeasible
+rule by the frozen `rank` utility), plus a per-option requirement not unit-coupled / no recorded
+requirement. No SPEC bump (v0.22).
+
+## 14. Update after Sprint 32 — the capacity-constrained RE-RANK of the §7L Q8 recommendation for the machine (an EXPLICIT authorized POLICY step, distinct from the reason-not-choice advisory)
+
+Sprint 32 (`capacity_rerank.py`, NEW module + `run_capacity_rerank_demo.py`, NEW runner, exit 0 = ALL PASS)
+builds the ONE step Sprint 30/31 named and deliberately left out of scope — **because this prompt
+explicitly asked for it**. The engine is UNTOUCHED (hash `a60f8f7…` byte-identical); the re-rank is a NEW
+pure module that reuses the engine's public surface (the `capacity_constraint` block `cockpit_s7l`
+renders from recorded data + the frozen `rank` utility). When an org's machine-eligible best is
+`capacity_infeasible` (from RECORDED per-option `capacity_requirements` > available = recorded
+capacity.value − recorded load), the re-rank computes the **highest-utility option that is neither
+floor-gated nor `capacity_infeasible`** — a deterministic next-best-non-infeasible rule by the frozen
+`rank` utility, reported as an additive `capacity_rerank` block (`prior_machine_best`,
+`prior_best_capacity_flag`, `recorded_descriptors`, `available_capacity`, `per_option_requirements`,
+`replacement`, `replacement_is_baseline`, `all_capacity_consuming_infeasible`, `floor_respected`,
+`policy`, `why`).
+
+PROVEN: RE-RANK fires on `deli-recommend-infcap` (partial-settlement → conditional-resolution),
+`inspect-recorded` (rework-partial-credit → conditional-accept-with-guarantee),
+`cove-recommend-infcap` (NEW — step-therapy-first → authorize-generic), and `deli-all-infeasible` (NEW —
+every capacity-consuming option infeasible → unresolved baseline, `replacement_is_baseline` True); the
+re-ranked Q8 == the recomputed highest non-infeasible non-gated utility option by the frozen `rank`.
+UNCHANGED (best NOT infeasible → byte-identical to `cockpit_q7q8`): the nine other orgs incl.
+`cove-recorded` and no-data `inspect-nodata`. **The advisory path NEVER re-ranks**: even where re-rank
+fires the engine's Q8 recommendation still equals `cockpit_q7q8` — the Sprint-31 reason-not-choice
+inventory stands untouched; the §6 floor is respected (a floor-gated option is never auto-picked); the
+fallback to the do-nothing/UNRESOLVED baseline is stated. Deterministic; the two NEW fixture dirs pass
+Sprint-0 C1-C5; full non-regression green; engine `a60f8f7…`, schema `7fc38c8c…`, 49 `$defs`, SPEC v0.22.
+
+**§14 verdict — is the ONE remaining Q8 frontier now derivable?** Yes, as an explicit authorized POLICY
+step distinct from the deterministic advisory label-vs-choice boundary: the advisory path still labels
+(the marker stays a REASON, never a CHOICE) and never re-ranks; the re-rank computes a capacity-
+constrained replacement from recorded data under POLICY, respects the §6 floor, and is deterministic +
+additive (new module, engine byte-identical). **Still not derivable (honest residual):** a probabilistic
+/stochastic forecast (the recorded band is a spread, never a CI); a per-option requirement NOT unit-
+coupled to the recorded capacity value / an option with no recorded requirement (the machine never
+invents one); and any choice the §6 human must make that recorded data cannot machine-decide. No SPEC
+bump (v0.22).
+## 15. Update after Sprint 33 — the now-TWO-path decision surface consolidated as ONE coherent recorded-data framework: the reason-not-choice ADVISORY and the POLICY-authorized capacity-constrained RE-RANK proven to compose without one silently shadowing the other
+
+The §7L Q7/Q8 morning line now lives on TWO deliberately distinct pathways over the same recorded data: the
+default **reason-not-choice ADVISORY** (Sprint 31 — the marker is a REASON, never a CHOICE; the Q8
+recommendation provably stays the frozen `rank` output, the §6 human always rules) and the **POLICY-authorized
+capacity-constrained RE-RANK** (Sprint 32 — `capacity_rerank.capacity_rerank`, a new additive module that, when
+the machine-eligible best is `capacity_infeasible` from recorded per-option `capacity_requirements`, picks the
+highest-utility option that is neither floor-gated nor `capacity_infeasible`, emitted as DATA and never
+overwriting the advisory Q8). **Sprint 33 consolidates them as ONE framework** — `run_two_path_demo.py` (new
+runner; **`adjudication_engine.py` sha256 `a60f8f7…` AND `capacity_rerank.py` sha256 `f7c6a185…` byte-identical**)
+drives the same 13 orgs and classifies each into an exhaustive-disjoint PATH class:
+- **ADVISORY-no-capacity** (5) — no recorded capacity → the advisory is the single answer;
+- **ADVISORY-best-runnable** (4) — capacity recorded, best runnable → `needed=False`, replacement == advisory Q8;
+- **RE-RANK** (4) — best `capacity_infeasible` → by POLICY a replacement is chosen (a different option).
+
+PROVEN (ALL PASS): (a) **composition** — advisory Q8 == `cockpit_q7q8` for all 13 (the re-rank never shadows
+it); where it fires the replacement is a different option and ≠ the machine_eligible_best; where `needed=False`
+they agree; (b) **floor integrity** — no advisory or re-rank selection is floor-gated (asserted against `rank`);
+(c) **exhaustive-disjoint taxonomy**; (d) **determinism vs history** — identical `two_path_surface` on re-run,
+and the Sprint-31 reason-not-choice tally (11/11) + the Sprint-32 re-rank results both reproduce from the SAME
+recorded data. §15 verdict: the two paths are ONE coherent recorded-data framework; the deterministic advisory
+label-vs-choice boundary still holds on the default path. Still not derivable: a probabilistic/stochastic
+forecast; a per-option requirement not unit-coupled to the recorded capacity / an option with no recorded
+requirement (never invented); any §6-human choice recorded data cannot machine-decide (the re-rank is
+POLICY-authorized, not objective best). No SPEC bump (v0.22); no new noun.

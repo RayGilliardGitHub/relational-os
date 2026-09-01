@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/tradeoff-2026",
-  "head_hash": "786dd07856652781492b8e203140f58f9ed9b2681d5d7a788e551dbf36e7bbb6",
+  "head_hash": "55cb8a568d43f565e33447a2731e5c1791f25a43754e676dbacbf61bb3c42b32",
   "entries": [
     {
       "uri": "event://to/provision",
@@ -10,7 +10,7 @@
       "causation_id": "ev-to-prev-1",
       "idempotency_key": "idem-to-provision-1",
       "signature": "signed-by-org://to/company",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "org://to/company",
       "detail": "provision actors, employment/contract/staffing relationships, adjudicator + appeal authority, employee APPEAL right; record shared constraint + both interests",
       "state_update": [
@@ -166,7 +166,7 @@
           ]
         }
       ],
-      "hash": "44ace3fb8480f70eb110e004a98f464ec114ac549f7c69ca960c0646a880212b"
+      "hash": "820812ed716c02418f220b47cc46fdd069ac24383c2b8b2fffeee4c4a87a016c"
     },
     {
       "uri": "event://to/constraints",
@@ -176,7 +176,7 @@
       "causation_id": "ev-to-prev-2",
       "idempotency_key": "idem-to-constraints-2",
       "signature": "signed-by-org://to/company",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "org://to/company",
       "detail": "company conditional remote-work policy + customer 30-minute SLA expectation",
       "state_update": [
@@ -200,7 +200,7 @@
           "evidence_required": "SOME"
         }
       ],
-      "hash": "d09703aa9d464823d3998e74cb11aae891bdf222079c5c9c055492328d013ce4"
+      "hash": "46daf5bb4d1f60e7d308b11737594a990acfe7583c512ca80ce40bcf7561abd0"
     },
     {
       "uri": "event://to/open-case",
@@ -210,7 +210,7 @@
       "causation_id": "ev-to-prev-3",
       "idempotency_key": "idem-to-open-case-3",
       "signature": "signed-by-person://to/manager",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "person://to/manager",
       "detail": "conflicting interests -> case OPEN with conflict + uncertainty recorded",
       "state_update": [
@@ -265,7 +265,7 @@
           }
         }
       ],
-      "hash": "ed12b1a0c9ad1b343655a78f3b15f653277a7ba0c01f235bdbd24383a3b0a2d3"
+      "hash": "60c019b994680feaec82abbe00c13b2026fb1261ee8f1b3c629f206765083c01"
     },
     {
       "uri": "event://to/adjudicate",
@@ -275,7 +275,7 @@
       "causation_id": "ev-to-prev-4",
       "idempotency_key": "idem-to-adjudicate-4",
       "signature": "signed-by-person://to/manager",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "person://to/manager",
       "detail": "human adjudicator determination (informed by computed trade-off): remote-with-coverage-plan",
       "state_update": [
@@ -348,7 +348,7 @@
             ],
             "reason": "machine-computed trade-off ranks remote-with-coverage-plan highest (utility 0.760) from the recorded constraint: a conditional coverage plan keeps on-site staffing at the 3-agent floor so the 30-min SLA holds, while remote Mon/Wed/Fri + 2 leave days satisfy the employee's legitimate, in-policy interest"
           },
-          "made_at": "2026-09-01T03:13:33Z"
+          "made_at": "2026-09-01T03:58:56Z"
         },
         {
           "uri": "case://to/remote-conflict",
@@ -429,7 +429,7 @@
           }
         }
       ],
-      "hash": "c9cacfb7e12010c859d62c72d4542973af2991366afa4475bb4ad211b902dadc"
+      "hash": "afd790a790fd8e74bad1d3302dae0ab29b1d751a8be92d917b4a4445c7a9af6a"
     },
     {
       "uri": "event://to/open-uncertain",
@@ -439,7 +439,7 @@
       "causation_id": "ev-to-prev-5",
       "idempotency_key": "idem-to-open-uncertain-5",
       "signature": "signed-by-person://to/manager",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "person://to/manager",
       "detail": "insufficient staffing/coverage data -> case OPEN",
       "state_update": [
@@ -470,7 +470,7 @@
           }
         }
       ],
-      "hash": "89d0e18308bee1ec03cb4c7d28a12dc6b7f00b024730d6370a74a7ad93423624"
+      "hash": "8e45f0d9cebff7fa7bb048cf15d9fdd8124cbd479c845dbd701cceb95714bd90"
     },
     {
       "uri": "event://to/adjudicate-uncertain",
@@ -480,7 +480,7 @@
       "causation_id": "ev-to-prev-6",
       "idempotency_key": "idem-to-adjudicate-uncertain-6",
       "signature": "signed-by-person://to/manager",
-      "occurred_at": "2026-09-01T03:13:33Z",
+      "occurred_at": "2026-09-01T03:58:56Z",
       "actor": "person://to/manager",
       "detail": "human adjudicator determination (\u00a76 floor binds): UNRESOLVED",
       "state_update": [
@@ -504,7 +504,7 @@
             "tradeoff_gate": "all staff-changing options floor-gated; machine-eligible best=do-nothing@$0.64 (do-nothing/UNRESOLVED)",
             "reason": "coverage on proposed remote days is unverified; the \u00a76 floor forbids any unknown-cost arrangement; a determination is not justified by the admissible basis"
           },
-          "made_at": "2026-09-01T03:13:33Z"
+          "made_at": "2026-09-01T03:58:56Z"
         },
         {
           "uri": "case://to/remote-uncertain",
@@ -556,7 +556,7 @@
           }
         }
       ],
-      "hash": "0313be32e0f38688114ebe446d3f2ed30651c2cf1da31b51b855fc500eb76f61"
+      "hash": "8615fae958fb71637ab0efb8e0022a1e3474361b56440b0328c1be843096c681"
     },
     {
       "uri": "event://to/agent-advisory",
@@ -566,7 +566,7 @@
       "causation_id": "ev-to-prev-7",
       "idempotency_key": "idem-to-agent-advisory-7",
       "signature": "signed-by-org://to/company",
-      "occurred_at": "2026-09-01T03:13:35Z",
+      "occurred_at": "2026-09-01T03:58:58Z",
       "actor": "org://to/company",
       "detail": "AI advisory pick on the trade-off (contained by the \u00a76 floor)",
       "state_update": [
@@ -590,10 +590,10 @@
             "fallback": false,
             "containment": "advisory only; cannot execute or set determination/Trust"
           },
-          "made_at": "2026-09-01T03:13:35Z"
+          "made_at": "2026-09-01T03:58:58Z"
         }
       ],
-      "hash": "786dd07856652781492b8e203140f58f9ed9b2681d5d7a788e551dbf36e7bbb6"
+      "hash": "55cb8a568d43f565e33447a2731e5c1791f25a43754e676dbacbf61bb3c42b32"
     }
   ]
 }

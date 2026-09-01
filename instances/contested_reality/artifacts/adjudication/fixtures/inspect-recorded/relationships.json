@@ -1,0 +1,36 @@
+[
+  {
+    "uri": "relationship://inspect-recorded/qc-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://inspect-recorded/buyer",
+      "org://inspect-recorded/company"
+    ],
+    "roles": {
+      "org://inspect/buyer": [
+        "client"
+      ],
+      "org://inspect/company": [
+        "inspector"
+      ]
+    },
+    "purpose": "independent batch inspection + acceptance decision"
+  },
+  {
+    "uri": "relationship://inspect-recorded/supply-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://inspect-recorded/supplier",
+      "org://inspect-recorded/buyer"
+    ],
+    "roles": {
+      "org://inspect/supplier": [
+        "supplier"
+      ],
+      "org://inspect/buyer": [
+        "receiver"
+      ]
+    },
+    "purpose": "goods supply subject to QC acceptance"
+  }
+]

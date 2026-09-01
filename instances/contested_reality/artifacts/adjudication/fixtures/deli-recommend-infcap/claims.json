@@ -1,0 +1,30 @@
+[
+  {
+    "uri": "claim://deli-recommend-infcap/late",
+    "proposer": "org://deli-recommend-infcap/customer",
+    "statement": "the contracted service was NOT delivered on time; signed receipt 16:15 past the 16:00 deadline \u2014 we should not pay for the late delivery.",
+    "evidence": [
+      "evidence://deli-recommend-infcap/arrival-receipt",
+      "evidence://deli-recommend-infcap/gps-arrival"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli-recommend-infcap/delivered",
+    "proposer": "org://deli-recommend-infcap/company",
+    "statement": "the contracted service WAS delivered and is payable; an independent anchored verification confirms delivery liveness.",
+    "evidence": [
+      "evidence://deli-recommend-infcap/third-party-verification"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli-recommend-infcap/shipped",
+    "proposer": "org://deli-recommend-infcap/supplier",
+    "statement": "we shipped the consignment on time.",
+    "evidence": [
+      "evidence://deli-recommend-infcap/supplier-shipping"
+    ],
+    "epistemic_status": "disputed"
+  }
+]

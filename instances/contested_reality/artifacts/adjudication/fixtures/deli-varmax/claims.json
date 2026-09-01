@@ -1,0 +1,30 @@
+[
+  {
+    "uri": "claim://deli-varmax/late",
+    "proposer": "org://deli-varmax/customer",
+    "statement": "the contracted service was NOT delivered on time; signed receipt 16:15 past the 16:00 deadline \u2014 we should not pay for the late delivery.",
+    "evidence": [
+      "evidence://deli-varmax/arrival-receipt",
+      "evidence://deli-varmax/gps-arrival"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli-varmax/delivered",
+    "proposer": "org://deli-varmax/company",
+    "statement": "the contracted service WAS delivered and is payable; an independent anchored verification confirms delivery liveness.",
+    "evidence": [
+      "evidence://deli-varmax/third-party-verification"
+    ],
+    "epistemic_status": "disputed"
+  },
+  {
+    "uri": "claim://deli-varmax/shipped",
+    "proposer": "org://deli-varmax/supplier",
+    "statement": "we shipped the consignment on time.",
+    "evidence": [
+      "evidence://deli-varmax/supplier-shipping"
+    ],
+    "epistemic_status": "disputed"
+  }
+]

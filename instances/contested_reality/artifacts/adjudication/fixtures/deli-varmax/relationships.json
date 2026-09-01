@@ -1,0 +1,36 @@
+[
+  {
+    "uri": "relationship://deli-varmax/customer-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://deli-varmax/customer",
+      "org://deli-varmax/company"
+    ],
+    "roles": {
+      "org://deli/customer": [
+        "buyer"
+      ],
+      "org://deli/company": [
+        "provider"
+      ]
+    },
+    "purpose": "contracted service delivery with a deadline"
+  },
+  {
+    "uri": "relationship://deli-varmax/supplier-contract",
+    "status": "ACTIVE",
+    "participants": [
+      "org://deli-varmax/supplier",
+      "org://deli-varmax/company"
+    ],
+    "roles": {
+      "org://deli/supplier": [
+        "shipper"
+      ],
+      "org://deli/company": [
+        "customer"
+      ]
+    },
+    "purpose": "supplier shipping for the delivery"
+  }
+]
