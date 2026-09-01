@@ -41,7 +41,7 @@ FIXTURES = HERE / "fixtures"
 LEDGER_DIR = FIXTURES / "ledger"
 SM_DIR = FIXTURES / "statemachines"
 GRAPH_DIR = HERE / "graph"
-REPORTS = HERE / "reports"
+REPORTS = HERE.parent / "reports"   # repo-root reports/ (ros/checks.cockpit_check reads it there)
 
 SUBJ = "org://quoteko"
 APPROVER = "person://qk/approver"

@@ -12,10 +12,10 @@ generalizing: the on-time-exception loop is the product, and any sector is a con
 
 ## Project layout (post-reorg standard roots)
 - **Canonical `ros/` package** lives at the repo ROOT (`/home/rlg/relational-os/ros/`), flat
-  byte-identical to `sprints/sprint-5/artifacts/ros/` (the sprint-5 copy remains the narrative
+  byte-identical to `ros/` (the sprint-5 copy remains the narrative
   snapshot of where it was promoted from; sprints 1–4 hold earlier partial snapshots).
 - **Docs** (the verified manuals) are at the repo ROOT `docs/` (also still under
-  `sprints/sprint-6/artifacts/docs/` as narrative).
+  `docs/` as narrative).
 - **Gate** `scripts/verify.sh` + **test suite** `tests/run_checks.py` live at the repo root and
   run from ANY cwd (the conformance scripts were re-anchored to `Path(__file__)` so they are no
   longer CWD-bound). Python layout: `pyproject.toml` declares the `ros` package.
@@ -57,15 +57,15 @@ per-kind fixture groups) plus the files that generated it.
 
 ## How the instances were provisioned (following the documentation)
 
-Followed the Sprint-6 manuals (`sprints/sprint-6/artifacts/docs/`): the demos/cockpit run
-with plain `python3`; every **conformance** run uses the Sprint-0 venv interpreter; the
+Followed the Sprint-6 manuals (`docs/`): the demos/cockpit run
+with plain `python3`; every **conformance** run uses the `.venv` interpreter; the
 audit (04-audit) is conformance C1–C5 + `Ledger.verify()` + the full-state round-trip; the
 BI (05-bi) is the ledger projections. One reusable builder (`sector_scene.py`) drives all
 sectors from a config (`configs.py`), rather than a bespoke scene per sector.
 
     cd /home/rlg/relational-os/instances
     python3 build_all.py                                   # build + verify every sector; exit 0 = ALL
-    /home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python conformance_all.py   # C1-C5 per sector; exit 0
+    /home/rlg/relational-os/.venv/bin/python conformance_all.py   # C1-C5 per sector; exit 0
     # per-sector BI:  python3 bi_snapshot.py  (in that sector's dir, over its emitted ledger)
 
 ## Verified results (exit 0, all sectors)
@@ -102,12 +102,12 @@ sectors from a config (`configs.py`), rather than a bespoke scene per sector.
 - `sector_scene.py` — reusable config-driven instance builder (S1→S5 + BOL + cockpit + emit).
 - `configs.py` — one config per sector family (domain vocabulary).
 - `build_all.py` — build + verify every sector (plain python3).
-- `conformance_all.py` — C1–C5 over every sector's fixtures (Sprint-0 venv).
+- `conformance_all.py` — C1–C5 over every sector's fixtures (`conformance venv`).
 - `financial/` — the Finance v1 instance (built before the label fix; its README notes the
   `qk`-label artifact). All other sectors are label-clean.
 - `<label>/artifacts/…` — each sector's fixtures, graph, ledger, and cockpit report.
 
-Cross-references: manuals `sprints/sprint-6/artifacts/docs/`; spec `SPEC.md` (v0.22);
+Cross-references: manuals `docs/`; spec `SPEC.md` (v0.22);
 platform hand-off `sprints/COMPLETE.md`.
 
 ## Contested-reality / conflicting-interest extension (Sprints 9–10)
@@ -172,7 +172,7 @@ engine — the check on whether the word *relational* is earned off the happy pa
   **Decision-Learning / realized-cost weights** (`decision_learning.py`: expected-vs-actual variance
   drives a clamp-bounded, additive re-weighting of the business model + a recorded
   `realized_cost_usd` on the `decision://`). Commands (from `contested_reality/`):
-  `python3 run_adjudication_engine_demo.py` → ALL PASS; the Sprint-0 venv
+  `python3 run_adjudication_engine_demo.py` → ALL PASS; the `conformance venv`
   `conformance_adjudication.py` → C1–C5 ALL PASS (frozen 49 `$defs`). Labels `deli`/`cove` are NOT
   in `configs.SECTORS`, so the sector build is untouched. Docs:
   `contested_reality/docs/GENERALIZED-ADJUDICATION.md` (§16 verdict: B → B+, materially toward A).
@@ -186,7 +186,7 @@ engine — the check on whether the word *relational* is earned off the happy pa
   and a claim DISPUTED under best-rel (0.90) is UNDETERMINED under strict-anchor (0.0, testimony
   inadmissible) — with zero engine change between runs (only `reconcile` data differs). The existing
   `deli`/`cove` outputs reproduce byte-for-byte under their original rule. Commands (from
-  `contested_reality/`): `python3 run_rule_comparison_demo.py` → ALL PASS; the Sprint-0 venv
+  `contested_reality/`): `python3 run_rule_comparison_demo.py` → ALL PASS; the `conformance venv`
   `conformance_adjudication.py` → C1–C5 ALL PASS over 5 labels (deli, cove, inspect-best/anchor/rec).
   Frozen 49 `$defs`, SPEC v0.22, `ros/` untouched. Docs:
   `contested_reality/docs/USER-AUTHORABLE-RULE-LAYER.md` (honest §16: rule *selection* & *parameters*

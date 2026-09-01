@@ -61,7 +61,7 @@ Sprints 1–5 (e.g. `checks.flywheel_check`, `checks.loop_check`).
   (Code: `ros/substrate.py` `Graph`.)
 - **Full-coverage rule:** every object the operating layer creates is carried by a signed
   ledger event's `state_update`, so the **whole Graph rebuilds from the whole Ledger**
-  (round-trip). Verified each sprint; Sprint-5 end-state = **160 graph objects rebuilt
+  (round-trip). Verified each sprint; end-state = **160 graph objects rebuilt
   from 97 ledger events**.
 - **Immutable snapshots (§3.16, Sprint-5 F2):** a signed `state_update` embeds **deep
   copies** of the objects it carries. A later in-place edit to a live mutating object
@@ -138,10 +138,10 @@ website About / marketing / FAQ surface. It is a **data model addition, not a ne
 
 ## 6. Schema + conformance validator + EBNF
 
-- **Schema (normative type contract):** `/home/rlg/relational-os/sprints/sprint-0/artifacts/schema/relational-os.schema.yaml`
+- **Schema (normative type contract):** `/home/rlg/relational-os/schema/relational-os.schema.yaml`
   (draft 2020-12, **49 `$defs`**; + generated `.json`, and `build_schema.py`). One source of
   type truth; `x-uri-catalog` groups `identity / relationship / domain-object`.
-- **Conformance validator:** `/home/rlg/relational-os/sprints/sprint-0/artifacts/conformance.py`.
+- **Conformance validator:** `/home/rlg/relational-os/schema/conformance.py`.
   Checks (the audit's core, see `04-audit.md`):
   - **C1** schema structurally valid
   - **C2** per-instance schema + Appendix-C URI-kind compliance + RFC 3339 temporal (jsonschema
@@ -149,7 +149,7 @@ website About / marketing / FAQ surface. It is a **data model addition, not a ne
   - **C3** ledger content-addressed SHA-256 chain + signature presence (§2/§3.16)
   - **C4** round-trip preserve-unknown (§2, Appendix C) — unknown fields MUST survive rewrite
   - **C5** Relationship and Case state-machine legality (§3.16, §7J.3)
-- **EBNF grammar:** `/home/rlg/relational-os/sprints/sprint-0/artifacts/schema/relational-os-lifecycle.ebnf`
+- **EBNF grammar:** `/home/rlg/relational-os/schema/relational-os-lifecycle.ebnf`
   — the lifecycle/instance grammar companion to the schema (relationship·interaction·event·state
   spine, the two state machines, the five §7J nouns, derived chains, RFC-3339 temporal, typed-URI
   grammar). The JSON Schema remains the normative type contract.
@@ -193,18 +193,18 @@ Root: `/home/rlg/relational-os/`
 | `SPEC.md` | The working spec (v0.22) — **the contract**. |
 | `PROTOCOL.md` | The sprint lifecycle every build session follows. |
 | `README.md` | Workspace index (points at this docs package). |
-| `docs/` | The verified manual package (Sprint 6) — canonical at repo root, narrative copy at `sprints/sprint-6/artifacts/docs/`. |
+| `docs/` | The verified manual package (Sprint 6) — canonical at repo root, narrative copy at `docs/`. |
 | `sprints/COMPLETE.md` | Project closing hand-off (Sprints 0–5). |
-| `sprints/sprint-N/` | Per-sprint: `PROMPT.md`, `plan.md`, `work/`, `notes/findings.md`, `artifacts/`, `summary.md`. |
-| `sprints/sprint-0/artifacts/` | Schema (`schema/`), `conformance.py`, `run_conformance.py`, `make_fixtures.py`, `fixtures/` (156 instances incl. 20-interaction Appendix-E + case-lifecycle + ledgers + statemachines), `surveys/` (4 commissioned surveys), `.venv/` (jsonschema/referencing/yaml deps). |
-| `/ros/` (repo root) — canonical | `substrate.py` (Graph+Ledger+sign), `s1..s5.py` (services), `bol.py` (Business Operating Layer), `checks.py` (the PASS/FAIL assertions). Promoted from `sprints/sprint-5/artifacts/ros/` (its byte-identical origin snapshot) by the reorg. |
-| `sprints/sprint-5/artifacts/run_s5_demo.py` | The **daily cockpit** producer (rebuild whole state + write fixtures + reports). |
-| `sprints/sprint-5/artifacts/run_s5_conformance.py` | Validator re-run over all SIX fixture generations. |
-| `sprints/sprint-5/artifacts/{s3,s4,s5,bol}_demo.py` | Builders that script the scenes. |
-| `sprints/sprint-5/artifacts/graph/current-state.json` | Produced Graph (state). |
-| `sprints/sprint-5/artifacts/fixtures/ledger/ledger-quoteko.json` | Produced Ledger (history). |
-| `sprints/sprint-5/artifacts/reports/cockpit.md` / `.json` | The daily cockpit + §7L answers. |
-| `sprints/sprint-N/artifacts/fixtures/` | Per-generation fixtures (28/35/55/174/316 instances). |
+| `sprints/` | Narrative build history (PROMPT/plan/work/notes/summary per build step) — kept for provenance; not the run surface. |
+| `schema/` | Schema (`schema/`), `conformance.py`, `run_conformance.py`, `make_fixtures.py`, `fixtures/` (156 instances incl. 20-interaction Appendix-E + case-lifecycle + ledgers + statemachines), `surveys/` (4 commissioned surveys), `.venv/` (jsonschema/referencing/yaml deps). |
+| `/ros/` (repo root) — canonical | `substrate.py` (Graph+Ledger+sign), `s1..s5.py` (services), `bol.py` (Business Operating Layer), `checks.py` (the PASS/FAIL assertions). Promoted from `ros/` (its byte-identical origin snapshot) by the reorg. |
+| `reference/reference/run_s5_demo.py` | The **daily cockpit** producer (rebuild whole state + write fixtures + reports). |
+| `schema/run_conformance_all.py` | Validator re-run over all SIX fixture generations. |
+| `reference/{s3,s4,s5,bol}_demo.py` | Builders that script the scenes. |
+| `reference/graph/current-state.json` | Produced Graph (state). |
+| `reference/fixtures/ledger/ledger-quoteko.json` | Produced Ledger (history). |
+| `reports/cockpit.md` / `.json` | The daily cockpit + §7L answers. |
+| `data/fixtures/gen-0..4` + `reference/fixtures` (gen-5) | The fixture corpus the validator checks (gen-0 156 / 28 / 35 / 55 / 174 / 316 instances). |
 | `~/Documents/ai-relational-os-spec.md` (+.pdf) | Release mirror (read-only reference for cross-checks). |
 
 ## 9. Future deployment (spec'd, not built in Sprints 0–5)

@@ -60,8 +60,8 @@ def _sha8(path) -> str:
 _BDOC = HERE / "docs/DECISION-FRAMEWORK-BOUNDARY.md"
 _EDOC = HERE / "docs/ENGINE-FORECAST-CAPACITY.md"
 _SPEC = HERE.parents[1] / "SPEC.md"
-_SCHEMA_YAML = HERE.parents[1] / "sprints/sprint-0/artifacts/schema/relational-os.schema.yaml"
-_SCHEMA_JSON = HERE.parents[1] / "sprints/sprint-0/artifacts/schema/relational-os.schema.json"
+_SCHEMA_YAML = HERE.parents[1] / "schema/relational-os.schema.yaml"
+_SCHEMA_JSON = HERE.parents[1] / "schema/relational-os.schema.json"
 
 
 def _parse_boundary_table(bdoc_text: str) -> dict:

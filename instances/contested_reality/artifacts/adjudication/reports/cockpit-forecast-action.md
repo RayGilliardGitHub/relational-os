@@ -1,5 +1,5 @@
 # §7L forecast → attention → expected-impact — engine-native render (Sprint 21)
-generated 2026-09-01T05:56:02Z  |  `adjudication_engine.cockpit_s7l`/`render_cockpit_s7l`  |  recorded `metric://` series + recorded threshold -> Q3 forecast attention + Q8 do-nothing expected-impact  |  SPEC v0.22, 49 $defs, URI cap
+generated 2026-09-01T06:22:47Z  |  `adjudication_engine.cockpit_s7l`/`render_cockpit_s7l`  |  recorded `metric://` series + recorded threshold -> Q3 forecast attention + Q8 do-nothing expected-impact  |  SPEC v0.22, 49 $defs, URI cap
 
 The recorded Q6 forecast is now CONNECTED to the org's decision surface: when its horizon projection crosses a recorded threshold it becomes a Q3 attention item (tagged `forecast`), and the Q8/trade-off's do-nothing baseline is priced from the same deterministic projection. An org without a recorded series keeps today's Q3/Q8/trade-off exactly.
 

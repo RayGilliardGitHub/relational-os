@@ -7,6 +7,8 @@ Exit 0 iff all conformance checks (C1–C5) pass over the fixture set.
 import sys
 
 import conformance
+from pathlib import Path
+conformance.FIXTURES = Path(__file__).resolve().parent.parent / "data/fixtures/gen-0"
 
 
 def main() -> int:

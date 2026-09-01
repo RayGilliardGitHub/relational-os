@@ -1,22 +1,22 @@
 {
   "recommend": {
     "option": "re-balance to partner_good",
-    "rationale": "To improve on-time delivery by leveraging a more reliable partnership, despite current trust levels.",
+    "rationale": "To improve on-time delivery by leveraging a more reliable partnership, despite current trust score variance.",
     "confidence": 0.85,
-    "risk": "Moderate risk of underutilizing the laggard's potential capabilities.",
+    "risk": "Moderate risk of potential over-reliance and underestimation of the laggard's capabilities.",
     "_model": "phi4-mini:3.8b-q8_0",
     "_fallback": false
   },
-  "recommend_raw": "```json\n{\"option\": \"re-balance to partner_good\", \"rationale\": \"To improve on-time delivery by leveraging a more reliable partnership, despite current trust levels.\", \"confidence\": 0.85, \"risk\": \"Moderate risk of underutilizing the laggard's potential capabilities.\"}\n```",
+  "recommend_raw": "```json\n{\"option\": \"re-balance to partner_good\", \"rationale\": \"To improve on-time delivery by leveraging a more reliable partnership, despite current trust score variance.\", \"confidence\": 0.85, \"risk\": \"Moderate risk of potential over-reliance and underestimation of the laggard's capabilities.\"}\n```",
   "verify": {
     "on_time": true,
     "confidence": 0.95,
     "procedure": "anchored-timestamp",
-    "note": "The evidence indicates a high confidence in the on-time delivery due to conformance with an anchored timestamp.",
+    "note": "The evidence provided is sufficient and consistent with the on-time delivery expectation.",
     "_model": "phi4-mini:3.8b-q8_0",
     "_fallback": false
   },
-  "verify_raw": "{\"on_time\": true, \"confidence\": 0.95, \"procedure\": \"anchored-timestamp\", \"note\": \"The evidence indicates a high confidence in the on-time delivery due to conformance with an anchored timestamp.\"}",
+  "verify_raw": "{\"on_time\": true, \"confidence\": 0.95, \"procedure\": \"anchored-timestamp\", \"note\": \"The evidence provided is sufficient and consistent with the on-time delivery expectation.\"}",
   "evidence_context": "COMPANY: VantageCloud (Technology sector, fictional)\nOUTCOME CLASS: committed platform-upgrade deployment\nLEDGER-BASED ON-TIME: 2/4 = 0.500  (target 0.95; variance -0.617)\nSCOPED TRUST good partner: 0.79  laggard: 0.14\nEXCEPTION: CRITICAL; root status UNKNOWN\nALLOWED OPTIONS: [re-balance to partner_good] [gate the laggard] [do nothing]",
   "checks": [
     [

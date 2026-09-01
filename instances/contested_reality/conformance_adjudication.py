@@ -7,14 +7,14 @@ learned_weights + realized_cost on the decision) stay schema-valid with the FROZ
 cap (no schema edit). Both supported orgs emit their own fixtures; each is validated.
 
 Usage: (from instances/contested_reality)
-  /home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python conformance_adjudication.py
+  /home/rlg/relational-os/.venv/bin/python conformance_adjudication.py
 """
 from __future__ import annotations
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SPRINT0 = HERE.parents[1] / "sprints/sprint-0/artifacts"
+SPRINT0 = HERE.parents[1] / "schema"
 sys.path.insert(0, str(SPRINT0))
 import conformance  # noqa: E402
 

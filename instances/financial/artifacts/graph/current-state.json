@@ -307,7 +307,7 @@
       "uri": "process_instance://fin/pi-funding",
       "process": "process://fin/pr-funding",
       "status": "RUNNING",
-      "started_at": "2026-09-01T05:56:12Z"
+      "started_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "trust://fin/t-adamvale",
@@ -316,7 +316,7 @@
       "claim": "timely committed settlement",
       "context": "relationship://fin/funding-net",
       "score": 0.79,
-      "updated_at": "2026-09-01T05:56:12Z",
+      "updated_at": "2026-09-01T06:22:52Z",
       "expected": 0.8,
       "outcome": 1.0,
       "evidence": [
@@ -332,7 +332,7 @@
       "claim": "timely committed settlement",
       "context": "relationship://fin/funding-net",
       "score": 0.14,
-      "updated_at": "2026-09-01T05:56:12Z",
+      "updated_at": "2026-09-01T06:22:52Z",
       "expected": 0.8,
       "outcome": 0.0,
       "evidence": [
@@ -391,7 +391,7 @@
           "score": 0.6
         }
       ],
-      "made_at": "2026-09-01T05:56:12Z"
+      "made_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "expectation://fin/e-kaplen-q3",
@@ -470,7 +470,7 @@
         "provider": "org://fin/kaplen",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T05:56:12Z"
+      "made_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "event://qk/s4-exchange-kaplen-q3",
@@ -480,7 +480,7 @@
       "causation_id": "ev-s4-105",
       "idempotency_key": "idem-s4-106",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:56:12Z",
+      "occurred_at": "2026-09-01T06:22:52Z",
       "actor": "agent://s4",
       "detail": "settle exchange kaplen-q3: 1500000 USD org://fin/northglen->org://fin/kaplen (value 1500000, cost 1500000)",
       "state_update": [],
@@ -501,7 +501,7 @@
       "causation_id": "ev-s4-106",
       "idempotency_key": "idem-s4-107",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:56:12Z",
+      "occurred_at": "2026-09-01T06:22:52Z",
       "actor": "agent://s4",
       "detail": "evaluate settle kaplen-q3: settled 1500000 vs expected 1500000 by 2026-08-31T00:00:00Z -> partial",
       "state_update": [],
@@ -520,7 +520,7 @@
       "causation_id": "ev-s2-107",
       "idempotency_key": "idem-s2-108",
       "signature": "signed-by-org://fin/kaplen",
-      "occurred_at": "2026-09-01T05:56:12Z",
+      "occurred_at": "2026-09-01T06:22:52Z",
       "actor": "org://fin/kaplen",
       "detail": "job funding-kaplen-q3 by org://fin/kaplen: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
       "state_update": [],
@@ -538,7 +538,7 @@
         "procedure": "settlement-anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T05:56:12Z"
+      "captured_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "claim://qk/funding-kaplen-q3",
@@ -592,7 +592,7 @@
         "provider": "org://fin/adamvale",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T05:56:12Z"
+      "made_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "event://qk/s4-exchange-adamvale-q3",
@@ -602,7 +602,7 @@
       "causation_id": "ev-s4-110",
       "idempotency_key": "idem-s4-111",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:56:12Z",
+      "occurred_at": "2026-09-01T06:22:52Z",
       "actor": "agent://s4",
       "detail": "settle exchange adamvale-q3: 1500000 USD org://fin/northglen->org://fin/adamvale (value 1500000, cost 1500000)",
       "state_update": [],
@@ -623,7 +623,7 @@
       "causation_id": "ev-s4-111",
       "idempotency_key": "idem-s4-112",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:56:12Z",
+      "occurred_at": "2026-09-01T06:22:52Z",
       "actor": "agent://s4",
       "detail": "evaluate settle adamvale-q3: settled 1500000 vs expected 1500000 by 2026-08-31T00:00:00Z -> met",
       "state_update": [],
@@ -642,7 +642,7 @@
       "causation_id": "ev-s2-112",
       "idempotency_key": "idem-s2-113",
       "signature": "signed-by-org://fin/adamvale",
-      "occurred_at": "2026-09-01T05:56:12Z",
+      "occurred_at": "2026-09-01T06:22:52Z",
       "actor": "org://fin/adamvale",
       "detail": "job funding-adamvale-q3 by org://fin/adamvale: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
       "state_update": [],
@@ -660,7 +660,7 @@
         "procedure": "settlement-anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T05:56:12Z"
+      "captured_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "claim://qk/funding-adamvale-q3",
@@ -714,7 +714,7 @@
         "provider": "org://fin/kaplen",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T05:56:12Z"
+      "made_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "event://qk/s4-exchange-kaplen-q4",
@@ -724,7 +724,7 @@
       "causation_id": "ev-s4-115",
       "idempotency_key": "idem-s4-116",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:56:12Z",
+      "occurred_at": "2026-09-01T06:22:52Z",
       "actor": "agent://s4",
       "detail": "settle exchange kaplen-q4: 1200000 USD org://fin/northglen->org://fin/kaplen (value 1200000, cost 1200000)",
       "state_update": [],
@@ -745,7 +745,7 @@
       "causation_id": "ev-s4-116",
       "idempotency_key": "idem-s4-117",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:56:12Z",
+      "occurred_at": "2026-09-01T06:22:52Z",
       "actor": "agent://s4",
       "detail": "evaluate settle kaplen-q4: settled 1200000 vs expected 1200000 by 2026-09-15T00:00:00Z -> partial",
       "state_update": [],
@@ -764,7 +764,7 @@
       "causation_id": "ev-s2-117",
       "idempotency_key": "idem-s2-118",
       "signature": "signed-by-org://fin/kaplen",
-      "occurred_at": "2026-09-01T05:56:12Z",
+      "occurred_at": "2026-09-01T06:22:52Z",
       "actor": "org://fin/kaplen",
       "detail": "job funding-kaplen-q4 by org://fin/kaplen: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
       "state_update": [],
@@ -782,7 +782,7 @@
         "procedure": "settlement-anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T05:56:12Z"
+      "captured_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "claim://qk/funding-kaplen-q4",
@@ -802,41 +802,41 @@
       "relationships": [
         "relationship://fin/loan-ops"
       ],
-      "created_at": "2026-09-01T05:56:12Z",
+      "created_at": "2026-09-01T06:22:52Z",
       "history": [
         {
           "status": "OPEN",
-          "at": "2026-09-01T05:56:12Z",
+          "at": "2026-09-01T06:22:52Z",
           "event": null
         },
         {
           "status": "TRIAGE",
-          "at": "2026-09-01T05:56:12Z",
+          "at": "2026-09-01T06:22:52Z",
           "event": "event://fin/s5-case-triage"
         },
         {
           "status": "ASSIGNED",
-          "at": "2026-09-01T05:56:12Z",
+          "at": "2026-09-01T06:22:52Z",
           "event": "event://fin/s5-case-assigned"
         },
         {
           "status": "IN_PROGRESS",
-          "at": "2026-09-01T05:56:12Z",
+          "at": "2026-09-01T06:22:52Z",
           "event": "event://fin/s5-case-inprogress"
         },
         {
           "status": "BLOCKED",
-          "at": "2026-09-01T05:56:12Z",
+          "at": "2026-09-01T06:22:52Z",
           "event": "event://fin/s5-case-blocked"
         },
         {
           "status": "RESOLVED",
-          "at": "2026-09-01T05:56:12Z",
+          "at": "2026-09-01T06:22:52Z",
           "event": "event://fin/s5-case-resolved"
         },
         {
           "status": "CLOSED",
-          "at": "2026-09-01T05:56:12Z",
+          "at": "2026-09-01T06:22:52Z",
           "event": "event://fin/s5-case-closed"
         }
       ],
@@ -863,7 +863,7 @@
       "confidence": 0.85,
       "expected_outcome": "accept as a real funding-risk",
       "actual_outcome": "accepted; root (kaplen settlement failure) nominated",
-      "made_at": "2026-09-01T05:56:12Z"
+      "made_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "task://fin/t-treasury-rebalance",
@@ -910,7 +910,7 @@
         "priority": 0.695,
         "capacity": 1.0
       },
-      "made_at": "2026-09-01T05:56:12Z"
+      "made_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "decision://fin/s5-match-recorded",
@@ -932,7 +932,7 @@
           "score": 0.695
         }
       ],
-      "made_at": "2026-09-01T05:56:12Z"
+      "made_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "escalation://fin/escalate-tranche-release",
@@ -963,7 +963,7 @@
         "irreversible_failure": true,
         "cost_failure_unknowable": true
       },
-      "made_at": "2026-09-01T05:56:12Z"
+      "made_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "commitment://fin/c-adamvale-followup",
@@ -976,7 +976,7 @@
         "kind": "committed funding follow-up",
         "signed": true
       },
-      "agreed_at": "2026-09-01T05:56:12Z"
+      "agreed_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "expectation://fin/e-routed-adamvale",
@@ -1035,7 +1035,7 @@
         "provider": "org://fin/adamvale",
         "reconciliation": "balanced"
       },
-      "made_at": "2026-09-01T05:56:12Z"
+      "made_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "event://qk/s4-exchange-routed-adamvale",
@@ -1045,7 +1045,7 @@
       "causation_id": "ev-s4-7012",
       "idempotency_key": "idem-s4-7013",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:56:12Z",
+      "occurred_at": "2026-09-01T06:22:52Z",
       "actor": "agent://s4",
       "detail": "settle exchange routed-adamvale: 1500000 USD org://fin/northglen->org://fin/adamvale (value 1500000, cost 1500000)",
       "state_update": [],
@@ -1066,7 +1066,7 @@
       "causation_id": "ev-s4-7013",
       "idempotency_key": "idem-s4-7014",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T05:56:12Z",
+      "occurred_at": "2026-09-01T06:22:52Z",
       "actor": "agent://s4",
       "detail": "evaluate settle routed-adamvale: settled 1500000 vs expected 1500000 by 2026-11-15T00:00:00Z -> met",
       "state_update": [],
@@ -1085,7 +1085,7 @@
       "causation_id": "ev-s2-7014",
       "idempotency_key": "idem-s2-7015",
       "signature": "signed-by-org://fin/adamvale",
-      "occurred_at": "2026-09-01T05:56:12Z",
+      "occurred_at": "2026-09-01T06:22:52Z",
       "actor": "org://fin/adamvale",
       "detail": "job funding-routed-adamvale by org://fin/adamvale: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
       "state_update": [],
@@ -1103,7 +1103,7 @@
         "procedure": "settlement-anchor-conformance",
         "confidence": 0.95
       },
-      "captured_at": "2026-09-01T05:56:12Z"
+      "captured_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "claim://qk/funding-routed-adamvale",
@@ -1120,7 +1120,7 @@
       "variance": 0.05,
       "why": "Concentrating committed funding with a counterparty that has verified on-time settlement (adamvale), while gating the laggard (kaplen) with a performance checkpoint, restored committed-funding on-time. Verified good settlements compound scoped settlement Trust and re-price routing.",
       "change_future_policy": "ALLOCATE by fit AND scoped settlement Trust (not fit alone); counterparties below the Trust floor require a performance gate before a new commitment.",
-      "made_at": "2026-09-01T05:56:12Z"
+      "made_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "goal://fin/g-stable-client-funding",
@@ -1210,7 +1210,7 @@
         "action": "task://fin/t-treasury-rebalance",
         "outcome": "event://fin/outcome-funding-routed-adamvale"
       },
-      "made_at": "2026-09-01T05:56:12Z"
+      "made_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "decision://fin/s5-attention-ordered",
@@ -1233,7 +1233,7 @@
           }
         ]
       },
-      "made_at": "2026-09-01T05:56:12Z"
+      "made_at": "2026-09-01T06:22:52Z"
     },
     {
       "uri": "dependency://fin/d-rebalance-enables-followup",

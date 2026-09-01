@@ -7,7 +7,7 @@ operating layer, specified formally and built sprint by sprint.
 - `SPEC.md` — the working specification (currently **v0.22**). **This is the contract.**
 - `PROTOCOL.md` — the sprint lifecycle every session follows.
 - `docs/` — the verified manual package (a copy also stays at
-  `sprints/sprint-6/artifacts/docs/` as narrative history); `ros/` — canonical package;
+  `docs/` as narrative history); `ros/` — canonical package;
   `tests/run_checks.py` + `scripts/verify.sh` — the green gate.
 
 Master/mirror (do **not** edit in place — it is synced from this workspace):
@@ -70,7 +70,7 @@ named `run_*` or `conformance_*` is evidence/demo tooling.
 ## Documentation
 The finished S1→S5 system is documented in a verified manual package (Sprint 6). Primary
 copy at the repo root `docs/`; the identical Sprint-6 narrative copy stays at
-`sprints/sprint-6/artifacts/docs/`:
+`docs/`:
 - Index & reading order: `docs/00-README.md`
 - Quick-start (3 commands to stand up + read the cockpit): `docs/QUICKSTART.md`
 - Operator — setup / run: `docs/02-setup.md`, `docs/03-run.md`
@@ -85,7 +85,7 @@ copy at the repo root `docs/`; the identical Sprint-6 narrative copy stays at
 - **Branding component (Sprint 7, built):** each instance carries a per-company brand
   (About/marketing/FAQ/design language) as additive `brand` fields on the company `org://`
   actor and renders it into generated reports + a per-instance `branding.md`. Details:
-  `instances/README.md` and `sprints/sprint-6/artifacts/docs/01-system-manual.md §5.1`
+  `instances/README.md` and `docs/01-system-manual.md §5.1`
   (`sprints/sprint-7/PROMPT.md` was its build prompt).
 - **Contested-reality engine (Sprints 9–10, built):** `instances/contested_reality/` reasons
   about contested human reality, not just records it — Fact/Claim/Determination separation,

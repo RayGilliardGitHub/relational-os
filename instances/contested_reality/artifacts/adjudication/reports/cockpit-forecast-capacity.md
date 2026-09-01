@@ -1,5 +1,5 @@
 # §7L recorded-data Q6 forecast + Q9 capacity — engine-native render (Sprint 20)
-generated 2026-09-01T05:56:02Z  |  `adjudication_engine.cockpit_s7l`/`render_cockpit_s7l`  |  recorded `metric://` realized-vs-expected series + additive `capacity` field  |  SPEC v0.22, 49 $defs, URI cap
+generated 2026-09-01T06:22:47Z  |  `adjudication_engine.cockpit_s7l`/`render_cockpit_s7l`  |  recorded `metric://` realized-vs-expected series + additive `capacity` field  |  SPEC v0.22, 49 $defs, URI cap
 
 An org that RECORDS the missing data on its own graph/ledger (a metric:// realized-vs-expected series + a capacity field on its authority://) gets a deterministic Q6 forecast and a Q9 capacity number, where the data exists; an org that has not recorded them keeps the honest no-data fallback. Both still pass the full §7L Q1–Q10 cockpit.
 

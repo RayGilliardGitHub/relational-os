@@ -5,7 +5,7 @@
 exception→case→task→verified-outcome→learning, and exercise human oversight with
 **do-nothing treated as a real option**.
 **Grounding:** SPEC §7J/§7K/§7L, and the real cockpit report at
-`/home/rlg/relational-os/sprints/sprint-5/artifacts/reports/cockpit.md`. I do not need you to
+`/home/rlg/relational-os/reports/cockpit.md`. I do not need you to
 run software every morning — but when you want the day's answer, one command produces it
 (`03-run.md §1`). You read the report.
 
@@ -124,7 +124,7 @@ The system's center is human authority, not autonomy:
 
 ## 7. A short morning routine
 
-1. `cd /home/rlg/relational-os/sprints/sprint-5/artifacts && python3 run_s5_demo.py` (exit 0).
+1. `cd /home/rlg/relational-os/reference && python3 run_s5_demo.py` (exit 0).
 2. Open `reports/cockpit.md`.
 3. Read **#1–#6** (situation), **#7** (options incl. do-nothing), then **#8/#9** (the
    decision and who has authority to execute it).

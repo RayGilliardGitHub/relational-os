@@ -15,11 +15,11 @@ executed in Sprint 6; its real output is embedded.
   for every **conformance** run. Verified present:
 
       python3 --version                                      → Python 3.12.3
-      sprints/sprint-0/artifacts/.venv/bin/python --version  → Python 3.12.3
+      .venv/bin/python --version  → Python 3.12.3
 
   Its site-packages include (verified): `jsonschema 4.26.0`, `referencing 0.37.0`,
   `pyyaml 6.0.3`, plus `rpds`, `attrs`, `typing_extensions`. Interpreter:
-  `/home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python`.
+  `/home/rlg/relational-os/.venv/bin/python`.
 
 - Nothing else is required. The build and all runners are deterministic local Python — no
   network access, no API keys, no frontier spend (~$0/run).
@@ -31,41 +31,32 @@ Everything lives under one workspace root, `/home/rlg/relational-os/`:
 ```
 relational-os/
   SPEC.md            working spec v0.22 — THE contract
-  PROTOCOL.md        sprint lifecycle
+  PROTOCOL.md        the (development) lifecycle — optional to run the system
   README.md          workspace index (→ this docs package)
-  docs/              supporting research / reference
-  sprints/
-    COMPLETE.md      project closing hand-off (Sprints 0–5)
-    sprint-N/        one dir per sprint
-      PROMPT.md      the self-contained build prompt (Sprint 6 = this documentation sprint)
-      plan.md · work/ · notes/findings.md · summary.md
-      artifacts/
-        schema/…     Sprint-0: relational-os.schema.yaml/.json, .ebnf, build_schema.py
-        conformance.py  Sprint-0 validator (C1–C5)
-        run_conformance.py  Sprint-0 runner (fixtures under its own artifacts/fixtures)
-        make_fixtures.py    generator (Sprint-0)
-        surveys/      Sprint-0: 4 commissioned surveys (01-data-licensing … 04-data-boundary-privacy)
-        .venv/        Sprint-0 venv (jsonschema/referencing/yaml)
-        fixtures/     instances; per-generation 156 / 28 / 35 / 55 / 174 / 316
-        ros/          package (Sprint-5 end-state): substrate.py · s1..s5.py · bol.py · checks.py
-                     (canonical copy now lives at the repo ROOT `/ros/`; the sprint-5 one is its origin snapshot — reorg)
-        run_s5_demo.py          daily cockpit producer
-        run_s5_conformance.py   validator over all SIX generations
-        s3_demo.py · s4_demo.py · s5_demo.py · bol_demo.py   scene builders
-        graph/current-state.json        produced Graph (state)
-        fixtures/ledger/ledger-quoteko.json  produced Ledger (history)
-        reports/cockpit.md | .json       the daily cockpit + §7L answers
+  docs/              this manual package
+  ros/               CANONICAL package: substrate.py · s1..s5.py · bol.py · checks.py
+  schema/            validator + schema: conformance.py · run_conformance.py ·
+                     run_conformance_all.py (all six generation gate) ·
+                     relational-os.schema.{yaml,json} · relational-os-lifecycle.ebnf
+  reference/         the reference build + its produced data: run_s5_demo.py · s3/s4/s5/bol_demo.py ·
+                     fixtures/ (gen-5 corpus) · graph/
+  reports/           produced cockpit report: cockpit.md · cockpit.json
+  data/fixtures/     the rest of the validator corpus: gen-0/ · gen-1/ · gen-2/ · gen-3/ · gen-4/
+  tests/run_checks.py  the full green gate (41 checks; exit 0 = ALL PASS)
+  scripts/verify.sh    the quick gate (daily cockpit + all-six conformance)
+  instances/         sector instances (12) + contested_reality + agent_demo
+  sprints/           NARRATIVE build history (PROMPT/plan/work/notes/summary + historical artifacts)
 ```
 
-File-by-file detail of the key end-state (`sprint-5/artifacts/`): see `01-system-manual.md §8`.
+File-by-file detail of the canonical system (`ros/`, `schema/`, `reference/`): see `01-system-manual.md §8`.
 
 ## 3. How to create/repair the venv, if missing
 
-The venv already exists at `sprints/sprint-0/artifacts/.venv/`. If it is missing or its
+The venv already exists at `schema/.venv/`. If it is missing or its
 deps are gone, recreate it **inside** the Sprint-0 artifacts directory (conformance paths
 expect it there) — Python 3.12 required (`python3 -m venv` ships the schema deps via `pip`):
 
-    cd /home/rlg/relational-os/sprints/sprint-0/artifacts
+    cd /home/rlg/relational-os/schema
     python3 -m venv .venv
     .venv/bin/python -m pip install jsonschema referencing pyyaml
 
@@ -75,26 +66,26 @@ expect it there) — Python 3.12 required (`python3 -m venv` ships the schema de
 
 Verify the three deps import under the venv interpreter:
 
-    /home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python \
+    /home/rlg/relational-os/.venv/bin/python \
         -c "import jsonschema, referencing, yaml; print('deps OK')"
     → deps OK
 
 ## 4. Verify the install (run the conformance gate)
 
 The single strongest "is this installed correctly?" test is the conformance runner over all
-six fixture generations. Run it with the **Sprint-0 venv interpreter** — it is
+six fixture generations. Run it with the **`.venv` interpreter** — it is
 `Path(__file__)`-**anchored, so it runs from the repo root or anywhere** (post-reorg; it was
 formerly CWD-bound on `../../sprint-0/artifacts`):
 
-    cd /home/rlg/relational-os/sprints/sprint-5/artifacts
-    /home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python run_s5_conformance.py
+    cd /home/rlg/relational-os/reference
+    /home/rlg/relational-os/.venv/bin/python schema/run_conformance_all.py
     → exit 0, "RESULT: ALL PASS"
 
 The same command works from `/home/rlg/relational-os` directly (no `cd` needed).
 
 Real (embedded) tail of that run:
 
-    === [sprint-5] sprint-5/artifacts/fixtures ===
+    === [gen-5] reference/fixtures ===
       [PASS] C1 schema structurally valid  — 49 $defs
       [PASS] C2 all fixture instances validate + schemes + RFC3339  — 316 instances
       [PASS] C3 ledger content-addressed + signed
@@ -102,8 +93,8 @@ Real (embedded) tail of that run:
       [PASS] C5 state-machine sequences legal
     RESULT: ALL PASS
 
-Per-generation C2 instance counts verified in Sprint 6: Sprint-0 **156**, Sprint-1 **28**,
-Sprint-2 **35**, Sprint-3 **55**, Sprint-4 **174**, Sprint-5 **316** — all **ALL PASS**, exit 0,
+Per-generation C2 instance counts verified in Sprint 6: gen-0 **156**, gen-1 **28**,
+gen-2 **35**, gen-3 **55**, gen-4 **174**, gen-5 **316** — all **ALL PASS**, exit 0,
 one shared validator (no regression over any generation).
 
 ## 5. Next steps

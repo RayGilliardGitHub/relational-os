@@ -1,14 +1,14 @@
 # RelationalOS — QUICKSTART (stand it up + read the cockpit in 3 commands)
 
-**Prereq:** Python 3.12 with the Sprint-0 venv present and its deps (`jsonschema`,
+**Prereq:** Python 3.12 with the `conformance venv` present and its deps (`jsonschema`,
 `referencing`, `yaml`/`pyyaml`) installed. See `02-setup.md` if the venv is missing.
 
 Run all three from the terminal. Except where noted, **run from inside the
-`sprint-5/artifacts/` directory.**
+repo root.**
 
 ## 1 · Build the full system (S1→S5 + Business Operating Layer + cockpit)
 
-    cd /home/rlg/relational-os/sprints/sprint-5/artifacts
+    cd /home/rlg/relational-os/reference
     python3 run_s5_demo.py
 
 **Verified output (real, Sprint 6):** exits `0` and prints `RESULT: ALL PASS`. It
@@ -28,23 +28,23 @@ Final wiring lines it prints:
 
 ## 2 · Prove the schema/validator over all SIX fixture generations
 
-    cd /home/rlg/relational-os/sprints/sprint-5/artifacts
-    /home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python run_s5_conformance.py
+    cd /home/rlg/relational-os/reference
+    /home/rlg/relational-os/.venv/bin/python schema/run_conformance_all.py
 
 **Verified output:** exits `0` and prints `RESULT: ALL PASS`, running the single
-Sprint-0 validator over all six fixture generations (Sprint-0 **156** / -1 **28** / -2
+conformance validator over all six fixture generations (gen-0 **156** / -1 **28** / -2
 **35** / -3 **55** / -4 **174** / -5 **316** instances), checks **C1** schema · **C2**
 instances+scheme+RFC3339 · **C3** ledger content-addressed+signed · **C4** round-trip ·
 **C5** state machines.
 
-> Use the **Sprint-0 venv interpreter** (`.venv/bin/python`) for any conformance run —
+> Use the **`.venv` interpreter** (`.venv/bin/python`) for any conformance run —
 > it has `jsonschema`/`referencing`/`yaml`. The conformance runners are `Path(__file__)`
 > **-anchored (location-independent since the reorg), so run them from the repo root or anywhere**.
 
 ## 3 · Read the cockpit report
 
-    nvim /home/rlg/relational-os/sprints/sprint-5/artifacts/reports/cockpit.md
-    # or: cat  /home/rlg/relational-os/sprints/sprint-5/artifacts/reports/cockpit.md
+    nvim /home/rlg/relational-os/reports/cockpit.md
+    # or: cat  /home/rlg/relational-os/reports/cockpit.md
 
 The cockpit shows: **Business health** (3 ledger-projected metrics: on-time CRITICAL,
 customer-trust OK, settled-value WARN) · **Prioritized attention** (2 tasks) · the

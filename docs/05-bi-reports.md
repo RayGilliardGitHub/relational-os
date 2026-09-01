@@ -36,7 +36,7 @@ project root (plain `python3`):
     cd /home/rlg/relational-os
     python3 sprints/sprint-6/work/captures/bi_snapshot.py
 
-Real output (embedded; reads `sprint-5/artifacts/fixtures/ledger/ledger-quoteko.json` +
+Real output (embedded; reads `reference/fixtures/ledger/ledger-quoteko.json` +
 `graph/current-state.json`):
 
     project_on_time      -> 6/7 completions on time = 0.857
@@ -52,7 +52,7 @@ Real output (embedded; reads `sprint-5/artifacts/fixtures/ledger/ledger-quoteko.
 
 The **one command that produces today's BI** is the daily cockpit (`03-run.md §1`):
 
-    cd /home/rlg/relational-os/sprints/sprint-5/artifacts
+    cd /home/rlg/relational-os/reference
     python3 run_s5_demo.py          # exit 0 = ALL PASS; writes reports/cockpit.md + .json
 
 > **Branding (Sprint 7):** in the **sector instances** the BI/cockpit is branded — the
@@ -104,7 +104,7 @@ answer (full text in `reports/cockpit.md`, also embedded in `06-user-manual.md �
 
 | §7G report | Status today | Where / future |
 |---|---|---|
-| Business-health panel (on-time, trust, settled value) | ✅ **built** | `sprints/sprint-5/artifacts/reports/cockpit.md`; `ros/bol.py` projections |
+| Business-health panel (on-time, trust, settled value) | ✅ **built** | `reports/cockpit.md`; `ros/bol.py` projections |
 | Prioritized attention / AI recommendation incl. do-nothing | ✅ **built** | cockpit (answers §7J.9, §7L #3/#7/#8) |
 | RelationalOS-native operational metrics (on-time, trust distribution per relationship, exceptions) | ✅ **built (minor subset)** | the three projections cover delivered-on-time, scoped trust, settled value |
 | **§7G.1 P&L / balance sheet / cash-flow** (and budget-vs-actual, segmented, aging) | 🔮 **future** | needs the BI warehouse (GL/ledger events → SQL/dbt → Metabase/Superset), per §7G.8/§G.15 |

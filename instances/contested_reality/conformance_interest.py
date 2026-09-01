@@ -7,14 +7,14 @@ shared constraint, the conflict/negotiation/appeal objects on the case, the nati
 Right type=APPEAL) stay schema-valid with the frozen 49 $defs and the frozen URI cap.
 
 Usage: (from instances/contested_reality)
-  /home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python conformance_interest.py
+  /home/rlg/relational-os/.venv/bin/python conformance_interest.py
 """
 from __future__ import annotations
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SPRINT0 = HERE.parents[1] / "sprints/sprint-0/artifacts"
+SPRINT0 = HERE.parents[1] / "schema"
 sys.path.insert(0, str(SPRINT0))
 import conformance  # noqa: E402
 

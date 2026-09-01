@@ -27,7 +27,7 @@ from jsonschema import Draft202012Validator, ValidationError
 from referencing import Registry, Resource
 
 HERE = Path(__file__).resolve().parent
-SCHEMA_YAML = HERE / "schema" / "relational-os.schema.yaml"
+SCHEMA_YAML = HERE / "relational-os.schema.yaml"
 FIXTURES = HERE / "fixtures"
 SCHEMA_ID = "https://relational-os.dev/schema/0.17/core.schema.json"
 

@@ -1,7 +1,7 @@
 # RelationalOS — Documentation package (index)
 
 **Version:** documented against SPEC v0.22 (2026-09-01) and the verified Sprints 0–5 build
-| **Package:** `sprints/sprint-6/artifacts/docs/` | **Spec release mirror (read-only):** `/home/rlg/Documents/ai-relational-os-spec.md` (+ `.pdf`)
+| **Package:** `docs/` | **Spec release mirror (read-only):** `/home/rlg/Documents/ai-relational-os-spec.md` (+ `.pdf`)
 
 This is the operating, user, and system documentation for the completed RelationalOS
 platform — a specification and a working S1–S5 reference build that surfaces as a
@@ -75,15 +75,14 @@ document's "Future deployment" notes.
 Run from the project root `/home/rlg/relational-os` with Python 3.12 available:
 
     # 1. Debug-build the whole S1→S5 state + the Business Operating Layer + the cockpit
-    cd /home/rlg/relational-os/sprints/sprint-5/artifacts
+    cd /home/rlg/relational-os/reference
     python3 run_s5_demo.py                       # exit 0 = ALL PASS (verified)
 
-    # 2. Prove the schema/validator over all SIX fixture generations (uses the Sprint-0 venv)
-    cd /home/rlg/relational-os/sprints/sprint-5/artifacts
-    /home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python run_s5_conformance.py   # exit 0 = ALL PASS
+    # 2. Prove the schema/validator over all SIX fixture generations (uses the `conformance venv`)
+    /home/rlg/relational-os/.venv/bin/python /home/rlg/relational-os/schema/run_conformance_all.py   # exit 0 = ALL PASS
 
     # 3. Read the cockpit report it just wrote
-    nvim /home/rlg/relational-os/sprints/sprint-5/artifacts/reports/cockpit.md
+    nvim /home/rlg/relational-os/reports/cockpit.md
 
 All three were executed in Sprint 6 and exited 0. Full detail in `02-setup.md` and `03-run.md`.
 
@@ -116,15 +115,15 @@ All three were executed in Sprint 6 and exited 0. Full detail in `02-setup.md` a
 ## Absolute paths for the key real artifacts
 
 - Spec: `/home/rlg/relational-os/SPEC.md` (v0.22) · release mirror `/home/rlg/Documents/ai-relational-os-spec.md` (+ `.pdf`)
-- Sprint-0 schema (49 `$defs`): `/home/rlg/relational-os/sprints/sprint-0/artifacts/schema/relational-os.schema.yaml` (+ `.json`)
-- EBNF grammar: `/home/rlg/relational-os/sprints/sprint-0/artifacts/schema/relational-os-lifecycle.ebnf`
-- Conformance validator: `/home/rlg/relational-os/sprints/sprint-0/artifacts/conformance.py`
-- Sprint-0 venv (interpreter for conformance): `/home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python`
-- **Canonical `ros/` package (S1–S5 + BOL substrate): `/home/rlg/relational-os/ros/`** (promoted from its origin `/home/rlg/relational-os/sprints/sprint-5/artifacts/ros/`, byte-identical; reorg)
+- Sprint-0 schema (49 `$defs`): `/home/rlg/relational-os/schema/relational-os.schema.yaml` (+ `.json`)
+- EBNF grammar: `/home/rlg/relational-os/schema/relational-os-lifecycle.ebnf`
+- Conformance validator: `/home/rlg/relational-os/schema/conformance.py`
+- `conformance venv` (interpreter for conformance): `/home/rlg/relational-os/.venv/bin/python`
+- **Canonical `ros/` package (S1–S5 + BOL substrate): `/home/rlg/relational-os/ros/`** (promoted from its origin `/home/rlg/relational-os/ros/`, byte-identical; reorg)
 - Green gate / test suite: `/home/rlg/relational-os/tests/run_checks.py` · `/home/rlg/relational-os/scripts/verify.sh`
-- Daily demo + cockpit producer: `/home/rlg/relational-os/sprints/sprint-5/artifacts/run_s5_demo.py`
-- Cockpit report: `/home/rlg/relational-os/sprints/sprint-5/artifacts/reports/cockpit.md` (+ `cockpit.json`)
-- Current state graph: `/home/rlg/relational-os/sprints/sprint-5/artifacts/graph/current-state.json`
-- Ledger fixture: `/home/rlg/relational-os/sprints/sprint-5/artifacts/fixtures/ledger/ledger-quoteko.json`
-- Fixtures per generation: `/home/rlg/relational-os/sprints/sprint-N/artifacts/fixtures/`
+- Daily demo + cockpit producer: `/home/rlg/relational-os/reference/reference/run_s5_demo.py`
+- Cockpit report: `/home/rlg/relational-os/reports/cockpit.md` (+ `cockpit.json`)
+- Current state graph: `/home/rlg/relational-os/reference/graph/current-state.json`
+- Ledger fixture: `/home/rlg/relational-os/reference/fixtures/ledger/ledger-quoteko.json`
+- Fixtures per generation: `/home/rlg/relational-os/data/fixtures/`
 - Closing hand-off: `/home/rlg/relational-os/sprints/COMPLETE.md`

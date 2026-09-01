@@ -13,8 +13,9 @@ import sys
 from pathlib import Path
 
 ######## import Sprint-0's validator verbatim ########
-SPRINT0 = Path(__file__).resolve().parents[2] / "sprint-0/artifacts"
-S1_FIXTURES = Path(__file__).resolve().parent / "fixtures"
+SPRINT0 = Path(__file__).resolve().parents[3] / "schema"
+GCANON = Path(__file__).resolve().parents[3] / "data/fixtures"
+S1_FIXTURES = GCANON / "gen-1"
 sys.path.insert(0, str(SPRINT0))
 
 import conformance  # noqa: E402
@@ -23,7 +24,7 @@ import conformance  # noqa: E402
 conformance.FIXTURES = S1_FIXTURES
 ok = conformance.Conformance().run()
 # Restore + re-run sprint-0's own fixtures unchanged (no regression).
-conformance.FIXTURES = SPRINT0 / "fixtures"
+conformance.FIXTURES = GCANON / "gen-0"
 print("\n[sprint-0 non-regression]")
 ok0 = conformance.Conformance().run()
 

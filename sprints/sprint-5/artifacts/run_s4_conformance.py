@@ -11,17 +11,18 @@ import sys
 from pathlib import Path
 
 ######## import Sprint-0's validator verbatim ########
-SPRINT0 = Path(__file__).resolve().parents[2] / "sprint-0/artifacts"
+SPRINT0 = Path(__file__).resolve().parents[3] / "schema"
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(SPRINT0))
+GCANON = Path(__file__).resolve().parents[3] / "data/fixtures"
 
 import conformance  # noqa: E402
 
 ROOTS = [
-    ("sprint-0", SPRINT0 / "fixtures"),
-    ("sprint-1", HERE.parents[1] / "sprint-1/artifacts/fixtures"),
-    ("sprint-2", HERE.parents[1] / "sprint-2/artifacts/fixtures"),
-    ("sprint-3", HERE.parents[1] / "sprint-3/artifacts/fixtures"),
+    ("sprint-0", GCANON / "gen-0"),
+    ("sprint-1", GCANON / "gen-1"),
+    ("sprint-2", GCANON / "gen-2"),
+    ("sprint-3", GCANON / "gen-3"),
     ("sprint-4", HERE / "fixtures"),
 ]
 

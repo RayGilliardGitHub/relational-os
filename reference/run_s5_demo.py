@@ -14,6 +14,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
+sys.path.insert(0, str(HERE.parent))  # canonical ros/ at repo root
 
 import s3_demo                                # noqa: E402
 import s5_demo                                # noqa: E402

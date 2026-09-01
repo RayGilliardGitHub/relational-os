@@ -1,5 +1,5 @@
 # §7L Q8 capacity-constrained RE-RANK for the machine — by the frozen `rank` utility (Sprint 32, an authorized POLICY step on top of the unchanged reason-not-choice advisory)
-generated 2026-09-01T05:56:03Z  |  `capacity_rerank.capacity_rerank` (new, additive) + engine `cockpit_s7l` advisory  |  NO engine change (hash a60f8f7…); SPEC v0.22, 49 $defs, URI cap, no new noun.
+generated 2026-09-01T06:22:47Z  |  `capacity_rerank.capacity_rerank` (new, additive) + engine `cockpit_s7l` advisory  |  NO engine change (hash a60f8f7…); SPEC v0.22, 49 $defs, URI cap, no new noun.
 
 The advisory path NEVER re-ranks: for every org the engine's Q8 recommendation still equals `cockpit_q7q8`. The re-rank is the deliberate, additively-built step the Sprint 31 prompt explicitly authorized: when an org's machine-eligible best is `capacity_infeasible` from RECORDED per-option `capacity_requirements`, BY POLICY the machine picks the highest-utility option (frozen `rank`) that is neither floor-gated nor `capacity_infeasible`. Respects the §6 floor (a floor-gated option is never auto-picked); never invents a requirement; the do-nothing/UNRESOLVED baseline is the honest fallback when every capacity-consuming option is infeasible (and it SAYS so).
 

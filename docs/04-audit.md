@@ -33,9 +33,9 @@ Sprints 0–5. This manual gives the concrete runnable harness that provides the
 ### 2.1 Ledger integrity — `Ledger.verify()` (hash-chain + signatures)
 
 Exercised by the daily cockpit itself; you do not need extra tooling. After running
-`run_s5_demo.py` (`03-run.md §1`), the closing wiring lines are the audit's first result:
+`reference/run_s5_demo.py` (`03-run.md §1`), the closing wiring lines are the audit's first result:
 
-    cd /home/rlg/relational-os/sprints/sprint-5/artifacts
+    cd /home/rlg/relational-os/reference
     python3 run_s5_demo.py
 
 Real output (embedded):
@@ -67,15 +67,15 @@ carry typed URIs and no hashes (state).
 ### 2.3 Schema / instance / chain / roundtrip / statemachine conformance (C1–C5)
 
 The conformance validator is the system's schema-and-integrity gate. Run it over all six
-generations (Sprint-0 venv interpreter, from `sprint-5/artifacts/`):
+generations (`.venv` interpreter, any cwd):
 
-    cd /home/rlg/relational-os/sprints/sprint-5/artifacts
-    /home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python run_s5_conformance.py
+    cd /home/rlg/relational-os/reference
+    /home/rlg/relational-os/.venv/bin/python schema/run_conformance_all.py
     → exit 0, "RESULT: ALL PASS"
 
 Real head (embedded) — note how each check class maps to a concern:
 
-    === [sprint-0] sprint-0/artifacts/fixtures ===
+    === [gen-0] data/fixtures/gen-0 ===
       [PASS] C1 schema structurally valid  — 49 $defs
       [PASS] C2 all fixture instances validate + schemes + RFC3339  — 156 instances
       [PASS] C3 ledger content-addressed + signed
@@ -129,9 +129,9 @@ real graph/ledger store replaces the reference build.
 
 ## 5. Quick audit procedure (run this on demand)
 
-    cd /home/rlg/relational-os/sprints/sprint-5/artifacts
+    cd /home/rlg/relational-os/reference
     python3 run_s5_demo.py                                  # 2.1 + 2.2: ledger verify + round-trip
-    /home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python run_s5_conformance.py  # 2.3: C1–C5 all six generations
+    /home/rlg/relational-os/.venv/bin/python schema/run_conformance_all.py  # 2.3: C1–C5 all six generations
 
 Both exit 0, ALL PASS, when intact. That is the whole on-demand audit.
 

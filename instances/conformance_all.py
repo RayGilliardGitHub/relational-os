@@ -4,14 +4,14 @@
 Reuses the Sprint-0 conformance validator VERBATIM over each sector's emitted fixtures
 (04-audit.md's procedure, applied per sector). Exit 0 = every sector ALL PASS (C1-C5).
 
-Usage:  /home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python conformance_all.py
+Usage:  /home/rlg/relational-os/.venv/bin/python conformance_all.py
 """
 from __future__ import annotations
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SPRINT0 = HERE.parents[0] / "sprints/sprint-0/artifacts"
+SPRINT0 = HERE.parents[0] / "schema"
 sys.path.insert(0, str(SPRINT0))
 sys.path.insert(0, str(HERE))
 

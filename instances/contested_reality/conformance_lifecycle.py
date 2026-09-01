@@ -9,14 +9,14 @@ determination/resolution_type/reopened; appeal->reopen->reassess chains; trust e
 UNRESOLVED. Includes the full dispute lifecycle state-machine walk for C5.
 
 Usage: (from instances/contested_reality)
-  /home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python conformance_lifecycle.py
+  /home/rlg/relational-os/.venv/bin/python conformance_lifecycle.py
 """
 from __future__ import annotations
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SPRINT0 = HERE.parents[1] / "sprints/sprint-0/artifacts"
+SPRINT0 = HERE.parents[1] / "schema"
 sys.path.insert(0, str(SPRINT0))
 import conformance  # noqa: E402
 

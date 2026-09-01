@@ -61,7 +61,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 INSTANCES = HERE.parent
 ROS = INSTANCES.parents[0]
-SPRINT0 = INSTANCES.parents[1] / "sprints/sprint-0/artifacts"
+SPRINT0 = INSTANCES.parents[1] / "schema"
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(INSTANCES))
 sys.path.insert(0, str(ROS))

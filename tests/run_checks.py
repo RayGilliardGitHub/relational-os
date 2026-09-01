@@ -14,8 +14,8 @@ Steps (the documented green gate):
   2.  canonical `ros/` is FLAT byte-identical to sprints/sprint-5/artifacts/ros/;
   3.  frozen invariants: schema 34264934…(yaml)/7fc38c8c(json), 49 $defs, SPEC v0.22,
       engine a60f8f7…, capacity_rerank.py f7c6a185…;
-  4.  daily cockpit (S1-S5 + BOL): sprint-5/artifacts python3 run_s5_demo.py;
-  5.  conformance all-six generations: sprint-5/artifacts run_s5_conformance.py (Sprint-0 venv);
+  4.  daily cockpit (S1-S5 + BOL): reference/ python3 run_s5_demo.py;
+  5.  conformance all-six generations: schema/run_conformance_all.py (the .venv interpreter);
   6.  sectors: instances/ build_all.py (python3) + conformance_all.py (venv);
   7.  contested_reality: the 20 canonical CR demos (python3) + the 5 CR conformances (venv);
   8.  S5 reference demo + agent demo + their conformances.
@@ -34,9 +34,9 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent        # .../relational-os/tests
 ROOT = HERE.parent                             # .../relational-os
-VENV = ROOT / "sprints/sprint-0/artifacts/.venv/bin/python"
+VENV = ROOT / ".venv/bin/python"
 CR = ROOT / "instances/contested_reality"
-S5 = ROOT / "sprints/sprint-5/artifacts"
+S5 = ROOT / "reference"
 INST = ROOT / "instances"
 AGENT = ROOT / "instances/agent_demo"
 
@@ -78,11 +78,11 @@ def main() -> int:
                for f in (ROOT / "ros").glob("*.py"))
     _report("canonical `ros/` FLAT byte-identical to sprints/sprint-5/artifacts/ros/", same)
     # frozen invariants
-    yaml_h = _sha8(ROOT / "sprints/sprint-0/artifacts/schema/relational-os.schema.yaml")
-    json_h = _sha8(ROOT / "sprints/sprint-0/artifacts/schema/relational-os.schema.json")
+    yaml_h = _sha8(ROOT / "schema/relational-os.schema.yaml")
+    json_h = _sha8(ROOT / "schema/relational-os.schema.json")
     _report("schema hash 34264934…(.yaml)/7fc38c8c(.json)", yaml_h == "34264934" and json_h == "7fc38c8c",
             f"yaml={yaml_h} json={json_h}")
-    nd = len(json.load(open(ROOT / "sprints/sprint-0/artifacts/schema/relational-os.schema.json"))["$defs"])
+    nd = len(json.load(open(ROOT / "schema/relational-os.schema.json"))["$defs"])
     _report("49 $defs", nd == 49, f"live={nd}")
     mver = re.search(r"Version:\s*\**\s*([0-9.]+)", (ROOT / "SPEC.md").read_text())
     _report("SPEC v0.22", bool(mver) and mver.group(1) == "0.22", f"live={mver.group(1) if mver else None}")
@@ -94,7 +94,7 @@ def main() -> int:
     _run(["python3", "run_s5_demo.py"], cwd=S5, name="s5 daily cockpit")
 
     print("\n-- conformance all-six generations (Sprint-0 venv) --")
-    _run(["python3", "run_s5_conformance.py"], cwd=S5, venv=True, name="s5 conformance all-six")
+    _run(["python3", "run_conformance_all.py"], cwd=ROOT / "schema", venv=True, name="conformance all-six")
 
     print("\n-- sectors (instances/) --")
     _run(["python3", "build_all.py"], cwd=INST, name="build_all (12 sectors)")

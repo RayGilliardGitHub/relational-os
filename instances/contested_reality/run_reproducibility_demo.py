@@ -67,8 +67,8 @@ _RUNNABLE_LABELS = {"deli-varmax-cap", "deli-infcap", "deli-deficit-inf",
                     "cove-recorded", "deli-atcap", "deli-deficit"}
 _RERANK_LABELS = set(_RERANK_EXPECT)
 _SPEC = HERE.parents[1] / "SPEC.md"                            # /home/rlg/relational-os/SPEC.md
-_SCHEMA_YAML = HERE.parents[1] / "sprints/sprint-0/artifacts/schema/relational-os.schema.yaml"
-_SCHEMA_JSON = HERE.parents[1] / "sprints/sprint-0/artifacts/schema/relational-os.schema.json"
+_SCHEMA_YAML = HERE.parents[1] / "schema/relational-os.schema.yaml"
+_SCHEMA_JSON = HERE.parents[1] / "schema/relational-os.schema.json"
 _ENGINE_FILE = HERE / "adjudication_engine.py"
 _RERANK_FILE = HERE / "capacity_rerank.py"
 
