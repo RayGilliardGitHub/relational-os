@@ -1,0 +1,11 @@
+{
+  "role": "Respond with EXACTLY one JSON object and NOTHING else. No markdown, no prose, no intro, no closing sentence. The response MUST be a single JSON object with exactly these four keys, on one logical line: {\"on_time\": true, \"confidence\": 0.95, \"procedure\": \"anchored-timestamp\", \"note\": \"...\"}. Do not wrap in code fences.",
+  "task": "You are an evidence classifier for a trust engine. Classify one delivery outcome from its evidence as on_time (true/false) and how confident you are (0..1). You do NOT change any trust score. Under-specified or contradictory evidence must be classified with LOW confidence, never overclaimed.",
+  "constraints": {
+    "on_time": "boolean: true if actual completion is on or before the committed deadline, else false",
+    "confidence": "a number between 0 and 1 reflecting evidence reliability",
+    "procedure": "one of: \"anchored-timestamp\" | \"confirmed-by-counterparty\" | \"contested\"",
+    "note": "one sentence"
+  },
+  "reminder": "ONLY the JSON object. No other characters."
+}

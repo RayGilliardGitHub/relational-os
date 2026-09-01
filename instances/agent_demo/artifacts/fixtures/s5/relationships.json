@@ -1,0 +1,46 @@
+[
+  {
+    "uri": "relationship://tech/ops-rel",
+    "participants": [
+      "org://tech/vantagecloud",
+      "org://tech/sierra-coast"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://tech/vantagecloud": [
+        "provider"
+      ],
+      "org://tech/sierra-coast": [
+        "client"
+      ]
+    },
+    "authority": [
+      "authority://tech/for-ops"
+    ],
+    "purpose": "technology operating relationship"
+  },
+  {
+    "uri": "relationship://tech/partner-net",
+    "participants": [
+      "org://tech/vantagecloud",
+      "org://tech/sentinel-labs",
+      "org://tech/revan-digital"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://tech/vantagecloud": [
+        "operator"
+      ],
+      "org://tech/sentinel-labs": [
+        "partner"
+      ],
+      "org://tech/revan-digital": [
+        "partner"
+      ]
+    },
+    "authority": [
+      "authority://tech/for-ops"
+    ],
+    "purpose": "technology partner network"
+  }
+]

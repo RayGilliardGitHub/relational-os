@@ -1,6 +1,6 @@
 {
   "uri": "db://ledger/hlth-2026",
-  "head_hash": "3e5e4fc812b480dffcf0e5e0830e683dee82a2bae2b7fb22072a566139ffbd03",
+  "head_hash": "df199e78db99f7c98c85dc65825d67f5af66f32f92a6c16f333eda2c270eb98b",
   "entries": [
     {
       "uri": "event://hlth/s5-state-2",
@@ -10,7 +10,7 @@
       "causation_id": "ev-s5-1",
       "idempotency_key": "idem-s5-2",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "provision Healthcare / Pharma base (actors, relationships, authority + operator + policy + expectation)",
       "state_update": [
@@ -318,10 +318,10 @@
           "uri": "process_instance://hlth/pi-core",
           "process": "process://hlth/pr-core",
           "status": "RUNNING",
-          "started_at": "2026-09-01T00:29:53Z"
+          "started_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "b972aa43737abce1bc8cc415d6ea46a7d9978c9c320965fe29008196c4b3f693"
+      "hash": "58ed5bfd3c89d9d6e4a0a89bb9c22e345fef0fbfcd9589f63a32523c92a8e949"
     },
     {
       "uri": "event://hlth/s5-state-100",
@@ -331,7 +331,7 @@
       "causation_id": "ev-s5-99",
       "idempotency_key": "idem-s5-100",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "seed scoped Trust org://hlth/cortica-supply = 0.6",
       "state_update": [
@@ -344,7 +344,7 @@
           "score": 0.6
         }
       ],
-      "hash": "a473ae9443b1a432604b84cdab4ccb6ce6c3a8954131f5a8f115008534039651"
+      "hash": "62d0f6ea488aea22e6126b7191846e1b56b3f79a20d6ebb97306d4ad76e68394"
     },
     {
       "uri": "event://hlth/s5-state-101",
@@ -354,7 +354,7 @@
       "causation_id": "ev-s5-100",
       "idempotency_key": "idem-s5-101",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "seed scoped Trust org://hlth/meridian-med = 0.9",
       "state_update": [
@@ -367,7 +367,7 @@
           "score": 0.9
         }
       ],
-      "hash": "98fd9bdd7f5034bae46a30b06db6e0cd529a7036595c2dc3897075a9f2f2234d"
+      "hash": "6f195263eaf6ab4b5f8eb8205fa7337af3640bb0301ddfd7d88d5c5a29a1e03c"
     },
     {
       "uri": "event://hlth/s5-state-102",
@@ -377,7 +377,7 @@
       "causation_id": "ev-s5-101",
       "idempotency_key": "idem-s5-102",
       "signature": "signed-by-agent://hlth/s2",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s2",
       "detail": "register resource-commitment offer from org://hlth/cortica-supply",
       "state_update": [
@@ -393,7 +393,7 @@
           "fit_note": "healthcare / pharma partner delivery line"
         }
       ],
-      "hash": "36b815618fd8e6adf5b4f49e5552723b4c5a3834c1ba07f9cdf418b464290812"
+      "hash": "0bc0743e0291e53e2103413423fe3ad11e582584463a0e075ff71fc6ec5a2225"
     },
     {
       "uri": "event://hlth/s5-state-103",
@@ -403,7 +403,7 @@
       "causation_id": "ev-s5-102",
       "idempotency_key": "idem-s5-103",
       "signature": "signed-by-agent://hlth/s2",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s2",
       "detail": "register resource-commitment offer from org://hlth/meridian-med",
       "state_update": [
@@ -419,7 +419,7 @@
           "fit_note": "healthcare / pharma partner delivery line"
         }
       ],
-      "hash": "c74d25a8bd96dc12d5fee4834769df49156f29a43edd2bea8f5f68e271b96b7d"
+      "hash": "84449263925469a2b77753da98e4ab704c5b08fc265d9698e6e931e676d940a8"
     },
     {
       "uri": "event://hlth/s5-state-104",
@@ -429,7 +429,7 @@
       "causation_id": "ev-s5-103",
       "idempotency_key": "idem-s5-104",
       "signature": "signed-by-agent://hlth/s2",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s2",
       "detail": "initial match ranked offer://hlth/o-l (score 0.900) \u2014 base ranking",
       "state_update": [
@@ -461,10 +461,10 @@
               "score": 0.6
             }
           ],
-          "made_at": "2026-09-01T00:29:53Z"
+          "made_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "e9a2ab16c9b9eac59e0072d490331e720c2873e017a7dd8fb931971f87573759"
+      "hash": "8852fa6b313d14ee9bb87452ead2b56eb60cdd958854b9705fc109de56e716a9"
     },
     {
       "uri": "event://hlth/s4-exchange-meridian-medQ3",
@@ -474,7 +474,7 @@
       "causation_id": "ev-s4-104",
       "idempotency_key": "idem-s4-105",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://s4",
       "detail": "settle exchange meridian-medQ3: 2000000.0 USD org://hlth/lumenhealth->org://hlth/meridian-med (value 2000000.0, cost 2000000.0)",
       "state_update": [
@@ -525,7 +525,7 @@
             "provider": "org://hlth/meridian-med",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T00:29:53Z"
+          "made_at": "2026-09-01T00:57:37Z"
         },
         {
           "uri": "event://hlth/s4-exchange-meridian-medQ3",
@@ -535,7 +535,7 @@
           "causation_id": "ev-s4-104",
           "idempotency_key": "idem-s4-105",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T00:29:53Z",
+          "occurred_at": "2026-09-01T00:57:37Z",
           "actor": "agent://s4",
           "detail": "settle exchange meridian-medQ3: 2000000.0 USD org://hlth/lumenhealth->org://hlth/meridian-med (value 2000000.0, cost 2000000.0)",
           "state_update": [],
@@ -557,7 +557,7 @@
       "provider": "org://hlth/meridian-med",
       "settled_at": "2026-09-02T00:00:00Z",
       "exchange_of": "commitment://hlth/c-meridian-medQ3",
-      "hash": "5f139ff32b819c3a09c0645bb77301937f7bd49703c5e643111a6cd94185c3fb"
+      "hash": "f90adea0b741d0a5674b7e370b0745594aa9495aa9478883b83239d00038125a"
     },
     {
       "uri": "event://hlth/s4-outcome-meridian-medQ3",
@@ -567,7 +567,7 @@
       "causation_id": "ev-s4-105",
       "idempotency_key": "idem-s4-106",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://s4",
       "detail": "evaluate settle meridian-medQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
       "state_update": [
@@ -579,7 +579,7 @@
           "causation_id": "ev-s4-105",
           "idempotency_key": "idem-s4-106",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T00:29:53Z",
+          "occurred_at": "2026-09-01T00:57:37Z",
           "actor": "agent://s4",
           "detail": "evaluate settle meridian-medQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
           "state_update": [],
@@ -597,7 +597,7 @@
       "deadline": "2026-08-31T00:00:00Z",
       "settled_at": "2026-09-02T00:00:00Z",
       "score": 0.5,
-      "hash": "0a07f9a2a9a175fe2eb018f6e7c3b9ccedded4328631af2e6833ba512259d5c1"
+      "hash": "87b9616313955bd806277924cbc7949f9e6aacfadb13cc3f20bbddc051d81919"
     },
     {
       "uri": "event://hlth/outcome-committed-meridian-medQ3",
@@ -607,7 +607,7 @@
       "causation_id": "ev-s2-106",
       "idempotency_key": "idem-s2-107",
       "signature": "signed-by-org://hlth/meridian-med",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "org://hlth/meridian-med",
       "detail": "job committed-meridian-medQ3 by org://hlth/meridian-med: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
       "state_update": [
@@ -619,7 +619,7 @@
           "causation_id": "ev-s2-106",
           "idempotency_key": "idem-s2-107",
           "signature": "signed-by-org://hlth/meridian-med",
-          "occurred_at": "2026-09-01T00:29:53Z",
+          "occurred_at": "2026-09-01T00:57:37Z",
           "actor": "org://hlth/meridian-med",
           "detail": "job committed-meridian-medQ3 by org://hlth/meridian-med: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
           "state_update": [],
@@ -637,7 +637,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T00:29:53Z"
+          "captured_at": "2026-09-01T00:57:37Z"
         }
       ],
       "job": "committed-meridian-medQ3",
@@ -645,7 +645,7 @@
       "committed_deadline": "2026-08-31T00:00:00Z",
       "actual_completed_at": "2026-09-02T00:00:00Z",
       "on_time": false,
-      "hash": "6cc3e189769d98662a2b93b5dd0ae2a1fb55550dac02e842aeebecf3a14c2c19"
+      "hash": "930156f238bf7d1d10395900128b10a83f24ba7227198a72ac51e0ac903835b2"
     },
     {
       "uri": "event://hlth/verify-committed-meridian-medQ3",
@@ -655,7 +655,7 @@
       "causation_id": "ev-s2-107",
       "idempotency_key": "idem-s2-108",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://s5",
       "detail": "verify 'org://hlth/meridian-med delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -672,10 +672,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T00:29:53Z"
+          "captured_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "d3bbbddabf91caabfa5924f90766b865d05a5c68aac2bcf15759d0aac2979842"
+      "hash": "d372a9224b3d81c6b333847cb4188e4853c4d76439cfc9e2e8d67e0e4fd887af"
     },
     {
       "uri": "event://hlth/trust-update-meridian-med",
@@ -685,7 +685,7 @@
       "causation_id": "ev-s2-108",
       "idempotency_key": "idem-s2-109",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "trust for org://hlth/meridian-med [pharmaceutical delivery reliability] 0.900 -> 0.520 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -696,7 +696,7 @@
           "claim": "pharmaceutical delivery reliability",
           "context": "relationship://hlth/partner-net",
           "score": 0.52,
-          "updated_at": "2026-09-01T00:29:53Z",
+          "updated_at": "2026-09-01T00:57:37Z",
           "expected": 0.8,
           "outcome": 0.0,
           "evidence": [
@@ -706,7 +706,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "8e90b3a9dea13d957358fb63f808764977ddec3baab78ef9bb95f9c3dd1fc120"
+      "hash": "9c0febe2fc7b0953077c1760282c0a7c7a641fca0333360e2b5e01712bf91a6e"
     },
     {
       "uri": "event://hlth/s4-exchange-cortica-supplyQ3",
@@ -716,7 +716,7 @@
       "causation_id": "ev-s4-109",
       "idempotency_key": "idem-s4-110",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://s4",
       "detail": "settle exchange cortica-supplyQ3: 2000000.0 USD org://hlth/lumenhealth->org://hlth/cortica-supply (value 2000000.0, cost 2000000.0)",
       "state_update": [
@@ -767,7 +767,7 @@
             "provider": "org://hlth/cortica-supply",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T00:29:53Z"
+          "made_at": "2026-09-01T00:57:37Z"
         },
         {
           "uri": "event://hlth/s4-exchange-cortica-supplyQ3",
@@ -777,7 +777,7 @@
           "causation_id": "ev-s4-109",
           "idempotency_key": "idem-s4-110",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T00:29:53Z",
+          "occurred_at": "2026-09-01T00:57:37Z",
           "actor": "agent://s4",
           "detail": "settle exchange cortica-supplyQ3: 2000000.0 USD org://hlth/lumenhealth->org://hlth/cortica-supply (value 2000000.0, cost 2000000.0)",
           "state_update": [],
@@ -799,7 +799,7 @@
       "provider": "org://hlth/cortica-supply",
       "settled_at": "2026-08-30T00:00:00Z",
       "exchange_of": "commitment://hlth/c-cortica-supplyQ3",
-      "hash": "799002d9f8d7be24e3b479db92ebc72fa5c5a9bbdb1e0c06de17727ad3ed3c62"
+      "hash": "519029044a7ea641ecaa36b874f5d766665325edbe4dfa77121ac1f1d8ad332d"
     },
     {
       "uri": "event://hlth/s4-outcome-cortica-supplyQ3",
@@ -809,7 +809,7 @@
       "causation_id": "ev-s4-110",
       "idempotency_key": "idem-s4-111",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://s4",
       "detail": "evaluate settle cortica-supplyQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
       "state_update": [
@@ -821,7 +821,7 @@
           "causation_id": "ev-s4-110",
           "idempotency_key": "idem-s4-111",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T00:29:53Z",
+          "occurred_at": "2026-09-01T00:57:37Z",
           "actor": "agent://s4",
           "detail": "evaluate settle cortica-supplyQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
           "state_update": [],
@@ -839,7 +839,7 @@
       "deadline": "2026-08-31T00:00:00Z",
       "settled_at": "2026-08-30T00:00:00Z",
       "score": 1.0,
-      "hash": "ac99e91cd2c8d42626cf182a4c501bd7efe9a02c69bacf7e09c3fb838aff733e"
+      "hash": "5d1079d14592a56d74491ad7586c33f468387d6f09de70e7296fe3a30a2a3795"
     },
     {
       "uri": "event://hlth/outcome-committed-cortica-supplyQ3",
@@ -849,7 +849,7 @@
       "causation_id": "ev-s2-111",
       "idempotency_key": "idem-s2-112",
       "signature": "signed-by-org://hlth/cortica-supply",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "org://hlth/cortica-supply",
       "detail": "job committed-cortica-supplyQ3 by org://hlth/cortica-supply: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
       "state_update": [
@@ -861,7 +861,7 @@
           "causation_id": "ev-s2-111",
           "idempotency_key": "idem-s2-112",
           "signature": "signed-by-org://hlth/cortica-supply",
-          "occurred_at": "2026-09-01T00:29:53Z",
+          "occurred_at": "2026-09-01T00:57:37Z",
           "actor": "org://hlth/cortica-supply",
           "detail": "job committed-cortica-supplyQ3 by org://hlth/cortica-supply: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
           "state_update": [],
@@ -879,7 +879,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T00:29:53Z"
+          "captured_at": "2026-09-01T00:57:37Z"
         }
       ],
       "job": "committed-cortica-supplyQ3",
@@ -887,7 +887,7 @@
       "committed_deadline": "2026-08-31T00:00:00Z",
       "actual_completed_at": "2026-08-30T00:00:00Z",
       "on_time": true,
-      "hash": "50547190fc42313c5a109ea11b99aa1b9eb68ba10c47ef9d7768c2dc5eea350a"
+      "hash": "068670b50ce6c5852e56ad55bfbd8c2a8e650cb4410d1fa0a4ab97633414ae18"
     },
     {
       "uri": "event://hlth/verify-committed-cortica-supplyQ3",
@@ -897,7 +897,7 @@
       "causation_id": "ev-s2-112",
       "idempotency_key": "idem-s2-113",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://s5",
       "detail": "verify 'org://hlth/cortica-supply delivered the committed resource on time' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -914,10 +914,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T00:29:53Z"
+          "captured_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "557a7f19a51913ea569c1f1c827128624f68f4598f1071b6c4e0105c8d9b8272"
+      "hash": "ab5de8cb17160be45b6455e855393c9068987b55b8b2b2e5e24f9cfe70d1f2d4"
     },
     {
       "uri": "event://hlth/trust-update-cortica-supply",
@@ -927,7 +927,7 @@
       "causation_id": "ev-s2-113",
       "idempotency_key": "idem-s2-114",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "trust for org://hlth/cortica-supply [pharmaceutical delivery reliability] 0.600 -> 0.695 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -938,7 +938,7 @@
           "claim": "pharmaceutical delivery reliability",
           "context": "relationship://hlth/partner-net",
           "score": 0.695,
-          "updated_at": "2026-09-01T00:29:53Z",
+          "updated_at": "2026-09-01T00:57:37Z",
           "expected": 0.8,
           "outcome": 1.0,
           "evidence": [
@@ -948,7 +948,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "9d0f21cebfd961e10822f4edabb3b616721907338971e1a1b18b5d32886321a1"
+      "hash": "4c3bf7dc82bafced4f1d6a755e0f25b4b790e50b9fbe0400dffa7cacdda5cfe3"
     },
     {
       "uri": "event://hlth/s4-exchange-meridian-medQ4",
@@ -958,7 +958,7 @@
       "causation_id": "ev-s4-114",
       "idempotency_key": "idem-s4-115",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://s4",
       "detail": "settle exchange meridian-medQ4: 1600000.0 USD org://hlth/lumenhealth->org://hlth/meridian-med (value 1600000.0, cost 1600000.0)",
       "state_update": [
@@ -1009,7 +1009,7 @@
             "provider": "org://hlth/meridian-med",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T00:29:53Z"
+          "made_at": "2026-09-01T00:57:37Z"
         },
         {
           "uri": "event://hlth/s4-exchange-meridian-medQ4",
@@ -1019,7 +1019,7 @@
           "causation_id": "ev-s4-114",
           "idempotency_key": "idem-s4-115",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T00:29:53Z",
+          "occurred_at": "2026-09-01T00:57:37Z",
           "actor": "agent://s4",
           "detail": "settle exchange meridian-medQ4: 1600000.0 USD org://hlth/lumenhealth->org://hlth/meridian-med (value 1600000.0, cost 1600000.0)",
           "state_update": [],
@@ -1041,7 +1041,7 @@
       "provider": "org://hlth/meridian-med",
       "settled_at": "2026-09-17T00:00:00Z",
       "exchange_of": "commitment://hlth/c-meridian-medQ4",
-      "hash": "403171a6886685fd0d74e483a4f68ab5636fb9a68f6d949352c63f10ee35722a"
+      "hash": "530f68436ef8e098345b2e576cd5d5d036a28d4e708ecd8857164e9ebbc33f20"
     },
     {
       "uri": "event://hlth/s4-outcome-meridian-medQ4",
@@ -1051,7 +1051,7 @@
       "causation_id": "ev-s4-115",
       "idempotency_key": "idem-s4-116",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://s4",
       "detail": "evaluate settle meridian-medQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
       "state_update": [
@@ -1063,7 +1063,7 @@
           "causation_id": "ev-s4-115",
           "idempotency_key": "idem-s4-116",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T00:29:53Z",
+          "occurred_at": "2026-09-01T00:57:37Z",
           "actor": "agent://s4",
           "detail": "evaluate settle meridian-medQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
           "state_update": [],
@@ -1081,7 +1081,7 @@
       "deadline": "2026-09-15T00:00:00Z",
       "settled_at": "2026-09-17T00:00:00Z",
       "score": 0.5,
-      "hash": "563308e305be4ef5e61307c31bf3bc19f14e6fcd9b82bf82e79e0ea5d94311ab"
+      "hash": "dc1c9832d2cd5792c6d1767e345a910cccdbe3c741ca0303546b4e87d30e67db"
     },
     {
       "uri": "event://hlth/outcome-committed-meridian-medQ4",
@@ -1091,7 +1091,7 @@
       "causation_id": "ev-s2-116",
       "idempotency_key": "idem-s2-117",
       "signature": "signed-by-org://hlth/meridian-med",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "org://hlth/meridian-med",
       "detail": "job committed-meridian-medQ4 by org://hlth/meridian-med: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
       "state_update": [
@@ -1103,7 +1103,7 @@
           "causation_id": "ev-s2-116",
           "idempotency_key": "idem-s2-117",
           "signature": "signed-by-org://hlth/meridian-med",
-          "occurred_at": "2026-09-01T00:29:53Z",
+          "occurred_at": "2026-09-01T00:57:37Z",
           "actor": "org://hlth/meridian-med",
           "detail": "job committed-meridian-medQ4 by org://hlth/meridian-med: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
           "state_update": [],
@@ -1121,7 +1121,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T00:29:53Z"
+          "captured_at": "2026-09-01T00:57:37Z"
         }
       ],
       "job": "committed-meridian-medQ4",
@@ -1129,7 +1129,7 @@
       "committed_deadline": "2026-09-15T00:00:00Z",
       "actual_completed_at": "2026-09-17T00:00:00Z",
       "on_time": false,
-      "hash": "79c4457ae6b61b26024d032e74688e675d34a8f38e44756fd4606192f4dd478c"
+      "hash": "9092648a5b58be0c9806d6abe6b3b71cfa33db4853dbfaad2bf23e3be42c0225"
     },
     {
       "uri": "event://hlth/verify-committed-meridian-medQ4",
@@ -1139,7 +1139,7 @@
       "causation_id": "ev-s2-117",
       "idempotency_key": "idem-s2-118",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://s5",
       "detail": "verify 'org://hlth/meridian-med delivered the committed resource LATE' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -1156,10 +1156,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T00:29:53Z"
+          "captured_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "48a1a213bdea81faddbad46e57f7e593a779658ed84b1ee3b13217833bffe772"
+      "hash": "e3ce258d5c729d61021280f7e67a5403b141cb3651f7cf136f4de57a771ed852"
     },
     {
       "uri": "event://hlth/trust-update-meridian-med",
@@ -1169,7 +1169,7 @@
       "causation_id": "ev-s2-118",
       "idempotency_key": "idem-s2-119",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "trust for org://hlth/meridian-med [pharmaceutical delivery reliability] 0.520 -> 0.140 (outcome=0, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -1180,7 +1180,7 @@
           "claim": "pharmaceutical delivery reliability",
           "context": "relationship://hlth/partner-net",
           "score": 0.14,
-          "updated_at": "2026-09-01T00:29:53Z",
+          "updated_at": "2026-09-01T00:57:37Z",
           "expected": 0.8,
           "outcome": 0.0,
           "evidence": [
@@ -1190,7 +1190,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "a1fb6e14cbfd1a11d0a58ef1335fcf4a29bdd37dd851194eeda7d003f86b843a"
+      "hash": "2d87f46faae49a08a71590e27bccb5e68fb3af3048bc08af4e0595fbb52c5823"
     },
     {
       "uri": "event://hlth/s5-state-7000",
@@ -1200,7 +1200,7 @@
       "causation_id": "ev-s5-6999",
       "idempotency_key": "idem-s5-7000",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "open case case://hlth/c-on-time (committed pharmaceutical delivery below target on time)",
       "state_update": [
@@ -1217,18 +1217,18 @@
           "relationships": [
             "relationship://hlth/ops-rel"
           ],
-          "created_at": "2026-09-01T00:29:53Z",
+          "created_at": "2026-09-01T00:57:37Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": null
             }
           ],
           "suggestion": "ledger-projected on-time below target"
         }
       ],
-      "hash": "d455259445cf8345e3ef7ff0f94ea80a964b3097394c487739a74d2c3e92be69"
+      "hash": "0d469ff8cab13d0cf682c60e7bbab8906cbac94b57cfad5e17eac9d530642b28"
     },
     {
       "uri": "event://hlth/s5-state-7001",
@@ -1238,7 +1238,7 @@
       "causation_id": "ev-s5-7000",
       "idempotency_key": "idem-s5-7001",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "record exception heartbeat on the case",
       "state_update": [
@@ -1255,11 +1255,11 @@
           "relationships": [
             "relationship://hlth/ops-rel"
           ],
-          "created_at": "2026-09-01T00:29:53Z",
+          "created_at": "2026-09-01T00:57:37Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": null
             }
           ],
@@ -1275,7 +1275,7 @@
           "metric": "metric://hlth/m-on-time"
         }
       ],
-      "hash": "db0c565af2745b9943f18a9d5fa9f615507ea9bb6e4df5209f57887010691a0b"
+      "hash": "4557f425963c8a53b4b8052613afa31a200375b992d518b2c669fd6238220283"
     },
     {
       "uri": "event://hlth/s5-state-7002",
@@ -1285,7 +1285,7 @@
       "causation_id": "ev-s5-7001",
       "idempotency_key": "idem-s5-7002",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "case triage: exception assessed, root nominated",
       "state_update": [
@@ -1300,10 +1300,10 @@
           "confidence": 0.85,
           "expected_outcome": "accept as a real risk",
           "actual_outcome": "accepted; root nominated",
-          "made_at": "2026-09-01T00:29:53Z"
+          "made_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "c1da691c2f3bd792e18ff207b552eda9d444e3858dffb20330539a39de16a628"
+      "hash": "ee76aa2bc19274a2ed8023ce47f7ddbdc9d7982b3a33bca1b85b5009f2de8766"
     },
     {
       "uri": "event://hlth/s5-case-triage",
@@ -1313,7 +1313,7 @@
       "causation_id": "ev-s5-7002",
       "idempotency_key": "idem-s5-7003",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "case triaged",
       "state_update": [
@@ -1330,16 +1330,16 @@
           "relationships": [
             "relationship://hlth/ops-rel"
           ],
-          "created_at": "2026-09-01T00:29:53Z",
+          "created_at": "2026-09-01T00:57:37Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-triage"
             }
           ],
@@ -1355,7 +1355,7 @@
           "metric": "metric://hlth/m-on-time"
         }
       ],
-      "hash": "61d06850d215fd7db05cdaf24defd2d3405d2e65a3e9f3877257809df27390a6"
+      "hash": "0e878d7a6323e626a880d1d79fa4a0d7c3313d557452e77548ee19fc85b39dca"
     },
     {
       "uri": "event://hlth/s5-state-7004",
@@ -1365,7 +1365,7 @@
       "causation_id": "ev-s5-7003",
       "idempotency_key": "idem-s5-7004",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "case assigned; task becomes assigned authorized work (#8)",
       "state_update": [
@@ -1415,10 +1415,10 @@
             "priority": 0.695,
             "capacity": 1.0
           },
-          "made_at": "2026-09-01T00:29:53Z"
+          "made_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "02dbf1c6fbf6ee8d08910c3d45fa427c93d9700bb01d6aa83e9f0f01ec4860e8"
+      "hash": "53bf8e3fe2e9f642bcea0a328de376d558c8b3cb9045b32994cb7016cfbdb2b3"
     },
     {
       "uri": "event://hlth/s5-case-assigned",
@@ -1428,7 +1428,7 @@
       "causation_id": "ev-s5-7004",
       "idempotency_key": "idem-s5-7005",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "case assigned",
       "state_update": [
@@ -1445,21 +1445,21 @@
           "relationships": [
             "relationship://hlth/ops-rel"
           ],
-          "created_at": "2026-09-01T00:29:53Z",
+          "created_at": "2026-09-01T00:57:37Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-assigned"
             }
           ],
@@ -1475,7 +1475,7 @@
           "metric": "metric://hlth/m-on-time"
         }
       ],
-      "hash": "b6db82ca1d9d6244bcf25a709771a2c1eb4267ee1bcb41dc9a41a839dc1a7be8"
+      "hash": "c54c1a25353c13fed02184765d0bf0d04911b50c01ea6f18121715c778e46535"
     },
     {
       "uri": "event://hlth/s5-case-inprogress",
@@ -1485,7 +1485,7 @@
       "causation_id": "ev-s5-7005",
       "idempotency_key": "idem-s5-7006",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "task execution began",
       "state_update": [
@@ -1502,26 +1502,26 @@
           "relationships": [
             "relationship://hlth/ops-rel"
           ],
-          "created_at": "2026-09-01T00:29:53Z",
+          "created_at": "2026-09-01T00:57:37Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-inprogress"
             }
           ],
@@ -1537,7 +1537,7 @@
           "metric": "metric://hlth/m-on-time"
         }
       ],
-      "hash": "82752d1d2c91e60fe6d0c73a6b86a56892d97f47882980b3fe86ef70d94dd625"
+      "hash": "a5007d95fc30f5e7108b12d90abe44098bc36615f2a34e11d3ab883f89e1ce3c"
     },
     {
       "uri": "event://hlth/s5-state-7007",
@@ -1547,7 +1547,7 @@
       "causation_id": "ev-s5-7006",
       "idempotency_key": "idem-s5-7007",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "policy updated: allocate by fit AND scoped Trust",
       "state_update": [
@@ -1564,7 +1564,7 @@
           "policy_status": "REVISED"
         }
       ],
-      "hash": "731ad53630ff175e53f2aa92e489da8a54df58465d69ca7693e267ee408bccad"
+      "hash": "f0f6885f5d74d9468656df063af63faefddab2ac8f4a2e5ba9237c38bc19a9f7"
     },
     {
       "uri": "event://hlth/s5-state-7008",
@@ -1574,7 +1574,7 @@
       "causation_id": "ev-s5-7007",
       "idempotency_key": "idem-s5-7008",
       "signature": "signed-by-agent://hlth/s2",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s2",
       "detail": "task effect: next committed work ranked offer://hlth/o-g (score 0.695)",
       "state_update": [
@@ -1598,10 +1598,10 @@
               "score": 0.695
             }
           ],
-          "made_at": "2026-09-01T00:29:53Z"
+          "made_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "818b61af9ce7a669e536106804c2030e2c9e46c451de941e701f8bcfe7ab411e"
+      "hash": "1bc3a1e227eb464a0c05061d51da9e55da2b3e14340dd14ec141da09226d924e"
     },
     {
       "uri": "event://hlth/s5-escalate",
@@ -1611,7 +1611,7 @@
       "causation_id": "ev-s5-7008",
       "idempotency_key": "idem-s5-7009",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "escalation: the committed action is irreversible and cost-unknowable once done (\u00a76 floor)",
       "state_update": [
@@ -1626,7 +1626,7 @@
           "acknowledgement": "approve then execute"
         }
       ],
-      "hash": "dba808264339c3f590bf0278015c1572be611f212b15bf52da204a5e80fbf47c"
+      "hash": "a6ab79b6786a640609ac01f7227886c759dfbc3ba552433632b251be0fa2bfae"
     },
     {
       "uri": "event://hlth/owner-human",
@@ -1636,7 +1636,7 @@
       "causation_id": "ev-hlth-7009",
       "idempotency_key": "idem-hlth-7010",
       "signature": "signed-by-person://hlth/oph",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "person://hlth/oph",
       "detail": "person://hlth/oph signed approval to release the committed action (\u00a76 floor)",
       "state_update": [
@@ -1659,10 +1659,10 @@
             "irreversible_failure": true,
             "cost_failure_unknowable": true
           },
-          "made_at": "2026-09-01T00:29:53Z"
+          "made_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "bd2115d29a30db868d856017d315e74d0976e3ff19d2d223ad3c57b77d0953df"
+      "hash": "f70f489bfb8ff1002ee7b78f8cf469019f4bd983a13e7af4a9cfcd19e6739e2b"
     },
     {
       "uri": "event://hlth/action-release",
@@ -1672,7 +1672,7 @@
       "causation_id": "ev-hlth-7010",
       "idempotency_key": "idem-hlth-7011",
       "signature": "signed-by-person://hlth/oph",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/supply-ops",
       "detail": "rebalance_commitment executed after human approval",
       "worker": "agent://hlth/supply-ops",
@@ -1681,7 +1681,7 @@
       "tier": "human",
       "outcome": "done",
       "state_update": [],
-      "hash": "9d261f8470f06f19dd02b56b12ef01b94711c8dab02384e37b94710d18d2bc0e"
+      "hash": "4642eb3e1c94b42abf40062463abd514b20642c94cc2a57548a12d11fde028d3"
     },
     {
       "uri": "event://hlth/s5-case-blocked",
@@ -1691,7 +1691,7 @@
       "causation_id": "ev-s5-7011",
       "idempotency_key": "idem-s5-7012",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "case blocked pending the rallied committed delivery's verification",
       "state_update": [
@@ -1708,31 +1708,31 @@
           "relationships": [
             "relationship://hlth/ops-rel"
           ],
-          "created_at": "2026-09-01T00:29:53Z",
+          "created_at": "2026-09-01T00:57:37Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-inprogress"
             },
             {
               "status": "BLOCKED",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-blocked"
             }
           ],
@@ -1748,7 +1748,7 @@
           "metric": "metric://hlth/m-on-time"
         }
       ],
-      "hash": "b4d266b6f8e4ba35c3c804fbd43caa3c3e1081377ddb1a9734b27700a57ad28c"
+      "hash": "b69ec89e3f2cd813d678469fea3c48ba266d3b8726fa671339c94cc7a6fb1945"
     },
     {
       "uri": "event://hlth/s5-state-7013",
@@ -1758,7 +1758,7 @@
       "causation_id": "ev-s5-7012",
       "idempotency_key": "idem-s5-7013",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "rallied committed work allocated to org://hlth/cortica-supply (the fix)",
       "state_update": [
@@ -1773,10 +1773,10 @@
             "kind": "pharmaceutical delivery follow-up",
             "signed": true
           },
-          "agreed_at": "2026-09-01T00:29:53Z"
+          "agreed_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "e87ec88e41623c0ce100dcb5c44744300c59c6f6562bf2461548f2577c2a40b7"
+      "hash": "6ead98faeaab0f45d270c58012f107b167b69ee0af3b007087aa06ff51c72014"
     },
     {
       "uri": "event://hlth/s5-state-7014",
@@ -1786,7 +1786,7 @@
       "causation_id": "ev-s5-7013",
       "idempotency_key": "idem-s5-7014",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "register follow-on expectation",
       "state_update": [
@@ -1801,7 +1801,7 @@
           "evidence_required": "CLEAR"
         }
       ],
-      "hash": "44e0b841abd175cf77ba8643243a9a7ed9b95ff1a2a49ac6480cf49bdef5f89a"
+      "hash": "588c24bc9c2f97fb18dddc29f7fc224a8adf1803a24412e67bc31afaf1526d66"
     },
     {
       "uri": "event://hlth/s4-exchange-cortica-supplyR",
@@ -1811,7 +1811,7 @@
       "causation_id": "ev-s4-7014",
       "idempotency_key": "idem-s4-7015",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://s4",
       "detail": "settle exchange cortica-supplyR: 2000000.0 USD org://hlth/lumenhealth->org://hlth/cortica-supply (value 2000000.0, cost 2000000.0)",
       "state_update": [
@@ -1862,7 +1862,7 @@
             "provider": "org://hlth/cortica-supply",
             "reconciliation": "balanced"
           },
-          "made_at": "2026-09-01T00:29:53Z"
+          "made_at": "2026-09-01T00:57:37Z"
         },
         {
           "uri": "event://hlth/s4-exchange-cortica-supplyR",
@@ -1872,7 +1872,7 @@
           "causation_id": "ev-s4-7014",
           "idempotency_key": "idem-s4-7015",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T00:29:53Z",
+          "occurred_at": "2026-09-01T00:57:37Z",
           "actor": "agent://s4",
           "detail": "settle exchange cortica-supplyR: 2000000.0 USD org://hlth/lumenhealth->org://hlth/cortica-supply (value 2000000.0, cost 2000000.0)",
           "state_update": [],
@@ -1894,7 +1894,7 @@
       "provider": "org://hlth/cortica-supply",
       "settled_at": "2026-11-12T00:00:00Z",
       "exchange_of": "commitment://hlth/c-cortica-supplyR",
-      "hash": "3c04b9a69bcecb70b032c8ece20030c2c458ed03895ae297beb76ef4d5679ce3"
+      "hash": "c99d69cefaf59a034b2e49bcd9b2f187e0cea5e979dd15f30e300177cf40460b"
     },
     {
       "uri": "event://hlth/s4-outcome-cortica-supplyR",
@@ -1904,7 +1904,7 @@
       "causation_id": "ev-s4-7015",
       "idempotency_key": "idem-s4-7016",
       "signature": "signed-by-agent://s4",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://s4",
       "detail": "evaluate settle cortica-supplyR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
       "state_update": [
@@ -1916,7 +1916,7 @@
           "causation_id": "ev-s4-7015",
           "idempotency_key": "idem-s4-7016",
           "signature": "signed-by-agent://s4",
-          "occurred_at": "2026-09-01T00:29:53Z",
+          "occurred_at": "2026-09-01T00:57:37Z",
           "actor": "agent://s4",
           "detail": "evaluate settle cortica-supplyR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
           "state_update": [],
@@ -1934,7 +1934,7 @@
       "deadline": "2026-11-15T00:00:00Z",
       "settled_at": "2026-11-12T00:00:00Z",
       "score": 1.0,
-      "hash": "cb509ffa450adcff039940f452d7ddf06045fff45909f78d9e9b8424537024b7"
+      "hash": "63a8625d10560f4a194ff5c1ea369495c44a8ac8f853bdb04d7bc4d86227b0e8"
     },
     {
       "uri": "event://hlth/outcome-routed-cortica-supplyR",
@@ -1944,7 +1944,7 @@
       "causation_id": "ev-s2-7016",
       "idempotency_key": "idem-s2-7017",
       "signature": "signed-by-org://hlth/cortica-supply",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "org://hlth/cortica-supply",
       "detail": "job routed-cortica-supplyR by org://hlth/cortica-supply: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
       "state_update": [
@@ -1956,7 +1956,7 @@
           "causation_id": "ev-s2-7016",
           "idempotency_key": "idem-s2-7017",
           "signature": "signed-by-org://hlth/cortica-supply",
-          "occurred_at": "2026-09-01T00:29:53Z",
+          "occurred_at": "2026-09-01T00:57:37Z",
           "actor": "org://hlth/cortica-supply",
           "detail": "job routed-cortica-supplyR by org://hlth/cortica-supply: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
           "state_update": [],
@@ -1974,7 +1974,7 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T00:29:53Z"
+          "captured_at": "2026-09-01T00:57:37Z"
         }
       ],
       "job": "routed-cortica-supplyR",
@@ -1982,7 +1982,7 @@
       "committed_deadline": "2026-11-15T00:00:00Z",
       "actual_completed_at": "2026-11-12T00:00:00Z",
       "on_time": true,
-      "hash": "60da67687fadc6861b18048646c8e6e99a7f0f7b50cfb65818e0e5aeec6057e8"
+      "hash": "2eee89f6514f2951a69b1b1739942c34eb4601f9de4ca95c021591ac215cfb0f"
     },
     {
       "uri": "event://hlth/verify-routed-cortica-supplyR",
@@ -1992,7 +1992,7 @@
       "causation_id": "ev-s2-7017",
       "idempotency_key": "idem-s2-7018",
       "signature": "signed-by-agent://s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://s5",
       "detail": "verify 'org://hlth/cortica-supply delivered the rallied committed pharmaceutical delivery on time' -> degree 0.95 under procedure 'anchor-conformance'",
       "state_update": [
@@ -2009,10 +2009,10 @@
             "procedure": "anchor-conformance",
             "confidence": 0.95
           },
-          "captured_at": "2026-09-01T00:29:53Z"
+          "captured_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "527fb88f61546269aecab2b785b8a9c5ff2f48a6fe4b7122a62e3fdaf772c47c"
+      "hash": "aced3c246ac9edc54600f3794e315245e1f1a075133e75183f620a39d643ec2c"
     },
     {
       "uri": "event://hlth/trust-update-cortica-supply",
@@ -2022,7 +2022,7 @@
       "causation_id": "ev-s2-7018",
       "idempotency_key": "idem-s2-7019",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "trust for org://hlth/cortica-supply [pharmaceutical delivery reliability] 0.695 -> 0.790 (outcome=1, exp=0.8, ev=0.95, alpha=0.5)",
       "state_update": [
@@ -2033,7 +2033,7 @@
           "claim": "pharmaceutical delivery reliability",
           "context": "relationship://hlth/partner-net",
           "score": 0.79,
-          "updated_at": "2026-09-01T00:29:53Z",
+          "updated_at": "2026-09-01T00:57:37Z",
           "expected": 0.8,
           "outcome": 1.0,
           "evidence": [
@@ -2043,7 +2043,7 @@
           "recency": 1.0
         }
       ],
-      "hash": "5599572d526f1dc53ec44905cc8b3c5a604f769c7ef6cc7d20d8cec355b7fd91"
+      "hash": "d166c1ecdf46c749882d3b55e7aae122b1a45b25ccfe6c4c70d6bf6e5afa5abf"
     },
     {
       "uri": "event://hlth/s5-case-resolved",
@@ -2053,7 +2053,7 @@
       "causation_id": "ev-s5-7019",
       "idempotency_key": "idem-s5-7020",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "exception resolved: rallied committed work verified on time; forward on-time = 1.0; cumulative 2/4",
       "state_update": [
@@ -2070,36 +2070,36 @@
           "relationships": [
             "relationship://hlth/ops-rel"
           ],
-          "created_at": "2026-09-01T00:29:53Z",
+          "created_at": "2026-09-01T00:57:37Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-inprogress"
             },
             {
               "status": "BLOCKED",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-blocked"
             },
             {
               "status": "RESOLVED",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-resolved"
             }
           ],
@@ -2116,7 +2116,7 @@
           "verified_outcome": "forward on-time restored to 1.0; org://hlth/cortica-supply delivered the rallied pharmaceutical delivery on time (evidence://hlth/routed-cortica-supplyR); org://hlth/cortica-supply Trust 0.79"
         }
       ],
-      "hash": "785e87f883f006642ffdec882718b7c18cf22314ff14602adff2a8da4b79bb60"
+      "hash": "e29719af1b820a5c30c670cde4ea365e92d5f6572fe7759813e95c9222cd1240"
     },
     {
       "uri": "event://hlth/s5-state-7021",
@@ -2126,7 +2126,7 @@
       "causation_id": "ev-s5-7020",
       "idempotency_key": "idem-s5-7021",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "learning entry decision://hlth/learning: Concentrating supply with a distributor that has verified on-time delivery (cortica-supply), while gating the laggard (meridian-med), restored on-time pharmaceutical delivery. Verified good deliveries compound scoped Trust.",
       "state_update": [
@@ -2140,10 +2140,10 @@
           "variance": 0.05,
           "why": "Concentrating supply with a distributor that has verified on-time delivery (cortica-supply), while gating the laggard (meridian-med), restored on-time pharmaceutical delivery. Verified good deliveries compound scoped Trust.",
           "change_future_policy": "ALLOCATE by fit AND scoped Trust (not fit alone); distributors below the Trust floor require a performance checkpoint before a new order.",
-          "made_at": "2026-09-01T00:29:53Z"
+          "made_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "d6190c16a69f9195656f10674b12320c706904bcbdd65b9d4aafc4867c6dbd34"
+      "hash": "e75b6b16a02eb51404f3a8f441ff9cbb68dbde14f07467f57b34e7a3f6d18ff3"
     },
     {
       "uri": "event://hlth/s5-state-7022",
@@ -2153,7 +2153,7 @@
       "causation_id": "ev-s5-7021",
       "idempotency_key": "idem-s5-7022",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "close case; learning recorded; future policy updated",
       "state_update": [
@@ -2171,7 +2171,7 @@
           "learning": "decision://hlth/learning"
         }
       ],
-      "hash": "85f5fe4985b4f8b3ea4cb1be4d94907420508b13167884edd0ae226df7160f39"
+      "hash": "970ffa4e44f33cefdb2962f9717c41a2e6e901d1a9c4be8fe6977cb76ce26221"
     },
     {
       "uri": "event://hlth/s5-case-closed",
@@ -2181,7 +2181,7 @@
       "causation_id": "ev-s5-7021",
       "idempotency_key": "idem-s5-7022",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "case closed",
       "state_update": [
@@ -2198,41 +2198,41 @@
           "relationships": [
             "relationship://hlth/ops-rel"
           ],
-          "created_at": "2026-09-01T00:29:53Z",
+          "created_at": "2026-09-01T00:57:37Z",
           "history": [
             {
               "status": "OPEN",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": null
             },
             {
               "status": "TRIAGE",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-triage"
             },
             {
               "status": "ASSIGNED",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-assigned"
             },
             {
               "status": "IN_PROGRESS",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-inprogress"
             },
             {
               "status": "BLOCKED",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-blocked"
             },
             {
               "status": "RESOLVED",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-resolved"
             },
             {
               "status": "CLOSED",
-              "at": "2026-09-01T00:29:53Z",
+              "at": "2026-09-01T00:57:37Z",
               "event": "event://hlth/s5-case-closed"
             }
           ],
@@ -2249,7 +2249,7 @@
           "verified_outcome": "forward on-time restored to 1.0; org://hlth/cortica-supply delivered the rallied pharmaceutical delivery on time (evidence://hlth/routed-cortica-supplyR); org://hlth/cortica-supply Trust 0.79"
         }
       ],
-      "hash": "c7ec45843901526f8f06b8e9ee9dc26fc42348206449b8f5c071a8275611f555"
+      "hash": "c145e164a9712c1039689c7034c62791442cfb58a29345555bd800d2663daeea"
     },
     {
       "uri": "event://hlth/s5-state-7023",
@@ -2259,7 +2259,7 @@
       "causation_id": "ev-s5-7022",
       "idempotency_key": "idem-s5-7023",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "register goal + ledger-projected metrics",
       "state_update": [
@@ -2334,7 +2334,7 @@
           "root_cause_status": "UNKNOWN"
         }
       ],
-      "hash": "e5f304e7a1def89b30e7c883c70613fd36637560c204aa4b3d4da05a61638014"
+      "hash": "f19b2f8cf24f20fc5f55b0958c26e0d5b84602302f1da9d56c3919720bce01b3"
     },
     {
       "uri": "event://hlth/s5-state-7024",
@@ -2344,7 +2344,7 @@
       "causation_id": "ev-s5-7023",
       "idempotency_key": "idem-s5-7024",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "goal->metric->variance->decision->action->outcome",
       "state_update": [
@@ -2366,10 +2366,10 @@
             "action": "task://hlth/t-rebalance",
             "outcome": "event://hlth/outcome-routed-cortica-supplyR"
           },
-          "made_at": "2026-09-01T00:29:53Z"
+          "made_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "3c4d67067515076b7b58e9552c98e4065c69db41f635c5778178b4f5c02148cc"
+      "hash": "8067a24c40375b5eab3c5ecee72461273d0993a44edc2318b3c12a2601fa2df9"
     },
     {
       "uri": "event://hlth/s5-state-7025",
@@ -2379,7 +2379,7 @@
       "causation_id": "ev-s5-7024",
       "idempotency_key": "idem-s5-7025",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "priority-ordered attention list",
       "state_update": [
@@ -2404,10 +2404,10 @@
               }
             ]
           },
-          "made_at": "2026-09-01T00:29:53Z"
+          "made_at": "2026-09-01T00:57:37Z"
         }
       ],
-      "hash": "f564835caa7b01b8e9049296d6b69c089d1c1c9a29a6e5c70ccb7acc4d342706"
+      "hash": "3e3f9e044a95a6f32e968b5602a4a0896ac2a09846b08debf406531606b9641b"
     },
     {
       "uri": "event://hlth/s5-state-7026",
@@ -2417,7 +2417,7 @@
       "causation_id": "ev-s5-7025",
       "idempotency_key": "idem-s5-7026",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "dependency dependency://hlth/d-rb-enables-fu: task://hlth/t-rebalance ENABLES task://hlth/t-followup",
       "state_update": [
@@ -2428,7 +2428,7 @@
           "kind": "ENABLES"
         }
       ],
-      "hash": "78de3c6068a13bfc88be90e2d5e26ab4d3942e48809d987a655e4de1ed04fe9e"
+      "hash": "0db15f8cc7dac6d90988c51c6423bcf7b8d3db7f4a00582e259140989fbeaef0"
     },
     {
       "uri": "event://hlth/s5-state-7027",
@@ -2438,7 +2438,7 @@
       "causation_id": "ev-s5-7026",
       "idempotency_key": "idem-s5-7027",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "dependency dependency://hlth/d-fu-requires-pol: task://hlth/t-followup REQUIRES policy://hlth/allocation",
       "state_update": [
@@ -2449,7 +2449,7 @@
           "kind": "REQUIRES"
         }
       ],
-      "hash": "92290485b665f7c69ceb3e1ea1b73a3c04f46e264c07ef35ae3105da7a3d0182"
+      "hash": "0b85c630579698c2ced3b1bff7d272d9e22a02d33011ad80eb37507d6b08d789"
     },
     {
       "uri": "event://hlth/s5-state-7028",
@@ -2459,7 +2459,7 @@
       "causation_id": "ev-s5-7027",
       "idempotency_key": "idem-s5-7028",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "dependency dependency://hlth/d-fu-blocks-case: task://hlth/t-followup BLOCKS case://hlth/c-on-time",
       "state_update": [
@@ -2470,7 +2470,7 @@
           "kind": "BLOCKS"
         }
       ],
-      "hash": "e184e96cb7ce612e27e5175f8d6fd00342bbb9abe08cb1a4c44b3ebdd517b467"
+      "hash": "0055cb973663fac348161fcccd9041e3629a7115ed8da7238f9b7fe26ef7f412"
     },
     {
       "uri": "event://hlth/s5-state-7029",
@@ -2480,7 +2480,7 @@
       "causation_id": "ev-s5-7028",
       "idempotency_key": "idem-s5-7029",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "dependency dependency://hlth/d-case-from-metric: case://hlth/c-on-time DERIVED_FROM metric://hlth/m-on-time",
       "state_update": [
@@ -2491,7 +2491,7 @@
           "kind": "DERIVED_FROM"
         }
       ],
-      "hash": "e8a6a6a5d6690d54ce56258d66f87191545f130e194cc9c02d6c39d3f86d5ef7"
+      "hash": "05e10842fd47ba5158d6633b1d0ec3950032193ff331d36e07d5249b3ce03c9b"
     },
     {
       "uri": "event://hlth/s5-state-7030",
@@ -2501,7 +2501,7 @@
       "causation_id": "ev-s5-7029",
       "idempotency_key": "idem-s5-7030",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "dependency dependency://hlth/d-metric-impacts-goal: metric://hlth/m-on-time IMPACTS goal://hlth/g-core",
       "state_update": [
@@ -2512,7 +2512,7 @@
           "kind": "IMPACTS"
         }
       ],
-      "hash": "4097de9cab4fc8756d5f17782f22fe30570bf1f249b828cfc6c3914aaa5f5850"
+      "hash": "a18ac3a8772fa39965ba4dba960ea9cbffc2e508cfb1271a00b31bc7450ba770"
     },
     {
       "uri": "event://hlth/s5-state-7031",
@@ -2522,7 +2522,7 @@
       "causation_id": "ev-s5-7030",
       "idempotency_key": "idem-s5-7031",
       "signature": "signed-by-agent://hlth/s5",
-      "occurred_at": "2026-09-01T00:29:53Z",
+      "occurred_at": "2026-09-01T00:57:37Z",
       "actor": "agent://hlth/s5",
       "detail": "dependency dependency://hlth/d-rb-blocks-case: task://hlth/t-rebalance BLOCKS case://hlth/c-on-time",
       "state_update": [
@@ -2533,7 +2533,7 @@
           "kind": "BLOCKS"
         }
       ],
-      "hash": "3e5e4fc812b480dffcf0e5e0830e683dee82a2bae2b7fb22072a566139ffbd03"
+      "hash": "df199e78db99f7c98c85dc65825d67f5af66f32f92a6c16f333eda2c270eb98b"
     }
   ]
 }

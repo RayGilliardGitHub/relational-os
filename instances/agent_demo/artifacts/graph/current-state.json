@@ -1,0 +1,1289 @@
+{
+  "kind": "GRAPH",
+  "objects": [
+    {
+      "uri": "org://tech/vantagecloud",
+      "type": "ORG",
+      "identity": {
+        "attestations": [
+          "business-license"
+        ]
+      },
+      "brand": {
+        "tagline": "The cloud that keeps its word.",
+        "mission": "Deliver platform upgrades and integrated cloud environments reliably, on time, so every enterprise customer can trust us to keep their business moving.",
+        "vision": "A world where enterprises stop managing delivery risk and start compounding the value of reliably shipped software.",
+        "values": [
+          [
+            "Trust over speed",
+            "We earn enterprise confidence one verified, on-time delivery at a time."
+          ],
+          [
+            "Verify, don't assume",
+            "Evidence outranks opinion; on-time is a ledger fact, not a promise."
+          ],
+          [
+            "Customer success",
+            "Our win is our customer's fleet running clean on the scheduled date."
+          ],
+          [
+            "Candour",
+            "We say what is true about a release even when it is inconvenient."
+          ],
+          [
+            "Engineering depth",
+            "Hard problems are where we live."
+          ]
+        ],
+        "about": "VantageCloud is a technology operator that runs and integrates enterprise cloud platforms. We take committed platform-upgrade deployments and make them land \u2014 on time, verified, with the audit trail to prove it. Born out of a simple frustration, that a contract is only as good as the schedule it shipped on, we build trust the same way we build systems: observably, incrementally, and without shortcuts.",
+        "fast_facts": [
+          "Founded 2012, enterprise cloud operations",
+          "1,400+ integrator partners across 3 regional clouds",
+          "99.2% committed-deployment on-time track record"
+        ],
+        "history": [
+          [
+            "2012",
+            "Founded in Austin, TX to end late software cutovers."
+          ],
+          [
+            "2016",
+            "Opened the platform-upgrade business that became our core."
+          ],
+          [
+            "2021",
+            "Standardized every delivery on ledger-verifiable on-time evidence."
+          ]
+        ],
+        "leadership": [
+          [
+            "Adrian Cross",
+            "Chief Executive",
+            "Former reliability engineer who founded VantageCloud on the principle that uptime is a commitment."
+          ],
+          [
+            "Priya Raman",
+            "Chief Digital Office",
+            "Runs the deployment practice and the platform-upgrade portfolio."
+          ]
+        ],
+        "products_services": [
+          "Platform-upgrade deployment and cutover",
+          "Cloud environment integration and migration",
+          "Delivery-reliability engineering and audit"
+        ],
+        "testimonials": [
+          [
+            "Our quarterly upgrades used to be a gamble. VantageCloud made them a scheduled fact.",
+            "Enterprise platform director, retail"
+          ]
+        ],
+        "trust": [
+          [
+            "99.2% committed-deployment on-time rate (2025)",
+            "VantageCloud delivery ledger"
+          ],
+          [
+            "SOC 2 Type II attestation",
+            "independent audit"
+          ]
+        ],
+        "locations": "Austin, TX (HQ) \u00b7 regional delivery hubs in Europe and Asia-Pacific",
+        "faq": [
+          [
+            "What does an on-time guarantee actually prove?",
+            "We anchor every committed deployment to ledger-verified evidence, so 'on time' is auditable, not asserted."
+          ],
+          [
+            "Do you take over existing environments?",
+            "Yes \u2014 integration and migration are core, and they are treated as committed deployments with the same evidence bar."
+          ]
+        ],
+        "contact": "partners@vantagecloud.example \u00b7 +1-512-555-0142",
+        "careers": "Build the cloud that keeps its word: reliability engineers, delivery leads, platform architects.",
+        "investors": "Privately held. Delivery-reliability data and growth material on request.",
+        "press": "newsroom@vantagecloud.example \u2014 media kit, release history, leadership interviews.",
+        "esg": "Carbon-aware scheduling for our own cloud estate; open tooling grants; 1-1-1 model for engineering time.",
+        "legal": [
+          "Privacy",
+          "Terms",
+          "California Rights",
+          "Do Not Sell or Share"
+        ],
+        "nav": [
+          "About",
+          "Products & Services",
+          "Customers",
+          "Careers",
+          "Investors",
+          "Press",
+          "Sustainability",
+          "Contact"
+        ],
+        "cookie_consent": "Accept All \u00b7 Reject All \u00b7 Preferences (link to Privacy)",
+        "design": {
+          "palette": [
+            [
+              "Deep Indigo",
+              "#2B2D72"
+            ],
+            [
+              "Signal Cyan",
+              "#00A8E8"
+            ],
+            [
+              "Cloud White",
+              "#F7F9FC"
+            ],
+            [
+              "Verified Green",
+              "#1FA05A"
+            ]
+          ],
+          "typography": {
+            "heading": "Sans-serif geometric (e.g. Space Grotesk)",
+            "body": "Humanist sans (e.g. Inter)"
+          },
+          "logo": {
+            "wordmark": "VANTAGECLOUD in letterspaced caps",
+            "character": "a cloud-chevron mark",
+            "usage": "clear space = x-height; never recolor outside light/dark approved pairs"
+          },
+          "imagery": "Clean data scenes: dashboards, server rooms, abstract cloud geometry \u2014 optimistic and precise",
+          "tone": "Confident and precise; evidence-first; never hype."
+        }
+      }
+    },
+    {
+      "uri": "org://tech/sierra-coast",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://tech/sentinel-labs",
+      "type": "ORG"
+    },
+    {
+      "uri": "org://tech/revan-digital",
+      "type": "ORG"
+    },
+    {
+      "uri": "person://tech/cdo",
+      "type": "PERSON"
+    },
+    {
+      "uri": "agent://tech/deploy-ops",
+      "type": "AGENT"
+    },
+    {
+      "uri": "relationship://tech/ops-rel",
+      "participants": [
+        "org://tech/vantagecloud",
+        "org://tech/sierra-coast"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://tech/vantagecloud": [
+          "provider"
+        ],
+        "org://tech/sierra-coast": [
+          "client"
+        ]
+      },
+      "authority": [
+        "authority://tech/for-ops"
+      ],
+      "purpose": "technology operating relationship"
+    },
+    {
+      "uri": "relationship://tech/partner-net",
+      "participants": [
+        "org://tech/vantagecloud",
+        "org://tech/sentinel-labs",
+        "org://tech/revan-digital"
+      ],
+      "status": "ACTIVE",
+      "roles": {
+        "org://tech/vantagecloud": [
+          "operator"
+        ],
+        "org://tech/sentinel-labs": [
+          "partner"
+        ],
+        "org://tech/revan-digital": [
+          "partner"
+        ]
+      },
+      "authority": [
+        "authority://tech/for-ops"
+      ],
+      "purpose": "technology partner network"
+    },
+    {
+      "uri": "authority://tech/for-ops",
+      "holder": "org://tech/vantagecloud",
+      "grants": [
+        "triage_case",
+        "assign_case",
+        "close_case",
+        "approve_learning",
+        "rebalance_commitment",
+        "gate_partner",
+        "release_committed_action"
+      ],
+      "roles": [
+        "operator"
+      ]
+    },
+    {
+      "uri": "rule://tech/ops-run",
+      "kind": "POLICY",
+      "text": "agent://tech/deploy-ops may re-balance resource commitment and gate partner performance",
+      "grants": [
+        "rebalance_commitment",
+        "gate_partner"
+      ]
+    },
+    {
+      "uri": "rule://tech/match-run",
+      "kind": "POLICY",
+      "text": "S2 may run Trust-weighted matching for the client",
+      "grants": [
+        "run_match"
+      ]
+    },
+    {
+      "uri": "delegation://tech/ops",
+      "grantor": "org://tech/vantagecloud",
+      "grantee": "agent://tech/deploy-ops",
+      "scope": [
+        "rule://tech/ops-run"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "uri": "delegation://tech/s2-match",
+      "grantor": "org://tech/vantagecloud",
+      "grantee": "agent://s2",
+      "scope": [
+        "rule://tech/match-run"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "uri": "expectation://tech/e-on-time",
+      "actor": "person://tech/cdo",
+      "subject": "platform-upgrade deployment",
+      "condition": "fully deliver the committed platform-upgrade deployment by its committed deadline",
+      "metric": "on_time",
+      "threshold": 0.95,
+      "deadline": "2026-12-31T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "policy://tech/allocation",
+      "name": "tech allocation",
+      "condition": "a new committed delivery is to be allocated",
+      "decision": "ALLOCATE by fit AND scoped Trust (not fit alone); partners below the Trust floor require a performance gate before a new commitment. (learned 2026-09-01)",
+      "action": "allocate to the top-ranked fitted partner; gate laggard",
+      "scope": [
+        "expectation://tech/e-on-time"
+      ],
+      "version": 3,
+      "policy_status": "EFFECTIVE",
+      "learning": "decision://tech/learning"
+    },
+    {
+      "uri": "process://tech/pr-core",
+      "definition": "exception -> open case -> assign -> execute -> verify -> learn -> close",
+      "steps": [
+        "triage",
+        "assign",
+        "execute",
+        "verify_outcome",
+        "learning"
+      ]
+    },
+    {
+      "uri": "process_instance://tech/pi-core",
+      "process": "process://tech/pr-core",
+      "status": "RUNNING",
+      "started_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "trust://tech/t-sentinel-labs",
+      "subject": "org://tech/vantagecloud",
+      "target": "org://tech/sentinel-labs",
+      "claim": "platform-upgrade deployment reliability",
+      "context": "relationship://tech/partner-net",
+      "score": 0.79,
+      "updated_at": "2026-09-01T00:56:45Z",
+      "expected": 0.8,
+      "outcome": 1.0,
+      "evidence": [
+        "evidence://tech/routed-sentinel-labsR"
+      ],
+      "alpha": 0.5,
+      "recency": 1.0
+    },
+    {
+      "uri": "trust://tech/t-revan-digital",
+      "subject": "org://tech/vantagecloud",
+      "target": "org://tech/revan-digital",
+      "claim": "platform-upgrade deployment reliability",
+      "context": "relationship://tech/partner-net",
+      "score": 0.14,
+      "updated_at": "2026-09-01T00:56:45Z",
+      "expected": 0.8,
+      "outcome": 0.0,
+      "evidence": [
+        "evidence://tech/committed-revan-digitalQ4"
+      ],
+      "alpha": 0.5,
+      "recency": 1.0
+    },
+    {
+      "uri": "offer://tech/o-g",
+      "provider": "org://tech/sentinel-labs",
+      "price": 2000000.0,
+      "currency": "USD",
+      "capability_keys": [
+        "deployment",
+        "integration"
+      ],
+      "fit_note": "technology partner delivery line"
+    },
+    {
+      "uri": "offer://tech/o-l",
+      "provider": "org://tech/revan-digital",
+      "price": 2000000.0,
+      "currency": "USD",
+      "capability_keys": [
+        "deployment",
+        "integration"
+      ],
+      "fit_note": "technology partner delivery line"
+    },
+    {
+      "uri": "decision://tech/s2-match-baseline",
+      "by": "agent://s2",
+      "authority": "delegation://tech/s2-match",
+      "alternatives": [
+        "offer://tech/o-l",
+        "offer://tech/o-g",
+        "none"
+      ],
+      "confidence": 0.9,
+      "expected_outcome": "lag partner ranked #1 on existing Trust",
+      "actual_outcome": "offer://tech/o-l",
+      "detail": [
+        {
+          "offer": "offer://tech/o-l",
+          "provider": "org://tech/revan-digital",
+          "fit": 1.0,
+          "trust": 0.9,
+          "score": 0.9
+        },
+        {
+          "offer": "offer://tech/o-g",
+          "provider": "org://tech/sentinel-labs",
+          "fit": 1.0,
+          "trust": 0.6,
+          "score": 0.6
+        }
+      ],
+      "made_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "asset://money/tech-escrow-revan-digitalQ3",
+      "kind": "MONEY",
+      "title": "org://tech/revan-digital",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://tech/vantagecloud for org://tech/revan-digital (revan-digitalQ3)"
+    },
+    {
+      "uri": "obligation://tech/s4-pay-revan-digitalQ3",
+      "subject": "org://tech/vantagecloud",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://tech/revan-digital",
+      "due_by": "2026-08-31T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-09-02T00:00:00Z"
+    },
+    {
+      "uri": "receipt://tech/s4-receipt-revan-digitalQ3",
+      "kind": "SETTLEMENT",
+      "from": "org://tech/vantagecloud",
+      "to": "org://tech/revan-digital",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-09-02T00:00:00Z"
+    },
+    {
+      "uri": "decision://tech/s4-recon-revan-digitalQ3",
+      "by": "agent://s4",
+      "authority": "authority://tech/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://tech/vantagecloud",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "revan-digitalQ3",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://tech/vantagecloud",
+        "provider": "org://tech/revan-digital",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "event://tech/s4-exchange-revan-digitalQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-105",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-104",
+      "idempotency_key": "idem-s4-105",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:56:45Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange revan-digitalQ3: 2000000.0 USD org://tech/vantagecloud->org://tech/revan-digital (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://tech/vantagecloud",
+      "provider": "org://tech/revan-digital",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "exchange_of": "commitment://tech/c-revan-digitalQ3"
+    },
+    {
+      "uri": "event://tech/s4-outcome-revan-digitalQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-106",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-105",
+      "idempotency_key": "idem-s4-106",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:56:45Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle revan-digitalQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> partial",
+      "state_update": [],
+      "evaluation": "partial",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-09-02T00:00:00Z",
+      "score": 0.5
+    },
+    {
+      "uri": "event://tech/outcome-committed-revan-digitalQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-107",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-106",
+      "idempotency_key": "idem-s2-107",
+      "signature": "signed-by-org://tech/revan-digital",
+      "occurred_at": "2026-09-01T00:56:45Z",
+      "actor": "org://tech/revan-digital",
+      "detail": "job committed-revan-digitalQ3 by org://tech/revan-digital: actual 2026-09-02T00:00:00Z vs committed 2026-08-31T00:00:00Z -> LATE",
+      "state_update": [],
+      "job": "committed-revan-digitalQ3",
+      "provider": "org://tech/revan-digital",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-09-02T00:00:00Z",
+      "on_time": false
+    },
+    {
+      "uri": "evidence://tech/committed-revan-digitalQ3",
+      "kind": "ANCHORED",
+      "source": "signed committed-platform-upgrade deployment record + tech anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "claim://tech/committed-revan-digitalQ3",
+      "proposer": "agent://s5",
+      "statement": "org://tech/revan-digital delivered the committed resource LATE"
+    },
+    {
+      "uri": "asset://money/tech-escrow-sentinel-labsQ3",
+      "kind": "MONEY",
+      "title": "org://tech/sentinel-labs",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://tech/vantagecloud for org://tech/sentinel-labs (sentinel-labsQ3)"
+    },
+    {
+      "uri": "obligation://tech/s4-pay-sentinel-labsQ3",
+      "subject": "org://tech/vantagecloud",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://tech/sentinel-labs",
+      "due_by": "2026-08-31T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-08-30T00:00:00Z"
+    },
+    {
+      "uri": "receipt://tech/s4-receipt-sentinel-labsQ3",
+      "kind": "SETTLEMENT",
+      "from": "org://tech/vantagecloud",
+      "to": "org://tech/sentinel-labs",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-08-30T00:00:00Z"
+    },
+    {
+      "uri": "decision://tech/s4-recon-sentinel-labsQ3",
+      "by": "agent://s4",
+      "authority": "authority://tech/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://tech/vantagecloud",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "sentinel-labsQ3",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://tech/vantagecloud",
+        "provider": "org://tech/sentinel-labs",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "event://tech/s4-exchange-sentinel-labsQ3",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-110",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-109",
+      "idempotency_key": "idem-s4-110",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:56:45Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange sentinel-labsQ3: 2000000.0 USD org://tech/vantagecloud->org://tech/sentinel-labs (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://tech/vantagecloud",
+      "provider": "org://tech/sentinel-labs",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "exchange_of": "commitment://tech/c-sentinel-labsQ3"
+    },
+    {
+      "uri": "event://tech/s4-outcome-sentinel-labsQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-111",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-110",
+      "idempotency_key": "idem-s4-111",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:56:45Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle sentinel-labsQ3: settled 2000000.0 vs expected 2000000.0 by 2026-08-31T00:00:00Z -> met",
+      "state_update": [],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-08-31T00:00:00Z",
+      "settled_at": "2026-08-30T00:00:00Z",
+      "score": 1.0
+    },
+    {
+      "uri": "event://tech/outcome-committed-sentinel-labsQ3",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-112",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-111",
+      "idempotency_key": "idem-s2-112",
+      "signature": "signed-by-org://tech/sentinel-labs",
+      "occurred_at": "2026-09-01T00:56:45Z",
+      "actor": "org://tech/sentinel-labs",
+      "detail": "job committed-sentinel-labsQ3 by org://tech/sentinel-labs: actual 2026-08-30T00:00:00Z vs committed 2026-08-31T00:00:00Z -> on time",
+      "state_update": [],
+      "job": "committed-sentinel-labsQ3",
+      "provider": "org://tech/sentinel-labs",
+      "committed_deadline": "2026-08-31T00:00:00Z",
+      "actual_completed_at": "2026-08-30T00:00:00Z",
+      "on_time": true
+    },
+    {
+      "uri": "evidence://tech/committed-sentinel-labsQ3",
+      "kind": "ANCHORED",
+      "source": "signed committed-platform-upgrade deployment record + tech anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "claim://tech/committed-sentinel-labsQ3",
+      "proposer": "agent://s5",
+      "statement": "org://tech/sentinel-labs delivered the committed resource on time"
+    },
+    {
+      "uri": "asset://money/tech-escrow-revan-digitalQ4",
+      "kind": "MONEY",
+      "title": "org://tech/revan-digital",
+      "custody": "cleared",
+      "value": 1600000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://tech/vantagecloud for org://tech/revan-digital (revan-digitalQ4)"
+    },
+    {
+      "uri": "obligation://tech/s4-pay-revan-digitalQ4",
+      "subject": "org://tech/vantagecloud",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 1600000.0 USD for contracted work by org://tech/revan-digital",
+      "due_by": "2026-09-15T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-09-17T00:00:00Z"
+    },
+    {
+      "uri": "receipt://tech/s4-receipt-revan-digitalQ4",
+      "kind": "SETTLEMENT",
+      "from": "org://tech/vantagecloud",
+      "to": "org://tech/revan-digital",
+      "amount": 1600000.0,
+      "currency": "USD",
+      "received_at": "2026-09-17T00:00:00Z"
+    },
+    {
+      "uri": "decision://tech/s4-recon-revan-digitalQ4",
+      "by": "agent://s4",
+      "authority": "authority://tech/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 1600000.0 USD from org://tech/vantagecloud",
+      "actual_outcome": "matched exactly: settled 1600000.0 USD",
+      "detail": {
+        "slug": "revan-digitalQ4",
+        "expected": 1600000.0,
+        "actual": 1600000.0,
+        "matched": true,
+        "buyer": "org://tech/vantagecloud",
+        "provider": "org://tech/revan-digital",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "event://tech/s4-exchange-revan-digitalQ4",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-115",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-114",
+      "idempotency_key": "idem-s4-115",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:56:45Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange revan-digitalQ4: 1600000.0 USD org://tech/vantagecloud->org://tech/revan-digital (value 1600000.0, cost 1600000.0)",
+      "state_update": [],
+      "value": 1600000.0,
+      "cost": 1600000.0,
+      "price": 1600000.0,
+      "currency": "USD",
+      "buyer": "org://tech/vantagecloud",
+      "provider": "org://tech/revan-digital",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "exchange_of": "commitment://tech/c-revan-digitalQ4"
+    },
+    {
+      "uri": "event://tech/s4-outcome-revan-digitalQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-116",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-115",
+      "idempotency_key": "idem-s4-116",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:56:45Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle revan-digitalQ4: settled 1600000.0 vs expected 1600000.0 by 2026-09-15T00:00:00Z -> partial",
+      "state_update": [],
+      "evaluation": "partial",
+      "expected": 1600000.0,
+      "actual": 1600000.0,
+      "deadline": "2026-09-15T00:00:00Z",
+      "settled_at": "2026-09-17T00:00:00Z",
+      "score": 0.5
+    },
+    {
+      "uri": "event://tech/outcome-committed-revan-digitalQ4",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-117",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-116",
+      "idempotency_key": "idem-s2-117",
+      "signature": "signed-by-org://tech/revan-digital",
+      "occurred_at": "2026-09-01T00:56:45Z",
+      "actor": "org://tech/revan-digital",
+      "detail": "job committed-revan-digitalQ4 by org://tech/revan-digital: actual 2026-09-17T00:00:00Z vs committed 2026-09-15T00:00:00Z -> LATE",
+      "state_update": [],
+      "job": "committed-revan-digitalQ4",
+      "provider": "org://tech/revan-digital",
+      "committed_deadline": "2026-09-15T00:00:00Z",
+      "actual_completed_at": "2026-09-17T00:00:00Z",
+      "on_time": false
+    },
+    {
+      "uri": "evidence://tech/committed-revan-digitalQ4",
+      "kind": "ANCHORED",
+      "source": "signed committed-platform-upgrade deployment record + tech anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "claim://tech/committed-revan-digitalQ4",
+      "proposer": "agent://s5",
+      "statement": "org://tech/revan-digital delivered the committed resource LATE"
+    },
+    {
+      "uri": "case://tech/c-on-time",
+      "subject": "committed platform-upgrade deployment below target on time",
+      "status": "CLOSED",
+      "owner": "person://tech/cdo",
+      "actors": [
+        "org://tech/vantagecloud",
+        "person://tech/cdo",
+        "agent://tech/deploy-ops"
+      ],
+      "relationships": [
+        "relationship://tech/ops-rel"
+      ],
+      "created_at": "2026-09-01T00:56:45Z",
+      "history": [
+        {
+          "status": "OPEN",
+          "at": "2026-09-01T00:56:45Z",
+          "event": null
+        },
+        {
+          "status": "TRIAGE",
+          "at": "2026-09-01T00:56:45Z",
+          "event": "event://tech/s5-case-triage"
+        },
+        {
+          "status": "ASSIGNED",
+          "at": "2026-09-01T00:56:45Z",
+          "event": "event://tech/s5-case-assigned"
+        },
+        {
+          "status": "IN_PROGRESS",
+          "at": "2026-09-01T00:56:45Z",
+          "event": "event://tech/s5-case-inprogress"
+        },
+        {
+          "status": "BLOCKED",
+          "at": "2026-09-01T00:56:45Z",
+          "event": "event://tech/s5-case-blocked"
+        },
+        {
+          "status": "RESOLVED",
+          "at": "2026-09-01T00:56:45Z",
+          "event": "event://tech/s5-case-resolved"
+        },
+        {
+          "status": "CLOSED",
+          "at": "2026-09-01T00:56:45Z",
+          "event": "event://tech/s5-case-closed"
+        }
+      ],
+      "suggestion": "ledger-projected on-time below target",
+      "expected": 0.95,
+      "actual": 0.333,
+      "variance": -0.617,
+      "significance": "CRITICAL",
+      "exception": "Committed platform-upgrade deployment on-time 0.33 below target 0.95 (ledger: 1/3 committed deliveries on time)",
+      "root_cause": "integration failure \u2014 org://tech/revan-digital missed its committed upgrade deployment by 2 days; scoped Trust fell 0.90->0.51",
+      "root_cause_status": "SUPPORTED",
+      "recommended_action": "Re-allocate committed platform-upgrade work to the verified on-time integrator (sentinel-labs) and gate the laggard (revan-digital) with a performance checkpoint before any new commitment",
+      "metric": "metric://tech/m-on-time",
+      "verified_outcome": "forward on-time restored to 1.0; org://tech/sentinel-labs delivered the rallied platform-upgrade deployment on time (evidence://tech/routed-sentinel-labsR); org://tech/sentinel-labs Trust 0.79"
+    },
+    {
+      "uri": "decision://tech/s5-triage",
+      "by": "agent://tech/s5",
+      "authority": "authority://tech/for-ops",
+      "alternatives": [
+        "accept",
+        "dismiss as anomaly"
+      ],
+      "confidence": 0.85,
+      "expected_outcome": "accept as a real risk",
+      "actual_outcome": "accepted; root nominated",
+      "made_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "task://tech/t-rebalance",
+      "assigned_to": "agent://tech/deploy-ops",
+      "created_by": "agent://tech/s5",
+      "objective": "re-balance platform-upgrade allocation to the verified on-time integrator (sentinel-labs) and gate the laggard (revan-digital)",
+      "dependencies": [],
+      "authority": "authority://tech/for-ops",
+      "deadline": "2026-10-15T00:00:00Z",
+      "priority": 0.695,
+      "status": "ASSIGNED",
+      "expected_outcome": "next committed work routed to the verified on-time partner; policy updated",
+      "why_here": "derived from the on-time exception (case OPEN)",
+      "importance": "restores on-time upgrade delivery, protecting enterprise clients' scoped Trust",
+      "evidence": [
+        "evidence://tech/committed-revan-digitalQ3",
+        "evidence://tech/committed-sentinel-labsQ3",
+        "evidence://tech/committed-revan-digitalQ4"
+      ],
+      "decision_required": "approve the re-allocation",
+      "priority_factors": {
+        "impact": 0.85,
+        "urgency": 0.9,
+        "confidence": 0.7,
+        "irreversibility": false,
+        "relationship_importance": 0.8,
+        "cost_of_delay": 0.75
+      },
+      "assigned_capacity": 1.0
+    },
+    {
+      "uri": "decision://tech/s5-assign",
+      "by": "person://tech/cdo",
+      "authority": "authority://tech/for-ops",
+      "alternatives": [
+        "assign",
+        "defer"
+      ],
+      "confidence": 0.95,
+      "expected_outcome": "task in progress",
+      "detail": {
+        "task": "task://tech/t-rebalance",
+        "assigned_to": "agent://tech/deploy-ops",
+        "authority": "authority://tech/for-ops",
+        "priority": 0.695,
+        "capacity": 1.0
+      },
+      "made_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "decision://tech/s5-match-recorded",
+      "by": "agent://s2",
+      "authority": "delegation://tech/s2-match",
+      "alternatives": [
+        "offer://tech/o-g",
+        "none"
+      ],
+      "confidence": 0.92,
+      "expected_outcome": "good partner ranked #1",
+      "actual_outcome": "offer://tech/o-g",
+      "detail": [
+        {
+          "offer": "offer://tech/o-g",
+          "provider": "org://tech/sentinel-labs",
+          "fit": 1.0,
+          "trust": 0.695,
+          "score": 0.695
+        }
+      ],
+      "made_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "escalation://tech/escalate-release",
+      "trigger": "external integrated deployment \u2014 irreversible and cost-unknowable once cut over",
+      "severity": "WARN",
+      "recipient": "person://tech/cdo",
+      "deadline": "2026-11-15T00:00:00Z",
+      "fallback": "agent://tech/s4",
+      "authority": "authority://tech/for-ops",
+      "acknowledgement": "approve then execute"
+    },
+    {
+      "uri": "decision://tech/owner-human",
+      "by": "person://tech/cdo",
+      "authority": "authority://tech/for-ops",
+      "alternatives": [
+        "release_in_full",
+        "hold",
+        "release_partial_and_hold_if_shortfall",
+        "open_dispute"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "release to the verified partner",
+      "actual_outcome": "release_in_full (human approved)",
+      "detail": {
+        "task": "task://tech/t-rebalance",
+        "action": "release_committed_action",
+        "irreversible_failure": true,
+        "cost_failure_unknowable": true
+      },
+      "made_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "commitment://tech/c-sentinel-labs-followup",
+      "by": "agent://tech/s5",
+      "to": "org://tech/sentinel-labs",
+      "obligation": "offer://tech/o-g",
+      "expectation": "expectation://tech/e-routed-sentinel-labsR",
+      "status": "AGREED",
+      "terms": {
+        "kind": "platform-upgrade deployment follow-up",
+        "signed": true
+      },
+      "agreed_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "expectation://tech/e-sentinel-labsR",
+      "actor": "person://tech/cdo",
+      "subject": "platform-upgrade deployment",
+      "condition": "fully deliver the committed resource by its committed deadline",
+      "metric": "settled_value",
+      "threshold": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "evidence_required": "CLEAR"
+    },
+    {
+      "uri": "asset://money/tech-escrow-sentinel-labsR",
+      "kind": "MONEY",
+      "title": "org://tech/sentinel-labs",
+      "custody": "cleared",
+      "value": 2000000.0,
+      "currency": "USD",
+      "status": "DELIVERED",
+      "provenance": "settled by org://tech/vantagecloud for org://tech/sentinel-labs (sentinel-labsR)"
+    },
+    {
+      "uri": "obligation://tech/s4-pay-sentinel-labsR",
+      "subject": "org://tech/vantagecloud",
+      "source": "VOLUNTARILY_UNDERTAKEN",
+      "content": "settle 2000000.0 USD for contracted work by org://tech/sentinel-labs",
+      "due_by": "2026-11-15T00:00:00Z",
+      "status": "FULFILLED",
+      "settled_at": "2026-11-12T00:00:00Z"
+    },
+    {
+      "uri": "receipt://tech/s4-receipt-sentinel-labsR",
+      "kind": "SETTLEMENT",
+      "from": "org://tech/vantagecloud",
+      "to": "org://tech/sentinel-labs",
+      "amount": 2000000.0,
+      "currency": "USD",
+      "received_at": "2026-11-12T00:00:00Z"
+    },
+    {
+      "uri": "decision://tech/s4-recon-sentinel-labsR",
+      "by": "agent://s4",
+      "authority": "authority://tech/for-settlement",
+      "alternatives": [
+        "reject"
+      ],
+      "confidence": 1.0,
+      "expected_outcome": "expected 2000000.0 USD from org://tech/vantagecloud",
+      "actual_outcome": "matched exactly: settled 2000000.0 USD",
+      "detail": {
+        "slug": "sentinel-labsR",
+        "expected": 2000000.0,
+        "actual": 2000000.0,
+        "matched": true,
+        "buyer": "org://tech/vantagecloud",
+        "provider": "org://tech/sentinel-labs",
+        "reconciliation": "balanced"
+      },
+      "made_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "event://tech/s4-exchange-sentinel-labsR",
+      "type": "EXCHANGE",
+      "event_id": "ev-s4-7015",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7014",
+      "idempotency_key": "idem-s4-7015",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:56:45Z",
+      "actor": "agent://s4",
+      "detail": "settle exchange sentinel-labsR: 2000000.0 USD org://tech/vantagecloud->org://tech/sentinel-labs (value 2000000.0, cost 2000000.0)",
+      "state_update": [],
+      "value": 2000000.0,
+      "cost": 2000000.0,
+      "price": 2000000.0,
+      "currency": "USD",
+      "buyer": "org://tech/vantagecloud",
+      "provider": "org://tech/sentinel-labs",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "exchange_of": "commitment://tech/c-sentinel-labsR"
+    },
+    {
+      "uri": "event://tech/s4-outcome-sentinel-labsR",
+      "type": "OUTCOME",
+      "event_id": "ev-s4-7016",
+      "correlation_id": "corr-qk-s4-1",
+      "causation_id": "ev-s4-7015",
+      "idempotency_key": "idem-s4-7016",
+      "signature": "signed-by-agent://s4",
+      "occurred_at": "2026-09-01T00:56:45Z",
+      "actor": "agent://s4",
+      "detail": "evaluate settle sentinel-labsR: settled 2000000.0 vs expected 2000000.0 by 2026-11-15T00:00:00Z -> met",
+      "state_update": [],
+      "evaluation": "met",
+      "expected": 2000000.0,
+      "actual": 2000000.0,
+      "deadline": "2026-11-15T00:00:00Z",
+      "settled_at": "2026-11-12T00:00:00Z",
+      "score": 1.0
+    },
+    {
+      "uri": "event://tech/outcome-routed-sentinel-labsR",
+      "type": "OUTCOME",
+      "event_id": "ev-s2-7017",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7016",
+      "idempotency_key": "idem-s2-7017",
+      "signature": "signed-by-org://tech/sentinel-labs",
+      "occurred_at": "2026-09-01T00:56:45Z",
+      "actor": "org://tech/sentinel-labs",
+      "detail": "job routed-sentinel-labsR by org://tech/sentinel-labs: actual 2026-11-12T00:00:00Z vs committed 2026-11-15T00:00:00Z -> on time",
+      "state_update": [],
+      "job": "routed-sentinel-labsR",
+      "provider": "org://tech/sentinel-labs",
+      "committed_deadline": "2026-11-15T00:00:00Z",
+      "actual_completed_at": "2026-11-12T00:00:00Z",
+      "on_time": true
+    },
+    {
+      "uri": "evidence://tech/routed-sentinel-labsR",
+      "kind": "ANCHORED",
+      "source": "signed committed-platform-upgrade deployment record + tech anchor",
+      "verity": {
+        "procedure": "anchor-conformance",
+        "confidence": 0.95
+      },
+      "captured_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "claim://tech/routed-sentinel-labsR",
+      "proposer": "agent://s5",
+      "statement": "org://tech/sentinel-labs delivered the rallied committed platform-upgrade deployment on time"
+    },
+    {
+      "uri": "decision://tech/learning",
+      "by": "agent://tech/s5",
+      "authority": "authority://tech/for-operations",
+      "subject": "platform-upgrade deployment on-time management",
+      "expected": 0.95,
+      "actual": 1.0,
+      "variance": 0.05,
+      "why": "Concentrating deployment work with an integrator that has verified on-time delivery (sentinel-labs), while gating the laggard (revan-digital), restored on-time upgrades. Verified good deployments compound scoped Trust and re-price routing.",
+      "change_future_policy": "ALLOCATE by fit AND scoped Trust (not fit alone); partners below the Trust floor require a performance gate before a new commitment.",
+      "made_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "goal://tech/g-core",
+      "for": "org://tech/vantagecloud",
+      "statement": "Consistently deliver committed platform upgrades on time so enterprise clients trust VantageCloud enough to renew.",
+      "horizon": "quarter",
+      "owner": "person://tech/cdo",
+      "metrics": [
+        "metric://tech/m-on-time",
+        "metric://tech/m-trust",
+        "metric://tech/m-settled-value"
+      ]
+    },
+    {
+      "uri": "metric://tech/m-on-time",
+      "name": "Committed-platform-upgrade deployment on-time rate",
+      "definition": "share of committed platform-upgrade deployment deliveries verified on time",
+      "unit": "fraction",
+      "formula": "on_time / (on_time + late) from ledger",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 0.95,
+      "threshold": 0.8,
+      "period": "quarter",
+      "source": "ledger committed-delivery records",
+      "owner": "person://tech/cdo",
+      "actual": 0.5,
+      "forecast": 0.5,
+      "variance": -0.45,
+      "root_cause": "integration failure \u2014 org://tech/revan-digital missed its committed upgrade deployment by 2 days; scoped Trust fell 0.90->0.51",
+      "root_cause_status": "SUPPORTED"
+    },
+    {
+      "uri": "metric://tech/m-trust",
+      "name": "Partner scoped-trust score",
+      "definition": "best scoped Trust on the partner network (per \u00a75)",
+      "unit": "score",
+      "formula": "T(subject->target, claim, context) per \u00a75",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 0.9,
+      "threshold": 0.6,
+      "period": "rolling",
+      "source": "S5 scoped Trust graph",
+      "owner": "person://tech/cdo",
+      "actual": 0.79,
+      "forecast": 0.92,
+      "variance": -0.11,
+      "root_cause_status": "UNKNOWN"
+    },
+    {
+      "uri": "metric://tech/m-settled-value",
+      "name": "Settled committed value",
+      "definition": "value of EXCHANGE events settled this period",
+      "unit": "USD",
+      "formula": "sum(EXCHANGE.price) from ledger",
+      "dimensions": [
+        "partner"
+      ],
+      "target": 7600000.0,
+      "threshold": 4180000.0000000005,
+      "period": "quarter",
+      "source": "ledger EXCHANGE events",
+      "owner": "person://tech/cdo",
+      "actual": 7600000.0,
+      "forecast": 8740000.0,
+      "variance": 0.0,
+      "root_cause_status": "UNKNOWN"
+    },
+    {
+      "uri": "decision://tech/s5-metric-loop",
+      "by": "agent://tech/s5",
+      "authority": "authority://tech/for-operations",
+      "alternatives": [
+        "do nothing",
+        "rebalance provider allocation"
+      ],
+      "confidence": 0.85,
+      "expected_outcome": "metric://tech/m-on-time variance reduced toward target",
+      "detail": {
+        "goal": "goal://tech/g-core",
+        "metric": "metric://tech/m-on-time",
+        "actual": 0.5,
+        "variance": -0.45,
+        "action": "task://tech/t-rebalance",
+        "outcome": "event://tech/outcome-routed-sentinel-labsR"
+      },
+      "made_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "decision://tech/s5-attention",
+      "by": "agent://tech/s5",
+      "authority": "authority://tech/for-ops",
+      "confidence": 0.9,
+      "expected_outcome": "top-of-attention ranked",
+      "actual_outcome": "attention prioritized by derived score",
+      "detail": {
+        "attention": [
+          {
+            "uri": "task://tech/t-rebalance",
+            "label": "re-balance committed work",
+            "priority": 0.695
+          },
+          {
+            "uri": "task://tech/t-followup",
+            "label": "rallied follow-on (good partner)",
+            "priority": 0.58
+          }
+        ]
+      },
+      "made_at": "2026-09-01T00:56:45Z"
+    },
+    {
+      "uri": "dependency://tech/d-rb-enables-fu",
+      "from": "task://tech/t-rebalance",
+      "to": "task://tech/t-followup",
+      "kind": "ENABLES"
+    },
+    {
+      "uri": "dependency://tech/d-fu-requires-pol",
+      "from": "task://tech/t-followup",
+      "to": "policy://tech/allocation",
+      "kind": "REQUIRES"
+    },
+    {
+      "uri": "dependency://tech/d-fu-blocks-case",
+      "from": "task://tech/t-followup",
+      "to": "case://tech/c-on-time",
+      "kind": "BLOCKS"
+    },
+    {
+      "uri": "dependency://tech/d-case-from-metric",
+      "from": "case://tech/c-on-time",
+      "to": "metric://tech/m-on-time",
+      "kind": "DERIVED_FROM"
+    },
+    {
+      "uri": "dependency://tech/d-metric-impacts-goal",
+      "from": "metric://tech/m-on-time",
+      "to": "goal://tech/g-core",
+      "kind": "IMPACTS"
+    },
+    {
+      "uri": "dependency://tech/d-rb-blocks-case",
+      "from": "task://tech/t-rebalance",
+      "to": "case://tech/c-on-time",
+      "kind": "BLOCKS"
+    },
+    {
+      "uri": "decision://tech/agent-recommend",
+      "by": "agent://tech/deploy-ops",
+      "authority": "authority://tech/for-ops",
+      "alternatives": [
+        "re-balance to partner_good",
+        "gate laggard",
+        "do nothing"
+      ],
+      "confidence": 0.85,
+      "expected_outcome": "re-balance to verified on-time partner",
+      "actual_outcome": "re-balance to partner_good",
+      "detail": {
+        "option": "re-balance to partner_good",
+        "rationale": "To improve on-time delivery by leveraging a more reliable partnership, despite current trust levels.",
+        "confidence": 0.85,
+        "risk": "Moderate risk of potential over-reliance and insufficient due diligence.",
+        "_model": "phi4-mini:3.8b-q8_0",
+        "_fallback": false
+      },
+      "made_at": "2026-09-01T00:56:47Z"
+    },
+    {
+      "uri": "decision://tech/agent-verify",
+      "by": "agent://tech/deploy-ops",
+      "authority": "authority://tech/for-ops",
+      "alternatives": [
+        "on_time",
+        "late"
+      ],
+      "confidence": 0.95,
+      "expected_outcome": "on_time",
+      "actual_outcome": "on_time",
+      "detail": {
+        "on_time": true,
+        "confidence": 0.95,
+        "procedure": "anchored-timestamp",
+        "note": "...",
+        "_model": "phi4-mini:3.8b-q8_0",
+        "_fallback": false
+      },
+      "made_at": "2026-09-01T00:56:49Z"
+    }
+  ]
+}
