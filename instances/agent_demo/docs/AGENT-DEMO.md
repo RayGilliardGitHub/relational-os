@@ -6,12 +6,33 @@ deterministic stub? This document states exactly what was and was not demonstrat
 
 ## Headline result
 
-**Yes — demonstrated.** A real local LLM (`phi4-mini:3.8b-q8_0` via Ollama, ~$0, no frontier API)
-reasoned a #8 recommendation and an evidence classification **from live ledger evidence**, both as
-**effect-free advisory `decision://` records**, was **forced to a signed human approval** before an
-irreversible action (provable by ledger ORDER), and **never executed an ACTION nor set its own Trust**
-(trust stayed deterministic on the model-classified evidence). All 12 sector families ran the pathway
-green, C1–C5 conformance held, and the reference + sector builds did not regress.
+**Demonstrated:** a real local LLM (`phi4-mini:3.8b-q8_0` via Ollama, ~$0, no frontier API) reasoned a
+#8 recommendation and an evidence classification **from live ledger evidence**, both as effect-free
+advisory `decision://` records, was **forced to a signed human approval** before an irreversible action
+(provable by ledger ORDER), and **never executed an ACTION nor set its own Trust** (trust stayed
+deterministic on the model-classified evidence). All 12 sector families ran the pathway green, C1–C5
+conformance held, and the reference + sector builds did not regress.
+
+## Precisely what this proves (and the exact claim boundary)
+
+**What is PROVEN — "RelationalOS can safely contain a real LLM recommendation."**
+- A real model can operate inside the control boundary (capability + delegation + §6 floor) **without
+  bypassing it**: its output cannot turn into an ACTION on its own; an irreversible action requires the
+  signed human decision in provable ledger order; it cannot move its own Trust.
+- That is a meaningful, tested property and the architectural idea was worth verifying.
+
+**What is NOT proven — "an autonomous intelligent agent can safely operate within RelationalOS."**
+The demonstrated model is an **advisory recommender**, not an autonomous agent. It:
+- receives **prepared** context (no self-directed information retrieval),
+- generates a single structured JSON reply (no tool selection),
+- has **no persistent memory**, no planning, no multi-step execution,
+- never observes **changing state during execution** (single-shot classification),
+- has no routing seam, no agent-to-agent interaction.
+
+So the claim is deliberately **downgraded from the review's "decisive — yes demonstrated"** to:
+> *A real LLM recommendation is safely contained inside the control architecture.*
+The stronger claim — *a genuinely autonomous agent operating within it* — remains the next step (build #2
+below), and the authoritative tools/memory/planning surfaces are not yet built.
 
 ## What the model actually produced (real, from `model-log.json` for the tech/VantageCloud run)
 
@@ -114,8 +135,11 @@ python3 build_all.py                        -> RESULT: ALL SECTORS PASS   (13-bu
 
 ## Conclusion
 
-The completeness and indispensability reviews asked, as the decisive test: **can an intelligent actor be
-safely constrained and audited inside this architecture?** The answer, now demonstrated: **yes.** The
-model reasoned from live evidence, was bounded by capability + delegation, could not act irreversibly
-without a signed human decision, and could not move its own trust. That is the core claim of the AI
-governance differentiator, and it now has a runnable, reproducible, $0 proof behind it.
+The reviews asked the decisive question: **can an intelligent actor be safely constrained and audited
+inside this architecture?** This demo demonstrates the first half — **a real LLM recommendation is
+safely contained**: the model reasoned from live evidence, was bounded by capability + delegation, could
+not act irreversibly without a signed human decision, and could not move its own trust. The *stronger*
+claim — a genuinely autonomous, tool-using, memory-bearing agent operating inside the boundary — is the
+next experiment, not yet proven. What is demonstrated is a real, reproducible, $0 proof of the **control
+architecture constraining a real model's recommendation output** — the foundational half of the AI
+governance differentiator.

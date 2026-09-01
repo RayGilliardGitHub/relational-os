@@ -1,0 +1,24 @@
+[
+  {
+    "uri": "decision://dispute/adjudication",
+    "by": "person://dispute/manager",
+    "authority": "authority://dispute/for-adjudication",
+    "alternatives": [
+      "side-with-customer",
+      "side-with-supplier",
+      "seek-more-evidence",
+      "UNRESOLVED"
+    ],
+    "confidence": 0.7,
+    "expected_outcome": "determine outcome",
+    "actual_outcome": "UNRESOLVED",
+    "detail": {
+      "epistemic_state": "INSUFFICIENT_EVIDENCE",
+      "determination": "UNRESOLVED",
+      "determined_by": "person://dispute/manager",
+      "accepted_claim": null,
+      "reason": "both claims carry only moderate, mutually-conflicting evidence (0.62 vs 0.58); no independent decisive source; adequate evidence to determine is absent"
+    },
+    "made_at": "2026-09-01T01:06:08Z"
+  }
+]

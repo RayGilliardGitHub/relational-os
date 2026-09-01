@@ -1,0 +1,41 @@
+[
+  {
+    "uri": "evidence://dispute/e-cust",
+    "kind": "TESTIMONY",
+    "by": "org://dispute/customer",
+    "claim": "late",
+    "degree": 0.62,
+    "procedure": "manual-attestation",
+    "source": "customer manual attestation",
+    "verity": {
+      "procedure": "manual-attestation",
+      "confidence": 0.62
+    }
+  },
+  {
+    "uri": "evidence://dispute/e-gps",
+    "kind": "ANCHORED",
+    "by": "org://dispute/supplier",
+    "claim": "on-time",
+    "degree": 0.58,
+    "procedure": "anchored-timestamp",
+    "source": "supplier geo-log timestamp",
+    "verity": {
+      "procedure": "anchored-timestamp",
+      "confidence": 0.58
+    }
+  },
+  {
+    "uri": "evidence://dispute/e-verif",
+    "kind": "ANCHORED",
+    "by": "org://dispute/supplier",
+    "claim": "on-time",
+    "degree": 0.97,
+    "procedure": "third-party-verification",
+    "source": "independent third-party verification",
+    "verity": {
+      "procedure": "third-party-verification",
+      "confidence": 0.97
+    }
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "uri": "org://dispute/customer",
+    "type": "ORG"
+  },
+  {
+    "uri": "org://dispute/supplier",
+    "type": "ORG"
+  },
+  {
+    "uri": "person://dispute/manager",
+    "type": "PERSON"
+  },
+  {
+    "uri": "authority://dispute/for-adjudication",
+    "holder": "person://dispute/manager",
+    "grants": [
+      "adjudicate_dispute",
+      "determine_outcome"
+    ],
+    "roles": [
+      "adjudicator"
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "uri": "relationship://dispute/delivery",
+    "participants": [
+      "org://dispute/customer",
+      "org://dispute/supplier"
+    ],
+    "status": "ACTIVE",
+    "roles": {
+      "org://dispute/customer": [
+        "buyer"
+      ],
+      "org://dispute/supplier": [
+        "supplier"
+      ]
+    },
+    "authority": [
+      "authority://dispute/for-adjudication"
+    ],
+    "purpose": "committed delivery"
+  }
+]

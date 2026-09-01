@@ -1,0 +1,53 @@
+[
+  {
+    "uri": "dispute://dispute/d-delivery",
+    "about": "event://dispute/fact-commit",
+    "parties": [
+      "org://dispute/customer",
+      "org://dispute/supplier"
+    ],
+    "status": "ADJUDICATED",
+    "evidence": [
+      "evidence://dispute/e-cust",
+      "evidence://dispute/e-gps"
+    ],
+    "claims": [
+      "claim://dispute/c-late",
+      "claim://dispute/c-ontime"
+    ],
+    "epistemic_state": "INSUFFICIENT_EVIDENCE",
+    "evidence_spread": {
+      "customer_degree": 0.62,
+      "supplier_degree": 0.58,
+      "gap": 0.040000000000000036,
+      "adjudication_required": true
+    },
+    "resolution": "{'epistemic_state': 'INSUFFICIENT_EVIDENCE', 'determination': 'UNRESOLVED', 'determined_by': 'person://dispute/manager', 'accepted_claim': None, 'reason': 'both claims carry only moderate, mutually-conflicting evidence (0.62 vs 0.58); no independent decisive source; adequate evidence to determine is absent'}",
+    "determination": "UNRESOLVED",
+    "determined_by": "person://dispute/manager"
+  },
+  {
+    "uri": "dispute://dispute/d-clear",
+    "about": "event://dispute/fact-commit",
+    "parties": [
+      "org://dispute/customer",
+      "org://dispute/supplier"
+    ],
+    "status": "RESOLVED",
+    "evidence": [
+      "evidence://dispute/e-verif"
+    ],
+    "claims": [
+      "claim://dispute/c-ontime"
+    ],
+    "epistemic_state": "RESOLVED_DETERMINED",
+    "evidence_spread": {
+      "supplier_degree": 0.97,
+      "gap": null
+    },
+    "resolution": "{'epistemic_state': 'RESOLVED_DETERMINED', 'determination': 'side-with-supplier', 'accepted_claim': 'claim://dispute/c-ontime', 'determined_by': 'person://dispute/manager', 'reason': 'independent third-party verification degree 0.97 decisively supports on-time'}",
+    "determination": "side-with-supplier",
+    "accepted_claim": "claim://dispute/c-ontime",
+    "determined_by": "person://dispute/manager"
+  }
+]

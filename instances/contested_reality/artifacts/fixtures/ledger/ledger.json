@@ -1,0 +1,358 @@
+{
+  "uri": "db://ledger/dispute-2026",
+  "head_hash": "77d539aed5638de2cb22342ddf4bcd5f23e4ea0f197d3fc6a5f8304ad544c920",
+  "entries": [
+    {
+      "uri": "event://dispute/provision",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-dispute-provision-1",
+      "correlation_id": "corr-dispute-1",
+      "causation_id": "ev-dispute-prev-1",
+      "idempotency_key": "idem-dispute-provision-1",
+      "signature": "signed-by-person://dispute/manager",
+      "occurred_at": "2026-09-01T01:06:08Z",
+      "actor": "person://dispute/manager",
+      "detail": "provision dispute actors + delivery relationship + adjudicator authority",
+      "state_update": [
+        {
+          "uri": "org://dispute/customer",
+          "type": "ORG"
+        },
+        {
+          "uri": "org://dispute/supplier",
+          "type": "ORG"
+        },
+        {
+          "uri": "person://dispute/manager",
+          "type": "PERSON"
+        },
+        {
+          "uri": "relationship://dispute/delivery",
+          "participants": [
+            "org://dispute/customer",
+            "org://dispute/supplier"
+          ],
+          "status": "ACTIVE",
+          "roles": {
+            "org://dispute/customer": [
+              "buyer"
+            ],
+            "org://dispute/supplier": [
+              "supplier"
+            ]
+          },
+          "authority": [
+            "authority://dispute/for-adjudication"
+          ],
+          "purpose": "committed delivery"
+        },
+        {
+          "uri": "authority://dispute/for-adjudication",
+          "holder": "person://dispute/manager",
+          "grants": [
+            "adjudicate_dispute",
+            "determine_outcome"
+          ],
+          "roles": [
+            "adjudicator"
+          ]
+        }
+      ],
+      "hash": "9a2507539bef72927bf28f840e976f181809beb7bc278e1f32714f24e3f91b73"
+    },
+    {
+      "uri": "event://dispute/fact-commit",
+      "type": "OUTCOME",
+      "event_id": "ev-dispute-fact-commit-2",
+      "correlation_id": "corr-dispute-1",
+      "causation_id": "ev-dispute-prev-2",
+      "idempotency_key": "idem-dispute-fact-commit-2",
+      "signature": "signed-by-org://dispute/supplier",
+      "occurred_at": "2026-09-01T01:06:08Z",
+      "actor": "org://dispute/supplier",
+      "detail": "FACT: committed delivery due 04:00",
+      "state_update": [],
+      "hash": "54f434cb8f0b9bb970f4e070ff76c8783e2a0f11cf4677df625a52c503627542"
+    },
+    {
+      "uri": "event://dispute/claims",
+      "type": "DECISION",
+      "event_id": "ev-dispute-claims-3",
+      "correlation_id": "corr-dispute-1",
+      "causation_id": "ev-dispute-prev-3",
+      "idempotency_key": "idem-dispute-claims-3",
+      "signature": "signed-by-person://dispute/manager",
+      "occurred_at": "2026-09-01T01:06:08Z",
+      "actor": "person://dispute/manager",
+      "detail": "two mutually-exclusive claims lodged",
+      "state_update": [
+        {
+          "uri": "claim://dispute/c-late",
+          "proposer": "org://dispute/customer",
+          "statement": "delivery was LATE relative to the contract deadline",
+          "about": "event://dispute/fact-commit",
+          "evidence": [
+            "evidence://dispute/e-cust"
+          ]
+        },
+        {
+          "uri": "claim://dispute/c-ontime",
+          "proposer": "org://dispute/supplier",
+          "statement": "delivery was ON TIME (GPS 04:12 <= deadline 04:00)",
+          "about": "event://dispute/fact-commit",
+          "evidence": [
+            "evidence://dispute/e-gps"
+          ]
+        },
+        {
+          "uri": "evidence://dispute/e-cust",
+          "kind": "TESTIMONY",
+          "by": "org://dispute/customer",
+          "claim": "late",
+          "degree": 0.62,
+          "procedure": "manual-attestation",
+          "source": "customer manual attestation",
+          "verity": {
+            "procedure": "manual-attestation",
+            "confidence": 0.62
+          }
+        },
+        {
+          "uri": "evidence://dispute/e-gps",
+          "kind": "ANCHORED",
+          "by": "org://dispute/supplier",
+          "claim": "on-time",
+          "degree": 0.58,
+          "procedure": "anchored-timestamp",
+          "source": "supplier geo-log timestamp",
+          "verity": {
+            "procedure": "anchored-timestamp",
+            "confidence": 0.58
+          }
+        }
+      ],
+      "hash": "43f0a31161ba06d8c81a7187e159e592c232d5882c410442c927974d11bf006b"
+    },
+    {
+      "uri": "event://dispute/open",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-dispute-open-4",
+      "correlation_id": "corr-dispute-1",
+      "causation_id": "ev-dispute-prev-4",
+      "idempotency_key": "idem-dispute-open-4",
+      "signature": "signed-by-person://dispute/manager",
+      "occurred_at": "2026-09-01T01:06:08Z",
+      "actor": "person://dispute/manager",
+      "detail": "conflicting claims -> dispute OPEN, epistemic_state UNDETERMINED",
+      "state_update": [
+        {
+          "uri": "dispute://dispute/d-delivery",
+          "about": "event://dispute/fact-commit",
+          "parties": [
+            "org://dispute/customer",
+            "org://dispute/supplier"
+          ],
+          "status": "OPEN",
+          "evidence": [
+            "evidence://dispute/e-cust",
+            "evidence://dispute/e-gps"
+          ],
+          "claims": [
+            "claim://dispute/c-late",
+            "claim://dispute/c-ontime"
+          ],
+          "epistemic_state": "UNDETERMINED",
+          "evidence_spread": {
+            "customer_degree": 0.62,
+            "supplier_degree": 0.58,
+            "gap": 0.040000000000000036,
+            "adjudication_required": true
+          }
+        }
+      ],
+      "hash": "105cdc839ef8c0e1c7206cd2de02d180a3ac5e53ac3d05cc4161bf409a20c5f3"
+    },
+    {
+      "uri": "event://dispute/adjudicate",
+      "type": "DECISION",
+      "event_id": "ev-dispute-adjudicate-5",
+      "correlation_id": "corr-dispute-1",
+      "causation_id": "ev-dispute-prev-5",
+      "idempotency_key": "idem-dispute-adjudicate-5",
+      "signature": "signed-by-person://dispute/manager",
+      "occurred_at": "2026-09-01T01:06:08Z",
+      "actor": "person://dispute/manager",
+      "detail": "human adjudicator determination: UNRESOLVED",
+      "state_update": [
+        {
+          "uri": "decision://dispute/adjudication",
+          "by": "person://dispute/manager",
+          "authority": "authority://dispute/for-adjudication",
+          "alternatives": [
+            "side-with-customer",
+            "side-with-supplier",
+            "seek-more-evidence",
+            "UNRESOLVED"
+          ],
+          "confidence": 0.7,
+          "expected_outcome": "determine outcome",
+          "actual_outcome": "UNRESOLVED",
+          "detail": {
+            "epistemic_state": "INSUFFICIENT_EVIDENCE",
+            "determination": "UNRESOLVED",
+            "determined_by": "person://dispute/manager",
+            "accepted_claim": null,
+            "reason": "both claims carry only moderate, mutually-conflicting evidence (0.62 vs 0.58); no independent decisive source; adequate evidence to determine is absent"
+          },
+          "made_at": "2026-09-01T01:06:08Z"
+        },
+        {
+          "uri": "dispute://dispute/d-delivery",
+          "about": "event://dispute/fact-commit",
+          "parties": [
+            "org://dispute/customer",
+            "org://dispute/supplier"
+          ],
+          "status": "ADJUDICATED",
+          "evidence": [
+            "evidence://dispute/e-cust",
+            "evidence://dispute/e-gps"
+          ],
+          "claims": [
+            "claim://dispute/c-late",
+            "claim://dispute/c-ontime"
+          ],
+          "epistemic_state": "INSUFFICIENT_EVIDENCE",
+          "evidence_spread": {
+            "customer_degree": 0.62,
+            "supplier_degree": 0.58,
+            "gap": 0.040000000000000036,
+            "adjudication_required": true
+          },
+          "resolution": "{'epistemic_state': 'INSUFFICIENT_EVIDENCE', 'determination': 'UNRESOLVED', 'determined_by': 'person://dispute/manager', 'accepted_claim': None, 'reason': 'both claims carry only moderate, mutually-conflicting evidence (0.62 vs 0.58); no independent decisive source; adequate evidence to determine is absent'}",
+          "determination": "UNRESOLVED",
+          "determined_by": "person://dispute/manager"
+        }
+      ],
+      "hash": "bf2747f7aa85fc2b521d8412eb6882dfbf14ddc13bbee1c38ef4c6b11a9653ef"
+    },
+    {
+      "uri": "event://dispute/clear-open",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-dispute-clear-open-6",
+      "correlation_id": "corr-dispute-1",
+      "causation_id": "ev-dispute-prev-6",
+      "idempotency_key": "idem-dispute-clear-open-6",
+      "signature": "signed-by-person://dispute/manager",
+      "occurred_at": "2026-09-01T01:06:08Z",
+      "actor": "person://dispute/manager",
+      "detail": "well-evidenced dispute open",
+      "state_update": [
+        {
+          "uri": "dispute://dispute/d-clear",
+          "about": "event://dispute/fact-commit",
+          "parties": [
+            "org://dispute/customer",
+            "org://dispute/supplier"
+          ],
+          "status": "OPEN",
+          "evidence": [
+            "evidence://dispute/e-verif"
+          ],
+          "claims": [
+            "claim://dispute/c-ontime"
+          ],
+          "epistemic_state": "UNDETERMINED",
+          "evidence_spread": {
+            "supplier_degree": 0.97,
+            "gap": null
+          }
+        },
+        {
+          "uri": "evidence://dispute/e-verif",
+          "kind": "ANCHORED",
+          "by": "org://dispute/supplier",
+          "claim": "on-time",
+          "degree": 0.97,
+          "procedure": "third-party-verification",
+          "source": "independent third-party verification",
+          "verity": {
+            "procedure": "third-party-verification",
+            "confidence": 0.97
+          }
+        }
+      ],
+      "hash": "026e47957abe43a657c3ebed6421b0d218694d9cc74ad216d20c8697c286b019"
+    },
+    {
+      "uri": "event://dispute/clear-adjud",
+      "type": "DECISION",
+      "event_id": "ev-dispute-clear-adjud-7",
+      "correlation_id": "corr-dispute-1",
+      "causation_id": "ev-dispute-prev-7",
+      "idempotency_key": "idem-dispute-clear-adjud-7",
+      "signature": "signed-by-person://dispute/manager",
+      "occurred_at": "2026-09-01T01:06:08Z",
+      "actor": "person://dispute/manager",
+      "detail": "well-evidenced determination: side-with-supplier",
+      "state_update": [
+        {
+          "uri": "dispute://dispute/d-clear",
+          "about": "event://dispute/fact-commit",
+          "parties": [
+            "org://dispute/customer",
+            "org://dispute/supplier"
+          ],
+          "status": "RESOLVED",
+          "evidence": [
+            "evidence://dispute/e-verif"
+          ],
+          "claims": [
+            "claim://dispute/c-ontime"
+          ],
+          "epistemic_state": "RESOLVED_DETERMINED",
+          "evidence_spread": {
+            "supplier_degree": 0.97,
+            "gap": null
+          },
+          "resolution": "{'epistemic_state': 'RESOLVED_DETERMINED', 'determination': 'side-with-supplier', 'accepted_claim': 'claim://dispute/c-ontime', 'determined_by': 'person://dispute/manager', 'reason': 'independent third-party verification degree 0.97 decisively supports on-time'}",
+          "determination": "side-with-supplier",
+          "accepted_claim": "claim://dispute/c-ontime",
+          "determined_by": "person://dispute/manager"
+        }
+      ],
+      "hash": "64bb117aa22950b7715adb7bb3319cdc414c1e18c3dc68214812b4abc9054b6d"
+    },
+    {
+      "uri": "event://dispute/trust-update-supplier",
+      "type": "STATE_CHANGE",
+      "event_id": "ev-s2-8",
+      "correlation_id": "corr-qk-trust-1",
+      "causation_id": "ev-s2-7",
+      "idempotency_key": "idem-s2-8",
+      "signature": "signed-by-person://dispute/manager",
+      "occurred_at": "2026-09-01T01:06:08Z",
+      "actor": "person://dispute/manager",
+      "detail": "trust for org://dispute/supplier [timely committed delivery] 0.500 -> 0.597 (outcome=1, exp=0.8, ev=0.97, alpha=0.5)",
+      "state_update": [
+        {
+          "uri": "trust://dispute/t-supplier",
+          "subject": "org://dispute/customer",
+          "target": "org://dispute/supplier",
+          "claim": "timely committed delivery",
+          "context": "relationship://dispute/delivery",
+          "score": 0.597,
+          "updated_at": "2026-09-01T01:06:08Z",
+          "expected": 0.8,
+          "outcome": 1.0,
+          "evidence": [
+            "evidence://dispute/e-verif"
+          ],
+          "alpha": 0.5,
+          "recency": 1.0
+        }
+      ],
+      "hash": "77d539aed5638de2cb22342ddf4bcd5f23e4ea0f197d3fc6a5f8304ad544c920"
+    }
+  ]
+}

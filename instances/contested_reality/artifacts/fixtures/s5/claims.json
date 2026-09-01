@@ -1,0 +1,20 @@
+[
+  {
+    "uri": "claim://dispute/c-late",
+    "proposer": "org://dispute/customer",
+    "statement": "delivery was LATE relative to the contract deadline",
+    "about": "event://dispute/fact-commit",
+    "evidence": [
+      "evidence://dispute/e-cust"
+    ]
+  },
+  {
+    "uri": "claim://dispute/c-ontime",
+    "proposer": "org://dispute/supplier",
+    "statement": "delivery was ON TIME (GPS 04:12 <= deadline 04:00)",
+    "about": "event://dispute/fact-commit",
+    "evidence": [
+      "evidence://dispute/e-gps"
+    ]
+  }
+]

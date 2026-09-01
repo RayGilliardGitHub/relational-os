@@ -1,5 +1,5 @@
 # Lumen Health — Supply that heals, on schedule.
-generated 2026-09-01T00:57:37Z  |  ledger events 54  graph objects 80
+generated 2026-09-01T01:06:13Z  |  ledger events 54  graph objects 80
 
 ## Business health (ledger-projected metrics)
 | metric | unit | target | actual | variance | status |
