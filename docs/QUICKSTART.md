@@ -38,8 +38,8 @@ instances+scheme+RFC3339 · **C3** ledger content-addressed+signed · **C4** rou
 **C5** state machines.
 
 > Use the **Sprint-0 venv interpreter** (`.venv/bin/python`) for any conformance run —
-> it has `jsonschema`/`referencing`/`yaml`. Run it **from inside `sprint-5/artifacts/`**
-> (the runner resolves the validator by a relative path against the cwd).
+> it has `jsonschema`/`referencing`/`yaml`. The conformance runners are `Path(__file__)`
+> **-anchored (location-independent since the reorg), so run them from the repo root or anywhere**.
 
 ## 3 · Read the cockpit report
 

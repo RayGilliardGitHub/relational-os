@@ -48,6 +48,7 @@ relational-os/
         .venv/        Sprint-0 venv (jsonschema/referencing/yaml)
         fixtures/     instances; per-generation 156 / 28 / 35 / 55 / 174 / 316
         ros/          package (Sprint-5 end-state): substrate.py · s1..s5.py · bol.py · checks.py
+                     (canonical copy now lives at the repo ROOT `/ros/`; the sprint-5 one is its origin snapshot — reorg)
         run_s5_demo.py          daily cockpit producer
         run_s5_conformance.py   validator over all SIX generations
         s3_demo.py · s4_demo.py · s5_demo.py · bol_demo.py   scene builders
@@ -81,13 +82,15 @@ Verify the three deps import under the venv interpreter:
 ## 4. Verify the install (run the conformance gate)
 
 The single strongest "is this installed correctly?" test is the conformance runner over all
-six fixture generations. Run it **from inside the `sprint-5/artifacts/` directory** (the
-runner resolves the Sprint-0 validator by a relative path against the cwd), with the
-**Sprint-0 venv interpreter**:
+six fixture generations. Run it with the **Sprint-0 venv interpreter** — it is
+`Path(__file__)`-**anchored, so it runs from the repo root or anywhere** (post-reorg; it was
+formerly CWD-bound on `../../sprint-0/artifacts`):
 
     cd /home/rlg/relational-os/sprints/sprint-5/artifacts
     /home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python run_s5_conformance.py
     → exit 0, "RESULT: ALL PASS"
+
+The same command works from `/home/rlg/relational-os` directly (no `cd` needed).
 
 Real (embedded) tail of that run:
 

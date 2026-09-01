@@ -105,10 +105,11 @@ All three were executed in Sprint 6 and exited 0. Full detail in `02-setup.md` a
 > Each instance also emits a **`branding.md`** marketing artifact. See `instances/README.md`.
 > The build prompt that produced it: `/home/rlg/relational-os/sprints/sprint-7/PROMPT.md`.
 
-> **Pitfall verified in Sprint 6:** the conformance runners locate the Sprint-0 validator via a
-> relative path (`../../sprint-0/artifacts`) that resolves against the **process working
-> directory**, so run them **from inside the `sprint-5/artifacts/` directory** as above. The
-> demos also run cleanly from their own `artifacts/` directory. See `03-run.md`/`07-troubleshooting.md`.
+> **Reorg note (post-Sprint-36):** the conformance runners were **re-anchored** to `Path(__file__)`
+> (were CWD-bound on `../../sprint-0/artifacts`), so they are now **location-independent** — run them from
+> the repo root, the artifacts dir, or anywhere. The green gate is `python3 tests/run_checks.py` (full build,
+> exit 0 = ALL PASS) or `bash scripts/verify.sh` (quick daily-cockpit + conformance-all-six). See
+> `03-run.md`/`07-troubleshooting.md`.
 
 ---
 
@@ -119,7 +120,8 @@ All three were executed in Sprint 6 and exited 0. Full detail in `02-setup.md` a
 - EBNF grammar: `/home/rlg/relational-os/sprints/sprint-0/artifacts/schema/relational-os-lifecycle.ebnf`
 - Conformance validator: `/home/rlg/relational-os/sprints/sprint-0/artifacts/conformance.py`
 - Sprint-0 venv (interpreter for conformance): `/home/rlg/relational-os/sprints/sprint-0/artifacts/.venv/bin/python`
-- `ros/` package (S1–S5 + BOL substrate): `/home/rlg/relational-os/sprints/sprint-5/artifacts/ros/`
+- **Canonical `ros/` package (S1–S5 + BOL substrate): `/home/rlg/relational-os/ros/`** (promoted from its origin `/home/rlg/relational-os/sprints/sprint-5/artifacts/ros/`, byte-identical; reorg)
+- Green gate / test suite: `/home/rlg/relational-os/tests/run_checks.py` · `/home/rlg/relational-os/scripts/verify.sh`
 - Daily demo + cockpit producer: `/home/rlg/relational-os/sprints/sprint-5/artifacts/run_s5_demo.py`
 - Cockpit report: `/home/rlg/relational-os/sprints/sprint-5/artifacts/reports/cockpit.md` (+ `cockpit.json`)
 - Current state graph: `/home/rlg/relational-os/sprints/sprint-5/artifacts/graph/current-state.json`

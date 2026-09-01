@@ -13,11 +13,12 @@ output means, and produce/regenerate the cockpit each morning.
 | **Demos / cockpit** (`run_s*_demo.py`) | plain `python3` | the `ros/` package is pure stdlib (no third-party deps) |
 | **Conformance** (`run_*_conformance.py`, `run_conformance.py`) | **Sprint-0 venv** `.venv/bin/python` | needs `jsonschema`/`referencing`/`yaml` |
 
-And a critical operational detail (verified): **run from inside the `sprint-N/artifacts/`
-directory.** The conformance runners locate the Sprint-0 validator by a relative path
-(`../../sprint-0/artifacts`) that resolves against the **process working directory**, so a
-bare absolute-path invocation from the repo root fails with
-`ModuleNotFoundError: No module named 'conformance'`. `cd` into the artifacts dir first.
+And an operational note (was a verified pitfall, **FIXED by the post-Sprint-36 reorg**): the
+conformance runners were re-anchored to `Path(__file__)` (they used to resolve the Sprint-0
+validator by a relative path `../../sprint-0/artifacts` against the cwd, so a bare absolute-path
+invocation from the repo root failed with `ModuleNotFoundError: No module named 'conformance'`).
+They are now **location-independent** — run from the repo root, the artifacts dir, or anywhere.
+The `cd` below is kept for convention, not necessity.
 
 ---
 

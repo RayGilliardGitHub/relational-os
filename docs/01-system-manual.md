@@ -193,11 +193,11 @@ Root: `/home/rlg/relational-os/`
 | `SPEC.md` | The working spec (v0.22) — **the contract**. |
 | `PROTOCOL.md` | The sprint lifecycle every build session follows. |
 | `README.md` | Workspace index (points at this docs package). |
-| `docs/` | Supporting research / reference material. |
+| `docs/` | The verified manual package (Sprint 6) — canonical at repo root, narrative copy at `sprints/sprint-6/artifacts/docs/`. |
 | `sprints/COMPLETE.md` | Project closing hand-off (Sprints 0–5). |
 | `sprints/sprint-N/` | Per-sprint: `PROMPT.md`, `plan.md`, `work/`, `notes/findings.md`, `artifacts/`, `summary.md`. |
 | `sprints/sprint-0/artifacts/` | Schema (`schema/`), `conformance.py`, `run_conformance.py`, `make_fixtures.py`, `fixtures/` (156 instances incl. 20-interaction Appendix-E + case-lifecycle + ledgers + statemachines), `surveys/` (4 commissioned surveys), `.venv/` (jsonschema/referencing/yaml deps). |
-| `sprints/sprint-5/artifacts/ros/` | `substrate.py` (Graph+Ledger+sign), `s1..s5.py` (services), `bol.py` (Business Operating Layer), `checks.py` (the PASS/FAIL assertions). |
+| `/ros/` (repo root) — canonical | `substrate.py` (Graph+Ledger+sign), `s1..s5.py` (services), `bol.py` (Business Operating Layer), `checks.py` (the PASS/FAIL assertions). Promoted from `sprints/sprint-5/artifacts/ros/` (its byte-identical origin snapshot) by the reorg. |
 | `sprints/sprint-5/artifacts/run_s5_demo.py` | The **daily cockpit** producer (rebuild whole state + write fixtures + reports). |
 | `sprints/sprint-5/artifacts/run_s5_conformance.py` | Validator re-run over all SIX fixture generations. |
 | `sprints/sprint-5/artifacts/{s3,s4,s5,bol}_demo.py` | Builders that script the scenes. |

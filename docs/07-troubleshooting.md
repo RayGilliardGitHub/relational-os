@@ -13,12 +13,14 @@ reference build, fix them, and re-run cleanly; plus a glossary and the URI catal
 > transient. Diagnose below.
 
 ### F1. `ModuleNotFoundError: No module named 'conformance'` (or similar) on a conformance run
-- **Cause:** the conformance runners resolve the Sprint-0 validator by a relative path
-  (`../../sprint-0/artifacts`) against the **current working directory**, so they only work
-  when run from inside the `artifacts/` directory.
-- **Fix:** `cd /home/rlg/relational-os/sprints/sprint-5/artifacts` then run
-  the conformance runner. Do not invoke it with a bare absolute path from the repo root.
-- **Real repro (Sprint 6):** the first attempt from `/home/rlg/relational-os` failed with
+- **Historical cause (FIXED by the post-Sprint-36 reorg):** the conformance runners used to resolve the
+  Sprint-0 validator by a relative path (`../../sprint-0/artifacts`) against the **current working
+  directory**, so they only worked from inside the `artifacts/` directory.
+- **Now:** the runners are re-anchored to `Path(__file__)` and are location-independent — run
+  `python3 tests/run_checks.py` (full gate) from anywhere, or a conformance runner from the repo root.
+- **If it still fails today:** the Sprint-0 venv is missing/broken (rebuild per `02-setup.md`) or the
+  workspace changed — a FAIL is a real regression, never a transient (see the principle above).
+- **Historical repro (Sprint 6, pre-fix):** the first attempt from `/home/rlg/relational-os` failed with
   exactly this error; running from the artifacts dir exited 0.
 
 ### F2. `ModuleNotFoundError: No module named 'jsonschema' / 'referencing' / 'yaml'`
